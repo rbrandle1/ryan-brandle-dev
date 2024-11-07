@@ -1,0 +1,33 @@
+:root {
+  // ===============================
+  // Tier 1: Color definitions
+  // ===============================
+
+  /**
+   * Neutral Colors:
+   * Used globally for UI elements
+   */
+  --color-white: hsl(0, 0%, 100%);
+
+  /**
+   * Core Theme Colors:
+   * Used for Tier 2 theme mapping
+   */
+  // 🚀
+  --color-rocket-red: #ff0f09;
+
+  // 🤖
+  --color-robot-electric-blue: #03fbff;
+
+}
+
+// ===============================
+// Tier 2: Semantic Mapping, Commonly used UI
+// ===============================
+// [data-theme="🚀"] {
+  
+// }
+
+// [data-theme="🤖"] {
+  
+// }

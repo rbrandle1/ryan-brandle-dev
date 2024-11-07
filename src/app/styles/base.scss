@@ -1,0 +1,74 @@
+@use './colors';
+@use './variables';
+// @import url("https://fonts.googleapis.com/css2?family=Lexend&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Lexend&family=Nunito:wght@600&display=swap');
+
+
+// * {
+// 	margin: 0;
+// 	padding: 0;
+// 	box-sizing: border-box;
+// 	line-height: 1;
+// }
+
+// html {
+// 	/* font-size 1em = 10px on default browser settings */
+// 	font-size: 62.5%;
+// }
+
+// body {
+// 	width: 100%;
+// 	height: 100%;
+// 	background-color: var(--theme-color-body-bg, var(--color-gray-100));
+// 	padding: 0;
+// 	margin: 0;
+// 	font-family: var(--font-family);
+// 	font-size: var(--text-base);
+// 	line-height: 1.5;
+// 	-webkit-text-size-adjust: 100%;
+// 	transition: background-color var(--duration-sm) ease-out;
+// }
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
