@@ -25,9 +25,8 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang='en' suppressHydrationWarning>
-			{/* NOTE: suppressHydrationWarning is used to prevent hydration errors from browser extensions */}
-			<body suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable}`}>
+		<html lang='en'>
+			<body className={`${geistSans.variable} ${geistMono.variable}`}>
 				<div>header here</div>
 				{children}
 				<div>footer here</div>
