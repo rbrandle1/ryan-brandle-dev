@@ -25,6 +25,21 @@
 	);
 }
 
+// cursor recommended for fluid type
+@mixin fluid-type($min-size: 'var(--text-base)', $fluid-size: 5cqi, $max-size: 'var(--text-lg)') {
+	// Fallback for browsers that don't support container queries
+	font-size: $min-size;
+
+	// the font-size value is arbitrary and is just a test to see if the browser supports container queries
+	@supports (font-size: 1cqi) {
+		font-size: clamp(
+			var(--font-size-min, #{$min-size}),
+			var(--font-size-fluid, #{$fluid-size}),
+			var(--font-size-max, #{$max-size})
+		);
+	}
+}
+
 @mixin visually-hidden {
 	border: 0;
 	clip: rect(0, 0, 0, 0);
