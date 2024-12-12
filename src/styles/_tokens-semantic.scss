@@ -12,7 +12,6 @@
     * Timing (PENDING)
     * Typography
     * Color
-    * Transparency
     * Text
     * Surface
     * Link
@@ -23,7 +22,6 @@
     * COMPONENTS:
       * Buttons
       * Cards
-      * Inputs
 */
 
 /* Todo: 
@@ -35,116 +33,74 @@
 :root {
 	/* VIEWPORT */
 	/* Use for media queries and viewport values */
-	--viewport-2xs: var(--viewport-1);
-	--viewport-xs: var(--viewport-2);
-	--viewport-sm: var(--viewport-3);
-	--viewport-md: var(--viewport-4);
-	--viewport-lg: var(--viewport-5);
-	--viewport-xl: var(--viewport-6);
-	--viewport-2xl: var(--viewport-7);
+	--viewport-2xs: var(--p-viewport-1);
+	--viewport-xs: var(--p-viewport-2);
+	--viewport-sm: var(--p-viewport-3);
+	--viewport-md: var(--p-viewport-4);
+	--viewport-lg: var(--p-viewport-5);
+	--viewport-xl: var(--p-viewport-6);
+	--viewport-2xl: var(--p-viewport-7);
 
 	/* SPACING */
 	/* Use for spacing values */
-	--space-3xs: var(--space-0125);
-	--space-2xs: var(--space-025);
-	--space-xs: var(--space-05);
-	--space-sm: var(--space-075);
-	--space-base: var(--space-1);
-	--space-md: var(--space-2);
-	--space-lg: var(--space-3);
-	--space-xl: var(--space-4);
-	--space-2xl: var(--space-5);
-	--space-3xl: var(--space-6);
-	--space-4xl: var(--space-7);
-	--space-5xl: var(--space-8);
-	--space-6xl: var(--space-9);
-	--space-7xl: var(--space-10);
-	--space-8xl: var(--space-11);
+	--space-3xs: var(--p-space-0125);
+	--space-2xs: var(--p-space-025);
+	--space-xs: var(--p-space-05);
+	--space-sm: var(--p-space-075);
+	--space-base: var(--p-space-1);
+	--space-md: var(--p-space-2);
+	--space-lg: var(--p-space-3);
+	--space-xl: var(--p-space-4);
+	--space-2xl: var(--p-space-5);
+	--space-3xl: var(--p-space-6);
+	--space-4xl: var(--p-space-7);
+	--space-5xl: var(--p-space-8);
+	--space-6xl: var(--p-space-9);
+	--space-7xl: var(--p-space-10);
+	--space-8xl: var(--p-space-11);
 
 	/* RADIUS */
 	/* Use for radius values */
-	--radius-default: var(--radius-md);
+	--radius-default: var(--p-radius-md);
 
 	/* TYPOGRAPHY */
 	/* Use for typography values */
-	// TODO: update accordingly
-	--font-header: var(--font-sans);
-	--font-body: var(--font-sans);
-	--font-weight-base: var(--font-weight-1);
-	--font-weight-med: var(--font-weight-2);
-	--font-weight-semiBold: var(--font-weight-3);
-	--font-weight-bold: var(--font-weight-4);
+	--font-header: var(--p-font-display);
+	--font-body: var(--p-font-sans);
+	--font-alt: var(--p-font-serif);
+	--font-weight-reg: var(--p-font-weight-1);
+	--font-weight-bold: var(--p-font-weight-2);
+	--font-weight-black: var(--p-font-weight-3);
 
-	--text-base: var(--text-size-base);
-	--text-xs: var(--text-size-1);
-	--text-sm: var(--text-size-2);
-	--text-md: var(--text-size-3);
-	--text-lg: var(--text-size-4);
-	--text-xl: var(--text-size-5);
-	--text-2xl: var(--text-size-6);
-	--text-3xl: var(--text-size-7);
-	--text-4xl: var(--text-size-8);
+	--text-base: var(--p-text-size-base);
+	--text-sm: var(--p-text-size-1);
+	--text-md: var(--p-text-size-2);
+	--text-lg: var(--p-text-size-3);
+	--text-xl: var(--p-text-size-4);
+	--text-2xl: var(--p-text-size-5);
+	--text-3xl: var(--p-text-size-6);
+	--text-4xl: var(--p-text-size-7);
+	--text-5xl: var(--p-text-size-8);
+	--text-6xl: var(--p-text-size-9);
+	--text-7xl: var(--p-text-size-10);
 
 	/* COLOR */
 	/* Use for color values */
-	--color-primary: var(--color-black);
+	--color-primary: var(--p-color-black);
 	--color-primary-hover: var(--color-primary);
 	--color-primary-active: var(--color-primary);
 
-	--color-secondary: var(--color-white);
+	--color-secondary: var(--p-color-white);
 	--color-secondary-hover: var(--color-secondary);
 	--color-secondary-active: var(--color-secondary);
 
-	--color-tertiary: var(--color-gray-500);
+	--color-tertiary: var(--p-color-gray-500);
 	--color-tertiary-hover: var(--color-tertiary);
 	--color-tertiary-active: var(--color-tertiary);
 
-	--color-accent: var(--color-magenta);
+	--color-accent: var(--p-color-magenta);
 	--color-accent-hover: var(--color-accent);
 	--color-accent-active: var(--color-accent);
-
-	/* Neutrals */
-	// --color-neutral-white: var(--color-white);
-	// --color-neutral-100: var(--color-gray-100);
-	// --color-neutral-200: var(--color-gray-200);
-	// --color-neutral-300: var(--color-gray-300);
-	// --color-neutral-400: var(--color-gray-400);
-	// --color-neutral-500: var(--color-gray-500);
-	// --color-neutral-black: var(--color-black);
-
-	/* TRANSPARENCY */
-	/* Light */
-	// --transparent-light-a0: var(--white-a0);
-	// --transparent-light-a10: var(--white-a10);
-	// --transparent-light-a15: var(--white-a15);
-	// --transparent-light-a20: var(--white-a20);
-	// --transparent-light-a30: var(--white-a30);
-	// --transparent-light-a50: var(--white-a50);
-	// --transparent-light-a70: var(--white-a70);
-	// --transparent-light-a80: var(--white-a80);
-	// --transparent-light-a90: var(--white-a90);
-
-	/* Dark */
-	// --transparent-dark-a0: var(--black-a0);
-	// --transparent-dark-a10: var(--black-a10);
-	// --transparent-dark-a15: var(--black-a15);
-	// --transparent-dark-a20: var(--black-a20);
-	// --transparent-dark-a30: var(--black-a30);
-	// --transparent-dark-a50: var(--black-a50);
-	// --transparent-dark-a70: var(--black-a70);
-	// --transparent-dark-a80: var(--black-a80);
-	// --transparent-dark-a90: var(--black-a90);
-
-	/* Auto */
-	// --transparent-auto-a0: var(--black-a0);
-	// --transparent-auto-a10: var(--black-a10);
-	// --transparent-auto-a15: var(--black-a15);
-	// --transparent-auto-a20: var(--black-a20);
-	// --transparent-auto-a30: var(--black-a30);
-	// --transparent-auto-a50: var(--black-a50);
-	// --transparent-auto-a70: var(--black-a70);
-	// --transparent-auto-a80: var(--black-a80);
-	// --transparent-auto-a90: var(--black-a90);
 
 	/* TEXT */
 	/* Use for text color values */
@@ -152,15 +108,12 @@
 	--text-secondary: var(--color-secondary);
 	--text-tertiary: var(--color-tertiary);
 	--text-accent: var(--color-accent);
-	// --text-disabled: var(--color-neutral-300);
-	// --text-over-image: var(--color-neutral-white);
 
 	/* SURFACE */
 	/* Use for surface color values like backgrounds for cards, etc. */
 	--surface-primary: var(--color-primary);
 	--surface-secondary: var(--color-secondary);
-	//TODO: need to make a very subtle gray for tert
-	// --surface-tertiary: var(--color-secondary);
+	--surface-tertiary: var(--p-color-gray-100);
 	--surface-accent: var(--color-accent);
 
 	/* LINK */
@@ -174,13 +127,6 @@
 	--link-neutral-hover: var(--link-primary);
 	--link-neutral-active: var(--link-primary);
 	--link-neutral-visited: var(--link-neutral);
-
-	// --link-disabled: var(--text-disabled);
-
-	// --link-over-image: var(--text-over-image);
-	// --link-over-image-hover: var(--color-white-a93);
-	// --link-over-image-active: var(--link-over-image);
-	// --link-over-image-visited: var(--link-over-image);
 
 	/* BORDER */
 	/* Use for border color values */
@@ -207,7 +153,7 @@
 
 	/* BUTTONS */
 	/* Primary */
-	--button-label: var(--font-sans);
+	--button-label: var(--p-font-sans);
 	--button-background: var(--color-primary);
 	--button-background-hover: var(--color-accent);
 	--button-background-pressed: var(--button-background-hover);
@@ -256,9 +202,9 @@
 	// --input-background: var(--surface-minimal);
 }
 
-[data-theme='dark'] {
-	--color-primary: var(--color-white);
-	--color-secondary: var(--color-black);
+[data-section='dark'] {
+	--color-primary: var(--p-color-white);
+	--color-secondary: var(--p-color-black);
 
 	// /* TEXT - Dark Theme */
 	// /* Use for dark theme text color values */
@@ -316,11 +262,11 @@
 }
 
 [data-theme='c'] {
-	--color-accent: var(--color-cyan-500);
+	--color-accent: var(--p-color-cyan-500);
 }
 [data-theme='y'] {
-	--color-accent: var(--color-yellow-500);
+	--color-accent: var(--p-color-yellow-500);
 }
 // [data-theme='p'] {
-// 	--color-accent: var(--color-yellow-500);
+// 	--color-accent: var(--p-color-purple-500);
 // }

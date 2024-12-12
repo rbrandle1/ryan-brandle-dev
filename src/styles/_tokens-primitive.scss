@@ -1,9 +1,9 @@
 /* ===============================
-  Primitive (Tier 1) Tokens
+  Primitive Tokens
   =============================== */
 
 /* 
-  * These are the most basic, raw token values to be used in Semantic (Tier 2) tokens. These should be used rarely, if at all when writing custom component CSS. Tier 2 should primarily be used. This file includes the following:
+  * These are the most basic, raw token values to be used in Semantic Tokens. These should be used rarely, if at all when writing custom component CSS. Tier 2 should primarily be used. This file includes the following:
     * Viewport
     * Font
     * Space
@@ -14,7 +14,7 @@
 */
 
 /* Todo: 
-  * Discuss if we need to add a prefixes to clarify what variables are "primitive" and what are "semantic". For example, "--p-radius-sm" vs "--s-radius-rounded"
+	* UPDATE TO DYNAMIC FLUID SPACING
   * Add in line-heights as numbers... 1.5 is default, then map them in semantic to line-height-base, small, large, etc...
   * Add shadows/elevation, gradients, animation timing and others that don't exist in figma
 */
@@ -22,62 +22,67 @@
 :root {
 	/* VIEWPORT */
 	/* Raw numbers to be used in Semantic token tier */
-	--viewport-1: 350;
-	--viewport-2: 500;
-	--viewport-3: 768;
-	--viewport-4: 1024;
-	--viewport-5: 1200;
-	--viewport-6: 1440;
-	--viewport-7: 1600;
+	--p-viewport-1: 350;
+	--p-viewport-2: 500;
+	--p-viewport-3: 768;
+	--p-viewport-4: 1024;
+	--p-viewport-5: 1200;
+	--p-viewport-6: 1440;
+	--p-viewport-7: 1600;
 
 	/* FONT */
-	// --font-sans: 'Montserrat', sans-serif;
-	// --font-weight-1: 400;
-	// --font-weight-2: 500;
-	// --font-weight-3: 600;
-	// --font-weight-4: 700;
-	--font-display: 'Oswald', sans-serif;
-	--font-sans: 'Source Sans 3', sans-serif;
-	--font-serif: 'Source Serif 4', serif;
-	// --font-weight-1: 400;
-	// --font-weight-2: 500;
-	// --font-weight-3: 600;
-	// --font-weight-4: 700;
+	--p-font-display: 'Oswald', sans-serif;
+	--p-font-sans: 'Source Sans 3', sans-serif;
+	--p-font-serif: 'Source Serif 4', serif;
+	--font-weight-1: 400;
+	--font-weight-2: 700;
+	--font-weight-3: 900;
 
 	/* text sizing*/
-	/* Based on 1.6rem (16px) with html font-size set to 62.5% */
-	--text-size-base: 1.6rem;
-	--text-size-1: 1.1rem;
-	--text-size-2: 1.3rem;
-	--text-size-3: 2rem;
-	--text-size-4: 2.5rem;
-	--text-size-5: 3.1rem;
-	--text-size-6: 3.9rem;
-	--text-size-7: 4.9rem;
-	--text-size-8: 6.1rem;
+	/* 1rem is 10px with html font-size set to 62.5% */
+	// --p-text-size-base: 1.6rem;
+	// --p-text-size-1: 1.1rem;
+	// --p-text-size-2: 1.3rem;
+	// --p-text-size-3: 2rem;
+	// --p-text-size-4: 2.5rem;
+	// --p-text-size-5: 3.1rem;
+	// --p-text-size-6: 3.9rem;
+	// --p-text-size-7: 4.9rem;
+	// --p-text-size-8: 6.1rem;
+
+	--p-text-size-base: clamp(1.8rem, 0.38vi + 1.67rem, 2.2rem);
+	--p-text-size-1: clamp(1.44rem, 0.2vi + 1.37rem, 1.65rem);
+	--p-text-size-2: clamp(2.25rem, 0.65vi + 2.02rem, 2.93rem);
+	--p-text-size-3: clamp(2.81rem, 1.04vi + 2.45rem, 3.91rem);
+	--p-text-size-4: clamp(3.52rem, 1.61vi + 2.95rem, 5.21rem);
+	--p-text-size-5: clamp(4.39rem, 2.43vi + 3.54rem, 6.95rem);
+	--p-text-size-6: clamp(5.49rem, 3.59vi + 4.24rem, 9.26rem);
+	--p-text-size-7: clamp(6.87rem, 5.22vi + 5.04rem, 12.34rem);
+	--p-text-size-8: clamp(8.58rem, 7.49vi + 5.96rem, 16.45rem);
+	--p-text-size-9: clamp(10.73rem, 10.67vi + 6.99rem, 21.93rem);
+	--p-text-size-10: clamp(13.41rem, 15.07vi + 8.14rem, 29.23rem);
 
 	/* SPACE */
 	/* Raw numbers to be used in Semantic token tier */
-	// Todo: update to dynamic fluid spacing
-	--space-1: 1.6rem; /* 16 */
-	--space-0125: calc(0.125 * var(--space-1)); /* 2 */
-	--space-025: calc(0.25 * var(--space-1)); /* 4 */
-	--space-05: calc(0.5 * var(--space-1)); /* 8 */
-	--space-075: calc(0.75 * var(--space-1)); /* 12 */
-	--space-2: calc(1.5 * var(--space-1)); /* 24 */
-	--space-3: calc(2 * var(--space-1)); /* 32 */
-	--space-4: calc(3 * var(--space-1)); /* 48 */
-	--space-5: calc(4 * var(--space-1)); /* 64 */
-	--space-6: calc(5 * var(--space-1)); /* 80 */
-	--space-7: calc(6 * var(--space-1)); /* 88 */
-	--space-8: calc(7 * var(--space-1)); /* 96 */
-	--space-9: calc(8 * var(--space-1)); /* 192 */
-	--space-10: calc(9 * var(--space-1)); /* 288 */
-	--space-11: calc(10 * var(--space-1)); /* 384 */
+	--p-space-1: 1.6rem; /* 16 */
+	--p-space-0125: calc(0.125 * var(--p-space-1)); /* 2 */
+	--p-space-025: calc(0.25 * var(--p-space-1)); /* 4 */
+	--p-space-05: calc(0.5 * var(--p-space-1)); /* 8 */
+	--p-space-075: calc(0.75 * var(--p-space-1)); /* 12 */
+	--p-space-2: calc(1.5 * var(--p-space-1)); /* 24 */
+	--p-space-3: calc(2 * var(--p-space-1)); /* 32 */
+	--p-space-4: calc(3 * var(--p-space-1)); /* 48 */
+	--p-space-5: calc(4 * var(--p-space-1)); /* 64 */
+	--p-space-6: calc(5 * var(--p-space-1)); /* 80 */
+	--p-space-7: calc(6 * var(--p-space-1)); /* 88 */
+	--p-space-8: calc(7 * var(--p-space-1)); /* 96 */
+	--p-space-9: calc(8 * var(--p-space-1)); /* 192 */
+	--p-space-10: calc(9 * var(--p-space-1)); /* 288 */
+	--p-space-11: calc(10 * var(--p-space-1)); /* 384 */
 
 	/* RADIUS */
 	/* Raw numbers to be used in Semantic token tier */
-	--radius-md: 3;
+	--p-radius-md: 3;
 
 	/* TIMING */
 	/* --duration-xs: 50ms;
@@ -87,57 +92,30 @@
 
 	/* COLOR */
 	/* Neutral */
-	// --color-neutral-hue: 0;
-	// --color-neutral-sat: 0%;
-	// --color-white: hsl(var(--color-neutral-hue), var(--color-neutral-sat), 100%);
-	// --color-white-a93: hsla(var(--color-neutral-hue), var(--color-neutral-sat), 100%, 93%);
-	// --color-gray-100: hsl(var(--color-neutral-hue), var(--color-neutral-sat), 97%);
 	// --color-gray-200: hsl(var(--color-neutral-hue), var(--color-neutral-sat), 92%);
 	// --color-gray-300: hsl(var(--color-neutral-hue), var(--color-neutral-sat), 87%);
 	// --color-gray-400: hsl(var(--color-neutral-hue), var(--color-neutral-sat), 69%);
 	// --color-gray-500: hsl(var(--color-neutral-hue), var(--color-neutral-sat), 42%);
 	// --color-black: hsl(var(--color-neutral-hue), var(--color-neutral-sat), 0%);
-	--color-neutral-hue: 0;
-	--color-neutral-sat: 0%;
-	--color-white: hsl(var(--color-neutral-hue), var(--color-neutral-sat), 100%);
-	--color-gray-500: hsl(var(--color-neutral-hue), var(--color-neutral-sat), 42%);
-	--color-black: hsl(var(--color-neutral-hue), var(--color-neutral-sat), 0%);
+	--p-color-neutral-hue: 0;
+	--p-color-neutral-sat: 0%;
+	--p-color-white: hsl(var(--p-color-neutral-hue), var(--p-color-neutral-sat), 100%);
+	--p-color-gray-100: hsl(var(--color-neutral-hue), var(--color-neutral-sat), 97%);
+	--p-color-gray-500: hsl(var(--p-color-neutral-hue), var(--p-color-neutral-sat), 42%);
+	--p-color-black: hsl(var(--p-color-neutral-hue), var(--p-color-neutral-sat), 0%);
 
 	/* Cyan */
-	--color-cyan-hue: 180;
-	--color-cyan-sat: 100%;
-	--color-cyan-500: hsl(var(--color-orange-hue), var(--color-orange-sat), 50%);
+	--p-color-cyan-hue: 180;
+	--p-color-cyan-sat: 100%;
+	--p-color-cyan-500: hsl(var(--p-color-orange-hue), var(--p-color-orange-sat), 50%);
 
 	/* Magenta */
-	--color-magenta-hue: 300;
-	--color-magenta-sat: 100%;
-	--color-magenta-500: hsl(var(--color-orange-hue), var(--color-orange-sat), 50%);
+	--p-color-magenta-hue: 300;
+	--p-color-magenta-sat: 100%;
+	--p-color-magenta-500: hsl(var(--p-color-orange-hue), var(--p-color-orange-sat), 50%);
 
 	/* Yellow */
-	--color-yellow-hue: 60;
-	--color-yellow-sat: 100%;
-	--color-yellow-500: hsl(var(--color-orange-hue), var(--color-orange-sat), 50%);
-
-	/* TRANSPARENCY */
-	/* White */
-	// --white-a0: hsla(var(--color-neutral-hue), var(--color-neutral-sat), 100%, 0%);
-	// --white-a10: hsla(var(--color-neutral-hue), var(--color-neutral-sat), 100%, 10%);
-	// --white-a15: hsla(var(--color-neutral-hue), var(--color-neutral-sat), 100%, 15%);
-	// --white-a20: hsla(var(--color-neutral-hue), var(--color-neutral-sat), 100%, 20%);
-	// --white-a30: hsla(var(--color-neutral-hue), var(--color-neutral-sat), 100%, 30%);
-	// --white-a50: hsla(var(--color-neutral-hue), var(--color-neutral-sat), 100%, 50%);
-	// --white-a70: hsla(var(--color-neutral-hue), var(--color-neutral-sat), 100%, 70%);
-	// --white-a80: hsla(var(--color-neutral-hue), var(--color-neutral-sat), 100%, 80%);
-	// --white-a90: hsla(var(--color-neutral-hue), var(--color-neutral-sat), 100%, 90%);
-
-	/* Black */
-	// --black-a0: hsla(var(--color-neutral-hue), var(--color-neutral-sat), 0%, 0%);
-	// --black-a10: hsla(var(--color-neutral-hue), var(--color-neutral-sat), 0%, 10%);
-	// --black-a15: hsla(var(--color-neutral-hue), var(--color-neutral-sat), 0%, 15%);
-	// --black-a20: hsla(var(--color-neutral-hue), var(--color-neutral-sat), 0%, 20%);
-	// --black-a30: hsla(var(--color-neutral-hue), var(--color-neutral-sat), 0%, 30%);
-	// --black-a50: hsla(var(--color-neutral-hue), var(--color-neutral-sat), 0%, 50%);
-	// --black-a70: hsla(var(--color-neutral-hue), var(--color-neutral-sat), 0%, 70%);
-	// --black-a80: hsla(var(--color-neutral-hue), var(--color-neutral-sat), 0%, 80%);
-	// --black-a90: hsla(var(--color-neutral-hue), var(--color-neutral-sat), 0%, 90%);
+	--p-color-yellow-hue: 60;
+	--p-color-yellow-sat: 100%;
+	--p-color-yellow-500: hsl(var(--p-color-orange-hue), var(--p-color-orange-sat), 50%);
 }
