@@ -1,0 +1,326 @@
+@use 'tokens-primitive';
+
+/* ===============================
+  Semantic & Component (Tier 2) Tokens
+  =============================== */
+
+/* 
+  * These tokens assign and give meaning to the primitive tokens and should be used often. This is the theme layer to our token system. This file includes the following:
+    * Viewport
+    * Spacing
+    * Radius
+    * Timing (PENDING)
+    * Typography
+    * Color
+    * Transparency
+    * Text
+    * Surface
+    * Link
+    * Border
+    * Divider
+    * Icon
+    * Item
+    * COMPONENTS:
+      * Buttons
+      * Cards
+      * Inputs
+*/
+
+/* Todo: 
+  * We need to import these in the right order in our base css file. Don't import it twice
+  * Potentially move typography to another file?
+  * Add in line-heights
+*/
+
+:root {
+	/* VIEWPORT */
+	/* Use for media queries and viewport values */
+	--viewport-2xs: var(--viewport-1);
+	--viewport-xs: var(--viewport-2);
+	--viewport-sm: var(--viewport-3);
+	--viewport-md: var(--viewport-4);
+	--viewport-lg: var(--viewport-5);
+	--viewport-xl: var(--viewport-6);
+	--viewport-2xl: var(--viewport-7);
+
+	/* SPACING */
+	/* Use for spacing values */
+	--space-3xs: var(--space-0125);
+	--space-2xs: var(--space-025);
+	--space-xs: var(--space-05);
+	--space-sm: var(--space-075);
+	--space-base: var(--space-1);
+	--space-md: var(--space-2);
+	--space-lg: var(--space-3);
+	--space-xl: var(--space-4);
+	--space-2xl: var(--space-5);
+	--space-3xl: var(--space-6);
+	--space-4xl: var(--space-7);
+	--space-5xl: var(--space-8);
+	--space-6xl: var(--space-9);
+	--space-7xl: var(--space-10);
+	--space-8xl: var(--space-11);
+
+	/* RADIUS */
+	/* Use for radius values */
+	--radius-default: var(--radius-md);
+
+	/* TYPOGRAPHY */
+	/* Use for typography values */
+	// TODO: update accordingly
+	--font-header: var(--font-sans);
+	--font-body: var(--font-sans);
+	--font-weight-base: var(--font-weight-1);
+	--font-weight-med: var(--font-weight-2);
+	--font-weight-semiBold: var(--font-weight-3);
+	--font-weight-bold: var(--font-weight-4);
+
+	--text-base: var(--text-size-base);
+	--text-xs: var(--text-size-1);
+	--text-sm: var(--text-size-2);
+	--text-md: var(--text-size-3);
+	--text-lg: var(--text-size-4);
+	--text-xl: var(--text-size-5);
+	--text-2xl: var(--text-size-6);
+	--text-3xl: var(--text-size-7);
+	--text-4xl: var(--text-size-8);
+
+	/* COLOR */
+	/* Use for color values */
+	--color-primary: var(--color-black);
+	--color-primary-hover: var(--color-primary);
+	--color-primary-active: var(--color-primary);
+
+	--color-secondary: var(--color-white);
+	--color-secondary-hover: var(--color-secondary);
+	--color-secondary-active: var(--color-secondary);
+
+	--color-tertiary: var(--color-gray-500);
+	--color-tertiary-hover: var(--color-tertiary);
+	--color-tertiary-active: var(--color-tertiary);
+
+	--color-accent: var(--color-magenta);
+	--color-accent-hover: var(--color-accent);
+	--color-accent-active: var(--color-accent);
+
+	/* Neutrals */
+	// --color-neutral-white: var(--color-white);
+	// --color-neutral-100: var(--color-gray-100);
+	// --color-neutral-200: var(--color-gray-200);
+	// --color-neutral-300: var(--color-gray-300);
+	// --color-neutral-400: var(--color-gray-400);
+	// --color-neutral-500: var(--color-gray-500);
+	// --color-neutral-black: var(--color-black);
+
+	/* TRANSPARENCY */
+	/* Light */
+	// --transparent-light-a0: var(--white-a0);
+	// --transparent-light-a10: var(--white-a10);
+	// --transparent-light-a15: var(--white-a15);
+	// --transparent-light-a20: var(--white-a20);
+	// --transparent-light-a30: var(--white-a30);
+	// --transparent-light-a50: var(--white-a50);
+	// --transparent-light-a70: var(--white-a70);
+	// --transparent-light-a80: var(--white-a80);
+	// --transparent-light-a90: var(--white-a90);
+
+	/* Dark */
+	// --transparent-dark-a0: var(--black-a0);
+	// --transparent-dark-a10: var(--black-a10);
+	// --transparent-dark-a15: var(--black-a15);
+	// --transparent-dark-a20: var(--black-a20);
+	// --transparent-dark-a30: var(--black-a30);
+	// --transparent-dark-a50: var(--black-a50);
+	// --transparent-dark-a70: var(--black-a70);
+	// --transparent-dark-a80: var(--black-a80);
+	// --transparent-dark-a90: var(--black-a90);
+
+	/* Auto */
+	// --transparent-auto-a0: var(--black-a0);
+	// --transparent-auto-a10: var(--black-a10);
+	// --transparent-auto-a15: var(--black-a15);
+	// --transparent-auto-a20: var(--black-a20);
+	// --transparent-auto-a30: var(--black-a30);
+	// --transparent-auto-a50: var(--black-a50);
+	// --transparent-auto-a70: var(--black-a70);
+	// --transparent-auto-a80: var(--black-a80);
+	// --transparent-auto-a90: var(--black-a90);
+
+	/* TEXT */
+	/* Use for text color values */
+	--text-primary: var(--color-primary);
+	--text-secondary: var(--color-secondary);
+	--text-tertiary: var(--color-tertiary);
+	--text-accent: var(--color-accent);
+	// --text-disabled: var(--color-neutral-300);
+	// --text-over-image: var(--color-neutral-white);
+
+	/* SURFACE */
+	/* Use for surface color values like backgrounds for cards, etc. */
+	--surface-primary: var(--color-primary);
+	--surface-secondary: var(--color-secondary);
+	//TODO: need to make a very subtle gray for tert
+	// --surface-tertiary: var(--color-secondary);
+	--surface-accent: var(--color-accent);
+
+	/* LINK */
+	/* Use for link color values */
+	--link-primary: var(--color-primary);
+	--link-primary-hover: var(--link-primary);
+	--link-primary-active: var(--link-primary);
+	--link-primary-visited: var(--link-primary);
+
+	--link-neutral: var(--color-tertiary);
+	--link-neutral-hover: var(--link-primary);
+	--link-neutral-active: var(--link-primary);
+	--link-neutral-visited: var(--link-neutral);
+
+	// --link-disabled: var(--text-disabled);
+
+	// --link-over-image: var(--text-over-image);
+	// --link-over-image-hover: var(--color-white-a93);
+	// --link-over-image-active: var(--link-over-image);
+	// --link-over-image-visited: var(--link-over-image);
+
+	/* BORDER */
+	/* Use for border color values */
+	// --border-default: var(--color-neutral-400);
+	// --border-active: var(--color-neutral-500);
+
+	/* DIVIDER */
+	/* Use for divider color values */
+	// --divider-primary: var(--color-neutral-400);
+	// --divider-secondary: var(--color-neutral-300);
+
+	/* ICON */
+	/* Use for icon color values */
+	--icon-primary: var(--color-primary);
+	--icon-secondary: var(--color-secondary);
+	--icon-accent: var(--color-accent);
+	// --icon-default: var(--color-neutral-400);
+	// --icon-default-hover: var(--color-neutral-500);
+	// --icon-over-image: var(--color-neutral-white);
+	// --icon-over-image-hover: var(--color-white-a93);
+
+	/* COMPONENTS */
+	/* Currently adding common component tokens in the semantic tier. Can possibly split this out if need be in the future */
+
+	/* BUTTONS */
+	/* Primary */
+	--button-label: var(--font-sans);
+	--button-background: var(--color-primary);
+	--button-background-hover: var(--color-accent);
+	--button-background-pressed: var(--button-background-hover);
+	--button-foreground: var(--color-secondary);
+	--button-border: var(--color-accent);
+
+	// /* Accent */
+	// --button-background-accent: var(--color-accent);
+	// --button-background-accent-hover: var(--color-accent-hover);
+	// --button-background-accent-pressed: var(--color-accent-active);
+	// --button-foreground-accent: var(--color-primary);
+
+	// /* Invert */
+	// --button-background-invert: var(--color-neutral-white);
+	// --button-background-invert-hover: var(--color-white-a93);
+	// --button-background-invert-pressed: var(--button-background-invert);
+	// --button-foreground-invert: var(--color-primary);
+
+	// /* Button Link */
+	// --button-background-link: transparent;
+	// --button-foreground-link: var(--link-primary);
+	// --button-foreground-link-hover: var(--link-primary-hover);
+	// --button-foreground-link-pressed: var(--link-primary-active);
+
+	// /* Button Link Neutral */
+	// --button-foreground-link-neutral: var(--link-neutral);
+	// --button-foreground-link-neutral-hover: var(--link-neutral-hover);
+	// --button-foreground-link-neutral-pressed: var(--link-neutral-active);
+
+	// /* Disabled */
+	// --button-background-disabled: var(--color-neutral-300);
+	// --button-foreground-disabled: var(--color-neutral-white);
+	// --button-foreground-link-disabled: var(--link-disabled);
+
+	// /* CARDS */
+	// /* Use for card specific values */
+	// --card-border: var(--color-neutral-100);
+
+	// /* INPUTS */
+	// /* Use for input values */
+	// --input-label: var(--text-primary);
+	// --input-border: var(--border-default);
+	// --input-border-active: var(--border-active);
+	// --input-text: var(--text-secondary);
+	// --input-placeholder: var(--text-tertiary);
+	// --input-background: var(--surface-minimal);
+}
+
+[data-theme='dark'] {
+	--color-primary: var(--color-white);
+	--color-secondary: var(--color-black);
+
+	// /* TEXT - Dark Theme */
+	// /* Use for dark theme text color values */
+	// --text-brand: var(--color-neutral-white);
+	// --text-primary: var(--color-neutral-white);
+	// --text-secondary: var(--color-neutral-200);
+	// --text-tertiary: var(--color-neutral-500);
+	// --text-disabled: var(--color-neutral-500);
+	// --text-over-image: var(--color-neutral-white);
+
+	// /* SURFACE - Dark Theme */
+	// /* Use for dark theme surface color values like backgrounds for cards, etc. */
+	// --surface-subtle: var(--color-blue-800);
+	// --surface-minimal: var(--color-blue-900);
+
+	// /* LINK - Dark Theme */
+	// /* Use for dark theme link color values */
+	// --link-primary: var(--color-blue-350);
+	// --link-primary-hover: var(--color-neutral-white);
+	// --link-primary-active: var(--color-neutral-white);
+
+	// --link-neutral: var(--color-neutral-400);
+	// --link-neutral-hover: var(--color-neutral-white);
+
+	// /* BORDER - Dark Theme */
+	// /* Use for dark theme border color values */
+	// --border-default: var(--color-neutral-400);
+	// --border-active: var(--color-neutral-300);
+
+	// /* DIVIDER - Dark Theme */
+	// /* Use for dark theme divider color values */
+	// --divider-primary: var(--transparent-light-a30);
+	// --divider-secondary: var(--transparent-light-a15);
+
+	// /* ICON - Dark Theme */
+	// /* Use for dark theme icon color values */
+	// --icon-brand: var(--color-neutral-white);
+	// --icon-default-hover: var(--color-neutral-300);
+
+	// /* COMPONENTS - Dark Theme */
+	// /* BUTTONS - Dark Theme */
+	// /* Primary */
+	// --button-background-primary: var(--color-neutral-white);
+	// --button-background-primary-hover: var(--color-white-a93);
+	// --button-background-primary-pressed: var(--color-neutral-white);
+	// --button-foreground-primary: var(--color-primary);
+
+	// /* CARDS - Dark Theme */
+	// /* Use for dark theme card specific values */
+	// --card-border: #181e27; /* Rare custom hex value, do not repeat */
+
+	// /* INPUTS - Dark Theme */
+	// /* Use for dark theme input values */
+	// --input-background: transparent;
+}
+
+[data-theme='c'] {
+	--color-accent: var(--color-cyan-500);
+}
+[data-theme='y'] {
+	--color-accent: var(--color-yellow-500);
+}
+// [data-theme='p'] {
+// 	--color-accent: var(--color-yellow-500);
+// }
