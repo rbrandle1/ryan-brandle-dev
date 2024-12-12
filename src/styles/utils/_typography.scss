@@ -1,0 +1,206 @@
+// prettier-ignore
+
+/**
+* _typography.scss
+*
+* Typography mixins and functions
+*/
+@use 'sass:list';
+@use 'sass:map';
+@use './viewport';
+
+/// A Sass map of headline properties. The _base is inherited by each variant.
+/// @group typography
+$headline-base: (
+	line-height: 1.2,
+	font-family: var(--font-header),
+	font-weight: var(--font-weight-bold),
+	color: var(--color-primary)
+);
+
+$headlines: (
+	_base: $headline-base,
+	sm: map.merge(
+		$headline-base,
+		(font-size: var(--text-base))
+	),
+	md: map.merge(
+		$headline-base,
+		(font-size: var(--text-md))
+	),
+	lg: map.merge(
+		$headline-base,
+		(font-size: var(--text-lg))
+	),
+	xl: map.merge(
+		$headline-base,
+		(font-size: var(--text-xl))
+	),
+	2xl: map.merge(
+		$headline-base,
+		(font-size: var(--text-2xl))
+	),
+	3xl: map.merge(
+		$headline-base,
+		(font-size: var(--text-3xl))
+	)
+);
+
+/// Headlines
+/// @group Typography
+/// @param {string} $variant [md] - Sets the headline styles: sm, md, lg, xl
+/// @example
+/// @include typography.headline;
+/// @include typography.headline(lg);
+///
+@mixin headline($variant: md) {
+	$headline: map.get($headlines, $variant);
+
+	@if not $headline {
+		@error '"#{$variant}" is not a valid variant. Valid variants are: #{map.keys($headlines)}';
+	}
+
+	font-family: map.get($headline, font-family);
+	font-size: map.get($headline, font-size);
+	font-weight: map.get($headline, font-weight);
+	line-height: map.get($headline, line-height);
+	color: map.get($headline, color);
+	-webkit-font-smoothing: antialiased;
+}
+
+// /// A Sass map of display properties. The _base is inherited by each variant.
+// /// @include typography.display;
+// /// @include typography.display(lg);
+// $displays: (
+// 	_base: (
+// 		line-height: 1,
+// 		font-family: var(--font-header),
+// 		font-weight: var(--font-weight-bold),
+// 		color: var(--color-primary)
+// 	),
+// 	sm: (
+// 		extend _base,
+// 		font-size: var(--text-5xl)
+// 	),
+// 	lg: (
+// 		extend _base,
+// 		font-size: var(--text-7xl)
+// 	),
+// );
+
+// @mixin display($variant: sm) {
+// 	$display: map.get($displays, $variant);
+
+// 	font-family: map.get($display, font-family);
+// 	font-size: map.get($display, font-size);
+// 	font-weight: map.get($display, font-weight);
+// 	line-height: map.get($display, line-height);
+// 	color: map.get($display, color);
+// 	-webkit-font-smoothing: antialiased;
+// }
+
+// /// A Sass map of link properties. The _base is inherited by each variant.
+// /// @group typography
+// $links: (
+// 	default: (
+// 		color: var(--color-primary-link),
+// 		hover: var(--color-primary-link-hover),
+// 		visited: var(--color-primary-link-visited)
+// 	),
+// 	text: (
+// 		color: var(--color-text),
+// 		hover: var(--color-text-dark),
+// 		visited: var(--color-text)
+// 	),
+// 	white: (
+// 		color: var(--color-text-alt),
+// 		hover: var(--color-text-alt-hover),
+// 		visited: var(--color-text-alt)
+// 	),
+// );
+
+// /// Links
+// /// @group Typography
+// /// @param {string} $variant [default] - Sets the link color palette.
+// /// @param {string} $underline [none] - Sets the link underline properties.
+// /// @example
+// /// @include typography.link;
+// /// @include typography.link(text);
+// /// @include typography.link(white);
+// /// @include typography.link(white, always);
+// @mixin link($variant: default, $underline: none) {
+// 	$link: map.get($links, $variant);
+
+// 	color: map.get($link, color);
+
+// 	@if ($underline == none) {
+// 		text-decoration: none;
+// 	}
+
+// 	@if ($underline == always) {
+// 		text-decoration: underline;
+// 	}
+
+// 	@if ($underline == hover) {
+// 		text-decoration: none;
+
+// 		@include viewport.has-hover {
+// 			text-decoration: underline;
+// 		}
+
+// 		&:focus {
+// 			text-decoration: underline;
+// 		}
+// 	}
+
+// 	@include viewport.has-hover {
+// 		color: map.get($link, hover);
+// 	}
+
+// 	&:visited {
+// 		color: map.get($link, visited);
+
+// 		@include viewport.has-hover {
+// 			color: map.get($link, hover);
+// 		}
+// 	}
+// }
+
+// /// Styling and layout for a link with an icon, i.e. an external link
+// /// @group Typography
+// /// @param {string} $direction [right] - Sets styles for svg icon. The direction must match the same location as the svg in the html markup, on the before (left) or after (right) the link.
+// /// @param {string} $variant [default] - Sets the link color palette.
+// /// @example
+// /// @include typography.link-with-icon;
+// /// @include typography.link-with-icon(left);
+// /// @include typography.link-with-icon(left, white);
+// @mixin link-with-icon($direction: right, $variant: default) {
+// 	$directions: left, right;
+
+// 	@if not list.index($directions, $direction) {
+// 		@error '"#{$direction}" is not a valid direction. Please use one of these values: #{$directions}';
+// 	}
+
+// 	@include link($variant);
+// 	display: inline-flex;
+// 	align-items: center;
+
+// 	svg {
+// 		width: 1.25em;
+// 		fill: currentColor;
+
+// 		@if ($direction == right) {
+// 			margin-left: var(--space-2xs);
+// 		}
+
+// 		@if ($direction == left) {
+// 			margin-right: var(--space-2xs);
+// 		}
+// 	}
+// }
+//? Label
+//? Paragraph
+//? Subhead
+//? AllCaps
+//? Blockquote
+//? RichText

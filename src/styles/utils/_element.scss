@@ -1,0 +1,72 @@
+/**
+* _element.scss
+*
+* Element mixins and functions
+*/
+
+// @use 'sass:list';
+// @use 'sass:map';
+@use 'sass:math';
+
+///   @include element.button-reset;
+// @mixin button-reset {
+// 	appearance: none;
+// 	color: initial;
+// 	background-color: transparent;
+// 	border: none;
+// 	border-right: 0;
+// 	margin: 0;
+// 	padding: 0;
+// 	box-shadow: none;
+// 	cursor: pointer;
+
+// 	&:active {
+// 		color: initial;
+// 	}
+// }
+
+//   @include element.image-cover;
+@mixin image-cover {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+// Apply a responsive aspect ratio to a wrapper element
+//   @include element.aspect-ratio;
+//   @include element.aspect-ratio(4 / 3);
+@mixin aspect-ratio($ratio: math.div(16, 9)) {
+	position: relative;
+
+	&::before {
+		content: '';
+		display: block;
+		padding-bottom: calc(100% / (#{$ratio}));
+	}
+
+	> :first-child {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	img {
+		@include image-cover;
+	}
+}
+
+// Visually hides element and removes space it would usually take up on the page. Ideal to maintain accessibility.
+//   @include element.visually-hidden;
+@mixin visually-hidden {
+	border: 0;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	white-space: nowrap;
+}

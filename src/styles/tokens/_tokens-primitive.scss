@@ -14,9 +14,14 @@
 */
 
 /* Todo: 
+	* Investigate why function.extend-in-map and .key was so important previously
 	* UPDATE TO DYNAMIC FLUID SPACING
+	* Set typography utils and classes... explore more modern ways to do this? has:, etc?
+	* Set viewport utils
   * Add in line-heights as numbers... 1.5 is default, then map them in semantic to line-height-base, small, large, etc...
+	* Set up basic helper mixins
   * Add shadows/elevation, gradients, animation timing and others that don't exist in figma
+  * Do I need browser prefixes or is this handled with next? NOPE! Should be auto configured with default next.js project.
 */
 
 :root {
