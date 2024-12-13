@@ -5,7 +5,7 @@ export default function Home() {
 	return (
 		<div className={styles.home}>
 			<main className={styles.main}>
-				<section className={styles.section}>
+				{/* <section className={styles.section}>
 					<div className={styles.displayLg}>Display LG</div>
 					<div className={styles.displaySm}>Display SM</div>
 					<div className={styles.h1}>How vexingly quick daft zebras jump</div>
@@ -30,6 +30,23 @@ export default function Home() {
 					<div className={styles.pLg}>How vexingly quick daft zebras jump</div>
 					<div className={styles.p}>How vexingly quick daft zebras jump</div>
 					<div className={styles.pSm}>How vexingly quick daft zebras jump</div>
+				</section> */}
+				<section className={styles.section}>
+					<div className={styles.space3xs}></div>
+					<div className={styles.space2xs}></div>
+					<div className={styles.spaceXs}></div>
+					<div className={styles.spaceSm}></div>
+					<div className={styles.spaceBase}></div>
+					<div className={styles.spaceMd}></div>
+					<div className={styles.spaceLg}></div>
+					<div className={styles.spaceXl}></div>
+					<div className={styles.space2xl}></div>
+					<div className={styles.space3xl}></div>
+					<div className={styles.space4xl}></div>
+					<div className={styles.space5xl}></div>
+					<div className={styles.space6xl}></div>
+					<div className={styles.space7xl}></div>
+					<div className={styles.space8xl}></div>
 				</section>
 				{/* <div className={styles.ctas}>
           <a

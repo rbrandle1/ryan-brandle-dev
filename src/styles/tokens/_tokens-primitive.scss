@@ -15,13 +15,13 @@
 
 /* Todo: 
 	* Get a github branch pushed
-	* UPDATE TO DYNAMIC FLUID SPACING
 	* Set typography utils and classes... explore more modern ways to do this? has:, etc?
 	* Set viewport utils
   * Add in line-heights as numbers... 1.5 is default, then map them in semantic to line-height-base, small, large, etc...
 	* Set up basic helper mixins
   * Add shadows/elevation, gradients, animation timing and others that don't exist in figma
   * Do I need browser prefixes or is this handled with next? NOPE! Should be auto configured with default next.js project.
+  * Try setting base space from 1.6 to 1.8. Also, might need to adjust the real big spaces % max to be larger for a more noticeable difference. Can also run the calculation to a raw value to enhance performance.
 */
 
 :root {
@@ -68,22 +68,99 @@
 	--p-text-size-10: clamp(13.41rem, 15.07vi + 8.14rem, 29.23rem);
 
 	/* SPACE */
-	/* Raw numbers to be used in Semantic token tier */
-	--p-space-1: 1.6rem; /* 16 */
-	--p-space-0125: calc(0.125 * var(--p-space-1)); /* 2 */
-	--p-space-025: calc(0.25 * var(--p-space-1)); /* 4 */
-	--p-space-05: calc(0.5 * var(--p-space-1)); /* 8 */
-	--p-space-075: calc(0.75 * var(--p-space-1)); /* 12 */
-	--p-space-2: calc(1.5 * var(--p-space-1)); /* 24 */
-	--p-space-3: calc(2 * var(--p-space-1)); /* 32 */
-	--p-space-4: calc(3 * var(--p-space-1)); /* 48 */
-	--p-space-5: calc(4 * var(--p-space-1)); /* 64 */
-	--p-space-6: calc(5 * var(--p-space-1)); /* 80 */
-	--p-space-7: calc(6 * var(--p-space-1)); /* 88 */
-	--p-space-8: calc(7 * var(--p-space-1)); /* 96 */
-	--p-space-9: calc(8 * var(--p-space-1)); /* 192 */
-	--p-space-10: calc(9 * var(--p-space-1)); /* 288 */
-	--p-space-11: calc(10 * var(--p-space-1)); /* 384 */
+	/* Base value for the spacing system */
+	--p-space-base-value: 1.6rem; /* 16px equivalent */
+
+	/* Fluid spacing scale with dynamic calculations */
+	--p-space-0125: clamp(
+		calc(0.125 * var(--p-space-base-value)),
+		calc(0.125 * var(--p-space-base-value) + 0.1vi),
+		calc(0.15625 * var(--p-space-base-value))
+	); /* Min: 2px, Max: 25% increase */
+
+	--p-space-025: clamp(
+		calc(0.25 * var(--p-space-base-value)),
+		calc(0.25 * var(--p-space-base-value) + 0.1vi),
+		calc(0.3125 * var(--p-space-base-value))
+	); /* Min: 4px, Max: 25% increase */
+
+	--p-space-05: clamp(
+		calc(0.5 * var(--p-space-base-value)),
+		calc(0.5 * var(--p-space-base-value) + 0.15vi),
+		calc(0.5625 * var(--p-space-base-value))
+	); /* Min: 8px, Max: 12.5% increase */
+
+	--p-space-075: clamp(
+		calc(0.75 * var(--p-space-base-value)),
+		calc(0.75 * var(--p-space-base-value) + 0.15vi),
+		calc(0.84375 * var(--p-space-base-value))
+	); /* Min: 12px, Max: 12.5% increase */
+
+	--p-space-1: clamp(
+		var(--p-space-base-value),
+		calc(var(--p-space-base-value) + 0.2vi),
+		calc(1.125 * var(--p-space-base-value))
+	); /* Min: 1.6rem, Max: 12.5% increase */
+
+	--p-space-2: clamp(
+		calc(1.5 * var(--p-space-base-value)),
+		calc(1.5 * var(--p-space-base-value) + 0.3vi),
+		calc(1.6875 * var(--p-space-base-value))
+	); /* Min: 24px, Max: 12.5% increase */
+
+	--p-space-3: clamp(
+		calc(2 * var(--p-space-base-value)),
+		calc(2 * var(--p-space-base-value) + 0.4vi),
+		calc(2.25 * var(--p-space-base-value))
+	); /* Min: 32px, Max: 12.5% increase */
+
+	--p-space-4: clamp(
+		calc(3 * var(--p-space-base-value)),
+		calc(3 * var(--p-space-base-value) + 0.5vi),
+		calc(3.375 * var(--p-space-base-value))
+	); /* Min: 48px, Max: 12.5% increase */
+
+	--p-space-5: clamp(
+		calc(4 * var(--p-space-base-value)),
+		calc(4 * var(--p-space-base-value) + 0.6vi),
+		calc(4.5 * var(--p-space-base-value))
+	); /* Min: 64px, Max: 12.5% increase */
+
+	--p-space-6: clamp(
+		calc(5 * var(--p-space-base-value)),
+		calc(5 * var(--p-space-base-value) + 0.75vi),
+		calc(5.625 * var(--p-space-base-value))
+	); /* Min: 80px, Max: 12.5% increase */
+
+	--p-space-7: clamp(
+		calc(6 * var(--p-space-base-value)),
+		calc(6 * var(--p-space-base-value) + 0.9vi),
+		calc(6.75 * var(--p-space-base-value))
+	); /* Min: 96px, Max: 12.5% increase */
+
+	--p-space-8: clamp(
+		calc(7 * var(--p-space-base-value)),
+		calc(7 * var(--p-space-base-value) + 1.1vi),
+		calc(7.875 * var(--p-space-base-value))
+	); /* Min: 112px, Max: 12.5% increase */
+
+	--p-space-9: clamp(
+		calc(8 * var(--p-space-base-value)),
+		calc(8 * var(--p-space-base-value) + 1.25vi),
+		calc(9 * var(--p-space-base-value))
+	); /* Min: 128px, Max: 12.5% increase */
+
+	--p-space-10: clamp(
+		calc(9 * var(--p-space-base-value)),
+		calc(9 * var(--p-space-base-value) + 1.5vi),
+		calc(10.125 * var(--p-space-base-value))
+	); /* Min: 144px, Max: 12.5% increase */
+
+	--p-space-11: clamp(
+		calc(10 * var(--p-space-base-value)),
+		calc(10 * var(--p-space-base-value) + 1.75vi),
+		calc(11.25 * var(--p-space-base-value))
+	); /* Min: 160px, Max: 12.5% increase */
 
 	/* RADIUS */
 	/* Raw numbers to be used in Semantic token tier */
