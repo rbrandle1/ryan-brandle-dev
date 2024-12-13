@@ -1,5 +1,3 @@
-// prettier-ignore
-
 /**
 * _typography.scss
 *
@@ -9,51 +7,61 @@
 @use 'sass:map';
 @use './viewport';
 
-/// A Sass map of headline properties. The _base is inherited by each variant.
-/// @group typography
+// HEADLINES
 $headline-base: (
 	line-height: 1.2,
 	font-family: var(--font-header),
 	font-weight: var(--font-weight-bold),
-	color: var(--color-primary)
+	color: var(--color-primary),
+	text-transform: uppercase,
 );
 
 $headlines: (
-	_base: $headline-base,
-	sm: map.merge(
-		$headline-base,
-		(font-size: var(--text-base))
-	),
-	md: map.merge(
-		$headline-base,
-		(font-size: var(--text-md))
-	),
-	lg: map.merge(
-		$headline-base,
-		(font-size: var(--text-lg))
-	),
-	xl: map.merge(
-		$headline-base,
-		(font-size: var(--text-xl))
-	),
-	2xl: map.merge(
-		$headline-base,
-		(font-size: var(--text-2xl))
-	),
-	3xl: map.merge(
-		$headline-base,
-		(font-size: var(--text-3xl))
-	)
+	sm:
+		map.merge(
+			$headline-base,
+			(
+				font-size: var(--text-base),
+			)
+		),
+	md:
+		map.merge(
+			$headline-base,
+			(
+				font-size: var(--text-md),
+			)
+		),
+	lg:
+		map.merge(
+			$headline-base,
+			(
+				font-size: var(--text-lg),
+			)
+		),
+	xl:
+		map.merge(
+			$headline-base,
+			(
+				font-size: var(--text-xl),
+			)
+		),
+	2xl:
+		map.merge(
+			$headline-base,
+			(
+				font-size: var(--text-2xl),
+			)
+		),
+	3xl:
+		map.merge(
+			$headline-base,
+			(
+				font-size: var(--text-3xl),
+			)
+		),
 );
 
-/// Headlines
-/// @group Typography
-/// @param {string} $variant [md] - Sets the headline styles: sm, md, lg, xl
-/// @example
-/// @include typography.headline;
-/// @include typography.headline(lg);
-///
-@mixin headline($variant: md) {
+@mixin headline($variant: 3xl) {
 	$headline: map.get($headlines, $variant);
 
 	@if not $headline {
@@ -65,39 +73,95 @@ $headlines: (
 	font-weight: map.get($headline, font-weight);
 	line-height: map.get($headline, line-height);
 	color: map.get($headline, color);
-	-webkit-font-smoothing: antialiased;
+	text-transform: map.get($headline, text-transform);
+	// -webkit-font-smoothing: antialiased;
 }
 
-// /// A Sass map of display properties. The _base is inherited by each variant.
-// /// @include typography.display;
-// /// @include typography.display(lg);
-// $displays: (
-// 	_base: (
-// 		line-height: 1,
-// 		font-family: var(--font-header),
-// 		font-weight: var(--font-weight-bold),
-// 		color: var(--color-primary)
-// 	),
-// 	sm: (
-// 		extend _base,
-// 		font-size: var(--text-5xl)
-// 	),
-// 	lg: (
-// 		extend _base,
-// 		font-size: var(--text-7xl)
-// 	),
-// );
+// DISPLAY TEXT
+$display-base: (
+	line-height: 1,
+	font-family: var(--font-header),
+	font-weight: var(--font-weight-bold),
+	color: var(--color-primary),
+	text-transform: uppercase,
+);
 
-// @mixin display($variant: sm) {
-// 	$display: map.get($displays, $variant);
+$displays: (
+	sm:
+		map.merge(
+			$display-base,
+			(
+				font-size: var(--text-5xl),
+			)
+		),
+	lg:
+		map.merge(
+			$display-base,
+			(
+				font-size: var(--text-7xl),
+			)
+		),
+);
 
-// 	font-family: map.get($display, font-family);
-// 	font-size: map.get($display, font-size);
-// 	font-weight: map.get($display, font-weight);
-// 	line-height: map.get($display, line-height);
-// 	color: map.get($display, color);
-// 	-webkit-font-smoothing: antialiased;
-// }
+@mixin display($variant: sm) {
+	$display: map.get($displays, $variant);
+
+	@if not $display {
+		@error '"#{$variant}" is not a valid variant. Valid variants are: #{map.keys($displays)}';
+	}
+
+	font-family: map.get($display, font-family);
+	font-size: map.get($display, font-size);
+	font-weight: map.get($display, font-weight);
+	line-height: map.get($display, line-height);
+	color: map.get($display, color);
+	text-transform: map.get($display, text-transform);
+	// -webkit-font-smoothing: antialiased;
+}
+
+// Paragraphs
+$paragraph-base: (
+	// line-height: 1.5, should be set to this on html
+	font-family: var(--font-body),
+	color: var(--color-primary),
+	//color tert?
+);
+
+$paragraphs: (
+	sm:
+		map.merge(
+			$paragraph-base,
+			(
+				font-size: var(--text-sm),
+			)
+		),
+	base:
+		map.merge(
+			$paragraph-base,
+			(
+				font-size: var(--text-base),
+			)
+		),
+	lg:
+		map.merge(
+			$paragraph-base,
+			(
+				font-size: var(--text-md),
+			)
+		),
+);
+
+@mixin p($variant: base) {
+	$p: map.get($paragraphs, $variant);
+
+	@if not $p {
+		@error '"#{$variant}" is not a valid variant. Valid variants are: #{map.keys($paragraphs)}';
+	}
+
+	font-family: map.get($p, font-family);
+	font-size: map.get($p, font-size);
+	color: map.get($p, color);
+}
 
 // /// A Sass map of link properties. The _base is inherited by each variant.
 // /// @group typography

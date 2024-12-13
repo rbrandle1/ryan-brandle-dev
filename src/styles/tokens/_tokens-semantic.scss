@@ -111,9 +111,9 @@
 
 	/* SURFACE */
 	/* Use for surface color values like backgrounds for cards, etc. */
-	--surface-primary: var(--color-primary);
-	--surface-secondary: var(--color-secondary);
-	--surface-tertiary: var(--p-color-gray-100);
+	--surface-primary: var(--color-secondary);
+	// --surface-secondary: var(--color-secondary);
+	--surface-neutral: var(--p-color-gray-100);
 	--surface-accent: var(--color-accent);
 
 	/* LINK */
@@ -205,60 +205,7 @@
 [data-section='dark'] {
 	--color-primary: var(--p-color-white);
 	--color-secondary: var(--p-color-black);
-
-	// /* TEXT - Dark Theme */
-	// /* Use for dark theme text color values */
-	// --text-brand: var(--color-neutral-white);
-	// --text-primary: var(--color-neutral-white);
-	// --text-secondary: var(--color-neutral-200);
-	// --text-tertiary: var(--color-neutral-500);
-	// --text-disabled: var(--color-neutral-500);
-	// --text-over-image: var(--color-neutral-white);
-
-	// /* SURFACE - Dark Theme */
-	// /* Use for dark theme surface color values like backgrounds for cards, etc. */
-	// --surface-subtle: var(--color-blue-800);
-	// --surface-minimal: var(--color-blue-900);
-
-	// /* LINK - Dark Theme */
-	// /* Use for dark theme link color values */
-	// --link-primary: var(--color-blue-350);
-	// --link-primary-hover: var(--color-neutral-white);
-	// --link-primary-active: var(--color-neutral-white);
-
-	// --link-neutral: var(--color-neutral-400);
-	// --link-neutral-hover: var(--color-neutral-white);
-
-	// /* BORDER - Dark Theme */
-	// /* Use for dark theme border color values */
-	// --border-default: var(--color-neutral-400);
-	// --border-active: var(--color-neutral-300);
-
-	// /* DIVIDER - Dark Theme */
-	// /* Use for dark theme divider color values */
-	// --divider-primary: var(--transparent-light-a30);
-	// --divider-secondary: var(--transparent-light-a15);
-
-	// /* ICON - Dark Theme */
-	// /* Use for dark theme icon color values */
-	// --icon-brand: var(--color-neutral-white);
-	// --icon-default-hover: var(--color-neutral-300);
-
-	// /* COMPONENTS - Dark Theme */
-	// /* BUTTONS - Dark Theme */
-	// /* Primary */
-	// --button-background-primary: var(--color-neutral-white);
-	// --button-background-primary-hover: var(--color-white-a93);
-	// --button-background-primary-pressed: var(--color-neutral-white);
-	// --button-foreground-primary: var(--color-primary);
-
-	// /* CARDS - Dark Theme */
-	// /* Use for dark theme card specific values */
-	// --card-border: #181e27; /* Rare custom hex value, do not repeat */
-
-	// /* INPUTS - Dark Theme */
-	// /* Use for dark theme input values */
-	// --input-background: transparent;
+	--surface-primary: var(--p-color-black);
 }
 
 [data-theme='c'] {

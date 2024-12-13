@@ -5,13 +5,31 @@ export default function Home() {
 	return (
 		<div className={styles.home}>
 			<main className={styles.main}>
-				<section>
-					<div className={styles.h1}>How vexingly quick daft zebras jump 49</div>
-					<div className={styles.h2}>How vexingly quick daft zebras jump 39</div>
-					<div className={styles.h3}>How vexingly quick daft zebras jump 31</div>
-					<div className={styles.h4}>How vexingly quick daft zebras jump 25</div>
-					<div className={styles.h5}>How vexingly quick daft zebras jump 20</div>
-					<div className={styles.h6}>How vexingly quick daft zebras jump 16</div>
+				<section className={styles.section}>
+					<div className={styles.displayLg}>Display LG</div>
+					<div className={styles.displaySm}>Display SM</div>
+					<div className={styles.h1}>How vexingly quick daft zebras jump</div>
+					<div className={styles.h2}>How vexingly quick daft zebras jump</div>
+					<div className={styles.h3}>How vexingly quick daft zebras jump</div>
+					<div className={styles.h4}>How vexingly quick daft zebras jump</div>
+					<div className={styles.h5}>How vexingly quick daft zebras jump</div>
+					<div className={styles.h6}>How vexingly quick daft zebras jump</div>
+					<div className={styles.pLg}>How vexingly quick daft zebras jump</div>
+					<div className={styles.p}>How vexingly quick daft zebras jump</div>
+					<div className={styles.pSm}>How vexingly quick daft zebras jump</div>
+				</section>
+				<section data-section='dark' className={styles.section}>
+					<div className={styles.displayLg}>Display LG</div>
+					<div className={styles.displaySm}>Display SM</div>
+					<div className={styles.h1}>How vexingly quick daft zebras jump</div>
+					<div className={styles.h2}>How vexingly quick daft zebras jump</div>
+					<div className={styles.h3}>How vexingly quick daft zebras jump</div>
+					<div className={styles.h4}>How vexingly quick daft zebras jump</div>
+					<div className={styles.h5}>How vexingly quick daft zebras jump</div>
+					<div className={styles.h6}>How vexingly quick daft zebras jump</div>
+					<div className={styles.pLg}>How vexingly quick daft zebras jump</div>
+					<div className={styles.p}>How vexingly quick daft zebras jump</div>
+					<div className={styles.pSm}>How vexingly quick daft zebras jump</div>
 				</section>
 				{/* <div className={styles.ctas}>
           <a

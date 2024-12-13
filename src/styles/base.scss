@@ -11,42 +11,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Source+Serif+4:opsz,wght@8..60,200..900&display=swap');
 
-// * {
-// 	margin: 0;
-// 	padding: 0;
-// 	box-sizing: border-box;
-// 	line-height: 1;
-// }
-
-// html {
-// 	/* font-size 1em = 10px on default browser settings */
-// 	font-size: 62.5%;
-// }
-
-// body {
-// 	width: 100%;
-// 	height: 100%;
-// 	background-color: var(--surface-primary, black);
-// 	padding: 0;
-// 	margin: 0;
-// 	font-family: var(--font-family);
-// 	font-size: var(--text-base);
-// 	line-height: 1.5;
-// 	-webkit-text-size-adjust: 100%;
-// 	transition: background-color var(--duration-sm) ease-out;
-// }
-
-:root {
-	--background: #ffffff;
-	--foreground: #171717;
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 }
-
-// @media (prefers-color-scheme: dark) {
-// 	:root {
-// 		--background: #0a0a0a;
-// 		--foreground: #ededed;
-// 	}
-// }
 
 html,
 body {
@@ -54,27 +23,29 @@ body {
 	overflow-x: hidden;
 }
 
-body {
-	color: var(--foreground);
-	background: var(--background);
-	font-family: var(--font-body);
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+html {
+	/* font-size 1em = 10px on default browser settings */
+	font-size: 62.5%;
 }
 
-* {
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
+body {
+	color: var(--text-primary);
+	background: var(--surface-primary);
+	font-family: var(--font-body);
+	width: 100%;
+	height: 100%;
+	background-color: var(--surface-primary, black);
+	// padding: 0;
+	// margin: 0;
+	font-size: var(--text-base);
+	line-height: 1.5;
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	// transition: background-color var(--duration-sm) ease-out;
 }
 
 a {
 	color: inherit;
 	text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-	html {
-		color-scheme: dark;
-	}
 }
