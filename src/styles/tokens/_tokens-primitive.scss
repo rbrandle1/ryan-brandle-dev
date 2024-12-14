@@ -14,13 +14,13 @@
 */
 
 /* Todo: 
-	* Get a github branch pushed
+	* Add px values to viewport. Might need the js portion to add.
+	* Add cn classnames to use multiple classes.
 	* Set typography utils and classes... explore more modern ways to do this? has:, etc?
 	* Set viewport utils
   * Add in line-heights as numbers... 1.5 is default, then map them in semantic to line-height-base, small, large, etc...
 	* Set up basic helper mixins
   * Add shadows/elevation, gradients, animation timing and others that don't exist in figma
-  * Do I need browser prefixes or is this handled with next? NOPE! Should be auto configured with default next.js project.
   * Try setting base space from 1.6 to 1.8. Also, might need to adjust the real big spaces % max to be larger for a more noticeable difference. Can also run the calculation to a raw value to enhance performance.
 */
 
@@ -39,9 +39,9 @@
 	--p-font-display: 'Oswald', sans-serif;
 	--p-font-sans: 'Source Sans 3', sans-serif;
 	--p-font-serif: 'Source Serif 4', serif;
-	--font-weight-1: 400;
-	--font-weight-2: 700;
-	--font-weight-3: 900;
+	--p-font-weight-1: 400;
+	--p-font-weight-2: 700;
+	--p-font-weight-3: 900;
 
 	/* text sizing*/
 	/* 1rem is 10px with html font-size set to 62.5% */
@@ -189,15 +189,15 @@
 	/* Cyan */
 	--p-color-cyan-hue: 180;
 	--p-color-cyan-sat: 100%;
-	--p-color-cyan-500: hsl(var(--p-color-orange-hue), var(--p-color-orange-sat), 50%);
+	--p-color-cyan-500: hsl(var(--p-color-cyan-hue), var(--p-color-cyan-sat), 50%);
 
 	/* Magenta */
 	--p-color-magenta-hue: 300;
 	--p-color-magenta-sat: 100%;
-	--p-color-magenta-500: hsl(var(--p-color-orange-hue), var(--p-color-orange-sat), 50%);
+	--p-color-magenta-500: hsl(var(--p-color-magenta-hue), var(--p-color-magenta-sat), 50%);
 
 	/* Yellow */
 	--p-color-yellow-hue: 60;
 	--p-color-yellow-sat: 100%;
-	--p-color-yellow-500: hsl(var(--p-color-orange-hue), var(--p-color-orange-sat), 50%);
+	--p-color-yellow-500: hsl(var(--p-color-yellow-hue), var(--p-color-yellow-sat), 50%);
 }

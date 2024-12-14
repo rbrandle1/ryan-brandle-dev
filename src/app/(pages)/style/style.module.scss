@@ -1,0 +1,165 @@
+@use '../styles/utils/typography';
+@use '../styles/utils/layout';
+
+.section {
+	background-color: var(--surface-primary);
+	padding-top: var(--space-8xl);
+	padding-bottom: var(--space-8xl);
+}
+
+.container {
+	@include layout.max-width;
+
+	> * + * {
+		margin-top: var(--space-base);
+	}
+}
+
+.displayLg {
+	@include typography.display(lg);
+}
+
+.displaySm {
+	@include typography.display(sm);
+}
+
+.h1 {
+	@include typography.headline(3xl);
+}
+
+.h2 {
+	@include typography.headline(2xl);
+}
+
+.h3 {
+	@include typography.headline(xl);
+}
+
+.h4 {
+	@include typography.headline(lg);
+}
+
+.h5 {
+	@include typography.headline(md);
+}
+
+.h6 {
+	@include typography.headline(sm);
+}
+
+.calloutLg {
+	@include typography.callout(lg);
+	color: var(--text-accent);
+}
+
+.callout {
+	@include typography.callout;
+	color: var(--text-accent);
+}
+
+.calloutSm {
+	@include typography.callout(sm);
+	color: var(--text-accent);
+}
+
+.pLg {
+	@include typography.p(lg);
+}
+
+.p {
+	@include typography.p;
+}
+
+.pSm {
+	@include typography.p(sm);
+}
+
+.space3xs {
+	width: var(--space-3xs);
+	height: var(--space-3xs);
+	background-color: var(--color-accent);
+}
+
+.space2xs {
+	width: var(--space-2xs);
+	height: var(--space-2xs);
+	background-color: var(--color-accent);
+}
+
+.spaceXs {
+	width: var(--space-xs);
+	height: var(--space-xs);
+	background-color: var(--color-accent);
+}
+
+.spaceSm {
+	width: var(--space-sm);
+	height: var(--space-sm);
+	background-color: var(--color-accent);
+}
+
+.spaceBase {
+	width: var(--space-base);
+	height: var(--space-base);
+	background-color: var(--color-accent);
+}
+
+.spaceMd {
+	width: var(--space-md);
+	height: var(--space-md);
+	background-color: var(--color-accent);
+}
+
+.spaceLg {
+	width: var(--space-lg);
+	height: var(--space-lg);
+	background-color: var(--color-accent);
+}
+
+.spaceXl {
+	width: var(--space-xl);
+	height: var(--space-xl);
+	background-color: var(--color-accent);
+}
+
+.space2xl {
+	width: var(--space-2xl);
+	height: var(--space-2xl);
+	background-color: var(--color-accent);
+}
+
+.space3xl {
+	width: var(--space-3xl);
+	height: var(--space-3xl);
+	background-color: var(--color-accent);
+}
+
+.space4xl {
+	width: var(--space-4xl);
+	height: var(--space-4xl);
+	background-color: var(--color-accent);
+}
+
+.space5xl {
+	width: var(--space-5xl);
+	height: var(--space-5xl);
+	background-color: var(--color-accent);
+}
+
+.space6xl {
+	width: var(--space-6xl);
+	height: var(--space-6xl);
+	background-color: var(--color-accent);
+}
+
+.space7xl {
+	width: var(--space-7xl);
+	height: var(--space-7xl);
+	background-color: var(--color-accent);
+}
+
+.space8xl {
+	width: var(--space-8xl);
+	height: var(--space-8xl);
+	background-color: var(--color-accent);
+}
