@@ -1,4 +1,5 @@
 // 'use client';
+import cn from 'classnames';
 import styles from './style.module.scss';
 
 const StylePage = () => {
@@ -59,6 +60,24 @@ const StylePage = () => {
 						<div className={styles.space7xl}></div>
 						<div className={styles.space8xl}></div>
 					</div>
+					<section className={cn(styles.section, styles.sectionContainerTest)}>
+						<div className={styles.container}>
+							<div className={styles.displayLg}>Display LG</div>
+							<div className={styles.displaySm}>Display SM</div>
+							<div className={styles.h1}>How vexingly quick daft zebras jump</div>
+							<div className={styles.h2}>How vexingly quick daft zebras jump</div>
+							<div className={styles.h3}>How vexingly quick daft zebras jump</div>
+							<div className={styles.h4}>How vexingly quick daft zebras jump</div>
+							<div className={styles.h5}>How vexingly quick daft zebras jump</div>
+							<div className={styles.h6}>How vexingly quick daft zebras jump</div>
+							<div className={styles.calloutLg}>How vexingly quick daft zebras jump</div>
+							<div className={styles.callout}>How vexingly quick daft zebras jump</div>
+							<div className={styles.calloutSm}>How vexingly quick daft zebras jump</div>
+							<div className={styles.pLg}>How vexingly quick daft zebras jump</div>
+							<div className={styles.p}>How vexingly quick daft zebras jump</div>
+							<div className={styles.pSm}>How vexingly quick daft zebras jump</div>
+						</div>
+					</section>
 				</section>
 			</main>
 		</div>

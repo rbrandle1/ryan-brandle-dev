@@ -163,3 +163,9 @@
 	height: var(--space-8xl);
 	background-color: var(--color-accent);
 }
+
+.sectionContainerTest {
+	padding-left: clamp(var(--space-base), 4vw, var(--space-lg));
+	padding-right: clamp(var(--space-base), 4vw, var(--space-lg));
+	border: red 2px dashed;
+}
