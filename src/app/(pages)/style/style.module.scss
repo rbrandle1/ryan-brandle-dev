@@ -1,5 +1,6 @@
 @use '../styles/utils/typography';
 @use '../styles/utils/layout';
+@use '../styles/utils/viewport';
 
 .section {
 	background-color: var(--surface-primary);
@@ -164,8 +165,20 @@
 	background-color: var(--color-accent);
 }
 
-.sectionContainerTest {
-	// padding-left: clamp(var(--space-base), 4vw, var(--space-lg));
-	// padding-right: clamp(var(--space-base), 4vw, var(--space-lg));
-	border: red 2px dashed;
+.accentEdge {
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		width: var(--space-2xs);
+		background-color: var(--color-accent);
+
+		@include viewport.breakpoint(2xs) {
+			width: clamp(var(--space-2xs), 1vw, var(--space-sm));
+		}
+	}
 }

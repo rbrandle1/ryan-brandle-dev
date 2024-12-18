@@ -14,8 +14,8 @@
 */
 
 /* Todo: 
-	* Add px values to viewport. Might need the js portion to add.
-	* Add cn classnames to use multiple classes.
+	* Refactor accentEdge. It works on a main content level, but how can you wrap in the header and footer as well? So the border extends across components and into sections?;
+	* Add px values to viewport? For style variables... var(--viewport-xs) Might need the js portion to add.
 	* Set typography utils and classes... explore more modern ways to do this? has:, etc?
 	* Set viewport utils
   * Add in line-heights as numbers... 1.5 is default, then map them in semantic to line-height-base, small, large, etc...

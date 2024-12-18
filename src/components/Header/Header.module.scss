@@ -1,2 +1,8 @@
+@use '../../styles/utils/layout';
+
 .header {
+	@include layout.max-width(100%);
+
+	display: flex;
+	justify-content: space-between;
 }
