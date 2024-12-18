@@ -4,28 +4,19 @@
 * Layout mixins and functions
 */
 
-// @use 'sass:list';
-// @use 'sass:map';
 @use './element';
 @use './viewport';
 
-//   @include layout.max-width;
-@mixin max-width($value: 1440px) {
+// @include layout.max-width;
+@mixin max-width($value: var(--viewport-xl)) {
 	margin-inline: auto;
 	padding: 0 clamp(var(--space-base), 4vw, var(--space-lg));
 	width: min(#{$value}, 100%);
 }
-// @mixin max-width($value: var(--viewport-xl)) {
-// 	margin-inline: auto;
-// 	padding: 0 clamp(var(--space-base), 4vw, var(--space-lg));
-// 	width: min(#{$value}, 100%);
-// }
 
-/// Break out of a limited-width parent container and stretch an element to the width of the viewport
-/// Learn more: https://css-tricks.com/full-width-containers-limited-width-parents/
-/// @group Layout
-/// @example
-///   @include layout.viewport-width;
+// Break out of a limited-width parent container and stretch an element to the width of the viewport
+// Learn more: https://css-tricks.com/full-width-containers-limited-width-parents/
+// @include layout.viewport-width;
 @mixin viewport-width {
 	position: relative;
 	left: 50%;

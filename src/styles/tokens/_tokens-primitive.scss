@@ -14,9 +14,6 @@
 */
 
 /* Todo: 
-* Add in line-heights as numbers... 1.5 is default, then map them in semantic to line-height-base, small, large, etc...
-* Add px values to viewport? For style variables... var(--viewport-xs) Might need the js portion to add.
-* Set viewport utils
 	* Refactor accentEdge. It works on a main content level, but how can you wrap in the header and footer as well? So the border extends across components and into sections? OR just make the header and footer a solid color and not gradient;
 	* Set typography utils and classes... explore more modern ways to do this? has:, etc?
   * Add shadows/elevation, gradients, animation timing and others that don't exist in figma
@@ -26,13 +23,13 @@
 :root {
 	/* VIEWPORT */
 	/* Raw numbers to be used in Semantic token tier */
-	--p-viewport-1: 350;
-	--p-viewport-2: 500;
-	--p-viewport-3: 768;
-	--p-viewport-4: 1024;
-	--p-viewport-5: 1200;
-	--p-viewport-6: 1440;
-	--p-viewport-7: 1600;
+	--p-viewport-1: 350px;
+	--p-viewport-2: 500px;
+	--p-viewport-3: 768px;
+	--p-viewport-4: 1024px;
+	--p-viewport-5: 1200px;
+	--p-viewport-6: 1440px;
+	--p-viewport-7: 1600px;
 
 	/* FONT */
 	// primitive-tokens.scss

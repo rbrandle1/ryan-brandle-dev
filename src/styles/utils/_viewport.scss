@@ -24,16 +24,9 @@ $height: (
 	lg: 1000px,
 );
 
-//? Try to internalize this info, specifically the dimension mapping.
-/// Breakpoint media query helper for min/max widths or heights
-/// @group Viewport
-/// @param {string} $size - Breakpoint size using a value available in the map or a custom string.
-/// @param {string} $direction [min] - Set 'min' to target anything above the set $size and 'max' for anything below it.
-/// @param {string} $dimension [width] - Set breakpoint based on the width or height of the viewport.
-/// @output A media query with a min or max width based on a viewport size and the custom ruleset.
-/// @example
-///   @include viewport.breakpoint(sm);
-///   @include viewport.breakpoint(lg, max);
+// Breakpoint media query helper for min/max widths or heights
+// @include viewport.breakpoint(sm);
+// @include viewport.breakpoint(lg, max);
 @mixin breakpoint($value, $direction: min, $dimension: width) {
 	$directions: min, max;
 	$dimensions: width, height;
@@ -67,13 +60,8 @@ $height: (
 	}
 }
 
-/// Media query that sets a ruleset when the viewport size is between two values.
-/// @group Viewport
-/// @param {string} $minValue - Min viewport size from a value in the map or a custom string.
-/// @param {string} $maxValue - Max viewport size from a value in the map or a custom string.
-/// @param {string} $dimension [width] - Set breakpoint based on the width or height of the viewport.
-/// @example
-///   @include viewport.between(sm, md);
+// Media query that sets a ruleset when the viewport size is between two values.
+// @include viewport.between(sm, md);
 @mixin between($minValue, $maxValue, $dimension: width) {
 	$dimensions: width, height;
 	$min: $minValue;
@@ -101,12 +89,11 @@ $height: (
 	}
 }
 
-// Media query created to check if a device is hover-able.
 // This prevents hover states from being applied on touch screen devices.
 // Allows you to write multiple selectors
-//   @include has-hover;
-//   @include has-hover(':hover:not(.active)');
-//   @include has-hover(':hover', ':focus-visible');
+// @include has-hover;
+// @include has-hover(':hover:not(.active)');
+// @include has-hover(':hover', ':focus-visible');
 @mixin has-hover($selector: ':hover', $extraSelectors...) {
 	@media (hover: hover) and (pointer: fine) {
 		&#{$selector} {
