@@ -165,7 +165,7 @@
 }
 
 .sectionContainerTest {
-	padding-left: clamp(var(--space-base), 4vw, var(--space-lg));
-	padding-right: clamp(var(--space-base), 4vw, var(--space-lg));
+	// padding-left: clamp(var(--space-base), 4vw, var(--space-lg));
+	// padding-right: clamp(var(--space-base), 4vw, var(--space-lg));
 	border: red 2px dashed;
 }
