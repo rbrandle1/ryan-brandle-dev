@@ -14,12 +14,11 @@
 */
 
 /* Todo: 
-	* Refactor accentEdge. It works on a main content level, but how can you wrap in the header and footer as well? So the border extends across components and into sections?;
-	* Add px values to viewport? For style variables... var(--viewport-xs) Might need the js portion to add.
+* Add in line-heights as numbers... 1.5 is default, then map them in semantic to line-height-base, small, large, etc...
+* Add px values to viewport? For style variables... var(--viewport-xs) Might need the js portion to add.
+* Set viewport utils
+	* Refactor accentEdge. It works on a main content level, but how can you wrap in the header and footer as well? So the border extends across components and into sections? OR just make the header and footer a solid color and not gradient;
 	* Set typography utils and classes... explore more modern ways to do this? has:, etc?
-	* Set viewport utils
-  * Add in line-heights as numbers... 1.5 is default, then map them in semantic to line-height-base, small, large, etc...
-	* Set up basic helper mixins
   * Add shadows/elevation, gradients, animation timing and others that don't exist in figma
   * Try setting base space from 1.6 to 1.8. Also, might need to adjust the real big spaces % max to be larger for a more noticeable difference. Can also run the calculation to a raw value to enhance performance.
 */
@@ -45,16 +44,6 @@
 
 	/* text sizing*/
 	/* 1rem is 10px with html font-size set to 62.5% */
-	// --p-text-size-base: 1.6rem;
-	// --p-text-size-1: 1.1rem;
-	// --p-text-size-2: 1.3rem;
-	// --p-text-size-3: 2rem;
-	// --p-text-size-4: 2.5rem;
-	// --p-text-size-5: 3.1rem;
-	// --p-text-size-6: 3.9rem;
-	// --p-text-size-7: 4.9rem;
-	// --p-text-size-8: 6.1rem;
-
 	--p-text-size-base: clamp(1.8rem, 0.38vi + 1.67rem, 2.2rem);
 	--p-text-size-1: clamp(1.44rem, 0.2vi + 1.37rem, 1.65rem);
 	--p-text-size-2: clamp(2.25rem, 0.65vi + 2.02rem, 2.93rem);
@@ -66,6 +55,11 @@
 	--p-text-size-8: clamp(8.58rem, 7.49vi + 5.96rem, 16.45rem);
 	--p-text-size-9: clamp(10.73rem, 10.67vi + 6.99rem, 21.93rem);
 	--p-text-size-10: clamp(13.41rem, 15.07vi + 8.14rem, 29.23rem);
+
+	/* line height */
+	--p-line-height-1: 1;
+	--p-line-height-2: 1.2;
+	--p-line-height-3: 1.5;
 
 	/* SPACE */
 	/* Base value for the spacing system */

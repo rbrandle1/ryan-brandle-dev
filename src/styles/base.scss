@@ -1,12 +1,7 @@
 //Todo: pick one of the resets and delete the other
 
 @use 'reset';
-// @use 'reset-cursor-experiment';
-// @use 'colors';
-// @use 'variables';
 @use './tokens/tokens-semantic';
-// @import url("https://fonts.googleapis.com/css2?family=Lexend&display=swap");
-// @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Lexend&family=Nunito:wght@600&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Source+Serif+4:opsz,wght@8..60,200..900&display=swap');
 
@@ -37,7 +32,7 @@ body {
 	// padding: 0;
 	// margin: 0;
 	font-size: var(--text-base);
-	line-height: 1.5;
+	line-height: var(--line-height-base);
 	-webkit-text-size-adjust: 100%;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
