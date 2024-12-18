@@ -6,6 +6,7 @@
 
 // @use 'sass:list';
 // @use 'sass:map';
+@use './viewport';
 @use 'sass:math';
 
 ///   @include element.button-reset;
@@ -69,4 +70,22 @@
 	position: absolute;
 	width: 1px;
 	white-space: nowrap;
+}
+
+@mixin accent-edge {
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		width: var(--space-2xs);
+		background-color: var(--color-accent);
+
+		@include viewport.breakpoint(2xs) {
+			width: clamp(var(--space-2xs), 1vw, var(--space-sm));
+		}
+	}
 }

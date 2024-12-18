@@ -1,2 +1,10 @@
+@use '@/styles/utils/layout';
+@use '@/styles/utils/element';
+
 .footer {
+	@include layout.max-width(100%);
+	@include element.accent-edge;
+
+	display: flex;
+	justify-content: space-between;
 }

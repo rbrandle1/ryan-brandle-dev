@@ -14,7 +14,6 @@
 */
 
 /* Todo: 
-	* Refactor accentEdge. It works on a main content level, but how can you wrap in the header and footer as well? So the border extends across components and into sections? OR just make the header and footer a solid color and not gradient;
 	* Set typography utils and classes... explore more modern ways to do this? has:, etc?
   * Add shadows/elevation, gradients, animation timing and others that don't exist in figma
   * Try setting base space from 1.6 to 1.8. Also, might need to adjust the real big spaces % max to be larger for a more noticeable difference. Can also run the calculation to a raw value to enhance performance.

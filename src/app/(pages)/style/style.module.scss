@@ -1,6 +1,7 @@
 @use '../styles/utils/typography';
 @use '../styles/utils/layout';
 @use '../styles/utils/viewport';
+@use '../styles/utils/element';
 
 .section {
 	background-color: var(--surface-primary);
@@ -166,19 +167,5 @@
 }
 
 .accentEdge {
-	position: relative;
-
-	&::before {
-		content: '';
-		position: absolute;
-		left: 0;
-		top: 0;
-		bottom: 0;
-		width: var(--space-2xs);
-		background-color: var(--color-accent);
-
-		@include viewport.breakpoint(2xs) {
-			width: clamp(var(--space-2xs), 1vw, var(--space-sm));
-		}
-	}
+	@include element.accent-edge;
 }
