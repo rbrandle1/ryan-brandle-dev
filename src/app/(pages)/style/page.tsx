@@ -3,6 +3,7 @@ import cn from 'classnames';
 import styles from './style.module.scss';
 
 /* Todo: 
+	* Figure out why my base/reset styles are loading in above component level styles, like my links. which are using an include... could this by why?
 	* Continue typography classes/mixins. links, link-with-icon
 	* Make buttons/link
 	* Make theme picker component
