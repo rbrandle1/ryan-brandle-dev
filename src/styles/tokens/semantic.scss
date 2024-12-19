@@ -42,7 +42,6 @@
 	--viewport-2xl: var(--p-viewport-7);
 
 	/* SPACING */
-	/* Use for spacing values */
 	--space-3xs: var(--p-space-0125);
 	--space-2xs: var(--p-space-025);
 	--space-xs: var(--p-space-05);
@@ -60,11 +59,15 @@
 	--space-8xl: var(--p-space-11);
 
 	/* RADIUS */
-	/* Use for radius values */
-	--radius-default: var(--p-radius-md);
+	--radius-default: var(--p-radius-1);
+
+	/* TIMING */
+	--duration-xs: var(--p-duration-1);
+	--duration-sm: var(--p-duration-2);
+	--duration-md: var(--p-duration-3);
+	--duration-lg: var(--p-duration-4);
 
 	/* TYPOGRAPHY */
-	/* Use for typography values */
 	--font-header: var(--p-font-display);
 	--font-body: var(--p-font-sans);
 	--font-alt: var(--p-font-serif);
@@ -89,7 +92,6 @@
 	--line-height-base: var(--p-line-height-3);
 
 	/* COLOR */
-	/* Use for color values */
 	--color-primary: var(--p-color-black);
 	--color-primary-hover: var(--color-primary);
 	--color-primary-active: var(--color-primary);
@@ -107,7 +109,6 @@
 	--color-accent-active: var(--color-accent);
 
 	/* TEXT */
-	/* Use for text color values */
 	--text-primary: var(--color-primary);
 	--text-secondary: var(--color-secondary);
 	--text-tertiary: var(--color-tertiary);
@@ -116,18 +117,16 @@
 	/* SURFACE */
 	/* Use for surface color values like backgrounds for cards, etc. */
 	--surface-primary: var(--color-secondary);
-	// --surface-secondary: var(--color-secondary);
 	--surface-neutral: var(--p-color-gray-100);
 	--surface-accent: var(--color-accent);
 
 	/* LINK */
-	/* Use for link color values */
-	--link-primary: var(--color-primary);
+	--link-primary: var(--text-primary);
 	--link-primary-hover: var(--link-primary);
 	--link-primary-active: var(--link-primary);
 	--link-primary-visited: var(--link-primary);
 
-	--link-neutral: var(--color-tertiary);
+	--link-neutral: var(--text-tertiary);
 	--link-neutral-hover: var(--link-primary);
 	--link-neutral-active: var(--link-primary);
 	--link-neutral-visited: var(--link-neutral);
@@ -210,6 +209,11 @@
 	--color-primary: var(--p-color-white);
 	--color-secondary: var(--p-color-black);
 	--surface-primary: var(--p-color-black);
+
+	--link-primary: var(--text-secondary);
+	--link-primary-hover: var(--link-primary);
+	--link-primary-active: var(--link-primary);
+	--link-primary-visited: var(--link-primary);
 }
 
 [data-theme='c'] {

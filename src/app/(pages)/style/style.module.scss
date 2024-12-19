@@ -88,7 +88,11 @@
 }
 
 .link {
-	@include typography.link(default, always);
+	@include typography.link;
+}
+
+.linkNeutral {
+	@include typography.link-neutral;
 }
 
 // SPACING

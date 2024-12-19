@@ -28,28 +28,28 @@ const TypographyExamples = () => {
 			<div className={styles.displaySm}>
 				Display SM <span className={styles.altFont}>&amp;</span>
 			</div>
-			<div className={styles.h1}>
+			<h1 className={styles.h1}>
 				How vexingly <span className={styles.altFont}>&amp;</span> quick daft zebras jump
-			</div>
-			<div className={styles.h2}>
+			</h1>
+			<h2 className={styles.h2}>
 				How vexingly <span className={styles.altFont}>&amp;</span> quick daft zebras jump
-			</div>
-			<div className={styles.h3}>
+			</h2>
+			<h3 className={styles.h3}>
 				How vexingly <span className={styles.altFont}>&amp;</span> quick daft zebras jump
-			</div>
-			<div className={styles.h4}>
+			</h3>
+			<h4 className={styles.h4}>
 				How vexingly <span className={styles.altFont}>&amp;</span> quick daft zebras jump
-			</div>
-			<div className={styles.h5}>
+			</h4>
+			<h5 className={styles.h5}>
 				How vexingly <span className={styles.altFont}>&amp;</span> quick daft zebras jump
-			</div>
-			<div className={styles.h6}>
+			</h5>
+			<h6 className={styles.h6}>
 				How vexingly <span className={styles.altFont}>&amp;</span> quick daft zebras jump
-			</div>
+			</h6>
 			<div className={styles.calloutLg}>How vexingly quick daft zebras jump</div>
 			<div className={styles.callout}>How vexingly quick daft zebras jump</div>
 			<div className={styles.calloutSm}>How vexingly quick daft zebras jump</div>
-			<div className={styles.pLg}>
+			<p className={styles.pLg}>
 				In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the profound
 				interconnectedness of all things.{' '}
 				<a href='#' className={styles.link}>
@@ -60,8 +60,8 @@ const TypographyExamples = () => {
 				amet nunc vel lacus fermentum malesuada. Suspendisse potenti, for the universe is not obligated to make sense to
 				us, yet we persist in decoding its mysteries. Sed nec massa nec eros varius dictum et ut arcu, an echo of
 				humanity’s unyielding curiosity.
-			</div>
-			<div className={styles.p}>
+			</p>
+			<p className={styles.p}>
 				In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the profound
 				interconnectedness of all things.{' '}
 				<a href='http://www.b.com' className={styles.link}>
@@ -72,8 +72,8 @@ const TypographyExamples = () => {
 				amet nunc vel lacus fermentum malesuada. Suspendisse potenti, for the universe is not obligated to make sense to
 				us, yet we persist in decoding its mysteries. Sed nec massa nec eros varius dictum et ut arcu, an echo of
 				humanity’s unyielding curiosity.
-			</div>
-			<div className={styles.pSm}>
+			</p>
+			<p className={styles.pSm}>
 				In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the profound
 				interconnectedness of all things.{' '}
 				<a href='https://www.c.com' className={styles.link}>
@@ -84,8 +84,16 @@ const TypographyExamples = () => {
 				amet nunc vel lacus fermentum malesuada. Suspendisse potenti, for the universe is not obligated to make sense to
 				us, yet we persist in decoding its mysteries. Sed nec massa nec eros varius dictum et ut arcu, an echo of
 				humanity’s unyielding curiosity.
-			</div>
+			</p>
 			<div className={styles.caption}>How vexingly quick daft zebras jump</div>
+			<div className={styles.pLg}>
+				<a href='/insp' className={styles.linkNeutral}>
+					work
+				</a>
+				<a href='/cf' className={styles.linkNeutral}>
+					about
+				</a>
+			</div>
 		</>
 	);
 };
