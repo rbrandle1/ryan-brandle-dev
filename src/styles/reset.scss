@@ -103,13 +103,6 @@ a:not([class]) {
 	text-decoration-skip-ink: auto;
 }
 
-/* Improve anchor handling */
-a,
-a:visited {
-	text-decoration: none;
-	color: inherit;
-}
-
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
 	html:focus-within {

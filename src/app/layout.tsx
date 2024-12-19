@@ -1,6 +1,9 @@
 import type { Metadata } from 'next';
 import { Oswald, Source_Sans_3, Source_Serif_4 } from 'next/font/google';
-import '@/styles/base.scss';
+import '../styles/reset.scss';
+import '../styles/tokens/primitive.scss';
+import '../styles/tokens/semantic.scss';
+import '../styles/base.scss';
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
 

@@ -1,5 +1,5 @@
-@use 'reset';
-@use './tokens/tokens-semantic';
+// @use 'reset';
+// @use './tokens/tokens-semantic';
 
 html,
 body {
@@ -27,7 +27,7 @@ body {
 	// transition: background-color var(--duration-sm) ease-out;
 }
 
-// a {
-// 	color: inherit;
-// 	text-decoration: none;
-// }
+a {
+	color: inherit;
+	text-decoration: none;
+}
