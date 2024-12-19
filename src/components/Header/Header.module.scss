@@ -1,12 +1,35 @@
 @use '@/styles/utils/layout';
 @use '@/styles/utils/element';
+@use '@/styles/utils/typography';
 
 .header {
+	--items-gap: var(--space-xl);
+
+	display: grid;
+	grid-template-columns: 1fr auto;
+	gap: var(--items-gap);
+	align-items: center;
+
 	@include layout.max-width(100%);
 	@include element.accent-edge;
+}
 
-	& {
-		display: flex;
-		justify-content: space-between;
-	}
+.navContainer {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: var(--items-gap);
+	border-top: var(--space-lg) solid var(--color-primary);
+	padding-top: var(--space-md);
+	text-align: center;
+}
+
+.nav {
+	display: grid;
+	gap: var(--items-gap);
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	font-size: var(--text-md);
+}
+
+.link {
+	@include typography.link-neutral;
 }

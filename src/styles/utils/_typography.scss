@@ -259,10 +259,11 @@ $paragraphs: (
 @mixin link-neutral {
 	color: var(--link-neutral);
 	text-decoration: none;
+	transition: font-weight var(--duration-xs) ease-out;
 
 	@include viewport.has-hover {
 		color: var(--link-neutral-hover);
-		font-weight: var(--font-weight-bold);
+		font-weight: var(--font-weight-semiBold);
 	}
 
 	&:visited {
@@ -270,47 +271,15 @@ $paragraphs: (
 
 		@include viewport.has-hover {
 			color: var(--link-neutral-hover);
-			font-weight: var(--font-weight-bold);
+			font-weight: var(--font-weight-semiBold);
 		}
 	}
+
+	&.isActive {
+		color: var(--link-neutral-active);
+		font-weight: var(--font-weight-semiBold);
+	}
 }
-
-// @mixin link($variant: default) {
-// 	$link: map.get($links, $variant);
-
-// 	color: map.get($link, color);
-// 	font-weight: var(--font-weight-bold);
-// 	text-decoration: underline;
-// 	text-decoration-color: var(--text-accent);
-
-// 	@if ($variant == neutral) {
-// 		text-decoration: none;
-// 	}
-
-// 	// @if ($underline == hover) {
-// 	// 	text-decoration: none;
-
-// 	// 	@include viewport.has-hover {
-// 	// 		text-decoration: underline;
-// 	// 	}
-
-// 	// 	&:focus {
-// 	// 		text-decoration: underline;
-// 	// 	}
-// 	// }
-
-// 	@include viewport.has-hover {
-// 		color: map.get($link, hover);
-// 	}
-
-// 	&:visited {
-// 		color: map.get($link, visited);
-
-// 		@include viewport.has-hover {
-// 			color: map.get($link, hover);
-// 		}
-// 	}
-// }
 
 // /// Styling and layout for a link with an icon, i.e. an external link
 // /// @group Typography

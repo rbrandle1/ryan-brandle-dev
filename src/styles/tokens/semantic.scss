@@ -1,5 +1,3 @@
-// @use 'tokens-primitive';
-
 /* ===============================
   Semantic & Component (Tier 2) Tokens
   =============================== */
@@ -22,12 +20,6 @@
     * COMPONENTS:
       * Buttons
       * Cards
-*/
-
-/* Todo: 
-  * We need to import these in the right order in our base css file. Don't import it twice
-  * Potentially move typography to another file?
-  * Add in line-heights
 */
 
 :root {
@@ -72,8 +64,9 @@
 	--font-body: var(--p-font-sans);
 	--font-alt: var(--p-font-serif);
 	--font-weight-reg: var(--p-font-weight-1);
-	--font-weight-bold: var(--p-font-weight-2);
-	--font-weight-black: var(--p-font-weight-3);
+	--font-weight-semiBold: var(--p-font-weight-2);
+	--font-weight-bold: var(--p-font-weight-3);
+	--font-weight-black: var(--p-font-weight-4);
 
 	--text-base: var(--p-text-size-base);
 	--text-sm: var(--p-text-size-1);

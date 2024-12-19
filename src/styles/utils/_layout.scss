@@ -14,9 +14,6 @@
 	width: min(#{$value}, 100%);
 }
 
-// Break out of a limited-width parent container and stretch an element to the width of the viewport
-// Learn more: https://css-tricks.com/full-width-containers-limited-width-parents/
-// @include layout.viewport-width;
 @mixin viewport-width {
 	position: relative;
 	left: 50%;

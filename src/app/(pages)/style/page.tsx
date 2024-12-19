@@ -4,6 +4,7 @@ import styles from './style.module.scss';
 
 /* Todo: 
 	* Figure out why my base/reset styles are loading in above component level styles, like my links. which are using an include... could this by why?
+	* change highlight color to be a lighter version of the accent color
 	* Continue typography classes/mixins. links, link-with-icon
 	* Make buttons/link
 	* Make theme picker component
@@ -86,14 +87,6 @@ const TypographyExamples = () => {
 				humanity’s unyielding curiosity.
 			</p>
 			<div className={styles.caption}>How vexingly quick daft zebras jump</div>
-			<div className={styles.pLg}>
-				<a href='/insp' className={styles.linkNeutral}>
-					work
-				</a>
-				<a href='/cf' className={styles.linkNeutral}>
-					about
-				</a>
-			</div>
 		</>
 	);
 };

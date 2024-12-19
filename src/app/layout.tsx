@@ -14,7 +14,7 @@ const oswald = Oswald({
 });
 
 const sourceSans = Source_Sans_3({
-	weight: ['400', '700', '900'],
+	weight: ['400', '500', '700', '900'],
 	style: ['normal', 'italic'],
 	subsets: ['latin'],
 });
