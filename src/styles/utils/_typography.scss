@@ -205,72 +205,68 @@ $paragraphs: (
 	color: map.get($p, color);
 }
 
-// /// A Sass map of link properties. The _base is inherited by each variant.
-// /// @group typography
-// $links: (
-// 	default: (
-// 		color: var(--color-primary-link),
-// 		hover: var(--color-primary-link-hover),
-// 		visited: var(--color-primary-link-visited)
-// 	),
-// 	text: (
-// 		color: var(--color-text),
-// 		hover: var(--color-text-dark),
-// 		visited: var(--color-text)
-// 	),
-// 	white: (
-// 		color: var(--color-text-alt),
-// 		hover: var(--color-text-alt-hover),
-// 		visited: var(--color-text-alt)
-// 	),
-// );
+/// A Sass map of link properties. The _base is inherited by each variant.
+/// @group typography
+$links: (
+	default: (
+		color: var(--link-primary),
+		hover: var(--link-primary-hover),
+		visited: var(--link-primary-visited),
+	),
+	text: (
+		color: var(--color-text),
+		hover: var(--color-text-dark),
+		visited: var(--color-text),
+	),
+);
 
-// /// Links
-// /// @group Typography
-// /// @param {string} $variant [default] - Sets the link color palette.
-// /// @param {string} $underline [none] - Sets the link underline properties.
-// /// @example
-// /// @include typography.link;
-// /// @include typography.link(text);
-// /// @include typography.link(white);
-// /// @include typography.link(white, always);
-// @mixin link($variant: default, $underline: none) {
-// 	$link: map.get($links, $variant);
+/// Links
+/// @group Typography
+/// @param {string} $variant [default] - Sets the link color palette.
+/// @param {string} $underline [none] - Sets the link underline properties.
+/// @example
+/// @include typography.link;
+/// @include typography.link(text);
+/// @include typography.link(text, always);
+@mixin link($variant: default, $underline: none) {
+	$link: map.get($links, $variant);
 
-// 	color: map.get($link, color);
+	color: map.get($link, color);
+	font-weight: var(--font-weight-bold);
 
-// 	@if ($underline == none) {
-// 		text-decoration: none;
-// 	}
+	@if ($underline == none) {
+		text-decoration: none;
+	}
 
-// 	@if ($underline == always) {
-// 		text-decoration: underline;
-// 	}
+	@if ($underline == always) {
+		text-decoration: underline;
+		text-decoration-color: var(--text-accent);
+	}
 
-// 	@if ($underline == hover) {
-// 		text-decoration: none;
+	@if ($underline == hover) {
+		text-decoration: none;
 
-// 		@include viewport.has-hover {
-// 			text-decoration: underline;
-// 		}
+		@include viewport.has-hover {
+			text-decoration: underline;
+		}
 
-// 		&:focus {
-// 			text-decoration: underline;
-// 		}
-// 	}
+		&:focus {
+			text-decoration: underline;
+		}
+	}
 
-// 	@include viewport.has-hover {
-// 		color: map.get($link, hover);
-// 	}
+	@include viewport.has-hover {
+		color: map.get($link, hover);
+	}
 
-// 	&:visited {
-// 		color: map.get($link, visited);
+	&:visited {
+		color: map.get($link, visited);
 
-// 		@include viewport.has-hover {
-// 			color: map.get($link, hover);
-// 		}
-// 	}
-// }
+		@include viewport.has-hover {
+			color: map.get($link, hover);
+		}
+	}
+}
 
 // /// Styling and layout for a link with an icon, i.e. an external link
 // /// @group Typography
@@ -304,9 +300,8 @@ $paragraphs: (
 // 		}
 // 	}
 // }
-//? Label
-//? Paragraph
-//? Subhead
-//? AllCaps
-//? Blockquote
-//? RichText
+
+@mixin caption {
+	font-size: var(--text-sm);
+	color: var(--text-tertiary);
+}

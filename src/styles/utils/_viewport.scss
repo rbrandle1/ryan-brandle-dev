@@ -99,7 +99,7 @@ $height: (
 		&#{$selector} {
 			@content;
 		}
-		@for $i from 0 to length($extraSelectors) {
+		@for $i from 0 to list.length($extraSelectors) {
 			&#{$extraSelectors} {
 				@content;
 			}

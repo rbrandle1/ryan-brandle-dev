@@ -17,6 +17,8 @@
 	}
 }
 
+// TYPOGRAPHY
+
 .displayLg {
 	@include typography.display(lg);
 }
@@ -75,6 +77,21 @@
 .pSm {
 	@include typography.p(sm);
 }
+
+.caption {
+	@include typography.caption;
+}
+
+.altFont {
+	font-family: var(--font-alt);
+	font-weight: var(--font-weight-black);
+}
+
+.link {
+	@include typography.link(default, always);
+}
+
+// SPACING
 
 .space3xs {
 	width: var(--space-3xs);
@@ -165,6 +182,8 @@
 	height: var(--space-8xl);
 	background-color: var(--color-accent);
 }
+
+// OTHER ELEMENTS
 
 .accentEdge {
 	@include element.accent-edge;

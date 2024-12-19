@@ -10,18 +10,10 @@
     * Radius
     * Timing (PENDING)
     * Color
-    * Transparency
-*/
-
-/* Todo: 
-	* Set typography utils and classes... explore more modern ways to do this? has:, etc?
-  * Add shadows/elevation, gradients, animation timing and others that don't exist in figma
-  * Try setting base space from 1.6 to 1.8. Also, might need to adjust the real big spaces % max to be larger for a more noticeable difference. Can also run the calculation to a raw value to enhance performance.
 */
 
 :root {
 	/* VIEWPORT */
-	/* Raw numbers to be used in Semantic token tier */
 	--p-viewport-1: 350px;
 	--p-viewport-2: 500px;
 	--p-viewport-3: 768px;
@@ -31,7 +23,6 @@
 	--p-viewport-7: 1600px;
 
 	/* FONT */
-	// primitive-tokens.scss
 	--p-font-display: 'Oswald', sans-serif;
 	--p-font-sans: 'Source Sans 3', sans-serif;
 	--p-font-serif: 'Source Serif 4', serif;
@@ -154,7 +145,6 @@
 	); /* Min: 160px, Max: 12.5% increase */
 
 	/* RADIUS */
-	/* Raw numbers to be used in Semantic token tier */
 	--p-radius-md: 3;
 
 	/* TIMING */
