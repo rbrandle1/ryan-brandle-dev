@@ -11,10 +11,11 @@
 	.options {
 		display: grid;
 		grid-auto-flow: inherit;
-		gap: var(--space-sm);
 
 		> * {
 			display: flex;
+			padding-left: var(--space-xs);
+			padding-right: var(--space-xs);
 		}
 	}
 
@@ -24,11 +25,19 @@
 	}
 
 	input[type='radio'] {
+		--input-border-width: 0.2em;
+
 		appearance: none;
 		width: var(--space-lg);
 		height: var(--space-lg);
 		border-radius: var(--radius-default);
-		border: 3px dashed var(--border-color);
+		border: var(--input-border-width) solid var(--border-color);
+		transition: background-color var(--duration-sm) ease-out, border-width var(--duration-sm) ease-out,
+			border-color var(--duration-sm) ease-out, transform var(--duration-sm) ease-out;
+
+		&:checked {
+			border-width: calc(var(--input-border-width) * 2.5);
+		}
 
 		&.m {
 			background-color: var(--p-color-magenta-500);
@@ -61,6 +70,13 @@
 
 		@include viewport.has-hover {
 			cursor: pointer;
+
+			&:hover:not(:checked) {
+				border-color: var(--color-tertiary);
+			}
+			&:hover {
+				transform: translateY(-2px);
+			}
 		}
 	}
 }

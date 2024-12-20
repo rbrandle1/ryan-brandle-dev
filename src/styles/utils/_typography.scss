@@ -214,7 +214,7 @@ $paragraphs: (
 	text-decoration-color: var(--color-accent);
 	overflow: hidden;
 	isolation: isolate; // forces new stacking context so pseudo-elements work with z-index
-	transition: color var(--duration-lg) ease-out;
+	transition: color var(--duration-lg) ease-in-out;
 
 	&::before {
 		content: '';
