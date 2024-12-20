@@ -3,6 +3,7 @@ import cn from 'classnames';
 import styles from './style.module.scss';
 
 /* Todo: 
+	* Solve header jolt on hover
 	* Maintain state of theme picker on page load and on page change
 	* Animate the theme picker
 	* add isActive booleans to links
