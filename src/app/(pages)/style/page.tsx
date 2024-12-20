@@ -3,6 +3,7 @@ import cn from 'classnames';
 import styles from './style.module.scss';
 
 /* Todo: 
+	* Make picker option border a dark gray by default, then change to black on hover
 	* Solve header jolt on hover
 	* Maintain state of theme picker on page load and on page change
 	* Animate the theme picker

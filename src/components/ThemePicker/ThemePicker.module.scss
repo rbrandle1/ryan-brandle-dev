@@ -30,42 +30,31 @@
 		appearance: none;
 		width: var(--space-lg);
 		height: var(--space-lg);
-		border-radius: var(--radius-default);
+		border-radius: 3;
 		border: var(--input-border-width) solid var(--border-color);
 		transition: background-color var(--duration-sm) ease-out, border-width var(--duration-sm) ease-out,
 			border-color var(--duration-sm) ease-out, transform var(--duration-sm) ease-out;
 
-		&:checked {
-			border-width: calc(var(--input-border-width) * 2.5);
-		}
+		background-color: var(--radio-color, black);
 
 		&.m {
-			background-color: var(--p-color-magenta-500);
-
-			&:checked {
-				border-color: var(--border-color-m);
-			}
+			--radio-color: var(--p-color-magenta-500);
 		}
 
 		&.c {
-			background-color: var(--p-color-cyan-500);
-
-			&:checked {
-				border-color: var(--border-color-c);
-			}
+			--radio-color: var(--p-color-cyan-500);
 		}
 
 		&.y {
-			background-color: var(--p-color-yellow-500);
-
-			&:checked {
-				border-color: var(--border-color-y);
-			}
+			--radio-color: var(--p-color-yellow-500);
 		}
 
 		&:checked {
+			--border-color: var(--radio-color);
+
 			border-style: solid;
 			background-color: var(--color-primary);
+			border-width: calc(var(--input-border-width) * 2.5);
 		}
 
 		@include viewport.has-hover {
