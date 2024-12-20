@@ -5,6 +5,7 @@ import styles from './style.module.scss';
 /* Todo: 
 	* Make picker option border a dark gray by default, then change to black on hover
 	* Solve header jolt on hover
+	* BUG: in safari, underlines in link doesn't change on theme change. It does change when you hover over the link.
 	* Maintain state of theme picker on page load and on page change
 	* Animate the theme picker
 	* add isActive booleans to links
