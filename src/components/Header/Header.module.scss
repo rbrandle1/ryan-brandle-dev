@@ -15,12 +15,24 @@
 }
 
 .navContainer {
+	position: relative;
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
 	gap: var(--items-gap);
-	border-top: var(--space-lg) solid var(--color-primary);
-	padding-top: var(--space-md);
+	padding-top: var(--space-xl);
 	text-align: center;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: var(--space-lg);
+		background-color: var(--color-primary);
+		transform: skewX(-15deg);
+		z-index: -1;
+	}
 }
 
 .nav {

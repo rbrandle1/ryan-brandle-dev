@@ -3,11 +3,11 @@ import cn from 'classnames';
 import styles from './style.module.scss';
 
 /* Todo: 
-	* Figure out why my base/reset styles are loading in above component level styles, like my links. which are using an include... could this by why?
-	* change highlight color to be a lighter version of the accent color
-	* Continue typography classes/mixins. links, link-with-icon
-	* Make buttons/link
 	* Make theme picker component
+	* double check highlight colors change after theme change
+	* add isActive booleans to links
+	* figure out nav width issues on hover. has to do with grid gap.
+	* Make buttons view link
 	* Prep all necessary svgs, figure out if need to recreate logo.
 	* Finish header
 	* Finish footer

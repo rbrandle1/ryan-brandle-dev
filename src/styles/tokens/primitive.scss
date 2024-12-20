@@ -172,14 +172,17 @@
 	--p-color-cyan-hue: 180;
 	--p-color-cyan-sat: 100%;
 	--p-color-cyan-500: hsl(var(--p-color-cyan-hue), var(--p-color-cyan-sat), 50%);
+	--p-color-cyan-a: hsla(var(--p-color-cyan-hue), var(--p-color-cyan-sat), 50%, 0.5);
 
 	/* Magenta */
 	--p-color-magenta-hue: 300;
 	--p-color-magenta-sat: 100%;
 	--p-color-magenta-500: hsl(var(--p-color-magenta-hue), var(--p-color-magenta-sat), 50%);
+	--p-color-magenta-a: hsla(var(--p-color-magenta-hue), var(--p-color-magenta-sat), 50%, 0.5);
 
 	/* Yellow */
 	--p-color-yellow-hue: 60;
 	--p-color-yellow-sat: 100%;
 	--p-color-yellow-500: hsl(var(--p-color-yellow-hue), var(--p-color-yellow-sat), 50%);
+	--p-color-yellow-a: hsla(var(--p-color-yellow-hue), var(--p-color-yellow-sat), 50%, 0.5);
 }
