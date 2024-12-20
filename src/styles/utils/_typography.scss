@@ -221,21 +221,20 @@ $paragraphs: (
 		position: absolute;
 		bottom: 0;
 		left: 0;
-		width: 100%;
+		width: 0;
 		height: 100%;
 		background-color: var(--color-accent);
-		transform: translateX(-100%);
-		transition: transform var(--duration-md) ease-out;
+		transition: width var(--duration-md) ease-out;
 		z-index: -1;
 	}
 
 	@include viewport.has-hover(':hover', ':focus-visible') {
 		color: var(--link-primary-hover);
-		text-decoration: none;
+		text-decoration-color: var(--color-accent);
 		outline: none;
 
 		&::before {
-			transform: translateX(0);
+			width: 100%;
 		}
 
 		[data-section='dark'] & {
