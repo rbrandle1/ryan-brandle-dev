@@ -127,8 +127,10 @@
 
 	/* BORDER */
 	/* Use for border color values */
-	// --border-default: var(--color-neutral-400);
-	// --border-active: var(--color-neutral-500);
+	--border-color: var(--color-primary);
+	--border-color-m: var(--p-color-magenta-500);
+	--border-color-c: var(--p-color-cyan-500);
+	--border-color-y: var(--p-color-yellow-500);
 
 	/* DIVIDER */
 	/* Use for divider color values */

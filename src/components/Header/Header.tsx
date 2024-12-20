@@ -1,6 +1,7 @@
 import cn from 'classnames';
 import styles from './Header.module.scss';
 import Image from 'next/image';
+import ThemePicker from '../ThemePicker/ThemePicker';
 
 interface HeaderProps {
 	isMenuOpen?: boolean;
@@ -26,7 +27,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen }: HeaderProps) => {
 						</a>
 					</li>
 				</ul>
-				<div className={styles.themeSelector}>theme selector here</div>
+				<ThemePicker />
 			</div>
 		</header>
 	);

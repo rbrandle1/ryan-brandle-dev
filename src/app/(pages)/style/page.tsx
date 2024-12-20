@@ -3,8 +3,8 @@ import cn from 'classnames';
 import styles from './style.module.scss';
 
 /* Todo: 
-	* Make theme picker component
-	* double check highlight colors change after theme change
+	* Maintain state of theme picker on page load and on page change
+	* Animate the theme picker
 	* add isActive booleans to links
 	* figure out nav width issues on hover. has to do with grid gap.
 	* Make buttons view link

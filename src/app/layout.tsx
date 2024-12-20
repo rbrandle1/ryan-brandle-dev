@@ -1,3 +1,4 @@
+// 'use client';
 import type { Metadata } from 'next';
 import { Oswald, Source_Sans_3, Source_Serif_4 } from 'next/font/google';
 import '../styles/reset.scss';
@@ -45,7 +46,7 @@ export default function RootLayout({
 
 	return (
 		<html lang='en'>
-			<body data-theme='c'>
+			<body>
 				<Header />
 				{children}
 				<Footer />

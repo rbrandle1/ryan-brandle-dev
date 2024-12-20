@@ -1,0 +1,65 @@
+@use '@/styles/utils/element';
+@use '@/styles/utils/viewport';
+.themePicker {
+	display: grid;
+	align-items: center;
+	grid-template-columns: auto auto;
+	gap: var(--space-sm);
+	border: none;
+
+	.options {
+		display: grid;
+		grid-template-columns: repeat(3, auto);
+		gap: var(--space-sm);
+
+		> * {
+			display: flex;
+		}
+	}
+
+	legend,
+	label span {
+		@include element.visually-hidden;
+	}
+
+	input[type='radio'] {
+		appearance: none;
+		width: var(--space-lg);
+		height: var(--space-lg);
+		border-radius: var(--radius-default);
+		border: 3px dashed var(--border-color);
+
+		&.m {
+			background-color: var(--p-color-magenta-500);
+
+			&:checked {
+				border-color: var(--border-color-m);
+			}
+		}
+
+		&.c {
+			background-color: var(--p-color-cyan-500);
+
+			&:checked {
+				border-color: var(--border-color-c);
+			}
+		}
+
+		&.y {
+			background-color: var(--p-color-yellow-500);
+
+			&:checked {
+				border-color: var(--border-color-y);
+			}
+		}
+
+		&:checked {
+			border-style: solid;
+			background-color: var(--color-primary);
+		}
+
+		@include viewport.has-hover {
+			cursor: pointer;
+		}
+	}
+}
