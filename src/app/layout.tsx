@@ -1,4 +1,3 @@
-// 'use client';
 import type { Metadata } from 'next';
 import { Oswald, Source_Sans_3, Source_Serif_4 } from 'next/font/google';
 import '../styles/reset.scss';
@@ -46,18 +45,6 @@ export default function RootLayout({
 
 	return (
 		<html lang='en'>
-			{/* <head>
-				<script
-					dangerouslySetInnerHTML={{
-						__html: `
-							(function() {
-									const savedTheme = localStorage.getItem('theme');
-									document.documentElement.dataset.theme = savedTheme || 'm'; // Default to 'm' if no theme is saved
-							})();
-						`,
-					}}
-				/>
-			</head> */}
 			<body>
 				<Header />
 				{children}

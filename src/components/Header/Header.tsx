@@ -22,8 +22,8 @@ const Header = ({ isMenuOpen, setIsMenuOpen }: HeaderProps) => {
 						</a>
 					</li>
 					<li>
-						<a href='/cf' className={styles.link}>
-							about
+						<a href='/style' className={styles.link}>
+							style
 						</a>
 					</li>
 				</ul>
