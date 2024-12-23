@@ -4,10 +4,20 @@ import styles from './ThemePicker.module.scss';
 import Image from 'next/image';
 
 const ThemePicker = () => {
-	const [theme, setTheme] = useState('m');
+	const [theme, setTheme] = useState('m'); // Default theme
 
+	// Load theme from localStorage on initial render
 	useEffect(() => {
-		document.body.dataset.theme = theme;
+		const savedTheme = localStorage.getItem('theme');
+		if (savedTheme) {
+			setTheme(savedTheme);
+		}
+	}, []);
+
+	// Update localStorage and body attribute whenever the theme changes
+	useEffect(() => {
+		localStorage.setItem('theme', theme);
+		document.documentElement.dataset.theme = theme; // Update html attribute
 	}, [theme]);
 
 	return (

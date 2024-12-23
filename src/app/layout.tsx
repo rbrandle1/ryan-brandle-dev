@@ -46,6 +46,18 @@ export default function RootLayout({
 
 	return (
 		<html lang='en'>
+			{/* <head>
+				<script
+					dangerouslySetInnerHTML={{
+						__html: `
+							(function() {
+									const savedTheme = localStorage.getItem('theme');
+									document.documentElement.dataset.theme = savedTheme || 'm'; // Default to 'm' if no theme is saved
+							})();
+						`,
+					}}
+				/>
+			</head> */}
 			<body>
 				<Header />
 				{children}

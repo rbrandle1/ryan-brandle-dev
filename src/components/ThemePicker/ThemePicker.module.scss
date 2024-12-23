@@ -24,6 +24,12 @@
 		@include element.visually-hidden;
 	}
 
+	label {
+		@include viewport.has-hover {
+			cursor: pointer;
+		}
+	}
+
 	input[type='radio'] {
 		--input-border-width: 0.2em;
 
