@@ -7,10 +7,8 @@ const ThemePicker = () => {
 	const [theme, setTheme] = useState(localStorage.getItem('theme') || 'm');
 
 	useEffect(() => {
-		// if (typeof window !== 'undefined') {
 		localStorage.setItem('theme', theme);
 		document.body.dataset.theme = theme;
-		// }
 	}, [theme]);
 
 	return (
