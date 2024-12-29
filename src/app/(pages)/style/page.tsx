@@ -3,6 +3,8 @@ import cn from 'classnames';
 import styles from './style.module.scss';
 
 /* Todo: 
+	* Does it make mores sense to put the data section attributes inside the root?
+	* Continue setting up theme provider and theme picker
 	* Solve server 500 error on page load. Try using the window object to check if it's loaded in the ThemePicker useEffect and maybe use an empty string as the default theme? This would likely create a FOUC though. Try refactoring with a ThemeProvider component to manage the theme state.
 	* Make picker option border a dark gray by default, then change to black on hover
 	* Maybe put my header in a top level component so it doesn't reload dissappear and come back on every pg load? nested layout?

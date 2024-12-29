@@ -6,6 +6,7 @@ import '../styles/tokens/semantic.scss';
 import '../styles/base.scss';
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
+import { ThemeProvider } from '@/components/ThemeProvider/ThemeProvider';
 
 // Importing the fonts
 const oswald = Oswald({
@@ -41,15 +42,38 @@ export default function RootLayout({
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
+	// FOR HTML
+	// const themeFallbackScript = `
+	//   (function() {
+	//     const theme = localStorage.getItem('theme') || 'light';
+	//     document.documentElement.setAttribute('data-theme', theme);
+	//     document.documentElement.classList.add(theme);
+	//   })();
+	// `;
+
+	// FOR BODY
+	const themeFallbackScript = `
+    (function() {
+      const theme = localStorage.getItem('theme') || 'light';
+      document.body.setAttribute('data-theme', theme);
+      document.body.classList.add(theme);
+    })();
+  `;
+
 	useFonts();
 
 	return (
 		<html lang='en'>
-			<body>
-				<Header />
-				{children}
-				<Footer />
-			</body>
+			<head>
+				<script dangerouslySetInnerHTML={{ __html: themeFallbackScript }} />
+			</head>
+			<ThemeProvider>
+				<body>
+					<Header />
+					{children}
+					<Footer />
+				</body>
+			</ThemeProvider>
 		</html>
 	);
 }

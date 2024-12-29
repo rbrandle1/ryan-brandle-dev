@@ -1,0 +1,47 @@
+@use '@/styles/utils/layout';
+@use '@/styles/utils/element';
+@use '@/styles/utils/typography';
+
+.header {
+	--items-gap: var(--space-xl);
+
+	display: grid;
+	grid-template-columns: 1fr auto;
+	gap: var(--items-gap);
+	align-items: center;
+
+	@include layout.max-width(100%);
+	@include element.accent-edge;
+}
+
+.navContainer {
+	position: relative;
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto;
+	gap: var(--items-gap);
+	padding-top: var(--space-xl);
+	text-align: center;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: var(--space-lg);
+		background-color: var(--color-primary);
+		transform: skewX(-15deg);
+		z-index: -1;
+	}
+}
+
+.nav {
+	display: grid;
+	gap: var(--items-gap);
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	font-size: var(--text-md);
+}
+
+.link {
+	@include typography.link-neutral;
+}

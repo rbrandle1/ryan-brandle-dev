@@ -1,3 +1,26 @@
+@use '@/styles/utils/typography';
+@use '@/styles/utils/layout';
+@use '@/styles/utils/viewport';
+@use '@/styles/utils/element';
+
+.section {
+	background-color: var(--surface-primary);
+	padding-top: var(--space-8xl);
+	padding-bottom: var(--space-8xl);
+}
+
+.container {
+	@include layout.max-width;
+
+	> * + * {
+		margin-top: var(--space-base);
+	}
+}
+
+.accentEdge {
+	@include element.accent-edge;
+}
+
 // .home {
 // }
 

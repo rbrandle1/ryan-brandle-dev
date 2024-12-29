@@ -199,29 +199,33 @@
 	// --input-text: var(--text-secondary);
 	// --input-placeholder: var(--text-tertiary);
 	// --input-background: var(--surface-minimal);
-}
 
-[data-section='dark'] {
-	--color-primary: var(--p-color-white);
-	--color-secondary: var(--p-color-black);
-	--surface-primary: var(--p-color-black);
+	[data-section='dark'] {
+		--color-primary: var(--p-color-white);
+		--color-secondary: var(--p-color-black);
 
-	--link-primary: var(--text-secondary);
-	--link-primary-hover: var(--link-primary);
-	--link-primary-active: var(--link-primary);
-	--link-primary-visited: var(--link-primary);
-}
+		--text-primary: var(--p-color-white);
+		--text-secondary: var(--p-color-black);
 
-[data-theme='c'] {
-	--color-accent: var(--p-color-cyan-500);
-	--color-accent-a: var(--p-color-cyan-a);
-	--text-accent: var(--color-accent);
+		--surface-primary: var(--p-color-black);
+
+		--link-primary: var(--text-primary);
+		--link-primary-hover: var(--link-primary);
+		--link-primary-active: var(--link-primary);
+		--link-primary-visited: var(--link-primary);
+	}
+
+	[data-theme='c'] {
+		--color-accent: var(--p-color-cyan-500);
+		--color-accent-a: var(--p-color-cyan-a);
+		--text-accent: var(--color-accent);
+	}
+	[data-theme='y'] {
+		--color-accent: var(--p-color-yellow-500);
+		--color-accent-a: var(--p-color-yellow-a);
+		--text-accent: var(--color-accent);
+	}
+	// [data-theme='p'] {
+	// 	--color-accent: var(--p-color-purple-500);
+	// }
 }
-[data-theme='y'] {
-	--color-accent: var(--p-color-yellow-500);
-	--color-accent-a: var(--p-color-yellow-a);
-	--text-accent: var(--color-accent);
-}
-// [data-theme='p'] {
-// 	--color-accent: var(--p-color-purple-500);
-// }

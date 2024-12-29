@@ -1,11 +1,18 @@
-import Image from 'next/image';
+// import Image from 'next/image';
+import cn from 'classnames';
 import styles from './home.module.scss';
 
 export default function Home() {
 	return (
 		<div className={styles.home}>
 			<main className={styles.main}>
-				<section className={styles.section}>main content here</section>
+				<section className={cn(styles.section, styles.accentEdge)}>
+					<div className={styles.container}>bing bang</div>
+				</section>
+				<section data-section='dark' className={styles.section}>
+					<div className={styles.container}>dark here</div>
+				</section>
+				<section className={styles.section}>light section</section>
 				{/* <div className={styles.ctas}>
           <a
             className={styles.primary}
@@ -32,7 +39,7 @@ export default function Home() {
           </a>
         </div> */}
 			</main>
-			<footer className={styles.footer}>
+			{/* <footer className={styles.footer}>
 				<a
 					href='https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app'
 					target='_blank'
@@ -57,7 +64,7 @@ export default function Home() {
 					<Image aria-hidden src='/globe.svg' alt='Globe icon' width={16} height={16} />
 					Go to nextjs.org →
 				</a>
-			</footer>
+			</footer> */}
 		</div>
 	);
 }
