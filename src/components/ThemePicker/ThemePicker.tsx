@@ -1,9 +1,13 @@
 'use client';
 import { useEffect, useState } from 'react';
+// import { useTheme } from '../ThemeProvider/ThemeProvider';
 import styles from './ThemePicker.module.scss';
 import Image from 'next/image';
 
 const ThemePicker = () => {
+	// const { theme, toggleTheme } = useTheme();
+	// update onChange to toggleTheme if using ThemeProvider
+	// onChange={() => toggleTheme('y')}
 	const [theme, setTheme] = useState(localStorage.getItem('theme') || 'm');
 
 	useEffect(() => {

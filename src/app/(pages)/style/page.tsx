@@ -3,9 +3,10 @@ import cn from 'classnames';
 import styles from './style.module.scss';
 
 /* Todo: 
+	* Continue setting up theme provider and theme picker. TRY creating a nested layout to manage the theme state. So the body, header, footer etc are not reloaded on every page load, therefore not causing a FOUC.
 	* Solve server 500 error on page load. Try using the window object to check if it's loaded in the ThemePicker useEffect and maybe use an empty string as the default theme? This would likely create a FOUC though. Try refactoring with a ThemeProvider component to manage the theme state.
 	* Make picker option border a dark gray by default, then change to black on hover
-	* Maybe put my header in a top level component so it doesn't reload dissappear and come back on every pg load? nested layout?
+	* Maybe put my header in a top level component so it doesn't reload disappear and come back on every pg load? nested layout?
 	* Solve header jolt on hover
 	* BUG: in safari, underlines in link doesn't change on theme change. It does change when you hover over the link.
 	* Maintain state of theme picker on page load and on page change
