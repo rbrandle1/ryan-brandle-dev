@@ -1,11 +1,13 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { useTheme } from '../ThemeProvider/ThemeProvider';
+// import { useTheme } from '../ThemeProvider/ThemeProvider';
 import styles from './ThemePicker.module.scss';
 import Image from 'next/image';
 
 const ThemePicker = () => {
 	// const { theme, toggleTheme } = useTheme();
+	// update onChange to toggleTheme if using ThemeProvider
+	// onChange={() => toggleTheme('y')}
 	const [theme, setTheme] = useState(localStorage.getItem('theme') || 'm');
 
 	useEffect(() => {
@@ -26,7 +28,6 @@ const ThemePicker = () => {
 						name='theme'
 						value='m'
 						checked={theme === 'm'}
-						// onChange={() => toggleTheme('m')}
 						onChange={() => setTheme('m')}
 					/>
 				</label>
@@ -39,7 +40,6 @@ const ThemePicker = () => {
 						name='theme'
 						value='c'
 						checked={theme === 'c'}
-						// onChange={() => toggleTheme('c')}
 						onChange={() => setTheme('c')}
 					/>
 				</label>
@@ -52,7 +52,6 @@ const ThemePicker = () => {
 						name='theme'
 						value='y'
 						checked={theme === 'y'}
-						// onChange={() => toggleTheme('y')}
 						onChange={() => setTheme('y')}
 					/>
 				</label>
