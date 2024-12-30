@@ -1,35 +1,37 @@
 'use client';
-import React, { useEffect, useState, createContext, useContext } from 'react';
+import { useEffect, useState, createContext, useContext } from 'react';
 
 interface ThemeContextType {
 	theme: string;
-	toggleTheme: () => void;
+	toggleTheme: (newTheme: 'm' | 'c' | 'y') => void;
 }
 
 const ThemeContext = createContext<ThemeContextType>({
-	theme: 'light',
+	theme: 'm',
 	toggleTheme: () => {},
 });
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
-	const [theme, setTheme] = useState<string>('light');
+	const [theme, setTheme] = useState<string>('m');
+	const [isInitialized, setIsInitialized] = useState(false);
 
 	useEffect(() => {
-		const storedTheme = localStorage.getItem('theme') || 'light';
+		const storedTheme = localStorage.getItem('theme') || 'm';
 		setTheme(storedTheme);
 		document.body.setAttribute('data-theme', storedTheme);
-
-		return () => {
-			document.body.removeAttribute('data-theme');
-		};
+		setIsInitialized(true);
 	}, []);
 
-	const toggleTheme = () => {
-		const newTheme = theme === 'light' ? 'dark' : 'light';
+	const toggleTheme = (newTheme: 'm' | 'c' | 'y') => {
 		localStorage.setItem('theme', newTheme);
 		setTheme(newTheme);
 		document.body.setAttribute('data-theme', newTheme);
 	};
+
+	if (!isInitialized) {
+		document.body.setAttribute('data-theme', 'm');
+		return null;
+	}
 
 	return <ThemeContext.Provider value={{ theme, toggleTheme }}>{children}</ThemeContext.Provider>;
 };

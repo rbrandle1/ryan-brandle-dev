@@ -54,7 +54,7 @@ export default function RootLayout({
 	// FOR BODY
 	const themeFallbackScript = `
     (function() {
-      const theme = localStorage.getItem('theme') || 'light';
+      const theme = localStorage.getItem('theme') || '';
       document.body.setAttribute('data-theme', theme);
       document.body.classList.add(theme);
     })();
@@ -67,13 +67,13 @@ export default function RootLayout({
 			<head>
 				<script dangerouslySetInnerHTML={{ __html: themeFallbackScript }} />
 			</head>
-			<ThemeProvider>
-				<body>
-					<Header />
-					{children}
-					<Footer />
-				</body>
-			</ThemeProvider>
+			{/* <ThemeProvider> */}
+			<body>
+				<Header />
+				{children}
+				<Footer />
+			</body>
+			{/* </ThemeProvider> */}
 		</html>
 	);
 }

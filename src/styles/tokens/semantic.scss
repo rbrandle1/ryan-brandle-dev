@@ -220,11 +220,13 @@
 		--color-accent-a: var(--p-color-cyan-a);
 		--text-accent: var(--color-accent);
 	}
+
 	[data-theme='y'] {
 		--color-accent: var(--p-color-yellow-500);
 		--color-accent-a: var(--p-color-yellow-a);
 		--text-accent: var(--color-accent);
 	}
+
 	// [data-theme='p'] {
 	// 	--color-accent: var(--p-color-purple-500);
 	// }
