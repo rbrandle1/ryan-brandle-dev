@@ -17,7 +17,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen }: HeaderProps) => {
 			<div className={styles.navContainer}>
 				<ul className={styles.nav}>
 					<li>
-						<a href='/insp' className={cn(styles.link, styles.isActive)}>
+						<a href='/' className={cn(styles.link, styles.isActive)}>
 							work
 						</a>
 					</li>
