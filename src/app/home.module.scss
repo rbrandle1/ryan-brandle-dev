@@ -28,7 +28,7 @@
 }
 
 .heroSection {
-	min-height: calc(100dvh - var(--header-height) - var(--space-lg));
+	min-height: calc(100dvh - var(--header-height) - var(--space-4xl));
 	display: grid;
 	grid-template-rows: 1fr auto;
 	padding-top: 0;
@@ -103,6 +103,8 @@
 .scroll {
 	position: relative;
 	padding: var(--space-base) 0;
+	text-align: center;
+	width: 100%;
 }
 
 .float {

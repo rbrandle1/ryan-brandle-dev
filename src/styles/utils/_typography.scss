@@ -274,6 +274,21 @@ $paragraphs: (
 		}
 	}
 
+	&::after {
+		content: attr(data-text);
+		// content: attr(data-text) / '';
+		height: 0;
+		visibility: hidden;
+		overflow: hidden;
+		user-select: none;
+		pointer-events: none;
+		font-weight: var(--font-weight-semiBold);
+
+		@media speech {
+			display: none;
+		}
+	}
+
 	&.isActive {
 		color: var(--link-neutral-active);
 		font-weight: var(--font-weight-semiBold);

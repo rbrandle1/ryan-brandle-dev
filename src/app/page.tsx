@@ -2,15 +2,17 @@ import cn from 'classnames';
 import styles from './home.module.scss';
 
 /* Todo: 
-	* Make picker option border a dark gray by default, then change to black on hover
 	* add isActive booleans to links and set them up to be active accordingly
-	* Figure out a better way to import svgs. SVGR doesn't appear to work well with Turbopack. And next Image requires a width and height prop making it difficult to style. Maybe Image for very static svgs and inline for more complicated svgs is best for now. 
-	* Try updating to line-height units: https://12daysofweb.dev/2024/css-margin-trim-line-height-units/
-	* Make buttons view link
-	* Prep all necessary svgs, figure out if need to recreate logo.
+	* Make picker option border a dark gray by default, then change to black on hover
 	* Finish header
+	* Add logo and finish mobile view of header
+	* potentially make theme picker padding right x2 on large screens
 	* Finish footer
 	* Begin stubbing general layout and components within.
+	* Prep all necessary svgs, figure out if need to recreate logo.
+	* Figure out a better way to import svgs. SVGR doesn't appear to work well with Turbopack. And next Image requires a width and height prop making it difficult to style. Maybe Image for very static svgs and inline for more complicated svgs is best for now. https://blog.logrocket.com/import-svgs-next-js-apps/ 
+	* Try updating to line-height units: https://12daysofweb.dev/2024/css-margin-trim-line-height-units/
+	* Make buttons view link
 	
 	* BUGS:
 	* in safari, underlines in link doesn't change on theme change. It does change when you hover over the link.

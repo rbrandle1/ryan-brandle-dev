@@ -1,14 +1,12 @@
 @use '@/styles/utils/layout';
 @use '@/styles/utils/element';
 @use '@/styles/utils/typography';
+@use '@/styles/utils/viewport';
 
 .header {
-	--items-gap: var(--space-xl);
-
 	display: grid;
 	grid-template-columns: 1fr auto;
-	gap: var(--items-gap);
-	// align-items: center;
+	gap: var(--space-xl);
 	height: var(--header-height);
 
 	@include layout.max-width(100%);
@@ -16,12 +14,15 @@
 }
 
 .navContainer {
+	--nav-spacing: var(--space-base);
+
 	position: relative;
 	display: grid;
 	grid-template-columns: minmax(0, 1fr) auto;
-	gap: var(--items-gap);
+	gap: var(--nav-spacing);
 	padding-top: var(--space-xl);
 	text-align: center;
+	user-select: none;
 
 	&::before {
 		content: '';
@@ -34,16 +35,34 @@
 		transform: skewX(-15deg);
 		z-index: -1;
 	}
+
+	@include viewport.breakpoint(md) {
+		--nav-spacing: var(--space-md);
+	}
 }
 
 .nav {
-	display: grid;
-	gap: var(--items-gap);
-	grid-template-columns: repeat(2, minmax(0, 1fr));
+	--margin-offset: -24px;
+
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
 	font-size: var(--text-md);
+	margin-left: var(--margin-offset);
+
+	@include viewport.breakpoint(md) {
+		--margin-offset: -34px;
+	}
 }
 
 .link {
-	@include typography.link-neutral;
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	padding-left: var(--nav-spacing);
+	padding-right: var(--nav-spacing);
 	text-transform: lowercase;
+
+	@include typography.link-neutral;
 }

@@ -56,7 +56,7 @@ const ThemePicker = () => {
 					/>
 				</label>
 			</div>
-			<Image aria-hidden src='/droplet.svg' alt='Choose a theme' width={19} height={24} />
+			<Image aria-hidden src='/droplet.svg' alt='Theme icon' width={19} height={24} />
 		</fieldset>
 	);
 };
