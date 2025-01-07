@@ -61,9 +61,14 @@
 		@include typography.display(sm);
 	}
 
-	span {
+	.alt {
 		font-family: var(--font-alt);
 		text-transform: initial;
+	}
+
+	.right {
+		display: block;
+		text-align: right;
 	}
 }
 

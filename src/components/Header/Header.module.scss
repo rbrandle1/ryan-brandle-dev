@@ -45,4 +45,5 @@
 
 .link {
 	@include typography.link-neutral;
+	text-transform: lowercase;
 }

@@ -4,6 +4,8 @@ import styles from './home.module.scss';
 /* Todo: 
 	* Make picker option border a dark gray by default, then change to black on hover
 	* add isActive booleans to links and set them up to be active accordingly
+	* Figure out a better way to import svgs. SVGR doesn't appear to work well with Turbopack. And next Image requires a width and height prop making it difficult to style. Maybe Image for very static svgs and inline for more complicated svgs is best for now. 
+	* Try updating to line-height units: https://12daysofweb.dev/2024/css-margin-trim-line-height-units/
 	* Make buttons view link
 	* Prep all necessary svgs, figure out if need to recreate logo.
 	* Finish header
@@ -33,9 +35,9 @@ export default function Home() {
 						<h1 className={styles.heroTitle}>
 							I make
 							<br />
-							<span>Dope, 🔥, Rizz</span>
+							<span className={styles.alt}>Dope, 🔥, Rizz</span>
 							<br />
-							products
+							<span className={styles.right}>products</span>
 						</h1>
 						<div className={styles.heroDetails}>
 							<p className={styles.heroSubtitle}>

@@ -18,12 +18,12 @@ const Header = ({ isMenuOpen, setIsMenuOpen }: HeaderProps) => {
 				<ul className={styles.nav}>
 					<li>
 						<a href='/' className={cn(styles.link, styles.isActive)}>
-							work
+							Work
 						</a>
 					</li>
 					<li>
 						<a href='/style' className={styles.link}>
-							style
+							About
 						</a>
 					</li>
 				</ul>

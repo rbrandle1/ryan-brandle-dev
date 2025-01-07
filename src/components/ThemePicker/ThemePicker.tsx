@@ -1,8 +1,8 @@
 'use client';
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 // import { useTheme } from '../ThemeProvider/ThemeProvider';
 import styles from './ThemePicker.module.scss';
-import Image from 'next/image';
 
 const ThemePicker = () => {
 	// const { theme, toggleTheme } = useTheme();
@@ -56,7 +56,7 @@ const ThemePicker = () => {
 					/>
 				</label>
 			</div>
-			<Image aria-hidden src='/globe.svg' alt='' width={16} height={16} />
+			<Image aria-hidden src='/droplet.svg' alt='Choose a theme' width={19} height={24} />
 		</fieldset>
 	);
 };
