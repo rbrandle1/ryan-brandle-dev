@@ -1,27 +1,5 @@
-// 'use client';
 import cn from 'classnames';
 import styles from './style.module.scss';
-
-/* Todo: 
-	* Make picker option border a dark gray by default, then change to black on hover
-	* add isActive booleans to links and set them up to be active accordingly
-	* BUG: in safari, underlines in link doesn't change on theme change. It does change when you hover over the link.
-	* Make buttons view link
-	* Prep all necessary svgs, figure out if need to recreate logo.
-	* Finish header
-	* Finish footer
-	* Begin stubbing general layout and components within.
-
-	* THEME PICKER LOCAL STORAGE ISSUES:
-	* Continue setting up theme provider and theme picker. TRY creating a nested layout to manage the theme state. So the body, header, footer etc are not reloaded on every page load, therefore not causing a FOUC.
-	* Solve server 500 error on page load. Try using the window object to check if it's loaded in the ThemePicker useEffect and maybe use an empty string as the default theme? This would likely create a FOUC though. Try refactoring with a ThemeProvider component to manage the theme state.
-	* Maybe put my header in a top level component so it doesn't reload disappear and come back on every pg load? nested layout?
-
-	* FUTURE EXPLORATION:
-	* Set typography utils and classes... explore more modern ways to do this? has:, etc?
-  * Add shadows/elevation, gradients, animation timing and others that don't exist in figma
-  * Try setting base space from 1.6 to 1.8. Also, might need to adjust the real big spaces % max to be larger for a more noticeable difference. Can also run the calculation to a raw value to enhance performance.
-*/
 
 const TypographyExamples = () => {
 	return (
@@ -119,23 +97,21 @@ const SpacingExamples = () => {
 const StylePage = () => {
 	return (
 		<div className={styles.home}>
-			<main className={styles.main}>
-				<section className={cn(styles.section, styles.accentEdge)}>
-					<div className={styles.container}>
-						<TypographyExamples />
-					</div>
-				</section>
-				<section data-section='dark' className={styles.section}>
-					<div className={styles.container}>
-						<TypographyExamples />
-					</div>
-				</section>
-				<section className={cn(styles.section, styles.accentEdge)}>
-					<div className={styles.container}>
-						<SpacingExamples />
-					</div>
-				</section>
-			</main>
+			<section className={cn(styles.section, styles.accentEdge)}>
+				<div className={styles.container}>
+					<TypographyExamples />
+				</div>
+			</section>
+			<section data-section='dark' className={styles.section}>
+				<div className={styles.container}>
+					<TypographyExamples />
+				</div>
+			</section>
+			<section className={cn(styles.section, styles.accentEdge)}>
+				<div className={styles.container}>
+					<SpacingExamples />
+				</div>
+			</section>
 		</div>
 	);
 };

@@ -28,6 +28,7 @@ body {
 	background-color: var(--surface-primary, black);
 	font-size: var(--text-base);
 	line-height: var(--line-height-base);
+	text-wrap: pretty;
 	-webkit-text-size-adjust: 100%;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;

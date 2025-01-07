@@ -8,7 +8,8 @@
 	display: grid;
 	grid-template-columns: 1fr auto;
 	gap: var(--items-gap);
-	align-items: center;
+	// align-items: center;
+	height: var(--header-height);
 
 	@include layout.max-width(100%);
 	@include element.accent-edge;

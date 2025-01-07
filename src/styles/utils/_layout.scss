@@ -8,7 +8,7 @@
 @use './viewport';
 
 // @include layout.max-width;
-@mixin max-width($value: var(--viewport-xl)) {
+@mixin max-width($value: var(--viewport-lg)) {
 	margin-inline: auto;
 	padding: 0 clamp(var(--space-base), 4vw, var(--space-lg));
 	width: min(#{$value}, 100%);

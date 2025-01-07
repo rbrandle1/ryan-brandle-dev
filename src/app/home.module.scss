@@ -2,23 +2,102 @@
 @use '@/styles/utils/layout';
 @use '@/styles/utils/viewport';
 @use '@/styles/utils/element';
+@use '@/styles/utils/animation';
+
+.home {
+	--flow-space: var(--space-lg);
+}
 
 .section {
+	color: var(--text-primary);
 	background-color: var(--surface-primary);
 	padding-top: var(--space-8xl);
 	padding-bottom: var(--space-8xl);
 }
 
+.heroSection {
+	min-height: calc(100dvh - var(--header-height) - var(--space-lg));
+	display: grid;
+	align-content: center;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
 .container {
 	@include layout.max-width;
+	padding-bottom: var(--space-lg);
 
 	> * + * {
-		margin-top: var(--space-base);
+		margin-top: var(--flow-space);
 	}
 }
 
 .accentEdge {
 	@include element.accent-edge;
+}
+
+.heroContent {
+	--hero-flow-space: var(--space-xl);
+
+	> * + * {
+		margin-top: var(--hero-flow-space);
+	}
+
+	@include viewport.breakpoint(xs) {
+		--hero-flow-space: var(--space-4xl);
+	}
+}
+
+.heroTitle {
+	@include typography.headline(3xl);
+
+	@include viewport.breakpoint(xs) {
+		@include typography.display(sm);
+	}
+
+	span {
+		font-family: var(--font-alt);
+		text-transform: initial;
+	}
+}
+
+.heroDetails {
+	> * + * {
+		margin-top: var(--flow-space);
+	}
+}
+
+.heroSubtitle {
+	@include typography.p(lg);
+	color: var(--text-tertiary);
+	max-width: 52ch;
+}
+
+.heroCopy {
+	--column-width: 50ch;
+
+	@include typography.p;
+	max-width: var(--column-width);
+
+	@include viewport.breakpoint(md) {
+		column-count: 2;
+		column-gap: var(--space-lg);
+		max-width: calc(var(--column-width) * 2);
+	}
+}
+
+.scroll {
+	position: relative;
+	padding: var(--flow-space) 0;
+}
+
+.float {
+	position: absolute;
+	left: 0;
+	right: 0;
+	font-size: var(--text-xl);
+	line-height: 0;
+	animation: float 2.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
 }
 
 // .main code {
