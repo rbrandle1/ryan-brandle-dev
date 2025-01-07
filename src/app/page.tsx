@@ -4,13 +4,14 @@ import styles from './home.module.scss';
 /* Todo: 
 	* Make picker option border a dark gray by default, then change to black on hover
 	* add isActive booleans to links and set them up to be active accordingly
-	* BUG: in safari, underlines in link doesn't change on theme change. It does change when you hover over the link.
-	* Give the hero a specific height variable to help calculate hero and other section heights.
 	* Make buttons view link
 	* Prep all necessary svgs, figure out if need to recreate logo.
 	* Finish header
 	* Finish footer
 	* Begin stubbing general layout and components within.
+	
+	* BUGS:
+	* in safari, underlines in link doesn't change on theme change. It does change when you hover over the link.
 
 	* THEME PICKER LOCAL STORAGE ISSUES:
 	* Continue setting up theme provider and theme picker. TRY creating a nested layout to manage the theme state. So the body, header, footer etc are not reloaded on every page load, therefore not causing a FOUC.
@@ -47,9 +48,11 @@ export default function Home() {
 								that seem to morph.
 							</p>
 						</div>
-						<div className={styles.scroll}>
-							<span className={styles.float}>&#8595;</span>
-						</div>
+					</div>
+				</div>
+				<div className={styles.scrollContainer}>
+					<div className={styles.scroll}>
+						<span className={styles.float}>&#8595;</span>
 					</div>
 				</div>
 			</section>

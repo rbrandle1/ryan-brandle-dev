@@ -8,6 +8,10 @@
 	--flow-space: var(--space-lg);
 }
 
+.accentEdge {
+	@include element.accent-edge;
+}
+
 .section {
 	color: var(--text-primary);
 	background-color: var(--surface-primary);
@@ -15,29 +19,31 @@
 	padding-bottom: var(--space-8xl);
 }
 
-.heroSection {
-	min-height: calc(100dvh - var(--header-height) - var(--space-lg));
-	display: grid;
-	align-content: center;
-	padding-top: 0;
-	padding-bottom: 0;
-}
-
 .container {
 	@include layout.max-width;
-	padding-bottom: var(--space-lg);
 
 	> * + * {
 		margin-top: var(--flow-space);
 	}
 }
 
-.accentEdge {
-	@include element.accent-edge;
+.heroSection {
+	min-height: calc(100dvh - var(--header-height) - var(--space-lg));
+	display: grid;
+	grid-template-rows: 1fr auto;
+	padding-top: 0;
+	padding-bottom: 0;
+
+	> div {
+		align-content: center;
+	}
 }
 
 .heroContent {
 	--hero-flow-space: var(--space-xl);
+
+	margin-top: var(--hero-flow-space);
+	margin-bottom: var(--hero-flow-space);
 
 	> * + * {
 		margin-top: var(--hero-flow-space);
@@ -61,10 +67,8 @@
 	}
 }
 
-.heroDetails {
-	> * + * {
-		margin-top: var(--flow-space);
-	}
+.heroDetails > * + * {
+	margin-top: var(--flow-space);
 }
 
 .heroSubtitle {
@@ -86,9 +90,14 @@
 	}
 }
 
+.scrollContainer {
+	@include layout.max-width;
+	padding-bottom: clamp(var(--space-base), 4vw, var(--space-lg));
+}
+
 .scroll {
 	position: relative;
-	padding: var(--flow-space) 0;
+	padding: var(--space-base) 0;
 }
 
 .float {
