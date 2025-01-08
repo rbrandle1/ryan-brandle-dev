@@ -180,6 +180,12 @@
 	--p-color-magenta-500: hsl(var(--p-color-magenta-hue), var(--p-color-magenta-sat), 50%);
 	--p-color-magenta-a: hsla(var(--p-color-magenta-hue), var(--p-color-magenta-sat), 50%, 0.5);
 
+	/* Purple */
+	--p-color-purple-hue: 288;
+	--p-color-purple-sat: 100%;
+	--p-color-purple-500: hsl(var(--p-color-purple-hue), var(--p-color-purple-sat), 50%);
+	--p-color-purple-a: hsla(var(--p-color-purple-hue), var(--p-color-purple-sat), 50%, 0.5);
+
 	/* Yellow */
 	--p-color-yellow-hue: 60;
 	--p-color-yellow-sat: 100%;

@@ -1,1 +1,1 @@
-export type Theme = 'm' | 'c' | 'y';
+export type Theme = 'm' | 'c' | 'p' | 'y';

@@ -43,6 +43,18 @@ const ThemePicker: FC<ThemePickerProps> = ({ theme, onThemeChange }) => {
 						onChange={() => onThemeChange('c')}
 					/>
 				</label>
+				<label htmlFor='purple-theme'>
+					<span>Purple</span>
+					<input
+						className={styles.p}
+						type='radio'
+						id='purple-theme'
+						name='theme'
+						value='p'
+						checked={theme === 'p'}
+						onChange={() => onThemeChange('p')}
+					/>
+				</label>
 				<label htmlFor='yellow-theme'>
 					<span>Yellow</span>
 					<input

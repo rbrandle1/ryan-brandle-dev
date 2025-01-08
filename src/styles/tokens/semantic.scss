@@ -133,7 +133,7 @@
 	--border-color-m: var(--p-color-magenta-500);
 	--border-color-c: var(--p-color-cyan-500);
 	--border-color-y: var(--p-color-yellow-500);
-
+	--border-color-p: var(--p-color-purple-500);
 	/* DIVIDER */
 	/* Use for divider color values */
 	// --divider-primary: var(--color-neutral-400);
@@ -229,7 +229,9 @@
 		--text-accent: var(--color-accent);
 	}
 
-	// [data-theme='p'] {
-	// 	--color-accent: var(--p-color-purple-500);
-	// }
+	[data-theme='p'] {
+		--color-accent: var(--p-color-purple-500);
+		--color-accent-a: var(--p-color-purple-a);
+		--text-accent: var(--color-accent);
+	}
 }

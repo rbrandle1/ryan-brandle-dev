@@ -4,7 +4,6 @@ import styles from './home.module.scss';
 /* Todo: 
 	* Finish header
 	* Add logo and finish mobile view of header
-	* Make ts interfaces instead of inline types
 	* make scroll arrow a circular button... or a square, with accent background.
 	* potentially make theme picker padding right x2 on large screens
 	* Finish footer
@@ -13,16 +12,17 @@ import styles from './home.module.scss';
 	* Figure out a better way to import svgs. SVGR doesn't appear to work well with Turbopack. And next Image requires a width and height prop making it difficult to style. Maybe Image for very static svgs and inline for more complicated svgs is best for now. https://blog.logrocket.com/import-svgs-next-js-apps/ 
 	* Try updating to line-height units: https://12daysofweb.dev/2024/css-margin-trim-line-height-units/
 	* Make buttons view link
-	
+
 	* BUGS:
-	* in safari, underlines in link doesn't change on theme change. It does change when you hover over the link.
+* in safari, underlines in link doesn't change on theme change. It does change when you hover over the link.
 
-	* THEME PICKER LOCAL STORAGE ISSUES:
-	* Continue setting up theme provider and theme picker. TRY creating a nested layout to manage the theme state. So the body, header, footer etc are not reloaded on every page load, therefore not causing a FOUC.
-	* Solve server 500 error on page load. Try using the window object to check if it's loaded in the ThemePicker useEffect and maybe use an empty string as the default theme? This would likely create a FOUC though. Try refactoring with a ThemeProvider component to manage the theme state.
-	* Maybe put my header in a top level component so it doesn't reload disappear and come back on every pg load? nested layout?
+* THEME PICKER LOCAL STORAGE ISSUES:
+* Continue setting up theme provider and theme picker. TRY creating a nested layout to manage the theme state. So the body, header, footer etc are not reloaded on every page load, therefore not causing a FOUC.
+* Solve server 500 error on page load. Try using the window object to check if it's loaded in the ThemePicker useEffect and maybe use an empty string as the default theme? This would likely create a FOUC though. Try refactoring with a ThemeProvider component to manage the theme state.
+* Maybe put my header in a top level component so it doesn't reload disappear and come back on every pg load? nested layout?
 
-	* FUTURE EXPLORATION:
+* FUTURE EXPLORATION:
+	* Incorporate purple as a gradient to pink?
 	* Set typography utils and classes... explore more modern ways to do this? has:, etc?
   * Add shadows/elevation, gradients, animation timing and others that don't exist in figma
   * Try setting base space from 1.6 to 1.8. Also, might need to adjust the real big spaces % max to be larger for a more noticeable difference. Can also run the calculation to a raw value to enhance performance.

@@ -56,6 +56,10 @@
 			--radio-color: var(--p-color-yellow-500);
 		}
 
+		&.p {
+			--radio-color: var(--p-color-purple-500);
+		}
+
 		&:checked {
 			--border-color: var(--radio-color);
 

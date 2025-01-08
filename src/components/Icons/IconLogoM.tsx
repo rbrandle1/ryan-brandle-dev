@@ -15,7 +15,7 @@ const IconLogoM = (props: IconProps) => (
 			}}
 		>
 			<path
-				fill='#000'
+				style={{ fill: 'var(--p-color-black)' }}
 				fillRule='evenodd'
 				d='M12.01 12.107h33.788V32.13H55.81V50.9H45.8v-8.76 8.76H12.01V12.107Z'
 				clipRule='evenodd'
