@@ -22,7 +22,13 @@ const Header = () => {
 
 	return (
 		<header className={styles.header}>
-			<Image className={styles.logo} src='/next.svg' alt='Next.js logo' width={180} height={38} priority />
+			<div className={styles.logoContainer}>
+				<Image className={styles.logo} src='/next.svg' alt='Next.js logo' width={180} height={38} priority />
+				<div className={styles.logoText}>
+					<div>Ryan Brandle</div>
+					<div>DES + DEV</div>
+				</div>
+			</div>
 			<nav className={styles.navContainer}>
 				<ul className={styles.nav}>
 					{PAGES.map(({ path, label }, i) => (

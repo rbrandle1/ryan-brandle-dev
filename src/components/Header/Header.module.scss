@@ -13,6 +13,27 @@
 	@include element.accent-edge;
 }
 
+.logoContainer {
+	display: flex;
+	align-items: center;
+}
+
+.logoText {
+	text-wrap: nowrap;
+	line-height: 1;
+
+	div:first-of-type {
+		font-size: var(--text-xl);
+		font-weight: var(--font-weight-semiBold);
+		margin-left: -2px;
+	}
+
+	div:last-of-type {
+		letter-spacing: 2px;
+		margin-top: var(--space-2xs);
+	}
+}
+
 .navContainer {
 	--nav-spacing: var(--space-base);
 
