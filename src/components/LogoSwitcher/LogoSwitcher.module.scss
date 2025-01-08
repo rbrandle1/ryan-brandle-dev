@@ -1,0 +1,29 @@
+//todo: keep working on this. Has something to do with the logoContainer and the logo. Maybe html architecuture needs to change in the header/nav.
+
+.logoContainer {
+	position: relative;
+	// overflow: hidden; /* Ensure logos don't overflow */
+	width: 68px; //needed for the logo to be visible
+	height: 68px; //needed for the logo to be visible
+}
+
+.logo {
+	position: absolute; /* Position logos absolutely to overlap */
+	opacity: 0;
+	transform: translateX(calc(var(--space-2xl) / -1));
+	transition: opacity 0.5s ease, transform 0.5s ease; /* Transition for opacity and transform */
+}
+
+.fadeIn {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+// .fadeOut {
+// 	opacity: 0;
+// 	transform: translateX(100%); /* Move out to the right */
+// }
+
+// ... when fadeIn is added, you need opacity to transition from from 0 to 1. When it's removed, you need opacity to transition from from 1 to 0.
+
+// I had this working before using fadeIn and fadeOut and animations. The fade in works initially, then the fade out works, but the next logo immediately appears and doesnt fade in.
