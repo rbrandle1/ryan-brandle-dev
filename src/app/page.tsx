@@ -4,6 +4,7 @@ import styles from './home.module.scss';
 /* Todo: 
 	* Finish header
 	* Add logo and finish mobile view of header
+	* Make ts interfaces instead of inline types
 	* make scroll arrow a circular button... or a square, with accent background.
 	* potentially make theme picker padding right x2 on large screens
 	* Finish footer

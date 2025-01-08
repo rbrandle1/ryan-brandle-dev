@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import cn from 'classnames';
 import { usePathname } from 'next/navigation';
 // import Image from 'next/image';
@@ -14,6 +14,17 @@ const PAGES = [
 ] as const;
 
 const Header = () => {
+	const [theme, setTheme] = useState(localStorage.getItem('theme') || 'm');
+
+	useEffect(() => {
+		localStorage.setItem('theme', theme);
+		document.body.dataset.theme = theme;
+	}, [theme]);
+
+	const handleThemeChange = (theme: string) => {
+		setTheme(theme);
+	};
+
 	const pathName = usePathname();
 	const [activeLink, setActiveLink] = useState(pathName);
 
@@ -24,9 +35,8 @@ const Header = () => {
 	return (
 		<header className={styles.header}>
 			<div className={styles.logoContainer}>
-				{/* <Image className={styles.logo} src='/logo-m.svg' alt='Ryan Brandle logo' width={68} height={63} priority /> */}
 				<div className={styles.logoIcon}>
-					<LogoSwitcher />
+					<LogoSwitcher theme={theme} />
 				</div>
 				<div className={styles.logoText}>
 					<div>Ryan Brandle</div>
@@ -48,7 +58,7 @@ const Header = () => {
 						</li>
 					))}
 				</ul>
-				<ThemePicker />
+				<ThemePicker theme={theme} onThemeChange={handleThemeChange} />
 			</nav>
 		</header>
 	);

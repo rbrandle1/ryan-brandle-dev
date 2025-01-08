@@ -1,19 +1,18 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { FC } from 'react';
 import Image from 'next/image';
 // import { useTheme } from '../ThemeProvider/ThemeProvider';
 import styles from './ThemePicker.module.scss';
 
-const ThemePicker = () => {
+interface ThemePickerProps {
+	theme: string;
+	onThemeChange: (theme: string) => void;
+}
+
+const ThemePicker: FC<ThemePickerProps> = ({ theme, onThemeChange }) => {
 	// const { theme, toggleTheme } = useTheme();
 	// update onChange to toggleTheme if using ThemeProvider
 	// onChange={() => toggleTheme('y')}
-	const [theme, setTheme] = useState(localStorage.getItem('theme') || 'm');
-
-	useEffect(() => {
-		localStorage.setItem('theme', theme);
-		document.body.dataset.theme = theme;
-	}, [theme]);
 
 	return (
 		<fieldset className={styles.themePicker}>
@@ -28,7 +27,7 @@ const ThemePicker = () => {
 						name='theme'
 						value='m'
 						checked={theme === 'm'}
-						onChange={() => setTheme('m')}
+						onChange={() => onThemeChange('m')}
 					/>
 				</label>
 				<label htmlFor='cyan-theme'>
@@ -40,7 +39,7 @@ const ThemePicker = () => {
 						name='theme'
 						value='c'
 						checked={theme === 'c'}
-						onChange={() => setTheme('c')}
+						onChange={() => onThemeChange('c')}
 					/>
 				</label>
 				<label htmlFor='yellow-theme'>
@@ -52,7 +51,7 @@ const ThemePicker = () => {
 						name='theme'
 						value='y'
 						checked={theme === 'y'}
-						onChange={() => setTheme('y')}
+						onChange={() => onThemeChange('y')}
 					/>
 				</label>
 			</div>
