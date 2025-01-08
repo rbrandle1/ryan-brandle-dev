@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import cn from 'classnames';
 import { usePathname } from 'next/navigation';
+import { Theme } from '@/types/themeTypes';
 // import Image from 'next/image';
 import Link from 'next/link';
 import ThemePicker from '../ThemePicker/ThemePicker';
@@ -14,15 +15,15 @@ const PAGES = [
 ] as const;
 
 const Header = () => {
-	const [theme, setTheme] = useState(localStorage.getItem('theme') || 'm');
+	const [theme, setTheme] = useState<Theme>((localStorage.getItem('theme') as Theme) || 'm');
 
 	useEffect(() => {
 		localStorage.setItem('theme', theme);
 		document.body.dataset.theme = theme;
 	}, [theme]);
 
-	const handleThemeChange = (theme: string) => {
-		setTheme(theme);
+	const handleThemeChange = (newTheme: Theme) => {
+		setTheme(newTheme);
 	};
 
 	const pathName = usePathname();

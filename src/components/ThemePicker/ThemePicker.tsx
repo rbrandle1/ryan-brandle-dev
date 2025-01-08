@@ -1,12 +1,13 @@
 'use client';
 import { FC } from 'react';
+import { Theme } from '@/types/themeTypes';
 import Image from 'next/image';
 // import { useTheme } from '../ThemeProvider/ThemeProvider';
 import styles from './ThemePicker.module.scss';
 
 interface ThemePickerProps {
-	theme: string;
-	onThemeChange: (theme: string) => void;
+	theme: Theme;
+	onThemeChange: (theme: Theme) => void;
 }
 
 const ThemePicker: FC<ThemePickerProps> = ({ theme, onThemeChange }) => {

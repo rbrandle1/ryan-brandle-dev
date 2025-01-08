@@ -1,8 +1,8 @@
 import { IconProps } from './IconProps';
 
-const IconLogoC = (props: IconProps) => (
+const IconLogoY = (props: IconProps) => (
 	<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 68 63' fill='none' {...props}>
-		<path style={{ fill: 'var(--p-color-cyan-500)' }} d='M2.5 61V12.5h10v39h43V61h-53Z' />
+		<path style={{ fill: 'var(--p-color-yellow-500)' }} d='M2.5 61V12.5h10v39h43V61h-53Z' />
 		<mask
 			id='a'
 			width={44}
@@ -21,7 +21,7 @@ const IconLogoC = (props: IconProps) => (
 				clipRule='evenodd'
 			/>
 		</mask>
-		<g style={{ fill: 'var(--p-color-cyan-500)' }} fillRule='evenodd' clipRule='evenodd' mask='url(#a)'>
+		<g style={{ fill: 'var(--p-color-yellow-500)' }} fillRule='evenodd' clipRule='evenodd' mask='url(#a)'>
 			<path d='m25.812 3.195-56.569 56.569-1.414-1.414L24.398 1.78l1.414 1.414ZM33.812 5.195l-56.569 56.569-1.414-1.414L32.398 3.78l1.414 1.414ZM41.812 7.195l-56.569 56.569-1.414-1.414L40.398 5.78l1.414 1.414ZM49.812 9.195-6.757 65.764-8.17 64.35 48.398 7.78l1.414 1.414ZM57.812 11.195 1.243 67.764-.17 66.35 56.398 9.78l1.414 1.414ZM65.812 13.195 9.243 69.764 7.83 68.35 64.398 11.78l1.414 1.414ZM73.812 15.195 17.243 71.764 15.83 70.35 72.398 13.78l1.414 1.414ZM81.812 17.195 25.243 73.764 23.83 72.35 80.398 15.78l1.414 1.414Z' />
 		</g>
 		<path
@@ -39,4 +39,4 @@ const IconLogoC = (props: IconProps) => (
 	</svg>
 );
 
-export default IconLogoC;
+export default IconLogoY;

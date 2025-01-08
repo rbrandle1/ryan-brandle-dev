@@ -1,5 +1,7 @@
-const IconLogoM = () => (
-	<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 68 63' fill='none'>
+import { IconProps } from './IconProps';
+
+const IconLogoM = (props: IconProps) => (
+	<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 68 63' fill='none' {...props}>
 		<path style={{ fill: 'var(--p-color-magenta-500)' }} d='M2.5 61V12.5h10v39h43V61h-53Z' />
 		<mask
 			id='a'
