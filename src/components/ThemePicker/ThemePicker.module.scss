@@ -67,9 +67,9 @@
 		@include viewport.has-hover {
 			cursor: pointer;
 
-			&:hover:not(:checked) {
-				border-color: var(--color-tertiary);
-			}
+			// &:hover:not(:checked) {
+			// 	border-color: var(--color-tertiary);
+			// }
 			&:hover {
 				transform: translateY(-2px);
 			}

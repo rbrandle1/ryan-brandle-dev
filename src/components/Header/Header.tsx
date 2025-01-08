@@ -8,16 +8,16 @@ import ThemePicker from '../ThemePicker/ThemePicker';
 import styles from './Header.module.scss';
 
 const PAGES = [
-	{ url: '/', label: 'Work' },
-	{ url: '/style', label: 'About' },
+	{ path: '/', label: 'Work' },
+	{ path: '/style', label: 'About' },
 ] as const;
 
 const Header = () => {
-	const pathname = usePathname();
-	const [activeLink, setActiveLink] = useState(pathname);
+	const pathName = usePathname();
+	const [activeLink, setActiveLink] = useState(pathName);
 
-	const handleLinkClick = (url: string) => {
-		setActiveLink(url);
+	const handleLinkClick = (path: string) => {
+		setActiveLink(path);
 	};
 
 	return (
@@ -25,13 +25,13 @@ const Header = () => {
 			<Image className={styles.logo} src='/next.svg' alt='Next.js logo' width={180} height={38} priority />
 			<nav className={styles.navContainer}>
 				<ul className={styles.nav}>
-					{PAGES.map(({ url, label }, i) => (
+					{PAGES.map(({ path, label }, i) => (
 						<li key={i}>
 							<Link
-								href={url}
-								className={cn(styles.link, activeLink === url && styles.isActive)}
+								href={path}
+								className={cn(styles.link, activeLink === path && styles.isActive)}
 								data-text={label}
-								onClick={() => handleLinkClick(url)}
+								onClick={() => handleLinkClick(path)}
 							>
 								{label}
 							</Link>

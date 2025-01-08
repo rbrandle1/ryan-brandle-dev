@@ -2,10 +2,9 @@ import cn from 'classnames';
 import styles from './home.module.scss';
 
 /* Todo: 
-	* add isActive booleans to links and set them up to be active accordingly
-	* Make picker option border a dark gray by default, then change to black on hover
 	* Finish header
 	* Add logo and finish mobile view of header
+	* make scroll arrow a circular button... or a square, with accent background.
 	* potentially make theme picker padding right x2 on large screens
 	* Finish footer
 	* Begin stubbing general layout and components within.
