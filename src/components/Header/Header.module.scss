@@ -18,7 +18,12 @@
 	align-items: center;
 }
 
+.logoIcon {
+	width: 68px;
+}
+
 .logoText {
+	padding-left: var(--space-base);
 	text-wrap: nowrap;
 	line-height: 1;
 

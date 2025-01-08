@@ -2,9 +2,10 @@
 import React, { useState } from 'react';
 import cn from 'classnames';
 import { usePathname } from 'next/navigation';
-import Image from 'next/image';
+// import Image from 'next/image';
 import Link from 'next/link';
 import ThemePicker from '../ThemePicker/ThemePicker';
+import LogoSwitcher from '../LogoSwitcher/LogoSwitcher';
 import styles from './Header.module.scss';
 
 const PAGES = [
@@ -23,7 +24,10 @@ const Header = () => {
 	return (
 		<header className={styles.header}>
 			<div className={styles.logoContainer}>
-				<Image className={styles.logo} src='/next.svg' alt='Next.js logo' width={180} height={38} priority />
+				{/* <Image className={styles.logo} src='/logo-m.svg' alt='Ryan Brandle logo' width={68} height={63} priority /> */}
+				<div className={styles.logoIcon}>
+					<LogoSwitcher />
+				</div>
 				<div className={styles.logoText}>
 					<div>Ryan Brandle</div>
 					<div>DES + DEV</div>

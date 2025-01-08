@@ -1,0 +1,18 @@
+<svg width="68" height="63" viewBox="0 0 68 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.5 61V12.5H12.5V51.5H55.5V61H2.5Z" fill="#FF00BB"/>
+<mask id="mask0_260_80" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="12" y="12" width="44" height="39">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12.0109 12.1073H45.7984V32.1295H55.8094V50.9002H45.7983V42.1405H45.7983V50.9002H12.0107V32.1295H12.0109V12.1073Z" fill="black"/>
+</mask>
+<g mask="url(#mask0_260_80)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M25.8119 3.19528L-30.7567 59.7638L-32.1709 58.3496L24.3976 1.78107L25.8119 3.19528Z" fill="#FF00BB"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M33.8119 5.19528L-22.7567 61.7638L-24.1709 60.3496L32.3976 3.78107L33.8119 5.19528Z" fill="#FF00BB"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M41.8119 7.19528L-14.7567 63.7638L-16.1709 62.3496L40.3976 5.78107L41.8119 7.19528Z" fill="#FF00BB"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M49.8119 9.19528L-6.75668 65.7638L-8.1709 64.3496L48.3976 7.78107L49.8119 9.19528Z" fill="#FF00BB"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M57.8119 11.1953L1.24332 67.7638L-0.170898 66.3496L56.3976 9.78107L57.8119 11.1953Z" fill="#FF00BB"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M65.8119 13.1953L9.24332 69.7638L7.8291 68.3496L64.3976 11.7811L65.8119 13.1953Z" fill="#FF00BB"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M73.8119 15.1953L17.2433 71.7638L15.8291 70.3496L72.3976 13.7811L73.8119 15.1953Z" fill="#FF00BB"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M81.8119 17.1953L25.2433 73.7638L23.8291 72.3496L80.3976 15.7811L81.8119 17.1953Z" fill="#FF00BB"/>
+</g>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.81836 0H58.0019V19.637H67.8206V53.0928H9.81852V33.4557L9.81836 0ZM13.8185 29.4557V49.0928H63.8206V23.637H54.0019V4H13.8184L13.8185 29.4557Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 9.8186H48.1836V29.4557H58.002V62.9114H0.000143647V43.2743L0 9.8186ZM4.00014 39.2743V58.9114H54.002V33.4557H44.1836V13.8186H4L4.00014 39.2743Z" fill="black"/>
+</svg>
