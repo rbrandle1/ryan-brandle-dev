@@ -20,19 +20,19 @@ const LogoSwitcher: FC<LogoSwitcherProps> = ({ theme = 'm' }) => {
 		const timer = setTimeout(() => {
 			setCurrentTheme(theme);
 			setIsVisible(true);
-		}, 500);
+		}, 100);
 
 		return () => clearTimeout(timer);
 	}, [theme]);
 
-	const logos = {
-		m: <IconLogoM className={cn(styles.logo, isVisible && styles.fadeIn)} aria-hidden />,
-		c: <IconLogoC className={cn(styles.logo, isVisible && styles.fadeIn)} aria-hidden />,
-		p: <IconLogoP className={cn(styles.logo, isVisible && styles.fadeIn)} aria-hidden />,
-		y: <IconLogoY className={cn(styles.logo, isVisible && styles.fadeIn)} aria-hidden />,
-	};
-
-	return <div className={styles.logoContainer}>{logos[currentTheme]}</div>;
+	return (
+		<div className={styles.logoContainer}>
+			<IconLogoM className={cn(styles.logo, isVisible && currentTheme === 'm' && styles.fadeIn)} aria-hidden />
+			<IconLogoC className={cn(styles.logo, isVisible && currentTheme === 'c' && styles.fadeIn)} aria-hidden />
+			<IconLogoP className={cn(styles.logo, isVisible && currentTheme === 'p' && styles.fadeIn)} aria-hidden />
+			<IconLogoY className={cn(styles.logo, isVisible && currentTheme === 'y' && styles.fadeIn)} aria-hidden />
+		</div>
+	);
 };
 
 export default LogoSwitcher;
