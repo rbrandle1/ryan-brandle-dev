@@ -1,9 +1,9 @@
 import cn from 'classnames';
 import { FC, useEffect, useState } from 'react';
-import IconLogoM from '../Icons/IconLogoM';
-import IconLogoC from '../Icons/IconLogoC';
-import IconLogoY from '../Icons/IconLogoY';
-import IconLogoP from '../Icons/IconLogoP';
+import IconLogoM from '@/components/Icons/IconLogoM';
+import IconLogoC from '@/components/Icons/IconLogoC';
+import IconLogoY from '@/components/Icons/IconLogoY';
+import IconLogoP from '@/components/Icons/IconLogoP';
 import { Theme } from '@/types/themeTypes';
 import styles from './LogoSwitcher.module.scss';
 

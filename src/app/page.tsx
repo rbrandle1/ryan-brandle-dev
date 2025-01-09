@@ -15,7 +15,7 @@ import styles from './home.module.scss';
 
 	* BUGS:
 * in safari, underlines in link doesn't change on theme change. It does change when you hover over the link.
-
+* Animation keyframes not being compiled when imported in the component level or page level. Basically any level besides the root /app level.
 * THEME PICKER LOCAL STORAGE ISSUES:
 * Continue setting up theme provider and theme picker. TRY creating a nested layout to manage the theme state. So the body, header, footer etc are not reloaded on every page load, therefore not causing a FOUC.
 * Solve server 500 error on page load. Try using the window object to check if it's loaded in the ThemePicker useEffect and maybe use an empty string as the default theme? This would likely create a FOUC though. Try refactoring with a ThemeProvider component to manage the theme state.
