@@ -14,12 +14,15 @@ interface LogoSwitcherProps {
 const LogoSwitcher: FC<LogoSwitcherProps> = ({ theme = 'm' }) => {
 	const [currentTheme, setCurrentTheme] = useState(theme);
 	const [isVisible, setIsVisible] = useState(true);
+	const [isFadingOut, setIsFadingOut] = useState(false);
 
 	useEffect(() => {
 		setIsVisible(false);
+		setIsFadingOut(true);
 		const timer = setTimeout(() => {
 			setCurrentTheme(theme);
 			setIsVisible(true);
+			setIsFadingOut(false);
 		}, 100);
 
 		return () => clearTimeout(timer);
@@ -27,10 +30,22 @@ const LogoSwitcher: FC<LogoSwitcherProps> = ({ theme = 'm' }) => {
 
 	return (
 		<div className={styles.logoContainer}>
-			<IconLogoM className={cn(styles.logo, isVisible && currentTheme === 'm' && styles.fadeIn)} aria-hidden />
-			<IconLogoC className={cn(styles.logo, isVisible && currentTheme === 'c' && styles.fadeIn)} aria-hidden />
-			<IconLogoP className={cn(styles.logo, isVisible && currentTheme === 'p' && styles.fadeIn)} aria-hidden />
-			<IconLogoY className={cn(styles.logo, isVisible && currentTheme === 'y' && styles.fadeIn)} aria-hidden />
+			<IconLogoM
+				className={cn(styles.logo, isVisible && currentTheme === 'm' && styles.fadeIn, isFadingOut && styles.fadeOut)}
+				aria-hidden
+			/>
+			<IconLogoC
+				className={cn(styles.logo, isVisible && currentTheme === 'c' && styles.fadeIn, isFadingOut && styles.fadeOut)}
+				aria-hidden
+			/>
+			<IconLogoP
+				className={cn(styles.logo, isVisible && currentTheme === 'p' && styles.fadeIn, isFadingOut && styles.fadeOut)}
+				aria-hidden
+			/>
+			<IconLogoY
+				className={cn(styles.logo, isVisible && currentTheme === 'y' && styles.fadeIn, isFadingOut && styles.fadeOut)}
+				aria-hidden
+			/>
 		</div>
 	);
 };
