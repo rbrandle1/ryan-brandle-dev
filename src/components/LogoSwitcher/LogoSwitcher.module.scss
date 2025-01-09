@@ -1,6 +1,6 @@
-@use '@/styles/utils/animation';
-
 //todo: keep working on this. Has something to do with the logoContainer and the logo. Maybe html architecture needs to change in the header/nav.
+
+//todo: Add display none or ensure opacity is 0 for the logo that is not being displayed.
 
 .logoContainer {
 	position: relative;
@@ -13,30 +13,8 @@
 	position: absolute;
 	opacity: 0;
 	transform: translateX(var(--space-sm));
-	transition: opacity var(--duration-sm) ease-out, transform var(--duration-sm) ease-out;
+	// transition: opacity var(--duration-sm) ease-out, transform var(--duration-sm) ease-out;
 }
-
-// @keyframes fadeIn {
-// 	from {
-// 		opacity: 0;
-// 		transform: translateX(var(--space-sm));
-// 	}
-// 	to {
-// 		opacity: 1;
-// 		transform: translateX(0);
-// 	}
-// }
-
-// @keyframes fadeOut {
-// 	from {
-// 		opacity: 1;
-// 		transform: translateX(0);
-// 	}
-// 	to {
-// 		opacity: 0;
-// 		transform: translateX(calc(var(--space-sm) / -1));
-// 	}
-// }
 
 .fadeIn {
 	animation: fadeIn var(--duration-sm) ease-out forwards;
