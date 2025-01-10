@@ -36,7 +36,9 @@ const Header = () => {
 		<header className={styles.header}>
 			<div className={styles.logoContainer}>
 				<div className={styles.logoIcon}>
-					<LogoSwitcher theme={theme} />
+					<Link href='/' aria-label='Return to home page' onClick={() => handleLinkClick('/')}>
+						<LogoSwitcher theme={theme} />
+					</Link>
 				</div>
 				<div className={styles.logoText}>
 					<div>Ryan Brandle</div>

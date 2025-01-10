@@ -2,9 +2,9 @@ import cn from 'classnames';
 import styles from './home.module.scss';
 
 /* Todo: 
+* 
 	* make alignments of name and title to the logo.
 	* make logo responsive... instead of worrying about clamps, just use the breakpoints.
-	* have logo present on page load.
 	* make logo clickable and link to home page.
 	* Finish header
 	* Add logo and finish mobile view of header
@@ -27,6 +27,8 @@ import styles from './home.module.scss';
 
 * FUTURE EXPLORATION:
 	* Incorporate purple as a gradient to pink?
+	* have logo present on page load.
+	
 	* Set typography utils and classes... explore more modern ways to do this? has:, etc?
   * Add shadows/elevation, gradients, animation timing and others that don't exist in figma
   * Try setting base space from 1.6 to 1.8. Also, might need to adjust the real big spaces % max to be larger for a more noticeable difference. Can also run the calculation to a raw value to enhance performance.
