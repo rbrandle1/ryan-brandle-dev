@@ -14,9 +14,15 @@
 		grid-auto-flow: inherit;
 
 		> * {
+			--option-spacing: var(--space-2xs);
+
 			display: flex;
-			padding-left: var(--space-xs);
-			padding-right: var(--space-xs);
+			padding-left: var(--option-spacing);
+			padding-right: var(--option-spacing);
+
+			@include viewport.breakpoint(sm) {
+				--option-spacing: var(--space-xs);
+			}
 		}
 	}
 
@@ -32,17 +38,38 @@
 	}
 
 	input[type='radio'] {
-		--input-border-width: 0.2em;
+		--input-border-width: 0.15em;
+		--input-size: var(--space-md);
 
 		appearance: none;
-		width: var(--space-lg);
-		height: var(--space-lg);
+		width: var(--input-size);
+		height: var(--input-size);
 		border-radius: 3;
 		border: var(--input-border-width) solid var(--border-color);
 		transition: background-color var(--duration-sm) ease-out, border-width var(--duration-sm) ease-out,
 			border-color var(--duration-sm) ease-out, transform var(--duration-sm) ease-out;
-
 		background-color: var(--radio-color, black);
+
+		@include viewport.breakpoint(sm) {
+			--input-border-width: 0.2em;
+			--input-size: var(--space-lg);
+		}
+
+		@include viewport.has-hover {
+			cursor: pointer;
+
+			&:hover {
+				transform: translateY(-2px);
+			}
+		}
+
+		&:checked {
+			--border-color: var(--radio-color);
+
+			border-style: solid;
+			background-color: var(--color-primary);
+			border-width: calc(var(--input-border-width) * 2.5);
+		}
 
 		&.m {
 			--radio-color: var(--p-color-magenta-500);
@@ -58,22 +85,6 @@
 
 		&.p {
 			--radio-color: var(--p-color-purple-500);
-		}
-
-		&:checked {
-			--border-color: var(--radio-color);
-
-			border-style: solid;
-			background-color: var(--color-primary);
-			border-width: calc(var(--input-border-width) * 2.5);
-		}
-
-		@include viewport.has-hover {
-			cursor: pointer;
-
-			&:hover {
-				transform: translateY(-2px);
-			}
 		}
 	}
 }

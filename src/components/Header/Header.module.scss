@@ -8,12 +8,11 @@
 	grid-template-columns: 1fr auto;
 	gap: var(--space-base);
 	align-items: start;
-	height: var(--header-height);
 	@include layout.max-width(100%);
 	@include element.accent-edge;
 
 	@include viewport.breakpoint(md) {
-		gap: var(--space-xl);
+		height: var(--header-height);
 	}
 
 	@include viewport.breakpoint(2xl) {
@@ -25,18 +24,18 @@
 .logoContainer {
 	display: flex;
 	align-items: start;
-	padding-top: var(--space-lg);
+	padding-top: var(--space-md);
+
+	@include viewport.breakpoint(md) {
+		padding-top: var(--space-lg);
+	}
 }
 
 .logoIcon {
-	--logo-size: 52px;
+	--logo-size: 68px;
 
 	width: var(--logo-size);
 	height: var(--logo-size);
-
-	@include viewport.breakpoint(md) {
-		--logo-size: 68px;
-	}
 }
 
 .logoText {
@@ -48,6 +47,10 @@
 	@include viewport.breakpoint(md) {
 		padding-left: var(--space-base);
 		margin-top: -7px;
+	}
+
+	@include viewport.breakpoint(sm, max) {
+		@include element.visually-hidden;
 	}
 
 	div:first-of-type {
@@ -80,12 +83,17 @@
 	display: grid;
 	grid-template-columns: minmax(0, 1fr) auto;
 	gap: var(--nav-item-spacing);
-	padding-top: calc(var(--space-lg) + 10px); // optical sizing
+	padding-top: calc(var(--space-lg) + 14px); // optical sizing
 	text-align: center;
 	user-select: none;
 
+	@include viewport.breakpoint(xs, max) {
+		grid-template-columns: auto;
+		justify-items: end;
+	}
+
 	@include viewport.breakpoint(md) {
-		padding-top: calc(var(--space-lg) + 20px);
+		padding-top: calc(var(--space-lg) + 35px);
 	}
 
 	&::before {
@@ -116,6 +124,10 @@
 
 	@include viewport.breakpoint(md) {
 		--margin-offset: -34px;
+	}
+
+	@include viewport.breakpoint(xs, max) {
+		order: 2;
 	}
 }
 
