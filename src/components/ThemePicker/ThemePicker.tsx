@@ -2,7 +2,7 @@
 import { FC } from 'react';
 import { Theme } from '@/types/themeTypes';
 import Image from 'next/image';
-// import { useTheme } from '../ThemeProvider/ThemeProvider';
+// import { useTheme } from '@/components/ThemeProvider/ThemeProvider';
 import styles from './ThemePicker.module.scss';
 
 interface ThemePickerProps {

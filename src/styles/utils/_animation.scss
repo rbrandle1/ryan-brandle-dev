@@ -1,3 +1,6 @@
+//todo: This file was not being compiled when imported in the component level.
+//todo: I had to add it to the next.config.ts file to get it to compile. This is a workaround but would love to fix at some point.
+
 /**
 * _animations.scss
 *
@@ -32,5 +35,27 @@
 	}
 	50% {
 		transform: translateY(-6px);
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateX(var(--space-base));
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+		transform: translateX(0);
+	}
+	to {
+		opacity: 0;
+		transform: translateX(calc(var(--space-base) / -1));
 	}
 }
