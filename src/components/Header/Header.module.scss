@@ -6,11 +6,15 @@
 .header {
 	display: grid;
 	grid-template-columns: 1fr auto;
-	gap: var(--space-xl);
+	gap: var(--space-base);
 	align-items: start;
 	height: var(--header-height);
 	@include layout.max-width(100%);
 	@include element.accent-edge;
+
+	@include viewport.breakpoint(md) {
+		gap: var(--space-xl);
+	}
 
 	@include viewport.breakpoint(2xl) {
 		padding-left: var(--space-2xl);
@@ -25,42 +29,65 @@
 }
 
 .logoIcon {
-	--logo-size: 68px;
+	--logo-size: 52px;
 
 	width: var(--logo-size);
 	height: var(--logo-size);
+
+	@include viewport.breakpoint(md) {
+		--logo-size: 68px;
+	}
 }
 
 .logoText {
-	padding-left: var(--space-base);
+	padding-left: var(--space-sm);
 	text-wrap: nowrap;
 	line-height: 1;
-	margin-top: -7px;
+	margin-top: -5px;
+
+	@include viewport.breakpoint(md) {
+		padding-left: var(--space-base);
+
+		margin-top: -7px;
+	}
 
 	div:first-of-type {
-		font-size: 4.8rem; // optical sizing to match icon
+		font-size: 3.52rem; // optical sizing to match icon
 		font-weight: var(--font-weight-semiBold);
 		margin-left: -2px;
+
+		@include viewport.breakpoint(md) {
+			font-size: 4.8rem;
+		}
 	}
 
 	div:last-of-type {
-		font-size: 2rem; // optical sizing to match icon
+		font-size: 1.8rem; // optical sizing to match icon
 		font-weight: var(--font-weight-semiBold);
 		letter-spacing: 2px;
-		margin-top: 6px; // optical sizing to match icon
+		margin-top: 4px; // optical sizing to match icon
+
+		@include viewport.breakpoint(md) {
+			font-size: 2rem;
+			margin-top: 6px;
+		}
 	}
 }
 
 .navContainer {
-	--nav-spacing: var(--space-base);
+	--nav-item-spacing: clamp(var(--space-sm), 1.5vw, var(--space-md));
 
 	position: relative;
 	display: grid;
 	grid-template-columns: minmax(0, 1fr) auto;
-	gap: var(--nav-spacing);
-	padding-top: calc(var(--space-lg) + 20px); // optical sizing to match icon
+	gap: var(--nav-item-spacing);
+	padding-top: calc(var(--space-lg) + 10px); // optical sizing
 	text-align: center;
 	user-select: none;
+
+	@include viewport.breakpoint(md) {
+		padding-top: calc(var(--space-lg) + 20px);
+	}
 
 	&::before {
 		content: '';
@@ -68,14 +95,14 @@
 		top: 0;
 		left: 0;
 		right: 0;
-		height: var(--space-lg);
+		height: var(--space-md);
 		background-color: var(--color-primary);
 		transform: skewX(-15deg);
 		z-index: -1;
-	}
 
-	@include viewport.breakpoint(md) {
-		--nav-spacing: var(--space-md);
+		@include viewport.breakpoint(md) {
+			height: var(--space-lg);
+		}
 	}
 }
 
@@ -98,8 +125,8 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
-	padding-left: var(--nav-spacing);
-	padding-right: var(--nav-spacing);
+	padding-left: var(--nav-item-spacing);
+	padding-right: var(--nav-item-spacing);
 	text-transform: lowercase;
 
 	@include typography.link-neutral;
