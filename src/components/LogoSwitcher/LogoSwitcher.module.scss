@@ -2,7 +2,6 @@
 
 .logoContainer {
 	position: relative;
-	// overflow: hidden; /* Ensure logos don't overflow */
 	width: 68px; //needed for the logo to be visible
 	height: 68px; //needed for the logo to be visible
 }
@@ -10,7 +9,6 @@
 .logo {
 	position: absolute;
 	opacity: 0;
-	// transform: translateX(calc(var(--space-sm) / -1));
 	transform: translateX(var(--space-sm));
 	transition: opacity var(--duration-sm) ease-out, transform var(--duration-sm) ease-out;
 }
