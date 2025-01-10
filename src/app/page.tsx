@@ -3,11 +3,7 @@ import styles from './home.module.scss';
 
 /* Todo: 
 * 
-	* make alignments of name and title to the logo.
-	* make logo responsive... instead of worrying about clamps, just use the breakpoints.
-	* make logo clickable and link to home page.
-	* Finish header
-	* Add logo and finish mobile view of header
+	* finish minor touches on mobile nav... align black bar better, make logo centered with right side.
 	* make scroll arrow a circular button... or a square, with accent background.
 	* potentially make theme picker padding right x2 on large screens
 	* Finish footer
