@@ -58,14 +58,8 @@
 		bottom: 0;
 		width: var(--space-2xs);
 		background-color: var(--color-accent);
-		// transition: background-color var(--duration-lg) ease-out var(--duration-sm);
-		// transition: background-color 150ms ease-in 50ms;
-		// transition: background-color 200ms ease-in 50ms;
+		//add durations to tokens
 		transition: background-color 250ms ease-in 50ms;
-		// transition: background-color 200ms ease-in 100ms;
-		// transition: background-color 200ms ease-in 150ms;
-		// transition: background-color 250ms ease-in 150ms;
-		// transition: background-color 220ms ease-in 150ms;
 
 		@include viewport.breakpoint(2xs) {
 			width: clamp(var(--space-2xs), 1vw, var(--space-sm));

@@ -2,7 +2,10 @@ import cn from 'classnames';
 import styles from './home.module.scss';
 
 /* Todo: 
+	* make alignments of name and title to the logo.
+	* make logo responsive... instead of worrying about clamps, just use the breakpoints.
 	* have logo present on page load.
+	* make logo clickable and link to home page.
 	* Finish header
 	* Add logo and finish mobile view of header
 	* make scroll arrow a circular button... or a square, with accent background.
