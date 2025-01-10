@@ -3,10 +3,9 @@ import React, { useEffect, useState } from 'react';
 import cn from 'classnames';
 import { usePathname } from 'next/navigation';
 import { Theme } from '@/types/themeTypes';
-// import Image from 'next/image';
 import Link from 'next/link';
-import ThemePicker from '../ThemePicker/ThemePicker';
-import LogoSwitcher from '../LogoSwitcher/LogoSwitcher';
+import ThemePicker from '@/components/ThemePicker/ThemePicker';
+import LogoSwitcher from '@/components/LogoSwitcher/LogoSwitcher';
 import styles from './Header.module.scss';
 
 const PAGES = [
