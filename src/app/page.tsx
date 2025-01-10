@@ -2,6 +2,7 @@ import cn from 'classnames';
 import styles from './home.module.scss';
 
 /* Todo: 
+	* have logo present on page load.
 	* Finish header
 	* Add logo and finish mobile view of header
 	* make scroll arrow a circular button... or a square, with accent background.

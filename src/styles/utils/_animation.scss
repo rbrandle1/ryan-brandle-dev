@@ -10,21 +10,6 @@
 @use 'sass:list';
 @use './viewport';
 
-// @include text-hover;
-// @include text-hover(var(--color-example), 4px);
-@mixin text-hover($selector: '&', $color: currentColor, $line: 0.075em) {
-	#{selector} {
-		background-repeat: no-repeat;
-		background-size: 0% 100%;
-		background-image: linear-gradient(transparent calc(100% - #{$line}), $color $line);
-		transition: background-size var(--duration-md) var(--ease-out);
-	}
-
-	&:hover #{$selector} {
-		background-size: 100% 100%;
-	}
-}
-
 @keyframes float {
 	0%,
 	100% {
