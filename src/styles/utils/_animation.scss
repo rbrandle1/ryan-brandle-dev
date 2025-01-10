@@ -1,4 +1,3 @@
-//todo: This file was not being compiled when imported in the component level.
 //todo: I had to add it to the next.config.ts file to get it to compile. This is a workaround but would love to fix at some point.
 
 /**
@@ -10,23 +9,6 @@
 * - Mixins
 * - Keyframes
 */
-@use 'sass:list';
-@use './viewport';
-
-// @include text-hover;
-// @include text-hover(var(--color-example), 4px);
-@mixin text-hover($selector: '&', $color: currentColor, $line: 0.075em) {
-	#{selector} {
-		background-repeat: no-repeat;
-		background-size: 0% 100%;
-		background-image: linear-gradient(transparent calc(100% - #{$line}), $color $line);
-		transition: background-size var(--duration-md) var(--ease-out);
-	}
-
-	&:hover #{$selector} {
-		background-size: 100% 100%;
-	}
-}
 
 @keyframes float {
 	0%,

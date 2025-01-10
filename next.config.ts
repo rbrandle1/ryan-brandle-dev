@@ -1,9 +1,12 @@
+import path from 'path';
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
 	sassOptions: {
-		includePaths: ['./src/styles/**/*', './src/components/**/*', './src/app/**/*'],
-		// this was added to force animation keyframes to be compiled. They were not being compiled on the component level.
+		includePaths: [
+			path.join(__dirname, 'src/components'), // For .src/components and deeper levels
+			path.join(__dirname, 'src/app'), // For .src/app and its subdirectories
+		],
 		prependData: `@use "@/styles/utils/_animation.scss";`,
 	},
 };
