@@ -41,7 +41,7 @@
 @keyframes fadeIn {
 	from {
 		opacity: 0;
-		transform: translateX(var(--space-sm));
+		transform: translateX(var(--space-base));
 	}
 	to {
 		opacity: 1;
@@ -56,6 +56,6 @@
 	}
 	to {
 		opacity: 0;
-		transform: translateX(calc(var(--space-sm) / -1));
+		transform: translateX(calc(var(--space-base) / -1));
 	}
 }

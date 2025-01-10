@@ -1,3 +1,4 @@
+'use client';
 import cn from 'classnames';
 import { FC, useEffect, useState } from 'react';
 import IconLogoM from '@/components/Icons/IconLogoM';
@@ -17,35 +18,37 @@ const LogoSwitcher: FC<LogoSwitcherProps> = ({ theme = 'm' }) => {
 	const [isFadingOut, setIsFadingOut] = useState(false);
 
 	useEffect(() => {
-		setIsVisible(false);
-		setIsFadingOut(true);
-		const timer = setTimeout(() => {
-			setCurrentTheme(theme);
-			setIsVisible(true);
-			setIsFadingOut(false);
-		}, 100);
+		if (theme !== currentTheme) {
+			setIsFadingOut(true);
 
-		return () => clearTimeout(timer);
-	}, [theme]);
+			const fadeOutTimer = setTimeout(() => {
+				setCurrentTheme(theme);
+				setIsVisible(true);
+				setIsFadingOut(false);
+			}, 300);
+
+			return () => clearTimeout(fadeOutTimer);
+		}
+	}, [theme, currentTheme]);
 
 	return (
 		<div className={styles.logoContainer}>
 			<IconLogoM
-				className={cn(styles.logo, isVisible && currentTheme === 'm' && styles.fadeIn, isFadingOut && styles.fadeOut)}
+				className={cn(styles.logo, currentTheme === 'm' && (isVisible ? styles.fadeIn : isFadingOut && styles.fadeOut))}
 				aria-hidden
 			/>
 			<IconLogoC
-				className={cn(styles.logo, isVisible && currentTheme === 'c' && styles.fadeIn, isFadingOut && styles.fadeOut)}
+				className={cn(styles.logo, currentTheme === 'c' && (isVisible ? styles.fadeIn : isFadingOut && styles.fadeOut))}
 				aria-hidden
 			/>
-			<IconLogoP
+			{/* <IconLogoP
 				className={cn(styles.logo, isVisible && currentTheme === 'p' && styles.fadeIn, isFadingOut && styles.fadeOut)}
 				aria-hidden
 			/>
 			<IconLogoY
 				className={cn(styles.logo, isVisible && currentTheme === 'y' && styles.fadeIn, isFadingOut && styles.fadeOut)}
 				aria-hidden
-			/>
+			/> */}
 		</div>
 	);
 };

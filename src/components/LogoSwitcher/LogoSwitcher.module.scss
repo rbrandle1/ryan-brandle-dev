@@ -12,14 +12,17 @@
 .logo {
 	position: absolute;
 	opacity: 0;
-	transform: translateX(var(--space-sm));
-	// transition: opacity var(--duration-sm) ease-out, transform var(--duration-sm) ease-out;
+	transform: translateX(var(--space-base));
+	visibility: hidden;
+	pointer-events: none;
 }
 
 .fadeIn {
+	visibility: visible;
 	animation: fadeIn var(--duration-sm) ease-out forwards;
 }
 
 .fadeOut {
+	visibility: visible;
 	animation: fadeOut var(--duration-sm) ease-out forwards;
 }
