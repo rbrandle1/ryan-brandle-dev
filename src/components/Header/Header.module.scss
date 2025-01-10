@@ -7,15 +7,21 @@
 	display: grid;
 	grid-template-columns: 1fr auto;
 	gap: var(--space-xl);
+	align-items: start;
 	height: var(--header-height);
-
 	@include layout.max-width(100%);
 	@include element.accent-edge;
+
+	@include viewport.breakpoint(2xl) {
+		padding-left: var(--space-2xl);
+		padding-right: var(--space-2xl);
+	}
 }
 
 .logoContainer {
 	display: flex;
 	align-items: center;
+	padding-top: calc(var(--space-lg) - 4px);
 }
 
 .logoIcon {
@@ -28,12 +34,14 @@
 	line-height: 1;
 
 	div:first-of-type {
-		font-size: var(--text-xl);
+		font-size: 4.8rem; // optical sizing to match icon
 		font-weight: var(--font-weight-semiBold);
 		margin-left: -2px;
 	}
 
 	div:last-of-type {
+		font-size: 2rem; // optical sizing to match icon
+		font-weight: var(--font-weight-semiBold);
 		letter-spacing: 2px;
 		margin-top: var(--space-2xs);
 	}
@@ -46,7 +54,7 @@
 	display: grid;
 	grid-template-columns: minmax(0, 1fr) auto;
 	gap: var(--nav-spacing);
-	padding-top: var(--space-xl);
+	padding-top: calc(var(--space-lg) + 20px); // optical sizing to match icon
 	text-align: center;
 	user-select: none;
 
