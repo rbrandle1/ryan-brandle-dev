@@ -58,7 +58,6 @@
 		bottom: 0;
 		width: var(--space-2xs);
 		background-color: var(--color-accent);
-		//add durations to tokens
 		transition: background-color 250ms ease-in 50ms;
 
 		@include viewport.breakpoint(2xs) {
