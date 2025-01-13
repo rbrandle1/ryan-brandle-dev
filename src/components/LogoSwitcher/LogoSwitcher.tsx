@@ -4,14 +4,11 @@ import IconLogoM from '@/components/Icons/IconLogoM';
 import IconLogoC from '@/components/Icons/IconLogoC';
 import IconLogoY from '@/components/Icons/IconLogoY';
 import IconLogoP from '@/components/Icons/IconLogoP';
-import { Theme } from '@/types/themeTypes';
 import styles from './LogoSwitcher.module.scss';
+import { useTheme } from '../ThemeProvider/ThemeProvider';
 
-interface LogoSwitcherProps {
-	theme: Theme;
-}
-
-const LogoSwitcher: FC<LogoSwitcherProps> = ({ theme = 'm' }) => {
+const LogoSwitcher = () => {
+	const { theme } = useTheme();
 	const [currentTheme, setCurrentTheme] = useState(theme);
 	const [isVisible, setIsVisible] = useState(true);
 

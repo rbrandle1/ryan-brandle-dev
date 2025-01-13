@@ -1,39 +1,30 @@
 'use client';
-import { useEffect, useState, createContext, useContext } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
+import { Theme } from '@/types/themeTypes';
 
-interface ThemeContextType {
-	theme: string;
-	toggleTheme: (newTheme: 'm' | 'c' | 'y') => void;
-}
-
-const ThemeContext = createContext<ThemeContextType>({
+const ThemeContext = createContext<{
+	theme: Theme;
+	handleThemeChange: (newTheme: Theme) => void;
+}>({
 	theme: 'm',
-	toggleTheme: () => {},
+	handleThemeChange: () => {},
 });
 
-export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
-	const [theme, setTheme] = useState<string>('m');
-	const [isInitialized, setIsInitialized] = useState(false);
+const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
+	const [theme, setTheme] = useState<Theme>((localStorage.getItem('theme') as Theme) || 'm');
 
 	useEffect(() => {
-		const storedTheme = localStorage.getItem('theme') || 'm';
-		setTheme(storedTheme);
-		document.body.setAttribute('data-theme', storedTheme);
-		setIsInitialized(true);
-	}, []);
+		localStorage.setItem('theme', theme);
+		document.body.dataset.theme = theme;
+	}, [theme]);
 
-	const toggleTheme = (newTheme: 'm' | 'c' | 'y') => {
-		localStorage.setItem('theme', newTheme);
+	const handleThemeChange = (newTheme: Theme) => {
 		setTheme(newTheme);
-		document.body.setAttribute('data-theme', newTheme);
 	};
 
-	if (!isInitialized) {
-		document.body.setAttribute('data-theme', 'm');
-		return null;
-	}
-
-	return <ThemeContext.Provider value={{ theme, toggleTheme }}>{children}</ThemeContext.Provider>;
+	return <ThemeContext.Provider value={{ theme, handleThemeChange }}>{children}</ThemeContext.Provider>;
 };
 
 export const useTheme = () => useContext(ThemeContext);
+
+export default ThemeProvider;

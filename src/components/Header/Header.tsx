@@ -1,8 +1,7 @@
 'use client';
-import React, { useEffect, useState } from 'react';
-import cn from 'classnames';
+import { useState } from 'react';
 import { usePathname } from 'next/navigation';
-import { Theme } from '@/types/themeTypes';
+import cn from 'classnames';
 import Link from 'next/link';
 import ThemePicker from '@/components/ThemePicker/ThemePicker';
 import LogoSwitcher from '@/components/LogoSwitcher/LogoSwitcher';
@@ -14,17 +13,6 @@ const PAGES = [
 ] as const;
 
 const Header = () => {
-	const [theme, setTheme] = useState<Theme>((localStorage.getItem('theme') as Theme) || 'm');
-
-	useEffect(() => {
-		localStorage.setItem('theme', theme);
-		document.body.dataset.theme = theme;
-	}, [theme]);
-
-	const handleThemeChange = (newTheme: Theme) => {
-		setTheme(newTheme);
-	};
-
 	const pathName = usePathname();
 	const [activeLink, setActiveLink] = useState(pathName);
 
@@ -37,7 +25,7 @@ const Header = () => {
 			<div className={styles.logoContainer}>
 				<div className={styles.logoIcon}>
 					<Link href='/' aria-label='Return to home page' onClick={() => handleLinkClick('/')}>
-						<LogoSwitcher theme={theme} />
+						<LogoSwitcher />
 					</Link>
 				</div>
 				<div className={styles.logoText}>
@@ -60,7 +48,7 @@ const Header = () => {
 						</li>
 					))}
 				</ul>
-				<ThemePicker theme={theme} onThemeChange={handleThemeChange} />
+				<ThemePicker />
 			</nav>
 		</header>
 	);
