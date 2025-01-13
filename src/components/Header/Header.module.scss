@@ -78,22 +78,25 @@
 
 .navContainer {
 	--nav-item-spacing: clamp(var(--space-sm), 1.5vw, var(--space-md));
+	--nav-vert-alignment-offset: 14px;
 
 	position: relative;
 	display: grid;
 	grid-template-columns: minmax(0, 1fr) auto;
 	gap: var(--nav-item-spacing);
-	padding-top: calc(var(--space-lg) + 14px); // optical sizing
+	padding-top: calc(var(--space-lg) + var(--nav-vert-alignment-offset)); // optical sizing
 	text-align: center;
 	user-select: none;
 
 	@include viewport.breakpoint(xs, max) {
+		--nav-vert-alignment-offset: 4px;
+		padding-top: calc(var(--space-xl) + var(--nav-vert-alignment-offset));
 		grid-template-columns: auto;
 		justify-items: end;
 	}
 
 	@include viewport.breakpoint(md) {
-		padding-top: calc(var(--space-lg) + 35px);
+		--nav-vert-alignment-offset: 35px;
 	}
 
 	&::before {
@@ -128,6 +131,7 @@
 
 	@include viewport.breakpoint(xs, max) {
 		order: 2;
+		margin-right: -13px;
 	}
 }
 
