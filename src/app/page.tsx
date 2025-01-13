@@ -26,6 +26,16 @@ import styles from './home.module.scss';
 	* Set typography utils and classes... explore more modern ways to do this? has:, etc?
   * Add shadows/elevation, gradients, animation timing and others that don't exist in figma
   * Try setting base space from 1.6 to 1.8. Also, might need to adjust the real big spaces % max to be larger for a more noticeable difference. Can also run the calculation to a raw value to enhance performance.
+	
+* Talking points, troubleshooting, etc, with this project:
+	* State management. I had to decide whether prop drilling or using react context was the best approach. I went with context because I came to understand how multiple components could be affected by the theme state, and the best way to manage it was to avoid prop drilling.
+	* Animation keyframe rendering issues with Turbopack. I had to move the keyframes to the top of the file to get them to render, instead of utilizing them as css module partials like the other utilities.
+	* Issues with local state to immediately update the theme state. Currently there is a 500 error on page load due to the initial localstorage value not being set. Would love to come back to this.
+
+	* Design system. Utilizing design tokens to manage colors, spacing, and typography.
+	* Multiple theme systems and variables. Light and dark themes exist in addition to the theme picker accent colors.
+
+	* Accessibility. Ensuring that the site is accessible and compliant with WCAG 2.1. And is navigable and usable for all.
 */
 
 export default function Home() {
