@@ -1,5 +1,4 @@
 'use client';
-import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import cn from 'classnames';
 import Link from 'next/link';
@@ -14,17 +13,12 @@ const PAGES = [
 
 const Header = () => {
 	const pathName = usePathname();
-	const [activeLink, setActiveLink] = useState(pathName);
-
-	const handleLinkClick = (path: string) => {
-		setActiveLink(path);
-	};
 
 	return (
 		<header className={styles.header}>
 			<div className={styles.logoContainer}>
 				<div className={styles.logoIcon}>
-					<Link href='/' aria-label='Return to home page' onClick={() => handleLinkClick('/')}>
+					<Link href='/' aria-label='Return to home page'>
 						<LogoSwitcher />
 					</Link>
 				</div>
@@ -37,12 +31,7 @@ const Header = () => {
 				<ul className={styles.nav}>
 					{PAGES.map(({ path, label }, i) => (
 						<li key={i}>
-							<Link
-								href={path}
-								className={cn(styles.link, activeLink === path && styles.isActive)}
-								data-text={label}
-								onClick={() => handleLinkClick(path)}
-							>
+							<Link href={path} className={cn(styles.link, pathName === path && styles.isActive)} data-text={label}>
 								{label}
 							</Link>
 						</li>

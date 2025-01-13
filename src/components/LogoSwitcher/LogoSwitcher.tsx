@@ -1,3 +1,4 @@
+'use client';
 import cn from 'classnames';
 import { FC, useEffect, useState } from 'react';
 import IconLogoM from '@/components/Icons/IconLogoM';

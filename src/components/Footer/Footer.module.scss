@@ -1,5 +1,6 @@
 @use '@/styles/utils/layout';
 @use '@/styles/utils/element';
+@use '@/styles/utils/viewport';
 
 .footer {
 	@include layout.max-width(100%);
@@ -9,4 +10,21 @@
 		display: flex;
 		justify-content: space-between;
 	}
+}
+
+.logoContainer {
+	display: flex;
+	align-items: start;
+	padding-top: var(--space-md);
+
+	@include viewport.breakpoint(md) {
+		padding-top: var(--space-lg);
+	}
+}
+
+.logoIcon {
+	--logo-size: 68px;
+
+	width: var(--logo-size);
+	height: var(--logo-size);
 }
