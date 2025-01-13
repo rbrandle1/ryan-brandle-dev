@@ -63,7 +63,9 @@ export default function Home() {
 			<section data-section='dark' className={styles.section}>
 				<div className={styles.container}>dark here</div>
 			</section>
-			<section className={styles.section}>light section</section>
+			<section className={cn(styles.section, styles.accentEdge)}>
+				<div className={styles.container}>light here</div>
+			</section>
 			{/* <div className={styles.ctas}>
           <a
             className={styles.primary}
