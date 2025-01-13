@@ -2,18 +2,16 @@ import cn from 'classnames';
 import styles from './home.module.scss';
 
 /* Todo: 
-* 
-	* finish minor touches on mobile nav... align black bar better, make logo centered with right side.
-	* make scroll arrow a circular button... or a square, with accent background.
-	* potentially make theme picker padding right x2 on large screens
-	* Finish footer
-	* Begin stubbing general layout and components within.
-	* Prep all necessary svgs, figure out if need to recreate logo.
-	* Figure out a better way to import svgs. SVGR doesn't appear to work well with Turbopack. And next Image requires a width and height prop making it difficult to style. Maybe Image for very static svgs and inline for more complicated svgs is best for now. https://blog.logrocket.com/import-svgs-next-js-apps/ 
-	* Try updating to line-height units: https://12daysofweb.dev/2024/css-margin-trim-line-height-units/
-	* Make buttons view link
+* Finish footer
+* Make single div for vertical text under main section
+* Make section callout component
+* Make hero card component
+* Make small card component
+* make scroll arrow a circular button... or a square, with accent background.
+* Try updating to line-height units: https://12daysofweb.dev/2024/css-margin-trim-line-height-units/
+* Make buttons view link
 
-	* BUGS:
+* BUGS:
 * in safari, underlines in link doesn't change on theme change. It does change when you hover over the link.
 
 * THEME PICKER LOCAL STORAGE ISSUES:
