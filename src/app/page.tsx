@@ -2,7 +2,7 @@ import cn from 'classnames';
 import styles from './home.module.scss';
 
 /* Todo: 
-* Finish footer
+* Finish footer - add correct links to social icons, add padding to the a tags, animate translate and color on hover.
 * check svg icons and accessibility. do they need a role? alt? run a accessibility audit.
 * Make single div for vertical text under main section
 * Make section callout component

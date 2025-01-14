@@ -31,15 +31,20 @@ const Footer = () => {
 					<p>100% designed & developed by Ryan Brandle &copy; 2025</p>
 				</div>
 				<div className={styles.socialContainer}>
-					<span className={styles.icon}>
+					<a className={styles.icon} href='https://github.com/username' target='_blank' rel='noopener noreferrer'>
 						<IconGithub />
-					</span>
-					<span className={styles.icon}>
+					</a>
+					<a className={styles.icon} href='https://codepen.io/username' target='_blank' rel='noopener noreferrer'>
 						<IconCodePen />
-					</span>
-					<span className={styles.icon}>
+					</a>
+					<a
+						className={styles.icon}
+						href='https://www.linkedin.com/in/username'
+						target='_blank'
+						rel='noopener noreferrer'
+					>
 						<IconLinkedIn />
-					</span>
+					</a>
 				</div>
 			</div>
 		</footer>

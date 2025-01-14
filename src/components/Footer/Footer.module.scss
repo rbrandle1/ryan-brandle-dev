@@ -44,7 +44,9 @@
 
 .socialContainer {
 	grid-area: social;
-	display: flex;
+	display: grid;
+	grid-auto-flow: column;
+	// gap: clamp(var(--space-base), 1.5vw, var(--space-lg));
 }
 
 .logoContainer {
@@ -82,8 +84,8 @@
 	align-items: center;
 	justify-content: center;
 	width: var(--text-md);
-	height: var(--text-md);
 	fill: var(--text-tertiary);
+	margin: 0 var(--space-sm);
 
 	@include viewport.has-hover {
 		fill: var(--text-primary);
