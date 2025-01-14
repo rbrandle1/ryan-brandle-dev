@@ -8,7 +8,8 @@
 	grid-template-columns: 1fr auto;
 	gap: var(--space-base);
 	align-items: start;
-	@include layout.max-width(100%);
+
+	@include layout.max-width(full);
 	@include element.accent-edge;
 
 	@include viewport.breakpoint(md) {

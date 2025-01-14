@@ -5,13 +5,29 @@
 */
 
 @use './element';
-@use './viewport';
+@use 'sass:list';
 
-// @include layout.max-width;
-@mixin max-width($value: var(--viewport-lg)) {
+$viewport-sizes: (
+	full: 100%,
+	xs: var(--viewport-xs),
+	sm: var(--viewport-sm),
+	md: var(--viewport-md),
+	lg: var(--viewport-lg),
+	xl: var(--viewport-xl),
+	2xl: var(--viewport-2xl),
+);
+
+// @include layout.max-width(xl);
+@mixin max-width($viewport: lg) {
+	$valid-sizes: map-keys($viewport-sizes);
+
+	@if not list.index($valid-sizes, $viewport) {
+		@error '"#{$viewport}" is not a valid size. Please use one of these values: #{$valid-sizes}';
+	}
+
 	margin-inline: auto;
 	padding: 0 clamp(var(--space-base), 4vw, var(--space-lg));
-	width: min(#{$value}, 100%);
+	width: min(#{map-get($viewport-sizes, $viewport)}, 100%);
 }
 
 @mixin viewport-width {

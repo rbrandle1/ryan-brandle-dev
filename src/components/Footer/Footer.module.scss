@@ -12,8 +12,7 @@
 }
 
 .container {
-	//make this xl width
-	@include layout.max-width;
+	@include layout.max-width(xl);
 
 	display: grid;
 	grid-template-columns: auto 1fr auto;
@@ -48,7 +47,6 @@
 	grid-area: social;
 	display: grid;
 	grid-auto-flow: column;
-	// gap: clamp(var(--space-base), 1.5vw, var(--space-lg));
 }
 
 .logoContainer {
