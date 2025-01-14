@@ -96,7 +96,7 @@
 
 .scrollContainer {
 	@include layout.max-width;
-	padding-bottom: clamp(var(--space-base), 4vw, var(--space-lg));
+	padding-bottom: clamp(var(--space-base), 4dvw, var(--space-lg));
 }
 
 .scroll {

@@ -6,7 +6,7 @@ import '@/styles/tokens/semantic.scss';
 import '@/styles/base.scss';
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
-// import { ThemeProvider } from '@/components/ThemeProvider/ThemeProvider';
+import ThemeProvider from '@/components/ThemeProvider/ThemeProvider';
 
 // Importing the fonts
 const oswald = Oswald({
@@ -58,13 +58,13 @@ export default function RootLayout({
 			{/* <head>
 				<script dangerouslySetInnerHTML={{ __html: themeFallbackScript }} />
 			</head> */}
-			{/* <ThemeProvider> */}
 			<body>
-				<Header />
-				<main>{children}</main>
-				<Footer />
+				<ThemeProvider>
+					<Header />
+					<main>{children}</main>
+					<Footer />
+				</ThemeProvider>
 			</body>
-			{/* </ThemeProvider> */}
 		</html>
 	);
 }

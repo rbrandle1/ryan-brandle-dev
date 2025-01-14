@@ -55,12 +55,9 @@
 			--input-size: var(--space-lg);
 		}
 
-		@include viewport.has-hover {
+		@include viewport.has-hover(':hover', ':focus-visible') {
 			cursor: pointer;
-
-			&:hover {
-				transform: translateY(-2px);
-			}
+			transform: translateY(-2px);
 		}
 
 		&:checked {
@@ -86,5 +83,9 @@
 		&.p {
 			--radio-color: var(--p-color-purple-500);
 		}
+	}
+
+	.icon {
+		width: var(--text-md);
 	}
 }

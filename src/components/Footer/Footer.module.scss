@@ -1,12 +1,140 @@
 @use '@/styles/utils/layout';
 @use '@/styles/utils/element';
+@use '@/styles/utils/viewport';
+@use '@/styles/utils/typography';
 
 .footer {
-	@include layout.max-width(100%);
-	@include element.accent-edge;
+	background-color: var(--surface-neutral);
+	padding-top: var(--space-2xl);
+	padding-bottom: var(--space-base);
 
-	& {
-		display: flex;
-		justify-content: space-between;
+	@include element.accent-edge;
+	@include viewport.breakpoint(sm) {
+		padding-top: var(--space-4xl);
+	}
+}
+
+.container {
+	@include layout.max-width(xl);
+	display: grid;
+	gap: clamp(var(--space-base), 4dvw, var(--space-2xl));
+	place-items: center;
+
+	@include viewport.breakpoint(xs) {
+		justify-items: start;
+		grid-template-columns: auto 1fr;
+		grid-template-rows: repeat(2, auto);
+		grid-template-areas:
+			'logo contact'
+			'social copyright';
+	}
+
+	@include viewport.breakpoint(sm) {
+		grid-template-columns: auto 1fr auto;
+		grid-template-areas:
+			'logo contact .'
+			'. copyright social';
+	}
+}
+
+.contactContainer {
+	max-width: 45ch;
+	text-align: center;
+
+	@include viewport.breakpoint(xs) {
+		grid-area: contact;
+		grid-column: 2 / -1;
+		text-align: left;
+	}
+
+	h3 {
+		@include typography.headline(sm);
+		margin-bottom: var(--space-base);
+	}
+
+	a {
+		@include typography.link;
+	}
+}
+
+.copyContainer {
+	@include typography.p(sm);
+	color: var(--text-tertiary);
+
+	@include viewport.breakpoint(xs) {
+		grid-area: copyright;
+	}
+
+	@include viewport.breakpoint(xs, max) {
+		order: 2;
+		text-align: center;
+	}
+}
+
+.socialContainer {
+	display: grid;
+	grid-auto-flow: column;
+
+	@include viewport.breakpoint(xs) {
+		grid-area: social;
+	}
+}
+
+.logoContainer {
+	position: relative;
+	width: 160px;
+	height: 160px;
+
+	@include viewport.breakpoint(xs) {
+		grid-area: logo;
+	}
+
+	@include viewport.breakpoint(xs, max) {
+		margin-bottom: var(--space-lg);
+	}
+}
+
+.logoCircle {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	fill: var(--text-tertiary);
+	transform-origin: center;
+	animation: rotate 120s linear infinite;
+}
+
+.logoIcon {
+	--logo-size: 68px;
+
+	position: absolute;
+	top: calc(50% - 1px);
+	left: calc(50% + 3px);
+	width: var(--logo-size);
+	height: var(--logo-size);
+	transform: translate(-50%, -50%);
+	transition: transform var(--duration-sm) ease-out;
+
+	@include viewport.has-hover {
+		transform: translate(-50%, -54%);
+	}
+}
+
+.icon {
+	padding: var(--space-sm);
+	fill: var(--text-tertiary);
+	transition: fill var(--duration-sm) ease-out, transform var(--duration-sm) ease-out;
+
+	@include viewport.has-hover(':hover', ':focus-visible') {
+		fill: var(--text-primary);
+		transform: translateY(-2px);
+	}
+
+	svg {
+		--svg-size: var(--text-md);
+
+		width: var(--svg-size);
+		height: var(--svg-size);
 	}
 }

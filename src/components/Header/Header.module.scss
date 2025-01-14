@@ -8,7 +8,8 @@
 	grid-template-columns: 1fr auto;
 	gap: var(--space-base);
 	align-items: start;
-	@include layout.max-width(100%);
+
+	@include layout.max-width(full);
 	@include element.accent-edge;
 
 	@include viewport.breakpoint(md) {
@@ -36,6 +37,11 @@
 
 	width: var(--logo-size);
 	height: var(--logo-size);
+	transition: transform var(--duration-sm) ease-out;
+
+	@include viewport.has-hover {
+		transform: translateY(-2px);
+	}
 }
 
 .logoText {
@@ -77,7 +83,7 @@
 }
 
 .navContainer {
-	--nav-item-spacing: clamp(var(--space-sm), 1.5vw, var(--space-md));
+	--nav-item-spacing: clamp(var(--space-sm), 1.5dvw, var(--space-md));
 	--nav-vert-alignment-offset: 14px;
 
 	position: relative;
@@ -93,6 +99,11 @@
 		padding-top: calc(var(--space-xl) + var(--nav-vert-alignment-offset));
 		grid-template-columns: auto;
 		justify-items: end;
+	}
+
+	// small hack to fix nav collision
+	@include viewport.between(sm, 799px) {
+		gap: initial;
 	}
 
 	@include viewport.breakpoint(md) {

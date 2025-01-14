@@ -2,7 +2,7 @@ import cn from 'classnames';
 import styles from './home.module.scss';
 
 /* Todo: 
-* Finish footer
+* Make a mixin or a variable for hover translate animations.
 * Make single div for vertical text under main section
 * Make section callout component
 * Make hero card component
@@ -10,6 +10,10 @@ import styles from './home.module.scss';
 * make scroll arrow a circular button... or a square, with accent background.
 * Try updating to line-height units: https://12daysofweb.dev/2024/css-margin-trim-line-height-units/
 * Make buttons view link
+* check svg icons and accessibility. do they need a role? alt? run a accessibility audit.
+* Read through all text, footer text, etc and finalize.
+* Get peer review
+* set up a new contact email
 
 * BUGS:
 * in safari, underlines in link doesn't change on theme change. It does change when you hover over the link.
@@ -26,6 +30,16 @@ import styles from './home.module.scss';
 	* Set typography utils and classes... explore more modern ways to do this? has:, etc?
   * Add shadows/elevation, gradients, animation timing and others that don't exist in figma
   * Try setting base space from 1.6 to 1.8. Also, might need to adjust the real big spaces % max to be larger for a more noticeable difference. Can also run the calculation to a raw value to enhance performance.
+	
+* Talking points, troubleshooting, etc, with this project:
+	* State management. I had to decide whether prop drilling or using react context was the best approach. I went with context because I came to understand how multiple components could be affected by the theme state, and the best way to manage it was to avoid prop drilling.
+	* Animation keyframe rendering issues with Turbopack. I had to move the keyframes to the top of the file to get them to render, instead of utilizing them as css module partials like the other utilities.
+	* Issues with local state to immediately update the theme state. Currently there is a 500 error on page load due to the initial localstorage value not being set. Would love to come back to this.
+
+	* Design system. Utilizing design tokens to manage colors, spacing, and typography. Spacing and typography utilize fluid unit techniques.
+	* Multiple theme systems and variables. Light and dark themes exist in addition to the theme picker accent colors.
+
+	* Accessibility. Ensuring that the site is accessible and compliant with WCAG 2.1. And is navigable and usable for all.
 */
 
 export default function Home() {
@@ -63,7 +77,9 @@ export default function Home() {
 			<section data-section='dark' className={styles.section}>
 				<div className={styles.container}>dark here</div>
 			</section>
-			<section className={styles.section}>light section</section>
+			<section className={cn(styles.section, styles.accentEdge)}>
+				<div className={styles.container}>light here</div>
+			</section>
 			{/* <div className={styles.ctas}>
           <a
             className={styles.primary}

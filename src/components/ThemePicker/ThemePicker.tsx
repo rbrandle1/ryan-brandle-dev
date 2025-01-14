@@ -1,19 +1,10 @@
 'use client';
-import { FC } from 'react';
-import { Theme } from '@/types/themeTypes';
-import Image from 'next/image';
-// import { useTheme } from '@/components/ThemeProvider/ThemeProvider';
+import { useTheme } from '@/components/ThemeProvider/ThemeProvider';
+import IconDroplet from '@/components/Icons/IconDroplet';
 import styles from './ThemePicker.module.scss';
 
-interface ThemePickerProps {
-	theme: Theme;
-	onThemeChange: (theme: Theme) => void;
-}
-
-const ThemePicker: FC<ThemePickerProps> = ({ theme, onThemeChange }) => {
-	// const { theme, toggleTheme } = useTheme();
-	// update onChange to toggleTheme if using ThemeProvider
-	// onChange={() => toggleTheme('y')}
+const ThemePicker = () => {
+	const { theme, handleThemeChange } = useTheme();
 
 	return (
 		<fieldset className={styles.themePicker}>
@@ -28,7 +19,7 @@ const ThemePicker: FC<ThemePickerProps> = ({ theme, onThemeChange }) => {
 						name='theme'
 						value='m'
 						checked={theme === 'm'}
-						onChange={() => onThemeChange('m')}
+						onChange={() => handleThemeChange('m')}
 					/>
 				</label>
 				<label htmlFor='cyan-theme'>
@@ -40,7 +31,7 @@ const ThemePicker: FC<ThemePickerProps> = ({ theme, onThemeChange }) => {
 						name='theme'
 						value='c'
 						checked={theme === 'c'}
-						onChange={() => onThemeChange('c')}
+						onChange={() => handleThemeChange('c')}
 					/>
 				</label>
 				<label htmlFor='purple-theme'>
@@ -52,7 +43,7 @@ const ThemePicker: FC<ThemePickerProps> = ({ theme, onThemeChange }) => {
 						name='theme'
 						value='p'
 						checked={theme === 'p'}
-						onChange={() => onThemeChange('p')}
+						onChange={() => handleThemeChange('p')}
 					/>
 				</label>
 				<label htmlFor='yellow-theme'>
@@ -64,11 +55,13 @@ const ThemePicker: FC<ThemePickerProps> = ({ theme, onThemeChange }) => {
 						name='theme'
 						value='y'
 						checked={theme === 'y'}
-						onChange={() => onThemeChange('y')}
+						onChange={() => handleThemeChange('y')}
 					/>
 				</label>
 			</div>
-			<Image aria-hidden src='/droplet.svg' alt='Theme icon' width={19} height={24} />
+			<div className={styles.icon}>
+				<IconDroplet aria-hidden />
+			</div>
 		</fieldset>
 	);
 };
