@@ -12,6 +12,7 @@
 }
 
 .container {
+	//make this xl width
 	@include layout.max-width;
 
 	display: grid;
