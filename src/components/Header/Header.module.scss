@@ -101,6 +101,11 @@
 		justify-items: end;
 	}
 
+	// small hack to fix nav collision
+	@include viewport.between(sm, 799px) {
+		gap: initial;
+	}
+
 	@include viewport.breakpoint(md) {
 		--nav-vert-alignment-offset: 35px;
 	}

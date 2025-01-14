@@ -2,9 +2,7 @@ import cn from 'classnames';
 import styles from './home.module.scss';
 
 /* Todo: 
-* Finish footer - add correct links to social icons, add padding to the a tags, animate translate and color on hover.
-* fix nav collision at 768
-* check svg icons and accessibility. do they need a role? alt? run a accessibility audit.
+* Make a mixin or a variable for hover translate animations.
 * Make single div for vertical text under main section
 * Make section callout component
 * Make hero card component
@@ -12,6 +10,7 @@ import styles from './home.module.scss';
 * make scroll arrow a circular button... or a square, with accent background.
 * Try updating to line-height units: https://12daysofweb.dev/2024/css-margin-trim-line-height-units/
 * Make buttons view link
+* check svg icons and accessibility. do they need a role? alt? run a accessibility audit.
 * Read through all text, footer text, etc and finalize.
 * set up a new contact email
 
