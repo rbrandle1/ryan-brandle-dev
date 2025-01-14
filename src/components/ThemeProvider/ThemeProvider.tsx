@@ -2,10 +2,12 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 import { Theme } from '@/types/themeTypes';
 
-const ThemeContext = createContext<{
+interface ThemeContextType {
 	theme: Theme;
 	handleThemeChange: (newTheme: Theme) => void;
-}>({
+}
+
+const ThemeContext = createContext<ThemeContextType>({
 	theme: 'm',
 	handleThemeChange: () => {},
 });

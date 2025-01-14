@@ -12,6 +12,7 @@ import styles from './home.module.scss';
 * Make buttons view link
 * check svg icons and accessibility. do they need a role? alt? run a accessibility audit.
 * Read through all text, footer text, etc and finalize.
+* Get peer review
 * set up a new contact email
 
 * BUGS:
