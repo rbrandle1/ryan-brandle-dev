@@ -10,6 +10,8 @@ import styles from './home.module.scss';
 * make scroll arrow a circular button... or a square, with accent background.
 * Try updating to line-height units: https://12daysofweb.dev/2024/css-margin-trim-line-height-units/
 * Make buttons view link
+* Read through all text, footer text, etc and finalize.
+* set up a new contact email
 
 * BUGS:
 * in safari, underlines in link doesn't change on theme change. It does change when you hover over the link.
@@ -32,7 +34,7 @@ import styles from './home.module.scss';
 	* Animation keyframe rendering issues with Turbopack. I had to move the keyframes to the top of the file to get them to render, instead of utilizing them as css module partials like the other utilities.
 	* Issues with local state to immediately update the theme state. Currently there is a 500 error on page load due to the initial localstorage value not being set. Would love to come back to this.
 
-	* Design system. Utilizing design tokens to manage colors, spacing, and typography.
+	* Design system. Utilizing design tokens to manage colors, spacing, and typography. Spacing and typography utilize fluid unit techniques.
 	* Multiple theme systems and variables. Light and dark themes exist in addition to the theme picker accent colors.
 
 	* Accessibility. Ensuring that the site is accessible and compliant with WCAG 2.1. And is navigable and usable for all.

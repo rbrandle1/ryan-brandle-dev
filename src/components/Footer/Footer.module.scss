@@ -1,29 +1,76 @@
 @use '@/styles/utils/layout';
 @use '@/styles/utils/element';
 @use '@/styles/utils/viewport';
+@use '@/styles/utils/typography';
 
 .footer {
-	@include layout.max-width(100%);
-	@include element.accent-edge;
+	background-color: var(--surface-neutral);
+	padding-top: var(--space-4xl);
+	padding-bottom: var(--space-lg);
 
-	& {
-		display: flex;
-		justify-content: space-between;
+	@include element.accent-edge;
+}
+
+.container {
+	@include layout.max-width;
+
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	grid-template-rows: repeat(2, auto);
+	align-items: center;
+	gap: var(--space-2xl);
+	grid-template-areas:
+		'logo contact .'
+		'. copyright social';
+}
+
+.contactContainer {
+	grid-area: contact;
+	max-width: 45ch;
+
+	h3 {
+		@include typography.headline(sm);
+		margin-bottom: var(--space-base);
+	}
+	a {
+		@include typography.link;
 	}
 }
 
-.logoContainer {
-	display: flex;
-	align-items: start;
-	padding-top: var(--space-md);
+.copyContainer {
+	@include typography.p(sm);
+	grid-area: copyright;
+}
 
-	@include viewport.breakpoint(md) {
-		padding-top: var(--space-lg);
-	}
+.socialContainer {
+	grid-area: social;
+}
+
+.logoContainer {
+	grid-area: logo;
+	position: relative;
+	width: 160px;
+	height: 160px;
+}
+
+.logoCircle {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	fill: var(--text-tertiary);
+	transform-origin: center;
+	animation: rotate 120s linear infinite;
 }
 
 .logoIcon {
 	--logo-size: 68px;
+
+	position: absolute;
+	top: calc(50% - 1px);
+	left: calc(50% + 3px);
+	transform: translate(-50%, -50%);
 
 	width: var(--logo-size);
 	height: var(--logo-size);

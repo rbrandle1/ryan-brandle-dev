@@ -13,3 +13,9 @@
 		transform: translateY(-6px);
 	}
 }
+
+@keyframes rotate {
+	to {
+		transform: rotateZ(360deg);
+	}
+}
