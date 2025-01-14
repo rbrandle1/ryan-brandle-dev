@@ -1,6 +1,9 @@
 import Link from 'next/link';
 import LogoSwitcher from '@/components/LogoSwitcher/LogoSwitcher';
 import IconCircleText from '@/components/Icons/IconTextCircle';
+import IconLinkedIn from '@/components/Icons/IconLinkedIn';
+import IconCodePen from '@/components/Icons/IconCodePen';
+import IconGithub from '@/components/Icons/IconGithub';
 import styles from './Footer.module.scss';
 
 const Footer = () => {
@@ -28,10 +31,15 @@ const Footer = () => {
 					<p>100% designed & developed by Ryan Brandle &copy; 2025</p>
 				</div>
 				<div className={styles.socialContainer}>
-					<span>i</span>
-					<span>i</span>
-					<span>i</span>
-					<span>i</span>
+					<span className={styles.icon}>
+						<IconGithub />
+					</span>
+					<span className={styles.icon}>
+						<IconCodePen />
+					</span>
+					<span className={styles.icon}>
+						<IconLinkedIn />
+					</span>
 				</div>
 			</div>
 		</footer>

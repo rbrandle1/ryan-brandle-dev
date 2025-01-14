@@ -3,6 +3,7 @@ import styles from './home.module.scss';
 
 /* Todo: 
 * Finish footer
+* check svg icons and accessibility. do they need a role? alt? run a accessibility audit.
 * Make single div for vertical text under main section
 * Make section callout component
 * Make hero card component

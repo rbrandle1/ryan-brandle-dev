@@ -1,12 +1,12 @@
 'use client';
 import cn from 'classnames';
-import { FC, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import IconLogoM from '@/components/Icons/IconLogoM';
 import IconLogoC from '@/components/Icons/IconLogoC';
 import IconLogoY from '@/components/Icons/IconLogoY';
 import IconLogoP from '@/components/Icons/IconLogoP';
+import { useTheme } from '@/components/ThemeProvider/ThemeProvider';
 import styles from './LogoSwitcher.module.scss';
-import { useTheme } from '../ThemeProvider/ThemeProvider';
 
 const LogoSwitcher = () => {
 	const { theme } = useTheme();

@@ -1,7 +1,7 @@
 'use client';
-import Image from 'next/image';
+import { useTheme } from '@/components/ThemeProvider/ThemeProvider';
+import IconDroplet from '@/components/Icons/IconDroplet';
 import styles from './ThemePicker.module.scss';
-import { useTheme } from '../ThemeProvider/ThemeProvider';
 
 const ThemePicker = () => {
 	const { theme, handleThemeChange } = useTheme();
@@ -59,7 +59,9 @@ const ThemePicker = () => {
 					/>
 				</label>
 			</div>
-			<Image aria-hidden src='/droplet.svg' alt='Theme icon' width={19} height={24} />
+			<div className={styles.icon}>
+				<IconDroplet aria-hidden />
+			</div>
 		</fieldset>
 	);
 };

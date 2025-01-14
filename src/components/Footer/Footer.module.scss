@@ -44,6 +44,7 @@
 
 .socialContainer {
 	grid-area: social;
+	display: flex;
 }
 
 .logoContainer {
@@ -74,4 +75,17 @@
 
 	width: var(--logo-size);
 	height: var(--logo-size);
+}
+
+.icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: var(--text-md);
+	height: var(--text-md);
+	fill: var(--text-tertiary);
+
+	@include viewport.has-hover {
+		fill: var(--text-primary);
+	}
 }
