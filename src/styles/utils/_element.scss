@@ -61,7 +61,7 @@
 		transition: background-color 250ms ease-in 50ms;
 
 		@include viewport.breakpoint(2xs) {
-			width: clamp(var(--space-2xs), 1vw, var(--space-sm));
+			width: clamp(var(--space-2xs), 1dvw, var(--space-sm));
 		}
 	}
 }

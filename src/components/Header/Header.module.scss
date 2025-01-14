@@ -83,7 +83,7 @@
 }
 
 .navContainer {
-	--nav-item-spacing: clamp(var(--space-sm), 1.5vw, var(--space-md));
+	--nav-item-spacing: clamp(var(--space-sm), 1.5dvw, var(--space-md));
 	--nav-vert-alignment-offset: 14px;
 
 	position: relative;

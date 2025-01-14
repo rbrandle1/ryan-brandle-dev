@@ -23,12 +23,12 @@ const Footer = () => {
 				<div className={styles.contactContainer}>
 					<h3>Contact</h3>
 					<p>
-						I’m always open to new opportunities so please don’t hesitate to{' '}
-						<a href='mailto:hello@example.com'>say hi anytime!</a>
+						I’m always open to new opportunities so please don’t&nbsp;hesitate to{' '}
+						<a href='mailto:hello@example.com'>say&nbsp;hi&nbsp;anytime!</a>
 					</p>
 				</div>
 				<div className={styles.copyContainer}>
-					<p>100% designed & developed by Ryan Brandle &copy; 2025</p>
+					<p>100% designed &amp;&nbsp;developed by Ryan&nbsp;Brandle &copy;&nbsp;2025</p>
 				</div>
 				<div className={styles.socialContainer}>
 					<a className={styles.icon} href='https://github.com/rbrandle1' target='_blank' rel='noopener noreferrer'>

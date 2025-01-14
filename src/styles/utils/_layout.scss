@@ -6,6 +6,7 @@
 
 @use './element';
 @use 'sass:list';
+@use 'sass:map';
 
 $viewport-sizes: (
 	full: 100%,
@@ -19,15 +20,15 @@ $viewport-sizes: (
 
 // @include layout.max-width(xl);
 @mixin max-width($viewport: lg) {
-	$valid-sizes: map-keys($viewport-sizes);
+	$valid-sizes: map.keys($viewport-sizes);
 
 	@if not list.index($valid-sizes, $viewport) {
 		@error '"#{$viewport}" is not a valid size. Please use one of these values: #{$valid-sizes}';
 	}
 
 	margin-inline: auto;
-	padding: 0 clamp(var(--space-base), 4vw, var(--space-lg));
-	width: min(#{map-get($viewport-sizes, $viewport)}, 100%);
+	padding: 0 clamp(var(--space-base), 4dvw, var(--space-lg));
+	width: min(#{map.get($viewport-sizes, $viewport)}, 100%);
 }
 
 @mixin viewport-width {
