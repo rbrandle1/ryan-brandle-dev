@@ -36,6 +36,11 @@
 
 	width: var(--logo-size);
 	height: var(--logo-size);
+	transition: transform var(--duration-sm) ease-out;
+
+	@include viewport.has-hover {
+		transform: translateY(-2px);
+	}
 }
 
 .logoText {

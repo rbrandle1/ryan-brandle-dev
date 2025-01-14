@@ -6,7 +6,7 @@
 .footer {
 	background-color: var(--surface-neutral);
 	padding-top: var(--space-4xl);
-	padding-bottom: var(--space-lg);
+	padding-bottom: var(--space-base);
 
 	@include element.accent-edge;
 }
@@ -41,6 +41,7 @@
 .copyContainer {
 	@include typography.p(sm);
 	grid-area: copyright;
+	color: var(--text-tertiary);
 }
 
 .socialContainer {
@@ -74,21 +75,30 @@
 	position: absolute;
 	top: calc(50% - 1px);
 	left: calc(50% + 3px);
-	transform: translate(-50%, -50%);
-
 	width: var(--logo-size);
 	height: var(--logo-size);
+	transform: translate(-50%, -50%);
+	transition: transform var(--duration-sm) ease-out;
+
+	@include viewport.has-hover {
+		transform: translate(-50%, -54%);
+	}
 }
 
 .icon {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: var(--text-md);
+	padding: var(--space-sm);
 	fill: var(--text-tertiary);
-	margin: 0 var(--space-sm);
+	transition: fill var(--duration-sm) ease-out, transform var(--duration-sm) ease-out;
 
-	@include viewport.has-hover {
+	@include viewport.has-hover(':hover', ':focus-visible') {
 		fill: var(--text-primary);
+		transform: translateY(-2px);
+	}
+
+	svg {
+		--svg-size: var(--text-md);
+
+		width: var(--svg-size);
+		height: var(--svg-size);
 	}
 }
