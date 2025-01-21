@@ -115,6 +115,35 @@
 	animation: float 2.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
 }
 
+.vertSection {
+	background-color: var(--surface-primary);
+	position: relative;
+	overflow: hidden;
+
+	&::before {
+		content: '';
+		display: block;
+		padding-bottom: clamp(210px, 34dvw, 450px);
+	}
+}
+
+.vertText {
+	@include typography.display(lg);
+
+	position: absolute;
+	top: -16%;
+	left: 51.5%;
+	transform: translateX(-50%);
+	writing-mode: vertical-rl;
+	margin-block: auto;
+	font-size: clamp(13.41rem, 21dvw, 29.23rem); // optical override for vertical text style alignment.
+	user-select: none;
+
+	@include viewport.breakpoint(xs) {
+		left: 51%;
+	}
+}
+
 // .main code {
 // 	font-family: inherit;
 // 	background: var(--gray-alpha-100);

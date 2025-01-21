@@ -74,6 +74,15 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
+			<section data-section='dark' className={styles.vertSection}>
+				<div className={styles.vertText}>
+					<div>UX</div>
+					<div>DES</div>
+					<div>UI</div>
+					<div>DEV</div>
+					<div>UX</div>
+				</div>
+			</section>
 			<section data-section='dark' className={styles.section}>
 				<div className={styles.container}>dark here</div>
 			</section>
