@@ -123,7 +123,7 @@
 	&::before {
 		content: '';
 		display: block;
-		padding-bottom: clamp(210px, 34dvw, 450px);
+		padding-bottom: clamp(187px, 29dvw, 414px);
 	}
 }
 
@@ -131,11 +131,10 @@
 	@include typography.display(lg);
 
 	position: absolute;
-	top: -16%;
+	top: -17%;
 	left: 51.5%;
 	transform: translateX(-50%);
 	writing-mode: vertical-rl;
-	margin-block: auto;
 	font-size: clamp(13.41rem, 21dvw, 29.23rem); // optical override for vertical text style alignment.
 	user-select: none;
 

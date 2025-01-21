@@ -1,8 +1,8 @@
 import cn from 'classnames';
+import Callout from '@/components/Callout/Callout';
 import styles from './home.module.scss';
 
 /* Todo: 
-* Make single div for vertical text under main section
 * Make section callout component
 * Make hero card component
 * Make small card component
@@ -84,7 +84,9 @@ export default function Home() {
 				</div>
 			</section>
 			<section data-section='dark' className={styles.section}>
-				<div className={styles.container}>dark here</div>
+				<div className={styles.container}>
+					<Callout />
+				</div>
 			</section>
 			<section className={cn(styles.section, styles.accentEdge)}>
 				<div className={styles.container}>light here</div>

@@ -1,0 +1,25 @@
+@use '@/styles/utils/typography';
+
+.callOut {
+	display: grid;
+	place-items: center;
+	gap: var(--space-lg);
+	text-align: center;
+}
+
+.icon {
+	width: var(--text-2xl);
+
+	svg {
+		fill: currentColor;
+	}
+}
+
+.title {
+	@include typography.callout(lg);
+}
+
+.body {
+	@include typography.p(lg);
+	max-width: 52ch;
+}
