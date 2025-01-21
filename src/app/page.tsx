@@ -2,7 +2,6 @@ import cn from 'classnames';
 import styles from './home.module.scss';
 
 /* Todo: 
-* Make a mixin or a variable for hover translate animations.
 * Make single div for vertical text under main section
 * Make section callout component
 * Make hero card component
@@ -23,8 +22,9 @@ import styles from './home.module.scss';
 * Solve server 500 error on page load. Try using the window object to check if it's loaded in the ThemePicker useEffect and maybe use an empty string as the default theme? This would likely create a FOUC though. Try refactoring with a ThemeProvider component to manage the theme state.
 * Maybe put my header in a top level component so it doesn't reload disappear and come back on every pg load? nested layout?
 
-* FUTURE EXPLORATION:
-	* Incorporate purple as a gradient to pink?
+* FUTURE CLEANUP AND EXPLORATION:
+* Make a mixin or a variable for hover translate animations.
+* Incorporate purple as a gradient to pink?
 	* have logo present on page load.
 	
 	* Set typography utils and classes... explore more modern ways to do this? has:, etc?
