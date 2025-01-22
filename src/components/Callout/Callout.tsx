@@ -1,16 +1,26 @@
-import IconCodePen from '@/components/Icons/IconCodePen';
 import styles from './Callout.module.scss';
+import setInlineStyles from '@/helpers/functions';
 
-const Callout = () => {
+interface CalloutProps {
+	children?: React.ReactNode;
+	iconAccent?: boolean;
+	title: string;
+	titleAccent?: boolean;
+	body?: string;
+}
+
+const Callout = ({ children, title, body, iconAccent, titleAccent }: CalloutProps) => {
 	return (
-		<div className={styles.callOut}>
-			<div className={styles.icon}>
-				<IconCodePen />
-			</div>
-			<div className={styles.title}>I make modular, flexible systems that are easy to use.</div>
-			<div className={styles.body}>
-				My approach is to create a system that is modular and flexible, so that it can be used in a variety of ways.
-			</div>
+		<div
+			className={styles.callOut}
+			style={setInlineStyles({
+				'--icon-color': iconAccent ? 'var(--icon-accent)' : null,
+				'--title-color': titleAccent ? 'var(--text-accent)' : null,
+			})}
+		>
+			{children ? <div className={styles.icon}>{children}</div> : null}
+			<div className={styles.title}>{title}</div>
+			{body ? <div className={styles.body}>{body}</div> : null}
 		</div>
 	);
 };

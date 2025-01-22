@@ -1,9 +1,10 @@
 import cn from 'classnames';
 import Callout from '@/components/Callout/Callout';
 import styles from './home.module.scss';
+import IconCodePen from '@/components/Icons/IconCodePen';
 
 /* Todo: 
-* Make section callout component
+* Detach all "dark" styles from .section. This will allow multiple sections to be nested under a single dark section, allowing for gradient backgrounds that span multiple sub sections.
 * Make hero card component
 * Make small card component
 * make scroll arrow a circular button... or a square, with accent background.
@@ -33,7 +34,7 @@ import styles from './home.module.scss';
 	
 * Talking points, troubleshooting, etc, with this project:
 	* State management. I had to decide whether prop drilling or using react context was the best approach. I went with context because I came to understand how multiple components could be affected by the theme state, and the best way to manage it was to avoid prop drilling.
-	* Animation keyframe rendering issues with Turbopack. I had to move the keyframes to the top of the file to get them to render, instead of utilizing them as css module partials like the other utilities. Also, general challanges getting animations to work smoothly in a responsive way to themes changing.
+	* Animation keyframe rendering issues with Turbopack. I had to move the keyframes to the top of the file to get them to render, instead of utilizing them as css module partials like the other utilities. Also, general challenges getting animations to work smoothly in a responsive way to themes changing.
 	* Issues with local state to immediately update the theme state. Currently there is a 500 error on page load due to the initial localstorage value not being set. Would love to come back to this.
 
 	* Design system. Utilizing design tokens to manage colors, spacing, and typography. Spacing and typography utilize fluid unit techniques.
@@ -85,7 +86,9 @@ export default function Home() {
 			</section>
 			<section data-section='dark' className={styles.section}>
 				<div className={styles.container}>
-					<Callout />
+					<Callout title='I make modular, flexible systems that are easy to use.' iconAccent>
+						<IconCodePen />
+					</Callout>
 				</div>
 			</section>
 			<section className={cn(styles.section, styles.accentEdge)}>

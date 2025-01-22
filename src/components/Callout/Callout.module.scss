@@ -11,15 +11,17 @@
 	width: var(--text-2xl);
 
 	svg {
-		fill: currentColor;
+		fill: var(--icon-color, currentColor);
 	}
 }
 
 .title {
 	@include typography.callout(lg);
+	color: var(--title-color, var(--text-primary));
 }
 
 .body {
 	@include typography.p(lg);
+	color: var(--text-tertiary);
 	max-width: 52ch;
 }
