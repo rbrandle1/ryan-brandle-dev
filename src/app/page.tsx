@@ -11,6 +11,7 @@ import IconCodePen from '@/components/Icons/IconCodePen';
 * Make buttons view link
 * Try updating to line-height units: https://12daysofweb.dev/2024/css-margin-trim-line-height-units/
 * check svg icons and accessibility. do they need a role? alt? run a accessibility audit.
+* make favicon
 * Read through all text, footer text, etc and finalize.
 * Get peer review
 * set up a new contact email
