@@ -5,6 +5,7 @@ import IconCodePen from '@/components/Icons/IconCodePen';
 
 /* Todo: 
 * Detach all "dark" styles from .section. This will allow multiple sections to be nested under a single dark section, allowing for gradient backgrounds that span multiple sub sections.
+* Animate vertical text on scroll... using intersection observer?
 * Make hero card component
 * Make small card component
 * make scroll arrow a circular button... or a square, with accent background.
@@ -32,15 +33,21 @@ import IconCodePen from '@/components/Icons/IconCodePen';
   * Add shadows/elevation, gradients, animation timing and others that don't exist in figma
   * Try setting base space from 1.6 to 1.8. Also, might need to adjust the real big spaces % max to be larger for a more noticeable difference. Can also run the calculation to a raw value to enhance performance.
 	
-* Talking points, troubleshooting, etc, with this project:
+* TALKING POINTS, TROUBLESHOOTING, ETC, WITH THIS PROJECT:
 	* State management. I had to decide whether prop drilling or using react context was the best approach. I went with context because I came to understand how multiple components could be affected by the theme state, and the best way to manage it was to avoid prop drilling.
+	* 
 	* Animation keyframe rendering issues with Turbopack. I had to move the keyframes to the top of the file to get them to render, instead of utilizing them as css module partials like the other utilities. Also, general challenges getting animations to work smoothly in a responsive way to themes changing.
+	* 
 	* Issues with local state to immediately update the theme state. Currently there is a 500 error on page load due to the initial localstorage value not being set. Would love to come back to this.
-
+	* 
 	* Design system. Utilizing design tokens to manage colors, spacing, and typography. Spacing and typography utilize fluid unit techniques.
 	* Multiple theme systems and variables. Light and dark themes exist in addition to the theme picker accent colors.
-
+	* 
 	* Accessibility. Ensuring that the site is accessible and compliant with WCAG 2.1. And is navigable and usable for all.
+	* 
+	* Responsive vertical text was a challenge and there are likely better ways to do this. But I took a very granular and specific approach for this instance to this to make sure it works. Don't consider this a modular solution.
+	* 
+	* Utilizing inline css variables and ternary operators to manage various styles on component. Instead of using a class name to manage styles.
 */
 
 export default function Home() {
