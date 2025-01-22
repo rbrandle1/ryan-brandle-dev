@@ -36,14 +36,11 @@
 		transform: translateX(-50%);
 		width: var(--gradient-width);
 		height: var(--gradient-height);
-		// background-color: red;
 		background-color: var(--p-color-gray-900);
 		border-radius: 50%;
 		filter: blur(var(--gradient-blur));
 
 		@include viewport.breakpoint(xs) {
-			// --gradient-height: calc(var(--gradient-width) / 2);
-			// --gradient-width: 130dvh;
 			--gradient-location: calc(0% - var(--gradient-height) / 1.3);
 			--gradient-blur: 80px;
 		}
