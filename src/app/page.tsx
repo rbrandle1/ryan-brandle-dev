@@ -4,13 +4,12 @@ import styles from './home.module.scss';
 import IconCodePen from '@/components/Icons/IconCodePen';
 
 /* Todo: 
-* Detach all "dark" styles from .section. This will allow multiple sections to be nested under a single dark section, allowing for gradient backgrounds that span multiple sub sections.
-* Animate vertical text on scroll... using intersection observer?
-* Make hero card component
-* Make small card component
+* Make Featured component
+* Make ProjectCard component
 * make scroll arrow a circular button... or a square, with accent background.
-* Try updating to line-height units: https://12daysofweb.dev/2024/css-margin-trim-line-height-units/
+* Animate vertical text on scroll... using intersection observer?
 * Make buttons view link
+* Try updating to line-height units: https://12daysofweb.dev/2024/css-margin-trim-line-height-units/
 * check svg icons and accessibility. do they need a role? alt? run a accessibility audit.
 * Read through all text, footer text, etc and finalize.
 * Get peer review
