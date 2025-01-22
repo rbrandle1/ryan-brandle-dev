@@ -82,21 +82,23 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
-			<section data-section='dark' className={styles.vertSection}>
-				<div className={styles.vertText}>
-					<div>UX</div>
-					<div>DES</div>
-					<div>UI</div>
-					<div>DEV</div>
-					<div>UX</div>
-				</div>
-			</section>
-			<section data-section='dark' className={styles.section}>
-				<div className={styles.container}>
-					<Callout title='I make modular, flexible systems that are easy to use.' iconAccent>
-						<IconCodePen />
-					</Callout>
-				</div>
+			<section className={styles.multiSectionGradient} data-section='dark'>
+				<section className={styles.vertSection}>
+					<div className={styles.vertText}>
+						<div>UX</div>
+						<div>DES</div>
+						<div>UI</div>
+						<div>DEV</div>
+						<div>UX</div>
+					</div>
+				</section>
+				<section className={styles.section}>
+					<div className={styles.container}>
+						<Callout title='I make modular, flexible systems that are easy to use.' iconAccent>
+							<IconCodePen />
+						</Callout>
+					</div>
+				</section>
 			</section>
 			<section className={cn(styles.section, styles.accentEdge)}>
 				<div className={styles.container}>light here</div>

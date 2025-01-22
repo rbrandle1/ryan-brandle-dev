@@ -18,6 +18,55 @@
 	padding-bottom: var(--space-8xl);
 }
 
+.multiSectionGradient {
+	background-color: var(--surface-primary);
+	position: relative;
+	overflow: hidden;
+
+	&::before {
+		--gradient-width: 200dvw;
+		--gradient-height: var(--gradient-width);
+		--gradient-location: calc(0% - var(--gradient-height) / 1.5);
+		--gradient-blur: 60px;
+
+		content: '';
+		position: absolute;
+		top: var(--gradient-location);
+		left: 50%;
+		transform: translateX(-50%);
+		width: var(--gradient-width);
+		height: var(--gradient-height);
+		// background-color: red;
+		background-color: var(--p-color-gray-900);
+		border-radius: 50%;
+		filter: blur(var(--gradient-blur));
+
+		@include viewport.breakpoint(xs) {
+			// --gradient-height: calc(var(--gradient-width) / 2);
+			// --gradient-width: 130dvh;
+			--gradient-location: calc(0% - var(--gradient-height) / 1.3);
+			--gradient-blur: 80px;
+		}
+
+		@include viewport.breakpoint(sm) {
+			--gradient-width: 130dvw;
+			--gradient-height: calc(var(--gradient-width) / 2);
+			--gradient-location: calc(0% - var(--gradient-height) / 2.5);
+			--gradient-blur: 100px;
+		}
+
+		@include viewport.breakpoint(xl) {
+			--gradient-location: calc(0% - var(--gradient-height) / 1.5);
+			--gradient-blur: 130px;
+		}
+	}
+
+	.section {
+		position: relative;
+		background-color: transparent;
+	}
+}
+
 .container {
 	@include layout.max-width;
 
@@ -116,7 +165,7 @@
 }
 
 .vertSection {
-	background-color: var(--surface-primary);
+	// background-color: var(--surface-primary);
 	position: relative;
 	overflow: hidden;
 
@@ -136,6 +185,7 @@
 	transform: translateX(-50%);
 	writing-mode: vertical-rl;
 	font-size: clamp(13.41rem, 21dvw, 29.23rem); // optical override for vertical text style alignment.
+	text-shadow: 2px -2px 4px var(--text-secondary);
 	user-select: none;
 
 	@include viewport.breakpoint(xs) {
