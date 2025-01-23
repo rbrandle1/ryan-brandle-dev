@@ -8,11 +8,15 @@
 	--saturation: 0;
 
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr;
 	gap: var(--space-lg);
 
 	@include viewport.has-hover(':hover', ':focus-within') {
 		--saturation: 1;
+	}
+
+	@include viewport.breakpoint(sm) {
+		grid-template-columns: 1fr 1fr;
 	}
 
 	@include viewport.breakpoint(lg) {
@@ -27,15 +31,25 @@
 		margin-top: var(--space-sm);
 		color: var(--text-tertiary);
 	}
+
+	@include viewport.breakpoint(sm) {
+		&.imageRight {
+			order: 2;
+		}
+	}
 }
 
 .image {
-	@include element.aspect-ratio(math.div(2, 3));
+	@include element.aspect-ratio(math.div(3, 2));
 
 	img {
 		border-radius: var(--radius-default);
 		transition: filter 600ms ease-out;
 		filter: saturate(var(--saturation));
+	}
+
+	@include viewport.breakpoint(sm) {
+		@include element.aspect-ratio(math.div(2, 3));
 	}
 }
 

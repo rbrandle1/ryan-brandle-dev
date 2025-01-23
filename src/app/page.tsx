@@ -108,6 +108,8 @@ export default function Home() {
 				<section className={styles.section}>
 					<div className={styles.container}>
 						<FeaturedProject />
+						<FeaturedProject imageRight />
+						<FeaturedProject />
 					</div>
 				</section>
 			</section>

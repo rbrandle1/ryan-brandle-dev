@@ -1,12 +1,17 @@
+import cn from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 import IconMeta from '@/components/Icons/IconMeta';
 import styles from './FeaturedProject.module.scss';
 
-const FeaturedProject = () => {
+interface FeaturedProjectProps {
+	imageRight?: boolean;
+}
+
+const FeaturedProject = ({ imageRight }: FeaturedProjectProps) => {
 	return (
 		<article className={styles.article}>
-			<figure className={styles.imageContainer}>
+			<figure className={cn(styles.imageContainer, imageRight && styles.imageRight)}>
 				<div className={styles.image}>
 					<Link href='/style'>
 						<Image
