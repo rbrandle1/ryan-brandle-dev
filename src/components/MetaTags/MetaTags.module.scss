@@ -1,0 +1,31 @@
+@use '@/styles/utils/typography';
+@use '@/styles/utils/viewport';
+
+.meta {
+	@include typography.p(sm);
+
+	display: flex;
+	margin-top: var(--space-sm);
+}
+
+.iconContainer {
+	margin-top: var(--space-2xs);
+	padding-right: var(--space-xs);
+	flex-shrink: 0;
+
+	@include viewport.breakpoint(1300px) {
+		margin-top: calc(var(--space-2xs) + 1px); // optically alignment icon
+	}
+}
+
+.metaList {
+	display: flex;
+	flex-flow: wrap;
+}
+
+.bullet {
+	--bullet-space: var(--space-2xs);
+
+	padding-right: var(--bullet-space);
+	padding-left: var(--bullet-space);
+}

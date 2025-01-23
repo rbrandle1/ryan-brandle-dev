@@ -30,11 +30,11 @@
 	top: calc(var(--space-lg) / -1);
 	width: var(--text-lg);
 
-	&:not(.imageRight &) {
+	&:not(.imgRight &) {
 		left: calc(var(--space-lg) / -1);
 	}
 
-	.imageRight & {
+	.imgRight & {
 		right: calc(var(--space-lg) / -1);
 	}
 
@@ -49,7 +49,7 @@
 	@include viewport.breakpoint(sm) {
 		margin-top: var(--space-2xl);
 
-		&.imageRight {
+		&.imgRight {
 			order: 2;
 		}
 	}
@@ -73,6 +73,10 @@
 	@include viewport.breakpoint(sm) {
 		aspect-ratio: 2 / 3;
 	}
+
+	// @include viewport.breakpoint(xl) {
+	// 	aspect-ratio: 9 / 16;
+	// }
 
 	img {
 		object-fit: cover;
@@ -103,23 +107,6 @@
 
 .title {
 	@include typography.headline;
-}
-
-.meta {
-	@include typography.p(sm);
-
-	display: flex;
-	margin-top: var(--space-sm);
-}
-
-.iconContainer {
-	margin-top: var(--space-2xs);
-	padding-right: var(--space-xs);
-	flex-shrink: 0;
-
-	@include viewport.breakpoint(1300px) {
-		margin-top: calc(var(--space-2xs) + 1px); // optically alignment
-	}
 }
 
 .button {

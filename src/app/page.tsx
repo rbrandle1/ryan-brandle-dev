@@ -1,11 +1,14 @@
 import cn from 'classnames';
 import Callout from '@/components/Callout/Callout';
-import styles from './home.module.scss';
 import IconCodePen from '@/components/Icons/IconCodePen';
 import FeaturedProject from '@/components/FeaturedProject/FeaturedProject';
+import IconLogoInsp from '@/components/Icons/IconLogoInsp';
+import styles from './home.module.scss';
 
 /* Todo: 
 * Componentize Featured component
+* Create a boilerplate ts file for each page to include commonly used things like project title, meta tags, etc.
+* update aspect to 9/16 on very large screens?
 * add drop shadow to logos in featured project?
 * update crop icon to replace LinkedIn icon
 * Figure out image saturation on scroll instead of hover. Figure out mobile.
@@ -110,9 +113,29 @@ export default function Home() {
 				</section>
 				<section className={styles.section}>
 					<div className={cn(styles.container, styles.featuredContainer)}>
-						<FeaturedProject />
-						<FeaturedProject imageRight />
-						<FeaturedProject />
+						<FeaturedProject
+							caption='Credit: Inspirato, Unsplash/Ishan @seefromthesky'
+							imgSrc='https://images.unsplash.com/photo-1484821582734-6c6c9f99a672'
+							imgAlt='Luxury travel website'
+							logo={<IconLogoInsp />}
+							title='The Inspirato Design System'
+							metaTags={['Branding', 'UX/UI', 'HTML', 'CSS', 'JS', 'React', 'Storybook']}
+							description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+							buttonText='Explore'
+							href='/style'
+						/>
+						<FeaturedProject
+							caption='Credit: Innovative Business Solutions'
+							imgSrc='https://images.unsplash.com/photo-1560461396-ec0ef7bb29dd'
+							imgAlt='Brand and token system'
+							imgRight
+							title='CableFinder Rebrand & Token System'
+							metaTags={['Branding', 'UX/UI', 'Figma', 'HTML', 'CSS']}
+							description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+							buttonText='Explore'
+							href='/style'
+						/>
+						{/* <FeaturedProject /> */}
 					</div>
 				</section>
 			</section>

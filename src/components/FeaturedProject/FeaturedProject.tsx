@@ -1,55 +1,58 @@
 import cn from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
-import IconMeta from '@/components/Icons/IconMeta';
 import IconLinkedIn from '@/components/Icons/IconLinkedIn';
 import IconLogoInsp from '@/components/Icons/IconLogoInsp';
+import MetaTags from '@/components/MetaTags/MetaTags';
 import styles from './FeaturedProject.module.scss';
 
 interface FeaturedProjectProps {
-	imageRight?: boolean;
+	caption?: string;
+	imgRight?: boolean;
+	imgSrc: string;
+	imgAlt: string;
+	logo?: React.ReactNode;
+	title: string;
+	metaTags: string[];
+	description: string;
+	buttonText: string;
+	href: string;
 }
 
-const FeaturedProject = ({ imageRight }: FeaturedProjectProps) => {
+const FeaturedProject = ({
+	caption,
+	imgRight,
+	imgSrc,
+	imgAlt,
+	logo,
+	title,
+	metaTags,
+	description,
+	buttonText,
+	href,
+}: FeaturedProjectProps) => {
 	return (
 		<article className={styles.article}>
-			<figure className={cn(styles.imageContainer, imageRight && styles.imageRight)}>
+			<figure className={cn(styles.imageContainer, imgRight && styles.imgRight)}>
 				<div className={styles.cropIconContainer}>
 					<IconLinkedIn />
 				</div>
-				<Link href='/style'>
+				<Link href={href}>
 					<div className={styles.image}>
-						<div className={styles.logoContainer}>
-							<IconLogoInsp />
-						</div>
-						<Image
-							src='https://images.unsplash.com/photo-1484821582734-6c6c9f99a672'
-							alt='Example project image'
-							layout='fill'
-							sizes='(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 33vw'
-						/>
+						{logo ? <div className={styles.logoContainer}>{logo}</div> : null}
+						<Image src={imgSrc} alt={imgAlt} fill sizes='(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 33vw' />
 					</div>
 				</Link>
-				<figcaption>Credit: Inspirato, Unsplash</figcaption>
+				{caption ? <figcaption>{caption}</figcaption> : null}
 			</figure>
 			<div className={styles.textContainer}>
 				<header>
-					<h2 className={styles.title}>The Inspirato Design System</h2>
-					<div className={styles.meta}>
-						<div className={styles.iconContainer}>
-							<IconMeta />
-						</div>
-						<div className={styles.metaText}>
-							Branding&nbsp;• UX/UI&nbsp;• HTML&nbsp;• CSS&nbsp;• JS&nbsp;• React&nbsp;• Storybook
-						</div>
-					</div>
+					<h2 className={styles.title}>{title}</h2>
+					<MetaTags items={metaTags} />
 				</header>
-				<p className={styles.description}>
-					Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-					printer took a galley of type and scrambled it to make a type specimen book.
-				</p>
-				<Link className={styles.button} href='/style'>
-					button
+				<p className={styles.description}>{description}</p>
+				<Link className={styles.button} href={href}>
+					{buttonText}
 				</Link>
 			</div>
 		</article>
