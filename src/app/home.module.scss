@@ -70,6 +70,18 @@
 	> * + * {
 		margin-top: var(--flow-space);
 	}
+
+	&.featuredContainer {
+		--flow-space: calc(var(--space-4xl) * 2);
+
+		@include viewport.breakpoint(md) {
+			--flow-space: calc(var(--space-4xl) * 3);
+		}
+
+		@include viewport.breakpoint(xl) {
+			--flow-space: calc(var(--space-4xl) * 4);
+		}
+	}
 }
 
 .heroSection {

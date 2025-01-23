@@ -5,13 +5,16 @@ import IconCodePen from '@/components/Icons/IconCodePen';
 import FeaturedProject from '@/components/FeaturedProject/FeaturedProject';
 
 /* Todo: 
-* Make Featured component
+* Componentize Featured component
+* add drop shadow to logos in featured project?
+* update crop icon to replace LinkedIn icon
 * Figure out image saturation on scroll instead of hover. Figure out mobile.
-* Optimize image component for performance. Add sizes, etc.
+* How to make & in featured title work if is passed in as a prop.
 * Make ProjectCard component
 * make scroll arrow a circular button... or a square, with accent background.
 * Animate vertical text on scroll... using intersection observer?
 * Make buttons view link
+* Add backup words for each FeaturedProject
 * Try updating to line-height units: https://12daysofweb.dev/2024/css-margin-trim-line-height-units/
 * check svg icons and accessibility. do they need a role? alt? run a accessibility audit.
 * make favicon
@@ -106,7 +109,7 @@ export default function Home() {
 					</div>
 				</section>
 				<section className={styles.section}>
-					<div className={styles.container}>
+					<div className={cn(styles.container, styles.featuredContainer)}>
 						<FeaturedProject />
 						<FeaturedProject imageRight />
 						<FeaturedProject />

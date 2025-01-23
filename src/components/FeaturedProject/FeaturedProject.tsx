@@ -2,6 +2,8 @@ import cn from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 import IconMeta from '@/components/Icons/IconMeta';
+import IconLinkedIn from '@/components/Icons/IconLinkedIn';
+import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import styles from './FeaturedProject.module.scss';
 
 interface FeaturedProjectProps {
@@ -12,16 +14,23 @@ const FeaturedProject = ({ imageRight }: FeaturedProjectProps) => {
 	return (
 		<article className={styles.article}>
 			<figure className={cn(styles.imageContainer, imageRight && styles.imageRight)}>
-				<div className={styles.image}>
-					<Link href='/style'>
+				<div className={styles.cropIconContainer}>
+					<IconLinkedIn />
+				</div>
+				<Link href='/style'>
+					<div className={styles.image}>
+						<div className={styles.logoContainer}>
+							<IconLogoInsp />
+						</div>
 						<Image
 							src='https://images.unsplash.com/photo-1484821582734-6c6c9f99a672'
 							alt='Example project image'
 							layout='fill'
+							sizes='(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 33vw'
 						/>
-					</Link>
-				</div>
-				<figcaption>Example project image</figcaption>
+					</div>
+				</Link>
+				<figcaption>Credit: Inspirato, Unsplash</figcaption>
 			</figure>
 			<div className={styles.textContainer}>
 				<header>
@@ -30,7 +39,9 @@ const FeaturedProject = ({ imageRight }: FeaturedProjectProps) => {
 						<div className={styles.iconContainer}>
 							<IconMeta />
 						</div>
-						<div className={styles.metaText}>Branding • UX/UI • HTML • CSS • JS • React • Storybook</div>
+						<div className={styles.metaText}>
+							Branding&nbsp;• UX/UI&nbsp;• HTML&nbsp;• CSS&nbsp;• JS&nbsp;• React&nbsp;• Storybook
+						</div>
 					</div>
 				</header>
 				<p className={styles.description}>
