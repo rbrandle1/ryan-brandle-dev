@@ -2,9 +2,12 @@ import cn from 'classnames';
 import Callout from '@/components/Callout/Callout';
 import styles from './home.module.scss';
 import IconCodePen from '@/components/Icons/IconCodePen';
+import FeaturedProject from '@/components/FeaturedProject/FeaturedProject';
 
 /* Todo: 
 * Make Featured component
+* Figure out image saturation on scroll instead of hover. Figure out mobile.
+* Optimize image component for performance. Add sizes, etc.
 * Make ProjectCard component
 * make scroll arrow a circular button... or a square, with accent background.
 * Animate vertical text on scroll... using intersection observer?
@@ -17,6 +20,7 @@ import IconCodePen from '@/components/Icons/IconCodePen';
 * set up a new contact email
 
 * BUGS:
+* In safari, the filter blur is buggy. Sometimes it fills space, sometimes it doesn't. Potentially update the blur for a background image instead of a css filter. Also might be affecting performance with such a large blur.
 * in safari, underlines in link doesn't change on theme change. It does change when you hover over the link.
 
 * THEME PICKER LOCAL STORAGE ISSUES:
@@ -25,7 +29,9 @@ import IconCodePen from '@/components/Icons/IconCodePen';
 * Maybe put my header in a top level component so it doesn't reload disappear and come back on every pg load? nested layout?
 
 * FUTURE CLEANUP AND EXPLORATION:
+* Change image saturation to be based on whether section is in view instead of hover. 
 * Make a mixin or a variable for hover translate animations.
+* update margins for margin-inline and margin-block elements.
 * Incorporate purple as a gradient to pink?
 	* have logo present on page load.
 	
@@ -97,6 +103,11 @@ export default function Home() {
 						<Callout title='I make modular, flexible systems that are easy to use.' iconAccent>
 							<IconCodePen />
 						</Callout>
+					</div>
+				</section>
+				<section className={styles.section}>
+					<div className={styles.container}>
+						<FeaturedProject />
 					</div>
 				</section>
 			</section>
