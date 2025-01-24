@@ -33,13 +33,13 @@ const FeaturedProject = ({
 	href,
 }: FeaturedProjectProps) => {
 	return (
-		<article className={styles.article}>
-			<figure className={cn(styles.imageContainer, imgRight && styles.imgRight)}>
-				{hasCropIcon ? (
-					<div className={styles.cropIconContainer}>
-						<IconLinkedIn />
-					</div>
-				) : null}
+		<article className={cn(styles.component, imgRight && styles.imgRight)}>
+			{hasCropIcon ? (
+				<div className={styles.cropIconContainer}>
+					<IconLinkedIn />
+				</div>
+			) : null}
+			<figure className={styles.imageContainer}>
 				<Link href={href}>
 					<div className={styles.image}>
 						{logo ? <div className={styles.logoContainer}>{logo}</div> : null}

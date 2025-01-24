@@ -7,7 +7,6 @@ import styles from './ProjectCard.module.scss';
 
 interface ProjectCardProps {
 	caption?: string;
-	imgRight?: boolean;
 	imgSrc: string;
 	imgAlt: string;
 	hasCropIcon?: boolean;
@@ -21,7 +20,6 @@ interface ProjectCardProps {
 
 const ProjectCard = ({
 	caption,
-	imgRight,
 	imgSrc,
 	imgAlt,
 	hasCropIcon,
@@ -33,13 +31,13 @@ const ProjectCard = ({
 	href,
 }: ProjectCardProps) => {
 	return (
-		<article className={styles.article}>
-			<figure className={cn(styles.imageContainer, imgRight && styles.imgRight)}>
-				{hasCropIcon ? (
-					<div className={styles.cropIconContainer}>
-						<IconLinkedIn />
-					</div>
-				) : null}
+		<article className={styles.component}>
+			{hasCropIcon ? (
+				<div className={styles.cropIconContainer}>
+					<IconLinkedIn />
+				</div>
+			) : null}
+			<figure className={styles.imageContainer}>
 				<Link href={href}>
 					<div className={styles.image}>
 						{logo ? <div className={styles.logoContainer}>{logo}</div> : null}

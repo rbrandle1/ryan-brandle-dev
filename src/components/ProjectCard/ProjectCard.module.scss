@@ -4,9 +4,10 @@
 
 @use 'sass:math';
 
-.article {
+.component {
 	--saturation: 0;
 
+	position: relative;
 	display: grid;
 	grid-template-columns: 1fr;
 	gap: var(--space-base);
@@ -24,15 +25,8 @@
 .cropIconContainer {
 	position: absolute;
 	top: calc(var(--space-lg) / -1);
+	right: calc(var(--space-lg) / -1);
 	width: var(--text-lg);
-
-	&:not(.imgRight &) {
-		left: calc(var(--space-lg) / -1);
-	}
-
-	.imgRight & {
-		right: calc(var(--space-lg) / -1);
-	}
 
 	svg {
 		fill: currentColor;
@@ -44,10 +38,6 @@
 
 	@include viewport.breakpoint(sm) {
 		margin-top: var(--space-sm);
-
-		&.imgRight {
-			order: 2;
-		}
 	}
 
 	figcaption {

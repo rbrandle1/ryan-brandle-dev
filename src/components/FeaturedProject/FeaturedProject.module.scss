@@ -4,9 +4,10 @@
 
 @use 'sass:math';
 
-.article {
+.component {
 	--saturation: 0;
 
+	position: relative;
 	display: grid;
 	grid-template-columns: 1fr;
 	gap: var(--space-base);
@@ -27,7 +28,7 @@
 
 .cropIconContainer {
 	position: absolute;
-	top: calc(var(--space-lg) / -1);
+	// top: calc(var(--space-lg) / -1);
 	width: var(--text-lg);
 
 	&:not(.imgRight &) {
@@ -49,7 +50,7 @@
 	@include viewport.breakpoint(sm) {
 		margin-top: var(--space-2xl);
 
-		&.imgRight {
+		.imgRight & {
 			order: 2;
 		}
 	}
