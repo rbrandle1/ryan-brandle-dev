@@ -84,6 +84,18 @@
 			--flow-space: calc(var(--space-4xl) * 4);
 		}
 	}
+
+	&.projectContainer {
+		--flow-space: var(--space-4xl);
+
+		// @include viewport.breakpoint(md) {
+		// 	--flow-space: calc(var(--space-4xl) * 3);
+		// }
+
+		// @include viewport.breakpoint(xl) {
+		// 	--flow-space: calc(var(--space-4xl) * 4);
+		// }
+	}
 }
 
 .heroSection {

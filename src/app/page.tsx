@@ -2,6 +2,7 @@ import cn from 'classnames';
 import Callout from '@/components/Callout/Callout';
 import IconCodePen from '@/components/Icons/IconCodePen';
 import FeaturedProject from '@/components/FeaturedProject/FeaturedProject';
+import ProjectCard from '@/components/ProjectCard/ProjectCard';
 import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import styles from './home.module.scss';
 
@@ -117,6 +118,7 @@ export default function Home() {
 							caption='Credit: Inspirato, Unsplash/@seefromthesky'
 							imgSrc='https://images.unsplash.com/photo-1484821582734-6c6c9f99a672'
 							imgAlt='Luxury travel website'
+							hasCropIcon
 							logo={<IconLogoInsp />}
 							title='The Inspirato Design System'
 							metaTags={['Branding', 'UX/UI', 'HTML', 'CSS', 'JS', 'React', 'Storybook']}
@@ -128,6 +130,7 @@ export default function Home() {
 							caption='Credit: Innovative Business Solutions'
 							imgSrc='https://images.unsplash.com/photo-1560461396-ec0ef7bb29dd'
 							imgAlt='Brand and token system'
+							hasCropIcon
 							imgRight
 							title={
 								<>
@@ -143,6 +146,7 @@ export default function Home() {
 							caption='Credit: SchoolRunner, Unsplash/@benmullins'
 							imgSrc='https://images.unsplash.com/photo-1534643960519-11ad79bc19df'
 							imgAlt='SchoolRunner student'
+							hasCropIcon
 							title={
 								<>
 									School Runner Rebrand <span className={styles.altFont}>&amp;</span>&nbsp;Website
@@ -158,7 +162,7 @@ export default function Home() {
 			</section>
 			<section className={cn(styles.multiSection, styles.accentEdge)}>
 				<section className={styles.section}>
-					<div className={styles.container}>
+					<div className={cn(styles.container, styles.projectContainer)}>
 						<div className={styles.multiSectionHeader}>
 							<h2 className={styles.multiSectionTitle}>Dabblings on the side</h2>
 							<p className={styles.multiSectionCopy}>
@@ -166,26 +170,36 @@ export default function Home() {
 								techniques, I tinker and explore with personal projects in my spare time.
 							</p>
 						</div>
-					</div>
-				</section>
-				<section className={styles.section}>
-					<div className={styles.container}>
-						<FeaturedProject
-							caption='Credit: Inspirato, Unsplash/@seefromthesky'
+						<ProjectCard
 							imgSrc='https://images.unsplash.com/photo-1484821582734-6c6c9f99a672'
-							imgAlt='Luxury travel website'
-							logo={<IconLogoInsp />}
-							title='The Inspirato Design System'
-							metaTags={['Branding', 'UX/UI', 'HTML', 'CSS', 'JS', 'React', 'Storybook']}
+							imgAlt='Product image'
+							hasCropIcon
+							title='Accessible Flashcards for Kids'
+							metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'React']}
 							description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-							buttonText='Explore'
+							buttonText='Read more'
+							href='/style'
+						/>
+						<ProjectCard
+							imgSrc='https://images.unsplash.com/photo-1484821582734-6c6c9f99a672'
+							imgAlt='Product image'
+							title='CodePen Explorations'
+							metaTags={['UX/UI', 'HTML', 'CSS', 'JS']}
+							description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+							buttonText='Read more'
+							href='/style'
+						/>
+						<ProjectCard
+							imgSrc='https://images.unsplash.com/photo-1484821582734-6c6c9f99a672'
+							imgAlt='Product image'
+							title='Comparison Cards with CSS Grid'
+							metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'React']}
+							description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+							buttonText='Read more'
 							href='/style'
 						/>
 					</div>
 				</section>
-			</section>
-			<section className={cn(styles.section, styles.accentEdge)}>
-				<div className={styles.container}>light here</div>
 			</section>
 			{/* <div className={styles.ctas}>
           <a

@@ -3,9 +3,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import IconLinkedIn from '@/components/Icons/IconLinkedIn';
 import MetaTags from '@/components/MetaTags/MetaTags';
-import styles from './FeaturedProject.module.scss';
+import styles from './ProjectCard.module.scss';
 
-interface FeaturedProjectProps {
+interface ProjectCardProps {
 	caption?: string;
 	imgRight?: boolean;
 	imgSrc: string;
@@ -19,7 +19,7 @@ interface FeaturedProjectProps {
 	href: string;
 }
 
-const FeaturedProject = ({
+const ProjectCard = ({
 	caption,
 	imgRight,
 	imgSrc,
@@ -31,7 +31,7 @@ const FeaturedProject = ({
 	description,
 	buttonText,
 	href,
-}: FeaturedProjectProps) => {
+}: ProjectCardProps) => {
 	return (
 		<article className={styles.article}>
 			<figure className={cn(styles.imageContainer, imgRight && styles.imgRight)}>
@@ -62,4 +62,4 @@ const FeaturedProject = ({
 	);
 };
 
-export default FeaturedProject;
+export default ProjectCard;
