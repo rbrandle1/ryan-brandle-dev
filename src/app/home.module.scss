@@ -18,11 +18,18 @@
 	padding-bottom: var(--space-8xl);
 }
 
-.multiSectionGradient {
+.multiSection {
 	background-color: var(--surface-primary);
 	position: relative;
 	overflow: hidden;
 
+	.section {
+		position: relative;
+		background-color: transparent;
+	}
+}
+
+.hasGradient {
 	&::before {
 		--gradient-width: 200dvw;
 		--gradient-height: var(--gradient-width);
@@ -56,11 +63,6 @@
 			--gradient-location: calc(0% - var(--gradient-height) / 1.5);
 			--gradient-blur: 130px;
 		}
-	}
-
-	.section {
-		position: relative;
-		background-color: transparent;
 	}
 }
 
@@ -199,4 +201,25 @@
 	@include viewport.breakpoint(xs) {
 		left: 51%;
 	}
+}
+
+.multiSectionHeader {
+	text-align: center;
+
+	> * {
+		margin-inline: auto;
+	}
+}
+
+.multiSectionTitle {
+	@include typography.headline;
+
+	margin-bottom: var(--space-lg);
+}
+
+.multiSectionCopy {
+	@include typography.p(lg);
+
+	color: var(--text-tertiary);
+	max-width: 50ch;
 }

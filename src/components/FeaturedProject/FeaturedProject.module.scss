@@ -92,14 +92,13 @@
 	z-index: 1;
 
 	svg {
-		fill: currentColor;
+		fill: var(--icon-over-image);
 	}
 }
 
 .textContainer {
 	--flow-space: var(--space-lg);
 
-	@include typography.p(lg);
 	> * + * {
 		margin-top: var(--flow-space);
 	}

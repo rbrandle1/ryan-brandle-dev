@@ -93,7 +93,7 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
-			<section className={styles.multiSectionGradient} data-section='dark'>
+			<section className={cn(styles.multiSection, styles.hasGradient)} data-section='dark'>
 				<section className={styles.vertSection}>
 					{/* ACCESSIBILITY: THIS CAN BE IGNORED, STRICTLY DECORATIVE */}
 					<div className={styles.vertText}>
@@ -142,13 +142,41 @@ export default function Home() {
 						<FeaturedProject
 							caption='Credit: SchoolRunner, Unsplash/@benmullins'
 							imgSrc='https://images.unsplash.com/photo-1534643960519-11ad79bc19df'
-							imgAlt='Need alt'
+							imgAlt='SchoolRunner student'
 							title={
 								<>
 									School Runner Rebrand <span className={styles.altFont}>&amp;</span>&nbsp;Website
 								</>
 							}
 							metaTags={['Branding', 'UX/UI', 'HTML', 'CSS']}
+							description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+							buttonText='Explore'
+							href='/style'
+						/>
+					</div>
+				</section>
+			</section>
+			<section className={cn(styles.multiSection, styles.accentEdge)}>
+				<section className={styles.section}>
+					<div className={styles.container}>
+						<div className={styles.multiSectionHeader}>
+							<h2 className={styles.multiSectionTitle}>Dabblings on the side</h2>
+							<p className={styles.multiSectionCopy}>
+								I love to dabble! As an essential part of continued education and staying fresh on the latest
+								techniques, I tinker and explore with personal projects in my spare time.
+							</p>
+						</div>
+					</div>
+				</section>
+				<section className={styles.section}>
+					<div className={styles.container}>
+						<FeaturedProject
+							caption='Credit: Inspirato, Unsplash/@seefromthesky'
+							imgSrc='https://images.unsplash.com/photo-1484821582734-6c6c9f99a672'
+							imgAlt='Luxury travel website'
+							logo={<IconLogoInsp />}
+							title='The Inspirato Design System'
+							metaTags={['Branding', 'UX/UI', 'HTML', 'CSS', 'JS', 'React', 'Storybook']}
 							description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
 							buttonText='Explore'
 							href='/style'
