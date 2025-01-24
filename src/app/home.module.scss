@@ -70,6 +70,18 @@
 	> * + * {
 		margin-top: var(--flow-space);
 	}
+
+	&.featuredContainer {
+		--flow-space: calc(var(--space-4xl) * 2);
+
+		@include viewport.breakpoint(md) {
+			--flow-space: calc(var(--space-4xl) * 3);
+		}
+
+		@include viewport.breakpoint(xl) {
+			--flow-space: calc(var(--space-4xl) * 4);
+		}
+	}
 }
 
 .heroSection {
@@ -106,15 +118,15 @@
 		@include typography.display(sm);
 	}
 
-	.alt {
-		font-family: var(--font-alt);
-		text-transform: initial;
-	}
-
 	.right {
 		display: block;
 		text-align: right;
 	}
+}
+
+.altFont {
+	font-family: var(--font-alt);
+	text-transform: initial;
 }
 
 .heroDetails > * + * {

@@ -1,0 +1,114 @@
+@use '@/styles/utils/typography';
+@use '@/styles/utils/viewport';
+@use '@/styles/utils/element';
+
+@use 'sass:math';
+
+.article {
+	--saturation: 0;
+
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: var(--space-base);
+
+	@include viewport.has-hover(':hover', ':focus-within') {
+		--saturation: 1;
+	}
+
+	@include viewport.breakpoint(sm) {
+		grid-template-columns: 1fr 1fr;
+		gap: var(--space-lg);
+	}
+
+	@include viewport.breakpoint(lg) {
+		gap: var(--space-2xl);
+	}
+}
+
+.cropIconContainer {
+	position: absolute;
+	top: calc(var(--space-lg) / -1);
+	width: var(--text-lg);
+
+	&:not(.imgRight &) {
+		left: calc(var(--space-lg) / -1);
+	}
+
+	.imgRight & {
+		right: calc(var(--space-lg) / -1);
+	}
+
+	svg {
+		fill: currentColor;
+	}
+}
+
+.imageContainer {
+	position: relative;
+
+	@include viewport.breakpoint(sm) {
+		margin-top: var(--space-2xl);
+
+		&.imgRight {
+			order: 2;
+		}
+	}
+
+	figcaption {
+		@include typography.p(sm);
+
+		margin-top: var(--space-sm);
+		color: var(--text-tertiary);
+	}
+}
+
+.image {
+	position: relative;
+	display: grid;
+	place-items: center;
+	padding-left: var(--space-xl);
+	padding-right: var(--space-xl);
+	aspect-ratio: 3 / 2;
+
+	@include viewport.breakpoint(sm) {
+		aspect-ratio: 2 / 3;
+	}
+
+	// @include viewport.breakpoint(xl) {
+	// 	aspect-ratio: 9 / 16;
+	// }
+
+	img {
+		object-fit: cover;
+		border-radius: var(--radius-default);
+		transition: filter 600ms ease-out;
+		filter: saturate(var(--saturation));
+	}
+}
+
+.logoContainer {
+	width: 100%;
+	max-width: 338px;
+	z-index: 1;
+
+	svg {
+		fill: currentColor;
+	}
+}
+
+.textContainer {
+	--flow-space: var(--space-lg);
+
+	@include typography.p(lg);
+	> * + * {
+		margin-top: var(--flow-space);
+	}
+}
+
+.title {
+	@include typography.headline;
+}
+
+.button {
+	display: inline-block;
+}

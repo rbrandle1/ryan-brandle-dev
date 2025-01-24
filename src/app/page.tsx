@@ -1,21 +1,29 @@
 import cn from 'classnames';
 import Callout from '@/components/Callout/Callout';
-import styles from './home.module.scss';
 import IconCodePen from '@/components/Icons/IconCodePen';
+import FeaturedProject from '@/components/FeaturedProject/FeaturedProject';
+import IconLogoInsp from '@/components/Icons/IconLogoInsp';
+import styles from './home.module.scss';
 
 /* Todo: 
-* Make Featured component
 * Make ProjectCard component
+* Make Article pages and article specific components. ImageGrid component.... variations.
+* Create a boilerplate ts file for each page to include commonly used things like project title, meta tags, etc.
+* update crop icon to replace LinkedIn icon
+* Figure out image saturation on scroll instead of hover. Figure out mobile.
 * make scroll arrow a circular button... or a square, with accent background.
-* Animate vertical text on scroll... using intersection observer?
 * Make buttons view link
+* Add backup words for each FeaturedProject
+* Animate vertical text on scroll... using intersection observer?
 * Try updating to line-height units: https://12daysofweb.dev/2024/css-margin-trim-line-height-units/
-* check svg icons and accessibility. do they need a role? alt? run a accessibility audit.
+* Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
+* make favicon
 * Read through all text, footer text, etc and finalize.
 * Get peer review
 * set up a new contact email
 
 * BUGS:
+* In safari, the filter blur is buggy. Sometimes it fills space, sometimes it doesn't. Potentially update the blur for a background image instead of a css filter. Also might be affecting performance with such a large blur.
 * in safari, underlines in link doesn't change on theme change. It does change when you hover over the link.
 
 * THEME PICKER LOCAL STORAGE ISSUES:
@@ -24,7 +32,11 @@ import IconCodePen from '@/components/Icons/IconCodePen';
 * Maybe put my header in a top level component so it doesn't reload disappear and come back on every pg load? nested layout?
 
 * FUTURE CLEANUP AND EXPLORATION:
+* update aspect to 9/16 on very large screens?
+* add drop shadow to logos in featured project?
+* Change image saturation to be based on whether section is in view instead of hover. 
 * Make a mixin or a variable for hover translate animations.
+* update margins for margin-inline and margin-block elements.
 * Incorporate purple as a gradient to pink?
 	* have logo present on page load.
 	
@@ -58,7 +70,7 @@ export default function Home() {
 						<h1 className={styles.heroTitle}>
 							I make
 							<br />
-							<span className={styles.alt}>Dope, 🔥, Rizz</span>
+							<span className={styles.altFont}>Dope, 🔥, Rizz</span>
 							<br />
 							<span className={styles.right}>products</span>
 						</h1>
@@ -83,6 +95,7 @@ export default function Home() {
 			</section>
 			<section className={styles.multiSectionGradient} data-section='dark'>
 				<section className={styles.vertSection}>
+					{/* ACCESSIBILITY: THIS CAN BE IGNORED, STRICTLY DECORATIVE */}
 					<div className={styles.vertText}>
 						<div>UX</div>
 						<div>DES</div>
@@ -96,6 +109,50 @@ export default function Home() {
 						<Callout title='I make modular, flexible systems that are easy to use.' iconAccent>
 							<IconCodePen />
 						</Callout>
+					</div>
+				</section>
+				<section className={styles.section}>
+					<div className={cn(styles.container, styles.featuredContainer)}>
+						<FeaturedProject
+							caption='Credit: Inspirato, Unsplash/@seefromthesky'
+							imgSrc='https://images.unsplash.com/photo-1484821582734-6c6c9f99a672'
+							imgAlt='Luxury travel website'
+							logo={<IconLogoInsp />}
+							title='The Inspirato Design System'
+							metaTags={['Branding', 'UX/UI', 'HTML', 'CSS', 'JS', 'React', 'Storybook']}
+							description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+							buttonText='Explore'
+							href='/style'
+						/>
+						<FeaturedProject
+							caption='Credit: Innovative Business Solutions'
+							imgSrc='https://images.unsplash.com/photo-1560461396-ec0ef7bb29dd'
+							imgAlt='Brand and token system'
+							imgRight
+							title={
+								<>
+									CableFinder Rebrand <span className={styles.altFont}>&amp;</span>&nbsp;Token System
+								</>
+							}
+							metaTags={['Branding', 'UX/UI', 'Figma', 'HTML', 'CSS']}
+							description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+							buttonText='Explore'
+							href='/style'
+						/>
+						<FeaturedProject
+							caption='Credit: SchoolRunner, Unsplash/@benmullins'
+							imgSrc='https://images.unsplash.com/photo-1534643960519-11ad79bc19df'
+							imgAlt='Need alt'
+							title={
+								<>
+									School Runner Rebrand <span className={styles.altFont}>&amp;</span>&nbsp;Website
+								</>
+							}
+							metaTags={['Branding', 'UX/UI', 'HTML', 'CSS']}
+							description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+							buttonText='Explore'
+							href='/style'
+						/>
 					</div>
 				</section>
 			</section>
