@@ -118,15 +118,15 @@
 		@include typography.display(sm);
 	}
 
-	.alt {
-		font-family: var(--font-alt);
-		text-transform: initial;
-	}
-
 	.right {
 		display: block;
 		text-align: right;
 	}
+}
+
+.altFont {
+	font-family: var(--font-alt);
+	text-transform: initial;
 }
 
 .heroDetails > * + * {

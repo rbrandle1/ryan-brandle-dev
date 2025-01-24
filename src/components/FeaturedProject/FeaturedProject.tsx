@@ -2,7 +2,6 @@ import cn from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 import IconLinkedIn from '@/components/Icons/IconLinkedIn';
-import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import MetaTags from '@/components/MetaTags/MetaTags';
 import styles from './FeaturedProject.module.scss';
 
@@ -12,8 +11,8 @@ interface FeaturedProjectProps {
 	imgSrc: string;
 	imgAlt: string;
 	logo?: React.ReactNode;
-	title: string;
-	metaTags: string[];
+	title: string | React.ReactNode;
+	metaTags?: string[];
 	description: string;
 	buttonText: string;
 	href: string;
@@ -48,7 +47,7 @@ const FeaturedProject = ({
 			<div className={styles.textContainer}>
 				<header>
 					<h2 className={styles.title}>{title}</h2>
-					<MetaTags items={metaTags} />
+					{metaTags ? <MetaTags items={metaTags} /> : null}
 				</header>
 				<p className={styles.description}>{description}</p>
 				<Link className={styles.button} href={href}>
