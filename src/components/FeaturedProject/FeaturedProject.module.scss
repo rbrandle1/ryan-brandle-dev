@@ -28,7 +28,6 @@
 
 .cropIconContainer {
 	position: absolute;
-	// top: calc(var(--space-lg) / -1);
 	width: var(--text-lg);
 
 	&:not(.imgRight &) {
@@ -41,6 +40,7 @@
 
 	svg {
 		fill: currentColor;
+		opacity: 0.1;
 	}
 }
 
@@ -56,10 +56,8 @@
 	}
 
 	figcaption {
-		@include typography.p(sm);
-
+		@include typography.caption;
 		margin-top: var(--space-sm);
-		color: var(--text-tertiary);
 	}
 }
 

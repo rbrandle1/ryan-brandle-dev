@@ -7,7 +7,7 @@ import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import styles from './home.module.scss';
 
 /* Todo: 
-* Make ProjectCard component
+* Make ProjectCard component, update flow spacing accordingly.
 * Make Article pages and article specific components. ImageGrid component.... variations.
 * Create a boilerplate ts file for each page to include commonly used things like project title, meta tags, etc.
 * update crop icon to replace LinkedIn icon
@@ -15,6 +15,7 @@ import styles from './home.module.scss';
 * make scroll arrow a circular button... or a square, with accent background.
 * Make buttons view link
 * Add backup words for each FeaturedProject
+* double check vertical spacing on home page through various viewport sizes.
 * Animate vertical text on scroll... using intersection observer?
 * Try updating to line-height units: https://12daysofweb.dev/2024/css-margin-trim-line-height-units/
 * Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
@@ -83,7 +84,7 @@ export default function Home() {
 								I’m a bing bang with over 15 years of experience in design, development and making top notch products.
 								There are a lot of titles that seem to morph through the years but what it comes down to is I bing bang
 								boom. yadda yadda yadda with bing bang boom experience. Industry's standard There are a lot of titles
-								that seem to morph.
+								that seem to morph. <a href='mailto:hello@example.com'>Say hi anytime!</a>
 							</p>
 						</div>
 					</div>
