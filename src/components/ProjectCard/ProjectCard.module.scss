@@ -53,6 +53,7 @@
 	place-items: center;
 	padding-left: var(--space-xl);
 	padding-right: var(--space-xl);
+	user-select: none;
 	aspect-ratio: 3 / 2;
 
 	img {
@@ -74,7 +75,7 @@
 }
 
 .textContainer {
-	--flow-space: var(--space-lg);
+	--flow-space: var(--space-base);
 
 	> * + * {
 		margin-top: var(--flow-space);
@@ -83,7 +84,7 @@
 
 .title {
 	@include typography.headline(xl);
-	margin-bottom: var(--space-sm);
+	margin-bottom: var(--space-xs);
 	max-width: 17ch;
 }
 

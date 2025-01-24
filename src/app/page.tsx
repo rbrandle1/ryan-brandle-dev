@@ -7,7 +7,6 @@ import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import styles from './home.module.scss';
 
 /* Todo: 
-* Make ProjectCard component, update flow spacing accordingly.
 * Make Article pages and article specific components. ImageGrid component.... variations.
 * Create a boilerplate ts file for each page to include commonly used things like project title, meta tags, etc.
 * update crop icon to replace LinkedIn icon
@@ -19,6 +18,7 @@ import styles from './home.module.scss';
 * Animate vertical text on scroll... using intersection observer?
 * Try updating to line-height units: https://12daysofweb.dev/2024/css-margin-trim-line-height-units/
 * Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
+* download and host images locally instead of direct url from unsplash.
 * make favicon
 * Read through all text, footer text, etc and finalize.
 * Get peer review
@@ -98,11 +98,11 @@ export default function Home() {
 			<section className={cn(styles.multiSection, styles.hasGradient)} data-section='dark'>
 				<section className={styles.vertSection}>
 					{/* ACCESSIBILITY: THIS CAN BE IGNORED, STRICTLY DECORATIVE */}
-					<div className={styles.vertText}>
+					<div className={cn(styles.bgVertText, styles.vertTextHero)}>
 						<div>UX</div>
-						<div>DES</div>
-						<div>UI</div>
 						<div>DEV</div>
+						<div>UI</div>
+						<div>DES</div>
 						<div>UX</div>
 					</div>
 				</section>
@@ -162,6 +162,13 @@ export default function Home() {
 				</section>
 			</section>
 			<section className={cn(styles.multiSection, styles.accentEdge)}>
+				<div className={cn(styles.bgVertText, styles.vertTextTopLeft)}>
+					<div>SYSTEM</div>
+					<div>DES</div>
+					<div>UX</div>
+					<div>DEV</div>
+					<div>UI</div>
+				</div>
 				<section className={styles.section}>
 					<div className={cn(styles.container, styles.projectContainer)}>
 						<div className={styles.multiSectionHeader}>
@@ -201,6 +208,13 @@ export default function Home() {
 						/>
 					</div>
 				</section>
+				<div className={cn(styles.bgVertText, styles.vertTextBottomRight)}>
+					<div>SYSTEM</div>
+					<div>DES</div>
+					<div>UX</div>
+					<div>DEV</div>
+					<div>UI</div>
+				</div>
 			</section>
 			{/* <div className={styles.ctas}>
           <a

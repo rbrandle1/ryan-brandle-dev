@@ -3,6 +3,8 @@
 @use '@/styles/utils/viewport';
 @use '@/styles/utils/element';
 
+// Todo: update as section calc(var(--space-4xl) * 3)
+
 .home {
 	--flow-space: var(--space-lg);
 }
@@ -74,14 +76,10 @@
 	}
 
 	&.featuredContainer {
-		--flow-space: calc(var(--space-4xl) * 2);
+		--flow-space: var(--space-8xl);
 
 		@include viewport.breakpoint(md) {
 			--flow-space: calc(var(--space-4xl) * 3);
-		}
-
-		@include viewport.breakpoint(xl) {
-			--flow-space: calc(var(--space-4xl) * 4);
 		}
 	}
 
@@ -180,6 +178,7 @@
 	padding: var(--space-base) 0;
 	text-align: center;
 	width: 100%;
+	user-select: none;
 }
 
 .float {
@@ -202,21 +201,40 @@
 	}
 }
 
-.vertText {
-	@include typography.display(lg);
-
+.bgVertText {
 	position: absolute;
+	writing-mode: vertical-lr;
+	user-select: none;
+	pointer-events: none;
+}
+
+.vertTextHero {
+	@include typography.display(lg);
 	top: -17%;
 	left: 51.5%;
 	transform: translateX(-50%);
-	writing-mode: vertical-rl;
 	font-size: clamp(13.41rem, 21dvw, 29.23rem); // optical override for vertical text style alignment.
 	text-shadow: 2px -2px 4px var(--text-secondary);
-	user-select: none;
 
 	@include viewport.breakpoint(xs) {
 		left: 51%;
 	}
+}
+
+// bring font sizes down to 2xl on small screens
+.vertTextTopLeft {
+	@include typography.display;
+	top: -39px;
+	left: -16px;
+	opacity: 0.02;
+}
+
+.vertTextBottomRight {
+	@include typography.display;
+	transform: rotate(180deg);
+	right: -16px;
+	bottom: -39px;
+	opacity: 0.02;
 }
 
 .multiSectionHeader {

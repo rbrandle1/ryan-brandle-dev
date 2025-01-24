@@ -59,6 +59,7 @@
 		width: var(--space-2xs);
 		background-color: var(--color-accent);
 		transition: background-color 250ms ease-in 50ms;
+		z-index: 1;
 
 		@include viewport.breakpoint(2xs) {
 			width: clamp(var(--space-2xs), 1dvw, var(--space-sm));

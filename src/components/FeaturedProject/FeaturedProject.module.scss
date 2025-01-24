@@ -67,6 +67,7 @@
 	place-items: center;
 	padding-left: var(--space-xl);
 	padding-right: var(--space-xl);
+	user-select: none;
 	aspect-ratio: 3 / 2;
 
 	@include viewport.breakpoint(sm) {
