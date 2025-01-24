@@ -226,7 +226,12 @@
 	@include typography.display;
 	top: -39px;
 	left: -16px;
-	opacity: 0.02;
+	opacity: 0.025;
+
+	@include viewport.breakpoint(md, max) {
+		font-size: var(--text-3xl);
+		top: -21px;
+	}
 }
 
 .vertTextBottomRight {
@@ -234,7 +239,12 @@
 	transform: rotate(180deg);
 	right: -16px;
 	bottom: -39px;
-	opacity: 0.02;
+	opacity: 0.025;
+
+	@include viewport.breakpoint(md, max) {
+		font-size: var(--text-3xl);
+		bottom: -22px;
+	}
 }
 
 .multiSectionHeader {
