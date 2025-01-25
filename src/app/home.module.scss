@@ -4,6 +4,7 @@
 @use '@/styles/utils/element';
 
 // Todo: update as section calc(var(--space-4xl) * 3)
+// Todo: update calc(var(--space-8xl) * 2) as section padding
 
 .home {
 	--flow-space: var(--space-lg);
@@ -18,6 +19,14 @@
 	background-color: var(--surface-primary);
 	padding-top: var(--space-8xl);
 	padding-bottom: var(--space-8xl);
+}
+
+.container {
+	@include layout.max-width;
+
+	> * + * {
+		margin-top: var(--flow-space);
+	}
 }
 
 .multiSection {
@@ -68,31 +77,26 @@
 	}
 }
 
-.container {
-	@include layout.max-width;
+.featuredSection {
+	--flow-space: var(--space-8xl);
+	padding-bottom: calc(var(--space-8xl) * 2);
 
-	> * + * {
-		margin-top: var(--flow-space);
+	@include viewport.breakpoint(md) {
+		--flow-space: calc(var(--space-4xl) * 3);
+	}
+}
+
+.projectSection {
+	--flow-space: var(--space-2xl);
+	padding-top: calc(var(--space-8xl) * 2);
+	padding-bottom: calc(var(--space-8xl) * 2);
+
+	@include viewport.breakpoint(md) {
+		--flow-space: var(--space-3xl);
 	}
 
-	&.featuredContainer {
-		--flow-space: var(--space-8xl);
-
-		@include viewport.breakpoint(md) {
-			--flow-space: calc(var(--space-4xl) * 3);
-		}
-	}
-
-	&.projectContainer {
+	@include viewport.breakpoint(xl) {
 		--flow-space: var(--space-4xl);
-
-		// @include viewport.breakpoint(md) {
-		// 	--flow-space: calc(var(--space-4xl) * 3);
-		// }
-
-		// @include viewport.breakpoint(xl) {
-		// 	--flow-space: calc(var(--space-4xl) * 4);
-		// }
 	}
 }
 
@@ -244,6 +248,10 @@
 	@include viewport.breakpoint(md, max) {
 		font-size: var(--text-3xl);
 		bottom: -22px;
+	}
+
+	@include viewport.breakpoint(sm, max) {
+		display: none;
 	}
 }
 

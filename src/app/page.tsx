@@ -9,6 +9,7 @@ import styles from './home.module.scss';
 /* Todo: 
 * Make Article pages and article specific components. ImageGrid component.... variations.
 * Create a boilerplate ts file for each page to include commonly used things like project title, meta tags, etc.
+* figure out section spacing. avoid calc's and use variables instead.
 * update crop icon to replace LinkedIn icon
 * Figure out image saturation on scroll instead of hover. Figure out mobile.
 * make scroll arrow a circular button... or a square, with accent background.
@@ -113,8 +114,8 @@ export default function Home() {
 						</Callout>
 					</div>
 				</section>
-				<section className={styles.section}>
-					<div className={cn(styles.container, styles.featuredContainer)}>
+				<section className={cn(styles.section, styles.featuredSection)}>
+					<div className={styles.container}>
 						<FeaturedProject
 							caption='Credit: Inspirato, Unsplash/@seefromthesky'
 							imgSrc='https://images.unsplash.com/photo-1484821582734-6c6c9f99a672'
@@ -169,8 +170,8 @@ export default function Home() {
 					<div>DEV</div>
 					<div>UI</div>
 				</div>
-				<section className={styles.section}>
-					<div className={cn(styles.container, styles.projectContainer)}>
+				<section className={cn(styles.section, styles.projectSection)}>
+					<div className={styles.container}>
 						<div className={styles.multiSectionHeader}>
 							<h2 className={styles.multiSectionTitle}>Dabblings on the side</h2>
 							<p className={styles.multiSectionCopy}>

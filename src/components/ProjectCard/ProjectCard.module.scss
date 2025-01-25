@@ -85,7 +85,15 @@
 .title {
 	@include typography.headline(xl);
 	margin-bottom: var(--space-xs);
-	max-width: 17ch;
+	max-width: 25ch;
+
+	@include viewport.breakpoint(sm) {
+		max-width: 17ch;
+	}
+}
+
+.description {
+	max-width: 50ch;
 }
 
 .button {
