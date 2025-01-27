@@ -2,21 +2,25 @@ import cn from 'classnames';
 import Callout from '@/components/Callout/Callout';
 import IconCodePen from '@/components/Icons/IconCodePen';
 import FeaturedProject from '@/components/FeaturedProject/FeaturedProject';
+import ProjectCard from '@/components/ProjectCard/ProjectCard';
 import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import styles from './home.module.scss';
 
 /* Todo: 
-* Make ProjectCard component
+* How to apply a class style or class based on whether the container is in view or not. Intersect observer?
 * Make Article pages and article specific components. ImageGrid component.... variations.
 * Create a boilerplate ts file for each page to include commonly used things like project title, meta tags, etc.
+* figure out section spacing. avoid calc's and use variables instead.
 * update crop icon to replace LinkedIn icon
 * Figure out image saturation on scroll instead of hover. Figure out mobile.
 * make scroll arrow a circular button... or a square, with accent background.
 * Make buttons view link
 * Add backup words for each FeaturedProject
+* double check vertical spacing on home page through various viewport sizes.
 * Animate vertical text on scroll... using intersection observer?
 * Try updating to line-height units: https://12daysofweb.dev/2024/css-margin-trim-line-height-units/
 * Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
+* download and host images locally instead of direct url from unsplash.
 * make favicon
 * Read through all text, footer text, etc and finalize.
 * Get peer review
@@ -82,7 +86,7 @@ export default function Home() {
 								I’m a bing bang with over 15 years of experience in design, development and making top notch products.
 								There are a lot of titles that seem to morph through the years but what it comes down to is I bing bang
 								boom. yadda yadda yadda with bing bang boom experience. Industry's standard There are a lot of titles
-								that seem to morph.
+								that seem to morph. <a href='mailto:hello@example.com'>Say hi anytime!</a>
 							</p>
 						</div>
 					</div>
@@ -93,14 +97,14 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
-			<section className={styles.multiSectionGradient} data-section='dark'>
+			<section className={cn(styles.multiSection, styles.hasGradient)} data-section='dark'>
 				<section className={styles.vertSection}>
 					{/* ACCESSIBILITY: THIS CAN BE IGNORED, STRICTLY DECORATIVE */}
-					<div className={styles.vertText}>
+					<div className={cn(styles.bgVertText, styles.vertTextHero)}>
 						<div>UX</div>
-						<div>DES</div>
-						<div>UI</div>
 						<div>DEV</div>
+						<div>UI</div>
+						<div>DES</div>
 						<div>UX</div>
 					</div>
 				</section>
@@ -111,12 +115,13 @@ export default function Home() {
 						</Callout>
 					</div>
 				</section>
-				<section className={styles.section}>
-					<div className={cn(styles.container, styles.featuredContainer)}>
+				<section className={cn(styles.section, styles.featuredSection)}>
+					<div className={styles.container}>
 						<FeaturedProject
 							caption='Credit: Inspirato, Unsplash/@seefromthesky'
 							imgSrc='https://images.unsplash.com/photo-1484821582734-6c6c9f99a672'
 							imgAlt='Luxury travel website'
+							hasCropIcon
 							logo={<IconLogoInsp />}
 							title='The Inspirato Design System'
 							metaTags={['Branding', 'UX/UI', 'HTML', 'CSS', 'JS', 'React', 'Storybook']}
@@ -128,6 +133,7 @@ export default function Home() {
 							caption='Credit: Innovative Business Solutions'
 							imgSrc='https://images.unsplash.com/photo-1560461396-ec0ef7bb29dd'
 							imgAlt='Brand and token system'
+							hasCropIcon
 							imgRight
 							title={
 								<>
@@ -142,7 +148,8 @@ export default function Home() {
 						<FeaturedProject
 							caption='Credit: SchoolRunner, Unsplash/@benmullins'
 							imgSrc='https://images.unsplash.com/photo-1534643960519-11ad79bc19df'
-							imgAlt='Need alt'
+							imgAlt='SchoolRunner student'
+							hasCropIcon
 							title={
 								<>
 									School Runner Rebrand <span className={styles.altFont}>&amp;</span>&nbsp;Website
@@ -156,8 +163,60 @@ export default function Home() {
 					</div>
 				</section>
 			</section>
-			<section className={cn(styles.section, styles.accentEdge)}>
-				<div className={styles.container}>light here</div>
+			<section className={cn(styles.multiSection, styles.accentEdge)}>
+				<div className={cn(styles.bgVertText, styles.vertTextTopLeft)}>
+					<div>SYSTEM</div>
+					<div>DES</div>
+					<div>UX</div>
+					<div>DEV</div>
+					<div>UI</div>
+				</div>
+				<section className={cn(styles.section, styles.projectSection)}>
+					<div className={styles.container}>
+						<div className={styles.multiSectionHeader}>
+							<h2 className={styles.multiSectionTitle}>Dabblings on the side</h2>
+							<p className={styles.multiSectionCopy}>
+								I love to dabble! As an essential part of continued education and staying fresh on the latest
+								techniques, I tinker and explore with personal projects in my spare time.
+							</p>
+						</div>
+						<ProjectCard
+							imgSrc='https://images.unsplash.com/photo-1484821582734-6c6c9f99a672'
+							imgAlt='Product image'
+							hasCropIcon
+							title='Accessible Flashcards for Kids'
+							metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'React']}
+							description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+							buttonText='Read more'
+							href='/style'
+						/>
+						<ProjectCard
+							imgSrc='https://images.unsplash.com/photo-1484821582734-6c6c9f99a672'
+							imgAlt='Product image'
+							title='CodePen Explorations'
+							metaTags={['UX/UI', 'HTML', 'CSS', 'JS']}
+							description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+							buttonText='Read more'
+							href='/style'
+						/>
+						<ProjectCard
+							imgSrc='https://images.unsplash.com/photo-1484821582734-6c6c9f99a672'
+							imgAlt='Product image'
+							title='Comparison Cards with CSS Grid'
+							metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'React']}
+							description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+							buttonText='Read more'
+							href='/style'
+						/>
+					</div>
+				</section>
+				<div className={cn(styles.bgVertText, styles.vertTextBottomRight)}>
+					<div>SYSTEM</div>
+					<div>DES</div>
+					<div>UX</div>
+					<div>DEV</div>
+					<div>UI</div>
+				</div>
 			</section>
 			{/* <div className={styles.ctas}>
           <a

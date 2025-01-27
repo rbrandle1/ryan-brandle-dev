@@ -3,6 +3,9 @@
 @use '@/styles/utils/viewport';
 @use '@/styles/utils/element';
 
+// Todo: update as section calc(var(--space-4xl) * 3)
+// Todo: update calc(var(--space-8xl) * 2) as section padding
+
 .home {
 	--flow-space: var(--space-lg);
 }
@@ -18,11 +21,26 @@
 	padding-bottom: var(--space-8xl);
 }
 
-.multiSectionGradient {
+.container {
+	@include layout.max-width;
+
+	> * + * {
+		margin-top: var(--flow-space);
+	}
+}
+
+.multiSection {
 	background-color: var(--surface-primary);
 	position: relative;
 	overflow: hidden;
 
+	.section {
+		position: relative;
+		background-color: transparent;
+	}
+}
+
+.hasGradient {
 	&::before {
 		--gradient-width: 200dvw;
 		--gradient-height: var(--gradient-width);
@@ -57,30 +75,28 @@
 			--gradient-blur: 130px;
 		}
 	}
+}
 
-	.section {
-		position: relative;
-		background-color: transparent;
+.featuredSection {
+	--flow-space: var(--space-8xl);
+	padding-bottom: calc(var(--space-8xl) * 2);
+
+	@include viewport.breakpoint(md) {
+		--flow-space: calc(var(--space-4xl) * 3);
 	}
 }
 
-.container {
-	@include layout.max-width;
+.projectSection {
+	--flow-space: var(--space-2xl);
+	padding-top: calc(var(--space-8xl) * 2);
+	padding-bottom: calc(var(--space-8xl) * 2);
 
-	> * + * {
-		margin-top: var(--flow-space);
+	@include viewport.breakpoint(md) {
+		--flow-space: var(--space-3xl);
 	}
 
-	&.featuredContainer {
-		--flow-space: calc(var(--space-4xl) * 2);
-
-		@include viewport.breakpoint(md) {
-			--flow-space: calc(var(--space-4xl) * 3);
-		}
-
-		@include viewport.breakpoint(xl) {
-			--flow-space: calc(var(--space-4xl) * 4);
-		}
+	@include viewport.breakpoint(xl) {
+		--flow-space: var(--space-4xl);
 	}
 }
 
@@ -150,6 +166,10 @@
 		column-gap: var(--space-lg);
 		max-width: calc(var(--column-width) * 2);
 	}
+
+	a {
+		@include typography.link(underline);
+	}
 }
 
 .scrollContainer {
@@ -162,6 +182,7 @@
 	padding: var(--space-base) 0;
 	text-align: center;
 	width: 100%;
+	user-select: none;
 }
 
 .float {
@@ -184,19 +205,72 @@
 	}
 }
 
-.vertText {
-	@include typography.display(lg);
-
+.bgVertText {
 	position: absolute;
+	writing-mode: vertical-lr;
+	user-select: none;
+	pointer-events: none;
+}
+
+.vertTextHero {
+	@include typography.display(lg);
 	top: -17%;
 	left: 51.5%;
 	transform: translateX(-50%);
-	writing-mode: vertical-rl;
 	font-size: clamp(13.41rem, 21dvw, 29.23rem); // optical override for vertical text style alignment.
 	text-shadow: 2px -2px 4px var(--text-secondary);
-	user-select: none;
 
 	@include viewport.breakpoint(xs) {
 		left: 51%;
 	}
+}
+
+.vertTextTopLeft {
+	@include typography.display;
+	top: -39px;
+	left: -16px;
+	opacity: 0.025;
+
+	@include viewport.breakpoint(md, max) {
+		font-size: var(--text-3xl);
+		top: -21px;
+	}
+}
+
+.vertTextBottomRight {
+	@include typography.display;
+	transform: rotate(180deg);
+	right: -16px;
+	bottom: -39px;
+	opacity: 0.025;
+
+	@include viewport.breakpoint(md, max) {
+		font-size: var(--text-3xl);
+		bottom: -22px;
+	}
+
+	@include viewport.breakpoint(sm, max) {
+		display: none;
+	}
+}
+
+.multiSectionHeader {
+	text-align: center;
+
+	> * {
+		margin-inline: auto;
+	}
+}
+
+.multiSectionTitle {
+	@include typography.headline;
+
+	margin-bottom: var(--space-lg);
+}
+
+.multiSectionCopy {
+	@include typography.p(lg);
+
+	color: var(--text-tertiary);
+	max-width: 50ch;
 }

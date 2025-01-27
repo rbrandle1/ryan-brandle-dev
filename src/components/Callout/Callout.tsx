@@ -19,7 +19,7 @@ const Callout = ({ children, title, body, iconAccent, titleAccent }: CalloutProp
 			})}
 		>
 			{children ? <div className={styles.icon}>{children}</div> : null}
-			<div className={styles.title}>{title}</div>
+			<h2 className={styles.title}>{title}</h2>
 			{body ? <div className={styles.body}>{body}</div> : null}
 		</div>
 	);

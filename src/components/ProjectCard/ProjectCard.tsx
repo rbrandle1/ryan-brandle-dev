@@ -3,11 +3,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import IconLinkedIn from '@/components/Icons/IconLinkedIn';
 import MetaTags from '@/components/MetaTags/MetaTags';
-import styles from './FeaturedProject.module.scss';
+import styles from './ProjectCard.module.scss';
 
-interface FeaturedProjectProps {
+interface ProjectCardProps {
 	caption?: string;
-	imgRight?: boolean;
 	imgSrc: string;
 	imgAlt: string;
 	hasCropIcon?: boolean;
@@ -19,9 +18,8 @@ interface FeaturedProjectProps {
 	href: string;
 }
 
-const FeaturedProject = ({
+const ProjectCard = ({
 	caption,
-	imgRight,
 	imgSrc,
 	imgAlt,
 	hasCropIcon,
@@ -31,9 +29,9 @@ const FeaturedProject = ({
 	description,
 	buttonText,
 	href,
-}: FeaturedProjectProps) => {
+}: ProjectCardProps) => {
 	return (
-		<article className={cn(styles.component, imgRight && styles.imgRight)}>
+		<article className={styles.component}>
 			{hasCropIcon ? (
 				<div className={styles.cropIconContainer}>
 					<IconLinkedIn />
@@ -62,4 +60,4 @@ const FeaturedProject = ({
 	);
 };
 
-export default FeaturedProject;
+export default ProjectCard;

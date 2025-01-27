@@ -20,23 +20,13 @@
 		grid-template-columns: 1fr 1fr;
 		gap: var(--space-lg);
 	}
-
-	@include viewport.breakpoint(lg) {
-		gap: var(--space-2xl);
-	}
 }
 
 .cropIconContainer {
 	position: absolute;
+	top: calc(var(--space-lg) / -1);
+	right: calc(var(--space-lg) / -1);
 	width: var(--text-lg);
-
-	&:not(.imgRight &) {
-		left: calc(var(--space-lg) / -1);
-	}
-
-	.imgRight & {
-		right: calc(var(--space-lg) / -1);
-	}
 
 	svg {
 		fill: currentColor;
@@ -48,11 +38,7 @@
 	position: relative;
 
 	@include viewport.breakpoint(sm) {
-		margin-top: var(--space-2xl);
-
-		.imgRight & {
-			order: 2;
-		}
+		margin-top: var(--space-sm);
 	}
 
 	figcaption {
@@ -69,10 +55,6 @@
 	padding-right: var(--space-xl);
 	user-select: none;
 	aspect-ratio: 3 / 2;
-
-	@include viewport.breakpoint(sm) {
-		aspect-ratio: 2 / 3;
-	}
 
 	img {
 		object-fit: cover;
@@ -93,7 +75,7 @@
 }
 
 .textContainer {
-	--flow-space: var(--space-lg);
+	--flow-space: var(--space-base);
 
 	> * + * {
 		margin-top: var(--flow-space);
@@ -101,9 +83,13 @@
 }
 
 .title {
-	@include typography.headline;
-	margin-bottom: var(--space-sm);
-	max-width: 17ch;
+	@include typography.headline(xl);
+	margin-bottom: var(--space-xs);
+	max-width: 25ch;
+
+	@include viewport.breakpoint(sm) {
+		max-width: 17ch;
+	}
 }
 
 .description {
@@ -112,4 +98,10 @@
 
 .button {
 	display: inline-block;
+	@include typography.link;
+
+	&::after {
+		content: '\00a0\00a0\2192';
+		line-height: 1.7; //optical alignment
+	}
 }

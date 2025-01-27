@@ -53,7 +53,7 @@
 	}
 
 	a {
-		@include typography.link;
+		@include typography.link(underline);
 	}
 }
 
