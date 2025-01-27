@@ -1,4 +1,8 @@
+'use client';
+
+import { useInView } from 'react-intersection-observer';
 import cn from 'classnames';
+import setInlineStyles from '@/helpers/functions';
 import Image from 'next/image';
 import Link from 'next/link';
 import IconLinkedIn from '@/components/Icons/IconLinkedIn';
@@ -32,15 +36,26 @@ const FeaturedProject = ({
 	buttonText,
 	href,
 }: FeaturedProjectProps) => {
+	const { ref, inView } = useInView({
+		threshold: 0.8,
+		// triggerOnce: true,
+	});
+
 	return (
-		<article className={cn(styles.component, imgRight && styles.imgRight)}>
+		<article
+			ref={ref}
+			className={cn(styles.component, imgRight && styles.imgRight, inView && styles.inView)}
+			style={setInlineStyles({
+				'--saturation': inView ? 1 : 0,
+			})}
+		>
 			{hasCropIcon ? (
 				<div className={styles.cropIconContainer}>
 					<IconLinkedIn />
 				</div>
 			) : null}
 			<figure className={styles.imageContainer}>
-				<Link href={href}>
+				<Link href={href} tabIndex={-1}>
 					<div className={styles.image}>
 						{logo ? <div className={styles.logoContainer}>{logo}</div> : null}
 						<Image src={imgSrc} alt={imgAlt} fill sizes='(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 33vw' />
