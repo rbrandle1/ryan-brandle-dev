@@ -7,6 +7,7 @@ import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import styles from './home.module.scss';
 
 /* Todo: 
+* How to apply a class style or class based on whether the container is in view or not. Intersect observer?
 * Make Article pages and article specific components. ImageGrid component.... variations.
 * Create a boilerplate ts file for each page to include commonly used things like project title, meta tags, etc.
 * figure out section spacing. avoid calc's and use variables instead.
