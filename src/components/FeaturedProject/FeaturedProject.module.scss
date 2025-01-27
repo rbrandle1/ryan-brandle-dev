@@ -5,16 +5,10 @@
 @use 'sass:math';
 
 .component {
-	// --saturation: 0;
-
 	position: relative;
 	display: grid;
 	grid-template-columns: 1fr;
 	gap: var(--space-base);
-
-	// @include viewport.has-hover(':hover', ':focus-within') {
-	// 	--saturation: 1;
-	// }
 
 	@include viewport.breakpoint(sm) {
 		grid-template-columns: 1fr 1fr;
@@ -69,6 +63,15 @@
 	padding-right: var(--space-xl);
 	user-select: none;
 	aspect-ratio: 3 / 2;
+	opacity: 0;
+	transform: translateY(var(--space-base));
+	transition: opacity var(--duration-xl) ease-out, transform var(--duration-xl) ease-out;
+	will-change: opacity, transform;
+
+	&.fadeInUp {
+		opacity: 1;
+		transform: translateY(0);
+	}
 
 	@include viewport.breakpoint(sm) {
 		aspect-ratio: 2 / 3;
@@ -77,8 +80,6 @@
 	img {
 		object-fit: cover;
 		border-radius: var(--radius-default);
-		transition: filter 600ms ease-out;
-		filter: saturate(var(--saturation, 0));
 	}
 }
 
@@ -104,6 +105,15 @@
 	@include typography.headline;
 	margin-bottom: var(--space-sm);
 	max-width: 17ch;
+	// opacity: 0;
+	// transform: translateX(-20px);
+	// transition: transform var(--duration-xl) ease-out, opacity var(--duration-xl) ease-out;
+	// will-change: opacity, transform;
+
+	// &.fadeInUp {
+	// 	opacity: 1;
+	// 	transform: translateX(0);
+	// }
 }
 
 .description {

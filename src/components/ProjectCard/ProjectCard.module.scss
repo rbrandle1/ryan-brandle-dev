@@ -5,16 +5,10 @@
 @use 'sass:math';
 
 .component {
-	--saturation: 0;
-
 	position: relative;
 	display: grid;
 	grid-template-columns: 1fr;
 	gap: var(--space-base);
-
-	@include viewport.has-hover(':hover', ':focus-within') {
-		--saturation: 1;
-	}
 
 	@include viewport.breakpoint(sm) {
 		grid-template-columns: 1fr 1fr;
@@ -59,8 +53,6 @@
 	img {
 		object-fit: cover;
 		border-radius: var(--radius-default);
-		transition: filter 600ms ease-out;
-		filter: saturate(var(--saturation));
 	}
 }
 

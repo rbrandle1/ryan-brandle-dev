@@ -12,7 +12,6 @@ import styles from './home.module.scss';
 * Create a boilerplate ts file for each page to include commonly used things like project title, meta tags, etc.
 * figure out section spacing. avoid calc's and use variables instead.
 * update crop icon to replace LinkedIn icon
-* Figure out image saturation on scroll instead of hover. Figure out mobile.
 * make scroll arrow a circular button... or a square, with accent background.
 * Make buttons view link
 * Add backup words for each FeaturedProject
@@ -20,6 +19,7 @@ import styles from './home.module.scss';
 * Animate vertical text on scroll... using intersection observer?
 * Try updating to line-height units: https://12daysofweb.dev/2024/css-margin-trim-line-height-units/
 * Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
+* Double check prefers reduced motion settings.
 * download and host images locally instead of direct url from unsplash.
 * make favicon
 * Read through all text, footer text, etc and finalize.
@@ -52,6 +52,8 @@ import styles from './home.module.scss';
 	* State management. I had to decide whether prop drilling or using react context was the best approach. I went with context because I came to understand how multiple components could be affected by the theme state, and the best way to manage it was to avoid prop drilling.
 	* 
 	* Animation keyframe rendering issues with Turbopack. I had to move the keyframes to the top of the file to get them to render, instead of utilizing them as css module partials like the other utilities. Also, general challenges getting animations to work smoothly in a responsive way to themes changing.
+	* 
+	* Turbopack issues with utilizing sass :export. I tried to utilize the sass :export to create breakpoint variables to use as JS min/max widths but ultimately couldn't get it to work.
 	* 
 	* Issues with local state to immediately update the theme state. Currently there is a 500 error on page load due to the initial localstorage value not being set. Would love to come back to this.
 	* 
@@ -110,7 +112,7 @@ export default function Home() {
 				</section>
 				<section className={styles.section}>
 					<div className={styles.container}>
-						<Callout title='I make modular, flexible systems that are easy to use.' iconAccent>
+						<Callout title='I make flexible, modular systems that are easy to use.' iconAccent>
 							<IconCodePen />
 						</Callout>
 					</div>

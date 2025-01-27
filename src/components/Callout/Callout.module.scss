@@ -5,6 +5,24 @@
 	place-items: center;
 	gap: var(--space-lg);
 	text-align: center;
+
+	> * {
+		opacity: 0;
+		transform: translateY(var(--space-md));
+		transition: opacity var(--duration-xl) ease-out, transform var(--duration-xl) ease-out;
+		will-change: opacity, transform;
+
+		@for $i from 1 through 3 {
+			&:nth-child(#{$i}) {
+				transition-delay: calc((#{$i} - 1) * var(--duration-lg));
+			}
+		}
+	}
+
+	&.fadeInUp > * {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 .icon {
