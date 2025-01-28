@@ -5,6 +5,12 @@
 @use 'sass:math';
 
 .component {
+	--transition-duration-base: var(--duration-xl);
+	--transition-duration: calc(var(--transition-duration-base) - var(--transition-delay));
+	--transition-distance: var(--space-md);
+	--transition-delay: var(--duration-sm);
+	--transition-ease: ease-in-out;
+
 	position: relative;
 	display: grid;
 	grid-template-columns: 1fr;
@@ -22,12 +28,11 @@
 
 .imageContainer,
 .textContainer {
-	--transition-delay: var(--duration-lg);
-
+	transform: translateY(var(--transition-distance));
 	opacity: 0;
-	transform: translateY(var(--space-lg));
-	transition: opacity var(--duration-xl) ease-out, transform var(--duration-xl) ease-out;
 	will-change: opacity, transform;
+	transition: opacity var(--transition-duration) var(--transition-ease),
+		transform var(--transition-duration) var(--transition-ease);
 
 	.fadeInUp & {
 		opacity: 1;
@@ -55,12 +60,8 @@
 
 .textContainer {
 	--flow-space: var(--space-lg);
-
-	transition-delay: var(--transition-delay);
-
-	@include viewport.breakpoint(sm) {
-		transition-delay: initial;
-	}
+	--transition-distance: var(--space-lg);
+	--transition-duration: var(--transition-duration-base);
 
 	> * + * {
 		margin-top: var(--flow-space);
