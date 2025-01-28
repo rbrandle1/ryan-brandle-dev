@@ -5,16 +5,16 @@
 @use 'sass:math';
 
 .component {
-	--saturation: 0;
+	--transition-duration-base: var(--duration-2xl);
+	--transition-duration: calc(var(--transition-duration-base) - var(--transition-delay));
+	--transition-distance: var(--space-md);
+	--transition-delay: var(--duration-sm);
+	--transition-ease: ease-in-out;
 
 	position: relative;
 	display: grid;
 	grid-template-columns: 1fr;
 	gap: var(--space-base);
-
-	@include viewport.has-hover(':hover', ':focus-within') {
-		--saturation: 1;
-	}
 
 	@include viewport.breakpoint(sm) {
 		grid-template-columns: 1fr 1fr;
@@ -23,6 +23,50 @@
 
 	@include viewport.breakpoint(lg) {
 		gap: var(--space-2xl);
+	}
+}
+
+@media not (prefers-reduced-motion: reduce) {
+	.imageContainer,
+	.textContainer {
+		transform: translateY(var(--transition-distance));
+		opacity: 0;
+		will-change: opacity, transform;
+		transition: opacity var(--transition-duration) var(--transition-ease),
+			transform var(--transition-duration) var(--transition-ease);
+
+		.fadeInUp & {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+}
+
+.imageContainer {
+	position: relative;
+
+	@include viewport.breakpoint(sm) {
+		margin-top: var(--space-2xl);
+		transition-delay: var(--transition-delay);
+
+		.imgRight & {
+			order: 2;
+		}
+	}
+
+	figcaption {
+		@include typography.caption;
+		margin-top: var(--space-sm);
+	}
+}
+
+.textContainer {
+	--flow-space: var(--space-lg);
+	--transition-distance: var(--space-lg);
+	--transition-duration: var(--transition-duration-base);
+
+	> * + * {
+		margin-top: var(--flow-space);
 	}
 }
 
@@ -44,41 +88,32 @@
 	}
 }
 
-.imageContainer {
-	position: relative;
-
-	@include viewport.breakpoint(sm) {
-		margin-top: var(--space-2xl);
-
-		.imgRight & {
-			order: 2;
-		}
-	}
-
-	figcaption {
-		@include typography.caption;
-		margin-top: var(--space-sm);
-	}
-}
-
 .image {
 	position: relative;
 	display: grid;
 	place-items: center;
 	padding-left: var(--space-xl);
 	padding-right: var(--space-xl);
-	user-select: none;
+	border-radius: var(--radius-default);
 	aspect-ratio: 3 / 2;
+	overflow: hidden;
+	user-select: none;
 
 	@include viewport.breakpoint(sm) {
 		aspect-ratio: 2 / 3;
 	}
 
 	img {
+		position: absolute;
 		object-fit: cover;
-		border-radius: var(--radius-default);
-		transition: filter 600ms ease-out;
-		filter: saturate(var(--saturation));
+
+		@media not (prefers-reduced-motion: reduce) {
+			transition: transform var(--duration-xl) ease-out;
+
+			@include viewport.has-hover {
+				transform: scale(1.02);
+			}
+		}
 	}
 }
 
@@ -89,14 +124,7 @@
 
 	svg {
 		fill: var(--icon-over-image);
-	}
-}
-
-.textContainer {
-	--flow-space: var(--space-lg);
-
-	> * + * {
-		margin-top: var(--flow-space);
+		filter: var(--svg-shadow);
 	}
 }
 

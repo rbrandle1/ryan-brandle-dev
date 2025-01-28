@@ -10,6 +10,7 @@
     * Timing
     * Typography
     * Color
+    * Shadows
     * Text
     * Surface
     * Link
@@ -60,6 +61,8 @@
 	--duration-sm: var(--p-duration-2);
 	--duration-md: var(--p-duration-3);
 	--duration-lg: var(--p-duration-4);
+	--duration-xl: var(--p-duration-5);
+	--duration-2xl: var(--p-duration-6);
 
 	/* TYPOGRAPHY */
 	--font-header: var(--p-font-display);
@@ -103,6 +106,10 @@
 	--color-accent-a: var(--p-color-magenta-a);
 	--color-accent-hover: var(--color-accent);
 	--color-accent-active: var(--color-accent);
+
+	/* SHADOWS */
+	--text-shadow-vert: 2px -4px 6px var(--p-color-black-a15);
+	--svg-shadow: drop-shadow(0 1px 2px var(--p-color-black-a10));
 
 	/* TEXT */
 	--text-primary: var(--color-primary);

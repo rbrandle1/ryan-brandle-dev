@@ -1,4 +1,3 @@
-import cn from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 import IconLinkedIn from '@/components/Icons/IconLinkedIn';
@@ -38,7 +37,7 @@ const ProjectCard = ({
 				</div>
 			) : null}
 			<figure className={styles.imageContainer}>
-				<Link href={href}>
+				<Link href={href} tabIndex={-1}>
 					<div className={styles.image}>
 						{logo ? <div className={styles.logoContainer}>{logo}</div> : null}
 						<Image src={imgSrc} alt={imgAlt} fill sizes='(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 33vw' />

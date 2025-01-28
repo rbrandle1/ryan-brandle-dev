@@ -1,10 +1,36 @@
 @use '@/styles/utils/typography';
 
 .callOut {
+	--transition-duration: var(--duration-2xl);
+	--transition-delay: var(--duration-sm);
+	--transition-distance: var(--space-md);
+	--transition-ease: ease-in-out;
+
 	display: grid;
 	place-items: center;
 	gap: var(--space-lg);
 	text-align: center;
+
+	@media not (prefers-reduced-motion: reduce) {
+		> * {
+			opacity: 0;
+			transform: translateY(var(--transition-distance));
+			transition: opacity var(--transition-duration) var(--transition-ease),
+				transform var(--transition-duration) var(--transition-ease);
+			will-change: opacity, transform;
+
+			@for $i from 1 through 3 {
+				&:nth-child(#{$i}) {
+					transition-delay: calc((#{$i} - 1) * var(--transition-delay));
+				}
+			}
+		}
+
+		&.fadeInUp > * {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
 }
 
 .icon {

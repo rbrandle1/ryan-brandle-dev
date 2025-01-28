@@ -5,16 +5,10 @@
 @use 'sass:math';
 
 .component {
-	--saturation: 0;
-
 	position: relative;
 	display: grid;
 	grid-template-columns: 1fr;
 	gap: var(--space-base);
-
-	@include viewport.has-hover(':hover', ':focus-within') {
-		--saturation: 1;
-	}
 
 	@include viewport.breakpoint(sm) {
 		grid-template-columns: 1fr 1fr;
@@ -53,14 +47,22 @@
 	place-items: center;
 	padding-left: var(--space-xl);
 	padding-right: var(--space-xl);
-	user-select: none;
+	border-radius: var(--radius-default);
 	aspect-ratio: 3 / 2;
+	overflow: hidden;
+	user-select: none;
 
 	img {
+		position: absolute;
 		object-fit: cover;
-		border-radius: var(--radius-default);
-		transition: filter 600ms ease-out;
-		filter: saturate(var(--saturation));
+
+		@media not (prefers-reduced-motion: reduce) {
+			transition: transform var(--duration-xl) ease-out;
+
+			@include viewport.has-hover {
+				transform: scale(1.02);
+			}
+		}
 	}
 }
 

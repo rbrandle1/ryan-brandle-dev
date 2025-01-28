@@ -8,6 +8,11 @@
 
 .home {
 	--flow-space: var(--space-lg);
+	--section-spacing: var(--space-6xl);
+
+	@include viewport.breakpoint(xl) {
+		--section-spacing: var(--space-8xl);
+	}
 }
 
 .accentEdge {
@@ -17,8 +22,8 @@
 .section {
 	color: var(--text-primary);
 	background-color: var(--surface-primary);
-	padding-top: var(--space-8xl);
-	padding-bottom: var(--space-8xl);
+	padding-top: var(--section-spacing);
+	padding-bottom: var(--section-spacing);
 }
 
 .container {
@@ -78,8 +83,10 @@
 }
 
 .featuredSection {
-	--flow-space: var(--space-8xl);
-	padding-bottom: calc(var(--space-8xl) * 2);
+	--flow-space: var(--space-4xl);
+	--featured-section-spacing: calc(var(--section-spacing) * 2);
+
+	padding-bottom: var(--featured-section-spacing);
 
 	@include viewport.breakpoint(md) {
 		--flow-space: calc(var(--space-4xl) * 3);
@@ -88,8 +95,10 @@
 
 .projectSection {
 	--flow-space: var(--space-2xl);
-	padding-top: calc(var(--space-8xl) * 2);
-	padding-bottom: calc(var(--space-8xl) * 2);
+	--project-section-spacing: calc(var(--section-spacing) * 2);
+
+	padding-top: var(--project-section-spacing);
+	padding-bottom: var(--project-section-spacing);
 
 	@include viewport.breakpoint(md) {
 		--flow-space: var(--space-3xl);
@@ -197,6 +206,7 @@
 .vertSection {
 	position: relative;
 	overflow: hidden;
+	padding-bottom: var(--space-xl);
 
 	&::before {
 		content: '';
@@ -218,7 +228,7 @@
 	left: 51.5%;
 	transform: translateX(-50%);
 	font-size: clamp(13.41rem, 21dvw, 29.23rem); // optical override for vertical text style alignment.
-	text-shadow: 2px -2px 4px var(--text-secondary);
+	text-shadow: var(--text-shadow-vert);
 
 	@include viewport.breakpoint(xs) {
 		left: 51%;
@@ -255,7 +265,9 @@
 }
 
 .multiSectionHeader {
-	text-align: center;
+	@include viewport.breakpoint(sm) {
+		text-align: center;
+	}
 
 	> * {
 		margin-inline: auto;
