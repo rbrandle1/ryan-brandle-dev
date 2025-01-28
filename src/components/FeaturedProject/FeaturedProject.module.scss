@@ -26,17 +26,19 @@
 	}
 }
 
-.imageContainer,
-.textContainer {
-	transform: translateY(var(--transition-distance));
-	opacity: 0;
-	will-change: opacity, transform;
-	transition: opacity var(--transition-duration) var(--transition-ease),
-		transform var(--transition-duration) var(--transition-ease);
+@media not (prefers-reduced-motion: reduce) {
+	.imageContainer,
+	.textContainer {
+		transform: translateY(var(--transition-distance));
+		opacity: 0;
+		will-change: opacity, transform;
+		transition: opacity var(--transition-duration) var(--transition-ease),
+			transform var(--transition-duration) var(--transition-ease);
 
-	.fadeInUp & {
-		opacity: 1;
-		transform: translateY(0);
+		.fadeInUp & {
+			opacity: 1;
+			transform: translateY(0);
+		}
 	}
 }
 
@@ -104,10 +106,13 @@
 	img {
 		position: absolute;
 		object-fit: cover;
-		transition: transform var(--duration-xl) ease-out;
 
-		@include viewport.has-hover {
-			transform: scale(1.02);
+		@media not (prefers-reduced-motion: reduce) {
+			transition: transform var(--duration-xl) ease-out;
+
+			@include viewport.has-hover {
+				transform: scale(1.02);
+			}
 		}
 	}
 }
@@ -119,6 +124,7 @@
 
 	svg {
 		fill: var(--icon-over-image);
+		filter: var(--svg-shadow);
 	}
 }
 

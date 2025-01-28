@@ -170,6 +170,8 @@
 	--p-color-gray-500: hsl(var(--p-color-neutral-hue), var(--p-color-neutral-sat), 42%);
 	--p-color-gray-900: hsl(var(--p-color-neutral-hue), var(--p-color-neutral-sat), 10%);
 	--p-color-black: hsl(var(--p-color-neutral-hue), var(--p-color-neutral-sat), 0%);
+	--p-color-black-a10: hsla(var(--p-color-neutral-hue), var(--p-color-neutral-sat), 0%, 0.1);
+	--p-color-black-a15: hsla(var(--p-color-neutral-hue), var(--p-color-neutral-sat), 0%, 0.15);
 
 	/* Cyan */
 	--p-color-cyan-hue: 180;

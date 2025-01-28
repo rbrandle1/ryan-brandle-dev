@@ -7,19 +7,16 @@ import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import styles from './home.module.scss';
 
 /* Todo: 
-* How to apply a class style or class based on whether the container is in view or not. Intersect observer?
 * Make Article pages and article specific components. ImageGrid component.... variations.
-* Create a boilerplate ts file for each page to include commonly used things like project title, meta tags, etc.
+* Add backup words for each FeaturedProject
 * figure out section spacing. avoid calc's and use variables instead.
+* Create a boilerplate ts file for each page to include commonly used things like project title, meta tags, etc.
 * update crop icon to replace LinkedIn icon
 * make scroll arrow a circular button... or a square, with accent background.
 * Make buttons view link
-* Add backup words for each FeaturedProject
 * double check vertical spacing on home page through various viewport sizes.
-* Animate vertical text on scroll... using intersection observer?
 * Try updating to line-height units: https://12daysofweb.dev/2024/css-margin-trim-line-height-units/
 * Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
-* Double check prefers reduced motion settings.
 * download and host images locally instead of direct url from unsplash.
 * make favicon
 * Read through all text, footer text, etc and finalize.
@@ -27,6 +24,7 @@ import styles from './home.module.scss';
 * set up a new contact email
 
 * BUGS:
+* have logo present on page load, and does not animate in.
 * In safari, the filter blur is buggy. Sometimes it fills space, sometimes it doesn't. Potentially update the blur for a background image instead of a css filter. Also might be affecting performance with such a large blur.
 * in safari, underlines in link doesn't change on theme change. It does change when you hover over the link.
 
@@ -36,17 +34,10 @@ import styles from './home.module.scss';
 * Maybe put my header in a top level component so it doesn't reload disappear and come back on every pg load? nested layout?
 
 * FUTURE CLEANUP AND EXPLORATION:
-* update aspect to 9/16 on very large screens?
-* add drop shadow to logos in featured project?
-* Change image saturation to be based on whether section is in view instead of hover. 
 * Make a mixin or a variable for hover translate animations.
 * update margins for margin-inline and margin-block elements.
 * Incorporate purple as a gradient to pink?
-	* have logo present on page load.
-	
-	* Set typography utils and classes... explore more modern ways to do this? has:, etc?
-  * Add shadows/elevation, gradients, animation timing and others that don't exist in figma
-  * Try setting base space from 1.6 to 1.8. Also, might need to adjust the real big spaces % max to be larger for a more noticeable difference. Can also run the calculation to a raw value to enhance performance.
+* Try setting base space from 1.6 to 1.8. Also, might need to adjust the real big spaces % max to be larger for a more noticeable difference. Can also run the calculation to a raw value to enhance performance.
 	
 * TALKING POINTS, TROUBLESHOOTING, ETC, WITH THIS PROJECT:
 	* State management. I had to decide whether prop drilling or using react context was the best approach. I went with context because I came to understand how multiple components could be affected by the theme state, and the best way to manage it was to avoid prop drilling.

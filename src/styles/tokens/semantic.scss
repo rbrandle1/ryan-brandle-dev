@@ -10,6 +10,7 @@
     * Timing
     * Typography
     * Color
+    * Shadows
     * Text
     * Surface
     * Link
@@ -105,6 +106,10 @@
 	--color-accent-a: var(--p-color-magenta-a);
 	--color-accent-hover: var(--color-accent);
 	--color-accent-active: var(--color-accent);
+
+	/* SHADOWS */
+	--text-shadow-vert: 2px -4px 6px var(--p-color-black-a15);
+	--svg-shadow: drop-shadow(0 1px 2px var(--p-color-black-a10));
 
 	/* TEXT */
 	--text-primary: var(--color-primary);
