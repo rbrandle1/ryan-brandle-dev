@@ -9,12 +9,12 @@ import styles from './home.module.scss';
 /* Todo: 
 * Make Article pages and article specific components. ImageGrid component.... variations.
 * Add backup words for each FeaturedProject
-* figure out section spacing. avoid calc's and use variables instead.
+* figure out section spacing. avoid calc's and use variables instead. Seems like featured section needs extra spacing on top and bottom because the content is so dense. It is unique to this section because others are not as dense.
 * Create a boilerplate ts file for each page to include commonly used things like project title, meta tags, etc.
 * update crop icon to replace LinkedIn icon
 * make scroll arrow a circular button... or a square, with accent background.
 * Make buttons view link
-* double check vertical spacing on home page through various viewport sizes.
+* Create better easing with cubic-bezier
 * Try updating to line-height units: https://12daysofweb.dev/2024/css-margin-trim-line-height-units/
 * Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
 * download and host images locally instead of direct url from unsplash.
