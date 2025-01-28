@@ -34,13 +34,13 @@ const FeaturedProject = ({
 	buttonText,
 	href,
 }: FeaturedProjectProps) => {
-	const { ref: imageRef, inView: imageInView } = useInView({
+	const { ref, inView } = useInView({
 		threshold: 0.2,
 		triggerOnce: true,
 	});
 
 	return (
-		<article className={cn(styles.component, imgRight && styles.imgRight)}>
+		<article ref={ref} className={cn(styles.component, imgRight && styles.imgRight, inView && styles.fadeInUp)}>
 			{hasCropIcon ? (
 				<div className={styles.cropIconContainer}>
 					<IconLinkedIn />
@@ -48,7 +48,7 @@ const FeaturedProject = ({
 			) : null}
 			<figure className={styles.imageContainer}>
 				<Link href={href} tabIndex={-1}>
-					<div ref={imageRef} className={cn(styles.image, imageInView && styles.fadeInUp)}>
+					<div className={styles.image}>
 						{logo ? <div className={styles.logoContainer}>{logo}</div> : null}
 						<Image src={imgSrc} alt={imgAlt} fill sizes='(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 33vw' />
 					</div>

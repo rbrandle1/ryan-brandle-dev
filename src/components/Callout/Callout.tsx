@@ -14,7 +14,7 @@ interface CalloutProps {
 
 const Callout = ({ children, title, body, iconAccent, titleAccent }: CalloutProps) => {
 	const { ref, inView } = useInView({
-		threshold: 0.8,
+		threshold: 0.9,
 		triggerOnce: true,
 	});
 

@@ -20,6 +20,53 @@
 	}
 }
 
+.imageContainer,
+.textContainer {
+	--transition-delay: var(--duration-lg);
+
+	opacity: 0;
+	transform: translateY(var(--space-lg));
+	transition: opacity var(--duration-xl) ease-out, transform var(--duration-xl) ease-out;
+	will-change: opacity, transform;
+
+	.fadeInUp & {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.imageContainer {
+	position: relative;
+
+	@include viewport.breakpoint(sm) {
+		margin-top: var(--space-2xl);
+		transition-delay: var(--transition-delay);
+
+		.imgRight & {
+			order: 2;
+		}
+	}
+
+	figcaption {
+		@include typography.caption;
+		margin-top: var(--space-sm);
+	}
+}
+
+.textContainer {
+	--flow-space: var(--space-lg);
+
+	transition-delay: var(--transition-delay);
+
+	@include viewport.breakpoint(sm) {
+		transition-delay: initial;
+	}
+
+	> * + * {
+		margin-top: var(--flow-space);
+	}
+}
+
 .cropIconContainer {
 	position: absolute;
 	width: var(--text-lg);
@@ -38,23 +85,6 @@
 	}
 }
 
-.imageContainer {
-	position: relative;
-
-	@include viewport.breakpoint(sm) {
-		margin-top: var(--space-2xl);
-
-		.imgRight & {
-			order: 2;
-		}
-	}
-
-	figcaption {
-		@include typography.caption;
-		margin-top: var(--space-sm);
-	}
-}
-
 .image {
 	position: relative;
 	display: grid;
@@ -63,15 +93,6 @@
 	padding-right: var(--space-xl);
 	user-select: none;
 	aspect-ratio: 3 / 2;
-	opacity: 0;
-	transform: translateY(var(--space-base));
-	transition: opacity var(--duration-xl) ease-out, transform var(--duration-xl) ease-out;
-	will-change: opacity, transform;
-
-	&.fadeInUp {
-		opacity: 1;
-		transform: translateY(0);
-	}
 
 	@include viewport.breakpoint(sm) {
 		aspect-ratio: 2 / 3;
@@ -93,27 +114,10 @@
 	}
 }
 
-.textContainer {
-	--flow-space: var(--space-lg);
-
-	> * + * {
-		margin-top: var(--flow-space);
-	}
-}
-
 .title {
 	@include typography.headline;
 	margin-bottom: var(--space-sm);
 	max-width: 17ch;
-	// opacity: 0;
-	// transform: translateX(-20px);
-	// transition: transform var(--duration-xl) ease-out, opacity var(--duration-xl) ease-out;
-	// will-change: opacity, transform;
-
-	// &.fadeInUp {
-	// 	opacity: 1;
-	// 	transform: translateX(0);
-	// }
 }
 
 .description {
