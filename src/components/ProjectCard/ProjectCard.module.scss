@@ -47,12 +47,19 @@
 	place-items: center;
 	padding-left: var(--space-xl);
 	padding-right: var(--space-xl);
-	user-select: none;
+	border-radius: var(--radius-default);
 	aspect-ratio: 3 / 2;
+	overflow: hidden;
+	user-select: none;
 
 	img {
+		position: absolute;
 		object-fit: cover;
-		border-radius: var(--radius-default);
+		transition: transform var(--duration-xl) ease-out;
+
+		@include viewport.has-hover {
+			transform: scale(1.02);
+		}
 	}
 }
 

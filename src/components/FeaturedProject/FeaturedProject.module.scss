@@ -5,7 +5,7 @@
 @use 'sass:math';
 
 .component {
-	--transition-duration-base: var(--duration-xl);
+	--transition-duration-base: var(--duration-2xl);
 	--transition-duration: calc(var(--transition-duration-base) - var(--transition-delay));
 	--transition-distance: var(--space-md);
 	--transition-delay: var(--duration-sm);
@@ -92,16 +92,23 @@
 	place-items: center;
 	padding-left: var(--space-xl);
 	padding-right: var(--space-xl);
-	user-select: none;
+	border-radius: var(--radius-default);
 	aspect-ratio: 3 / 2;
+	overflow: hidden;
+	user-select: none;
 
 	@include viewport.breakpoint(sm) {
 		aspect-ratio: 2 / 3;
 	}
 
 	img {
+		position: absolute;
 		object-fit: cover;
-		border-radius: var(--radius-default);
+		transition: transform var(--duration-xl) ease-out;
+
+		@include viewport.has-hover {
+			transform: scale(1.02);
+		}
 	}
 }
 
