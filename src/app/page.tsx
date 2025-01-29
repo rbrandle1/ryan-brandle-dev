@@ -7,11 +7,11 @@ import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import styles from './home.module.scss';
 
 /* Todo: 
-* Add backup words for each FeaturedProject
 * Make Article pages and article specific components. ImageGrid component.... variations.
-* figure out section spacing. avoid calc's and use variables instead. Seems like featured section needs extra spacing on top and bottom because the content is so dense. It is unique to this section because others are not as dense.
-* update crop icon to replace LinkedIn icon
 * Make buttons view link
+* figure out section spacing. avoid calc's and use variables instead. Seems like featured section needs extra spacing on top and bottom because the content is so dense. It is unique to this section because others are not as dense.
+* Add backup words for each FeaturedProject
+* update crop icon to replace LinkedIn icon
 * Create better easing with cubic-bezier
 * Create a boilerplate ts file for each page to include commonly used things like project title, meta tags, etc.
 * make scroll arrow a circular button... or a square, with accent background.
