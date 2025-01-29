@@ -7,16 +7,17 @@ import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import styles from './home.module.scss';
 
 /* Todo: 
-* Make Article pages and article specific components. ImageGrid component.... variations.
 * Add backup words for each FeaturedProject
+* Make Article pages and article specific components. ImageGrid component.... variations.
 * figure out section spacing. avoid calc's and use variables instead. Seems like featured section needs extra spacing on top and bottom because the content is so dense. It is unique to this section because others are not as dense.
-* Create a boilerplate ts file for each page to include commonly used things like project title, meta tags, etc.
 * update crop icon to replace LinkedIn icon
-* make scroll arrow a circular button... or a square, with accent background.
 * Make buttons view link
 * Create better easing with cubic-bezier
+* Create a boilerplate ts file for each page to include commonly used things like project title, meta tags, etc.
+* make scroll arrow a circular button... or a square, with accent background.
 * Try updating to line-height units: https://12daysofweb.dev/2024/css-margin-trim-line-height-units/
 * Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
+* Double check cpu and performance/paint issues. If gradient is still causing performance issues, try the png.
 * download and host images locally instead of direct url from unsplash.
 * make favicon
 * Read through all text, footer text, etc and finalize.
@@ -25,7 +26,6 @@ import styles from './home.module.scss';
 
 * BUGS:
 * have logo present on page load, and does not animate in.
-* In safari, the filter blur is buggy. Sometimes it fills space, sometimes it doesn't. Potentially update the blur for a background image instead of a css filter. Also might be affecting performance with such a large blur.
 * in safari, underlines in link doesn't change on theme change. It does change when you hover over the link.
 
 * THEME PICKER LOCAL STORAGE ISSUES:
@@ -34,6 +34,7 @@ import styles from './home.module.scss';
 * Maybe put my header in a top level component so it doesn't reload disappear and come back on every pg load? nested layout?
 
 * FUTURE CLEANUP AND EXPLORATION:
+* Use css grid stack instead of absolute positioning.
 * Make a mixin or a variable for hover translate animations.
 * update margins for margin-inline and margin-block elements.
 * Incorporate purple as a gradient to pink?
