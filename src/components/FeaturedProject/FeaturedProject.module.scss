@@ -120,6 +120,7 @@
 .logoContainer {
 	width: 100%;
 	max-width: 338px;
+	pointer-events: none;
 	z-index: 1;
 
 	svg {

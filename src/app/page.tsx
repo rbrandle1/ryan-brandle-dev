@@ -7,6 +7,8 @@ import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import styles from './home.module.scss';
 
 /* Todo: 
+* add callout size prop to make smaller callouts.
+* make a alt subtitle style that is basically the callout.
 * Make Article pages and article specific components. ImageGrid component.... variations.
 * Make buttons view link
 * figure out section spacing. avoid calc's and use variables instead. Seems like featured section needs extra spacing on top and bottom because the content is so dense. It is unique to this section because others are not as dense.
@@ -17,12 +19,13 @@ import styles from './home.module.scss';
 * make scroll arrow a circular button... or a square, with accent background.
 * Try updating to line-height units: https://12daysofweb.dev/2024/css-margin-trim-line-height-units/
 * Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
-* Double check cpu and performance/paint issues. If gradient is still causing performance issues, try the png.
+* Double check cpu and performance/paint issues. If gradient is still causing performance issues, try the png. If images are too large, try optimizing better. Maybe will-change is causing issues. jpgs for images, pngs for snapshots. heros under 200kb, thumbnails under 30kb. NEXT JS SHOULD OPTIMIZE ALREADY.
 * download and host images locally instead of direct url from unsplash.
 * make favicon
 * Read through all text, footer text, etc and finalize.
 * Get peer review
 * set up a new contact email
+* look in src/fonts. Do I need to do this for my fonts? Delete GeistMono, etc.
 
 * BUGS:
 * have logo present on page load, and does not animate in.
@@ -113,6 +116,18 @@ export default function Home() {
 					<div className={styles.container}>
 						<FeaturedProject
 							caption='Credit: Inspirato, Unsplash/@seefromthesky'
+							imgSrc='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
+							imgAlt='Luxury travel'
+							hasCropIcon
+							logo={<IconLogoInsp />}
+							title='The Inspirato Design System'
+							metaTags={['Branding', 'UX/UI', 'HTML', 'CSS', 'JS', 'React', 'Storybook']}
+							description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+							buttonText='Explore'
+							href='/insp'
+						/>
+						{/* <FeaturedProject
+							caption='Credit: Inspirato, Unsplash/@seefromthesky'
 							imgSrc='https://images.unsplash.com/photo-1484821582734-6c6c9f99a672'
 							imgAlt='Luxury travel website'
 							hasCropIcon
@@ -122,7 +137,7 @@ export default function Home() {
 							description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
 							buttonText='Explore'
 							href='/style'
-						/>
+						/> */}
 						<FeaturedProject
 							caption='Credit: Innovative Business Solutions'
 							imgSrc='https://images.unsplash.com/photo-1560461396-ec0ef7bb29dd'
@@ -175,7 +190,7 @@ export default function Home() {
 							</p>
 						</div>
 						<ProjectCard
-							imgSrc='https://images.unsplash.com/photo-1484821582734-6c6c9f99a672'
+							imgSrc='/images/flashcards.png'
 							imgAlt='Product image'
 							hasCropIcon
 							title='Accessible Flashcards for Kids'
@@ -185,8 +200,8 @@ export default function Home() {
 							href='/style'
 						/>
 						<ProjectCard
-							imgSrc='https://images.unsplash.com/photo-1484821582734-6c6c9f99a672'
-							imgAlt='Product image'
+							imgSrc='/images/codepen-focus.png'
+							imgAlt='CodePen Projects'
 							title='CodePen Explorations'
 							metaTags={['UX/UI', 'HTML', 'CSS', 'JS']}
 							description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
@@ -194,8 +209,8 @@ export default function Home() {
 							href='/style'
 						/>
 						<ProjectCard
-							imgSrc='https://images.unsplash.com/photo-1484821582734-6c6c9f99a672'
-							imgAlt='Product image'
+							imgSrc='/images/comparison-card.png'
+							imgAlt='Grid of colors'
 							title='Comparison Cards with CSS Grid'
 							metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'React']}
 							description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
