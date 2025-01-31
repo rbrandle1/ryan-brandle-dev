@@ -122,7 +122,6 @@ $callout-base: (
 	font-family: var(--font-alt),
 	font-weight: var(--font-weight-bold),
 	line-height: var(--line-height-sm),
-	color: var(--text-primary),
 );
 
 $callouts: (
@@ -160,7 +159,6 @@ $callouts: (
 	font-size: map.get($callout, font-size);
 	font-weight: map.get($callout, font-weight);
 	line-height: map.get($callout, line-height);
-	color: map.get($callout, color);
 }
 
 // PARAGRAPHS

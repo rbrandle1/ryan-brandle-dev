@@ -7,10 +7,10 @@ import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import styles from './home.module.scss';
 
 /* Todo: 
-* add callout size prop to make smaller callouts.
 * make a alt subtitle style that is basically the callout.
 * Make Article pages and article specific components. ImageGrid component.... variations.
 * Make buttons view link
+* update margins to margin-block elements.
 * figure out section spacing. avoid calc's and use variables instead. Seems like featured section needs extra spacing on top and bottom because the content is so dense. It is unique to this section because others are not as dense.
 * Add backup words for each FeaturedProject
 * update crop icon to replace LinkedIn icon
@@ -39,7 +39,6 @@ import styles from './home.module.scss';
 * FUTURE CLEANUP AND EXPLORATION:
 * Use css grid stack instead of absolute positioning.
 * Make a mixin or a variable for hover translate animations.
-* update margins for margin-inline and margin-block elements.
 * Incorporate purple as a gradient to pink?
 * Try setting base space from 1.6 to 1.8. Also, might need to adjust the real big spaces % max to be larger for a more noticeable difference. Can also run the calculation to a raw value to enhance performance.
 	
@@ -117,7 +116,7 @@ export default function Home() {
 						<FeaturedProject
 							caption='Credit: Inspirato, Unsplash/@seefromthesky'
 							imgSrc='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
-							imgAlt='Luxury travel'
+							imgAlt='Boats anchored off a white sandy beach in turquoise blue water'
 							hasCropIcon
 							logo={<IconLogoInsp />}
 							title='The Inspirato Design System'
@@ -191,7 +190,7 @@ export default function Home() {
 						</div>
 						<ProjectCard
 							imgSrc='/images/flashcards.png'
-							imgAlt='Product image'
+							imgAlt='Image of accessible flashcards for kids'
 							hasCropIcon
 							title='Accessible Flashcards for Kids'
 							metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'React']}
@@ -201,7 +200,7 @@ export default function Home() {
 						/>
 						<ProjectCard
 							imgSrc='/images/codepen-focus.png'
-							imgAlt='CodePen Projects'
+							imgAlt='Image of a CodePen project'
 							title='CodePen Explorations'
 							metaTags={['UX/UI', 'HTML', 'CSS', 'JS']}
 							description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
@@ -210,7 +209,7 @@ export default function Home() {
 						/>
 						<ProjectCard
 							imgSrc='/images/comparison-card.png'
-							imgAlt='Grid of colors'
+							imgAlt='A grid of vibrant colors'
 							title='Comparison Cards with CSS Grid'
 							metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'React']}
 							description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."

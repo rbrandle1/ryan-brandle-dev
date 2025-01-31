@@ -3,31 +3,92 @@
 @use '@/styles/utils/viewport';
 @use '@/styles/utils/element';
 
+// TODO: factor in the accent edge spacing for the grid approach.
+// TODO: update to utilize has:(.breakout, .full)...etc.
+
 .section {
 	background-color: var(--surface-primary);
 	padding-top: var(--space-8xl);
 	padding-bottom: var(--space-8xl);
 }
 
-.container {
-	@include layout.max-width;
+// .container {
+// 	@include layout.max-width;
+
+.containerGrid {
+	// TODO: Make this a mixin like max-width and apply to other home?
+
+	--gutter: clamp(var(--space-base), 4dvw, var(--space-lg));
+	--full: minmax(var(--gutter), 1fr);
+	--content: min(var(--viewport-md), 100% - var(--gutter) * 2);
+	--breakout: minmax(0, var(--space-3xl));
+
+	// --flow-space: 1lh;
+
+	border: 1px solid red;
+	display: grid;
+	// row-gap: var(--flow-space);
+	grid-template-columns:
+		[full-start] var(--full)
+		[breakout-start] var(--breakout)
+		[content-start] var(--content) [content-end]
+		var(--breakout) [breakout-end]
+		var(--full) [full-end];
+
+	> * {
+		grid-column: content;
+	}
+
+	.breakout {
+		grid-column: breakout;
+	}
+
+	.full {
+		grid-column: full;
+	}
 
 	> * + * {
-		margin-top: var(--space-base);
+		margin-block-start: var(--flow-space, 1lh);
 	}
 }
 
-// TYPOGRAPHY
-
-.displayLg {
-	@include typography.display(lg);
+.callout {
+	--flow-space: 4lh;
+	//Todo: use clamp on these
+	margin-block-end: calc(var(--flow-space) - 1lh);
+	//TODO: figure out how to handle the the block end issue... can I make the flow work with margin-block and :first/last-child?
 }
 
-.displaySm {
-	@include typography.display(sm);
+.imageContainer {
+	--flow-space: 2lh;
+	position: relative;
+	//Todo: use clamp on these
+	// margin-block: 2lh;
+
+	figcaption {
+		@include typography.caption;
+		margin-top: var(--space-sm);
+	}
 }
 
-.h1 {
+.image {
+	position: relative;
+	display: grid;
+	place-items: center;
+	padding-left: var(--space-xl);
+	padding-right: var(--space-xl);
+	border-radius: var(--radius-default);
+	aspect-ratio: 3 / 2;
+	overflow: hidden;
+	user-select: none;
+
+	img {
+		position: absolute;
+		object-fit: cover;
+	}
+}
+
+.header {
 	@include typography.headline(3xl);
 }
 
@@ -37,33 +98,6 @@
 
 .h3 {
 	@include typography.headline(xl);
-}
-
-.h4 {
-	@include typography.headline(lg);
-}
-
-.h5 {
-	@include typography.headline(md);
-}
-
-.h6 {
-	@include typography.headline(sm);
-}
-
-.calloutLg {
-	@include typography.callout(lg);
-	color: var(--text-accent);
-}
-
-.callout {
-	@include typography.callout;
-	color: var(--text-accent);
-}
-
-.calloutSm {
-	@include typography.callout(sm);
-	color: var(--text-accent);
 }
 
 .pLg {
@@ -78,9 +112,9 @@
 	@include typography.p(sm);
 }
 
-.caption {
-	@include typography.caption;
-}
+// .caption {
+// 	@include typography.caption;
+// }
 
 .altFont {
 	font-family: var(--font-alt);
@@ -94,100 +128,6 @@
 .linkNeutral {
 	@include typography.link-neutral;
 }
-
-// SPACING
-
-.space3xs {
-	width: var(--space-3xs);
-	height: var(--space-3xs);
-	background-color: var(--color-accent);
-}
-
-.space2xs {
-	width: var(--space-2xs);
-	height: var(--space-2xs);
-	background-color: var(--color-accent);
-}
-
-.spaceXs {
-	width: var(--space-xs);
-	height: var(--space-xs);
-	background-color: var(--color-accent);
-}
-
-.spaceSm {
-	width: var(--space-sm);
-	height: var(--space-sm);
-	background-color: var(--color-accent);
-}
-
-.spaceBase {
-	width: var(--space-base);
-	height: var(--space-base);
-	background-color: var(--color-accent);
-}
-
-.spaceMd {
-	width: var(--space-md);
-	height: var(--space-md);
-	background-color: var(--color-accent);
-}
-
-.spaceLg {
-	width: var(--space-lg);
-	height: var(--space-lg);
-	background-color: var(--color-accent);
-}
-
-.spaceXl {
-	width: var(--space-xl);
-	height: var(--space-xl);
-	background-color: var(--color-accent);
-}
-
-.space2xl {
-	width: var(--space-2xl);
-	height: var(--space-2xl);
-	background-color: var(--color-accent);
-}
-
-.space3xl {
-	width: var(--space-3xl);
-	height: var(--space-3xl);
-	background-color: var(--color-accent);
-}
-
-.space4xl {
-	width: var(--space-4xl);
-	height: var(--space-4xl);
-	background-color: var(--color-accent);
-}
-
-.space5xl {
-	width: var(--space-5xl);
-	height: var(--space-5xl);
-	background-color: var(--color-accent);
-}
-
-.space6xl {
-	width: var(--space-6xl);
-	height: var(--space-6xl);
-	background-color: var(--color-accent);
-}
-
-.space7xl {
-	width: var(--space-7xl);
-	height: var(--space-7xl);
-	background-color: var(--color-accent);
-}
-
-.space8xl {
-	width: var(--space-8xl);
-	height: var(--space-8xl);
-	background-color: var(--color-accent);
-}
-
-// OTHER ELEMENTS
 
 .accentEdge {
 	@include element.accent-edge;

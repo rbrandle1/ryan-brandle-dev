@@ -47,7 +47,7 @@ const FeaturedProject = ({
 				</div>
 			) : null}
 			<figure className={styles.imageContainer}>
-				<Link href={href} tabIndex={-1}>
+				<Link href={href} aria-label={`Read more about ${title}`} tabIndex={-1}>
 					<div className={styles.image}>
 						{logo ? <div className={styles.logoContainer}>{logo}</div> : null}
 						<Image src={imgSrc} alt={imgAlt} fill sizes='(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 33vw' />
@@ -61,7 +61,7 @@ const FeaturedProject = ({
 					{metaTags ? <MetaTags items={metaTags} /> : null}
 				</header>
 				<p className={styles.description}>{description}</p>
-				<Link className={styles.button} href={href}>
+				<Link className={styles.button} href={href} aria-label={`Read more about ${title}`}>
 					{buttonText}
 				</Link>
 			</div>

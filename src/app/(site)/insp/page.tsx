@@ -2,13 +2,14 @@ import cn from 'classnames';
 import styles from '../projects.module.scss';
 import Callout from '@/components/Callout/Callout';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const InspPage = () => {
 	return (
-		<div className={styles.projectPage}>
+		<article className={styles.projectPage}>
 			<header className={cn(styles.section, styles.accentEdge)}>
-				<div className={styles.container}>
-					<h1 className={styles.h1}>
+				<div className={styles.containerGrid}>
+					<h1 className={styles.header}>
 						How vexingly <span className={styles.altFont}>&amp;</span> quick daft zebras jump
 					</h1>
 					<div className={styles.calloutSm}>How vexingly quick daft zebras jump</div>
@@ -23,7 +24,7 @@ const InspPage = () => {
 				</div>
 			</header>
 			<section data-section='dark' className={styles.section}>
-				<div className={styles.container}>
+				<div className={styles.containerGrid}>
 					<h2 className={styles.h2}>
 						How vexingly <span className={styles.altFont}>&amp;</span> quick daft zebras jump
 					</h2>
@@ -31,7 +32,46 @@ const InspPage = () => {
 						In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the
 						profound interconnectedness of all things curiosity.
 					</p>
-					<Callout title='Creation is bing bang in a simple, modular approach since.' size='lg' titleAccent />
+					<Callout
+						className={cn(styles.callout, styles.breakout)}
+						title='Creation is bing bang in a simple, modular approach since.'
+						titleAccent
+					/>
+					<p className={styles.p}>
+						In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the
+						profound interconnectedness of all things curiosity.
+					</p>
+					<p className={styles.p}>
+						In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the
+						profound interconnectedness of all things curiosity.
+					</p>
+					<p className={styles.p}>
+						In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the
+						profound interconnectedness of all things curiosity.
+					</p>
+					<p className={styles.p}>
+						In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the
+						profound interconnectedness of all things curiosity.
+					</p>
+					<figure className={cn(styles.imageContainer, styles.breakout)}>
+						<div className={styles.image}>
+							<Image
+								src='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
+								alt='Boats anchored off a white sandy beach in turquoise blue water'
+								fill
+								sizes='(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 33vw'
+							/>
+						</div>
+						<figcaption>test caption</figcaption>
+					</figure>
+					<p className={styles.p}>
+						In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the
+						profound interconnectedness of all things curiosity.
+					</p>
+					<p className={styles.p}>
+						In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the
+						profound interconnectedness of all things curiosity.
+					</p>
 					<p className={styles.p}>
 						In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the
 						profound interconnectedness of all things curiosity.
@@ -39,7 +79,7 @@ const InspPage = () => {
 				</div>
 			</section>
 			<footer className={cn(styles.section, styles.accentEdge)}>
-				<div className={styles.container}>
+				<div className={styles.containerGrid}>
 					<h2 className={styles.h2}>The Final Result</h2>
 					<p className={styles.p}>
 						Ship it! Has been the industry's standard dummy text ever since the 1500s, example when an unknown printer
@@ -52,7 +92,7 @@ const InspPage = () => {
 					</Link>
 				</div>
 			</footer>
-		</div>
+		</article>
 	);
 };
 
