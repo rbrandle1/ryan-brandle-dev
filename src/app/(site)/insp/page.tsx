@@ -31,7 +31,7 @@ const InspPage = () => {
 						In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the
 						profound interconnectedness of all things curiosity.
 					</p>
-					<Callout title='Creation is bing bang in a simple, modular approach since.' titleAccent />
+					<Callout title='Creation is bing bang in a simple, modular approach since.' size='lg' titleAccent />
 					<p className={styles.p}>
 						In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the
 						profound interconnectedness of all things curiosity.

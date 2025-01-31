@@ -107,7 +107,7 @@ export default function Home() {
 				</section>
 				<section className={styles.section}>
 					<div className={styles.container}>
-						<Callout title='I make flexible, modular systems that are easy to use.' iconAccent>
+						<Callout title='I make flexible, modular systems that are easy to use.' size='lg' iconAccent>
 							<IconCodePen />
 						</Callout>
 					</div>
@@ -225,6 +225,7 @@ export default function Home() {
 							title='For product teams that care about the polish.'
 							body='I make flexible, modular systems that are easy to use. I make flexible, modular systems that are easy to use. I make flexible, modular systems that are easy to use.'
 							iconAccent
+							size='lg'
 						>
 							<IconCodePen />
 						</Callout>

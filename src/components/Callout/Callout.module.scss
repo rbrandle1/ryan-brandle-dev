@@ -42,8 +42,19 @@
 }
 
 .title {
-	@include typography.callout(lg);
 	color: var(--title-color, var(--text-primary));
+}
+
+.lg {
+	@include typography.callout(lg);
+}
+
+.md {
+	@include typography.callout(md);
+}
+
+.sm {
+	@include typography.callout(sm);
 }
 
 .body {

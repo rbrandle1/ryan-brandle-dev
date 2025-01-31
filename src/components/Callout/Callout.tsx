@@ -9,10 +9,11 @@ interface CalloutProps {
 	iconAccent?: boolean;
 	title: string;
 	titleAccent?: boolean;
+	size?: 'sm' | 'md' | 'lg';
 	body?: string;
 }
 
-const Callout = ({ children, title, body, iconAccent, titleAccent }: CalloutProps) => {
+const Callout = ({ children, title, size = 'md', body, iconAccent, titleAccent }: CalloutProps) => {
 	const { ref, inView } = useInView({
 		threshold: 0.4,
 		triggerOnce: true,
@@ -28,7 +29,7 @@ const Callout = ({ children, title, body, iconAccent, titleAccent }: CalloutProp
 			})}
 		>
 			{children ? <div className={styles.icon}>{children}</div> : null}
-			<h2 className={styles.title}>{title}</h2>
+			<h2 className={cn(styles.title, styles[size])}>{title}</h2>
 			{body ? <div className={styles.body}>{body}</div> : null}
 		</div>
 	);
