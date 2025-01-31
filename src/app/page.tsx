@@ -219,6 +219,17 @@ export default function Home() {
 						/>
 					</div>
 				</section>
+				<section className={styles.section}>
+					<div className={styles.container}>
+						<Callout
+							title='For product teams that care about the polish.'
+							body='I make flexible, modular systems that are easy to use. I make flexible, modular systems that are easy to use. I make flexible, modular systems that are easy to use.'
+							iconAccent
+						>
+							<IconCodePen />
+						</Callout>
+					</div>
+				</section>
 				<div className={cn(styles.bgVertText, styles.vertTextBottomRight)}>
 					<div>SYSTEM</div>
 					<div>DES</div>
