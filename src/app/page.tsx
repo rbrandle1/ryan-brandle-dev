@@ -7,12 +7,15 @@ import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import styles from './home.module.scss';
 
 /* Todo: 
-* make a alt subtitle style that is basically the callout.
-* Make Basic Image component?
+* Make Hero Image component, variants are metaBox, caption, captionLeft, captionRight, etc. Props are src, alt, caption, etc.
+* Add slashes to captions
+* Tighten up small text line heights
+* Make Hero Image component that contains the Basic Image component...
 * Make TextImage component with left and right variations.
 * Make MultiImage component with left and right variations.
 * Make Mosaic component.
 * Refactor home to be more like article. Make dark sections just a div with data-section='dark'. No other styling. Content within it will have section padding, etc.
+* Refactor word divs to use text-wrap break all?
 * Update section spacing to utilize lh system like articles. Possibly adjust footer widths to line up nicely with article widths and shared grid.
 * Make buttons view link
 * update margins to margin-block elements.
@@ -27,6 +30,7 @@ import styles from './home.module.scss';
 * Double check cpu and performance/paint issues. If gradient is still causing performance issues, try the png. If images are too large, try optimizing better. Maybe will-change is causing issues. jpgs for images, pngs for snapshots. heros under 200kb, thumbnails under 30kb. NEXT JS SHOULD OPTIMIZE ALREADY.
 * download and host images locally instead of direct url from unsplash.
 * make favicon
+* ensure all pages have correct metadata and optimize to AVOID seo for sensitive company names.
 * Read through all text, footer text, etc and finalize.
 * Get peer review
 * set up a new contact email

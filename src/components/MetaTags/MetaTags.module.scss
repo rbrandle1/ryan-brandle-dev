@@ -3,6 +3,7 @@
 
 .meta {
 	@include typography.p(sm);
+	color: inherit;
 	display: flex;
 	font-weight: var(--font-weight-semiBold);
 }
@@ -14,6 +15,10 @@
 
 	@include viewport.breakpoint(1300px) {
 		margin-top: calc(var(--space-2xs) + 1px); // optically alignment icon
+	}
+
+	&.iconAccent {
+		color: var(--icon-accent);
 	}
 }
 

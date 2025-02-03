@@ -48,6 +48,10 @@
 .imageContainer {
 	&:not(:last-child) {
 		margin-block-end: calc(var(--flow-space) - var(--flow-space-base));
+
+		&:has(figcaption) {
+			margin-block-end: calc(var(--flow-space) - var(--flow-space-base) - 1lh); //margin reduction for captions
+		}
 	}
 }
 
@@ -57,29 +61,6 @@
 
 .imageContainer {
 	--flow-space: 2lh;
-	position: relative;
-
-	figcaption {
-		@include typography.caption;
-		margin-top: var(--space-sm);
-	}
-}
-
-.image {
-	position: relative;
-	display: grid;
-	place-items: center;
-	padding-left: var(--space-xl);
-	padding-right: var(--space-xl);
-	border-radius: var(--radius-default);
-	aspect-ratio: 3 / 2;
-	overflow: hidden;
-	user-select: none;
-
-	img {
-		position: absolute;
-		object-fit: cover;
-	}
 }
 
 .h1,

@@ -1,0 +1,44 @@
+@use '@/styles/utils/typography';
+@use '@/styles/utils/viewport';
+
+.heroImage {
+	position: relative;
+}
+
+.metaBox {
+	padding: var(--space-sm) var(--space-md) var(--space-sm) var(--space-base);
+	background-color: var(--color-accent);
+	border-radius: var(--radius-default);
+	max-width: 28ch;
+	position: absolute;
+	z-index: 1;
+	right: var(--gutter, var(--space-lg));
+	top: calc(var(--gutter, var(--space-lg)) / -1);
+}
+
+.image {
+	position: relative;
+	display: grid;
+	place-items: center;
+	padding-left: var(--space-xl);
+	padding-right: var(--space-xl);
+	border-radius: var(--radius-default);
+	aspect-ratio: 3 / 2;
+	overflow: hidden;
+	user-select: none;
+
+	img {
+		object-fit: cover;
+	}
+}
+
+.caption {
+	@include typography.caption;
+	margin-top: var(--space-sm);
+
+	@include viewport.breakpoint(sm) {
+		&.right {
+			text-align: right;
+		}
+	}
+}

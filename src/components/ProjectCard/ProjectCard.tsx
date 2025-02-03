@@ -48,7 +48,7 @@ const ProjectCard = ({
 			<div className={styles.textContainer}>
 				<header>
 					<h3 className={styles.title}>{title}</h3>
-					{metaTags ? <MetaTags items={metaTags} /> : null}
+					{metaTags ? <MetaTags items={metaTags} iconAccent /> : null}
 				</header>
 				<p className={styles.description}>{description}</p>
 				<Link className={styles.button} href={href} aria-label={`Read more about ${title}`}>
