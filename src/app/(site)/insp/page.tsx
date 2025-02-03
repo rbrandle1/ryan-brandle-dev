@@ -31,8 +31,16 @@ const InspPage = () => {
 					</div>
 				</header>
 				<div data-section='dark'>
-					<section className={styles.section}>
+					<section className={cn(styles.section, styles.heroOffset)}>
 						<div className={styles.containerGrid}>
+							<HeroImage
+								className={cn(styles.imageContainer, styles.breakout)}
+								src='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
+								alt='Boats anchored off a white sandy beach in turquoise blue water'
+								caption='test caption'
+								captionRight
+								metaTags={['Branding', 'UX/UI', 'HTML', 'CSS', 'JS', 'React', 'Storybook']}
+							/>
 							<h2 className={styles.h2}>
 								The
 								<br />
@@ -68,8 +76,6 @@ const InspPage = () => {
 								src='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
 								alt='Boats anchored off a white sandy beach in turquoise blue water'
 								caption='test caption'
-								captionRight
-								metaTags={['Branding', 'UX/UI', 'HTML', 'CSS', 'JS', 'React', 'Storybook']}
 							/>
 							<p className={styles.p}>
 								In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the
