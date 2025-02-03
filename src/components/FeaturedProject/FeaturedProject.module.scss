@@ -131,12 +131,12 @@
 
 .title {
 	@include typography.headline;
+	@include typography.optimalHeadlineLength;
 	margin-bottom: var(--space-sm);
-	max-width: 17ch;
 }
 
 .description {
-	max-width: 50ch;
+	@include typography.optimalTextLength;
 }
 
 .button {

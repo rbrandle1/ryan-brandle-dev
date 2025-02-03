@@ -163,8 +163,8 @@
 
 .heroSubtitle {
 	@include typography.p(lg);
+	@include typography.optimalTextLength;
 	color: var(--text-tertiary);
-	max-width: 52ch;
 }
 
 .heroCopy {
@@ -285,7 +285,7 @@
 
 .multiSectionCopy {
 	@include typography.p(lg);
+	@include typography.optimalTextLength;
 
 	color: var(--text-tertiary);
-	max-width: 50ch;
 }

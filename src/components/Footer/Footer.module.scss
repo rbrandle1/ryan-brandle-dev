@@ -38,7 +38,7 @@
 }
 
 .contactContainer {
-	max-width: 45ch;
+	@include typography.optimalTextLength;
 	text-align: center;
 
 	@include viewport.breakpoint(xs) {

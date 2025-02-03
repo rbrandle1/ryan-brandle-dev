@@ -9,75 +9,77 @@ const InspPage = () => {
 		<article className={styles.projectPage}>
 			<header className={cn(styles.section, styles.accentEdge)}>
 				<div className={styles.containerGrid}>
-					<h1 className={styles.header}>
+					<h1 className={styles.h1}>
 						How vexingly <span className={styles.altFont}>&amp;</span> quick daft zebras jump
 					</h1>
 					<div className={styles.calloutSm}>How vexingly quick daft zebras jump</div>
-					<p className={styles.pLg}>
+					{/* <p className={styles.pLg}>
 						In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the
 						profound interconnectedness of all things.{' '}
 						<a href='#' className={styles.link}>
 							Lorem ipsum dolor
 						</a>{' '}
 						curiosity.
-					</p>
+					</p> */}
 				</div>
 			</header>
-			<section data-section='dark' className={styles.section}>
-				<div className={styles.containerGrid}>
-					<h2 className={styles.h2}>
-						How vexingly <span className={styles.altFont}>&amp;</span> quick daft zebras jump
-					</h2>
-					<p className={styles.p}>
-						In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the
-						profound interconnectedness of all things curiosity.
-					</p>
-					<Callout
-						className={cn(styles.callout, styles.breakout)}
-						title='Creation is bing bang in a simple, modular approach since.'
-						titleAccent
-					/>
-					<p className={styles.p}>
-						In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the
-						profound interconnectedness of all things curiosity.
-					</p>
-					<p className={styles.p}>
-						In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the
-						profound interconnectedness of all things curiosity.
-					</p>
-					<p className={styles.p}>
-						In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the
-						profound interconnectedness of all things curiosity.
-					</p>
-					<p className={styles.p}>
-						In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the
-						profound interconnectedness of all things curiosity.
-					</p>
-					<figure className={cn(styles.imageContainer, styles.breakout)}>
-						<div className={styles.image}>
-							<Image
-								src='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
-								alt='Boats anchored off a white sandy beach in turquoise blue water'
-								fill
-								sizes='(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 33vw'
-							/>
-						</div>
-						<figcaption>test caption</figcaption>
-					</figure>
-					<p className={styles.p}>
-						In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the
-						profound interconnectedness of all things curiosity.
-					</p>
-					<p className={styles.p}>
-						In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the
-						profound interconnectedness of all things curiosity.
-					</p>
-					<p className={styles.p}>
-						In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the
-						profound interconnectedness of all things curiosity.
-					</p>
-				</div>
-			</section>
+			<div data-section='dark'>
+				<section className={styles.section}>
+					<div className={styles.containerGrid}>
+						<h2 className={styles.h2}>
+							How vexingly <span className={styles.altFont}>&amp;</span> quick daft zebras jump
+						</h2>
+						<p className={styles.p}>
+							In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the
+							profound interconnectedness of all things curiosity.
+						</p>
+						<Callout
+							className={cn(styles.callout, styles.breakout)}
+							title='Creation is bing bang in a simple, modular approach since.'
+							titleAccent
+						/>
+						<p className={styles.p}>
+							In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the
+							profound interconnectedness of all things curiosity.
+						</p>
+						<p className={styles.p}>
+							In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the
+							profound interconnectedness of all things curiosity.
+						</p>
+						<p className={styles.p}>
+							In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the
+							profound interconnectedness of all things curiosity.
+						</p>
+						<p className={styles.p}>
+							In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the
+							profound interconnectedness of all things curiosity.
+						</p>
+						<figure className={cn(styles.imageContainer, styles.breakout)}>
+							<div className={styles.image}>
+								<Image
+									src='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
+									alt='Boats anchored off a white sandy beach in turquoise blue water'
+									fill
+									sizes='(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 33vw'
+								/>
+							</div>
+							<figcaption>test caption</figcaption>
+						</figure>
+						<p className={styles.p}>
+							In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the
+							profound interconnectedness of all things curiosity.
+						</p>
+						<p className={styles.p}>
+							In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the
+							profound interconnectedness of all things curiosity.
+						</p>
+						<p className={styles.p}>
+							In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the
+							profound interconnectedness of all things curiosity.
+						</p>
+					</div>
+				</section>
+			</div>
 			<footer className={cn(styles.section, styles.accentEdge)}>
 				<div className={styles.containerGrid}>
 					<h2 className={styles.h2}>The Final Result</h2>

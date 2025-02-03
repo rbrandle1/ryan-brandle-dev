@@ -3,8 +3,7 @@
 @use '@/styles/utils/viewport';
 @use '@/styles/utils/element';
 
-// TODO: factor in the accent edge spacing for the grid approach.
-// TODO: update to utilize has:(.breakout, .full)...etc.
+// TODO: Make containerGrid a mixin like max-width and apply to other home.
 
 .section {
 	background-color: var(--surface-primary);
@@ -12,22 +11,15 @@
 	padding-bottom: var(--space-8xl);
 }
 
-// .container {
-// 	@include layout.max-width;
-
 .containerGrid {
-	// TODO: Make this a mixin like max-width and apply to other home?
+	--flow-space-base: 1lh;
 
 	--gutter: clamp(var(--space-base), 4dvw, var(--space-lg));
 	--full: minmax(var(--gutter), 1fr);
 	--content: min(var(--viewport-md), 100% - var(--gutter) * 2);
 	--breakout: minmax(0, var(--space-3xl));
 
-	// --flow-space: 1lh;
-
-	border: 1px solid red;
 	display: grid;
-	// row-gap: var(--flow-space);
 	grid-template-columns:
 		[full-start] var(--full)
 		[breakout-start] var(--breakout)
@@ -48,22 +40,24 @@
 	}
 
 	> * + * {
-		margin-block-start: var(--flow-space, 1lh);
+		margin-block-start: var(--flow-space, var(--flow-space-base));
+	}
+}
+
+.callout,
+.imageContainer {
+	&:not(:last-child) {
+		margin-block-end: calc(var(--flow-space) - var(--flow-space-base));
 	}
 }
 
 .callout {
 	--flow-space: 4lh;
-	//Todo: use clamp on these
-	margin-block-end: calc(var(--flow-space) - 1lh);
-	//TODO: figure out how to handle the the block end issue... can I make the flow work with margin-block and :first/last-child?
 }
 
 .imageContainer {
 	--flow-space: 2lh;
 	position: relative;
-	//Todo: use clamp on these
-	// margin-block: 2lh;
 
 	figcaption {
 		@include typography.caption;
@@ -88,7 +82,13 @@
 	}
 }
 
-.header {
+.h1,
+.h2,
+.h3 {
+	@include typography.optimalHeadlineLength;
+}
+
+.h1 {
 	@include typography.headline(3xl);
 }
 
@@ -100,21 +100,10 @@
 	@include typography.headline(xl);
 }
 
-.pLg {
-	@include typography.p(lg);
-}
-
 .p {
 	@include typography.p;
+	@include typography.optimalTextLength;
 }
-
-.pSm {
-	@include typography.p(sm);
-}
-
-// .caption {
-// 	@include typography.caption;
-// }
 
 .altFont {
 	font-family: var(--font-alt);
@@ -123,10 +112,6 @@
 
 .link {
 	@include typography.link(underline);
-}
-
-.linkNeutral {
-	@include typography.link-neutral;
 }
 
 .accentEdge {

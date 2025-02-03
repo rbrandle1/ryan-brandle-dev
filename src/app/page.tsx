@@ -8,7 +8,12 @@ import styles from './home.module.scss';
 
 /* Todo: 
 * make a alt subtitle style that is basically the callout.
-* Make Article pages and article specific components. ImageGrid component.... variations.
+* Make Basic Image component?
+* Make TextImage component with left and right variations.
+* Make MultiImage component with left and right variations.
+* Make Mosaic component.
+* Refactor home to be more like article. Make dark sections just a div with data-section='dark'. No other styling. Content within it will have section padding, etc.
+* Update section spacing to utilize lh system like articles. Possibly adjust footer widths to line up nicely with article widths and shared grid.
 * Make buttons view link
 * update margins to margin-block elements.
 * figure out section spacing. avoid calc's and use variables instead. Seems like featured section needs extra spacing on top and bottom because the content is so dense. It is unique to this section because others are not as dense.
@@ -28,6 +33,7 @@ import styles from './home.module.scss';
 * look in src/fonts. Do I need to do this for my fonts? Delete GeistMono, etc.
 
 * BUGS:
+* fade in ups are not fast enough. If someone is scrolling too quickly, the fade in lags and needs to catch up. Looks like a blank page at first.
 * have logo present on page load, and does not animate in.
 * in safari, underlines in link doesn't change on theme change. It does change when you hover over the link.
 
@@ -76,7 +82,8 @@ export default function Home() {
 						</h1>
 						<div className={styles.heroDetails}>
 							<p className={styles.heroSubtitle}>
-								This is the 100% custom crafted portfolio site of Ryan Brandle, a Design Engineer and maker of the web.
+								This is the 100% custom crafted portfolio site of Ryan&nbsp;Brandle, a Design Engineer and maker of the
+								web.
 							</p>
 							<p className={styles.heroCopy}>
 								I’m a bing bang with over 15 years of experience in design, development and making top notch products.
