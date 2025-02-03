@@ -52,17 +52,17 @@
 }
 
 .calloutLg {
-	@include typography.callout(lg);
+	@include typography.alt-headline(lg);
 	color: var(--text-accent);
 }
 
 .callout {
-	@include typography.callout;
+	@include typography.alt-headline;
 	color: var(--text-accent);
 }
 
 .calloutSm {
-	@include typography.callout(sm);
+	@include typography.alt-headline(sm);
 	color: var(--text-accent);
 }
 

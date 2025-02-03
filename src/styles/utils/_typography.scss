@@ -117,48 +117,48 @@ $displays: (
 	text-transform: map.get($display, text-transform);
 }
 
-// CALLOUT TEXT
-$callout-base: (
+// ALT TEXT
+$alt-headline-base: (
 	font-family: var(--font-alt),
 	font-weight: var(--font-weight-bold),
 	line-height: var(--line-height-sm),
 );
 
-$callouts: (
+$alt-headlines: (
 	sm:
 		map.merge(
-			$callout-base,
+			$alt-headline-base,
 			(
 				font-size: var(--text-lg),
 			)
 		),
 	md:
 		map.merge(
-			$callout-base,
+			$alt-headline-base,
 			(
 				font-size: var(--text-xl),
 			)
 		),
 	lg:
 		map.merge(
-			$callout-base,
+			$alt-headline-base,
 			(
 				font-size: var(--text-2xl),
 			)
 		),
 );
 
-@mixin callout($variant: md) {
-	$callout: map.get($callouts, $variant);
+@mixin alt-headline($variant: md) {
+	$alt-headline: map.get($alt-headlines, $variant);
 
-	@if not $callout {
-		@error '"#{$variant}" is not a valid variant. Valid variants are: #{map.keys($callouts)}';
+	@if not $alt-headline {
+		@error '"#{$variant}" is not a valid variant. Valid variants are: #{map.keys($alt-headlines)}';
 	}
 
-	font-family: map.get($callout, font-family);
-	font-size: map.get($callout, font-size);
-	font-weight: map.get($callout, font-weight);
-	line-height: map.get($callout, line-height);
+	font-family: map.get($alt-headline, font-family);
+	font-size: map.get($alt-headline, font-size);
+	font-weight: map.get($alt-headline, font-weight);
+	line-height: map.get($alt-headline, line-height);
 }
 
 // PARAGRAPHS

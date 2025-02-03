@@ -47,19 +47,19 @@
 }
 
 .lg {
-	@include typography.callout(md);
+	@include typography.alt-headline(md);
 
 	@include viewport.breakpoint(md) {
-		@include typography.callout(lg);
+		@include typography.alt-headline(lg);
 	}
 }
 
 .md {
-	@include typography.callout(md);
+	@include typography.alt-headline(md);
 }
 
 .sm {
-	@include typography.callout(sm);
+	@include typography.alt-headline(sm);
 }
 
 .body {

@@ -10,24 +10,20 @@ const InspPage = () => {
 			<header className={cn(styles.section, styles.accentEdge)}>
 				<div className={styles.containerGrid}>
 					<h1 className={styles.h1}>
-						How vexingly <span className={styles.altFont}>&amp;</span> quick daft zebras jump
+						Creation <span className={styles.altFont}>&amp;</span> Growth of the Inspirato Design System
 					</h1>
-					<div className={styles.calloutSm}>How vexingly quick daft zebras jump</div>
-					{/* <p className={styles.pLg}>
-						In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the
-						profound interconnectedness of all things.{' '}
-						<a href='#' className={styles.link}>
-							Lorem ipsum dolor
-						</a>{' '}
-						curiosity.
-					</p> */}
+					<div className={styles.subhead}>
+						Preparing a scalable design system for the future of Inspirato's products.
+					</div>
 				</div>
 			</header>
 			<div data-section='dark'>
 				<section className={styles.section}>
 					<div className={styles.containerGrid}>
 						<h2 className={styles.h2}>
-							How vexingly <span className={styles.altFont}>&amp;</span> quick daft zebras jump
+							The
+							<br />
+							Problem
 						</h2>
 						<p className={styles.p}>
 							In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the
@@ -42,6 +38,46 @@ const InspPage = () => {
 							In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the
 							profound interconnectedness of all things curiosity.
 						</p>
+						<p className={styles.p}>
+							In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the
+							profound interconnectedness of all things curiosity.
+						</p>
+						<p className={styles.p}>
+							In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the
+							profound interconnectedness of all things curiosity.
+						</p>
+						<p className={styles.p}>
+							In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the
+							profound interconnectedness of all things curiosity.
+						</p>
+						<figure className={cn(styles.imageContainer, styles.breakout)}>
+							<div className={styles.image}>
+								<Image
+									src='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
+									alt='Boats anchored off a white sandy beach in turquoise blue water'
+									fill
+									sizes='(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 33vw'
+								/>
+							</div>
+							<figcaption>test caption</figcaption>
+						</figure>
+						<p className={styles.p}>
+							In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the
+							profound interconnectedness of all things curiosity.
+						</p>
+						<p className={styles.p}>
+							In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the
+							profound interconnectedness of all things curiosity.
+						</p>
+						<p className={styles.p}>
+							In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the
+							profound interconnectedness of all things curiosity.
+						</p>
+					</div>
+				</section>
+				<section className={styles.section}>
+					<div className={styles.containerGrid}>
+						<h3 className={styles.h3}>Research, Consolidate, Implement</h3>
 						<p className={styles.p}>
 							In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the
 							profound interconnectedness of all things curiosity.
