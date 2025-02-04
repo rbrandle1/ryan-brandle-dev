@@ -6,8 +6,7 @@ import ProjectCard from '@/components/ProjectCard/ProjectCard';
 import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import styles from './home.module.scss';
 
-/* Todo: 
-* Make Hero Image component, variants are metaBox, caption, captionLeft, captionRight, etc. Props are src, alt, caption, etc.
+/* Todo:
 * Add slashes to captions
 * Tighten up small text line heights
 * Make Hero Image component that contains the Basic Image component...

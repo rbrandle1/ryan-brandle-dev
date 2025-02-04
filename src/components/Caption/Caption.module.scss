@@ -1,0 +1,38 @@
+@use '@/styles/utils/typography' as typography;
+@use '@/styles/utils/viewport' as viewport;
+
+.caption {
+	--caption-space: 1lh;
+
+	@include typography.caption;
+	display: flex;
+	margin-top: var(--caption-space);
+	position: relative;
+
+	.text {
+		@include typography.optimal-text-length;
+		padding-left: var(--caption-space);
+	}
+
+	svg {
+		position: absolute;
+		top: -46px;
+		color: var(--icon-accent);
+	}
+
+	&.right {
+		@include viewport.breakpoint(sm) {
+			justify-content: end;
+			text-align: right;
+
+			.text {
+				padding-left: 0;
+				padding-right: 1.6lh;
+			}
+
+			svg {
+				right: var(--space-xs);
+			}
+		}
+	}
+}

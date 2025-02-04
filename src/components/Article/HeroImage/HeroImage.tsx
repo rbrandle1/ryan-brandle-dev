@@ -1,6 +1,7 @@
 import cn from 'classnames';
 import Image from 'next/image';
 import MetaTags from '@/components/MetaTags/MetaTags';
+import Caption from '@/components/Caption/Caption';
 import styles from './HeroImage.module.scss';
 
 interface HeroImageProps {
@@ -26,9 +27,7 @@ const HeroImage = ({ className, src, alt, caption, captionRight, logo, metaTags 
 					{logo ? <div className={styles.logoContainer}>{logo}</div> : null}
 					<Image src={src} alt={alt} fill sizes='(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 33vw' />
 				</div>
-				{caption ? (
-					<figcaption className={cn(styles.caption, captionRight ? styles.right : undefined)}>{caption}</figcaption>
-				) : null}
+				{caption ? <Caption captionRight={captionRight}>{caption}</Caption> : null}
 			</figure>
 		</div>
 	);

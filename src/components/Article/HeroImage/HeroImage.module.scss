@@ -12,8 +12,13 @@
 	max-width: 28ch;
 	position: absolute;
 	z-index: 1;
-	right: var(--gutter, var(--space-lg));
+	left: var(--gutter, var(--space-lg));
 	top: calc(var(--gutter, var(--space-lg)) / -1);
+
+	@include viewport.breakpoint(sm) {
+		left: auto;
+		right: var(--gutter, var(--space-sm));
+	}
 }
 
 .image {
@@ -41,16 +46,5 @@
 	svg {
 		fill: var(--icon-over-image);
 		filter: var(--svg-shadow);
-	}
-}
-
-.caption {
-	@include typography.caption;
-	margin-top: var(--space-sm);
-
-	@include viewport.breakpoint(sm) {
-		&.right {
-			text-align: right;
-		}
 	}
 }

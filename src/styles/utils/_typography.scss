@@ -302,6 +302,7 @@ $paragraphs: (
 @mixin caption {
 	font-size: var(--text-sm);
 	color: var(--text-tertiary);
+	line-height: 1.25;
 }
 
 @mixin optimal-headline-length {
