@@ -131,12 +131,12 @@
 
 .title {
 	@include typography.headline;
-	@include typography.optimalHeadlineLength;
+	@include typography.optimal-headline-length;
 	margin-bottom: var(--space-sm);
 }
 
 .description {
-	@include typography.optimalTextLength;
+	@include typography.optimal-text-length;
 }
 
 .button {

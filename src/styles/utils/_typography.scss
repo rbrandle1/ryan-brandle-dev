@@ -304,10 +304,10 @@ $paragraphs: (
 	color: var(--text-tertiary);
 }
 
-@mixin optimalHeadlineLength {
+@mixin optimal-headline-length {
 	max-width: 12ch;
 }
 
-@mixin optimalTextLength {
+@mixin optimal-text-length {
 	max-width: 50ch;
 }

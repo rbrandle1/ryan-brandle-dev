@@ -64,6 +64,6 @@
 
 .body {
 	@include typography.p(lg);
-	@include typography.optimalTextLength;
+	@include typography.optimal-text-length;
 	color: var(--text-tertiary);
 }

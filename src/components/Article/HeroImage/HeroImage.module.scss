@@ -32,6 +32,18 @@
 	}
 }
 
+.logoContainer {
+	width: 100%;
+	max-width: 500px;
+	pointer-events: none;
+	z-index: 1;
+
+	svg {
+		fill: var(--icon-over-image);
+		filter: var(--svg-shadow);
+	}
+}
+
 .caption {
 	@include typography.caption;
 	margin-top: var(--space-sm);

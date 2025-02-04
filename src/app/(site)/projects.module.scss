@@ -5,6 +5,12 @@
 
 // TODO: Make containerGrid a mixin like max-width and apply to other home.
 
+.heroSection {
+	background-color: var(--surface-primary);
+	padding-top: var(--space-4xl);
+	padding-bottom: calc(var(--space-8xl) + var(--space-2xl));
+}
+
 .section {
 	background-color: var(--surface-primary);
 	padding-top: var(--space-8xl);
@@ -12,13 +18,12 @@
 
 	&.heroOffset {
 		padding-top: 0;
-		margin-top: calc(var(--space-4xl) * -1);
+		margin-top: calc(var(--space-8xl) * -1);
 	}
 }
 
 .containerGrid {
 	--flow-space-base: 1lh;
-
 	--gutter: clamp(var(--space-base), 4dvw, var(--space-lg));
 	--full: minmax(var(--gutter), 1fr);
 	--content: min(var(--viewport-md), 100% - var(--gutter) * 2);
@@ -61,7 +66,7 @@
 }
 
 .callout {
-	--flow-space: 4lh;
+	--flow-space: 8lh;
 }
 
 .imageContainer {
@@ -71,7 +76,7 @@
 .h1,
 .h2,
 .h3 {
-	@include typography.optimalHeadlineLength;
+	@include typography.optimal-headline-length;
 }
 
 .h1 {
@@ -79,10 +84,9 @@
 }
 
 .subhead {
-	@include typography.optimalTextLength;
 	@include typography.p(lg);
+	max-width: 35ch;
 	color: var(--text-tertiary);
-	font-weight: var(--font-weight-semiBold);
 }
 
 .h2 {
@@ -95,12 +99,13 @@
 
 .p {
 	@include typography.p;
-	@include typography.optimalTextLength;
+	@include typography.optimal-text-length;
 }
 
 .altFont {
 	font-family: var(--font-alt);
 	font-weight: var(--font-weight-black);
+	line-height: 1;
 }
 
 .link {

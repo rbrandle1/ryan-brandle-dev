@@ -38,7 +38,7 @@
 }
 
 .contactContainer {
-	@include typography.optimalTextLength;
+	@include typography.optimal-text-length;
 	text-align: center;
 
 	@include viewport.breakpoint(xs) {

@@ -90,12 +90,12 @@
 	max-width: 25ch;
 
 	@include viewport.breakpoint(sm) {
-		@include typography.optimalHeadlineLength;
+		@include typography.optimal-headline-length;
 	}
 }
 
 .description {
-	@include typography.optimalTextLength;
+	@include typography.optimal-text-length;
 }
 
 .button {

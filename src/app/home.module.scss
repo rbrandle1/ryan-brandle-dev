@@ -155,6 +155,7 @@
 .altFont {
 	font-family: var(--font-alt);
 	text-transform: initial;
+	line-height: 1;
 }
 
 .heroDetails > * + * {
@@ -163,7 +164,7 @@
 
 .heroSubtitle {
 	@include typography.p(lg);
-	@include typography.optimalTextLength;
+	@include typography.optimal-text-length;
 	color: var(--text-tertiary);
 }
 
@@ -285,7 +286,7 @@
 
 .multiSectionCopy {
 	@include typography.p(lg);
-	@include typography.optimalTextLength;
+	@include typography.optimal-text-length;
 
 	color: var(--text-tertiary);
 }

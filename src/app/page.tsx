@@ -21,6 +21,8 @@ import styles from './home.module.scss';
 * update margins to margin-block elements.
 * figure out section spacing. avoid calc's and use variables instead. Seems like featured section needs extra spacing on top and bottom because the content is so dense. It is unique to this section because others are not as dense.
 * Add backup words for each FeaturedProject
+* update project card buttons with extra padding to the left and right so highlight is not directly at edge of text.
+* update project card buttons to use an icon, not text for vertical alignment purposes.
 * update crop icon to replace LinkedIn icon
 * Create better easing with cubic-bezier
 * Create a boilerplate ts file for each page to include commonly used things like project title, meta tags, etc.
@@ -136,18 +138,6 @@ export default function Home() {
 							buttonText='Explore'
 							href='/insp'
 						/>
-						{/* <FeaturedProject
-							caption='Credit: Inspirato, Unsplash/@seefromthesky'
-							imgSrc='https://images.unsplash.com/photo-1484821582734-6c6c9f99a672'
-							imgAlt='Luxury travel website'
-							hasCropIcon
-							logo={<IconLogoInsp />}
-							title='The Inspirato Design System'
-							metaTags={['Branding', 'UX/UI', 'HTML', 'CSS', 'JS', 'React', 'Storybook']}
-							description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-							buttonText='Explore'
-							href='/style'
-						/> */}
 						<FeaturedProject
 							caption='Credit: Innovative Business Solutions'
 							imgSrc='https://images.unsplash.com/photo-1560461396-ec0ef7bb29dd'

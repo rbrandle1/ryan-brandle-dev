@@ -9,10 +9,11 @@ interface HeroImageProps {
 	alt: string;
 	caption?: string;
 	captionRight?: boolean;
+	logo?: React.ReactNode;
 	metaTags?: string[];
 }
 
-const HeroImage = ({ className, src, alt, caption, captionRight, metaTags }: HeroImageProps) => {
+const HeroImage = ({ className, src, alt, caption, captionRight, logo, metaTags }: HeroImageProps) => {
 	return (
 		<div className={cn(styles.heroImage, className)}>
 			{metaTags ? (
@@ -22,6 +23,7 @@ const HeroImage = ({ className, src, alt, caption, captionRight, metaTags }: Her
 			) : null}
 			<figure>
 				<div className={styles.image}>
+					{logo ? <div className={styles.logoContainer}>{logo}</div> : null}
 					<Image src={src} alt={alt} fill sizes='(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 33vw' />
 				</div>
 				{caption ? (
