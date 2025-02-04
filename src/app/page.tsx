@@ -127,6 +127,8 @@ export default function Home() {
 					<div className={styles.container}>
 						<FeaturedProject
 							caption='Credit: Inspirato, Unsplash/@seefromthesky'
+							// captionRight
+							hasCaptionIcon={false}
 							imgSrc='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
 							imgAlt='Boats anchored off a white sandy beach in turquoise blue water'
 							hasCropIcon

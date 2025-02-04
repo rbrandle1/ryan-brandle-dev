@@ -11,7 +11,10 @@
 
 	.text {
 		@include typography.optimal-text-length;
-		padding-left: var(--caption-space);
+
+		&.hasIcon {
+			padding-left: var(--caption-space);
+		}
 	}
 
 	svg {
@@ -25,7 +28,7 @@
 			justify-content: end;
 			text-align: right;
 
-			.text {
+			.hasIcon.text {
 				padding-left: 0;
 				padding-right: 1.6lh;
 			}

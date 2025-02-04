@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import IconLinkedIn from '@/components/Icons/IconLinkedIn';
 import MetaTags from '@/components/MetaTags/MetaTags';
+import Caption from '@/components/Caption/Caption';
 import styles from './FeaturedProject.module.scss';
 
 interface FeaturedProjectProps {
@@ -53,7 +54,11 @@ const FeaturedProject = ({
 						<Image src={imgSrc} alt={imgAlt} fill sizes='(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 33vw' />
 					</div>
 				</Link>
-				{caption ? <figcaption>{caption}</figcaption> : null}
+				{caption ? (
+					<Caption captionRight={imgRight} hasIcon={false}>
+						{caption}
+					</Caption>
+				) : null}
 			</figure>
 			<div className={styles.textContainer}>
 				<header>

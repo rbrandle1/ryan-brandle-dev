@@ -53,11 +53,6 @@
 			order: 2;
 		}
 	}
-
-	figcaption {
-		@include typography.caption;
-		margin-top: var(--space-sm);
-	}
 }
 
 .textContainer {

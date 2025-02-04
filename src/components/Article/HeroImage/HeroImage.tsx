@@ -10,11 +10,12 @@ interface HeroImageProps {
 	alt: string;
 	caption?: string;
 	captionRight?: boolean;
+	hasCaptionIcon?: boolean;
 	logo?: React.ReactNode;
 	metaTags?: string[];
 }
 
-const HeroImage = ({ className, src, alt, caption, captionRight, logo, metaTags }: HeroImageProps) => {
+const HeroImage = ({ className, src, alt, caption, captionRight, hasCaptionIcon, logo, metaTags }: HeroImageProps) => {
 	return (
 		<div className={cn(styles.heroImage, className)}>
 			{metaTags ? (
@@ -27,7 +28,11 @@ const HeroImage = ({ className, src, alt, caption, captionRight, logo, metaTags 
 					{logo ? <div className={styles.logoContainer}>{logo}</div> : null}
 					<Image src={src} alt={alt} fill sizes='(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 33vw' />
 				</div>
-				{caption ? <Caption captionRight={captionRight}>{caption}</Caption> : null}
+				{caption ? (
+					<Caption captionRight={captionRight} hasIcon={hasCaptionIcon}>
+						{caption}
+					</Caption>
+				) : null}
 			</figure>
 		</div>
 	);

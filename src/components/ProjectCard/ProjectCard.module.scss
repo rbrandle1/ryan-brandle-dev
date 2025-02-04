@@ -34,11 +34,6 @@
 	@include viewport.breakpoint(sm) {
 		margin-top: var(--space-sm);
 	}
-
-	figcaption {
-		@include typography.caption;
-		margin-top: var(--space-sm);
-	}
 }
 
 .image {

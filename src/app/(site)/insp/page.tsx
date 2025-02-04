@@ -33,6 +33,7 @@ const InspPage = () => {
 							alt='Boats anchored off a white sandy beach in turquoise blue water'
 							caption='Example of discovery process, wire-framing, journey mapping.'
 							captionRight
+							hasCaptionIcon={false}
 							logo={<IconLogoInsp />}
 							metaTags={['Branding', 'UX/UI', 'HTML', 'CSS', 'JS', 'React', 'Storybook']}
 						/>
