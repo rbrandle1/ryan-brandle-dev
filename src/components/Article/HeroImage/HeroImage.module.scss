@@ -38,10 +38,11 @@
 }
 
 .logoContainer {
-	width: 100%;
-	max-width: 500px;
+	width: 75%;
+	max-width: var(--logo-max-width, 500px);
 	pointer-events: none;
 	z-index: 1;
+	margin-left: var(--logo-offset, initial);
 
 	svg {
 		fill: var(--icon-over-image);

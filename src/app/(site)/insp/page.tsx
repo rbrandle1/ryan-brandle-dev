@@ -35,6 +35,7 @@ const InspPage = () => {
 							captionRight
 							hasCaptionIcon={false}
 							logo={<IconLogoInsp />}
+							logoOffset='-5%'
 							metaTags={['Branding', 'UX/UI', 'HTML', 'CSS', 'JS', 'React', 'Storybook']}
 						/>
 						<h2 className={styles.h2}>
@@ -115,17 +116,6 @@ const InspPage = () => {
 							with the new brand identity. This ensured a seamless user experience across all platforms, reinforcing the
 							brand's message and values.
 						</p>
-						{/* <figure className={cn(styles.imageContainer, styles.breakout)}>
-							<div className={styles.image}>
-								<Image
-									src='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
-									alt='Boats anchored off a white sandy beach in turquoise blue water'
-									fill
-									sizes='(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 33vw'
-								/>
-							</div>
-							<figcaption>test caption</figcaption>
-						</figure> */}
 						<p className={styles.p}>
 							The outcome of this project was a testament to the power of effective branding in driving business
 							success. By prioritizing user experience and visual cohesion, we were able to craft a web branding
