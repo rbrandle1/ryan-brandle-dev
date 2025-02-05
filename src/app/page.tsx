@@ -25,9 +25,9 @@ import styles from './home.module.scss';
 * make scroll arrow a circular button... or a square, with accent background.
 * Try updating to line-height units: https://12daysofweb.dev/2024/css-margin-trim-line-height-units/
 * Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
-* Double check cpu and performance/paint issues. If gradient is still causing performance issues, try the png. If images are too large, try optimizing better. Maybe will-change is causing issues. jpgs for images, pngs for snapshots. heros under 200kb, thumbnails under 30kb. NEXT JS SHOULD OPTIMIZE ALREADY.
-* download and host images locally instead of direct url from unsplash.
+* Double check cpu and performance/paint issues. If gradient is still causing performance issues, try the png. Maybe will-change is causing issues. jpgs for images, pngs for snapshots. heros under 200kb, thumbnails under 30kb. NEXT JS SHOULD OPTIMIZE ALREADY.
 * make favicon
+* Try to get all altfont ampersands to be centered, not baseline.
 * ensure all pages have correct metadata and optimize to AVOID seo for sensitive company names.
 * Read through all text, footer text, etc and finalize.
 * Get peer review

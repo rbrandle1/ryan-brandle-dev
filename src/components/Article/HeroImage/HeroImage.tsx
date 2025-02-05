@@ -50,7 +50,7 @@ const HeroImage = ({
 							{logo}
 						</div>
 					) : null}
-					<Image src={src} alt={alt} fill sizes='(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 33vw' />
+					<Image src={src} alt={alt} fill sizes='(max-width: 1300px) 90vw, 1205px' />
 				</div>
 				{caption ? (
 					<Caption captionRight={captionRight} hasIcon={hasCaptionIcon}>

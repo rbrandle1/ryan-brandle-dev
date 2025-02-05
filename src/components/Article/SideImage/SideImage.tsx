@@ -28,7 +28,7 @@ const SideImage = ({
 		<section className={cn(styles.component, imgRight && styles.imgRight, className)}>
 			<figure className={styles.imageContainer}>
 				<div className={styles.image}>
-					<Image src={imgSrc} alt={imgAlt} fill sizes='(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 33vw' />
+					<Image src={imgSrc} alt={imgAlt} fill sizes='(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 500px' />
 				</div>
 				{caption ? (
 					<Caption captionRight={captionRight} hasIcon={hasCaptionIcon}>

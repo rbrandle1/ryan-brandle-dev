@@ -115,8 +115,12 @@
 	--flow-space: 8lh;
 }
 
-.sideImage {
+.sideImageContainer {
 	--flow-space: 8lh;
+
+	> * + * {
+		margin-block-start: var(--flow-space, var(--flow-space-base));
+	}
 }
 
 .link {
