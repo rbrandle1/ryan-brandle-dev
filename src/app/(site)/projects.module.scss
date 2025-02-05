@@ -8,13 +8,12 @@
 .projectPage {
 	p {
 		@include typography.p;
-		@include typography.optimal-text-length;
+		max-width: var(--optimal-line-length-base);
 	}
 
 	.h1,
-	.h2,
-	.h3 {
-		@include typography.optimal-headline-length;
+	.h2 {
+		max-width: var(--optimal-line-length-2xs);
 	}
 
 	.h1 {
@@ -27,12 +26,14 @@
 
 	.h3 {
 		@include typography.headline(xl);
+		max-width: var(--optimal-line-length-xs);
 	}
 
 	.subhead {
 		@include typography.p(lg);
-		max-width: 35ch;
+		max-width: var(--optimal-line-length-sm);
 		color: var(--text-tertiary);
+		text-wrap: balance;
 	}
 
 	.altFont {

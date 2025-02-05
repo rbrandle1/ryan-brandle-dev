@@ -14,6 +14,7 @@ $headline-base: (
 	line-height: var(--line-height-xs),
 	color: var(--text-primary),
 	text-transform: uppercase,
+	text-wrap: balance,
 );
 
 $headlines: (
@@ -74,6 +75,7 @@ $headlines: (
 	line-height: map.get($headline, line-height);
 	color: map.get($headline, color);
 	text-transform: map.get($headline, text-transform);
+	text-wrap: map.get($headline, text-wrap);
 }
 
 // DISPLAY TEXT
@@ -303,12 +305,5 @@ $paragraphs: (
 	font-size: var(--text-sm);
 	color: var(--text-tertiary);
 	line-height: var(--line-height-sm);
-}
-
-@mixin optimal-headline-length {
-	max-width: 12ch;
-}
-
-@mixin optimal-text-length {
-	max-width: 50ch;
+	text-wrap: balance;
 }

@@ -14,6 +14,7 @@
 	z-index: 1;
 	left: var(--gutter, var(--space-lg));
 	top: calc(var(--gutter, var(--space-lg)) / -1);
+	transition: background-color 250ms ease-out 100ms;
 
 	@include viewport.breakpoint(sm) {
 		left: auto;

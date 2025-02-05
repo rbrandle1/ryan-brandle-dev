@@ -158,18 +158,24 @@
 	line-height: var(--line-height-2xs);
 }
 
-.heroDetails > * + * {
-	margin-top: var(--flow-space);
+.heroDetails {
+	@include viewport.breakpoint(md, max) {
+		max-width: var(--optimal-line-length-base);
+	}
+
+	> * + * {
+		margin-top: var(--flow-space);
+	}
 }
 
 .heroSubtitle {
 	@include typography.p(lg);
-	@include typography.optimal-text-length;
+	max-width: var(--optimal-line-length-base);
 	color: var(--text-tertiary);
 }
 
 .heroCopy {
-	--column-width: 50ch;
+	--column-width: var(--optimal-line-length-base);
 
 	@include typography.p;
 	max-width: var(--column-width);
@@ -271,10 +277,10 @@
 .multiSectionHeader {
 	@include viewport.breakpoint(sm) {
 		text-align: center;
-	}
 
-	> * {
-		margin-inline: auto;
+		> * {
+			margin-inline: auto;
+		}
 	}
 }
 
@@ -286,7 +292,7 @@
 
 .multiSectionCopy {
 	@include typography.p(lg);
-	@include typography.optimal-text-length;
+	max-width: var(--optimal-line-length-base);
 
 	color: var(--text-tertiary);
 }

@@ -126,12 +126,16 @@
 
 .title {
 	@include typography.headline;
-	@include typography.optimal-headline-length;
+	max-width: var(--optimal-line-length-xs);
 	margin-bottom: var(--space-sm);
+
+	@include viewport.breakpoint(sm) {
+		max-width: var(--optimal-line-length-2xs);
+	}
 }
 
 .description {
-	@include typography.optimal-text-length;
+	max-width: var(--optimal-line-length-base);
 }
 
 .button {

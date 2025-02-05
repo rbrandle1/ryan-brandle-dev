@@ -40,11 +40,11 @@
 
 .textContainer {
 	@include viewport.breakpoint(sm) {
-		width: 40ch;
+		width: var(--optimal-line-length-sm);
 	}
 
 	@include viewport.breakpoint(md) {
-		width: 50ch;
+		width: var(--optimal-line-length-base);
 	}
 
 	> * + * {

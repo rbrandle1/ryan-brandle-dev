@@ -90,6 +90,12 @@
 	--line-height-sm: var(--p-line-height-3);
 	--line-height-base: var(--p-line-height-4);
 
+	/* OPTIMAL LINE LENGTH */
+	--optimal-line-length-2xs: var(--p-optimal-line-length-1);
+	--optimal-line-length-xs: var(--p-optimal-line-length-2);
+	--optimal-line-length-sm: var(--p-optimal-line-length-3);
+	--optimal-line-length-base: var(--p-optimal-line-length-4);
+
 	/* COLOR */
 	--color-primary: var(--p-color-black);
 	--color-primary-hover: var(--color-primary);
