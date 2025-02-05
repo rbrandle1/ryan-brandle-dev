@@ -5,6 +5,43 @@
 
 // TODO: Make containerGrid a mixin like max-width and apply to other home.
 
+.projectPage {
+	p {
+		@include typography.p;
+		@include typography.optimal-text-length;
+	}
+
+	.h1,
+	.h2,
+	.h3 {
+		@include typography.optimal-headline-length;
+	}
+
+	.h1 {
+		@include typography.headline(3xl);
+	}
+
+	.h2 {
+		@include typography.headline(2xl);
+	}
+
+	.h3 {
+		@include typography.headline(xl);
+	}
+
+	.subhead {
+		@include typography.p(lg);
+		max-width: 35ch;
+		color: var(--text-tertiary);
+	}
+
+	.altFont {
+		font-family: var(--font-alt);
+		font-weight: var(--font-weight-black);
+		line-height: var(--line-height-2xs);
+	}
+}
+
 .heroSection {
 	background-color: var(--surface-primary);
 	padding-top: var(--space-4xl);
@@ -71,41 +108,6 @@
 
 .imageContainer {
 	--flow-space: 2lh;
-}
-
-.h1,
-.h2,
-.h3 {
-	@include typography.optimal-headline-length;
-}
-
-.h1 {
-	@include typography.headline(3xl);
-}
-
-.subhead {
-	@include typography.p(lg);
-	max-width: 35ch;
-	color: var(--text-tertiary);
-}
-
-.h2 {
-	@include typography.headline(2xl);
-}
-
-.h3 {
-	@include typography.headline(xl);
-}
-
-.p {
-	@include typography.p;
-	@include typography.optimal-text-length;
-}
-
-.altFont {
-	font-family: var(--font-alt);
-	font-weight: var(--font-weight-black);
-	line-height: 1;
 }
 
 .link {

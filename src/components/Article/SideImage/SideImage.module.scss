@@ -1,3 +1,6 @@
+@use '@/styles/utils/typography' as typography;
+@use '@/styles/utils/viewport' as viewport;
+
 .component {
 	// display: grid;
 	// grid-template-columns: 1fr;
@@ -8,10 +11,53 @@
 	grid-template-columns: 1fr 1fr;
 }
 
-.headline {
-	@include typography.headline(xl);
+// .headline {
+// 	@include typography.headline(xl);
+// 	@include typography.optimal-headline-length;
+// }
+
+// .text {
+// 	@include typography.p;
+// 	@include typography.optimal-text-length;
+// }
+
+.imageContainer {
+	position: relative;
+
+	@include viewport.breakpoint(sm) {
+		.imgRight & {
+			order: 2;
+		}
+	}
 }
 
-.text {
-	@include typography.p;
+.textContainer {
+	--flow-space: var(--space-lg);
+	--transition-distance: var(--space-lg);
+	--transition-duration: var(--transition-duration-base);
+
+	> * + * {
+		margin-top: var(--flow-space);
+	}
+}
+
+.image {
+	position: relative;
+	display: grid;
+	place-items: center;
+	padding-left: var(--space-xl);
+	padding-right: var(--space-xl);
+	border-radius: var(--radius-default);
+	background-color: var(--surface-neutral);
+	aspect-ratio: 3 / 2;
+	overflow: hidden;
+	user-select: none;
+
+	@include viewport.breakpoint(sm) {
+		aspect-ratio: 2 / 3;
+	}
+
+	img {
+		object-fit: cover;
+	}
 }

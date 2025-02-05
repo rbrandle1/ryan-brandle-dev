@@ -4,14 +4,15 @@ import styles from './SideImage.module.scss';
 
 interface SideImageProps {
 	className?: string;
+	children?: React.ReactNode;
 	imgSrc: string;
 	imgAlt: string;
-	headline: string;
-	text: string | React.ReactNode;
+	// headline: string;
+	// text: string | React.ReactNode;
 	imgRight?: boolean;
 }
 
-const SideImage = ({ className, imgSrc, imgAlt, headline, text, imgRight }: SideImageProps) => {
+const SideImage = ({ className, imgSrc, imgAlt, imgRight, children }: SideImageProps) => {
 	return (
 		<section className={cn(styles.component, imgRight && styles.imgRight, className)}>
 			<figure className={styles.imageContainer}>
@@ -20,10 +21,11 @@ const SideImage = ({ className, imgSrc, imgAlt, headline, text, imgRight }: Side
 				</div>
 			</figure>
 			<div className={styles.textContainer}>
-				<header>
+				{/* <header>
 					<h3 className={styles.headline}>{headline}</h3>
 				</header>
-				<div className={styles.text}>{text}</div>
+				<div className={styles.text}>{text}</div> */}
+				{children}
 			</div>
 		</section>
 	);

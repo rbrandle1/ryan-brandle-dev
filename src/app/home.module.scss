@@ -155,7 +155,7 @@
 .altFont {
 	font-family: var(--font-alt);
 	text-transform: initial;
-	line-height: 1;
+	line-height: var(--line-height-2xs);
 }
 
 .heroDetails > * + * {

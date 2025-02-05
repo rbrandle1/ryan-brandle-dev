@@ -11,7 +11,7 @@
 $headline-base: (
 	font-family: var(--font-header),
 	font-weight: var(--font-weight-bold),
-	line-height: var(--line-height-sm),
+	line-height: var(--line-height-xs),
 	color: var(--text-primary),
 	text-transform: uppercase,
 );
@@ -80,7 +80,7 @@ $headlines: (
 $display-base: (
 	font-family: var(--font-header),
 	font-weight: var(--font-weight-bold),
-	line-height: var(--line-height-xs),
+	line-height: var(--line-height-2xs),
 	color: var(--text-primary),
 	text-transform: uppercase,
 );
@@ -121,7 +121,7 @@ $displays: (
 $alt-headline-base: (
 	font-family: var(--font-alt),
 	font-weight: var(--font-weight-bold),
-	line-height: var(--line-height-sm),
+	line-height: var(--line-height-xs),
 );
 
 $alt-headlines: (
@@ -302,7 +302,7 @@ $paragraphs: (
 @mixin caption {
 	font-size: var(--text-sm);
 	color: var(--text-tertiary);
-	line-height: 1.25;
+	line-height: var(--line-height-sm);
 }
 
 @mixin optimal-headline-length {

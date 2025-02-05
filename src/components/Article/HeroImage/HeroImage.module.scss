@@ -19,6 +19,18 @@
 		left: auto;
 		right: var(--gutter, var(--space-sm));
 	}
+
+	> div > div {
+		margin-top: 3px;
+
+		@include viewport.breakpoint(sm) {
+			margin-top: 4px;
+		}
+	}
+
+	ul {
+		line-height: var(--line-height-sm);
+	}
 }
 
 .image {

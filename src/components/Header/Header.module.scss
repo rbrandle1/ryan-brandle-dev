@@ -47,7 +47,7 @@
 .logoText {
 	padding-left: var(--space-sm);
 	text-wrap: nowrap;
-	line-height: 1;
+	line-height: var(--line-height-2xs);
 	margin-top: -5px;
 
 	@include viewport.breakpoint(md) {

@@ -85,7 +85,7 @@
 .altFont {
 	font-family: var(--font-alt);
 	font-weight: var(--font-weight-black);
-	line-height: 1;
+	line-height: var(--line-height-2xs);
 }
 
 .link {
