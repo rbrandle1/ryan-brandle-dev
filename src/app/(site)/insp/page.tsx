@@ -99,13 +99,24 @@ const InspPage = () => {
 				</section>
 				<section className={styles.section}>
 					<div className={styles.containerGrid}>
-						<h3 className={styles.h3}>Research, Consolidate, Implement</h3>
+						<h2 className={styles.h2}>
+							The
+							<br />
+							Solution
+						</h2>
 						<p className={styles.p}>
 							Our research phase involved conducting competitor analysis, user surveys, and stakeholder interviews to
 							gain a deeper understanding of the target audience and their needs. This informed the development of a
 							comprehensive brand strategy, ensuring that the new web branding was both visually appealing and
 							functionally effective.
 						</p>
+						<HeroImage
+							className={cn(styles.imageContainer, styles.breakout)}
+							src='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
+							alt='Boats anchored off a white sandy beach in turquoise blue water'
+							caption='Example of discovery process, wire-framing, journey mapping.'
+							captionRight
+						/>
 						<p className={styles.p}>
 							Consolidation of the brand identity was crucial in establishing a cohesive visual language across all
 							digital touchpoints. This included the creation of a brand style guide, outlining the use of typography,
@@ -116,6 +127,8 @@ const InspPage = () => {
 							with the new brand identity. This ensured a seamless user experience across all platforms, reinforcing the
 							brand's message and values.
 						</p>
+						<h3 className={styles.h3}>Research, Consolidate, Implement</h3>
+
 						<p className={styles.p}>
 							The outcome of this project was a testament to the power of effective branding in driving business
 							success. By prioritizing user experience and visual cohesion, we were able to craft a web branding

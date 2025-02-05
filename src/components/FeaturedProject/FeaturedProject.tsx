@@ -9,6 +9,7 @@ import Caption from '@/components/Caption/Caption';
 import styles from './FeaturedProject.module.scss';
 
 interface FeaturedProjectProps {
+	className?: string;
 	caption?: string;
 	imgRight?: boolean;
 	imgSrc: string;
@@ -23,6 +24,7 @@ interface FeaturedProjectProps {
 }
 
 const FeaturedProject = ({
+	className,
 	caption,
 	imgRight,
 	imgSrc,
@@ -41,7 +43,10 @@ const FeaturedProject = ({
 	});
 
 	return (
-		<article ref={ref} className={cn(styles.component, imgRight && styles.imgRight, inView && styles.fadeInUp)}>
+		<article
+			ref={ref}
+			className={cn(styles.component, imgRight && styles.imgRight, inView && styles.fadeInUp, className)}
+		>
 			{hasCropIcon ? (
 				<div className={styles.cropIconContainer}>
 					<IconLinkedIn />

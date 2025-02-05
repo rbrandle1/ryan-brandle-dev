@@ -7,10 +7,7 @@ import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import styles from './home.module.scss';
 
 /* Todo:
-* Add slashes to captions
-* Tighten up small text line heights
-* Make Hero Image component that contains the Basic Image component...
-* Make TextImage component with left and right variations.
+* Make continue SideImage component with left and right variations.
 * Make MultiImage component with left and right variations.
 * Make Mosaic component.
 * Refactor home to be more like article. Make dark sections just a div with data-section='dark'. No other styling. Content within it will have section padding, etc.
@@ -127,8 +124,6 @@ export default function Home() {
 					<div className={styles.container}>
 						<FeaturedProject
 							caption='Credit: Inspirato, Unsplash/@seefromthesky'
-							// captionRight
-							hasCaptionIcon={false}
 							imgSrc='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
 							imgAlt='Boats anchored off a white sandy beach in turquoise blue water'
 							hasCropIcon

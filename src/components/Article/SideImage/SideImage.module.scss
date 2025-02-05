@@ -1,0 +1,17 @@
+.component {
+	// display: grid;
+	// grid-template-columns: 1fr;
+	// gap: var(--space-base);
+}
+
+.imgRight {
+	grid-template-columns: 1fr 1fr;
+}
+
+.headline {
+	@include typography.headline(xl);
+}
+
+.text {
+	@include typography.p;
+}
