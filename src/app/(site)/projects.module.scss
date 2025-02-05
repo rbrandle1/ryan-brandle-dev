@@ -91,11 +91,20 @@
 	}
 }
 
-.callout,
-.imageContainer {
+// TODO: Make this a single class instead
+// Todo: only apply figcaption to imageContainer
+
+// alters the margin bottom of certain elements to account for base flow space of following elements
+.flowOffset {
 	&:not(:last-child) {
 		margin-block-end: calc(var(--flow-space) - var(--flow-space-base));
+	}
+}
 
+.imageContainer {
+	--flow-space: 2lh;
+
+	&:not(:last-child) {
 		&:has(figcaption) {
 			margin-block-end: calc(var(--flow-space) - var(--flow-space-base) - 1lh); //margin reduction for captions
 		}
@@ -106,8 +115,8 @@
 	--flow-space: 8lh;
 }
 
-.imageContainer {
-	--flow-space: 2lh;
+.sideImage {
+	--flow-space: 8lh;
 }
 
 .link {

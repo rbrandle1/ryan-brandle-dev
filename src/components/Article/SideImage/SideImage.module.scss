@@ -2,24 +2,31 @@
 @use '@/styles/utils/viewport' as viewport;
 
 .component {
-	// display: grid;
-	// grid-template-columns: 1fr;
-	// gap: var(--space-base);
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: var(--component-gap-space, 2lh);
+
+	@include viewport.breakpoint(sm, max) {
+		--component-gap-space: 2lh;
+
+		&:has(figcaption) {
+			gap: calc(var(--component-gap-space) - var(--flow-space-base));
+		}
+	}
+
+	@include viewport.breakpoint(sm) {
+		--component-gap-space: 1lh;
+
+		grid-template-columns: 1fr 1fr;
+	}
+
+	@include viewport.breakpoint(md) {
+		--component-gap-space: 2lh;
+
+		grid-template-columns: 1fr 1fr;
+	}
 }
-
-.imgRight {
-	grid-template-columns: 1fr 1fr;
-}
-
-// .headline {
-// 	@include typography.headline(xl);
-// 	@include typography.optimal-headline-length;
-// }
-
-// .text {
-// 	@include typography.p;
-// 	@include typography.optimal-text-length;
-// }
 
 .imageContainer {
 	position: relative;
@@ -32,12 +39,16 @@
 }
 
 .textContainer {
-	--flow-space: var(--space-lg);
-	--transition-distance: var(--space-lg);
-	--transition-duration: var(--transition-duration-base);
+	@include viewport.breakpoint(sm) {
+		width: 40ch;
+	}
+
+	@include viewport.breakpoint(md) {
+		width: 50ch;
+	}
 
 	> * + * {
-		margin-top: var(--flow-space);
+		margin-block-start: var(--flow-space-base);
 	}
 }
 

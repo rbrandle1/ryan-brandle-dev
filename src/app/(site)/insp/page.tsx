@@ -29,7 +29,7 @@ const InspPage = () => {
 				<section className={cn(styles.section, styles.heroOffset)}>
 					<div className={styles.containerGrid}>
 						<HeroImage
-							className={cn(styles.imageContainer, styles.breakout)}
+							className={cn(styles.imageContainer, styles.flowOffset, styles.breakout)}
 							src='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
 							alt='Boats anchored off a white sandy beach in turquoise blue water'
 							caption='Example of discovery process, wire-framing, journey mapping.'
@@ -56,7 +56,7 @@ const InspPage = () => {
 							and ultimately, conversion rates.
 						</p>
 						<HeroImage
-							className={cn(styles.imageContainer, styles.breakout)}
+							className={cn(styles.imageContainer, styles.flowOffset, styles.breakout)}
 							src='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
 							alt='Boats anchored off a white sandy beach in turquoise blue water'
 							caption='Example of discovery process, wire-framing, journey mapping.'
@@ -77,7 +77,7 @@ const InspPage = () => {
 							ultimately driving business growth.
 						</p>
 						<Callout
-							className={cn(styles.callout, styles.breakout)}
+							className={cn(styles.callout, styles.flowOffset, styles.breakout)}
 							title='Creation is bing bang in a simple, modular approach since.'
 							titleAccent
 						/>
@@ -112,7 +112,7 @@ const InspPage = () => {
 							functionally effective.
 						</p>
 						<HeroImage
-							className={cn(styles.imageContainer, styles.breakout)}
+							className={cn(styles.imageContainer, styles.flowOffset, styles.breakout)}
 							src='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
 							alt='Boats anchored off a white sandy beach in turquoise blue water'
 							caption='Example of discovery process, wire-framing, journey mapping.'
@@ -129,19 +129,36 @@ const InspPage = () => {
 							brand's message and values.
 						</p>
 						<SideImage
+							className={cn(styles.sideImage, styles.flowOffset)}
 							imgSrc='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
 							imgAlt='Boats anchored off a white sandy beach in turquoise blue water'
+							imgRight
+							caption='Example of discovery process, wire-framing, journey mapping.'
+							captionRight
 						>
 							<h3 className={styles.h3}>Research, Consolidate, Implement</h3>
 							<p>
-								TESTING SIDEIMAGE The outcome of this project was a testament to the power of effective branding in
-								driving business success. By prioritizing user experience and visual cohesion, we were able to craft a
-								web branding solution that not only met but exceeded the client's expectations.
+								TESTING SIDEIMAGE RIGHT The outcome of this project was a testament to the power of effective branding
+								in driving business success. By prioritizing user experience and visual cohesion, we were able to craft
+								a web branding solution that not only met but exceeded the client's expectations.
 							</p>
 							<p>
 								The outcome of this project was a testament to the power of effective branding in driving business
 								success. By prioritizing user experience and visual cohesion, we were able to craft a web branding
 								solution that not only met but exceeded the client's expectations.
+							</p>
+						</SideImage>
+						<SideImage
+							className={cn(styles.sideImage, styles.flowOffset)}
+							imgSrc='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
+							imgAlt='Boats anchored off a white sandy beach in turquoise blue water'
+							caption='Example of discovery process, wire-framing, journey mapping.'
+						>
+							<h3 className={styles.h3}>Research, Consolidate, Implement</h3>
+							<p>
+								TESTING SIDEIMAGE LEFT The outcome of this project was a testament to the power of effective branding in
+								driving business success. By prioritizing user experience and visual cohesion, we were able to craft a
+								web branding solution that not only met but exceeded the client's expectations.
 							</p>
 							<p>
 								The outcome of this project was a testament to the power of effective branding in driving business
