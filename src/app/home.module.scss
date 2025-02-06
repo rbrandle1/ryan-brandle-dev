@@ -113,7 +113,6 @@
 }
 
 .heroSection {
-	min-height: calc(100dvh - var(--header-height) - var(--space-4xl));
 	display: grid;
 	grid-template-rows: 1fr auto;
 	padding-top: 0;
@@ -121,6 +120,10 @@
 
 	> div:first-of-type {
 		align-content: center;
+	}
+
+	@include viewport.breakpoint(sm) {
+		min-height: calc(100dvh - var(--header-height) - var(--space-4xl));
 	}
 }
 

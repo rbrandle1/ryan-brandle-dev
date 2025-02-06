@@ -5,6 +5,7 @@ import Callout from '@/components/Callout/Callout';
 import HeroImage from '@/components/Article/HeroImage/HeroImage';
 import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import SideImage from '@/components/Article/SideImage/SideImage';
+import MultiImage from '@/components/Article/MultiImage/MultiImage';
 import styles from '../projects.module.scss';
 
 export const metadata: Metadata = {
@@ -198,6 +199,34 @@ const InspPage = () => {
 							forward-thinking strategy positioned the client for long-term success in the ever-evolving digital
 							landscape.
 						</p>
+						<MultiImage
+							className={cn(styles.multiImageContainer, styles.breakout)}
+							imgSrc1='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
+							imgAlt1='Boats anchored off a white sandy beach in turquoise blue water'
+							imgSrc2='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
+							imgAlt2='Boats anchored off a white sandy beach in turquoise blue water'
+							imgSrc3='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
+							imgAlt3='Boats anchored off a white sandy beach in turquoise blue water'
+							imgSrc4='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
+							imgAlt4='Boats anchored off a white sandy beach in turquoise blue water'
+							textLeft
+							// caption='Example of discovery process, wire-framing, journey mapping.'
+							// captionRight
+						>
+							<h3 className={styles.h3}>
+								Research <span className={styles.altFont}>&amp;</span>&nbsp;Identify all utilized UI
+							</h3>
+							<p>
+								TESTING SIDEIMAGE RIGHT The outcome of this project was a testament to the power of effective branding
+								in driving business success. By prioritizing user experience and visual cohesion, we were able to craft
+								a web branding solution that not only met but exceeded the client's expectations.
+							</p>
+							<p>
+								The outcome of this project was a testament to the power of effective branding in driving business
+								success. By prioritizing user experience and visual cohesion, we were able to craft a web branding
+								solution that not only met but exceeded the client's expectations.
+							</p>
+						</MultiImage>
 					</div>
 				</section>
 			</div>

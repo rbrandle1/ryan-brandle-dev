@@ -7,26 +7,22 @@ import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import styles from './home.module.scss';
 
 /* Todo:
-* Make continue SideImage component with left and right variations.
 * Make MultiImage component with left and right variations.
 * Make Mosaic component.
-* Refactor home to be more like article. Make dark sections just a div with data-section='dark'. No other styling. Content within it will have section padding, etc.
-* Refactor word divs to use text-wrap break all?
-* Update section spacing to utilize lh system like articles. Possibly adjust footer widths to line up nicely with article widths and shared grid.
 * Make buttons view link
-* update margins to margin-block elements.
-* figure out section spacing. avoid calc's and use variables instead. Seems like featured section needs extra spacing on top and bottom because the content is so dense. It is unique to this section because others are not as dense.
 * Add backup words for each FeaturedProject
+* Shape up home page. Mobile spacing, remove arrow if not needed on small screens. Refactor home to be more like article. Make dark sections just a div with data-section='dark'. No other styling. Content within it will have section padding, etc.
+* Update section spacing to utilize lh system like articles. Possibly adjust footer widths to line up nicely with article widths and shared grid.
+* update margins to margin-block elements.
 * update project card buttons with extra padding to the left and right so highlight is not directly at edge of text.
 * update project card buttons to use an icon, not text for vertical alignment purposes.
-* update crop icon to replace LinkedIn icon
 * Create better easing with cubic-bezier
+* update crop icon to replace LinkedIn icon
+* make favicon
+* delete scroll arrow or make a circular button... or a square, with accent background.
 * Create a boilerplate ts file for each page to include commonly used things like project title, meta tags, etc.
-* make scroll arrow a circular button... or a square, with accent background.
-* Try updating to line-height units: https://12daysofweb.dev/2024/css-margin-trim-line-height-units/
 * Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
 * Double check cpu and performance/paint issues. If gradient is still causing performance issues, try the png. Maybe will-change is causing issues. jpgs for images, pngs for snapshots. heros under 200kb, thumbnails under 30kb. NEXT JS SHOULD OPTIMIZE ALREADY.
-* make favicon
 * Try to get all altfont ampersands to be centered, not baseline.
 * ensure all pages have correct metadata and optimize to AVOID seo for sensitive company names.
 * Read through all text, footer text, etc and finalize.
@@ -37,7 +33,6 @@ import styles from './home.module.scss';
 * BUGS:
 * fade in ups are not fast enough. If someone is scrolling too quickly, the fade in lags and needs to catch up. Looks like a blank page at first.
 * have logo present on page load, and does not animate in.
-* in safari, underlines in link doesn't change on theme change. It does change when you hover over the link.
 
 * THEME PICKER LOCAL STORAGE ISSUES:
 * Continue setting up theme provider and theme picker. TRY creating a nested layout to manage the theme state. So the body, header, footer etc are not reloaded on every page load, therefore not causing a FOUC.
@@ -48,7 +43,6 @@ import styles from './home.module.scss';
 * Use css grid stack instead of absolute positioning.
 * Make a mixin or a variable for hover translate animations.
 * Incorporate purple as a gradient to pink?
-* Try setting base space from 1.6 to 1.8. Also, might need to adjust the real big spaces % max to be larger for a more noticeable difference. Can also run the calculation to a raw value to enhance performance.
 	
 * TALKING POINTS, TROUBLESHOOTING, ETC, WITH THIS PROJECT:
 	* State management. I had to decide whether prop drilling or using react context was the best approach. I went with context because I came to understand how multiple components could be affected by the theme state, and the best way to manage it was to avoid prop drilling.
@@ -67,6 +61,8 @@ import styles from './home.module.scss';
 	* Responsive vertical text was a challenge and there are likely better ways to do this. But I took a very granular and specific approach for this instance to this to make sure it works. Don't consider this a modular solution.
 	* 
 	* Utilizing inline css variables and ternary operators to manage various styles on component. Instead of using a class name to manage styles.
+	* 
+	* Utilizing lh values for a typographical based spacing system when appropriate.
 */
 
 export default function Home() {

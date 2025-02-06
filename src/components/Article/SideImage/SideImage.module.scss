@@ -1,7 +1,7 @@
 @use '@/styles/utils/typography' as typography;
 @use '@/styles/utils/viewport' as viewport;
 
-.component {
+.sideImage {
 	position: relative;
 	display: grid;
 	grid-template-columns: 1fr;
@@ -54,10 +54,6 @@
 
 .image {
 	position: relative;
-	display: grid;
-	place-items: center;
-	padding-left: var(--space-xl);
-	padding-right: var(--space-xl);
 	border-radius: var(--radius-default);
 	background-color: var(--surface-neutral);
 	aspect-ratio: 3 / 2;

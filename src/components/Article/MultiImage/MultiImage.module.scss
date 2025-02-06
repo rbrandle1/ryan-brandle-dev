@@ -1,0 +1,70 @@
+@use '@/styles/utils/typography' as typography;
+@use '@/styles/utils/viewport' as viewport;
+
+.multiImage {
+	--gap: 0.5lh;
+
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: var(--gap);
+
+	// @include viewport.breakpoint(sm) {
+	// 	grid-template-columns: 1fr 1fr;
+	// }
+
+	// @include viewport.breakpoint(md) {
+	// 	grid-template-columns: 1fr 1fr;
+	// }
+}
+
+.image {
+	position: relative;
+	border-radius: var(--radius-default);
+	background-color: var(--surface-neutral);
+	aspect-ratio: 2 / 3;
+	overflow: hidden;
+	user-select: none;
+
+	img {
+		object-fit: cover;
+	}
+
+	.textLeft & {
+		&:nth-child(4) {
+			order: 1;
+		}
+	}
+}
+
+.textContainer {
+	grid-column: span 2;
+	width: 100%;
+	border: 1px solid red;
+
+	@include viewport.breakpoint(1112px) {
+		padding-left: clamp(0px, 7vw, var(--space-3xl));
+	}
+
+	//todo: this is close but NOT the way to go;
+	//todo: tomorrow, try to implement a grid-column system like the master page, but tailored for this component.
+	//todo: maybe just make the textContainer itself a tiny grid.
+	// @include viewport.breakpoint(1112px) {
+	//   --min-width: 1112;
+	//   --max-width: 1250;
+	//   --min-value: 0;
+	//   --max-value: var(--space-3xl);
+
+	//   padding-left: clamp(
+	//     0px,
+	//     calc(
+	//       (100vw - #{--min-width}px) / (#{--max-width} - #{--min-width}) * var(--space-3xl)
+	//     ),
+	//     var(--space-3xl)
+	//   );
+	// }
+
+	> * + * {
+		margin-block-start: var(--flow-space-base);
+	}
+}

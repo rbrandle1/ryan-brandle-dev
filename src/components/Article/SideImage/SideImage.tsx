@@ -25,7 +25,7 @@ const SideImage = ({
 	children,
 }: SideImageProps) => {
 	return (
-		<section className={cn(styles.component, imgRight && styles.imgRight, className)}>
+		<section className={cn(styles.sideImage, imgRight && styles.imgRight, className)}>
 			<figure className={styles.imageContainer}>
 				<div className={styles.image}>
 					<Image src={imgSrc} alt={imgAlt} fill sizes='(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 500px' />
