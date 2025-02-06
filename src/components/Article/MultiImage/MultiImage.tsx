@@ -17,7 +17,7 @@ interface MultiImageProps {
 	imgAlt3: string;
 	imgSrc4?: string;
 	imgAlt4?: string;
-	textLeft?: boolean;
+	textRight?: boolean;
 }
 
 const MultiImage = ({
@@ -33,11 +33,11 @@ const MultiImage = ({
 	// caption,
 	// captionRight,
 	// hasCaptionIcon,
-	textLeft,
+	textRight,
 	children,
 }: MultiImageProps) => {
 	return (
-		<section className={cn(styles.multiImage, textLeft && styles.textLeft, className)}>
+		<section className={cn(styles.multiImage, textRight && styles.textRight, className)}>
 			<figure className={styles.image}>
 				<Image src={imgSrc1} alt={imgAlt1} fill sizes='(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 500px' />
 			</figure>
@@ -52,7 +52,9 @@ const MultiImage = ({
 					<Image src={imgSrc4} alt={imgAlt4} fill sizes='(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 500px' />
 				</figure>
 			) : null}
-			<div className={styles.textContainer}>{children}</div>
+			<div className={styles.textContainer}>
+				<div>{children}</div>
+			</div>
 		</section>
 	);
 };

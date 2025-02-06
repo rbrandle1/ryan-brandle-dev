@@ -1,21 +1,21 @@
 @use '@/styles/utils/typography' as typography;
 @use '@/styles/utils/viewport' as viewport;
 
+//TODO: pass in flows from parent... 1lh 2lh, etc.
+//TODO: add optional caption for last image.
+
 .multiImage {
-	--gap: 0.5lh;
+	--gap: var(--space-2xs);
 
 	position: relative;
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(2, 1fr);
 	gap: var(--gap);
 
-	// @include viewport.breakpoint(sm) {
-	// 	grid-template-columns: 1fr 1fr;
-	// }
-
-	// @include viewport.breakpoint(md) {
-	// 	grid-template-columns: 1fr 1fr;
-	// }
+	@include viewport.breakpoint(sm) {
+		grid-template-columns: repeat(3, 1fr);
+		--gap: 0.5lh;
+	}
 }
 
 .image {
@@ -30,8 +30,8 @@
 		object-fit: cover;
 	}
 
-	.textLeft & {
-		&:nth-child(4) {
+	@include viewport.breakpoint(sm) {
+		&:nth-child(4):not(.textRight &) {
 			order: 1;
 		}
 	}
@@ -39,32 +39,40 @@
 
 .textContainer {
 	grid-column: span 2;
-	width: 100%;
-	border: 1px solid red;
 
-	@include viewport.breakpoint(1112px) {
-		padding-left: clamp(0px, 7vw, var(--space-3xl));
+	@include viewport.breakpoint(sm) {
+		display: grid;
+		grid-template-columns: var(--breakout) min(668px, 100%) minmax(0, calc(var(--gap) * 2));
+		grid-template-areas: '. text .';
 	}
 
-	//todo: this is close but NOT the way to go;
-	//todo: tomorrow, try to implement a grid-column system like the master page, but tailored for this component.
-	//todo: maybe just make the textContainer itself a tiny grid.
-	// @include viewport.breakpoint(1112px) {
-	//   --min-width: 1112;
-	//   --max-width: 1250;
-	//   --min-value: 0;
-	//   --max-value: var(--space-3xl);
+	.textRight & {
+		@include viewport.breakpoint(sm) {
+			grid-template-areas: '. text';
+			grid-template-columns: 1lh 1fr;
+		}
 
-	//   padding-left: clamp(
-	//     0px,
-	//     calc(
-	//       (100vw - #{--min-width}px) / (#{--max-width} - #{--min-width}) * var(--space-3xl)
-	//     ),
-	//     var(--space-3xl)
-	//   );
-	// }
+		@include viewport.breakpoint(md) {
+			grid-template-columns: 2lh 1fr;
+		}
 
-	> * + * {
-		margin-block-start: var(--flow-space-base);
+		@include viewport.breakpoint(lg) {
+			grid-template-columns: var(--space-3xl) 1fr;
+		}
+	}
+
+	> div {
+		grid-area: text;
+		margin-block-start: var(--flow-space, 2lh);
+
+		@include viewport.breakpoint(sm) {
+			&:not(.textRight) {
+				padding-inline-end: 1lh;
+			}
+		}
+
+		> * + * {
+			margin-block-start: var(--flow-space-base);
+		}
 	}
 }

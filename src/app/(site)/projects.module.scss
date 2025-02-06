@@ -124,6 +124,10 @@
 	}
 }
 
+.multiImageContainer {
+	--flow-space: 2lh;
+}
+
 .link {
 	@include typography.link(underline);
 }
