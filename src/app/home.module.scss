@@ -241,7 +241,7 @@
 	left: 51.5%;
 	transform: translateX(-50%);
 	font-size: clamp(13.41rem, 21dvw, 29.23rem); // optical override for vertical text style alignment.
-	text-shadow: var(--text-shadow-vert);
+	text-shadow: var(--shadow-text-vert);
 
 	@include viewport.breakpoint(xs) {
 		left: 51%;

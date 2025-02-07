@@ -2,7 +2,7 @@
 @use '@/styles/utils/viewport' as viewport;
 
 .caption {
-	--caption-space: 0.5lh;
+	--caption-space: 0.75lh;
 
 	@include typography.caption;
 	display: flex;
@@ -15,9 +15,9 @@
 
 	svg {
 		position: absolute;
-		top: -18px;
+		top: -23px;
 		color: var(--icon-accent);
-		filter: var(--svg-shadow);
+		filter: var(--shadow-svg);
 		transition: color 250ms ease-out 100ms;
 	}
 

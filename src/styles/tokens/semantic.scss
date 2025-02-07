@@ -115,9 +115,9 @@
 	--color-accent-active: var(--color-accent);
 
 	/* SHADOWS */
-	--box-shadow: 0px 2px 8px var(--p-color-black-a15);
-	--text-shadow-vert: 2px -4px 6px var(--p-color-black-a15);
-	--svg-shadow: drop-shadow(0 1px 2px var(--p-color-black-a10));
+	--shadow-box: 0px 4px 8px var(--p-color-black-a20);
+	--shadow-text-vert: 2px -4px 6px var(--p-color-black-a15);
+	--shadow-svg: drop-shadow(0 1px 2px var(--p-color-black-a10));
 
 	/* TEXT */
 	--text-primary: var(--color-primary);
