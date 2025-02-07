@@ -52,7 +52,7 @@
 	}
 
 	.hero & {
-		@include viewport.breakpoint(lg) {
+		@include viewport.breakpoint(md) {
 			border-radius: var(--radius-default);
 		}
 	}
@@ -76,7 +76,7 @@
 }
 
 .hero .caption {
-	@include viewport.breakpoint(lg, max) {
+	@include viewport.breakpoint(md, max) {
 		margin-left: var(--gutter, var(--space-lg));
 		margin-right: var(--gutter, var(--space-lg));
 	}

@@ -36,6 +36,7 @@ const InspPage = () => {
 							caption='Example of discovery process, wire-framing, journey mapping.'
 							logo={<IconLogoInsp />}
 							logoOffset='-5%'
+							logoMaxWidth='380px'
 							metaTags={['Branding', 'UX/UI', 'HTML', 'CSS', 'JS', 'React', 'Storybook']}
 							isHero
 						/>
@@ -60,7 +61,6 @@ const InspPage = () => {
 							src='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
 							alt='Boats anchored off a white sandy beach in turquoise blue water'
 							caption='Example of discovery process, wire-framing, journey mapping.'
-							// hasCaptionIcon={false}
 							captionLeft
 						/>
 						<p>
