@@ -8,8 +8,6 @@ import styles from './home.module.scss';
 
 /* Todo:
 * make sure caption svg works on home page. probably need to introduce grid and gutter.
-* Add shadow to metabox
-* Add color transition to caption icons
 * Add captions to multiImage
 * Make buttons view link
 * Add backup words for each FeaturedProject
