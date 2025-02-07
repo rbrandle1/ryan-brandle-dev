@@ -39,17 +39,17 @@ const MultiImage = ({
 	return (
 		<section className={cn(styles.multiImage, textRight && styles.textRight, className)}>
 			<figure className={styles.image}>
-				<Image src={imgSrc1} alt={imgAlt1} fill sizes='(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 500px' />
+				<Image src={imgSrc1} alt={imgAlt1} fill sizes='(max-width: 768px) 50vw, (max-width: 1290px) 33vw, 391px' />
 			</figure>
 			<figure className={styles.image}>
-				<Image src={imgSrc2} alt={imgAlt2} fill sizes='(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 500px' />
+				<Image src={imgSrc2} alt={imgAlt2} fill sizes='(max-width: 768px) 50vw, (max-width: 1290px) 33vw, 391px' />
 			</figure>
 			<figure className={styles.image}>
-				<Image src={imgSrc3} alt={imgAlt3} fill sizes='(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 500px' />
+				<Image src={imgSrc3} alt={imgAlt3} fill sizes='(max-width: 768px) 50vw, (max-width: 1290px) 33vw, 391px' />
 			</figure>
 			{imgSrc4 && imgAlt4 ? (
 				<figure className={styles.image}>
-					<Image src={imgSrc4} alt={imgAlt4} fill sizes='(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 500px' />
+					<Image src={imgSrc4} alt={imgAlt4} fill sizes='(max-width: 768px) 50vw, (max-width: 1290px) 33vw, 391px' />
 				</figure>
 			) : null}
 			<div className={styles.textContainer}>

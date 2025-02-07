@@ -7,8 +7,8 @@ import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import styles from './home.module.scss';
 
 /* Todo:
-* Make MultiImage component with left and right variations.
-* Make Mosaic component.
+* Add captions to multiImage
+* ??? Make Mosaic component. Might not need this.
 * Make buttons view link
 * Add backup words for each FeaturedProject
 * Shape up home page. Mobile spacing, remove arrow if not needed on small screens. Refactor home to be more like article. Make dark sections just a div with data-section='dark'. No other styling. Content within it will have section padding, etc.
@@ -63,6 +63,8 @@ import styles from './home.module.scss';
 	* Utilizing inline css variables and ternary operators to manage various styles on component. Instead of using a class name to manage styles.
 	* 
 	* Utilizing lh values for a typographical based spacing system when appropriate.
+	* 
+	* Getting components like MultiImage to match the breakout portion of the grid. Very challenging. Got it close but not perfect.
 */
 
 export default function Home() {

@@ -1,11 +1,10 @@
 @use '@/styles/utils/typography' as typography;
 @use '@/styles/utils/viewport' as viewport;
 
-//TODO: pass in flows from parent... 1lh 2lh, etc.
 //TODO: add optional caption for last image.
 
 .multiImage {
-	--gap: var(--space-2xs);
+	--gap: var(--space-xs);
 
 	position: relative;
 	display: grid;
@@ -13,8 +12,9 @@
 	gap: var(--gap);
 
 	@include viewport.breakpoint(sm) {
-		grid-template-columns: repeat(3, 1fr);
 		--gap: 0.5lh;
+
+		grid-template-columns: repeat(3, 1fr);
 	}
 }
 
@@ -26,14 +26,38 @@
 	overflow: hidden;
 	user-select: none;
 
-	img {
-		object-fit: cover;
-	}
-
 	@include viewport.breakpoint(sm) {
 		&:nth-child(4):not(.textRight &) {
 			order: 1;
 		}
+	}
+
+	@include viewport.breakpoint(sm, max) {
+		&:first-child {
+			grid-row: span 2;
+			align-self: center;
+		}
+
+		&:nth-child(2) {
+			aspect-ratio: 1 / 1;
+
+			.textRight & {
+				grid-column: 1;
+				grid-row: 1;
+			}
+		}
+
+		&:nth-child(3) {
+			aspect-ratio: 3 / 2;
+		}
+
+		&:nth-child(4) {
+			display: none;
+		}
+	}
+
+	img {
+		object-fit: cover;
 	}
 }
 
