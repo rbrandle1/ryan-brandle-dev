@@ -2,7 +2,7 @@ import cn from 'classnames';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import Callout from '@/components/Callout/Callout';
-import HeroImage from '@/components/Article/HeroImage/HeroImage';
+import LargeImage from '@/components/Article/LargeImage/LargeImage';
 import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import SideImage from '@/components/Article/SideImage/SideImage';
 import MultiImage from '@/components/Article/MultiImage/MultiImage';
@@ -22,23 +22,22 @@ const InspPage = () => {
 						Creation <span className={styles.altFont}>&amp;</span>&nbsp;Growth of the Inspirato Design System
 					</h1>
 					<div className={styles.subhead}>
-						Preparing a scalable design system for the future of Inspirato's products.
+						Preparing a scalable design system for the future of Inspirato's Luxury Travel products.
 					</div>
 				</div>
 			</header>
 			<div data-section='dark'>
 				<section className={cn(styles.section, styles.heroOffset)}>
 					<div className={styles.containerGrid}>
-						<HeroImage
-							className={cn(styles.imageContainer, styles.flowOffset, styles.breakout)}
+						<LargeImage
+							className={cn(styles.imageContainer, styles.flowOffset, styles.heroImage)}
 							src='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
 							alt='Boats anchored off a white sandy beach in turquoise blue water'
 							caption='Example of discovery process, wire-framing, journey mapping.'
-							captionRight
-							hasCaptionIcon={false}
 							logo={<IconLogoInsp />}
 							logoOffset='-5%'
 							metaTags={['Branding', 'UX/UI', 'HTML', 'CSS', 'JS', 'React', 'Storybook']}
+							isHero
 						/>
 						<h2 className={styles.h2}>
 							The
@@ -56,11 +55,13 @@ const InspPage = () => {
 							different platforms. This led to a disjointed user experience, negatively impacting customer engagement
 							and ultimately, conversion rates.
 						</p>
-						<HeroImage
+						<LargeImage
 							className={cn(styles.imageContainer, styles.flowOffset, styles.breakout)}
 							src='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
 							alt='Boats anchored off a white sandy beach in turquoise blue water'
 							caption='Example of discovery process, wire-framing, journey mapping.'
+							// hasCaptionIcon={false}
+							captionLeft
 						/>
 						<p>
 							Our solution involved developing a comprehensive brand style guide, encompassing a refreshed color
@@ -78,7 +79,7 @@ const InspPage = () => {
 							ultimately driving business growth.
 						</p>
 						<Callout
-							className={cn(styles.callout, styles.flowOffset, styles.breakout)}
+							className={cn(styles.callout, styles.flowOffset)}
 							title='Creation is bing bang in a simple, modular approach since.'
 							titleAccent
 						/>
@@ -112,12 +113,11 @@ const InspPage = () => {
 							comprehensive brand strategy, ensuring that the new web branding was both visually appealing and
 							functionally effective.
 						</p>
-						<HeroImage
+						<LargeImage
 							className={cn(styles.imageContainer, styles.flowOffset, styles.breakout)}
 							src='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
 							alt='Boats anchored off a white sandy beach in turquoise blue water'
 							caption='Example of discovery process, wire-framing, journey mapping.'
-							captionRight
 						/>
 						<p>
 							Consolidation of the brand identity was crucial in establishing a cohesive visual language across all
@@ -129,65 +129,65 @@ const InspPage = () => {
 							with the new brand identity. This ensured a seamless user experience across all platforms, reinforcing the
 							brand's message and values.
 						</p>
-						<div className={cn(styles.sideImageContainer, styles.flowOffset)}>
-							<SideImage
-								imgSrc='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
-								imgAlt='Boats anchored off a white sandy beach in turquoise blue water'
-								imgRight
-								caption='Example of discovery process, wire-framing, journey mapping.'
-								captionRight
-							>
-								<h3 className={styles.h3}>
-									Research <span className={styles.altFont}>&amp;</span>&nbsp;Identify all utilized UI
-								</h3>
-								<p>
-									TESTING SIDEIMAGE RIGHT The outcome of this project was a testament to the power of effective branding
-									in driving business success. By prioritizing user experience and visual cohesion, we were able to
-									craft a web branding solution that not only met but exceeded the client's expectations.
-								</p>
-								<p>
-									The outcome of this project was a testament to the power of effective branding in driving business
-									success. By prioritizing user experience and visual cohesion, we were able to craft a web branding
-									solution that not only met but exceeded the client's expectations.
-								</p>
-							</SideImage>
-							<SideImage
-								imgSrc='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
-								imgAlt='Boats anchored off a white sandy beach in turquoise blue water'
-								caption='Example of discovery process, wire-framing, journey mapping.'
-							>
-								<h3 className={styles.h3}>Consolidate to a single source of truth</h3>
-								<p>
-									TESTING SIDEIMAGE LEFT The outcome of this project was a testament to the power of effective branding
-									in driving business success. By prioritizing user experience and visual cohesion, we were able to
-									craft a web branding solution that not only met but exceeded the client's expectations.
-								</p>
-								<p>
-									The outcome of this project was a testament to the power of effective branding in driving business
-									success. By prioritizing user experience and visual cohesion, we were able to craft a web branding
-									solution that not only met but exceeded the client's expectations.
-								</p>
-							</SideImage>
-							<SideImage
-								imgSrc='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
-								imgAlt='Boats anchored off a white sandy beach in turquoise blue water'
-								imgRight
-								caption='Example of discovery process, wire-framing, journey mapping.'
-								captionRight
-							>
-								<h3 className={styles.h3}>Implement across codebase</h3>
-								<p>
-									TESTING SIDEIMAGE RIGHT The outcome of this project was a testament to the power of effective branding
-									in driving business success. By prioritizing user experience and visual cohesion, we were able to
-									craft a web branding solution that not only met but exceeded the client's expectations.
-								</p>
-								<p>
-									The outcome of this project was a testament to the power of effective branding in driving business
-									success. By prioritizing user experience and visual cohesion, we were able to craft a web branding
-									solution that not only met but exceeded the client's expectations.
-								</p>
-							</SideImage>
-						</div>
+						<SideImage
+							className={cn(styles.sideImageContainer, styles.flowOffset)}
+							imgSrc='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
+							imgAlt='Boats anchored off a white sandy beach in turquoise blue water'
+							imgRight
+							caption='Example of discovery process, wire-framing, journey mapping.'
+						>
+							<h3 className={styles.h3}>
+								Research <span className={styles.altFont}>&amp;</span>&nbsp;Identify all utilized UI
+							</h3>
+							<p>
+								TESTING SIDEIMAGE RIGHT The outcome of this project was a testament to the power of effective branding
+								in driving business success. By prioritizing user experience and visual cohesion, we were able to craft
+								a web branding solution that not only met but exceeded the client's expectations.
+							</p>
+							<p>
+								The outcome of this project was a testament to the power of effective branding in driving business
+								success. By prioritizing user experience and visual cohesion, we were able to craft a web branding
+								solution that not only met but exceeded the client's expectations.
+							</p>
+						</SideImage>
+						<SideImage
+							className={cn(styles.sideImageContainer, styles.flowOffset)}
+							imgSrc='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
+							imgAlt='Boats anchored off a white sandy beach in turquoise blue water'
+							caption='Example of discovery process, wire-framing, journey mapping.'
+							captionLeft
+						>
+							<h3 className={styles.h3}>Consolidate to a single source of truth</h3>
+							<p>
+								TESTING SIDEIMAGE LEFT The outcome of this project was a testament to the power of effective branding in
+								driving business success. By prioritizing user experience and visual cohesion, we were able to craft a
+								web branding solution that not only met but exceeded the client's expectations.
+							</p>
+							<p>
+								The outcome of this project was a testament to the power of effective branding in driving business
+								success. By prioritizing user experience and visual cohesion, we were able to craft a web branding
+								solution that not only met but exceeded the client's expectations.
+							</p>
+						</SideImage>
+						<SideImage
+							className={cn(styles.sideImageContainer, styles.flowOffset)}
+							imgSrc='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
+							imgAlt='Boats anchored off a white sandy beach in turquoise blue water'
+							imgRight
+							caption='Example of discovery process, wire-framing, journey mapping.'
+						>
+							<h3 className={styles.h3}>Implement across codebase</h3>
+							<p>
+								TESTING SIDEIMAGE RIGHT The outcome of this project was a testament to the power of effective branding
+								in driving business success. By prioritizing user experience and visual cohesion, we were able to craft
+								a web branding solution that not only met but exceeded the client's expectations.
+							</p>
+							<p>
+								The outcome of this project was a testament to the power of effective branding in driving business
+								success. By prioritizing user experience and visual cohesion, we were able to craft a web branding
+								solution that not only met but exceeded the client's expectations.
+							</p>
+						</SideImage>
 						<h3 className={styles.h3}>Continuation of the process</h3>
 						<p>
 							The project's impact extended beyond the client's organization, contributing to the advancement of web
@@ -209,8 +209,8 @@ const InspPage = () => {
 							imgAlt3='Boats anchored off a white sandy beach in turquoise blue water'
 							imgSrc4='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
 							imgAlt4='Boats anchored off a white sandy beach in turquoise blue water'
+							textRight
 							// caption='Example of discovery process, wire-framing, journey mapping.'
-							// captionRight
 						>
 							<h3 className={styles.h3}>
 								Research <span className={styles.altFont}>&amp;</span>&nbsp;Identify all utilized UI
@@ -236,9 +236,7 @@ const InspPage = () => {
 							imgAlt3='Boats anchored off a white sandy beach in turquoise blue water'
 							imgSrc4='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
 							imgAlt4='Boats anchored off a white sandy beach in turquoise blue water'
-							textRight
 							// caption='Example of discovery process, wire-framing, journey mapping.'
-							// captionRight
 						>
 							<h3 className={styles.h3}>
 								Research <span className={styles.altFont}>&amp;</span>&nbsp;Identify all utilized UI

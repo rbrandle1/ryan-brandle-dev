@@ -5,6 +5,7 @@
 	position: relative;
 	display: grid;
 	grid-template-columns: 1fr;
+	align-items: center;
 	gap: var(--component-gap-space, 2lh);
 
 	@include viewport.breakpoint(sm, max) {
@@ -16,7 +17,7 @@
 	}
 
 	@include viewport.breakpoint(sm) {
-		--component-gap-space: 1lh;
+		--component-gap-space: 1.5lh;
 
 		grid-template-columns: 1fr 1fr;
 	}

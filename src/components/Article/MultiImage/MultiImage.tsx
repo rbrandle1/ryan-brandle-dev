@@ -37,7 +37,7 @@ const MultiImage = ({
 	children,
 }: MultiImageProps) => {
 	return (
-		<section className={cn(styles.multiImage, textRight && styles.textRight, className)}>
+		<div className={cn(styles.multiImage, textRight && styles.textRight, className)}>
 			<figure className={styles.image}>
 				<Image src={imgSrc1} alt={imgAlt1} fill sizes='(max-width: 768px) 50vw, (max-width: 1290px) 33vw, 391px' />
 			</figure>
@@ -55,7 +55,7 @@ const MultiImage = ({
 			<div className={styles.textContainer}>
 				<div>{children}</div>
 			</div>
-		</section>
+		</div>
 	);
 };
 

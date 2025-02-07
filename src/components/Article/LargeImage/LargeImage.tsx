@@ -2,36 +2,38 @@ import cn from 'classnames';
 import Image from 'next/image';
 import MetaTags from '@/components/MetaTags/MetaTags';
 import Caption from '@/components/Caption/Caption';
-import styles from './HeroImage.module.scss';
+import styles from './LargeImage.module.scss';
 import setInlineStyles from '@/helpers/functions';
 
-interface HeroImageProps {
+interface LargeImageProps {
 	className?: string;
 	src: string;
 	alt: string;
 	caption?: string;
-	captionRight?: boolean;
+	captionLeft?: boolean;
 	hasCaptionIcon?: boolean;
 	logo?: React.ReactNode;
 	logoMaxWidth?: string;
 	logoOffset?: string;
 	metaTags?: string[];
+	isHero?: boolean;
 }
 
-const HeroImage = ({
+const LargeImage = ({
 	className,
 	src,
 	alt,
 	caption,
-	captionRight,
+	captionLeft,
 	hasCaptionIcon,
 	logo,
 	logoMaxWidth,
 	logoOffset,
 	metaTags,
-}: HeroImageProps) => {
+	isHero,
+}: LargeImageProps) => {
 	return (
-		<div className={cn(styles.heroImage, className)}>
+		<div className={cn(styles.largeImage, isHero && styles.hero, className)}>
 			{metaTags ? (
 				<aside className={styles.metaBox}>
 					<MetaTags items={metaTags} />
@@ -50,10 +52,10 @@ const HeroImage = ({
 							{logo}
 						</div>
 					) : null}
-					<Image src={src} alt={alt} fill sizes='(max-width: 1300px) 90vw, 1205px' />
+					<Image src={src} alt={alt} fill sizes='(max-width: 1300px) 100vw, 1205px' />
 				</div>
 				{caption ? (
-					<Caption captionRight={captionRight} hasIcon={hasCaptionIcon}>
+					<Caption className={styles.caption} captionLeft={captionLeft} hasIcon={hasCaptionIcon}>
 						{caption}
 					</Caption>
 				) : null}
@@ -62,4 +64,4 @@ const HeroImage = ({
 	);
 };
 
-export default HeroImage;
+export default LargeImage;

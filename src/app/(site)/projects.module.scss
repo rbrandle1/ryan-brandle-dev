@@ -63,7 +63,7 @@
 .containerGrid {
 	--flow-space-base: 1lh;
 	--gutter: clamp(var(--space-base), 4dvw, var(--space-lg));
-	--content: min(var(--viewport-md), 100% - var(--gutter) * 2);
+	--main: min(var(--viewport-md), 100% - var(--gutter) * 2);
 	--breakout: minmax(0, var(--space-3xl));
 	--full: minmax(var(--gutter), 1fr);
 
@@ -71,12 +71,12 @@
 	grid-template-columns:
 		[full-start] var(--full)
 		[breakout-start] var(--breakout)
-		[content-start] var(--content) [content-end]
+		[main-start] var(--main) [main-end]
 		var(--breakout) [breakout-end]
 		var(--full) [full-end];
 
 	> * {
-		grid-column: content;
+		grid-column: main;
 	}
 
 	.breakout {
@@ -91,9 +91,6 @@
 		margin-block-start: var(--flow-space, var(--flow-space-base));
 	}
 }
-
-// TODO: Make this a single class instead
-// Todo: only apply figcaption to imageContainer
 
 // alters the margin bottom of certain elements to account for base flow space of following elements
 .flowOffset {
@@ -112,16 +109,25 @@
 	}
 }
 
+.heroImage {
+	grid-column: breakout;
+
+	@include viewport.breakpoint(lg, max) {
+		z-index: 1;
+		grid-column: full;
+	}
+}
+
 .callout {
-	--flow-space: 8lh;
+	--flow-space: 4lh;
+
+	@include viewport.breakpoint(sm) {
+		--flow-space: 6lh;
+	}
 }
 
 .sideImageContainer {
-	--flow-space: 8lh;
-
-	> * + * {
-		margin-block-start: var(--flow-space, var(--flow-space-base));
-	}
+	--flow-space: 2lh;
 }
 
 .multiImageContainer {

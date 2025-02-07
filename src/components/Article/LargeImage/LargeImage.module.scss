@@ -1,7 +1,7 @@
 @use '@/styles/utils/typography';
 @use '@/styles/utils/viewport';
 
-.heroImage {
+.largeImage {
 	position: relative;
 }
 
@@ -15,6 +15,7 @@
 	left: var(--gutter, var(--space-lg));
 	top: calc(var(--gutter, var(--space-lg)) / -1);
 	transition: background-color 250ms ease-out 100ms;
+	box-shadow: var(--box-shadow);
 
 	@include viewport.breakpoint(sm) {
 		left: auto;
@@ -41,11 +42,20 @@
 	place-items: center;
 	padding-left: var(--space-xl);
 	padding-right: var(--space-xl);
-	border-radius: var(--radius-default);
 	background-color: var(--surface-neutral);
 	aspect-ratio: 3 / 2;
 	overflow: hidden;
 	user-select: none;
+
+	&:not(.hero &) {
+		border-radius: var(--radius-default);
+	}
+
+	.hero & {
+		@include viewport.breakpoint(lg) {
+			border-radius: var(--radius-default);
+		}
+	}
 
 	img {
 		object-fit: cover;
@@ -62,5 +72,12 @@
 	svg {
 		fill: var(--icon-over-image);
 		filter: var(--svg-shadow);
+	}
+}
+
+.hero .caption {
+	@include viewport.breakpoint(lg, max) {
+		margin-left: var(--gutter, var(--space-lg));
+		margin-right: var(--gutter, var(--space-lg));
 	}
 }

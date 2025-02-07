@@ -2,7 +2,7 @@
 @use '@/styles/utils/viewport' as viewport;
 
 .caption {
-	--caption-space: 1lh;
+	--caption-space: 0.5lh;
 
 	@include typography.caption;
 	display: flex;
@@ -11,30 +11,39 @@
 
 	.text {
 		max-width: var(--optimal-line-length-base);
-
-		&.hasIcon {
-			padding-left: var(--caption-space);
-		}
 	}
 
 	svg {
 		position: absolute;
-		top: -46px;
+		top: -18px;
 		color: var(--icon-accent);
+		filter: var(--svg-shadow);
+		transition: color 250ms ease-out 100ms;
 	}
 
-	&.right {
-		@include viewport.breakpoint(sm) {
-			justify-content: end;
-			text-align: right;
+	&.left {
+		svg {
+			left: calc(var(--gutter) / 2 - 5px);
 
-			.hasIcon.text {
-				padding-left: 0;
-				padding-right: 1.6lh;
+			@include viewport.breakpoint(sm) {
+				left: calc(var(--gutter) / 3 - 5px);
 			}
+		}
+	}
 
-			svg {
-				right: var(--space-xs);
+	&:not(.left) {
+		justify-content: end;
+		text-align: right;
+
+		.hasIcon.text {
+			padding-left: 0;
+		}
+
+		svg {
+			right: calc(var(--gutter) / 2);
+
+			@include viewport.breakpoint(sm) {
+				right: calc(var(--gutter) / 3);
 			}
 		}
 	}

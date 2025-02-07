@@ -60,7 +60,7 @@ const FeaturedProject = ({
 					</div>
 				</Link>
 				{caption ? (
-					<Caption captionRight={imgRight} hasIcon={false}>
+					<Caption captionLeft={!imgRight} hasIcon={false}>
 						{caption}
 					</Caption>
 				) : null}

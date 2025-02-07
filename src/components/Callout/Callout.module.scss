@@ -44,6 +44,7 @@
 
 .title {
 	color: var(--title-color, var(--text-primary));
+	max-width: var(--optimal-line-length-sm);
 }
 
 .lg {

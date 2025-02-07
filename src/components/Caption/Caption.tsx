@@ -5,13 +5,13 @@ import styles from './Caption.module.scss';
 interface CaptionProps {
 	className?: string;
 	children: React.ReactNode;
-	captionRight?: boolean;
+	captionLeft?: boolean;
 	hasIcon?: boolean;
 }
 
-const Caption = ({ className, children, captionRight, hasIcon = true }: CaptionProps) => {
+const Caption = ({ className, children, captionLeft, hasIcon = true }: CaptionProps) => {
 	return (
-		<figcaption className={cn(styles.caption, captionRight ? styles.right : undefined, className)}>
+		<figcaption className={cn(styles.caption, captionLeft ? styles.left : undefined, className)}>
 			{hasIcon ? <IconCaption /> : null}
 			<div className={cn(styles.text, hasIcon && styles.hasIcon)}>{children}</div>
 		</figcaption>
