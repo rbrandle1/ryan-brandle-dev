@@ -75,7 +75,7 @@
 			margin-top: calc(var(--space-6xl) * -1);
 		}
 
-		> div > h2:first-of-type {
+		h2:first-of-type {
 			margin-block-start: 0.5lh;
 		}
 	}
