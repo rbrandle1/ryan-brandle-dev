@@ -7,19 +7,19 @@ import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import styles from './home.module.scss';
 
 /* Todo:
-* make sure caption svg works on home page. probably need to introduce grid and gutter.
 * Add captions to multiImage
+* Shape up home page. Mobile spacing, remove arrow if not needed on small screens. Refactor home to be more like article. Make dark sections just a div with data-section='dark'. No other styling. Content within it will have section padding, etc.
+* make sure caption svg works on home page. probably need to introduce grid and gutter.
+* update margins to margin-block elements.
+* Create better easing with cubic-bezier
 * Make buttons view link
 * Add backup words for each FeaturedProject
 * Add gradient bg to project pages?
-* Shape up home page. Mobile spacing, remove arrow if not needed on small screens. Refactor home to be more like article. Make dark sections just a div with data-section='dark'. No other styling. Content within it will have section padding, etc.
 * update project card buttons with extra padding to the left and right so highlight is not directly at edge of text.
 * update project card buttons to use an icon, not text for vertical alignment purposes.
 * Update section spacing to utilize lh system like articles. Possibly adjust footer widths to line up nicely with article widths and shared grid.
 * update crop icon to replace LinkedIn icon
 * ??? Make Mosaic component HOLD. Might not need this.
-* update margins to margin-block elements.
-* Create better easing with cubic-bezier
 * make favicon
 * delete scroll arrow or make a circular button... or a square, with accent background.
 * Create a boilerplate ts file for each page to include commonly used things like project title, meta tags, etc.
@@ -67,7 +67,7 @@ import styles from './home.module.scss';
 	* 
 	* Utilizing lh values for a typographical based spacing system when appropriate.
 	* 
-	* Getting components like MultiImage to match the breakout portion of the grid. Very challenging. Got it close but not perfect.
+	* Getting components like MultiImage to match the breakout portion of the grid. Very challenging. Got it close but not perfect. It was also challenging to get the caption to work in the most semantic and accessible way possible. Ideally I'd have a single figure with multiple images inside it and a single caption for the entire figure. Since I'm using a different grid layout on desktop, I had to make a choice to use aria-labelledby on each figure to reference a single caption being used on one of the images. Would like to come back to this.
 */
 
 export default function Home() {
