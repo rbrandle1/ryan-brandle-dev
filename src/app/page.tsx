@@ -7,7 +7,6 @@ import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import styles from './home.module.scss';
 
 /* Todo:
-* Add captions to multiImage
 * Shape up home page. Mobile spacing, remove arrow if not needed on small screens. Refactor home to be more like article. Make dark sections just a div with data-section='dark'. No other styling. Content within it will have section padding, etc.
 * make sure caption svg works on home page. probably need to introduce grid and gutter.
 * update margins to margin-block elements.
@@ -34,6 +33,7 @@ import styles from './home.module.scss';
 * look in src/fonts. Do I need to do this for my fonts? Delete GeistMono, etc.
 
 * BUGS:
+* why does article hero image expand wider immediately on page load? How to lessen the FOUC.
 * fade in ups are not fast enough. If someone is scrolling too quickly, the fade in lags and needs to catch up. Looks like a blank page at first.
 * have logo present on page load, and does not animate in.
 

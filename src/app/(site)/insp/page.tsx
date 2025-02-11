@@ -130,7 +130,7 @@ const InspPage = () => {
 							brand's message and values.
 						</p>
 						<SideImage
-							className={cn(styles.sideImageContainer, styles.flowOffset)}
+							className={cn(styles.sideImageContainer)}
 							imgSrc='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
 							imgAlt='Boats anchored off a white sandy beach in turquoise blue water'
 							imgRight
@@ -151,7 +151,7 @@ const InspPage = () => {
 							</p>
 						</SideImage>
 						<SideImage
-							className={cn(styles.sideImageContainer, styles.flowOffset)}
+							className={cn(styles.sideImageContainer)}
 							imgSrc='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
 							imgAlt='Boats anchored off a white sandy beach in turquoise blue water'
 							caption='Example of discovery process, wire-framing, journey mapping.'
@@ -200,7 +200,7 @@ const InspPage = () => {
 							landscape.
 						</p>
 						<MultiImage
-							className={cn(styles.multiImageContainer, styles.breakout)}
+							className={cn(styles.multiImageContainer, styles.flowOffset, styles.breakout)}
 							imgSrc1='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
 							imgAlt1='Boats anchored off a white sandy beach in turquoise blue water'
 							imgSrc2='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
@@ -227,7 +227,7 @@ const InspPage = () => {
 							</p>
 						</MultiImage>
 						<MultiImage
-							className={cn(styles.multiImageContainer, styles.breakout)}
+							className={cn(styles.multiImageContainer, styles.flowOffset, styles.breakout)}
 							imgSrc1='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
 							imgAlt1='Boats anchored off a white sandy beach in turquoise blue water'
 							imgSrc2='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
@@ -253,7 +253,7 @@ const InspPage = () => {
 							</p>
 						</MultiImage>
 						<MultiImage
-							className={cn(styles.multiImageContainer, styles.breakout)}
+							className={cn(styles.multiImageContainer, styles.flowOffset, styles.breakout)}
 							imgSrc1='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
 							imgAlt1='Boats anchored off a white sandy beach in turquoise blue water'
 							imgSrc2='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'

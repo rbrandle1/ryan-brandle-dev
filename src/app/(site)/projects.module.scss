@@ -64,19 +64,27 @@
 }
 
 .section {
+	--section-spacing: var(--space-8xl);
+
 	background-color: var(--surface-primary);
-	padding-top: var(--space-8xl);
-	padding-bottom: var(--space-8xl);
+	padding-top: var(--section-spacing);
+	padding-bottom: var(--section-spacing);
 
 	&.heroOffset {
-		padding-top: 0;
-
 		@include viewport.breakpoint(md) {
 			margin-top: calc(var(--space-6xl) * -1);
 		}
 
-		h2:first-of-type {
-			margin-block-start: 0.5lh;
+		// h2:first-of-type {
+		// 	margin-block-start: 0.5lh;
+		// }
+	}
+
+	[data-section='dark'] & {
+		padding-top: 0;
+
+		&:last-child {
+			padding-bottom: calc(var(--section-spacing) * 1.5);
 		}
 	}
 }
@@ -113,7 +121,7 @@
 	}
 }
 
-// alters the margin bottom of certain elements to account for base flow space of following elements
+// alters the margin bottom of certain elements to account for base flow space of following elements. Use this for the last large element that is not text, like an image or a SideImage component. This will add some extra space between it and the following text element.
 .flowOffset {
 	&:not(:last-child) {
 		margin-block-end: calc(var(--flow-space) - var(--flow-space-base));
@@ -149,10 +157,14 @@
 
 .sideImageContainer {
 	--flow-space: 2lh;
+
+	@include viewport.breakpoint(sm) {
+		--flow-space: 4lh;
+	}
 }
 
 .multiImageContainer {
-	--flow-space: 2lh;
+	--flow-space: 4lh;
 }
 
 .link {

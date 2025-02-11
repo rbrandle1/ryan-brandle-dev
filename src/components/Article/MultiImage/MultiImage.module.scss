@@ -92,9 +92,11 @@
 
 	> div {
 		grid-area: text;
-		margin-block-start: var(--flow-space, 2lh);
+		margin-block-start: 2lh;
 
 		@include viewport.breakpoint(sm) {
+			margin-block-start: var(--flow-space);
+
 			&:not(.textRight &) {
 				padding-inline-end: 1lh;
 			}
