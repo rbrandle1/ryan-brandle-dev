@@ -56,7 +56,12 @@ const FeaturedProject = ({
 				<Link href={href} aria-label={`Read more about ${title}`} tabIndex={-1}>
 					<div className={styles.image}>
 						{logo ? <div className={styles.logoContainer}>{logo}</div> : null}
-						<Image src={imgSrc} alt={imgAlt} fill sizes='(max-width: 768px) 100vw, (max-width: 1230px) 50vw, 530px' />
+						<Image
+							src={imgSrc}
+							alt={imgAlt}
+							fill
+							sizes='(max-width: 768px) 95vw, (max-width: 1100px) 45vw, (max-width: 1200px) 494px, (max-width: 1400px) 476px,  566px'
+						/>
 					</div>
 				</Link>
 				{caption ? (

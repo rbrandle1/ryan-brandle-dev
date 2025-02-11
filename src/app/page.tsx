@@ -10,11 +10,12 @@ import styles from './home.module.scss';
 * Shape up home page. Mobile spacing, remove arrow if not needed on small screens. Refactor home to be more like article. Make dark sections just a div with data-section='dark'. No other styling. Content within it will have section padding, etc.
 * Update section spacing to utilize lh system like articles. Possibly adjust footer widths to line up nicely with article widths and shared grid.
 
+* Add gradient bg to project pages
+
 * make sure caption svg works on home page. probably need to introduce grid and gutter.
 * Create better easing with cubic-bezier
 * Make buttons view link
 
-* Add gradient bg to project pages?
 * update project card buttons with extra padding to the left and right so highlight is not directly at edge of text.
 * update project card buttons to use an icon, not text for vertical alignment purposes.
 * update crop icon to replace LinkedIn icon
@@ -77,27 +78,25 @@ export default function Home() {
 	return (
 		<div className={styles.home}>
 			<section className={cn(styles.section, styles.heroSection, styles.accentEdge)}>
-				<div className={styles.container}>
-					<div className={styles.heroContent}>
-						<h1 className={styles.heroTitle}>
-							I make
-							<br />
-							<span className={styles.altFont}>Dope, 🔥, Rizz</span>
-							<br />
-							<span className={styles.right}>products</span>
-						</h1>
-						<div className={styles.heroDetails}>
-							<p className={styles.heroSubtitle}>
-								This is the 100% custom crafted portfolio site of Ryan&nbsp;Brandle, a Design Engineer and maker of the
-								web.
-							</p>
-							<p className={styles.heroCopy}>
-								I’m a bing bang with over 15 years of experience in design, development and making top notch products.
-								There are a lot of titles that seem to morph through the years but what it comes down to is I bing bang
-								boom. yadda yadda yadda with bing bang boom experience. Industry's standard There are a lot of titles
-								that seem to morph. <a href='mailto:hello@example.com'>Say hi anytime!</a>
-							</p>
-						</div>
+				<div className={cn(styles.containerGrid, styles.heroContent)}>
+					<h1 className={cn(styles.heroTitle, styles.breakoutXl)}>
+						I make
+						<br />
+						<span className={styles.altFont}>Dope, 🔥, Rizz</span>
+						<br />
+						<span className={styles.right}>products</span>
+					</h1>
+					<div className={styles.heroDetails}>
+						<p className={styles.heroSubtitle}>
+							This is the 100% custom crafted portfolio site of Ryan&nbsp;Brandle, a Design Engineer and maker of the
+							web.
+						</p>
+						<p className={styles.heroCopy}>
+							I’m a bing bang with over 15 years of experience in design, development and making top notch products.
+							There are a lot of titles that seem to morph through the years but what it comes down to is I bing bang
+							boom. yadda yadda yadda with bing bang boom experience. Industry's standard There are a lot of titles that
+							seem to morph. <a href='mailto:hello@example.com'>Say hi anytime!</a>
+						</p>
 					</div>
 				</div>
 				<div className={styles.scrollContainer}>
@@ -118,15 +117,16 @@ export default function Home() {
 					</div>
 				</section>
 				<section className={styles.section}>
-					<div className={styles.container}>
+					<div className={styles.containerGrid}>
 						<Callout title='I make flexible, modular systems that are easy to use.' size='lg' iconAccent>
 							<IconCodePen />
 						</Callout>
 					</div>
 				</section>
 				<section className={cn(styles.section, styles.featuredSection)}>
-					<div className={styles.container}>
+					<div className={styles.containerGrid}>
 						<FeaturedProject
+							className={styles.breakoutXl}
 							caption='Credit: Inspirato, Unsplash/@seefromthesky'
 							imgSrc='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
 							imgAlt='Boats anchored off a white sandy beach in turquoise blue water'
@@ -139,6 +139,7 @@ export default function Home() {
 							href='/insp'
 						/>
 						<FeaturedProject
+							className={styles.breakoutXl}
 							caption='Credit: Innovative Business Solutions'
 							imgSrc='https://images.unsplash.com/photo-1560461396-ec0ef7bb29dd'
 							imgAlt='Brand and token system'
@@ -155,6 +156,7 @@ export default function Home() {
 							href='/style'
 						/>
 						<FeaturedProject
+							className={styles.breakoutXl}
 							caption='Credit: SchoolRunner, Unsplash/@benmullins'
 							imgSrc='https://images.unsplash.com/photo-1534643960519-11ad79bc19df'
 							imgAlt='SchoolRunner student'
@@ -181,7 +183,7 @@ export default function Home() {
 					<div>UI</div>
 				</div>
 				<section className={cn(styles.section, styles.projectSection)}>
-					<div className={styles.container}>
+					<div className={styles.containerGrid}>
 						<div className={styles.multiSectionHeader}>
 							<h2 className={styles.multiSectionTitle}>Dabblings on the side</h2>
 							<p className={styles.multiSectionCopy}>
@@ -220,7 +222,7 @@ export default function Home() {
 					</div>
 				</section>
 				<section className={styles.section}>
-					<div className={styles.container}>
+					<div className={styles.containerGrid}>
 						<Callout
 							title='For product teams that love the extra polish!'
 							body='I make flexible, modular systems that are easy to use. I make flexible, modular systems that are easy to use. I make flexible, modular systems that are easy to use.'

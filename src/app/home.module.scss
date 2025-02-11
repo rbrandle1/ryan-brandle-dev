@@ -5,6 +5,8 @@
 
 // Todo: update as section calc(var(--space-4xl) * 3)
 // Todo: update calc(var(--space-8xl) * 2) as section padding
+//todo: update to lh system
+//todo: create mixins for shared things like altFont, etc.
 
 .home {
 	--flow-space: var(--space-lg);
@@ -25,11 +27,17 @@
 	padding-block: var(--section-spacing);
 }
 
-.container {
-	@include layout.max-width;
+.containerGrid {
+	@include layout.grid;
 
 	> * + * {
 		margin-block-start: var(--flow-space);
+	}
+}
+
+.breakoutXl {
+	@include viewport.breakpoint(xl) {
+		grid-column: breakout;
 	}
 }
 

@@ -38,7 +38,7 @@ const ProjectCard = ({
 				<Link href={href} aria-label={`Read more about ${title}`} tabIndex={-1}>
 					<div className={styles.image}>
 						{logo ? <div className={styles.logoContainer}>{logo}</div> : null}
-						<Image src={imgSrc} alt={imgAlt} fill sizes='(max-width: 768px) 90vw, (max-width: 1220px) 40vw, 546px' />
+						<Image src={imgSrc} alt={imgAlt} fill sizes='(max-width: 768px) 95vw, (max-width: 1096px) 46vw, 494px' />
 					</div>
 				</Link>
 			</figure>

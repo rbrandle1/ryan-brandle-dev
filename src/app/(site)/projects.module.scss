@@ -3,8 +3,6 @@
 @use '@/styles/utils/viewport';
 @use '@/styles/utils/element';
 
-// TODO: Make containerGrid a mixin like max-width and apply to other home.
-
 .projectPage {
 	p {
 		@include typography.p;
@@ -90,30 +88,8 @@
 
 .containerGrid {
 	--flow-space-base: 1lh;
-	--gutter: clamp(var(--space-base), 4dvw, var(--space-lg));
-	--main: min(var(--viewport-md), 100% - var(--gutter) * 2);
-	--breakout: minmax(0, var(--space-3xl));
-	--full: minmax(var(--gutter), 1fr);
 
-	display: grid;
-	grid-template-columns:
-		[full-start] var(--full)
-		[breakout-start] var(--breakout)
-		[main-start] var(--main) [main-end]
-		var(--breakout) [breakout-end]
-		var(--full) [full-end];
-
-	> * {
-		grid-column: main;
-	}
-
-	.breakout {
-		grid-column: breakout;
-	}
-
-	.full {
-		grid-column: full;
-	}
+	@include layout.grid;
 
 	> * + * {
 		margin-block-start: var(--flow-space, var(--flow-space-base));

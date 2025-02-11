@@ -31,10 +31,37 @@ $viewport-sizes: (
 	width: min(#{map.get($viewport-sizes, $viewport)}, 100%);
 }
 
-@mixin viewport-width {
-	position: relative;
-	left: 50%;
-	right: 50%;
-	margin-inline: -50vw;
-	width: 100vw;
+// @mixin viewport-width {
+// 	position: relative;
+// 	left: 50%;
+// 	right: 50%;
+// 	margin-inline: -50vw;
+// 	width: 100vw;
+// }
+
+@mixin grid {
+	--gutter: clamp(var(--space-base), 4dvw, var(--space-lg));
+	--main: min(var(--viewport-md), 100% - var(--gutter) * 2);
+	--breakout: minmax(0, var(--space-3xl));
+	--full: minmax(var(--gutter), 1fr);
+
+	display: grid;
+	grid-template-columns:
+		[full-start] var(--full)
+		[breakout-start] var(--breakout)
+		[main-start] var(--main) [main-end]
+		var(--breakout) [breakout-end]
+		var(--full) [full-end];
+
+	> * {
+		grid-column: main;
+	}
+
+	.breakout {
+		grid-column: breakout;
+	}
+
+	.full {
+		grid-column: full;
+	}
 }
