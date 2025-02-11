@@ -5,9 +5,16 @@
 	display: grid;
 	grid-auto-flow: column;
 	align-items: center;
-	gap: var(--space-sm);
+	gap: var(--space-2xs);
 	border: none;
-	margin-inline-end: -4px;
+
+	@include viewport.breakpoint(414px) {
+		gap: var(--space-xs);
+	}
+
+	@include viewport.breakpoint(xs) {
+		gap: var(--space-sm);
+	}
 
 	.options {
 		display: grid;

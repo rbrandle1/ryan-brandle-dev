@@ -4,13 +4,15 @@
 @use '@/styles/utils/viewport';
 
 .header {
+	@include layout.grid;
+	@include element.accent-edge;
+}
+
+.container {
 	display: grid;
 	grid-template-columns: 1fr auto;
-	gap: var(--space-base);
 	align-items: start;
-
-	@include layout.max-width(full);
-	@include element.accent-edge;
+	padding-inline: var(--gutter);
 
 	@include viewport.breakpoint(md) {
 		height: var(--header-height);
@@ -24,7 +26,15 @@
 .logoContainer {
 	display: flex;
 	align-items: start;
-	padding-block-start: var(--space-md);
+	padding-block-start: 30px;
+
+	@include viewport.breakpoint(430px) {
+		padding-block-start: 33px;
+	}
+
+	@include viewport.breakpoint(sm) {
+		padding-block-start: var(--space-md);
+	}
 
 	@include viewport.breakpoint(md) {
 		padding-block-start: var(--space-lg);
@@ -32,7 +42,7 @@
 }
 
 .logoIcon {
-	--logo-size: 68px;
+	--logo-size: 56px;
 
 	width: var(--logo-size);
 	height: var(--logo-size);
@@ -40,6 +50,14 @@
 
 	@include viewport.has-hover {
 		transform: translateY(-2px);
+	}
+
+	@include viewport.breakpoint(xs) {
+		--logo-size: 68px;
+	}
+
+	@include viewport.breakpoint(430px) {
+		--logo-size: 60px;
 	}
 }
 
@@ -82,27 +100,26 @@
 }
 
 .navContainer {
-	--nav-item-spacing: clamp(var(--space-sm), 1.5dvw, var(--space-md));
+	--nav-item-spacing: 8px;
 	--nav-vert-alignment-offset: 14px;
 
 	position: relative;
 	display: grid;
 	grid-template-columns: minmax(0, 1fr) auto;
 	gap: var(--nav-item-spacing);
-	padding-block-start: calc(var(--space-lg) + var(--nav-vert-alignment-offset)); // optical sizing
+	padding-block-start: calc(var(--space-lg) + var(--nav-vert-alignment-offset));
 	text-align: center;
 	user-select: none;
 
-	@include viewport.breakpoint(xs, max) {
-		--nav-vert-alignment-offset: 4px;
-		padding-block-start: calc(var(--space-xl) + var(--nav-vert-alignment-offset));
-		grid-template-columns: auto;
-		justify-items: end;
+	@include viewport.breakpoint(430px) {
+		--nav-item-spacing: var(--space-xs);
 	}
 
-	// small hack to fix nav collision
-	@include viewport.between(sm, 799px) {
-		gap: initial;
+	@include viewport.breakpoint(446px) {
+		--nav-item-spacing: clamp(var(--space-sm), 1.5dvw, var(--space-md));
+	}
+
+	@include viewport.breakpoint(sm) {
 	}
 
 	@include viewport.breakpoint(md) {
@@ -113,12 +130,28 @@
 		content: '';
 		position: absolute;
 		top: 0;
-		left: 0;
+		left: 20px;
 		right: 0;
 		height: var(--space-md);
 		background-color: var(--color-primary);
 		transform: skewX(-15deg);
 		z-index: -1;
+
+		@include viewport.breakpoint(xs) {
+			left: 32px;
+		}
+
+		@include viewport.breakpoint(md) {
+			left: 36px;
+		}
+
+		@include viewport.breakpoint(lg) {
+			left: 40px;
+		}
+
+		@include viewport.breakpoint(xl) {
+			left: 44px;
+		}
 
 		@include viewport.breakpoint(md) {
 			height: var(--space-lg);
@@ -126,22 +159,17 @@
 	}
 }
 
+.picker {
+	margin-inline-end: -9px; // optical alignment with gutter
+}
+
 .nav {
-	--margin-offset: -24px;
-
 	display: flex;
-	flex-wrap: wrap;
 	align-items: center;
-	font-size: var(--text-md);
-	margin-inline-start: var(--margin-offset);
+	font-size: var(--text-base);
 
-	@include viewport.breakpoint(md) {
-		--margin-offset: -34px;
-	}
-
-	@include viewport.breakpoint(xs, max) {
-		order: 2;
-		margin-inline-end: -13px;
+	@include viewport.breakpoint(430px) {
+		font-size: var(--text-md);
 	}
 }
 

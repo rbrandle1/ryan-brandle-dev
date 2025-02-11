@@ -1,13 +1,18 @@
 'use client';
+import cn from 'classnames';
 import { useTheme } from '@/components/ThemeProvider/ThemeProvider';
 import IconDroplet from '@/components/Icons/IconDroplet';
 import styles from './ThemePicker.module.scss';
 
-const ThemePicker = () => {
+interface ThemePickerProps {
+	className?: string;
+}
+
+const ThemePicker = ({ className }: ThemePickerProps) => {
 	const { theme, handleThemeChange } = useTheme();
 
 	return (
-		<fieldset className={styles.themePicker}>
+		<fieldset className={cn(styles.themePicker, className)}>
 			<legend>Choose a theme:</legend>
 			<div className={styles.options} role='radiogroup' aria-label='Select a theme'>
 				<label htmlFor='magenta-theme'>

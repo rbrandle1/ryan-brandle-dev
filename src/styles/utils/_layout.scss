@@ -31,14 +31,6 @@ $viewport-sizes: (
 	width: min(#{map.get($viewport-sizes, $viewport)}, 100%);
 }
 
-// @mixin viewport-width {
-// 	position: relative;
-// 	left: 50%;
-// 	right: 50%;
-// 	margin-inline: -50vw;
-// 	width: 100vw;
-// }
-
 @mixin grid {
 	--gutter: clamp(var(--space-base), 4dvw, var(--space-lg));
 	--main: min(var(--viewport-md), 100% - var(--gutter) * 2);

@@ -11,6 +11,7 @@ import styles from './home.module.scss';
 * Update section spacing to utilize lh system like articles. Possibly adjust footer widths to line up nicely with article widths and shared grid.
 
 * Add gradient bg to project pages
+* Animate the paint droplet to drop down and fade out, rinse and repeat.
 
 * make sure caption svg works on home page. probably need to introduce grid and gutter.
 * Create better easing with cubic-bezier
@@ -99,7 +100,7 @@ export default function Home() {
 						</p>
 					</div>
 				</div>
-				<div className={styles.scrollContainer}>
+				<div className={cn(styles.containerGrid, styles.scrollContainer)}>
 					<div className={styles.scroll}>
 						<span className={styles.float}>&#8595;</span>
 					</div>

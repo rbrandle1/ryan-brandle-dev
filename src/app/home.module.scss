@@ -3,6 +3,7 @@
 @use '@/styles/utils/viewport';
 @use '@/styles/utils/element';
 
+// Todo: remove layout.max-width's
 // Todo: update as section calc(var(--space-4xl) * 3)
 // Todo: update calc(var(--space-8xl) * 2) as section padding
 //todo: update to lh system
@@ -199,7 +200,6 @@
 }
 
 .scrollContainer {
-	@include layout.max-width;
 	padding-block-end: clamp(var(--space-base), 4dvw, var(--space-lg));
 }
 
