@@ -46,17 +46,12 @@
 	position: relative;
 
 	@include viewport.breakpoint(sm) {
-		margin-top: var(--space-2xl);
+		margin-block-start: var(--space-2xl);
 		transition-delay: var(--transition-delay);
 
 		.imgRight & {
 			order: 2;
 		}
-	}
-
-	figcaption {
-		@include typography.caption;
-		margin-top: var(--space-sm);
 	}
 }
 
@@ -66,7 +61,7 @@
 	--transition-duration: var(--transition-duration-base);
 
 	> * + * {
-		margin-top: var(--flow-space);
+		margin-block-start: var(--flow-space);
 	}
 }
 
@@ -92,9 +87,9 @@
 	position: relative;
 	display: grid;
 	place-items: center;
-	padding-left: var(--space-xl);
-	padding-right: var(--space-xl);
+	padding-inline: var(--space-xl);
 	border-radius: var(--radius-default);
+	background-color: var(--surface-neutral);
 	aspect-ratio: 3 / 2;
 	overflow: hidden;
 	user-select: none;
@@ -104,7 +99,6 @@
 	}
 
 	img {
-		position: absolute;
 		object-fit: cover;
 
 		@media not (prefers-reduced-motion: reduce) {
@@ -120,22 +114,27 @@
 .logoContainer {
 	width: 100%;
 	max-width: 338px;
+	pointer-events: none;
 	z-index: 1;
 
 	svg {
 		fill: var(--icon-over-image);
-		filter: var(--svg-shadow);
+		filter: var(--shadow-svg);
 	}
 }
 
 .title {
 	@include typography.headline;
-	margin-bottom: var(--space-sm);
-	max-width: 17ch;
+	max-width: var(--optimal-line-length-xs);
+	margin-block-end: var(--space-sm);
+
+	@include viewport.breakpoint(sm) {
+		max-width: var(--optimal-line-length-2xs);
+	}
 }
 
 .description {
-	max-width: 50ch;
+	max-width: var(--optimal-line-length-base);
 }
 
 .button {

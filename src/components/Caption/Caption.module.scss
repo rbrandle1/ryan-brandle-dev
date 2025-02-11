@@ -1,0 +1,50 @@
+@use '@/styles/utils/typography' as typography;
+@use '@/styles/utils/viewport' as viewport;
+
+.caption {
+	--caption-space: 0.75lh;
+
+	@include typography.caption;
+	display: flex;
+	margin-block-start: var(--caption-space);
+	position: relative;
+
+	.text {
+		max-width: var(--optimal-line-length-base);
+	}
+
+	svg {
+		position: absolute;
+		top: -23px;
+		color: var(--icon-accent);
+		filter: var(--shadow-svg);
+		transition: color 250ms ease-out 100ms;
+	}
+
+	&.left {
+		svg {
+			left: calc(var(--gutter) / 2 - 5px);
+
+			@include viewport.breakpoint(sm) {
+				left: calc(var(--gutter) / 3 - 5px);
+			}
+		}
+	}
+
+	&:not(.left) {
+		justify-content: end;
+		text-align: right;
+
+		.hasIcon.text {
+			padding-inline-start: 0;
+		}
+
+		svg {
+			right: calc(var(--gutter) / 2);
+
+			@include viewport.breakpoint(sm) {
+				right: calc(var(--gutter) / 3);
+			}
+		}
+	}
+}

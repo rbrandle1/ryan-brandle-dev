@@ -1,0 +1,67 @@
+@use '@/styles/utils/typography' as typography;
+@use '@/styles/utils/viewport' as viewport;
+
+.sideImage {
+	--component-gap-space: 1.5lh;
+
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr;
+	align-items: center;
+	gap: var(--component-gap-space);
+
+	@include viewport.breakpoint(sm) {
+		grid-template-columns: 1fr 1fr;
+
+		.imgRight & {
+			grid-template-columns: 1fr 1fr reverse;
+		}
+	}
+
+	@include viewport.breakpoint(md) {
+		--component-gap-space: 2lh;
+
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+.imageContainer {
+	position: relative;
+
+	@include viewport.breakpoint(sm) {
+		&:not(.imgRight &) {
+			order: -1;
+		}
+	}
+}
+
+.textContainer {
+	@include viewport.breakpoint(sm) {
+		width: var(--optimal-line-length-sm);
+	}
+
+	@include viewport.breakpoint(md) {
+		width: var(--optimal-line-length-base);
+	}
+
+	> * + * {
+		margin-block-start: var(--flow-space-base);
+	}
+}
+
+.image {
+	position: relative;
+	border-radius: var(--radius-default);
+	background-color: var(--surface-neutral);
+	aspect-ratio: 3 / 2;
+	overflow: hidden;
+	user-select: none;
+
+	@include viewport.breakpoint(sm) {
+		aspect-ratio: 2 / 3;
+	}
+
+	img {
+		object-fit: cover;
+	}
+}

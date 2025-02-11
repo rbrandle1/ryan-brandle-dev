@@ -5,15 +5,14 @@
 
 .section {
 	background-color: var(--surface-primary);
-	padding-top: var(--space-8xl);
-	padding-bottom: var(--space-8xl);
+	padding-block: var(--space-8xl);
 }
 
 .container {
 	@include layout.max-width;
 
 	> * + * {
-		margin-top: var(--space-base);
+		margin-block-start: var(--space-base);
 	}
 }
 
@@ -52,17 +51,17 @@
 }
 
 .calloutLg {
-	@include typography.callout(lg);
+	@include typography.alt-headline(lg);
 	color: var(--text-accent);
 }
 
 .callout {
-	@include typography.callout;
+	@include typography.alt-headline;
 	color: var(--text-accent);
 }
 
 .calloutSm {
-	@include typography.callout(sm);
+	@include typography.alt-headline(sm);
 	color: var(--text-accent);
 }
 
@@ -85,6 +84,7 @@
 .altFont {
 	font-family: var(--font-alt);
 	font-weight: var(--font-weight-black);
+	line-height: var(--line-height-2xs);
 }
 
 .link {

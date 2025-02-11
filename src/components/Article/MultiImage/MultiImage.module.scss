@@ -1,0 +1,119 @@
+@use '@/styles/utils/typography' as typography;
+@use '@/styles/utils/viewport' as viewport;
+@use '@/styles/utils/element' as element;
+
+.multiImage {
+	--gap: var(--space-xs);
+
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: var(--gap);
+
+	@include viewport.breakpoint(sm) {
+		--gap: 0.5lh;
+
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+.figure {
+	@include viewport.breakpoint(sm) {
+		&:nth-child(4):not(.textRight &) {
+			order: 1;
+		}
+	}
+
+	@include viewport.breakpoint(sm, max) {
+		&:first-child {
+			grid-row: span 2;
+			align-self: center;
+		}
+
+		&:nth-child(2) {
+			.textRight & {
+				grid-column: 1;
+				grid-row: 1;
+			}
+
+			.image {
+				aspect-ratio: 1 / 1;
+			}
+		}
+
+		&:nth-child(3) {
+			.image {
+				aspect-ratio: 3 / 2;
+			}
+		}
+
+		&:nth-child(4) {
+			@include element.visually-hidden;
+		}
+	}
+}
+
+.image {
+	position: relative;
+	border-radius: var(--radius-default);
+	background-color: var(--surface-neutral);
+	aspect-ratio: 2 / 3;
+	overflow: hidden;
+	user-select: none;
+
+	img {
+		object-fit: cover;
+	}
+}
+
+.textContainer {
+	grid-column: span 2;
+
+	@include viewport.breakpoint(sm) {
+		display: grid;
+		grid-template-columns: var(--breakout) min(668px, 100%) minmax(0, calc(var(--gap) * 2));
+		grid-template-areas: '. text .';
+	}
+
+	.textRight & {
+		@include viewport.breakpoint(sm) {
+			grid-template-areas: '. text';
+			grid-template-columns: 1lh 1fr;
+		}
+
+		@include viewport.breakpoint(md) {
+			grid-template-columns: 2lh 1fr;
+		}
+
+		@include viewport.breakpoint(lg) {
+			grid-template-columns: var(--space-3xl) 1fr;
+		}
+	}
+
+	> div {
+		grid-area: text;
+		margin-block-start: 2lh;
+
+		@include viewport.breakpoint(sm) {
+			margin-block-start: var(--flow-space);
+
+			&:not(.textRight &) {
+				padding-inline-end: 1lh;
+			}
+
+			.figure:nth-child(3):has(figcaption) ~ & {
+				margin-block-start: calc(var(--flow-space) - 1lh);
+			}
+		}
+
+		> * + * {
+			margin-block-start: var(--flow-space-base);
+		}
+	}
+}
+
+.caption {
+	@include viewport.breakpoint(sm, max) {
+		@include element.visually-hidden;
+	}
+}

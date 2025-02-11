@@ -1,0 +1,175 @@
+@use '@/styles/utils/typography';
+@use '@/styles/utils/layout';
+@use '@/styles/utils/viewport';
+@use '@/styles/utils/element';
+
+// TODO: Make containerGrid a mixin like max-width and apply to other home.
+
+.projectPage {
+	p {
+		@include typography.p;
+		max-width: var(--optimal-line-length-base);
+	}
+
+	.h1,
+	.h2 {
+		max-width: var(--optimal-line-length-2xs);
+	}
+
+	.h1 {
+		@include typography.headline(3xl);
+	}
+
+	.h2 {
+		@include typography.headline(2xl);
+	}
+
+	.h3 {
+		@include typography.headline(xl);
+		max-width: var(--optimal-line-length-xs);
+	}
+
+	.subhead {
+		@include typography.p(lg);
+		max-width: var(--optimal-line-length-sm);
+		color: var(--text-tertiary);
+		text-wrap: balance;
+	}
+
+	.altFont {
+		font-family: var(--font-alt);
+		font-weight: var(--font-weight-black);
+		line-height: var(--line-height-2xs);
+	}
+}
+
+.heroSection {
+	--hero-spacing: var(--space-base);
+
+	background-color: var(--surface-primary);
+	padding-block-start: var(--hero-spacing);
+	padding-block-end: calc(var(--hero-spacing) + var(--space-xl));
+
+	@include viewport.breakpoint(xs) {
+		--hero-spacing: var(--space-lg);
+	}
+	@include viewport.breakpoint(sm) {
+		--hero-spacing: var(--space-xl);
+	}
+
+	@include viewport.breakpoint(md) {
+		--hero-spacing: var(--space-4xl);
+		padding-block-end: calc(var(--hero-spacing) + var(--space-8xl));
+	}
+}
+
+.section {
+	--section-spacing: var(--space-8xl);
+
+	background-color: var(--surface-primary);
+	padding-block: var(--section-spacing);
+
+	&.heroOffset {
+		@include viewport.breakpoint(md) {
+			margin-block-start: calc(var(--space-6xl) * -1);
+		}
+
+		// h2:first-of-type {
+		// 	margin-block-start: 0.5lh;
+		// }
+	}
+
+	[data-section='dark'] & {
+		padding-block-start: 0;
+
+		&:last-child {
+			padding-block-end: calc(var(--section-spacing) * 1.5);
+		}
+	}
+}
+
+.containerGrid {
+	--flow-space-base: 1lh;
+	--gutter: clamp(var(--space-base), 4dvw, var(--space-lg));
+	--main: min(var(--viewport-md), 100% - var(--gutter) * 2);
+	--breakout: minmax(0, var(--space-3xl));
+	--full: minmax(var(--gutter), 1fr);
+
+	display: grid;
+	grid-template-columns:
+		[full-start] var(--full)
+		[breakout-start] var(--breakout)
+		[main-start] var(--main) [main-end]
+		var(--breakout) [breakout-end]
+		var(--full) [full-end];
+
+	> * {
+		grid-column: main;
+	}
+
+	.breakout {
+		grid-column: breakout;
+	}
+
+	.full {
+		grid-column: full;
+	}
+
+	> * + * {
+		margin-block-start: var(--flow-space, var(--flow-space-base));
+	}
+}
+
+// alters the margin bottom of certain elements to account for base flow space of following elements. Use this for the last large element that is not text, like an image or a SideImage component. This will add some extra space between it and the following text element.
+.flowOffset {
+	&:not(:last-child) {
+		margin-block-end: calc(var(--flow-space) - var(--flow-space-base));
+	}
+}
+
+.imageContainer {
+	--flow-space: 2lh;
+
+	&:not(:last-child) {
+		&:has(figcaption) {
+			margin-block-end: calc(var(--flow-space) - var(--flow-space-base) - 1lh); //margin reduction for captions
+		}
+	}
+}
+
+.heroImage {
+	grid-column: breakout;
+
+	@include viewport.breakpoint(md, max) {
+		z-index: 1;
+		grid-column: full;
+	}
+}
+
+.callout {
+	--flow-space: 4lh;
+
+	@include viewport.breakpoint(sm) {
+		--flow-space: 6lh;
+	}
+}
+
+.sideImageContainer {
+	--flow-space: 2lh;
+
+	@include viewport.breakpoint(sm) {
+		--flow-space: 4lh;
+	}
+}
+
+.multiImageContainer {
+	--flow-space: 4lh;
+}
+
+.link {
+	@include typography.link(underline);
+}
+
+.accentEdge {
+	@include element.accent-edge;
+}

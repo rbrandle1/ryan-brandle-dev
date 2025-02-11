@@ -3,17 +3,22 @@
 
 .meta {
 	@include typography.p(sm);
+	color: inherit;
 	display: flex;
 	font-weight: var(--font-weight-semiBold);
 }
 
 .iconContainer {
-	margin-top: var(--space-2xs);
-	padding-right: var(--space-2xs);
+	margin-block-start: var(--space-2xs);
+	padding-inline-end: var(--space-2xs);
 	flex-shrink: 0;
 
 	@include viewport.breakpoint(1300px) {
-		margin-top: calc(var(--space-2xs) + 1px); // optically alignment icon
+		margin-block-start: calc(var(--space-2xs) + 1px); // optically alignment icon
+	}
+
+	&.iconAccent {
+		color: var(--icon-accent);
 	}
 }
 
@@ -25,6 +30,5 @@
 .bullet {
 	--bullet-space: var(--space-2xs);
 
-	padding-right: var(--bullet-space);
-	padding-left: var(--bullet-space);
+	padding-inline: var(--bullet-space);
 }

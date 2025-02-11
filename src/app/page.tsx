@@ -6,27 +6,35 @@ import ProjectCard from '@/components/ProjectCard/ProjectCard';
 import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import styles from './home.module.scss';
 
-/* Todo: 
-* Make Article pages and article specific components. ImageGrid component.... variations.
-* Make buttons view link
-* figure out section spacing. avoid calc's and use variables instead. Seems like featured section needs extra spacing on top and bottom because the content is so dense. It is unique to this section because others are not as dense.
-* Add backup words for each FeaturedProject
-* update crop icon to replace LinkedIn icon
+/* Todo:
+* Shape up home page. Mobile spacing, remove arrow if not needed on small screens. Refactor home to be more like article. Make dark sections just a div with data-section='dark'. No other styling. Content within it will have section padding, etc.
+* Update section spacing to utilize lh system like articles. Possibly adjust footer widths to line up nicely with article widths and shared grid.
+
+* make sure caption svg works on home page. probably need to introduce grid and gutter.
 * Create better easing with cubic-bezier
-* Create a boilerplate ts file for each page to include commonly used things like project title, meta tags, etc.
-* make scroll arrow a circular button... or a square, with accent background.
-* Try updating to line-height units: https://12daysofweb.dev/2024/css-margin-trim-line-height-units/
-* Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
-* Double check cpu and performance/paint issues. If gradient is still causing performance issues, try the png.
-* download and host images locally instead of direct url from unsplash.
+* Make buttons view link
+
+* Add gradient bg to project pages?
+* update project card buttons with extra padding to the left and right so highlight is not directly at edge of text.
+* update project card buttons to use an icon, not text for vertical alignment purposes.
+* update crop icon to replace LinkedIn icon
 * make favicon
+* delete scroll arrow or make a circular button... or a square, with accent background.
+* Create a boilerplate ts file for each page to include commonly used things like project title, meta tags, etc.
+* Search all todos and fix them.
+* Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
+* Double check cpu and performance/paint issues. If gradient is still causing performance issues, try the png. Maybe will-change is causing issues. jpgs for images, pngs for snapshots. heros under 200kb, thumbnails under 30kb. NEXT JS SHOULD OPTIMIZE ALREADY.
+* ensure all pages have correct metadata and optimize to AVOID seo for sensitive company names.
 * Read through all text, footer text, etc and finalize.
 * Get peer review
 * set up a new contact email
+* look in src/fonts. Do I need to do this for my fonts? Delete GeistMono, etc.
 
 * BUGS:
+* Theme picker on load error.
+* why does article hero image expand wider immediately on page load? How to lessen the FOUC.
+* fade in ups are not fast enough. If someone is scrolling too quickly, the fade in lags and needs to catch up. Looks like a blank page at first.
 * have logo present on page load, and does not animate in.
-* in safari, underlines in link doesn't change on theme change. It does change when you hover over the link.
 
 * THEME PICKER LOCAL STORAGE ISSUES:
 * Continue setting up theme provider and theme picker. TRY creating a nested layout to manage the theme state. So the body, header, footer etc are not reloaded on every page load, therefore not causing a FOUC.
@@ -36,9 +44,10 @@ import styles from './home.module.scss';
 * FUTURE CLEANUP AND EXPLORATION:
 * Use css grid stack instead of absolute positioning.
 * Make a mixin or a variable for hover translate animations.
-* update margins for margin-inline and margin-block elements.
 * Incorporate purple as a gradient to pink?
-* Try setting base space from 1.6 to 1.8. Also, might need to adjust the real big spaces % max to be larger for a more noticeable difference. Can also run the calculation to a raw value to enhance performance.
+* Add backup words for each FeaturedProject
+* ??? Make Mosaic component HOLD. Might not need this.
+* Try to get all altfont ampersands to be centered, not baseline.
 	
 * TALKING POINTS, TROUBLESHOOTING, ETC, WITH THIS PROJECT:
 	* State management. I had to decide whether prop drilling or using react context was the best approach. I went with context because I came to understand how multiple components could be affected by the theme state, and the best way to manage it was to avoid prop drilling.
@@ -57,6 +66,10 @@ import styles from './home.module.scss';
 	* Responsive vertical text was a challenge and there are likely better ways to do this. But I took a very granular and specific approach for this instance to this to make sure it works. Don't consider this a modular solution.
 	* 
 	* Utilizing inline css variables and ternary operators to manage various styles on component. Instead of using a class name to manage styles.
+	* 
+	* Utilizing lh values for a typographical based spacing system when appropriate.
+	* 
+	* Getting components like MultiImage to match the breakout portion of the grid. Very challenging. Got it close but not perfect. It was also challenging to get the caption to work in the most semantic and accessible way possible. Ideally I'd have a single figure with multiple images inside it and a single caption for the entire figure. Since I'm using a different grid layout on desktop, I had to make a choice to use aria-labelledby on each figure to reference a single caption being used on one of the images. Would like to come back to this.
 */
 
 export default function Home() {
@@ -74,7 +87,8 @@ export default function Home() {
 						</h1>
 						<div className={styles.heroDetails}>
 							<p className={styles.heroSubtitle}>
-								This is the 100% custom crafted portfolio site of Ryan Brandle, a Design Engineer and maker of the web.
+								This is the 100% custom crafted portfolio site of Ryan&nbsp;Brandle, a Design Engineer and maker of the
+								web.
 							</p>
 							<p className={styles.heroCopy}>
 								I’m a bing bang with over 15 years of experience in design, development and making top notch products.
@@ -104,7 +118,7 @@ export default function Home() {
 				</section>
 				<section className={styles.section}>
 					<div className={styles.container}>
-						<Callout title='I make flexible, modular systems that are easy to use.' iconAccent>
+						<Callout title='I make flexible, modular systems that are easy to use.' size='lg' iconAccent>
 							<IconCodePen />
 						</Callout>
 					</div>
@@ -113,15 +127,15 @@ export default function Home() {
 					<div className={styles.container}>
 						<FeaturedProject
 							caption='Credit: Inspirato, Unsplash/@seefromthesky'
-							imgSrc='https://images.unsplash.com/photo-1484821582734-6c6c9f99a672'
-							imgAlt='Luxury travel website'
+							imgSrc='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
+							imgAlt='Boats anchored off a white sandy beach in turquoise blue water'
 							hasCropIcon
 							logo={<IconLogoInsp />}
 							title='The Inspirato Design System'
 							metaTags={['Branding', 'UX/UI', 'HTML', 'CSS', 'JS', 'React', 'Storybook']}
 							description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
 							buttonText='Explore'
-							href='/style'
+							href='/insp'
 						/>
 						<FeaturedProject
 							caption='Credit: Innovative Business Solutions'
@@ -175,8 +189,8 @@ export default function Home() {
 							</p>
 						</div>
 						<ProjectCard
-							imgSrc='https://images.unsplash.com/photo-1484821582734-6c6c9f99a672'
-							imgAlt='Product image'
+							imgSrc='/images/flashcards.png'
+							imgAlt='Image of accessible flashcards for kids'
 							hasCropIcon
 							title='Accessible Flashcards for Kids'
 							metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'React']}
@@ -185,8 +199,8 @@ export default function Home() {
 							href='/style'
 						/>
 						<ProjectCard
-							imgSrc='https://images.unsplash.com/photo-1484821582734-6c6c9f99a672'
-							imgAlt='Product image'
+							imgSrc='/images/codepen-focus.png'
+							imgAlt='Image of a CodePen project'
 							title='CodePen Explorations'
 							metaTags={['UX/UI', 'HTML', 'CSS', 'JS']}
 							description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
@@ -194,14 +208,26 @@ export default function Home() {
 							href='/style'
 						/>
 						<ProjectCard
-							imgSrc='https://images.unsplash.com/photo-1484821582734-6c6c9f99a672'
-							imgAlt='Product image'
+							imgSrc='/images/comparison-card.png'
+							imgAlt='A grid of vibrant colors'
 							title='Comparison Cards with CSS Grid'
 							metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'React']}
 							description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
 							buttonText='Read more'
 							href='/style'
 						/>
+					</div>
+				</section>
+				<section className={styles.section}>
+					<div className={styles.container}>
+						<Callout
+							title='For product teams that love the extra polish!'
+							body='I make flexible, modular systems that are easy to use. I make flexible, modular systems that are easy to use. I make flexible, modular systems that are easy to use.'
+							iconAccent
+							size='lg'
+						>
+							<IconCodePen />
+						</Callout>
 					</div>
 				</section>
 				<div className={cn(styles.bgVertText, styles.vertTextBottomRight)}>

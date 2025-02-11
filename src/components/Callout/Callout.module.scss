@@ -1,4 +1,5 @@
 @use '@/styles/utils/typography';
+@use '@/styles/utils/viewport';
 
 .callOut {
 	--transition-duration: var(--duration-2xl);
@@ -42,12 +43,28 @@
 }
 
 .title {
-	@include typography.callout(lg);
 	color: var(--title-color, var(--text-primary));
+	max-width: var(--optimal-line-length-sm);
+}
+
+.lg {
+	@include typography.alt-headline(md);
+
+	@include viewport.breakpoint(md) {
+		@include typography.alt-headline(lg);
+	}
+}
+
+.md {
+	@include typography.alt-headline(md);
+}
+
+.sm {
+	@include typography.alt-headline(sm);
 }
 
 .body {
 	@include typography.p(lg);
+	max-width: var(--optimal-line-length-base);
 	color: var(--text-tertiary);
-	max-width: 52ch;
 }

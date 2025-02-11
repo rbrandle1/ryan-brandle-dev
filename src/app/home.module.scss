@@ -22,15 +22,14 @@
 .section {
 	color: var(--text-primary);
 	background-color: var(--surface-primary);
-	padding-top: var(--section-spacing);
-	padding-bottom: var(--section-spacing);
+	padding-block: var(--section-spacing);
 }
 
 .container {
 	@include layout.max-width;
 
 	> * + * {
-		margin-top: var(--flow-space);
+		margin-block-start: var(--flow-space);
 	}
 }
 
@@ -89,7 +88,7 @@
 	--flow-space: var(--space-4xl);
 	--featured-section-spacing: calc(var(--section-spacing) * 2);
 
-	padding-bottom: var(--featured-section-spacing);
+	padding-block-end: var(--featured-section-spacing);
 
 	@include viewport.breakpoint(md) {
 		--flow-space: calc(var(--space-4xl) * 3);
@@ -100,8 +99,7 @@
 	--flow-space: var(--space-2xl);
 	--project-section-spacing: calc(var(--section-spacing) * 2);
 
-	padding-top: var(--project-section-spacing);
-	padding-bottom: var(--project-section-spacing);
+	padding-block: var(--project-section-spacing);
 
 	@include viewport.breakpoint(md) {
 		--flow-space: var(--space-3xl);
@@ -113,25 +111,26 @@
 }
 
 .heroSection {
-	min-height: calc(100dvh - var(--header-height) - var(--space-4xl));
 	display: grid;
 	grid-template-rows: 1fr auto;
-	padding-top: 0;
-	padding-bottom: 0;
+	padding-block: 0;
 
 	> div:first-of-type {
 		align-content: center;
+	}
+
+	@include viewport.breakpoint(sm) {
+		min-height: calc(100dvh - var(--header-height) - var(--space-4xl));
 	}
 }
 
 .heroContent {
 	--hero-flow-space: var(--space-xl);
 
-	margin-top: var(--hero-flow-space);
-	margin-bottom: var(--hero-flow-space);
+	margin-block: var(--hero-flow-space);
 
 	> * + * {
-		margin-top: var(--hero-flow-space);
+		margin-block-start: var(--hero-flow-space);
 	}
 
 	@include viewport.breakpoint(xs) {
@@ -155,20 +154,27 @@
 .altFont {
 	font-family: var(--font-alt);
 	text-transform: initial;
+	line-height: var(--line-height-2xs);
 }
 
-.heroDetails > * + * {
-	margin-top: var(--flow-space);
+.heroDetails {
+	@include viewport.breakpoint(md, max) {
+		max-width: var(--optimal-line-length-base);
+	}
+
+	> * + * {
+		margin-block-start: var(--flow-space);
+	}
 }
 
 .heroSubtitle {
 	@include typography.p(lg);
+	max-width: var(--optimal-line-length-base);
 	color: var(--text-tertiary);
-	max-width: 52ch;
 }
 
 .heroCopy {
-	--column-width: 50ch;
+	--column-width: var(--optimal-line-length-base);
 
 	@include typography.p;
 	max-width: var(--column-width);
@@ -186,7 +192,7 @@
 
 .scrollContainer {
 	@include layout.max-width;
-	padding-bottom: clamp(var(--space-base), 4dvw, var(--space-lg));
+	padding-block-end: clamp(var(--space-base), 4dvw, var(--space-lg));
 }
 
 .scroll {
@@ -209,12 +215,12 @@
 .vertSection {
 	position: relative;
 	overflow: hidden;
-	padding-bottom: var(--space-xl);
+	padding-block-end: var(--space-xl);
 
 	&::before {
 		content: '';
 		display: block;
-		padding-bottom: clamp(187px, 29dvw, 414px);
+		padding-block-end: clamp(187px, 29dvw, 414px);
 	}
 }
 
@@ -231,7 +237,7 @@
 	left: 51.5%;
 	transform: translateX(-50%);
 	font-size: clamp(13.41rem, 21dvw, 29.23rem); // optical override for vertical text style alignment.
-	text-shadow: var(--text-shadow-vert);
+	text-shadow: var(--shadow-text-vert);
 
 	@include viewport.breakpoint(xs) {
 		left: 51%;
@@ -270,22 +276,22 @@
 .multiSectionHeader {
 	@include viewport.breakpoint(sm) {
 		text-align: center;
-	}
 
-	> * {
-		margin-inline: auto;
+		> * {
+			margin-inline: auto;
+		}
 	}
 }
 
 .multiSectionTitle {
 	@include typography.headline;
 
-	margin-bottom: var(--space-lg);
+	margin-block-end: var(--space-lg);
 }
 
 .multiSectionCopy {
 	@include typography.p(lg);
+	max-width: var(--optimal-line-length-base);
 
 	color: var(--text-tertiary);
-	max-width: 50ch;
 }

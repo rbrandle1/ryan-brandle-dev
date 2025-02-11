@@ -6,6 +6,9 @@
   * These are the most basic, raw token values to be used in Semantic Tokens. These should be used rarely, if at all when writing custom component CSS. Tier 2 should primarily be used. This file includes the following:
     * Viewport
     * Font
+    * Text Size
+    * Line Height
+    * Optimal Line Length
     * Space
     * Radius
     * Timing
@@ -31,7 +34,7 @@
 	--p-font-weight-3: 700;
 	--p-font-weight-4: 900;
 
-	/* text sizing*/
+	/* TEXT SIZE */
 	/* 1rem is 10px with html font-size set to 62.5% */
 	--p-text-size-base: clamp(1.8rem, 0.38vi + 1.67rem, 2.2rem);
 	--p-text-size-1: clamp(1.44rem, 0.2vi + 1.37rem, 1.65rem);
@@ -45,10 +48,17 @@
 	--p-text-size-9: clamp(10.73rem, 10.67vi + 6.99rem, 21.93rem);
 	--p-text-size-10: clamp(13.41rem, 15.07vi + 8.14rem, 29.23rem);
 
-	/* line height */
+	/* LINE HEIGHT */
 	--p-line-height-1: 1;
 	--p-line-height-2: 1.2;
-	--p-line-height-3: 1.5;
+	--p-line-height-3: 1.25;
+	--p-line-height-4: 1.5;
+
+	/* OPTIMAL LINE LENGTH */
+	--p-optimal-line-length-1: 12ch;
+	--p-optimal-line-length-2: 20ch;
+	--p-optimal-line-length-3: 40ch;
+	--p-optimal-line-length-4: 50ch;
 
 	/* SPACE */
 	/* Base value for the spacing system */
@@ -158,11 +168,6 @@
 
 	/* COLOR */
 	/* Neutral */
-	// --color-gray-200: hsl(var(--color-neutral-hue), var(--color-neutral-sat), 92%);
-	// --color-gray-300: hsl(var(--color-neutral-hue), var(--color-neutral-sat), 87%);
-	// --color-gray-400: hsl(var(--color-neutral-hue), var(--color-neutral-sat), 69%);
-	// --color-gray-500: hsl(var(--color-neutral-hue), var(--color-neutral-sat), 42%);
-	// --color-black: hsl(var(--color-neutral-hue), var(--color-neutral-sat), 0%);
 	--p-color-neutral-hue: 0;
 	--p-color-neutral-sat: 0%;
 	--p-color-white: hsl(var(--p-color-neutral-hue), var(--p-color-neutral-sat), 100%);
@@ -172,6 +177,8 @@
 	--p-color-black: hsl(var(--p-color-neutral-hue), var(--p-color-neutral-sat), 0%);
 	--p-color-black-a10: hsla(var(--p-color-neutral-hue), var(--p-color-neutral-sat), 0%, 0.1);
 	--p-color-black-a15: hsla(var(--p-color-neutral-hue), var(--p-color-neutral-sat), 0%, 0.15);
+	--p-color-black-a20: hsla(var(--p-color-neutral-hue), var(--p-color-neutral-sat), 0%, 0.2);
+	--p-color-black-a30: hsla(var(--p-color-neutral-hue), var(--p-color-neutral-sat), 0%, 0.3);
 
 	/* Cyan */
 	--p-color-cyan-hue: 180;

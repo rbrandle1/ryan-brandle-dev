@@ -1,0 +1,96 @@
+@use '@/styles/utils/typography';
+@use '@/styles/utils/viewport';
+
+.largeImage {
+	position: relative;
+}
+
+.metaBox {
+	padding: var(--space-sm) var(--space-md) var(--space-sm) var(--space-base);
+	background-color: var(--color-accent);
+	border-radius: var(--radius-default);
+	max-width: 28ch;
+	position: absolute;
+	z-index: 2;
+	left: var(--gutter, var(--space-lg));
+	top: calc(var(--gutter, var(--space-lg)) / -1);
+	transition: background-color 250ms ease-out 100ms;
+	box-shadow: var(--shadow-box);
+
+	@include viewport.breakpoint(sm) {
+		left: auto;
+		right: var(--gutter, var(--space-sm));
+	}
+
+	> div > div {
+		margin-block-start: 3px;
+
+		@include viewport.breakpoint(sm) {
+			margin-block-start: 4px;
+		}
+	}
+
+	ul {
+		line-height: var(--line-height-sm);
+	}
+}
+
+.image {
+	position: relative;
+	display: grid;
+	grid-template-rows: 1fr;
+	place-items: center;
+	padding-inline: var(--space-xl);
+	background-color: var(--surface-neutral);
+	aspect-ratio: 3 / 2;
+	overflow: hidden;
+	user-select: none;
+
+	&:not(.hero &) {
+		border-radius: var(--radius-default);
+	}
+
+	.hero & {
+		@include viewport.breakpoint(md) {
+			border-radius: var(--radius-default);
+		}
+
+		@include viewport.breakpoint(md, max) {
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				height: 16px;
+				box-shadow: inset 0 16px 16px -16px var(--p-color-black-a30);
+				border-top: solid 1px var(--p-color-black-a20);
+				pointer-events: none;
+				z-index: 1;
+			}
+		}
+	}
+
+	img {
+		object-fit: cover;
+	}
+}
+
+.logoContainer {
+	width: 75%;
+	max-width: var(--logo-max-width, 500px);
+	pointer-events: none;
+	z-index: 1;
+	margin-inline-start: var(--logo-offset, initial);
+
+	svg {
+		fill: var(--icon-over-image);
+		filter: var(--shadow-svg);
+	}
+}
+
+.hero .caption {
+	@include viewport.breakpoint(md, max) {
+		margin-inline: var(--gutter, var(--space-lg));
+	}
+}

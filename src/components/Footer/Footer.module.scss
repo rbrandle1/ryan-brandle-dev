@@ -5,12 +5,12 @@
 
 .footer {
 	background-color: var(--surface-neutral);
-	padding-top: var(--space-2xl);
-	padding-bottom: var(--space-base);
+	padding-block-start: var(--space-2xl);
+	padding-block-end: var(--space-base);
 
 	@include element.accent-edge;
 	@include viewport.breakpoint(sm) {
-		padding-top: var(--space-4xl);
+		padding-block-start: var(--space-4xl);
 	}
 }
 
@@ -38,7 +38,7 @@
 }
 
 .contactContainer {
-	max-width: 45ch;
+	max-width: var(--optimal-line-length-base);
 	text-align: center;
 
 	@include viewport.breakpoint(xs) {
@@ -49,7 +49,7 @@
 
 	h3 {
 		@include typography.headline(sm);
-		margin-bottom: var(--space-base);
+		margin-block-end: var(--space-base);
 	}
 
 	a {
@@ -90,7 +90,7 @@
 	}
 
 	@include viewport.breakpoint(xs, max) {
-		margin-bottom: var(--space-lg);
+		margin-block-end: var(--space-lg);
 	}
 }
 

@@ -85,9 +85,16 @@
 	--text-6xl: var(--p-text-size-9);
 	--text-7xl: var(--p-text-size-10);
 
-	--line-height-xs: var(--p-line-height-1);
-	--line-height-sm: var(--p-line-height-2);
-	--line-height-base: var(--p-line-height-3);
+	--line-height-2xs: var(--p-line-height-1);
+	--line-height-xs: var(--p-line-height-2);
+	--line-height-sm: var(--p-line-height-3);
+	--line-height-base: var(--p-line-height-4);
+
+	/* OPTIMAL LINE LENGTH */
+	--optimal-line-length-2xs: var(--p-optimal-line-length-1);
+	--optimal-line-length-xs: var(--p-optimal-line-length-2);
+	--optimal-line-length-sm: var(--p-optimal-line-length-3);
+	--optimal-line-length-base: var(--p-optimal-line-length-4);
 
 	/* COLOR */
 	--color-primary: var(--p-color-black);
@@ -108,8 +115,9 @@
 	--color-accent-active: var(--color-accent);
 
 	/* SHADOWS */
-	--text-shadow-vert: 2px -4px 6px var(--p-color-black-a15);
-	--svg-shadow: drop-shadow(0 1px 2px var(--p-color-black-a10));
+	--shadow-box: 0px 4px 8px var(--p-color-black-a20);
+	--shadow-text-vert: 2px -4px 6px var(--p-color-black-a15);
+	--shadow-svg: drop-shadow(0 1px 2px var(--p-color-black-a10));
 
 	/* TEXT */
 	--text-primary: var(--color-primary);

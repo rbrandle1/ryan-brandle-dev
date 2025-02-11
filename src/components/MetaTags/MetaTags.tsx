@@ -1,14 +1,16 @@
+import cn from 'classnames';
 import IconMeta from '@/components/Icons/IconMeta';
 import styles from './MetaTags.module.scss';
 
 interface MetaTagsProps {
 	items: string[];
+	iconAccent?: boolean;
 }
 
-const MetaTags = ({ items }: MetaTagsProps) => {
+const MetaTags = ({ items, iconAccent }: MetaTagsProps) => {
 	return (
 		<div className={styles.meta}>
-			<div className={styles.iconContainer}>
+			<div className={cn(styles.iconContainer, iconAccent && styles.iconAccent)}>
 				<IconMeta />
 			</div>
 			<ul className={styles.metaList}>

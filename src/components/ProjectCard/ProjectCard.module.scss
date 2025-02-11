@@ -32,12 +32,7 @@
 	position: relative;
 
 	@include viewport.breakpoint(sm) {
-		margin-top: var(--space-sm);
-	}
-
-	figcaption {
-		@include typography.caption;
-		margin-top: var(--space-sm);
+		margin-block-start: var(--space-sm);
 	}
 }
 
@@ -45,9 +40,9 @@
 	position: relative;
 	display: grid;
 	place-items: center;
-	padding-left: var(--space-xl);
-	padding-right: var(--space-xl);
+	padding-inline: var(--space-xl);
 	border-radius: var(--radius-default);
+	background-color: var(--surface-neutral);
 	aspect-ratio: 3 / 2;
 	overflow: hidden;
 	user-select: none;
@@ -80,22 +75,22 @@
 	--flow-space: var(--space-base);
 
 	> * + * {
-		margin-top: var(--flow-space);
+		margin-block-start: var(--flow-space);
 	}
 }
 
 .title {
 	@include typography.headline(xl);
-	margin-bottom: var(--space-xs);
-	max-width: 25ch;
+	margin-block-end: var(--space-xs);
+	max-width: var(--optimal-line-length-xs);
 
 	@include viewport.breakpoint(sm) {
-		max-width: 17ch;
+		max-width: var(--optimal-line-length-2xs);
 	}
 }
 
 .description {
-	max-width: 50ch;
+	max-width: var(--optimal-line-length-base);
 }
 
 .button {
