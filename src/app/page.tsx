@@ -8,24 +8,22 @@ import styles from './home.module.scss';
 
 /* Todo:
 * Shape up home page. Mobile spacing, remove arrow if not needed on small screens. Refactor home to be more like article. Make dark sections just a div with data-section='dark'. No other styling. Content within it will have section padding, etc.
+* Update section spacing to utilize lh system like articles. Possibly adjust footer widths to line up nicely with article widths and shared grid.
+
 * make sure caption svg works on home page. probably need to introduce grid and gutter.
-* update margins to margin-block elements.
 * Create better easing with cubic-bezier
 * Make buttons view link
-* Add backup words for each FeaturedProject
+
 * Add gradient bg to project pages?
 * update project card buttons with extra padding to the left and right so highlight is not directly at edge of text.
 * update project card buttons to use an icon, not text for vertical alignment purposes.
-* Update section spacing to utilize lh system like articles. Possibly adjust footer widths to line up nicely with article widths and shared grid.
 * update crop icon to replace LinkedIn icon
-* ??? Make Mosaic component HOLD. Might not need this.
 * make favicon
 * delete scroll arrow or make a circular button... or a square, with accent background.
 * Create a boilerplate ts file for each page to include commonly used things like project title, meta tags, etc.
 * Search all todos and fix them.
 * Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
 * Double check cpu and performance/paint issues. If gradient is still causing performance issues, try the png. Maybe will-change is causing issues. jpgs for images, pngs for snapshots. heros under 200kb, thumbnails under 30kb. NEXT JS SHOULD OPTIMIZE ALREADY.
-* Try to get all altfont ampersands to be centered, not baseline.
 * ensure all pages have correct metadata and optimize to AVOID seo for sensitive company names.
 * Read through all text, footer text, etc and finalize.
 * Get peer review
@@ -33,6 +31,7 @@ import styles from './home.module.scss';
 * look in src/fonts. Do I need to do this for my fonts? Delete GeistMono, etc.
 
 * BUGS:
+* Theme picker on load error.
 * why does article hero image expand wider immediately on page load? How to lessen the FOUC.
 * fade in ups are not fast enough. If someone is scrolling too quickly, the fade in lags and needs to catch up. Looks like a blank page at first.
 * have logo present on page load, and does not animate in.
@@ -46,6 +45,9 @@ import styles from './home.module.scss';
 * Use css grid stack instead of absolute positioning.
 * Make a mixin or a variable for hover translate animations.
 * Incorporate purple as a gradient to pink?
+* Add backup words for each FeaturedProject
+* ??? Make Mosaic component HOLD. Might not need this.
+* Try to get all altfont ampersands to be centered, not baseline.
 	
 * TALKING POINTS, TROUBLESHOOTING, ETC, WITH THIS PROJECT:
 	* State management. I had to decide whether prop drilling or using react context was the best approach. I went with context because I came to understand how multiple components could be affected by the theme state, and the best way to manage it was to avoid prop drilling.
