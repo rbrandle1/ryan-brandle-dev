@@ -22,8 +22,7 @@
 .section {
 	color: var(--text-primary);
 	background-color: var(--surface-primary);
-	padding-top: var(--section-spacing);
-	padding-bottom: var(--section-spacing);
+	padding-block: var(--section-spacing);
 }
 
 .container {
@@ -89,7 +88,7 @@
 	--flow-space: var(--space-4xl);
 	--featured-section-spacing: calc(var(--section-spacing) * 2);
 
-	padding-bottom: var(--featured-section-spacing);
+	padding-block-end: var(--featured-section-spacing);
 
 	@include viewport.breakpoint(md) {
 		--flow-space: calc(var(--space-4xl) * 3);
@@ -100,8 +99,7 @@
 	--flow-space: var(--space-2xl);
 	--project-section-spacing: calc(var(--section-spacing) * 2);
 
-	padding-top: var(--project-section-spacing);
-	padding-bottom: var(--project-section-spacing);
+	padding-block: var(--project-section-spacing);
 
 	@include viewport.breakpoint(md) {
 		--flow-space: var(--space-3xl);
@@ -115,8 +113,7 @@
 .heroSection {
 	display: grid;
 	grid-template-rows: 1fr auto;
-	padding-top: 0;
-	padding-bottom: 0;
+	padding-block: 0;
 
 	> div:first-of-type {
 		align-content: center;
@@ -130,8 +127,7 @@
 .heroContent {
 	--hero-flow-space: var(--space-xl);
 
-	margin-block-start: var(--hero-flow-space);
-	margin-bottom: var(--hero-flow-space);
+	margin-block: var(--hero-flow-space);
 
 	> * + * {
 		margin-block-start: var(--hero-flow-space);
@@ -196,7 +192,7 @@
 
 .scrollContainer {
 	@include layout.max-width;
-	padding-bottom: clamp(var(--space-base), 4dvw, var(--space-lg));
+	padding-block-end: clamp(var(--space-base), 4dvw, var(--space-lg));
 }
 
 .scroll {
@@ -219,12 +215,12 @@
 .vertSection {
 	position: relative;
 	overflow: hidden;
-	padding-bottom: var(--space-xl);
+	padding-block-end: var(--space-xl);
 
 	&::before {
 		content: '';
 		display: block;
-		padding-bottom: clamp(187px, 29dvw, 414px);
+		padding-block-end: clamp(187px, 29dvw, 414px);
 	}
 }
 
@@ -290,7 +286,7 @@
 .multiSectionTitle {
 	@include typography.headline;
 
-	margin-bottom: var(--space-lg);
+	margin-block-end: var(--space-lg);
 }
 
 .multiSectionCopy {

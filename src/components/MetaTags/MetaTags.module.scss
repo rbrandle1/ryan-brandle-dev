@@ -10,7 +10,7 @@
 
 .iconContainer {
 	margin-block-start: var(--space-2xs);
-	padding-right: var(--space-2xs);
+	padding-inline-end: var(--space-2xs);
 	flex-shrink: 0;
 
 	@include viewport.breakpoint(1300px) {
@@ -30,6 +30,5 @@
 .bullet {
 	--bullet-space: var(--space-2xs);
 
-	padding-right: var(--bullet-space);
-	padding-left: var(--bullet-space);
+	padding-inline: var(--bullet-space);
 }

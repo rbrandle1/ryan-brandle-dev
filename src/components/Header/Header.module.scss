@@ -17,18 +17,17 @@
 	}
 
 	@include viewport.breakpoint(2xl) {
-		padding-left: var(--space-2xl);
-		padding-right: var(--space-2xl);
+		padding-inline: var(--space-2xl);
 	}
 }
 
 .logoContainer {
 	display: flex;
 	align-items: start;
-	padding-top: var(--space-md);
+	padding-block-start: var(--space-md);
 
 	@include viewport.breakpoint(md) {
-		padding-top: var(--space-lg);
+		padding-block-start: var(--space-lg);
 	}
 }
 
@@ -45,13 +44,13 @@
 }
 
 .logoText {
-	padding-left: var(--space-sm);
+	padding-inline-start: var(--space-sm);
 	text-wrap: nowrap;
 	line-height: var(--line-height-2xs);
 	margin-block-start: -5px;
 
 	@include viewport.breakpoint(md) {
-		padding-left: var(--space-base);
+		padding-inline-start: var(--space-base);
 		margin-block-start: -7px;
 	}
 
@@ -62,7 +61,7 @@
 	div:first-of-type {
 		font-size: 3.52rem; // optical sizing to match icon
 		font-weight: var(--font-weight-semiBold);
-		margin-left: -2px;
+		margin-inline-start: -2px;
 
 		@include viewport.breakpoint(md) {
 			font-size: 4.8rem;
@@ -90,13 +89,13 @@
 	display: grid;
 	grid-template-columns: minmax(0, 1fr) auto;
 	gap: var(--nav-item-spacing);
-	padding-top: calc(var(--space-lg) + var(--nav-vert-alignment-offset)); // optical sizing
+	padding-block-start: calc(var(--space-lg) + var(--nav-vert-alignment-offset)); // optical sizing
 	text-align: center;
 	user-select: none;
 
 	@include viewport.breakpoint(xs, max) {
 		--nav-vert-alignment-offset: 4px;
-		padding-top: calc(var(--space-xl) + var(--nav-vert-alignment-offset));
+		padding-block-start: calc(var(--space-xl) + var(--nav-vert-alignment-offset));
 		grid-template-columns: auto;
 		justify-items: end;
 	}
@@ -134,7 +133,7 @@
 	flex-wrap: wrap;
 	align-items: center;
 	font-size: var(--text-md);
-	margin-left: var(--margin-offset);
+	margin-inline-start: var(--margin-offset);
 
 	@include viewport.breakpoint(md) {
 		--margin-offset: -34px;
@@ -142,7 +141,7 @@
 
 	@include viewport.breakpoint(xs, max) {
 		order: 2;
-		margin-right: -13px;
+		margin-inline-end: -13px;
 	}
 }
 
@@ -151,8 +150,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
-	padding-left: var(--nav-item-spacing);
-	padding-right: var(--nav-item-spacing);
+	padding-inline: var(--nav-item-spacing);
 	text-transform: lowercase;
 
 	@include typography.link-neutral;

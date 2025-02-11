@@ -40,8 +40,7 @@
 	position: relative;
 	display: grid;
 	place-items: center;
-	padding-left: var(--space-xl);
-	padding-right: var(--space-xl);
+	padding-inline: var(--space-xl);
 	border-radius: var(--radius-default);
 	background-color: var(--surface-neutral);
 	aspect-ratio: 3 / 2;
@@ -82,7 +81,7 @@
 
 .title {
 	@include typography.headline(xl);
-	margin-bottom: var(--space-xs);
+	margin-block-end: var(--space-xs);
 	max-width: var(--optimal-line-length-xs);
 
 	@include viewport.breakpoint(sm) {

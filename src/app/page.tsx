@@ -219,7 +219,7 @@ export default function Home() {
 				<section className={styles.section}>
 					<div className={styles.container}>
 						<Callout
-							title='For product teams that care about the polish.'
+							title='For product teams that love the extra polish!'
 							body='I make flexible, modular systems that are easy to use. I make flexible, modular systems that are easy to use. I make flexible, modular systems that are easy to use.'
 							iconAccent
 							size='lg'

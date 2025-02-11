@@ -7,7 +7,7 @@
 	align-items: center;
 	gap: var(--space-sm);
 	border: none;
-	margin-right: -4px;
+	margin-inline-end: -4px;
 
 	.options {
 		display: grid;
@@ -17,8 +17,7 @@
 			--option-spacing: var(--space-2xs);
 
 			display: flex;
-			padding-left: var(--option-spacing);
-			padding-right: var(--option-spacing);
+			padding-inline: var(--option-spacing);
 
 			@include viewport.breakpoint(sm) {
 				--option-spacing: var(--space-xs);

@@ -47,8 +47,8 @@
 	--hero-spacing: var(--space-base);
 
 	background-color: var(--surface-primary);
-	padding-top: var(--hero-spacing);
-	padding-bottom: calc(var(--hero-spacing) + var(--space-xl));
+	padding-block-start: var(--hero-spacing);
+	padding-block-end: calc(var(--hero-spacing) + var(--space-xl));
 
 	@include viewport.breakpoint(xs) {
 		--hero-spacing: var(--space-lg);
@@ -59,7 +59,7 @@
 
 	@include viewport.breakpoint(md) {
 		--hero-spacing: var(--space-4xl);
-		padding-bottom: calc(var(--hero-spacing) + var(--space-8xl));
+		padding-block-end: calc(var(--hero-spacing) + var(--space-8xl));
 	}
 }
 
@@ -67,8 +67,7 @@
 	--section-spacing: var(--space-8xl);
 
 	background-color: var(--surface-primary);
-	padding-top: var(--section-spacing);
-	padding-bottom: var(--section-spacing);
+	padding-block: var(--section-spacing);
 
 	&.heroOffset {
 		@include viewport.breakpoint(md) {
@@ -81,10 +80,10 @@
 	}
 
 	[data-section='dark'] & {
-		padding-top: 0;
+		padding-block-start: 0;
 
 		&:last-child {
-			padding-bottom: calc(var(--section-spacing) * 1.5);
+			padding-block-end: calc(var(--section-spacing) * 1.5);
 		}
 	}
 }

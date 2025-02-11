@@ -40,8 +40,7 @@
 	display: grid;
 	grid-template-rows: 1fr;
 	place-items: center;
-	padding-left: var(--space-xl);
-	padding-right: var(--space-xl);
+	padding-inline: var(--space-xl);
 	background-color: var(--surface-neutral);
 	aspect-ratio: 3 / 2;
 	overflow: hidden;
@@ -82,7 +81,7 @@
 	max-width: var(--logo-max-width, 500px);
 	pointer-events: none;
 	z-index: 1;
-	margin-left: var(--logo-offset, initial);
+	margin-inline-start: var(--logo-offset, initial);
 
 	svg {
 		fill: var(--icon-over-image);
@@ -92,7 +91,6 @@
 
 .hero .caption {
 	@include viewport.breakpoint(md, max) {
-		margin-left: var(--gutter, var(--space-lg));
-		margin-right: var(--gutter, var(--space-lg));
+		margin-inline: var(--gutter, var(--space-lg));
 	}
 }

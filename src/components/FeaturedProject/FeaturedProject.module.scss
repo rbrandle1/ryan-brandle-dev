@@ -87,8 +87,7 @@
 	position: relative;
 	display: grid;
 	place-items: center;
-	padding-left: var(--space-xl);
-	padding-right: var(--space-xl);
+	padding-inline: var(--space-xl);
 	border-radius: var(--radius-default);
 	background-color: var(--surface-neutral);
 	aspect-ratio: 3 / 2;
@@ -127,7 +126,7 @@
 .title {
 	@include typography.headline;
 	max-width: var(--optimal-line-length-xs);
-	margin-bottom: var(--space-sm);
+	margin-block-end: var(--space-sm);
 
 	@include viewport.breakpoint(sm) {
 		max-width: var(--optimal-line-length-2xs);
