@@ -6,7 +6,7 @@
 
 	@include typography.caption;
 	display: flex;
-	margin-top: var(--caption-space);
+	margin-block-start: var(--caption-space);
 	position: relative;
 
 	.text {

@@ -13,7 +13,7 @@
 	@include layout.max-width;
 
 	> * + * {
-		margin-top: var(--space-base);
+		margin-block-start: var(--space-base);
 	}
 }
 

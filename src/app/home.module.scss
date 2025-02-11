@@ -30,7 +30,7 @@
 	@include layout.max-width;
 
 	> * + * {
-		margin-top: var(--flow-space);
+		margin-block-start: var(--flow-space);
 	}
 }
 
@@ -130,11 +130,11 @@
 .heroContent {
 	--hero-flow-space: var(--space-xl);
 
-	margin-top: var(--hero-flow-space);
+	margin-block-start: var(--hero-flow-space);
 	margin-bottom: var(--hero-flow-space);
 
 	> * + * {
-		margin-top: var(--hero-flow-space);
+		margin-block-start: var(--hero-flow-space);
 	}
 
 	@include viewport.breakpoint(xs) {
@@ -167,7 +167,7 @@
 	}
 
 	> * + * {
-		margin-top: var(--flow-space);
+		margin-block-start: var(--flow-space);
 	}
 }
 

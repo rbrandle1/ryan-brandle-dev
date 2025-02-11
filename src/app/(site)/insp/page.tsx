@@ -155,7 +155,6 @@ const InspPage = () => {
 							imgSrc='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
 							imgAlt='Boats anchored off a white sandy beach in turquoise blue water'
 							caption='Example of discovery process, wire-framing, journey mapping.'
-							// captionLeft
 						>
 							<h3 className={styles.h3}>Image Left Consolidate to a single source of truth</h3>
 							<p>

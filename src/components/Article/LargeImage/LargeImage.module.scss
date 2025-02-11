@@ -23,10 +23,10 @@
 	}
 
 	> div > div {
-		margin-top: 3px;
+		margin-block-start: 3px;
 
 		@include viewport.breakpoint(sm) {
-			margin-top: 4px;
+			margin-block-start: 4px;
 		}
 	}
 

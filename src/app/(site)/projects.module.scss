@@ -72,7 +72,7 @@
 
 	&.heroOffset {
 		@include viewport.breakpoint(md) {
-			margin-top: calc(var(--space-6xl) * -1);
+			margin-block-start: calc(var(--space-6xl) * -1);
 		}
 
 		// h2:first-of-type {

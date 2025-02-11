@@ -32,7 +32,7 @@
 	position: relative;
 
 	@include viewport.breakpoint(sm) {
-		margin-top: var(--space-sm);
+		margin-block-start: var(--space-sm);
 	}
 }
 
@@ -76,7 +76,7 @@
 	--flow-space: var(--space-base);
 
 	> * + * {
-		margin-top: var(--flow-space);
+		margin-block-start: var(--flow-space);
 	}
 }
 

@@ -9,12 +9,12 @@
 }
 
 .iconContainer {
-	margin-top: var(--space-2xs);
+	margin-block-start: var(--space-2xs);
 	padding-right: var(--space-2xs);
 	flex-shrink: 0;
 
 	@include viewport.breakpoint(1300px) {
-		margin-top: calc(var(--space-2xs) + 1px); // optically alignment icon
+		margin-block-start: calc(var(--space-2xs) + 1px); // optically alignment icon
 	}
 
 	&.iconAccent {

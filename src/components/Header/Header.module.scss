@@ -48,11 +48,11 @@
 	padding-left: var(--space-sm);
 	text-wrap: nowrap;
 	line-height: var(--line-height-2xs);
-	margin-top: -5px;
+	margin-block-start: -5px;
 
 	@include viewport.breakpoint(md) {
 		padding-left: var(--space-base);
-		margin-top: -7px;
+		margin-block-start: -7px;
 	}
 
 	@include viewport.breakpoint(sm, max) {
@@ -73,11 +73,11 @@
 		font-size: 1.8rem; // optical sizing to match icon
 		font-weight: var(--font-weight-semiBold);
 		letter-spacing: 2px;
-		margin-top: 4px; // optical sizing to match icon
+		margin-block-start: 4px; // optical sizing to match icon
 
 		@include viewport.breakpoint(md) {
 			font-size: 2rem;
-			margin-top: 6px;
+			margin-block-start: 6px;
 		}
 	}
 }

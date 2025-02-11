@@ -46,7 +46,7 @@
 	position: relative;
 
 	@include viewport.breakpoint(sm) {
-		margin-top: var(--space-2xl);
+		margin-block-start: var(--space-2xl);
 		transition-delay: var(--transition-delay);
 
 		.imgRight & {
@@ -61,7 +61,7 @@
 	--transition-duration: var(--transition-duration-base);
 
 	> * + * {
-		margin-top: var(--flow-space);
+		margin-block-start: var(--flow-space);
 	}
 }
 
