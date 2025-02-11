@@ -2,24 +2,20 @@
 @use '@/styles/utils/viewport' as viewport;
 
 .sideImage {
+	--component-gap-space: 1.5lh;
+
 	position: relative;
 	display: grid;
 	grid-template-columns: 1fr;
 	align-items: center;
-	gap: var(--component-gap-space, 2lh);
-
-	@include viewport.breakpoint(sm, max) {
-		--component-gap-space: 2lh;
-
-		&:has(figcaption) {
-			gap: calc(var(--component-gap-space) - var(--flow-space-base));
-		}
-	}
+	gap: var(--component-gap-space);
 
 	@include viewport.breakpoint(sm) {
-		--component-gap-space: 1.5lh;
-
 		grid-template-columns: 1fr 1fr;
+
+		.imgRight & {
+			grid-template-columns: 1fr 1fr reverse;
+		}
 	}
 
 	@include viewport.breakpoint(md) {
@@ -33,8 +29,8 @@
 	position: relative;
 
 	@include viewport.breakpoint(sm) {
-		.imgRight & {
-			order: 2;
+		&:not(.imgRight &) {
+			order: -1;
 		}
 	}
 }

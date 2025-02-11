@@ -137,7 +137,7 @@ const InspPage = () => {
 							caption='Example of discovery process, wire-framing, journey mapping.'
 						>
 							<h3 className={styles.h3}>
-								Research <span className={styles.altFont}>&amp;</span>&nbsp;Identify all utilized UI
+								Image Right Research <span className={styles.altFont}>&amp;</span>&nbsp;Identify all utilized UI
 							</h3>
 							<p>
 								TESTING SIDEIMAGE RIGHT The outcome of this project was a testament to the power of effective branding
@@ -155,9 +155,9 @@ const InspPage = () => {
 							imgSrc='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
 							imgAlt='Boats anchored off a white sandy beach in turquoise blue water'
 							caption='Example of discovery process, wire-framing, journey mapping.'
-							captionLeft
+							// captionLeft
 						>
-							<h3 className={styles.h3}>Consolidate to a single source of truth</h3>
+							<h3 className={styles.h3}>Image Left Consolidate to a single source of truth</h3>
 							<p>
 								TESTING SIDEIMAGE LEFT The outcome of this project was a testament to the power of effective branding in
 								driving business success. By prioritizing user experience and visual cohesion, we were able to craft a
@@ -176,7 +176,7 @@ const InspPage = () => {
 							imgRight
 							caption='Example of discovery process, wire-framing, journey mapping.'
 						>
-							<h3 className={styles.h3}>Implement across codebase</h3>
+							<h3 className={styles.h3}>Image Right Implement across codebase</h3>
 							<p>
 								TESTING SIDEIMAGE RIGHT The outcome of this project was a testament to the power of effective branding
 								in driving business success. By prioritizing user experience and visual cohesion, we were able to craft
