@@ -25,6 +25,7 @@ import styles from './home.module.scss';
 * Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
 * Double check cpu and performance/paint issues. If gradient is still causing performance issues, try the png. Maybe will-change is causing issues. jpgs for images, pngs for snapshots. heros under 200kb, thumbnails under 30kb. NEXT JS SHOULD OPTIMIZE ALREADY.
 * ensure all pages have correct metadata and optimize to AVOID seo for sensitive company names.
+* Remove any unused remotePatterns in next.config.ts if not needed from unsplash.
 * Read through all text, footer text, etc and finalize.
 * Get peer review
 * set up a new contact email
