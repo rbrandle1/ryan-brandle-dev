@@ -6,7 +6,6 @@ import ProjectCard from '@/components/ProjectCard/ProjectCard';
 import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import styles from './home.module.scss';
 
-//TODO SOLVE STYLE WARNINGS RELATED TO GRID.
 //todo: go back to article and update spacing values to lh, removing space-lg base, etc.
 //todo: update padding and margin shorthand to padding-block and padding-inline, etc.
 //todo: fix inspirato title on home page... might need custom ch bc reducing var is not possible.
@@ -15,7 +14,6 @@ import styles from './home.module.scss';
 //todo: Make all component titles a link
 
 /* Todo:
-* Fix Header and Footer terminal warnings. Need to reorder style properties.
 * Add gradient bg to project pages
 * Animate the paint droplet to drop down and fade out, rinse and repeat.
 

@@ -111,21 +111,6 @@
 	text-align: center;
 	user-select: none;
 
-	@include viewport.breakpoint(430px) {
-		--nav-item-spacing: var(--space-xs);
-	}
-
-	@include viewport.breakpoint(446px) {
-		--nav-item-spacing: clamp(var(--space-sm), 1.5dvw, var(--space-md));
-	}
-
-	@include viewport.breakpoint(sm) {
-	}
-
-	@include viewport.breakpoint(md) {
-		--nav-vert-alignment-offset: 35px;
-	}
-
 	&::before {
 		content: '';
 		position: absolute;
@@ -156,6 +141,21 @@
 		@include viewport.breakpoint(md) {
 			height: var(--space-lg);
 		}
+	}
+
+	@include viewport.breakpoint(430px) {
+		--nav-item-spacing: var(--space-xs);
+	}
+
+	@include viewport.breakpoint(446px) {
+		--nav-item-spacing: clamp(var(--space-sm), 1.5dvw, var(--space-md));
+	}
+
+	@include viewport.breakpoint(sm) {
+	}
+
+	@include viewport.breakpoint(md) {
+		--nav-vert-alignment-offset: 35px;
 	}
 }
 
