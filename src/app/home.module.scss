@@ -3,8 +3,6 @@
 @use '@/styles/utils/viewport';
 @use '@/styles/utils/element';
 
-//todo: use calc when possible... flow-space * 2, etc.
-
 .home {
 	--flow-space: 1lh;
 	--section-spacing: 2lh;
