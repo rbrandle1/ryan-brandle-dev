@@ -4,6 +4,20 @@
 @use '@/styles/utils/element';
 
 .projectPage {
+	// PAGE VARIABLES
+	--flow-space-base: 1lh;
+	--hero-spacing: 1lh;
+	--section-spacing: 4lh;
+
+	@include viewport.breakpoint(xs) {
+		--hero-spacing: 2lh;
+	}
+
+	@include viewport.breakpoint(md) {
+		--hero-spacing: 4lh;
+	}
+
+	// TYPOGRAPHY
 	p {
 		@include typography.p;
 		max-width: var(--optimal-line-length-base);
@@ -41,58 +55,50 @@
 	}
 }
 
+// LAYOUT
+.containerGrid {
+	@include layout.grid;
+
+	> * + * {
+		margin-block-start: var(--flow-space, var(--flow-space-base));
+	}
+}
+
 .heroSection {
-	--hero-spacing: var(--space-base);
+	--hero-offset: calc(var(--hero-spacing) * 2);
 
 	background-color: var(--surface-primary);
 	padding-block-start: var(--hero-spacing);
-	padding-block-end: calc(var(--hero-spacing) + var(--space-xl));
-
-	@include viewport.breakpoint(xs) {
-		--hero-spacing: var(--space-lg);
-	}
-	@include viewport.breakpoint(sm) {
-		--hero-spacing: var(--space-xl);
-	}
+	padding-block-end: var(--hero-offset);
 
 	@include viewport.breakpoint(md) {
-		--hero-spacing: var(--space-4xl);
-		padding-block-end: calc(var(--hero-spacing) + var(--space-8xl));
+		padding-block-end: calc(var(--hero-offset) + 1lh); //offset for metabox
 	}
 }
 
 .section {
-	--section-spacing: var(--space-8xl);
-
 	background-color: var(--surface-primary);
 	padding-block: var(--section-spacing);
-
-	&.heroOffset {
-		@include viewport.breakpoint(md) {
-			margin-block-start: calc(var(--space-6xl) * -1);
-		}
-
-		// h2:first-of-type {
-		// 	margin-block-start: 0.5lh;
-		// }
-	}
 
 	[data-section='dark'] & {
 		padding-block-start: 0;
 
 		&:last-child {
 			padding-block-end: calc(var(--section-spacing) * 1.5);
+
+			@include viewport.breakpoint(xl) {
+				padding-block-end: calc(var(--section-spacing) * 2);
+			}
 		}
 	}
 }
 
-.containerGrid {
-	--flow-space-base: 1lh;
+.footer {
+	padding-block-end: calc(var(--section-spacing) * 1.5);
 
-	@include layout.grid;
-
-	> * + * {
-		margin-block-start: var(--flow-space, var(--flow-space-base));
+	@include viewport.breakpoint(xl) {
+		padding-block-start: calc(var(--section-spacing) * 1.5);
+		padding-block-end: calc(var(--section-spacing) * 2);
 	}
 }
 
@@ -103,12 +109,19 @@
 	}
 }
 
+.heroOffset {
+	@include viewport.breakpoint(md) {
+		margin-block-start: calc(var(--hero-spacing) * -1);
+	}
+}
+
+// COMPONENT SPECIFIC
 .imageContainer {
 	--flow-space: 2lh;
 
 	&:not(:last-child) {
 		&:has(figcaption) {
-			margin-block-end: calc(var(--flow-space) - var(--flow-space-base) - 1lh); //margin reduction for captions
+			margin-block-end: calc(var(--flow-space) - var(--flow-space-base) - 1lh);
 		}
 	}
 }
@@ -130,18 +143,26 @@
 	}
 }
 
-.sideImageContainer {
-	--flow-space: 2lh;
+.sideImagesContainer,
+.multiImagesContainer {
+	--flow-space: 3lh;
 
 	@include viewport.breakpoint(sm) {
 		--flow-space: 4lh;
 	}
+
+	> * + * {
+		margin-block-start: var(--flow-space, var(--flow-space-base));
+	}
 }
 
-.multiImageContainer {
-	--flow-space: 4lh;
+.sideImagesContainer > *:has(figcaption) + * {
+	@include viewport.breakpoint(sm, max) {
+		margin-block-start: calc(var(--flow-space, var(--flow-space-base)) - 1lh);
+	}
 }
 
+// ELEMENTS
 .link {
 	@include typography.link(underline);
 }
