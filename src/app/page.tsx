@@ -6,12 +6,11 @@ import ProjectCard from '@/components/ProjectCard/ProjectCard';
 import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import styles from './home.module.scss';
 
-//todo: go back to article and update spacing values to lh, removing space-lg base, etc.
-//todo: update padding and margin shorthand to padding-block and padding-inline, etc.
 //todo: fix inspirato title on home page... might need custom ch bc reducing var is not possible.
 //todo: add gradient as mixin and apply to both pages
 //todo: create mixins for shared things like altFont, etc.
 //todo: Make all component titles a link
+//todo: Double check all ms timing values, see if can tokenize.
 
 /* Todo:
 * Add gradient bg to project pages

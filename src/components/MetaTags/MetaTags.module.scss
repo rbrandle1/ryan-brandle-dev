@@ -9,12 +9,12 @@
 }
 
 .iconContainer {
-	margin-block-start: var(--space-2xs);
-	padding-inline-end: var(--space-2xs);
+	margin-block-start: 0.18lh;
+	padding-inline-end: 0.25lh;
 	flex-shrink: 0;
 
-	@include viewport.breakpoint(1300px) {
-		margin-block-start: calc(var(--space-2xs) + 1px); // optically alignment icon
+	@include viewport.breakpoint(sm) {
+		margin-block-start: 0.23lh;
 	}
 
 	&.iconAccent {
@@ -28,7 +28,7 @@
 }
 
 .bullet {
-	--bullet-space: var(--space-2xs);
+	--bullet-space: 0.25lh;
 
 	padding-inline: var(--bullet-space);
 }

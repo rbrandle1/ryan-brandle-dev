@@ -1,26 +1,30 @@
 @use '@/styles/utils/typography';
 @use '@/styles/utils/viewport';
-//TODO: update to lh.
 
 .largeImage {
 	position: relative;
 }
 
 .metaBox {
-	padding: var(--space-sm) var(--space-md) var(--space-sm) var(--space-base);
+	padding-block: 0.25lh;
+	padding-inline: 0.5lh 0.75lh;
 	background-color: var(--color-accent);
 	border-radius: var(--radius-default);
 	max-width: 28ch;
 	position: absolute;
 	z-index: 2;
 	left: var(--gutter, var(--space-lg));
-	top: calc(var(--gutter, var(--space-lg)) / -1);
+	top: -1lh;
 	transition: background-color 250ms ease-out 100ms;
 	box-shadow: var(--shadow-box);
 
 	@include viewport.breakpoint(sm) {
 		left: auto;
 		right: var(--gutter, var(--space-sm));
+	}
+
+	@include viewport.breakpoint(md) {
+		right: 1lh;
 	}
 
 	> div > div {
