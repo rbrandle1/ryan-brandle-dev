@@ -9,7 +9,7 @@
 }
 
 .container {
-	@include layout.max-width;
+	@include layout.grid;
 
 	> * + * {
 		margin-block-start: var(--space-base);

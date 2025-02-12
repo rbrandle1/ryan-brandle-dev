@@ -1,3 +1,4 @@
+import cn from 'classnames';
 import Link from 'next/link';
 import LogoSwitcher from '@/components/LogoSwitcher/LogoSwitcher';
 import IconCircleText from '@/components/Icons/IconTextCircle';
@@ -9,7 +10,7 @@ import styles from './Footer.module.scss';
 const Footer = () => {
 	return (
 		<footer className={styles.footer}>
-			<div className={styles.container}>
+			<div className={cn(styles.container, styles.full)}>
 				<div className={styles.logoContainer}>
 					<div className={styles.logoCircle}>
 						<IconCircleText />

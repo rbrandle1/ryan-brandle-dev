@@ -3,18 +3,18 @@
 @use '@/styles/utils/viewport';
 @use '@/styles/utils/element';
 
-// Todo: remove layout.max-width's
-// Todo: update as section calc(var(--space-4xl) * 3)
-// Todo: update calc(var(--space-8xl) * 2) as section padding
-//todo: update to lh system
-//todo: create mixins for shared things like altFont, etc.
+//todo: use calc when possible... flow-space * 2, etc.
 
 .home {
-	--flow-space: var(--space-lg);
-	--section-spacing: var(--space-6xl);
+	--flow-space: 1lh;
+	--section-spacing: 2lh;
+
+	@include viewport.breakpoint(sm) {
+		--section-spacing: 4lh;
+	}
 
 	@include viewport.breakpoint(xl) {
-		--section-spacing: var(--space-8xl);
+		--section-spacing: 6lh;
 	}
 }
 
@@ -93,32 +93,6 @@
 	}
 }
 
-.featuredSection {
-	--flow-space: var(--space-4xl);
-	--featured-section-spacing: calc(var(--section-spacing) * 2);
-
-	padding-block-end: var(--featured-section-spacing);
-
-	@include viewport.breakpoint(md) {
-		--flow-space: calc(var(--space-4xl) * 3);
-	}
-}
-
-.projectSection {
-	--flow-space: var(--space-2xl);
-	--project-section-spacing: calc(var(--section-spacing) * 2);
-
-	padding-block: var(--project-section-spacing);
-
-	@include viewport.breakpoint(md) {
-		--flow-space: var(--space-3xl);
-	}
-
-	@include viewport.breakpoint(xl) {
-		--flow-space: var(--space-4xl);
-	}
-}
-
 .heroSection {
 	display: grid;
 	grid-template-rows: 1fr auto;
@@ -129,12 +103,12 @@
 	}
 
 	@include viewport.breakpoint(sm) {
-		min-height: calc(100dvh - var(--header-height) - var(--space-4xl));
+		min-height: calc(100dvh - var(--header-height) - 3lh);
 	}
 }
 
 .heroContent {
-	--hero-flow-space: var(--space-xl);
+	--hero-flow-space: 1lh;
 
 	margin-block: var(--hero-flow-space);
 
@@ -143,7 +117,11 @@
 	}
 
 	@include viewport.breakpoint(xs) {
-		--hero-flow-space: var(--space-4xl);
+		--hero-flow-space: 2lh;
+	}
+
+	@include viewport.breakpoint(sm) {
+		--hero-flow-space: 4lh;
 	}
 }
 
@@ -190,7 +168,7 @@
 
 	@include viewport.breakpoint(md) {
 		column-count: 2;
-		column-gap: var(--space-lg);
+		column-gap: 1lh;
 		max-width: calc(var(--column-width) * 2);
 	}
 
@@ -200,12 +178,12 @@
 }
 
 .scrollContainer {
-	padding-block-end: clamp(var(--space-base), 4dvw, var(--space-lg));
+	padding-block-end: var(--flow-space);
 }
 
 .scroll {
 	position: relative;
-	padding: var(--space-base) 0;
+	padding-block: var(--space-base);
 	text-align: center;
 	width: 100%;
 	user-select: none;
@@ -223,12 +201,37 @@
 .vertSection {
 	position: relative;
 	overflow: hidden;
-	padding-block-end: var(--space-xl);
 
 	&::before {
 		content: '';
 		display: block;
 		padding-block-end: clamp(187px, 29dvw, 414px);
+	}
+}
+
+.featuredSection {
+	--flow-space: calc(var(--section-spacing) * 2);
+
+	padding-block-end: var(--flow-space);
+}
+
+.projectSection {
+	--flow-space: 4lh;
+
+	padding-block: calc(var(--section-spacing) * 2);
+}
+
+.projectCardContainer {
+	--flow-space: 3lh;
+
+	margin-block-start: var(--section-spacing);
+
+	> * + * {
+		margin-block-start: var(--flow-space);
+	}
+
+	@include viewport.breakpoint(xl) {
+		--flow-space: 4lh;
 	}
 }
 
@@ -241,7 +244,7 @@
 
 .vertTextHero {
 	@include typography.display(lg);
-	top: -15%;
+	top: -17%;
 	left: 51.5%;
 	transform: translateX(-50%);
 	font-size: clamp(13.41rem, 21dvw, 29.23rem); // optical override for vertical text style alignment.
@@ -282,6 +285,10 @@
 }
 
 .multiSectionHeader {
+	> * + * {
+		margin-block-start: 1lh;
+	}
+
 	@include viewport.breakpoint(sm) {
 		text-align: center;
 
@@ -293,8 +300,6 @@
 
 .multiSectionTitle {
 	@include typography.headline;
-
-	margin-block-end: var(--space-lg);
 }
 
 .multiSectionCopy {

@@ -4,18 +4,22 @@
 @use '@/styles/utils/typography';
 
 .footer {
+	@include element.accent-edge;
+	@include layout.grid;
 	background-color: var(--surface-neutral);
 	padding-block-start: var(--space-2xl);
 	padding-block-end: var(--space-base);
 
-	@include element.accent-edge;
 	@include viewport.breakpoint(sm) {
 		padding-block-start: var(--space-4xl);
 	}
 }
 
 .container {
-	@include layout.max-width(xl);
+	margin-inline: auto;
+	padding-inline: var(--gutter);
+	width: min(1560px, 100%);
+
 	display: grid;
 	gap: clamp(var(--space-base), 4dvw, var(--space-2xl));
 	place-items: center;
@@ -81,9 +85,11 @@
 }
 
 .logoContainer {
+	--logo-container-size: 160px;
+
 	position: relative;
-	width: 160px;
-	height: 160px;
+	width: var(--logo-container-size);
+	height: var(--logo-container-size);
 
 	@include viewport.breakpoint(xs) {
 		grid-area: logo;

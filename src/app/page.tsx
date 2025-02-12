@@ -6,14 +6,18 @@ import ProjectCard from '@/components/ProjectCard/ProjectCard';
 import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import styles from './home.module.scss';
 
-/* Todo:
-* Shape up home page. Mobile spacing, remove arrow if not needed on small screens. Refactor home to be more like article. Make dark sections just a div with data-section='dark'. No other styling. Content within it will have section padding, etc.
-* Update section spacing to utilize lh system like articles. Possibly adjust footer widths to line up nicely with article widths and shared grid.
+//todo: go back to article and update spacing values to lh, removing space-lg base, etc.
+//todo: update padding and margin shorthand to padding-block and padding-inline, etc.
+//todo: fix inspirato title on home page... might need custom ch bc reducing var is not possible.
+//todo: add gradient as mixin and apply to both pages
+//todo: create mixins for shared things like altFont, etc.
+//todo: Make all component titles a link
 
+/* Todo:
+* Fix Header and Footer terminal warnings. Need to reorder style properties.
 * Add gradient bg to project pages
 * Animate the paint droplet to drop down and fade out, rinse and repeat.
 
-* make sure caption svg works on home page. probably need to introduce grid and gutter.
 * Create better easing with cubic-bezier
 * Make buttons view link
 
@@ -78,7 +82,7 @@ import styles from './home.module.scss';
 export default function Home() {
 	return (
 		<div className={styles.home}>
-			<section className={cn(styles.section, styles.heroSection, styles.accentEdge)}>
+			<header className={cn(styles.section, styles.heroSection, styles.accentEdge)}>
 				<div className={cn(styles.containerGrid, styles.heroContent)}>
 					<h1 className={cn(styles.heroTitle, styles.breakoutXl)}>
 						I make
@@ -105,9 +109,9 @@ export default function Home() {
 						<span className={styles.float}>&#8595;</span>
 					</div>
 				</div>
-			</section>
-			<section className={cn(styles.multiSection, styles.hasGradient)} data-section='dark'>
-				<section className={styles.vertSection}>
+			</header>
+			<div className={cn(styles.multiSection, styles.hasGradient)} data-section='dark'>
+				<div className={styles.vertSection}>
 					{/* ACCESSIBILITY: THIS CAN BE IGNORED, STRICTLY DECORATIVE */}
 					<div className={cn(styles.bgVertText, styles.vertTextHero)}>
 						<div>UX</div>
@@ -116,7 +120,7 @@ export default function Home() {
 						<div>DES</div>
 						<div>UX</div>
 					</div>
-				</section>
+				</div>
 				<section className={styles.section}>
 					<div className={styles.containerGrid}>
 						<Callout title='I make flexible, modular systems that are easy to use.' size='lg' iconAccent>
@@ -174,8 +178,8 @@ export default function Home() {
 						/>
 					</div>
 				</section>
-			</section>
-			<section className={cn(styles.multiSection, styles.accentEdge)}>
+			</div>
+			<div className={cn(styles.multiSection, styles.accentEdge)}>
 				<div className={cn(styles.bgVertText, styles.vertTextTopLeft)}>
 					<div>SYSTEM</div>
 					<div>DES</div>
@@ -183,7 +187,7 @@ export default function Home() {
 					<div>DEV</div>
 					<div>UI</div>
 				</div>
-				<section className={cn(styles.section, styles.projectSection)}>
+				<section className={styles.projectSection}>
 					<div className={styles.containerGrid}>
 						<div className={styles.multiSectionHeader}>
 							<h2 className={styles.multiSectionTitle}>Dabblings on the side</h2>
@@ -192,34 +196,36 @@ export default function Home() {
 								techniques, I tinker and explore with personal projects in my spare time.
 							</p>
 						</div>
-						<ProjectCard
-							imgSrc='/images/flashcards.png'
-							imgAlt='Image of accessible flashcards for kids'
-							hasCropIcon
-							title='Accessible Flashcards for Kids'
-							metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'React']}
-							description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-							buttonText='Read more'
-							href='/style'
-						/>
-						<ProjectCard
-							imgSrc='/images/codepen-focus.png'
-							imgAlt='Image of a CodePen project'
-							title='CodePen Explorations'
-							metaTags={['UX/UI', 'HTML', 'CSS', 'JS']}
-							description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-							buttonText='Read more'
-							href='/style'
-						/>
-						<ProjectCard
-							imgSrc='/images/comparison-card.png'
-							imgAlt='A grid of vibrant colors'
-							title='Comparison Cards with CSS Grid'
-							metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'React']}
-							description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-							buttonText='Read more'
-							href='/style'
-						/>
+						<div className={styles.projectCardContainer}>
+							<ProjectCard
+								imgSrc='/images/flashcards.png'
+								imgAlt='Image of accessible flashcards for kids'
+								hasCropIcon
+								title='Accessible Flashcards for Kids'
+								metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'React']}
+								description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+								buttonText='Read more'
+								href='/style'
+							/>
+							<ProjectCard
+								imgSrc='/images/codepen-focus.png'
+								imgAlt='Image of a CodePen project'
+								title='CodePen Explorations'
+								metaTags={['UX/UI', 'HTML', 'CSS', 'JS']}
+								description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+								buttonText='Read more'
+								href='/style'
+							/>
+							<ProjectCard
+								imgSrc='/images/comparison-card.png'
+								imgAlt='A grid of vibrant colors'
+								title='Comparison Cards with CSS Grid'
+								metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'React']}
+								description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+								buttonText='Read more'
+								href='/style'
+							/>
+						</div>
 					</div>
 				</section>
 				<section className={styles.section}>
@@ -241,7 +247,7 @@ export default function Home() {
 					<div>DEV</div>
 					<div>UI</div>
 				</div>
-			</section>
+			</div>
 			{/* <div className={styles.ctas}>
           <a
             className={styles.primary}
