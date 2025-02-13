@@ -197,6 +197,7 @@
 	--p-color-magenta-500: hsl(var(--p-color-magenta-hue), var(--p-color-magenta-sat), 50%);
 	--p-color-magenta-a: hsla(var(--p-color-magenta-hue), var(--p-color-magenta-sat), 50%, 0.5);
 
+	//8000FF
 	/* Purple */
 	--p-color-purple-hue: 288;
 	--p-color-purple-sat: 100%;
@@ -209,3 +210,133 @@
 	--p-color-yellow-500: hsl(var(--p-color-yellow-hue), var(--p-color-yellow-sat), 50%);
 	--p-color-yellow-a: hsla(var(--p-color-yellow-hue), var(--p-color-yellow-sat), 50%, 0.5);
 }
+
+//TESTING GRADIENTS FOR EDGE.
+// magenta: #FF00FF;
+//Magenta
+// background-image: linear-gradient(
+//     340deg,
+//     hsl(288deg 100% 50%) 0%,
+//     hsl(289deg 100% 50%) 20%,
+//     hsl(290deg 100% 50%) 29%,
+//     hsl(292deg 100% 50%) 36%,
+//     hsl(293deg 100% 50%) 43%,
+//     hsl(294deg 100% 50%) 50%,
+//     hsl(295deg 100% 50%) 57%,
+//     hsl(296deg 100% 50%) 64%,
+//     hsl(298deg 100% 50%) 71%,
+//     hsl(299deg 100% 50%) 80%,
+//     hsl(300deg 100% 50%) 100%
+//   );
+
+// Magenta reversed
+// background-image: linear-gradient(
+//     340deg,
+//     hsl(300deg 100% 50%) 0%,
+//     hsl(299deg 100% 50%) 20%,
+//     hsl(298deg 100% 50%) 29%,
+//     hsl(296deg 100% 50%) 36%,
+//     hsl(295deg 100% 50%) 43%,
+//     hsl(294deg 100% 50%) 50%,
+//     hsl(293deg 100% 50%) 57%,
+//     hsl(292deg 100% 50%) 64%,
+//     hsl(290deg 100% 50%) 71%,
+//     hsl(289deg 100% 50%) 80%,
+//     hsl(288deg 100% 50%) 100%
+//   );
+
+// For purple.
+// purple: #cc00ff;
+// background-image: linear-gradient(
+//     340deg,
+//     hsl(279deg 100% 50%) 0%,
+//     hsl(280deg 100% 50%) 20%,
+//     hsl(281deg 100% 50%) 29%,
+//     hsl(282deg 100% 50%) 36%,
+//     hsl(283deg 100% 50%) 43%,
+//     hsl(284deg 100% 50%) 50%,
+//     hsl(284deg 100% 50%) 57%,
+//     hsl(285deg 100% 50%) 64%,
+//     hsl(286deg 100% 50%) 71%,
+//     hsl(287deg 100% 50%) 80%,
+//     hsl(288deg 100% 50%) 100%
+//   );
+// // Purple reversed
+// 	background-image: linear-gradient(
+//     340deg,
+//     hsl(288deg 100% 50%) 0%,
+//     hsl(287deg 100% 50%) 20%,
+//     hsl(286deg 100% 50%) 29%,
+//     hsl(285deg 100% 50%) 36%,
+//     hsl(284deg 100% 50%) 43%,
+//     hsl(284deg 100% 50%) 50%,
+//     hsl(283deg 100% 50%) 57%,
+//     hsl(282deg 100% 50%) 64%,
+//     hsl(281deg 100% 50%) 71%,
+//     hsl(280deg 100% 50%) 80%,
+//     hsl(279deg 100% 50%) 100%
+//   );
+
+// cyan: #00FFFF;
+// background-image: linear-gradient(
+//     340deg,
+//     hsl(188deg 100% 50%) 0%,
+//     hsl(187deg 100% 50%) 20%,
+//     hsl(186deg 100% 50%) 29%,
+//     hsl(186deg 100% 50%) 36%,
+//     hsl(185deg 100% 50%) 43%,
+//     hsl(184deg 100% 50%) 50%,
+//     hsl(183deg 100% 50%) 57%,
+//     hsl(182deg 100% 50%) 64%,
+//     hsl(182deg 100% 50%) 71%,
+//     hsl(181deg 100% 50%) 80%,
+//     hsl(180deg 100% 50%) 100%
+//   );
+
+//rev
+// 	background-image: linear-gradient(
+//     340deg,
+//     hsl(180deg 100% 50%) 0%,
+//     hsl(181deg 100% 50%) 20%,
+//     hsl(182deg 100% 50%) 29%,
+//     hsl(182deg 100% 50%) 36%,
+//     hsl(183deg 100% 50%) 43%,
+//     hsl(184deg 100% 50%) 50%,
+//     hsl(185deg 100% 50%) 57%,
+//     hsl(186deg 100% 50%) 64%,
+//     hsl(186deg 100% 50%) 71%,
+//     hsl(187deg 100% 50%) 80%,
+//     hsl(188deg 100% 50%) 100%
+//   );
+
+// yellow: #FFFF00;
+// background-image: linear-gradient(
+//     340deg,
+//     hsl(56deg 100% 50%) 0%,
+//     hsl(56deg 100% 50%) 20%,
+//     hsl(57deg 100% 50%) 29%,
+//     hsl(57deg 100% 50%) 36%,
+//     hsl(58deg 100% 50%) 43%,
+//     hsl(58deg 100% 50%) 50%,
+//     hsl(58deg 100% 50%) 57%,
+//     hsl(59deg 100% 50%) 64%,
+//     hsl(59deg 100% 50%) 71%,
+//     hsl(60deg 100% 50%) 80%,
+//     hsl(60deg 100% 50%) 100%
+//   );
+
+//rev
+// 	background-image: linear-gradient(
+//     340deg,
+//     hsl(60deg 100% 50%) 0%,
+//     hsl(60deg 100% 50%) 20%,
+//     hsl(59deg 100% 50%) 29%,
+//     hsl(59deg 100% 50%) 36%,
+//     hsl(58deg 100% 50%) 43%,
+//     hsl(58deg 100% 50%) 50%,
+//     hsl(58deg 100% 50%) 57%,
+//     hsl(57deg 100% 50%) 64%,
+//     hsl(57deg 100% 50%) 71%,
+//     hsl(56deg 100% 50%) 80%,
+//     hsl(56deg 100% 50%) 100%
+//   );
