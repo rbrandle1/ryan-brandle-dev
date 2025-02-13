@@ -250,7 +250,7 @@
 	@include element.accent-edge;
 }
 
-.hasGradient {
+.gradientBg {
 	&::before {
 		--gradient-width: 200dvw;
 		--gradient-height: var(--gradient-width);

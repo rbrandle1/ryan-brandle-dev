@@ -5,7 +5,7 @@
 @use 'sass:math';
 
 .component {
-	--transition-duration-base: var(--duration-2xl);
+	--transition-duration-base: var(--duration-3xl);
 	--transition-duration: calc(var(--transition-duration-base) - var(--transition-delay));
 	--transition-distance: var(--space-md);
 	--transition-delay: var(--duration-sm);
@@ -103,7 +103,7 @@
 		object-fit: cover;
 
 		@media not (prefers-reduced-motion: reduce) {
-			transition: transform var(--duration-xl) ease-out;
+			transition: transform var(--duration-2xl) ease-out;
 
 			@include viewport.has-hover {
 				transform: scale(1.02);

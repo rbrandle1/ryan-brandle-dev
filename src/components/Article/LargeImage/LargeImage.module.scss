@@ -15,7 +15,7 @@
 	z-index: 2;
 	left: var(--gutter, var(--space-lg));
 	top: -1lh;
-	transition: background-color 250ms ease-out 100ms;
+	transition: background-color var(--duration-xl) ease-out var(--duration-sm);
 	box-shadow: var(--shadow-box);
 
 	@include viewport.breakpoint(sm) {

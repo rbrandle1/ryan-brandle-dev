@@ -108,7 +108,7 @@ export default function Home() {
 					</div>
 				</div>
 			</header>
-			<div className={cn(styles.multiSection, styles.hasGradient)} data-section='dark'>
+			<div className={cn(styles.multiSection, styles.gradientBg)} data-section='dark'>
 				<div className={styles.vertSection}>
 					{/* ACCESSIBILITY: THIS CAN BE IGNORED, STRICTLY DECORATIVE */}
 					<div className={cn(styles.bgVertText, styles.vertTextHero)}>

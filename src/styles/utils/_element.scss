@@ -60,7 +60,7 @@
 		bottom: 0;
 		width: var(--space-2xs);
 		background-color: var(--color-accent);
-		transition: background-color 250ms ease-in 50ms;
+		transition: background-color var(--duration-xl) ease-in var(--duration-xs);
 		z-index: 1;
 
 		@include viewport.breakpoint(2xs) {

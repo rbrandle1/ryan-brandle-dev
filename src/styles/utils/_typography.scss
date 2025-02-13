@@ -263,7 +263,7 @@ $paragraphs: (
 @mixin link-neutral {
 	color: var(--link-neutral);
 	text-decoration: none;
-	transition: font-weight var(--duration-xs) ease-out, transform var(--duration-sm) ease-out;
+	transition: font-weight var(--duration-2xs) ease-out, transform var(--duration-sm) ease-out;
 
 	@include viewport.has-hover {
 		color: var(--link-neutral-hover);

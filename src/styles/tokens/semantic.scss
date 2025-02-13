@@ -57,12 +57,14 @@
 	--radius-default: var(--p-radius-1);
 
 	/* TIMING */
-	--duration-xs: var(--p-duration-1);
-	--duration-sm: var(--p-duration-2);
-	--duration-md: var(--p-duration-3);
-	--duration-lg: var(--p-duration-4);
-	--duration-xl: var(--p-duration-5);
-	--duration-2xl: var(--p-duration-6);
+	--duration-2xs: var(--p-duration-1);
+	--duration-xs: var(--p-duration-2);
+	--duration-sm: var(--p-duration-3);
+	--duration-md: var(--p-duration-4);
+	--duration-lg: var(--p-duration-5);
+	--duration-xl: var(--p-duration-6);
+	--duration-2xl: var(--p-duration-7);
+	--duration-3xl: var(--p-duration-8);
 
 	/* TYPOGRAPHY */
 	--font-header: var(--p-font-display);
@@ -115,9 +117,9 @@
 	--color-accent-active: var(--color-accent);
 
 	/* SHADOWS */
-	--shadow-box: 0px 4px 8px var(--p-color-black-a20);
-	--shadow-text-vert: 2px -4px 6px var(--p-color-black-a15);
-	--shadow-svg: drop-shadow(0 1px 2px var(--p-color-black-a10));
+	--shadow-box: 0 2px 4px var(--p-color-black-a15), 0 2px 6px var(--p-color-black-a15);
+	--shadow-text-vert: 2px -4px 6px var(--p-color-black-a15), 2px -4px 8px var(--p-color-black-a15);
+	--shadow-svg: drop-shadow(0 2px 4px var(--p-color-black-a15));
 
 	/* TEXT */
 	--text-primary: var(--color-primary);
