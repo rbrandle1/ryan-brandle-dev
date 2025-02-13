@@ -19,9 +19,9 @@
 
 // TYPOGRAPHY
 .altFont {
-	font-family: var(--font-alt);
+	@include typography.alt-font;
 	text-transform: initial;
-	line-height: var(--line-height-2xs);
+	font-weight: var(--font-weight-bold);
 }
 
 // LAYOUT

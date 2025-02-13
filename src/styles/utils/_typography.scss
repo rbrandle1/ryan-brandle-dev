@@ -306,3 +306,9 @@ $paragraphs: (
 	color: var(--text-tertiary);
 	line-height: var(--line-height-sm);
 }
+
+@mixin alt-font {
+	font-family: var(--font-alt);
+	font-weight: var(--font-weight-black);
+	line-height: var(--line-height-2xs);
+}

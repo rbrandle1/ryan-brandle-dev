@@ -49,9 +49,7 @@
 	}
 
 	.altFont {
-		font-family: var(--font-alt);
-		font-weight: var(--font-weight-black);
-		line-height: var(--line-height-2xs);
+		@include typography.alt-font;
 	}
 
 	[data-section='dark'] {
