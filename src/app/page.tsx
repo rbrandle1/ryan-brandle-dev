@@ -6,34 +6,32 @@ import ProjectCard from '@/components/ProjectCard/ProjectCard';
 import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import styles from './home.module.scss';
 
-//todo: fix inspirato title on home page... might need custom ch bc reducing var is not possible.
-//todo: add gradient as mixin and apply to both pages
-//todo: create mixins for shared things like altFont, etc.
-//todo: Make all component titles a link
-//todo: Double check all ms timing values, see if can tokenize.
-
 /* Todo:
-* Add gradient bg to project pages
-* Animate the paint droplet to drop down and fade out, rinse and repeat.
+* Incorporate purple as a gradient to pink?
+* Make buttons view link
+* fix inspirato title on home page... might need custom ch bc reducing var is not possible.
+* update crop icon to replace LinkedIn icon
+* update project card buttons to use an icon, not text for vertical alignment purposes.
+* update project card buttons with extra padding to the left and right so highlight is not directly at edge of text.
+* make favicon
+* Add backup words for each FeaturedProject or article page footers.
 
 * Create better easing with cubic-bezier
-* Make buttons view link
-
-* update project card buttons with extra padding to the left and right so highlight is not directly at edge of text.
-* update project card buttons to use an icon, not text for vertical alignment purposes.
-* update crop icon to replace LinkedIn icon
-* make favicon
-* delete scroll arrow or make a circular button... or a square, with accent background.
-* Create a boilerplate ts file for each page to include commonly used things like project title, meta tags, etc.
-* Search all todos and fix them.
+* Animate the paint droplet to drop down and fade out, rinse and repeat.
+* look in src/fonts. Do I need to do this for my fonts? Delete GeistMono, etc.
 * Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
+
+* CONTENT CREATION:
+* Make all pages with images and text content.
+* Finalize all home text and hero text.
+
+* FINAL RUN-THROUGH:
 * Double check cpu and performance/paint issues. If gradient is still causing performance issues, try the png. Maybe will-change is causing issues. jpgs for images, pngs for snapshots. heros under 200kb, thumbnails under 30kb. NEXT JS SHOULD OPTIMIZE ALREADY.
-* ensure all pages have correct metadata and optimize to AVOID seo for sensitive company names.
+* Search all todos and fix them.
+* ensure all pages have correct metadata and optimize to AVOID SEO FOR COMPANY NAMES.
 * Remove any unused remotePatterns in next.config.ts if not needed from unsplash.
-* Read through all text, footer text, etc and finalize.
 * Get peer review
 * set up a new contact email
-* look in src/fonts. Do I need to do this for my fonts? Delete GeistMono, etc.
 
 * BUGS:
 * Theme picker on load error.
@@ -47,10 +45,6 @@ import styles from './home.module.scss';
 * Maybe put my header in a top level component so it doesn't reload disappear and come back on every pg load? nested layout?
 
 * FUTURE CLEANUP AND EXPLORATION:
-* Use css grid stack instead of absolute positioning.
-* Make a mixin or a variable for hover translate animations.
-* Incorporate purple as a gradient to pink?
-* Add backup words for each FeaturedProject
 * ??? Make Mosaic component HOLD. Might not need this.
 * Try to get all altfont ampersands to be centered, not baseline.
 	
