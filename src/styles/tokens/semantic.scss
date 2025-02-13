@@ -119,6 +119,8 @@
 	--color-accent-a: var(--p-color-magenta-a);
 	--color-accent-hover: var(--color-accent);
 	--color-accent-active: var(--color-accent);
+	--color-accent-gradient: var(--p-color-magenta-gradient);
+	--color-accent-gradient-reversed: var(--p-color-magenta-gradient-reversed);
 
 	/* SHADOWS */
 	--shadow-box: 0 2px 4px var(--p-color-black-a15), 0 2px 6px var(--p-color-black-a15);
@@ -241,6 +243,8 @@
 	[data-theme='c'] {
 		--color-accent: var(--p-color-cyan-500);
 		--color-accent-a: var(--p-color-cyan-a);
+		--color-accent-gradient: var(--p-color-cyan-gradient);
+		--color-accent-gradient-reversed: var(--p-color-cyan-gradient-reversed);
 		--text-accent: var(--color-accent);
 		--icon-accent: var(--color-accent);
 	}
@@ -248,6 +252,8 @@
 	[data-theme='y'] {
 		--color-accent: var(--p-color-yellow-500);
 		--color-accent-a: var(--p-color-yellow-a);
+		--color-accent-gradient: var(--p-color-yellow-gradient);
+		--color-accent-gradient-reversed: var(--p-color-yellow-gradient-reversed);
 		--text-accent: var(--color-accent);
 		--icon-accent: var(--color-accent);
 	}
@@ -255,6 +261,8 @@
 	[data-theme='p'] {
 		--color-accent: var(--p-color-purple-500);
 		--color-accent-a: var(--p-color-purple-a);
+		--color-accent-gradient: var(--p-color-purple-gradient);
+		--color-accent-gradient-reversed: var(--p-color-purple-gradient-reversed);
 		--text-accent: var(--color-accent);
 		--icon-accent: var(--color-accent);
 	}
