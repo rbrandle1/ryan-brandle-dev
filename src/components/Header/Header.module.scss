@@ -49,7 +49,7 @@
 	transition: transform var(--duration-sm) ease-out;
 
 	@include viewport.has-hover {
-		transform: translateY(-2px);
+		transform: translateY(var(--distance-sm));
 	}
 
 	@include viewport.breakpoint(xs) {

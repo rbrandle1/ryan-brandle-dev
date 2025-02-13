@@ -268,7 +268,7 @@ $paragraphs: (
 	@include viewport.has-hover {
 		color: var(--link-neutral-hover);
 		font-weight: var(--font-weight-semiBold);
-		transform: translateY(-2px);
+		transform: translateY(var(--distance-sm));
 	}
 
 	&:visited {

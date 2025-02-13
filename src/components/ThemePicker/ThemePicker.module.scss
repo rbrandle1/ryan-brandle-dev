@@ -63,7 +63,7 @@
 
 		@include viewport.has-hover(':hover', ':focus-visible') {
 			cursor: pointer;
-			transform: translateY(-2px);
+			transform: translateY(var(--distance-sm));
 		}
 
 		&:checked {
