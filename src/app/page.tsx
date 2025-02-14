@@ -8,11 +8,11 @@ import styles from './home.module.scss';
 
 /* Todo:
 * Make buttons view link
-* fix inspirato title on home page... might need custom ch bc reducing var is not possible.
 * update crop icon to replace LinkedIn icon
 * update project card buttons to use an icon, not text for vertical alignment purposes.
-* update project card buttons with extra padding to the left and right so highlight is not directly at edge of text.
 * make favicon
+* fix inspirato title on home page... might need custom ch bc reducing var is not possible.
+* update project card buttons with extra padding to the left and right so highlight is not directly at edge of text.
 * Add backup words for each FeaturedProject or article page footers.
 
 * Create better easing with cubic-bezier

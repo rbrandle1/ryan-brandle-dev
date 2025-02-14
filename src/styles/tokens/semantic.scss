@@ -177,53 +177,15 @@
 
 	/* BUTTONS */
 	/* Primary */
-	--button-label: var(--p-font-sans);
-	--button-background: var(--color-primary);
+	--button-label: var(--font-body);
+	--button-background: transparent;
 	--button-background-hover: var(--color-accent);
-	--button-background-pressed: var(--button-background-hover);
-	--button-foreground: var(--color-secondary);
+	// --button-background-hover: var(--color-accent);
+	// --button-background-pressed: var(--button-background-hover);
+	--button-foreground: var(--text-secondary);
+	--button-foreground-hover: var(--text-primary);
 	--button-border: var(--color-accent);
-
-	// /* Accent */
-	// --button-background-accent: var(--color-accent);
-	// --button-background-accent-hover: var(--color-accent-hover);
-	// --button-background-accent-pressed: var(--color-accent-active);
-	// --button-foreground-accent: var(--color-primary);
-
-	// /* Invert */
-	// --button-background-invert: var(--color-neutral-white);
-	// --button-background-invert-hover: var(--color-white-a93);
-	// --button-background-invert-pressed: var(--button-background-invert);
-	// --button-foreground-invert: var(--color-primary);
-
-	// /* Button Link */
-	// --button-background-link: transparent;
-	// --button-foreground-link: var(--link-primary);
-	// --button-foreground-link-hover: var(--link-primary-hover);
-	// --button-foreground-link-pressed: var(--link-primary-active);
-
-	// /* Button Link Neutral */
-	// --button-foreground-link-neutral: var(--link-neutral);
-	// --button-foreground-link-neutral-hover: var(--link-neutral-hover);
-	// --button-foreground-link-neutral-pressed: var(--link-neutral-active);
-
-	// /* Disabled */
-	// --button-background-disabled: var(--color-neutral-300);
-	// --button-foreground-disabled: var(--color-neutral-white);
-	// --button-foreground-link-disabled: var(--link-disabled);
-
-	// /* CARDS */
-	// /* Use for card specific values */
-	// --card-border: var(--color-neutral-100);
-
-	// /* INPUTS */
-	// /* Use for input values */
-	// --input-label: var(--text-primary);
-	// --input-border: var(--border-default);
-	// --input-border-active: var(--border-active);
-	// --input-text: var(--text-secondary);
-	// --input-placeholder: var(--text-tertiary);
-	// --input-background: var(--surface-minimal);
+	--button-spacing: 0.35lh 1lh;
 
 	[data-section='dark'] {
 		--color-primary: var(--p-color-white);
@@ -247,6 +209,8 @@
 		--color-accent-gradient-reversed: var(--p-color-cyan-gradient-reversed);
 		--text-accent: var(--color-accent);
 		--icon-accent: var(--color-accent);
+		--button-background-hover: var(--color-accent);
+		--button-border: var(--color-accent);
 	}
 
 	[data-theme='y'] {
@@ -256,6 +220,8 @@
 		--color-accent-gradient-reversed: var(--p-color-yellow-gradient-reversed);
 		--text-accent: var(--color-accent);
 		--icon-accent: var(--color-accent);
+		--button-background-hover: var(--color-accent);
+		--button-border: var(--color-accent);
 	}
 
 	[data-theme='p'] {
@@ -265,5 +231,7 @@
 		--color-accent-gradient-reversed: var(--p-color-purple-gradient-reversed);
 		--text-accent: var(--color-accent);
 		--icon-accent: var(--color-accent);
+		--button-background-hover: var(--color-accent);
+		--button-border: var(--color-accent);
 	}
 }

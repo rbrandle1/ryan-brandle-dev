@@ -139,5 +139,35 @@
 }
 
 .button {
-	display: inline-block;
+	appearance: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-optical-sizing: auto;
+	font-weight: var(--font-weight-bold);
+	font-style: normal;
+	font-size: var(--text-base);
+	text-transform: uppercase;
+	border: none;
+	outline: 7px solid var(--button-border);
+	color: var(--button-foreground);
+	background-color: var(--button-background);
+	padding: var(--button-spacing);
+	// width: 100%;
+	// max-width: 170px;
+	cursor: pointer;
+	transition: outline-color var(--duration-sm) ease-out, color var(--duration-lg) ease-out,
+		background-color var(--duration-lg) ease-out;
+
+	@media (hover: hover) and (pointer: fine) {
+		&:hover {
+			color: var(--button-foreground-hover);
+			background-color: var(--button-background-hover);
+			outline-color: var(--button-background);
+		}
+		&:active {
+			// background-color: var(--color-button-pressed);
+			transform: translateY(1px);
+		}
+	}
 }
