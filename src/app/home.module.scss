@@ -71,16 +71,12 @@
 }
 
 .heroContent {
-	--hero-flow-space: 1lh;
+	--hero-flow-space: 2lh;
 
 	margin-block: var(--hero-flow-space);
 
 	> * + * {
 		margin-block-start: var(--hero-flow-space);
-	}
-
-	@include viewport.breakpoint(xs) {
-		--hero-flow-space: 2lh;
 	}
 
 	@include viewport.breakpoint(sm) {
