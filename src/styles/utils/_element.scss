@@ -19,7 +19,7 @@
 	white-space: nowrap;
 }
 
-@mixin accent-edge {
+@mixin accent-edge($type: none) {
 	& {
 		position: relative;
 	}
@@ -32,8 +32,13 @@
 		bottom: 0;
 		width: var(--space-2xs);
 		background-color: var(--color-accent);
-		transition: background-color var(--duration-xl) ease-in var(--duration-xs);
 		z-index: 1;
+
+		@if $type == gradient {
+			background-image: var(--color-accent-gradient);
+		} @else if $type == reverse {
+			background-image: var(--color-accent-gradient-reversed);
+		}
 
 		@include viewport.breakpoint(2xs) {
 			width: clamp(var(--space-2xs), 1dvw, var(--space-sm));

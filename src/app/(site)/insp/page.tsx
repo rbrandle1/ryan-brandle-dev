@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const InspPage = () => {
 	return (
 		<article className={styles.projectPage}>
-			<header className={cn(styles.heroSection, styles.accentEdge)}>
+			<header className={cn(styles.heroSection, styles.accentEdgeGrad)}>
 				<div className={styles.containerGrid}>
 					<h1 className={styles.h1}>
 						Creation <span className={styles.altFont}>&amp;</span>&nbsp;Growth of the Inspirato Design System
@@ -287,7 +287,7 @@ const InspPage = () => {
 					</div>
 				</section>
 			</div>
-			<footer className={cn(styles.section, styles.footer, styles.accentEdge)}>
+			<footer className={cn(styles.section, styles.footer, styles.accentEdgeGradRev)}>
 				<div className={styles.containerGrid}>
 					<h2 className={styles.h2}>The Final Result</h2>
 					<p>

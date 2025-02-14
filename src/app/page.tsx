@@ -69,12 +69,13 @@ import styles from './home.module.scss';
 	* Utilizing lh values for a typographical based spacing system when appropriate.
 	* 
 	* Getting components like MultiImage to match the breakout portion of the grid. Very challenging. Got it close but not perfect. It was also challenging to get the caption to work in the most semantic and accessible way possible. Ideally I'd have a single figure with multiple images inside it and a single caption for the entire figure. Since I'm using a different grid layout on desktop, I had to make a choice to use aria-labelledby on each figure to reference a single caption being used on one of the images. Would like to come back to this.
+	* accentEdge gradient compromised the animation transition color.
 */
 
 export default function Home() {
 	return (
 		<div className={styles.home}>
-			<header className={cn(styles.section, styles.heroSection, styles.accentEdge)}>
+			<header className={cn(styles.section, styles.heroSection, styles.accentEdgeGrad)}>
 				<div className={cn(styles.containerGrid, styles.heroContent)}>
 					<h1 className={cn(styles.heroTitle, styles.breakoutXl)}>
 						I make
@@ -171,7 +172,7 @@ export default function Home() {
 					</div>
 				</section>
 			</div>
-			<div className={cn(styles.multiSection, styles.accentEdge)}>
+			<div className={cn(styles.multiSection, styles.accentEdgeGradRev)}>
 				<div className={cn(styles.bgVertText, styles.vertTextTopLeft)}>
 					<div>SYSTEM</div>
 					<div>DES</div>

@@ -173,8 +173,15 @@
 	@include typography.link(underline);
 }
 
-.accentEdge {
-	@include element.accent-edge;
+// .accentEdge {
+// 	@include element.accent-edge;
+// }
+
+.accentEdgeGrad {
+	@include element.accent-edge(gradient);
+}
+.accentEdgeGradRev {
+	@include element.accent-edge(reverse);
 }
 
 // .gradientBg {
