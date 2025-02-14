@@ -7,7 +7,6 @@ import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import styles from './home.module.scss';
 
 /* Todo:
-* Incorporate purple as a gradient to pink?
 * Make buttons view link
 * fix inspirato title on home page... might need custom ch bc reducing var is not possible.
 * update crop icon to replace LinkedIn icon
