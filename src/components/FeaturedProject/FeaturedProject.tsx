@@ -76,9 +76,18 @@ const FeaturedProject = ({
 					{metaTags ? <MetaTags items={metaTags} iconAccent /> : null}
 				</header>
 				<p className={styles.description}>{description}</p>
-				<Link className={styles.button} href={href} aria-label={`Read more about ${title}`}>
+				<div className={styles.buttonWrapper}>
+					<Link className={styles.button} href={href} aria-label={`Read more about ${title}`}>
+						{buttonText}
+					</Link>
+					<div className={cn(styles.buttonShadow, styles.bottomLeft)}></div>
+					<div className={cn(styles.buttonShadow, styles.topRight)}></div>
+				</div>
+				{/* <Link className={styles.button} href={href} aria-label={`Read more about ${title}`}>
+					<span className={styles.topRightTriangle}></span>
+					<span className={styles.rightTopTriangle}></span>
 					{buttonText}
-				</Link>
+				</Link> */}
 			</div>
 		</article>
 	);

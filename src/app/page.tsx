@@ -27,10 +27,12 @@ import styles from './home.module.scss';
 * FINAL RUN-THROUGH:
 * Double check cpu and performance/paint issues. If gradient is still causing performance issues, try the png. Maybe will-change is causing issues. jpgs for images, pngs for snapshots. heros under 200kb, thumbnails under 30kb. NEXT JS SHOULD OPTIMIZE ALREADY.
 * Search all todos and fix them.
+* Remove all unused comments.
 * ensure all pages have correct metadata and optimize to AVOID SEO FOR COMPANY NAMES.
 * Remove any unused remotePatterns in next.config.ts if not needed from unsplash.
 * Get peer review
 * set up a new contact email
+
 
 * BUGS:
 * Theme picker on load error.
