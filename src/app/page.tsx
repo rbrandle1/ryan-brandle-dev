@@ -7,12 +7,12 @@ import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import styles from './home.module.scss';
 
 /* Todo:
-* paint droplet cropped at bottom.
-* Update link at bottom of article, maybe make a button.
+* for article gradient... maybe can use the same dark section with a gradient but make the stops at px instead of percentage, so it's always at the top?
 * update crop icon to replace LinkedIn icon
 * update project card buttons to use an icon, not text for vertical alignment purposes cross browser.
 * update project card buttons with extra padding to the left and right so highlight is not directly at edge of text.
 * update project card, consider adding the underline back in by default.
+* Find icons for text... modular, polish (sparkle), etc.
 * make favicon
 * fix inspirato title on home page... might need custom ch bc reducing var is not possible.
 * Add backup words for each FeaturedProject or article page footers.

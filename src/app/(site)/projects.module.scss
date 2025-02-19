@@ -180,3 +180,15 @@
 .accentEdgeGradRev {
 	@include element.accent-edge(reverse);
 }
+
+.button {
+	@include viewport.breakpoint(xs) {
+		max-width: fit-content;
+	}
+}
+.buttonLink {
+	display: inline-block;
+	max-width: fit-content;
+	// @include typography.link;
+	@include typography.link(false, reverse);
+}

@@ -51,7 +51,7 @@ const ProjectCard = ({
 				</header>
 				<p className={styles.description}>{description}</p>
 				<Link className={styles.button} href={href} aria-label={`Read more about ${title}`}>
-					{buttonText}
+					{buttonText}&nbsp;&rarr;
 				</Link>
 			</div>
 		</article>

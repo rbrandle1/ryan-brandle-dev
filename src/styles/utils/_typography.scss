@@ -206,7 +206,9 @@ $paragraphs: (
 }
 
 // LINKS
-@mixin link($underline: false) {
+@mixin link($underline: false, $reverse: false) {
+	--hover-offset: 0.2em;
+
 	position: relative;
 	display: inline-flex;
 	color: var(--link-primary);
@@ -215,10 +217,13 @@ $paragraphs: (
 	overflow: hidden;
 	isolation: isolate; // forces new stacking context so pseudo-elements work with z-index
 	transition: color var(--duration-lg) ease-in-out;
+	padding-inline: var(--hover-offset);
+	margin-inline: calc(var(--hover-offset) / -1);
 
 	@if $underline {
 		text-decoration: underline;
 		text-decoration-color: var(--color-accent);
+		text-underline-offset: 0.1em;
 	}
 
 	&::before {
@@ -231,6 +236,11 @@ $paragraphs: (
 		background-color: var(--color-accent);
 		transition: width var(--duration-md) ease-out;
 		z-index: -1;
+
+		@if $reverse {
+			right: 0;
+			left: auto;
+		}
 	}
 
 	@include viewport.has-hover(':hover', ':focus-visible') {

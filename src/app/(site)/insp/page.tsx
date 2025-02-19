@@ -1,5 +1,6 @@
 import cn from 'classnames';
 import Link from 'next/link';
+import Button from '@/components/Button/Button';
 import { Metadata } from 'next';
 import Callout from '@/components/Callout/Callout';
 import LargeImage from '@/components/Article/LargeImage/LargeImage';
@@ -153,7 +154,6 @@ const InspPage = () => {
 							<SideImage
 								imgSrc='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
 								imgAlt='Boats anchored off a white sandy beach in turquoise blue water'
-								// caption='Example of discovery process, wire-framing, journey mapping.'
 							>
 								<h3 className={styles.h3}>Consolidate</h3>
 								<p>
@@ -296,8 +296,8 @@ const InspPage = () => {
 						industry's standard dummy text ever since the 1500s, example when an unknown printer took a galley of type
 						and scrambled it to make a type specimen book.
 					</p>
-					<Link className={styles.button} href='/'>
-						back
+					<Link className={styles.buttonLink} href='/'>
+						&larr;&nbsp;Back to Work
 					</Link>
 				</div>
 			</footer>
