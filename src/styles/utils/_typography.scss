@@ -265,10 +265,15 @@ $paragraphs: (
 	text-decoration: none;
 	transition: font-weight var(--duration-2xs) ease-out, transform var(--duration-sm) ease-out;
 
-	@include viewport.has-hover {
+	@include viewport.has-hover(':hover', ':focus-visible') {
 		color: var(--link-neutral-hover);
 		font-weight: var(--font-weight-semiBold);
-		transform: translateY(var(--distance-sm));
+		transform: var(--button-raise);
+
+		&:active {
+			transition: transform 0s;
+			transform: var(--button-raise-press);
+		}
 	}
 
 	&:visited {

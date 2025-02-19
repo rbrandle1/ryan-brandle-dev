@@ -31,13 +31,14 @@
 		top: 0;
 		bottom: 0;
 		width: var(--space-2xs);
-		background-color: var(--color-accent);
 		z-index: 1;
 
 		@if $type == gradient {
 			background-image: var(--color-accent-gradient);
 		} @else if $type == reverse {
 			background-image: var(--color-accent-gradient-reversed);
+		} @else {
+			background: var(--color-accent);
 		}
 
 		@include viewport.breakpoint(2xs) {

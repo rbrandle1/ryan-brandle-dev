@@ -41,8 +41,11 @@
 
 .section {
 	color: var(--text-primary);
-	background-color: var(--surface-primary);
 	padding-block: var(--section-spacing);
+
+	[data-section='dark'] & {
+		background-color: var(--surface-primary);
+	}
 
 	.multiSection & {
 		position: relative;

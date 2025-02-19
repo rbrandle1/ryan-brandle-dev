@@ -137,476 +137,17 @@
 .description {
 	max-width: var(--optimal-line-length-base);
 }
-// THIS IS THE BEST BUTTON SO FAR
-// .button {
-// 	// --shadow-blur: calc(var(--blur, 0) * 0.7);
-// 	// --lg-distance: calc(var(--distance) * 0.4);
-// 	// --sm-distance: calc(var(--distance) * 0.15);
-// 	// --lg-distance: 7px;
-// 	--distance: 7px;
-
-// 	position: relative;
-// 	appearance: none;
-// 	display: flex;
-// 	justify-content: center;
-// 	align-items: center;
-// 	font-optical-sizing: auto;
-// 	font-weight: var(--font-weight-bold);
-// 	font-style: normal;
-// 	font-size: var(--text-base);
-// 	text-transform: uppercase;
-// 	border: none;
-// 	// outline: 7px solid var(--button-border);
-// 	color: var(--button-foreground);
-// 	background-color: var(--button-background);
-// 	padding: var(--button-spacing);
-// 	// width: 100%;
-// 	// max-width: 170px;
-// 	cursor: pointer;
-// 	transition: outline-color var(--duration-sm) ease-out, color var(--duration-lg) ease-out,
-// 		background-color var(--duration-lg) ease-out, box-shadow var(--duration-lg) ease-out;
-
-// 	box-shadow: calc(var(--distance) * -1) var(--distance) var(--button-border),
-// 		var(--distance) calc(var(--distance) * -1) var(--button-border);
-
-// 	@media (hover: hover) and (pointer: fine) {
-// 		&:hover {
-// 			color: var(--button-foreground-hover);
-// 			background-color: var(--button-background-hover);
-// 			// outline-color: var(--button-background);
-// 			box-shadow: 0 0 var(--button-border), 0 0 var(--button-border);
-// 		}
-// 		&:active {
-// 			// background-color: var(--color-button-pressed);
-// 			transform: translateY(1px);
-// 		}
-// 	}
-// }
-
-// .button {
-// 	--distance: 7px;
-
-// 	position: relative;
-// 	appearance: none;
-// 	display: flex;
-// 	justify-content: center;
-// 	align-items: center;
-// 	font-optical-sizing: auto;
-// 	font-weight: var(--font-weight-bold);
-// 	font-style: normal;
-// 	font-size: var(--text-base);
-// 	text-transform: uppercase;
-// 	border: none;
-// 	color: var(--button-foreground);
-// 	background-color: var(--button-background);
-// 	padding: var(--button-spacing);
-// 	cursor: pointer;
-// 	transition: outline-color var(--duration-sm) ease-out, color var(--duration-lg) ease-out,
-// 		background-color var(--duration-lg) ease-out, box-shadow var(--duration-lg) ease-out;
-// 	box-shadow: calc(var(--distance) * -1) var(--distance) var(--button-border),
-// 		var(--distance) calc(var(--distance) * -1) var(--button-border);
-
-// 	--clip-amount: 8px;
-
-// 	clip-path: polygon(
-// 		var(--clip-amount) 0,
-// 		100% 0,
-// 		100% calc(100% - var(--clip-amount)),
-// 		calc(100% - var(--clip-amount)) 100%,
-// 		0 100%,
-// 		0 var(--clip-amount)
-// 	);
-
-// 	@media (hover: hover) and (pointer: fine) {
-// 		&:hover {
-// 			color: var(--button-foreground-hover);
-// 			background-color: var(--button-background-hover);
-// 			box-shadow: 0 0 var(--button-border), 0 0 var(--button-border);
-// 		}
-// 		&:active {
-// 			transform: translateY(1px);
-// 		}
-// 	}
-// }
-
-//DECENT
-// .button {
-// 	--distance: 7px;
-// 	--clip-amount: 7px;
-
-// 	position: relative;
-// 	appearance: none;
-// 	display: inline-flex;
-// 	justify-content: center;
-// 	align-items: center;
-// 	font-optical-sizing: auto;
-// 	font-weight: var(--font-weight-bold);
-// 	font-style: normal;
-// 	font-size: var(--text-base);
-// 	text-transform: uppercase;
-// 	border: none;
-// 	color: var(--button-foreground);
-// 	background-color: transparent;
-// 	padding: var(--button-spacing);
-// 	cursor: pointer;
-// 	transition: background-color var(--duration-lg) ease-out;
-
-// 	&::before {
-// 		content: '';
-// 		position: absolute;
-// 		inset: calc(var(--distance) * -1);
-// 		background-color: var(--button-border);
-// 		transition: all var(--duration-lg) ease-out;
-// 		z-index: -1;
-// 		clip-path: polygon(
-// 			var(--clip-amount) 0,
-// 			100% 0,
-// 			100% calc(100% - var(--clip-amount)),
-// 			calc(100% - var(--clip-amount)) 100%,
-// 			0 100%,
-// 			0 var(--clip-amount)
-// 		);
-// 	}
-
-// 	@media (hover: hover) and (pointer: fine) {
-// 		&:hover {
-// 			background-color: var(--button-background-hover);
-// 			color: var(--button-foreground-hover);
-
-// 			&::before {
-// 				inset: 0;
-// 				opacity: 0;
-// 			}
-// 		}
-// 		&:active {
-// 			transform: translateY(1px);
-// 		}
-// 	}
-// }
-
-//BETTER, SIMILAR TO MY FIRST BUTTON
-// .button {
-// 	--distance: 7px;
-// 	--clip-amount: 7px;
-
-// 	position: relative;
-// 	appearance: none;
-// 	display: inline-flex;
-// 	justify-content: center;
-// 	align-items: center;
-// 	font-optical-sizing: auto;
-// 	font-weight: var(--font-weight-bold);
-// 	font-style: normal;
-// 	font-size: var(--text-base);
-// 	text-transform: uppercase;
-// 	border: none;
-// 	color: var(--button-foreground);
-// 	background-color: var(--button-background);
-// 	padding: var(--button-spacing);
-// 	cursor: pointer;
-// 	box-shadow: calc(var(--distance) * -1) var(--distance) var(--button-border),
-// 		var(--distance) calc(var(--distance) * -1) var(--button-border);
-// 	transition: background-color var(--duration-lg) ease-out, box-shadow var(--duration-lg) ease-out,
-// 		color var(--duration-lg) ease-out;
-
-// 	&::before {
-// 		content: '';
-// 		position: absolute;
-// 		inset: 0;
-// 		background-color: inherit;
-// 		z-index: -1;
-// 		clip-path: polygon(
-// 			var(--clip-amount) 0,
-// 			100% 0,
-// 			100% calc(100% - var(--clip-amount)),
-// 			calc(100% - var(--clip-amount)) 100%,
-// 			0 100%,
-// 			0 var(--clip-amount)
-// 		);
-// 	}
-
-// 	@media (hover: hover) and (pointer: fine) {
-// 		&:hover {
-// 			background-color: var(--button-background-hover);
-// 			color: var(--button-foreground-hover);
-// 			box-shadow: 0 0 var(--button-border), 0 0 var(--button-border);
-// 		}
-// 		&:active {
-// 			transform: translateY(1px);
-// 		}
-// 	}
-// }
-
-//NOPE
-// .button {
-// 	--distance: 7px;
-// 	--clip-amount: 7px;
-
-// 	position: relative;
-// 	appearance: none;
-// 	display: inline-flex;
-// 	justify-content: center;
-// 	align-items: center;
-// 	font-optical-sizing: auto;
-// 	font-weight: var(--font-weight-bold);
-// 	font-style: normal;
-// 	font-size: var(--text-base);
-// 	text-transform: uppercase;
-// 	border: none;
-// 	color: var(--button-foreground);
-// 	background-color: transparent;
-// 	padding: var(--button-spacing);
-// 	cursor: pointer;
-// 	transition: background-color var(--duration-lg) ease-out;
-
-// 	// Add padding to maintain consistent hover area
-// 	padding: calc(var(--button-spacing) + var(--distance));
-
-// 	&::before,
-// 	&::after {
-// 		content: '';
-// 		position: absolute;
-// 		inset: calc(var(--distance) * -1);
-// 		background-color: var(--button-border);
-// 		transition: transform var(--duration-lg) ease-out, opacity var(--duration-lg) ease-out;
-// 		clip-path: polygon(
-// 			var(--clip-amount) 0,
-// 			100% 0,
-// 			100% calc(100% - var(--clip-amount)),
-// 			calc(100% - var(--clip-amount)) 100%,
-// 			0 100%,
-// 			0 var(--clip-amount)
-// 		);
-// 	}
-
-// 	&::before {
-// 		transform-origin: bottom left; // Changed from top right
-// 		z-index: -1;
-// 	}
-
-// 	&::after {
-// 		transform-origin: top right; // Changed from bottom left
-// 		z-index: -2;
-// 	}
-
-// 	@media (hover: hover) and (pointer: fine) {
-// 		&:hover {
-// 			background-color: var(--button-background-hover);
-// 			color: var(--button-foreground-hover);
-
-// 			&::before {
-// 				transform: scale(0);
-// 				opacity: 0;
-// 			}
-
-// 			&::after {
-// 				transform: scale(0);
-// 				opacity: 0;
-// 			}
-// 		}
-// 		&:active {
-// 			transform: translateY(1px);
-// 		}
-// 	}
-// }
-
-//BETTER but not perfect. added span triangles to fake it but not quite right.
-// .button {
-// 	--distance: 7px;
-// 	--shadow-color: var(--button-border);
-
-// 	position: relative;
-// 	appearance: none;
-// 	display: inline-flex;
-// 	justify-content: center;
-// 	align-items: center;
-// 	font-optical-sizing: auto;
-// 	font-weight: var(--font-weight-bold);
-// 	font-style: normal;
-// 	font-size: var(--text-base);
-// 	text-transform: uppercase;
-// 	border: none;
-// 	color: var(--button-foreground);
-// 	background-color: var(--button-background);
-// 	padding: var(--button-spacing);
-// 	cursor: pointer;
-// 	box-shadow: calc(var(--distance) * -1) var(--distance) 0 var(--shadow-color),
-// 		var(--distance) calc(var(--distance) * -1) 0 var(--shadow-color);
-// 	transition: box-shadow var(--duration-lg) ease-out, background-color var(--duration-lg) ease-out,
-// 		color var(--duration-lg) ease-out;
-
-// 	// Bottom-left triangles
-// 	&::before {
-// 		position: absolute;
-// 		content: '';
-// 		width: 0;
-// 		height: 0;
-// 		border: var(--distance) solid transparent;
-// 		border-right: var(--distance) solid var(--shadow-color);
-// 		border-left-width: 0;
-// 		top: 0;
-// 		right: 100%;
-// 		transition: opacity var(--duration-lg) ease-out;
-// 	}
-
-// 	&::after {
-// 		position: absolute;
-// 		content: '';
-// 		width: 0;
-// 		height: 0;
-// 		border: var(--distance) solid transparent;
-// 		border-left: var(--distance) solid var(--shadow-color);
-// 		border-top-width: 0;
-// 		right: calc(var(--distance) * -1);
-// 		bottom: calc(var(--distance) * -1);
-// 		transition: opacity var(--duration-lg) ease-out;
-// 	}
-
-// 	// Top-right triangles
-// 	.topRightTriangle,
-// 	.rightTopTriangle {
-// 		position: absolute;
-// 		top: 0; // Position at the top of the button
-// 		right: 0; // Position at the right of the button
-// 		width: 0;
-// 		height: 0;
-// 		transition: opacity var(--duration-lg) ease-out;
-// 		pointer-events: none; // Ensure it doesn't interfere with button clicks
-
-// 		&::before {
-// 			position: absolute;
-// 			content: '';
-// 			width: 0;
-// 			height: 0;
-// 			border: var(--distance) solid transparent;
-// 			border-left: var(--distance) solid var(--shadow-color);
-// 			border-right-width: 0;
-// 			bottom: 0;
-// 			left: 100%;
-// 		}
-
-// 		&::after {
-// 			position: absolute;
-// 			content: '';
-// 			width: 0;
-// 			height: 0;
-// 			border: var(--distance) solid transparent;
-// 			border-right: var(--distance) solid var(--shadow-color);
-// 			border-bottom-width: 0;
-// 			left: calc(var(--distance) * -1);
-// 			top: calc(var(--distance) * -1);
-// 		}
-// 	}
-
-// 	@media (hover: hover) and (pointer: fine) {
-// 		&:hover {
-// 			background-color: var(--button-background-hover);
-// 			color: var(--button-foreground-hover);
-// 			box-shadow: 0 0 0 var(--shadow-color);
-
-// 			&::before,
-// 			&::after,
-// 			.topRightTriangle,
-// 			.rightTopTriangle {
-// 				opacity: 0;
-// 			}
-// 		}
-// 		&:active {
-// 			transform: translateY(1px);
-// 		}
-// 	}
-// }
 
 .buttonWrapper {
 	--distance: 7px;
 	--shadow-color: var(--button-border);
+	--button-speed: var(--duration-md);
+
 	position: relative;
 	display: inline-block;
 
-	@media (hover: hover) and (pointer: fine) {
-		&:hover {
-			.buttonShadow {
-				transform: translate(0, 0);
-			}
-
-			.button {
-				background-color: var(--button-background-hover);
-				color: var(--button-foreground-hover);
-			}
-		}
-
-		&:active .button {
-			transform: translateY(1px);
-		}
-	}
-}
-
-.buttonShadow {
-	position: absolute;
-	inset: 0;
-	background-color: var(--button-border);
-	transition: transform var(--duration-lg) ease-out;
-	z-index: 1;
-
-	&.bottomLeft {
-		transform: translate(calc(var(--distance) * -1), var(--distance));
-
-		&::before {
-			position: absolute;
-			content: '';
-			width: 0;
-			height: 0;
-			border: var(--distance) solid transparent;
-			border-right: var(--distance) solid var(--button-border);
-			border-left-width: 0;
-			top: calc(var(--distance) / -1);
-			right: calc(100% - var(--distance));
-			transition: opacity var(--duration-lg) ease-out;
-		}
-
-		&::after {
-			position: absolute;
-			content: '';
-			width: 0;
-			height: 0;
-			border: var(--distance) solid transparent;
-			border-left: var(--distance) solid var(--button-border);
-			border-top-width: 0;
-			left: 100%;
-			bottom: 0;
-			transition: opacity var(--duration-lg) ease-out;
-		}
-	}
-
-	&.topRight {
-		transform: translate(var(--distance), calc(var(--distance) * -1));
-
-		&::before {
-			position: absolute;
-			content: '';
-			width: 0;
-			height: 0;
-			border: var(--distance) solid transparent;
-			border-right: var(--distance) solid var(--button-border);
-			border-left-width: 0;
-			top: 0;
-			right: 100%;
-			transition: opacity var(--duration-lg) ease-out;
-		}
-
-		&::after {
-			position: absolute;
-			content: '';
-			width: 0;
-			height: 0;
-			border: var(--distance) solid transparent;
-			border-left: var(--distance) solid var(--button-border);
-			border-top-width: 0;
-			left: calc(100% - var(--distance));
-			bottom: calc(var(--distance) / -1);
-
-			transition: opacity var(--duration-lg) ease-out;
-		}
+	&:active {
+		transform: var(--button-press);
 	}
 }
 
@@ -622,25 +163,89 @@
 	font-size: var(--text-base);
 	text-transform: uppercase;
 	border: none;
-	color: var(--button-foreground);
-	background-color: black;
+	color: var(--button-foreground); //todo, can surface-primary be used here?
+	background-color: var(--button-background);
 	padding: var(--button-spacing);
 	cursor: pointer;
 	z-index: 2;
-	transition: background-color var(--duration-lg) ease-out, color var(--duration-lg) ease-out;
+	transition: background-color var(--button-speed) ease-out, color var(--button-speed) ease-out;
 
-	// @media (hover: hover) and (pointer: fine) {
-	// 	.buttonWrapper:hover & {
-	// 		background-color: var(--button-background-hover);
-	// 		color: var(--button-foreground-hover);
-	// 	}
+	@include viewport.has-hover(':hover', ':focus-visible') {
+		background-color: var(--button-background-hover);
+		color: var(--button-foreground-hover);
 
-	// 	.buttonWrapper:hover .buttonShadow {
-	// 		transform: translate(0, 0);
-	// 	}
+		~ .buttonShadow {
+			transform: translate(0, 0);
 
-	// 	.buttonWrapper:active & {
-	// 		transform: translateY(1px);
-	// 	}
-	// }
+			&.bottomLeft::before,
+			&.bottomLeft::after,
+			&.topRight::before,
+			&.topRight::after {
+				transform: scale(0);
+			}
+		}
+	}
+}
+
+.buttonShadow {
+	position: absolute;
+	inset: 0;
+	background-color: var(--button-border);
+	transition: transform var(--button-speed) ease-out;
+	z-index: 1;
+
+	&.bottomLeft,
+	&.topRight {
+		&::before,
+		&::after {
+			position: absolute;
+			content: '';
+			width: 0;
+			height: 0;
+			border: var(--distance) solid transparent;
+			transition: opacity var(--button-speed) ease-out, transform var(--button-speed) ease-out;
+		}
+
+		&::before {
+			border-right: var(--distance) solid var(--button-border);
+			border-left-width: 0;
+			right: 100%;
+		}
+
+		&::after {
+			border-left: var(--distance) solid var(--button-border);
+			border-top-width: 0;
+		}
+	}
+
+	&.bottomLeft {
+		transform: translate(calc(var(--distance) * -1), var(--distance));
+
+		&::before {
+			top: calc(var(--distance) / -1);
+			right: calc(100% - var(--distance));
+			transform-origin: 0 50%;
+		}
+
+		&::after {
+			left: 100%;
+			bottom: 0;
+			transform-origin: 0 100%;
+		}
+	}
+
+	&.topRight {
+		transform: translate(var(--distance), calc(var(--distance) * -1));
+
+		&::before {
+			top: 0;
+			transform-origin: 100% 0;
+		}
+
+		&::after {
+			left: calc(100% - var(--distance));
+			bottom: calc(var(--distance) / -1);
+			transform-origin: 50% 0;
+		}
+	}
 }

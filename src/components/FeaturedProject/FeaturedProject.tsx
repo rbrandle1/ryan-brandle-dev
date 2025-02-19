@@ -83,11 +83,6 @@ const FeaturedProject = ({
 					<div className={cn(styles.buttonShadow, styles.bottomLeft)}></div>
 					<div className={cn(styles.buttonShadow, styles.topRight)}></div>
 				</div>
-				{/* <Link className={styles.button} href={href} aria-label={`Read more about ${title}`}>
-					<span className={styles.topRightTriangle}></span>
-					<span className={styles.rightTopTriangle}></span>
-					{buttonText}
-				</Link> */}
 			</div>
 		</article>
 	);

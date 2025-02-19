@@ -19,9 +19,9 @@
 .container {
 	margin-inline: auto;
 	padding-inline: var(--gutter);
-	width: min(1560px, 100%);
+	width: min(1490px, 100%);
 	display: grid;
-	gap: clamp(var(--space-base), 4dvw, var(--space-2xl));
+	gap: var(--gutter);
 	place-items: center;
 
 	@include viewport.breakpoint(xs) {
@@ -67,6 +67,7 @@
 
 	@include viewport.breakpoint(xs) {
 		grid-area: copyright;
+		margin-block-start: 12px; // optical alignment to logos
 	}
 
 	@include viewport.breakpoint(xs, max) {
@@ -78,6 +79,7 @@
 .socialContainer {
 	display: grid;
 	grid-auto-flow: column;
+	justify-self: center;
 
 	@include viewport.breakpoint(xs) {
 		grid-area: social;
@@ -85,12 +87,6 @@
 }
 
 .logoContainer {
-	--logo-container-size: 160px;
-
-	position: relative;
-	width: var(--logo-container-size);
-	height: var(--logo-container-size);
-
 	@include viewport.breakpoint(xs) {
 		grid-area: logo;
 	}
@@ -100,10 +96,36 @@
 	}
 }
 
+.logoLink {
+	position: relative;
+	display: grid;
+	grid-template: 'logoContainer';
+	place-items: center;
+
+	> * {
+		grid-area: logoContainer;
+	}
+
+	@include viewport.has-hover(':hover', ':focus-visible') {
+		.logoIcon {
+			transition: transform var(--duration-sm) ease-out;
+			transform: var(--button-raise);
+
+			&:active {
+				transition: transform 0s;
+				transform: var(--button-raise-press);
+			}
+		}
+	}
+
+	&:focus-visible {
+		outline: 2px solid -webkit-focus-ring-color;
+		outline-offset: 8px;
+		border-radius: 1px;
+	}
+}
+
 .logoCircle {
-	position: absolute;
-	top: 0;
-	left: 0;
 	width: 100%;
 	height: 100%;
 	fill: var(--text-tertiary);
@@ -115,16 +137,11 @@
 	--logo-size: 68px;
 
 	position: absolute;
-	top: calc(50% - 1px);
-	left: calc(50% + 3px);
 	width: var(--logo-size);
 	height: var(--logo-size);
-	transform: translate(-50%, -50%);
+	margin-inline-start: 4px;
+	margin-block-end: 4px;
 	transition: transform var(--duration-sm) ease-out;
-
-	@include viewport.has-hover {
-		transform: translate(-50%, -54%);
-	}
 }
 
 .icon {
@@ -134,7 +151,12 @@
 
 	@include viewport.has-hover(':hover', ':focus-visible') {
 		fill: var(--text-primary);
-		transform: translateY(var(--distance-sm));
+		transform: var(--button-raise);
+
+		&:active {
+			transition: transform 0s;
+			transform: var(--button-raise-press);
+		}
 	}
 
 	svg {

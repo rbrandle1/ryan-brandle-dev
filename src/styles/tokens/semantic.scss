@@ -67,8 +67,9 @@
 	--duration-3xl: var(--p-duration-8);
 
 	/* DISTANCE */
-	--distance-sm: var(--p-distance-1);
-	--distance-md: var(--p-distance-2);
+	--distance-xs: var(--p-distance-1);
+	--distance-sm: var(--p-distance-2);
+	--distance-md: var(--p-distance-3);
 
 	/* TYPOGRAPHY */
 	--font-header: var(--p-font-display);
@@ -117,8 +118,7 @@
 
 	--color-accent: var(--p-color-magenta-500);
 	--color-accent-a: var(--p-color-magenta-a);
-	--color-accent-hover: var(--color-accent);
-	--color-accent-active: var(--color-accent);
+	// --color-accent-active: var(--p-color-magenta-700);
 	--color-accent-gradient: var(--p-color-magenta-gradient);
 	--color-accent-gradient-reversed: var(--p-color-magenta-gradient-reversed);
 
@@ -178,15 +178,19 @@
 	/* BUTTONS */
 	/* Primary */
 	--button-label: var(--font-body);
-	--button-background: transparent;
+	--button-background: var(--surface-primary);
 	--button-background-hover: var(--color-accent);
-	// --button-background-hover: var(--color-accent);
-	// --button-background-pressed: var(--button-background-hover);
-	--button-foreground: var(--text-secondary);
-	--button-foreground-hover: var(--text-primary);
+	--button-foreground: var(--text-primary);
+	--button-foreground-hover: var(--text-secondary);
 	--button-border: var(--color-accent);
 	--button-spacing: 0.35lh 1lh;
+	--button-distance: var(--distance-sm);
+	--button-distance-subtle: var(--distance-xs);
+	--button-raise: translateY(calc(var(--button-distance) / -1));
+	--button-press: translateY(var(--button-distance-subtle));
+	--button-raise-press: translateY(calc(var(--button-distance) / -1 + var(--button-distance-subtle)));
 
+	/* THEME OVERRIDES */
 	[data-section='dark'] {
 		--color-primary: var(--p-color-white);
 		--color-secondary: var(--p-color-black);
@@ -200,6 +204,10 @@
 		--link-primary-hover: var(--link-primary);
 		--link-primary-active: var(--link-primary);
 		--link-primary-visited: var(--link-primary);
+
+		--button-background: var(--surface-primary);
+		--button-foreground: var(--text-primary);
+		--button-foreground-hover: var(--text-secondary);
 	}
 
 	[data-theme='c'] {

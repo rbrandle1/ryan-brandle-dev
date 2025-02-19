@@ -12,14 +12,14 @@ const Footer = () => {
 		<footer className={styles.footer}>
 			<div className={cn(styles.container, styles.full)}>
 				<div className={styles.logoContainer}>
-					<div className={styles.logoCircle}>
-						<IconCircleText />
-					</div>
-					<div className={styles.logoIcon}>
-						<Link href='/' aria-label='Return to home page'>
+					<Link className={styles.logoLink} href='/' aria-label='Return to home page'>
+						<div className={styles.logoCircle}>
+							<IconCircleText />
+						</div>
+						<div className={styles.logoIcon}>
 							<LogoSwitcher />
-						</Link>
-					</div>
+						</div>
+					</Link>
 				</div>
 				<div className={styles.contactContainer}>
 					<h3>Contact</h3>

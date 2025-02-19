@@ -7,18 +7,20 @@ import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import styles from './home.module.scss';
 
 /* Todo:
-* Make buttons view link
+* Make button component
+* paint droplet cropped at bottom.
+* Update link at bottom of article, maybe make a button.
 * update crop icon to replace LinkedIn icon
-* update project card buttons to use an icon, not text for vertical alignment purposes.
+* update project card buttons to use an icon, not text for vertical alignment purposes cross browser.
+* update project card buttons with extra padding to the left and right so highlight is not directly at edge of text.
 * make favicon
 * fix inspirato title on home page... might need custom ch bc reducing var is not possible.
-* update project card buttons with extra padding to the left and right so highlight is not directly at edge of text.
 * Add backup words for each FeaturedProject or article page footers.
 
 * Create better easing with cubic-bezier
-* Animate the paint droplet to drop down and fade out, rinse and repeat.
 * look in src/fonts. Do I need to do this for my fonts? Delete GeistMono, etc.
 * Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
+* Animate the paint droplet to drop down and fade out, rinse and repeat.
 
 * CONTENT CREATION:
 * Make all pages with images and text content.
@@ -32,6 +34,7 @@ import styles from './home.module.scss';
 * Remove any unused remotePatterns in next.config.ts if not needed from unsplash.
 * Get peer review
 * set up a new contact email
+* UPDATE ALL PROFILE IMAGES to up-to-date image.
 
 
 * BUGS:

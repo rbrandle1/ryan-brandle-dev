@@ -26,18 +26,19 @@
 .logoContainer {
 	display: flex;
 	align-items: start;
-	padding-block-start: 30px;
+	max-width: fit-content;
+	margin-block-start: 30px;
 
 	@include viewport.breakpoint(430px) {
-		padding-block-start: 33px;
+		margin-block-start: 33px;
 	}
 
 	@include viewport.breakpoint(sm) {
-		padding-block-start: var(--space-md);
+		margin-block-start: var(--space-md);
 	}
 
 	@include viewport.breakpoint(md) {
-		padding-block-start: var(--space-lg);
+		margin-block-start: var(--space-lg);
 	}
 }
 
@@ -46,11 +47,6 @@
 
 	width: var(--logo-size);
 	height: var(--logo-size);
-	transition: transform var(--duration-sm) ease-out;
-
-	@include viewport.has-hover {
-		transform: translateY(var(--distance-sm));
-	}
 
 	@include viewport.breakpoint(xs) {
 		--logo-size: 68px;
@@ -58,6 +54,28 @@
 
 	@include viewport.breakpoint(430px) {
 		--logo-size: 60px;
+	}
+
+	a {
+		display: block;
+		width: var(--logo-size);
+		height: var(--logo-size);
+		transition: transform var(--duration-sm) ease-out;
+
+		@include viewport.has-hover(':hover', ':focus-visible') {
+			transform: var(--button-raise);
+
+			&:active {
+				transition: transform 0s;
+				transform: var(--button-raise-press);
+			}
+		}
+
+		&:focus-visible {
+			outline: 2px solid -webkit-focus-ring-color;
+			outline-offset: 8px;
+			border-radius: 1px;
+		}
 	}
 }
 
