@@ -6,6 +6,7 @@ import Link from 'next/link';
 import IconLinkedIn from '@/components/Icons/IconLinkedIn';
 import MetaTags from '@/components/MetaTags/MetaTags';
 import Caption from '@/components/Caption/Caption';
+import Button from '@/components/Button/Button';
 import styles from './FeaturedProject.module.scss';
 
 interface FeaturedProjectProps {
@@ -76,13 +77,9 @@ const FeaturedProject = ({
 					{metaTags ? <MetaTags items={metaTags} iconAccent /> : null}
 				</header>
 				<p className={styles.description}>{description}</p>
-				<div className={styles.buttonWrapper}>
-					<Link className={styles.button} href={href} aria-label={`Read more about ${title}`}>
-						{buttonText}
-					</Link>
-					<div className={cn(styles.buttonShadow, styles.bottomLeft)}></div>
-					<div className={cn(styles.buttonShadow, styles.topRight)}></div>
-				</div>
+				<Button className={styles.button} href={href} ariaLabel={`Read more about ${title}`}>
+					{buttonText}
+				</Button>
 			</div>
 		</article>
 	);

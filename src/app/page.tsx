@@ -7,12 +7,12 @@ import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import styles from './home.module.scss';
 
 /* Todo:
-* Make button component
 * paint droplet cropped at bottom.
 * Update link at bottom of article, maybe make a button.
 * update crop icon to replace LinkedIn icon
 * update project card buttons to use an icon, not text for vertical alignment purposes cross browser.
 * update project card buttons with extra padding to the left and right so highlight is not directly at edge of text.
+* update project card, consider adding the underline back in by default.
 * make favicon
 * fix inspirato title on home page... might need custom ch bc reducing var is not possible.
 * Add backup words for each FeaturedProject or article page footers.
@@ -21,6 +21,7 @@ import styles from './home.module.scss';
 * look in src/fonts. Do I need to do this for my fonts? Delete GeistMono, etc.
 * Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
 * Animate the paint droplet to drop down and fade out, rinse and repeat.
+* Consider ditching yellow. It doesn't work well with light colors. if want to keep, maybe put the icon in a yellow circle or something and make the svg black.
 
 * CONTENT CREATION:
 * Make all pages with images and text content.
