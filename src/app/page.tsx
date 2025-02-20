@@ -7,14 +7,9 @@ import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import styles from './home.module.scss';
 
 /* Todo:
-* make mixin for inset shadow used on largeimage, projects and home
-* update crop icon to replace LinkedIn icon
-* update project card buttons to use an icon, not text for vertical alignment purposes cross browser.
-* update project card buttons with extra padding to the left and right so highlight is not directly at edge of text.
-* update project card, consider adding the underline back in by default.
-* Find icons for text... modular, polish (sparkle), etc.
-* make favicon
+* make favicon. Get default first, then see if can dynamically change based on theme.
 * fix inspirato title on home page... might need custom ch bc reducing var is not possible.
+* update crop icon/s to replace LinkedIn icon
 * Add backup words for each FeaturedProject or article page footers.
 
 * Create better easing with cubic-bezier
@@ -27,6 +22,7 @@ import styles from './home.module.scss';
 * CONTENT CREATION:
 * Make all pages with images and text content.
 * Finalize all home text and hero text.
+* Find icons for callouts... modular, polish (sparkle), etc. Do after content?
 
 * FINAL RUN-THROUGH:
 * Double check cpu and performance/paint issues. If gradient is still causing performance issues, try the png. Maybe will-change is causing issues. jpgs for images, pngs for snapshots. heros under 200kb, thumbnails under 30kb. NEXT JS SHOULD OPTIMIZE ALREADY.
