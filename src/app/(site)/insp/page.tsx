@@ -26,11 +26,9 @@ const InspPage = () => {
 						Preparing a scalable design system for the future of Inspirato's Luxury Travel products.
 					</div>
 				</div>
-				{/* <div className={styles.gradientBg}></div> */}
 			</header>
 			<div data-section='dark'>
 				<section className={cn(styles.section, styles.heroOffset)}>
-					{/* <div className={styles.gradientBg}></div> */}
 					<div className={styles.containerGrid}>
 						<LargeImage
 							className={cn(styles.imageContainer, styles.flowOffset, styles.heroImage)}

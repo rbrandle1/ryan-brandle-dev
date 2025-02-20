@@ -7,7 +7,7 @@ import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import styles from './home.module.scss';
 
 /* Todo:
-* for article gradient... maybe can use the same dark section with a gradient but make the stops at px instead of percentage, so it's always at the top?
+* make mixin for inset shadow used on largeimage, projects and home
 * update crop icon to replace LinkedIn icon
 * update project card buttons to use an icon, not text for vertical alignment purposes cross browser.
 * update project card buttons with extra padding to the left and right so highlight is not directly at edge of text.
@@ -22,6 +22,7 @@ import styles from './home.module.scss';
 * Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
 * Animate the paint droplet to drop down and fade out, rinse and repeat.
 * Consider ditching yellow. It doesn't work well with light colors. if want to keep, maybe put the icon in a yellow circle or something and make the svg black.
+* * Add some smart linking, so the article back button drops the user back to that location on the page.
 
 * CONTENT CREATION:
 * Make all pages with images and text content.
