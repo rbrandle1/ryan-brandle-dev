@@ -59,90 +59,21 @@
 	[data-section='dark'] {
 		position: relative;
 		background-color: var(--surface-primary);
-		background-image: linear-gradient(
-			165deg,
-			hsl(0deg 0% 13%) 0px,
-			hsl(0deg 0% 13%) 230px,
-			hsl(0deg 0% 12%) 320px,
-			hsl(0deg 0% 10%) 362px,
-			hsl(0deg 0% 9%) 398px,
-			hsl(0deg 0% 8%) 428px,
-			hsl(0deg 0% 6%) 464px,
-			hsl(0deg 0% 5%) 494px,
-			hsl(0deg 0% 4%) 524px,
-			hsl(0deg 0% 3%) 560px,
-			hsl(0deg 0% 1%) 602px,
-			hsl(0deg 0% 0%) 644px,
-			hsl(0deg 0% 0%) 698px,
-			hsl(0deg 0% 0%) 830px
-		);
+		background-image: var(--color-background-gradient-diagonal-2xs);
 
 		@include viewport.breakpoint(xs) {
-			background-image: linear-gradient(
-				165deg,
-				hsl(0deg 0% 13%) 0px,
-				hsl(0deg 0% 13%) 320px,
-				hsl(0deg 0% 12%) 410px,
-				hsl(0deg 0% 10%) 452px,
-				hsl(0deg 0% 9%) 488px,
-				hsl(0deg 0% 8%) 518px,
-				hsl(0deg 0% 6%) 554px,
-				hsl(0deg 0% 5%) 584px,
-				hsl(0deg 0% 4%) 614px,
-				hsl(0deg 0% 3%) 650px,
-				hsl(0deg 0% 1%) 692px,
-				hsl(0deg 0% 0%) 734px,
-				hsl(0deg 0% 0%) 788px,
-				hsl(0deg 0% 0%) 920px
-			);
+			background-image: var(--color-background-gradient-diagonal-xs);
 		}
 
 		@include viewport.breakpoint(sm) {
-			background-image: linear-gradient(
-				165deg,
-				hsl(0deg 0% 13%) 0px,
-				hsl(0deg 0% 13%) 500px,
-				hsl(0deg 0% 12%) 590px,
-				hsl(0deg 0% 10%) 632px,
-				hsl(0deg 0% 9%) 668px,
-				hsl(0deg 0% 8%) 698px,
-				hsl(0deg 0% 6%) 734px,
-				hsl(0deg 0% 5%) 764px,
-				hsl(0deg 0% 4%) 794px,
-				hsl(0deg 0% 3%) 830px,
-				hsl(0deg 0% 1%) 872px,
-				hsl(0deg 0% 0%) 914px,
-				hsl(0deg 0% 0%) 968px,
-				hsl(0deg 0% 0%) 1100px
-			);
+			background-image: var(--color-background-gradient-diagonal-sm);
 		}
 
 		@include viewport.breakpoint(md) {
-			background-image: linear-gradient(
-				180deg,
-				hsl(0deg 0% 13%) 0px,
-				hsl(0deg 0% 12%) 180px,
-				hsl(0deg 0% 10%) 264px,
-				hsl(0deg 0% 9%) 312px,
-				hsl(0deg 0% 8%) 372px,
-				hsl(0deg 0% 6%) 432px,
-				hsl(0deg 0% 5%) 504px,
-				hsl(0deg 0% 4%) 576px,
-				hsl(0deg 0% 3%) 672px,
-				hsl(0deg 0% 1%) 816px,
-				hsl(0deg 0% 0%) 1200px
-			);
+			background-image: var(--color-background-gradient);
 
 			&::before {
-				content: '';
-				position: absolute;
-				top: 0;
-				left: 0;
-				right: 0;
-				height: 16px;
-				box-shadow: inset 0 16px 16px -16px var(--p-color-black-a30);
-				border-top: solid 1px var(--p-color-black-a20);
-				pointer-events: none;
+				@include element.shadow-inset-pseudo;
 			}
 		}
 	}

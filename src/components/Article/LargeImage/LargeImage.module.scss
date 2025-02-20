@@ -1,5 +1,6 @@
 @use '@/styles/utils/typography';
 @use '@/styles/utils/viewport';
+@use '@/styles/utils/element';
 
 .largeImage {
 	position: relative;
@@ -62,15 +63,9 @@
 
 		@include viewport.breakpoint(md, max) {
 			&::before {
-				content: '';
-				position: absolute;
-				top: 0;
-				left: 0;
-				right: 0;
-				height: 16px;
-				box-shadow: inset 0 16px 16px -16px var(--p-color-black-a30);
-				border-top: solid 1px var(--p-color-black-a20);
-				pointer-events: none;
+				@include element.shadow-inset-pseudo;
+			}
+			&::before {
 				z-index: 1;
 			}
 		}

@@ -15,9 +15,7 @@
     * Surface
     * Link
     * Border
-    * Divider
     * Icon
-    * Item
     * COMPONENTS:
       * Buttons
       * Cards
@@ -118,9 +116,13 @@
 
 	--color-accent: var(--p-color-magenta-500);
 	--color-accent-a: var(--p-color-magenta-a);
-	// --color-accent-active: var(--p-color-magenta-700);
 	--color-accent-gradient: var(--p-color-magenta-gradient);
 	--color-accent-gradient-reversed: var(--p-color-magenta-gradient-reversed);
+
+	--color-background-gradient: var(--p-color-neutral-gradient-horizontal);
+	--color-background-gradient-diagonal-2xs: var(--p-color-neutral-gradient-diagonal-2xs);
+	--color-background-gradient-diagonal-xs: var(--p-color-neutral-gradient-diagonal-xs);
+	--color-background-gradient-diagonal-sm: var(--p-color-neutral-gradient-diagonal-sm);
 
 	/* SHADOWS */
 	--shadow-box: 0 2px 4px var(--p-color-black-a15), 0 2px 6px var(--p-color-black-a15);
@@ -157,10 +159,6 @@
 	--border-color-c: var(--p-color-cyan-500);
 	--border-color-y: var(--p-color-yellow-500);
 	--border-color-p: var(--p-color-purple-500);
-	/* DIVIDER */
-	/* Use for divider color values */
-	// --divider-primary: var(--color-neutral-400);
-	// --divider-secondary: var(--color-neutral-300);
 
 	/* ICON */
 	/* Use for icon color values */
@@ -168,9 +166,6 @@
 	--icon-secondary: var(--color-secondary);
 	--icon-accent: var(--color-accent);
 	--icon-over-image: var(--p-color-white);
-	// --icon-default: var(--color-neutral-400);
-	// --icon-default-hover: var(--color-neutral-500);
-	// --icon-over-image-hover: var(--color-white-a93);
 
 	/* COMPONENTS */
 	/* Currently adding common component tokens in the semantic tier. Can possibly split this out if need be in the future */

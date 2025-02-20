@@ -46,3 +46,18 @@
 		}
 	}
 }
+
+@mixin shadow-inset-pseudo {
+	--shadow-inset-size: 16px;
+
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: var(--shadow-inset-size);
+	box-shadow: inset 0 var(--shadow-inset-size) var(--shadow-inset-size) calc(var(--shadow-inset-size) * -1)
+		var(--p-color-black-a30);
+	border-top: solid 1px var(--p-color-black-a20);
+	pointer-events: none;
+}
