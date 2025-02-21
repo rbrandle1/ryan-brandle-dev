@@ -7,17 +7,15 @@ import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import styles from './home.module.scss';
 
 /* Todo:
-* make favicon. Get default first, then see if can dynamically change based on theme.
 * fix inspirato title on home page... might need custom ch bc reducing var is not possible.
 * update crop icon/s to replace LinkedIn icon
 * Add backup words for each FeaturedProject or article page footers.
-
+* Add skip to main content link to home page.
+* Add some smart linking, so the article back button drops the user back to that location on the page.
 * Create better easing with cubic-bezier
-* look in src/fonts. Do I need to do this for my fonts? Delete GeistMono, etc.
 * Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
 * Animate the paint droplet to drop down and fade out, rinse and repeat.
 * Consider ditching yellow. It doesn't work well with light colors. if want to keep, maybe put the icon in a yellow circle or something and make the svg black.
-* * Add some smart linking, so the article back button drops the user back to that location on the page.
 
 * CONTENT CREATION:
 * Make all pages with images and text content.
@@ -33,7 +31,11 @@ import styles from './home.module.scss';
 * Get peer review
 * set up a new contact email
 * UPDATE ALL PROFILE IMAGES to up-to-date image.
+* Make sure safari is loading correct favicon.
 
+* FUTURE CLEANUP AND EXPLORATION:
+* ??? Make Mosaic component HOLD. Might not need this.
+* Try to get all altfont ampersands to be centered, not baseline.
 
 * BUGS:
 * Theme picker on load error.
@@ -45,10 +47,6 @@ import styles from './home.module.scss';
 * Continue setting up theme provider and theme picker. TRY creating a nested layout to manage the theme state. So the body, header, footer etc are not reloaded on every page load, therefore not causing a FOUC.
 * Solve server 500 error on page load. Try using the window object to check if it's loaded in the ThemePicker useEffect and maybe use an empty string as the default theme? This would likely create a FOUC though. Try refactoring with a ThemeProvider component to manage the theme state.
 * Maybe put my header in a top level component so it doesn't reload disappear and come back on every pg load? nested layout?
-
-* FUTURE CLEANUP AND EXPLORATION:
-* ??? Make Mosaic component HOLD. Might not need this.
-* Try to get all altfont ampersands to be centered, not baseline.
 	
 * TALKING POINTS, TROUBLESHOOTING, ETC, WITH THIS PROJECT:
 	* State management. I had to decide whether prop drilling or using react context was the best approach. I went with context because I came to understand how multiple components could be affected by the theme state, and the best way to manage it was to avoid prop drilling.

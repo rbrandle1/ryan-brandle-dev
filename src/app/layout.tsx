@@ -8,7 +8,7 @@ import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
 import ThemeProvider from '@/components/ThemeProvider/ThemeProvider';
 
-// Importing the fonts
+// Initialize fonts
 const oswald = Oswald({
 	weight: '700',
 	subsets: ['latin'],
@@ -26,8 +26,7 @@ const sourceSerif = Source_Serif_4({
 	subsets: ['latin'],
 });
 
-// Function to use the font constants, which satisfies typescript requirements.
-// This function does nothing but ensures the fonts are referenced
+// This function ensures the fonts are referenced for typescript requirements.
 const useFonts = () => {
 	return { oswald, sourceSans, sourceSerif };
 };
