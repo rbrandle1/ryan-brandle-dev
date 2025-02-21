@@ -23,7 +23,7 @@ const ThemePicker = ({ className }: ThemePickerProps) => {
 						id='magenta-theme'
 						name='theme'
 						value='m'
-						checked={theme === 'm'}
+						checked={theme === 'm' || !theme}
 						onChange={() => handleThemeChange('m')}
 					/>
 				</label>
