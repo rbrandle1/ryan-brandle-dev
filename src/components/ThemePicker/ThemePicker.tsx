@@ -9,7 +9,7 @@ interface ThemePickerProps {
 }
 
 const ThemePicker = ({ className }: ThemePickerProps) => {
-	const { theme, handleThemeChange } = useTheme();
+	const { theme, setTheme } = useTheme();
 
 	return (
 		<fieldset className={cn(styles.themePicker, className)}>
@@ -24,7 +24,7 @@ const ThemePicker = ({ className }: ThemePickerProps) => {
 						name='theme'
 						value='m'
 						checked={theme === 'm'}
-						onChange={() => handleThemeChange('m')}
+						onChange={() => setTheme('m')}
 					/>
 				</label>
 				<label htmlFor='cyan-theme'>
@@ -36,7 +36,7 @@ const ThemePicker = ({ className }: ThemePickerProps) => {
 						name='theme'
 						value='c'
 						checked={theme === 'c'}
-						onChange={() => handleThemeChange('c')}
+						onChange={() => setTheme('c')}
 					/>
 				</label>
 				<label htmlFor='purple-theme'>
@@ -48,7 +48,7 @@ const ThemePicker = ({ className }: ThemePickerProps) => {
 						name='theme'
 						value='p'
 						checked={theme === 'p'}
-						onChange={() => handleThemeChange('p')}
+						onChange={() => setTheme('p')}
 					/>
 				</label>
 				<label htmlFor='yellow-theme'>
@@ -60,7 +60,7 @@ const ThemePicker = ({ className }: ThemePickerProps) => {
 						name='theme'
 						value='y'
 						checked={theme === 'y'}
-						onChange={() => handleThemeChange('y')}
+						onChange={() => setTheme('y')}
 					/>
 				</label>
 			</div>

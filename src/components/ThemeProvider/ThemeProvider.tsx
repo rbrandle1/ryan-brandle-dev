@@ -1,32 +1,44 @@
 'use client';
+
 import { createContext, useContext, useEffect, useState } from 'react';
 import { Theme } from '@/types/themeTypes';
 
 interface ThemeContextType {
 	theme: Theme;
-	handleThemeChange: (newTheme: Theme) => void;
+	setTheme: (theme: Theme) => void;
 }
 
 const ThemeContext = createContext<ThemeContextType>({
-	theme: 'm',
-	handleThemeChange: () => {},
+	theme: '',
+	setTheme: () => {},
 });
 
-const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
-	const [theme, setTheme] = useState<Theme>((localStorage.getItem('theme') as Theme) || 'm');
+export default function ThemeProvider({ children }: { children: React.ReactNode }) {
+	const [theme, setTheme] = useState<Theme>('');
+	const [isClient, setIsClient] = useState(false);
 
 	useEffect(() => {
-		localStorage.setItem('theme', theme);
-		document.body.dataset.theme = theme;
-	}, [theme]);
+		setIsClient(true);
+		const savedTheme = (localStorage.getItem('theme') as Theme) || '';
+		setTheme(savedTheme);
+	}, []);
 
-	const handleThemeChange = (newTheme: Theme) => {
-		setTheme(newTheme);
-	};
-
-	return <ThemeContext.Provider value={{ theme, handleThemeChange }}>{children}</ThemeContext.Provider>;
-};
+	return (
+		<ThemeContext.Provider
+			value={{
+				theme,
+				setTheme: (newTheme: Theme) => {
+					setTheme(newTheme);
+					if (isClient) {
+						localStorage.setItem('theme', newTheme);
+						document.body.setAttribute('data-theme', newTheme);
+					}
+				},
+			}}
+		>
+			{children}
+		</ThemeContext.Provider>
+	);
+}
 
 export const useTheme = () => useContext(ThemeContext);
-
-export default ThemeProvider;

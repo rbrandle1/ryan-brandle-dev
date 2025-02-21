@@ -41,23 +41,21 @@ export default function RootLayout({
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
-	// FOR BODY
-	// const themeFallbackScript = `
-	//   (function() {
-	//     const theme = localStorage.getItem('theme') || '';
-	//     document.body.setAttribute('data-theme', theme);
-	//     document.body.classList.add(theme);
-	//   })();
-	// `;
-
 	useFonts();
 
 	return (
 		<html lang='en'>
-			{/* <head>
-				<script dangerouslySetInnerHTML={{ __html: themeFallbackScript }} />
-			</head> */}
 			<body>
+				<script
+					dangerouslySetInnerHTML={{
+						__html: `
+            (function() {
+              let theme = localStorage.getItem('theme');
+              theme && document.body.setAttribute('data-theme', theme);
+            })();
+          `,
+					}}
+				/>
 				<ThemeProvider>
 					<Header />
 					<main>{children}</main>
