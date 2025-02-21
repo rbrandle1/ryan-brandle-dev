@@ -7,8 +7,6 @@ import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import styles from './home.module.scss';
 
 /* Todo:
-* Add skip to main content link to home page.
-* Add some smart linking, so the article back button drops the user back to that location on the page.
 * Create better easing with cubic-bezier
 * update crop icon/s to replace LinkedIn icon
 * Add backup words for each FeaturedProject or article page footers.
@@ -123,6 +121,7 @@ export default function Home() {
 				<section className={cn(styles.section, styles.featuredSection)}>
 					<div className={styles.containerGrid}>
 						<FeaturedProject
+							id='insp'
 							className={styles.breakoutXl}
 							caption='Credit: Inspirato, Unsplash/@seefromthesky'
 							imgSrc='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
@@ -133,7 +132,7 @@ export default function Home() {
 							metaTags={['Branding', 'UX/UI', 'HTML', 'CSS', 'JS', 'React', 'Storybook']}
 							description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
 							buttonText='Explore'
-							href='/insp'
+							href='/insp?from=insp'
 						/>
 						<FeaturedProject
 							className={styles.breakoutXl}

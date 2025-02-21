@@ -10,6 +10,7 @@ import Button from '@/components/Button/Button';
 import styles from './FeaturedProject.module.scss';
 
 interface FeaturedProjectProps {
+	id?: string;
 	className?: string;
 	caption?: string;
 	imgRight?: boolean;
@@ -25,6 +26,7 @@ interface FeaturedProjectProps {
 }
 
 const FeaturedProject = ({
+	id,
 	className,
 	caption,
 	imgRight,
@@ -45,6 +47,7 @@ const FeaturedProject = ({
 
 	return (
 		<article
+			id={id}
 			ref={ref}
 			className={cn(styles.component, imgRight && styles.imgRight, inView && styles.fadeInUp, className)}
 		>
