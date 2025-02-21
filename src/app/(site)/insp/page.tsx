@@ -1,6 +1,5 @@
 import cn from 'classnames';
 import Link from 'next/link';
-import Button from '@/components/Button/Button';
 import { Metadata } from 'next';
 import Callout from '@/components/Callout/Callout';
 import LargeImage from '@/components/Article/LargeImage/LargeImage';
@@ -10,8 +9,8 @@ import MultiImage from '@/components/Article/MultiImage/MultiImage';
 import styles from '../projects.module.scss';
 
 export const metadata: Metadata = {
-	title: 'testing 134',
-	description: 'Example description',
+	title: 'Creation and Growth of the Inspirato Design System',
+	description: "Preparing a scalable design system for the future of Inspirato's Luxury Travel products.",
 };
 
 const InspPage = () => {
