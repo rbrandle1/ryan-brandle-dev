@@ -7,12 +7,11 @@ import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import styles from './home.module.scss';
 
 /* Todo:
-* fix inspirato title on home page... might need custom ch bc reducing var is not possible.
-* update crop icon/s to replace LinkedIn icon
-* Add backup words for each FeaturedProject or article page footers.
 * Add skip to main content link to home page.
 * Add some smart linking, so the article back button drops the user back to that location on the page.
 * Create better easing with cubic-bezier
+* update crop icon/s to replace LinkedIn icon
+* Add backup words for each FeaturedProject or article page footers.
 * Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
 * Animate the paint droplet to drop down and fade out, rinse and repeat.
 * Consider ditching yellow. It doesn't work well with light colors. if want to keep, maybe put the icon in a yellow circle or something and make the svg black.
@@ -23,7 +22,7 @@ import styles from './home.module.scss';
 * Find icons for callouts... modular, polish (sparkle), etc. Do after content?
 
 * FINAL RUN-THROUGH:
-* Double check cpu and performance/paint issues. If gradient is still causing performance issues, try the png. Maybe will-change is causing issues. jpgs for images, pngs for snapshots. heros under 200kb, thumbnails under 30kb. NEXT JS SHOULD OPTIMIZE ALREADY.
+* PERFORMANCE AUTID. Double check cpu and performance/paint issues. If gradient is still causing performance issues, try the png. Maybe will-change is causing issues. jpgs for images, pngs for snapshots. heros under 200kb, thumbnails under 30kb. NEXT JS SHOULD OPTIMIZE ALREADY.
 * Search all todos and fix them.
 * Remove all unused comments.
 * ensure all pages have correct metadata and optimize to AVOID SEO FOR COMPANY NAMES.
