@@ -48,7 +48,9 @@ export default function RootLayout({
 			<body>
 				<ThemeProvider>
 					<Header />
-					<main id='main'>{children}</main>
+					<main id='main' tabIndex={-1}>
+						{children}
+					</main>
 					<Footer />
 				</ThemeProvider>
 			</body>

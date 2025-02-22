@@ -17,8 +17,8 @@ const Header = () => {
 	return (
 		<header className={styles.header}>
 			<div className={cn(styles.container, styles.full)}>
-				<Link href='#main' className={styles.jumpLink}>
-					Jump to main content
+				<Link href='#main' className={styles.skipLink}>
+					Skip to main content
 				</Link>
 				<div className={styles.logoContainer}>
 					<div className={styles.logoIcon}>
