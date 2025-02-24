@@ -3,7 +3,7 @@
 @use '@/styles/utils/viewport';
 @use '@/styles/utils/element';
 
-.projectPage {
+.page {
 	// PAGE VARIABLES
 	--flow-space-base: 1lh;
 	--hero-spacing: 1lh;
@@ -97,6 +97,14 @@
 
 	@include viewport.breakpoint(md) {
 		padding-block-end: calc(var(--hero-offset) + 1lh); //offset for metabox
+	}
+}
+
+.soloSection {
+	min-height: 100%;
+
+	@include viewport.breakpoint(sm, max) {
+		padding-block: var(--section-spacing);
 	}
 }
 
@@ -198,6 +206,10 @@
 	@include typography.link(underline);
 }
 
+.accentEdge {
+	@include element.accent-edge;
+}
+
 .accentEdgeGrad {
 	@include element.accent-edge(gradient);
 }
@@ -211,9 +223,9 @@
 		max-width: fit-content;
 	}
 }
+
 .buttonLink {
 	display: inline-block;
 	max-width: fit-content;
-	// @include typography.link;
 	@include typography.link(false, reverse);
 }

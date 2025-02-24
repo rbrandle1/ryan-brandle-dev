@@ -1,0 +1,28 @@
+@use '@/styles/utils/typography';
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	text-align: center;
+	background-color: var(--surface-primary);
+	color: var(--text-primary);
+}
+
+// .title {
+// 	font-size: 2.5rem;
+// 	margin-bottom: 1rem;
+// }
+
+.message {
+	// font-size: 1.2rem;
+	// margin-bottom: 2rem;
+}
+
+.buttonLink {
+	display: inline-block;
+	max-width: fit-content;
+	@include typography.link(false, reverse);
+}

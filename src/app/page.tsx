@@ -40,7 +40,7 @@ import styles from './home.module.scss';
 * Maybe put my header in a top level component so it doesn't reload disappear and come back on every pg load? nested layout?
 
 * FUTURE CLEANUP AND EXPLORATION:
-* Add Boops to hover states! Also make the boop apply to the entire logo like previously tried. https://www.joshwcomeau.com/react/boop/
+* Add Boops to hover states! Also make the boop apply to the entire logo like previously tried. Can also do it to an svg arrow on the link arrows. https://www.joshwcomeau.com/react/boop/
 * ??? Make Mosaic component HOLD. Might not need this.
 * Try to get all altfont ampersands to be centered, not baseline.
 * Add backup words for each FeaturedProject or article page footers.

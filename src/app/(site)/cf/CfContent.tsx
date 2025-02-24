@@ -15,7 +15,7 @@ export const CfContent = () => {
 	const fromSection = searchParams.get('from');
 
 	return (
-		<article className={styles.projectPage}>
+		<article className={styles.page}>
 			<header className={cn(styles.heroSection, styles.accentEdgeGrad)}>
 				<div className={styles.containerGrid}>
 					<h1 className={styles.h1}>
