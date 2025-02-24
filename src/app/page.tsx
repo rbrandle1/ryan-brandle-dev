@@ -7,13 +7,10 @@ import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import styles from './home.module.scss';
 
 /* Todo:
-* Create better easing with cubic-bezier
-* Add link to headers
+* add a 404 page
 * Make a paint roller instead of droplet? Maybe use boop to scroll it down with a path, then back up as if painting?
-* Speed up button transition timing
 * Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
 * update crop icon/s to replace LinkedIn icon
-* add a 404 page
 * PERFORMANCE AUDIT. Double check cpu and performance/paint issues. If gradient is still causing performance issues, try the png. Maybe will-change is causing issues. jpgs for images, pngs for snapshots. heros under 200kb, thumbnails under 30kb. NEXT JS SHOULD OPTIMIZE ALREADY.
 
 * CONTENT CREATION:

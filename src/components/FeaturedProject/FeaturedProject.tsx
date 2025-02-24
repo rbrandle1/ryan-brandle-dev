@@ -76,7 +76,9 @@ const FeaturedProject = ({
 			</figure>
 			<div className={styles.textContainer}>
 				<header>
-					<h3 className={styles.title}>{title}</h3>
+					<Link href={href} tabIndex={-1}>
+						<h3 className={styles.title}>{title}</h3>
+					</Link>
 					{metaTags ? <MetaTags items={metaTags} iconAccent /> : null}
 				</header>
 				<p className={styles.description}>{description}</p>
