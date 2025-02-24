@@ -1,12 +1,13 @@
 @use '@/styles/utils/viewport';
 
 .buttonContainer {
-	--edge-size: 7px;
+	--edge-size: 8px;
 	--shadow-color: var(--button-border);
 	--button-speed: var(--duration-md);
 
 	position: relative;
 	display: inline-block;
+	margin-block-start: var(--edge-size);
 	width: 100%;
 
 	&:active {
@@ -39,7 +40,7 @@
 	padding: var(--button-spacing);
 	cursor: pointer;
 	z-index: 2;
-	transition: background-color var(--button-speed) ease-out, color var(--button-speed) ease-out;
+	transition: background-color var(--button-speed) var(--ease-out), color var(--button-speed) var(--ease-out);
 
 	@include viewport.has-hover(':hover', ':focus-visible') {
 		background-color: var(--button-background-hover);
@@ -62,7 +63,7 @@
 	position: absolute;
 	inset: 0;
 	background-color: var(--button-border);
-	transition: transform var(--button-speed) ease-out;
+	transition: transform var(--button-speed) var(--ease-out);
 	z-index: 1;
 
 	&.bottomLeft,
@@ -74,7 +75,7 @@
 			width: 0;
 			height: 0;
 			border: var(--edge-size) solid transparent;
-			transition: opacity var(--button-speed) ease-out, transform var(--button-speed) ease-out;
+			transition: opacity var(--button-speed) var(--ease-out), transform var(--button-speed) var(--ease-out);
 		}
 
 		&::before {

@@ -47,14 +47,14 @@
 	overflow: hidden;
 	user-select: none;
 
-	transition: box-shadow var(--duration-2xl) ease-out;
+	transition: box-shadow var(--duration-2xl) var(--ease-out);
 	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15), 0px 2px 6px rgba(0, 0, 0, 0.15);
 
 	img {
 		object-fit: cover;
 
 		@media not (prefers-reduced-motion: reduce) {
-			transition: transform var(--duration-2xl) ease-out;
+			transition: transform var(--duration-2xl) var(--ease-out);
 
 			@include viewport.has-hover {
 				transform: scale(1.02);

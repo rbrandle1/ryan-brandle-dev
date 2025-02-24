@@ -7,18 +7,21 @@ import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import styles from './home.module.scss';
 
 /* Todo:
-* Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
 * Create better easing with cubic-bezier
+* Add link to headers
+* Make a paint roller instead of droplet? Maybe use boop to scroll it down with a path, then back up as if painting?
+* Speed up button transition timing
+* Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
 * update crop icon/s to replace LinkedIn icon
 * add a 404 page
+* PERFORMANCE AUDIT. Double check cpu and performance/paint issues. If gradient is still causing performance issues, try the png. Maybe will-change is causing issues. jpgs for images, pngs for snapshots. heros under 200kb, thumbnails under 30kb. NEXT JS SHOULD OPTIMIZE ALREADY.
 
 * CONTENT CREATION:
 * Make all pages with images and text content.
 * Finalize all home text and hero text.
-* Find icons for callouts... modular, polish (sparkle), etc. Do after content?
+* Find icons for callouts... modular, polish (sparkle), etc. Do after content? Booop these? Or should these remain static as they are not interactive?
 
 * FINAL RUN-THROUGH:
-* PERFORMANCE AUTID. Double check cpu and performance/paint issues. If gradient is still causing performance issues, try the png. Maybe will-change is causing issues. jpgs for images, pngs for snapshots. heros under 200kb, thumbnails under 30kb. NEXT JS SHOULD OPTIMIZE ALREADY.
 * Search all todos and fix them.
 * Remove all unused comments.
 * ensure all pages have correct metadata and optimize to AVOID SEO FOR COMPANY NAMES.
@@ -40,6 +43,7 @@ import styles from './home.module.scss';
 * Maybe put my header in a top level component so it doesn't reload disappear and come back on every pg load? nested layout?
 
 * FUTURE CLEANUP AND EXPLORATION:
+* Add Boops to hover states! Also make the boop apply to the entire logo like previously tried. https://www.joshwcomeau.com/react/boop/
 * ??? Make Mosaic component HOLD. Might not need this.
 * Try to get all altfont ampersands to be centered, not baseline.
 * Add backup words for each FeaturedProject or article page footers.

@@ -5,7 +5,7 @@
 	--transition-duration: var(--duration-3xl);
 	--transition-delay: var(--duration-sm);
 	--transition-distance: var(--space-md);
-	--transition-ease: ease-in-out;
+	--transition-ease: var(--ease-in-out);
 
 	display: grid;
 	place-items: center;

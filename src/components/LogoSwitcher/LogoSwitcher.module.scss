@@ -6,7 +6,7 @@
 	position: absolute;
 	opacity: 0;
 	transform: translateX(calc(var(--space-sm) / -1));
-	transition: opacity var(--duration-sm) ease-out, transform var(--duration-sm) ease-out;
+	transition: opacity var(--duration-sm) var(--ease-out), transform var(--duration-sm) var(--ease-out);
 	will-change: opacity, transform;
 }
 
