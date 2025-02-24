@@ -103,7 +103,7 @@
 		object-fit: cover;
 
 		@media not (prefers-reduced-motion: reduce) {
-			transition: transform var(--duration-2xl) var(--ease-out);
+			transition: transform var(--duration-3xl) var(--ease-out);
 
 			@include viewport.has-hover {
 				transform: scale(1.02);
