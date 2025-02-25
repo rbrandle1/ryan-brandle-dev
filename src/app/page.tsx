@@ -2,8 +2,6 @@ import cn from 'classnames';
 import dynamic from 'next/dynamic';
 import Callout from '@/components/Callout/Callout';
 import IconCodePen from '@/components/Icons/IconCodePen';
-// import FeaturedProject from '@/components/FeaturedProject/FeaturedProject';
-// import ProjectCard from '@/components/ProjectCard/ProjectCard';
 import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import styles from './home.module.scss';
 
@@ -16,7 +14,9 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 });
 
 /* Todo:
-* safari footer issue
+* FIX localstorage issue as it is causing a build error.
+* safari footer issue when resized... has to do with making body grid.
+* fix height of last callout on home page.
 * how to better optimize the home radial gradient blur... will-change is not really true but it definitely helps.
 * update crop icon/s to replace LinkedIn icon
 * Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.

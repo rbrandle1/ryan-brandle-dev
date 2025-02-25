@@ -16,7 +16,7 @@ const Footer = () => {
 	const [isAccentAlt, setIsAccentAlt] = useState(false);
 
 	useEffect(() => {
-		let dataNotFound = document.querySelector('[data-not-found]');
+		const dataNotFound = document.querySelector('[data-not-found]');
 
 		const useAccentAlt = pathname === '/about' || !!dataNotFound;
 		setIsAccentAlt(useAccentAlt);
