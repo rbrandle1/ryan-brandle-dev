@@ -43,12 +43,10 @@ a {
 }
 
 // needed to remove focus outline on main element when navigating with keyboard
-#main:focus {
-	outline: none;
-}
-
 #main {
 	display: grid;
-	// min-height: 100%;
-	grid-template-rows: 1fr;
+
+	&:focus {
+		outline: none;
+	}
 }
