@@ -60,7 +60,7 @@
 		display: block;
 		width: var(--logo-size);
 		height: var(--logo-size);
-		transition: transform var(--duration-sm) var(--ease-out);
+		transition: transform var(--duration-md) var(--ease-out);
 
 		@include viewport.has-hover(':hover', ':focus-visible') {
 			transform: var(--button-raise);

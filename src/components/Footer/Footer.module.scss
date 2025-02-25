@@ -115,7 +115,7 @@
 
 	@include viewport.has-hover(':hover', ':focus-visible') {
 		.logoIcon {
-			transition: transform var(--duration-sm) var(--ease-out);
+			transition: transform var(--duration-md) var(--ease-out);
 			transform: var(--button-raise);
 
 			&:active {
@@ -148,13 +148,13 @@
 	height: var(--logo-size);
 	margin-inline-start: 4px;
 	margin-block-end: 4px;
-	transition: transform var(--duration-sm) var(--ease-out);
+	transition: transform var(--duration-md) var(--ease-out);
 }
 
 .icon {
 	padding: var(--space-sm);
 	fill: var(--text-tertiary);
-	transition: fill var(--duration-sm) var(--ease-out), transform var(--duration-sm) var(--ease-out);
+	transition: fill var(--duration-md) var(--ease-out), transform var(--duration-md) var(--ease-out);
 
 	@include viewport.has-hover(':hover', ':focus-visible') {
 		fill: var(--text-primary);
