@@ -16,6 +16,8 @@ import styles from './home.module.scss';
 * Finalize all home text and hero text.
 * Find icons for callouts... modular, polish (sparkle), etc. Do after content? Booop these? Or should these remain static as they are not interactive?
 
+
+
 * FINAL RUN-THROUGH:
 * Search all todos and fix them.
 * Remove all unused comments.
@@ -26,16 +28,18 @@ import styles from './home.module.scss';
 * UPDATE ALL PROFILE IMAGES to up-to-date image.
 * Make sure safari is loading correct favicon.
 
+
+
 * BUGS:
 * Theme picker on load error.
 * why does article hero image expand wider immediately on page load? How to lessen the FOUC.
 * fade in ups are not fast enough. If someone is scrolling too quickly, the fade in lags and needs to catch up. Looks like a blank page at first.
-* have logo present on page load, and does not animate in.
-
 * THEME PICKER LOCAL STORAGE ISSUES:
 * Continue setting up theme provider and theme picker. TRY creating a nested layout to manage the theme state. So the body, header, footer etc are not reloaded on every page load, therefore not causing a FOUC.
 * Solve server 500 error on page load. Try using the window object to check if it's loaded in the ThemePicker useEffect and maybe use an empty string as the default theme? This would likely create a FOUC though. Try refactoring with a ThemeProvider component to manage the theme state.
 * Maybe put my header in a top level component so it doesn't reload disappear and come back on every pg load? nested layout?
+
+
 
 * FUTURE CLEANUP AND EXPLORATION:
 * Make a paint roller instead of droplet? Maybe use boop to scroll it down with a path, then back up as if painting?
@@ -46,6 +50,8 @@ import styles from './home.module.scss';
 * Animate the paint droplet to drop down and fade out, rinse and repeat.
 * Consider ditching yellow. It doesn't work well with light colors. if want to keep, maybe put the icon in a yellow circle or something and make the svg black.
 	
+
+
 * TALKING POINTS, TROUBLESHOOTING, ETC, WITH THIS PROJECT:
 	* State management. I had to decide whether prop drilling or using react context was the best approach. I went with context because I came to understand how multiple components could be affected by the theme state, and the best way to manage it was to avoid prop drilling.
 	* 
