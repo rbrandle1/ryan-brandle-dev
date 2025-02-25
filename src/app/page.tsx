@@ -15,7 +15,6 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 
 /* Todo:
 * FIX localstorage issue as it is causing a build error.
-* how to better optimize the home radial gradient blur... will-change is not really true but it definitely helps.
 * update crop icon/s to replace LinkedIn icon
 * https://developer.chrome.com/blog/new-in-devtools-133/?utm_source=devtools#perf-image-delivery
 * Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
