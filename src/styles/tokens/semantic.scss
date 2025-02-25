@@ -121,6 +121,7 @@
 	--color-tertiary-active: var(--color-tertiary);
 
 	--color-accent: var(--p-color-magenta-500);
+	--color-accent-alt: var(--p-color-magenta-700);
 	--color-accent-a: var(--p-color-magenta-a);
 	--color-accent-gradient: var(--p-color-magenta-gradient);
 	--color-accent-gradient-reversed: var(--p-color-magenta-gradient-reversed);
@@ -214,6 +215,7 @@
 
 	[data-theme='c'] {
 		--color-accent: var(--p-color-cyan-500);
+		--color-accent-alt: var(--p-color-cyan-700);
 		--color-accent-a: var(--p-color-cyan-a);
 		--color-accent-gradient: var(--p-color-cyan-gradient);
 		--color-accent-gradient-reversed: var(--p-color-cyan-gradient-reversed);
@@ -225,6 +227,7 @@
 
 	[data-theme='y'] {
 		--color-accent: var(--p-color-yellow-500);
+		--color-accent-alt: var(--p-color-yellow-700);
 		--color-accent-a: var(--p-color-yellow-a);
 		--color-accent-gradient: var(--p-color-yellow-gradient);
 		--color-accent-gradient-reversed: var(--p-color-yellow-gradient-reversed);
@@ -236,6 +239,7 @@
 
 	[data-theme='p'] {
 		--color-accent: var(--p-color-purple-500);
+		--color-accent-alt: var(--p-color-purple-700);
 		--color-accent-a: var(--p-color-purple-a);
 		--color-accent-gradient: var(--p-color-purple-gradient);
 		--color-accent-gradient-reversed: var(--p-color-purple-gradient-reversed);

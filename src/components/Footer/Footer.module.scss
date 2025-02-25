@@ -13,7 +13,14 @@
 	}
 
 	@include layout.grid;
+}
+
+.accentEdge {
 	@include element.accent-edge;
+}
+
+.accentEdgeAlt {
+	@include element.accent-edge(alt);
 }
 
 .container {

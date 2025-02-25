@@ -1,7 +1,8 @@
 'use client';
 import cn from 'classnames';
 import { useTheme } from '@/components/ThemeProvider/ThemeProvider';
-import IconDroplet from '@/components/Icons/IconDroplet';
+// import IconDroplet from '@/components/Icons/IconDroplet';
+import IconBucket from '@/components/Icons/IconBucket';
 import styles from './ThemePicker.module.scss';
 
 interface ThemePickerProps {
@@ -65,7 +66,8 @@ const ThemePicker = ({ className }: ThemePickerProps) => {
 				</label>
 			</div>
 			<div className={styles.icon}>
-				<IconDroplet aria-hidden />
+				{/* <IconDroplet aria-hidden /> */}
+				<IconBucket aria-hidden />
 			</div>
 		</fieldset>
 	);

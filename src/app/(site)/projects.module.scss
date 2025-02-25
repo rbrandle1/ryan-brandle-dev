@@ -100,14 +100,6 @@
 	}
 }
 
-.soloSection {
-	min-height: 100%;
-
-	@include viewport.breakpoint(sm, max) {
-		padding-block: var(--section-spacing);
-	}
-}
-
 .section {
 	padding-block: var(--section-spacing);
 
