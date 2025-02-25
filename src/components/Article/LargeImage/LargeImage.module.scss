@@ -16,8 +16,8 @@
 	z-index: 2;
 	left: var(--gutter, var(--space-lg));
 	top: -1lh;
-	transition: background-color var(--duration-2xl) var(--ease-out) var(--duration-xs);
 	will-change: background-color;
+	transition: background-color var(--duration-2xl) var(--ease-out) var(--duration-xs);
 
 	box-shadow: var(--shadow-box);
 

@@ -16,9 +16,9 @@
 		> * {
 			opacity: 0;
 			transform: translateY(var(--transition-distance));
+			will-change: opacity, transform;
 			transition: opacity var(--transition-duration) var(--transition-ease),
 				transform var(--transition-duration) var(--transition-ease);
-			will-change: opacity, transform;
 
 			@for $i from 1 through 3 {
 				&:nth-child(#{$i}) {
