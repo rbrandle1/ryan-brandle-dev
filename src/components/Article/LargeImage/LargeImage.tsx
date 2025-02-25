@@ -17,6 +17,7 @@ interface LargeImageProps {
 	logoOffset?: string;
 	metaTags?: string[];
 	isHero?: boolean;
+	priority?: boolean;
 }
 
 const LargeImage = ({
@@ -31,6 +32,7 @@ const LargeImage = ({
 	logoOffset,
 	metaTags,
 	isHero,
+	priority = false,
 }: LargeImageProps) => {
 	return (
 		<div className={cn(styles.largeImage, isHero && styles.hero, className)}>
@@ -52,7 +54,7 @@ const LargeImage = ({
 							{logo}
 						</div>
 					) : null}
-					<Image src={src} alt={alt} fill sizes='(max-width: 1300px) 100vw, 1205px' />
+					<Image src={src} alt={alt} fill sizes='(max-width: 1300px) 100vw, 1205px' priority={priority} />
 				</div>
 				{caption ? (
 					<Caption className={styles.caption} captionLeft={captionLeft} hasIcon={hasCaptionIcon}>

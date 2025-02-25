@@ -1,15 +1,25 @@
 import cn from 'classnames';
+import dynamic from 'next/dynamic';
 import Callout from '@/components/Callout/Callout';
 import IconCodePen from '@/components/Icons/IconCodePen';
-import FeaturedProject from '@/components/FeaturedProject/FeaturedProject';
-import ProjectCard from '@/components/ProjectCard/ProjectCard';
+// import FeaturedProject from '@/components/FeaturedProject/FeaturedProject';
+// import ProjectCard from '@/components/ProjectCard/ProjectCard';
 import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import styles from './home.module.scss';
+
+const FeaturedProject = dynamic(() => import('@/components/FeaturedProject/FeaturedProject'), {
+	ssr: true,
+});
+
+const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard'), {
+	ssr: true,
+});
 
 /* Todo:
 * update crop icon/s to replace LinkedIn icon
 * Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
 * PERFORMANCE AUDIT. Double check cpu and performance/paint issues. If gradient is still causing performance issues, try the png. Maybe will-change is causing issues. jpgs for images, pngs for snapshots. heros under 200kb, thumbnails under 30kb. NEXT JS SHOULD OPTIMIZE ALREADY.
+* Consider only animating the text side of FeaturedProject?
 
 * CONTENT CREATION:
 * Make all pages with images and text content.

@@ -39,6 +39,7 @@ export const InspContent = () => {
 							logoMaxWidth='380px'
 							metaTags={['Branding', 'UX/UI', 'HTML', 'CSS', 'JS', 'React', 'Storybook']}
 							isHero
+							priority
 						/>
 						<h2 className={styles.h2}>
 							The
