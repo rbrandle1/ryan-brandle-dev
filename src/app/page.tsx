@@ -14,11 +14,10 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 });
 
 /* Todo:
-* fix height of last callout on home page.
 * FIX localstorage issue as it is causing a build error.
-* safari footer issue when resized... has to do with making body grid.
 * how to better optimize the home radial gradient blur... will-change is not really true but it definitely helps.
 * update crop icon/s to replace LinkedIn icon
+* https://developer.chrome.com/blog/new-in-devtools-133/?utm_source=devtools#perf-image-delivery
 * Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
 * https://medium.com/@jun55tsuno/optimize-your-nextjs-app-e4fe9718fc8a
 * PERFORMANCE AUDIT. Use Chrome LightHouse. Double check cpu and performance/paint issues. If gradient is still causing performance issues, try the png. Maybe will-change is causing issues. jpgs for images, pngs for snapshots. heros under 200kb, thumbnails under 30kb. NEXT JS SHOULD OPTIMIZE ALREADY.
