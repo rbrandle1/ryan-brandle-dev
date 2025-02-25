@@ -11,12 +11,14 @@ interface ButtonProps {
 
 const Button = ({ className, children, href, ariaLabel }: ButtonProps) => {
 	return (
-		<div className={cn(styles.buttonContainer, className)}>
-			<Link className={styles.button} href={href} aria-label={ariaLabel}>
-				{children}
-			</Link>
-			<div className={cn(styles.buttonShadow, styles.bottomLeft)}></div>
-			<div className={cn(styles.buttonShadow, styles.topRight)}></div>
+		<div className={className}>
+			<div className={styles.buttonContainer}>
+				<Link className={styles.button} href={href} aria-label={ariaLabel}>
+					{children}
+				</Link>
+				<div className={cn(styles.buttonShadow, styles.bottomLeft)}></div>
+				<div className={cn(styles.buttonShadow, styles.topRight)}></div>
+			</div>
 		</div>
 	);
 };

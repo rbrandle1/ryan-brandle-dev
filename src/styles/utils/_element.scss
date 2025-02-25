@@ -37,6 +37,8 @@
 			background-image: var(--color-accent-gradient);
 		} @else if $type == reverse {
 			background-image: var(--color-accent-gradient-reversed);
+		} @else if $type == alt {
+			background: var(--color-accent-alt);
 		} @else {
 			background: var(--color-accent);
 		}

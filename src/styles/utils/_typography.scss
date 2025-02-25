@@ -216,7 +216,7 @@ $paragraphs: (
 	text-decoration: none;
 	overflow: hidden;
 	isolation: isolate; // forces new stacking context so pseudo-elements work with z-index
-	transition: color var(--duration-lg) ease-in-out;
+	transition: color var(--duration-lg) var(--ease-in-out);
 	padding-inline: var(--hover-offset);
 	margin-inline: calc(var(--hover-offset) / -1);
 
@@ -234,7 +234,7 @@ $paragraphs: (
 		width: 0;
 		height: 100%;
 		background-color: var(--color-accent);
-		transition: width var(--duration-md) ease-out;
+		transition: width var(--duration-md) var(--ease-out);
 		z-index: -1;
 
 		@if $reverse {
@@ -273,7 +273,7 @@ $paragraphs: (
 @mixin link-neutral {
 	color: var(--link-neutral);
 	text-decoration: none;
-	transition: font-weight var(--duration-2xs) ease-out, transform var(--duration-sm) ease-out;
+	transition: font-weight var(--duration-2xs) var(--ease-out), transform var(--duration-sm) var(--ease-out);
 
 	@include viewport.has-hover(':hover', ':focus-visible') {
 		color: var(--link-neutral-hover);

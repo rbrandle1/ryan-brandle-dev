@@ -3,7 +3,7 @@
 @use '@/styles/utils/viewport';
 @use '@/styles/utils/element';
 
-.projectPage {
+.page {
 	// PAGE VARIABLES
 	--flow-space-base: 1lh;
 	--hero-spacing: 1lh;
@@ -198,6 +198,10 @@
 	@include typography.link(underline);
 }
 
+.accentEdge {
+	@include element.accent-edge;
+}
+
 .accentEdgeGrad {
 	@include element.accent-edge(gradient);
 }
@@ -211,9 +215,9 @@
 		max-width: fit-content;
 	}
 }
+
 .buttonLink {
 	display: inline-block;
 	max-width: fit-content;
-	// @include typography.link;
 	@include typography.link(false, reverse);
 }

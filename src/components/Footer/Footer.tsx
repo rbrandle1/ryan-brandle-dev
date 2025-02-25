@@ -1,4 +1,8 @@
+'use client';
+
 import cn from 'classnames';
+import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import LogoSwitcher from '@/components/LogoSwitcher/LogoSwitcher';
 import IconCircleText from '@/components/Icons/IconTextCircle';
@@ -8,8 +12,20 @@ import IconGithub from '@/components/Icons/IconGithub';
 import styles from './Footer.module.scss';
 
 const Footer = () => {
+	const pathname = usePathname();
+	const [isAccentAlt, setIsAccentAlt] = useState(false);
+
+	useEffect(() => {
+		let dataNotFound = document.querySelector('[data-not-found]');
+
+		const useAccentAlt = pathname === '/about' || !!dataNotFound;
+		setIsAccentAlt(useAccentAlt);
+	}, [pathname]);
+
 	return (
-		<footer className={styles.footer}>
+		<footer
+			className={cn(styles.footer, pathname === '/about' || isAccentAlt ? styles.accentEdgeAlt : styles.accentEdge)}
+		>
 			<div className={cn(styles.container, styles.full)}>
 				<div className={styles.logoContainer}>
 					<Link className={styles.logoLink} href='/' aria-label='Return to home page'>
@@ -24,7 +40,7 @@ const Footer = () => {
 				<div className={styles.contactContainer}>
 					<h3>Contact</h3>
 					<p>
-						I’m always open to new opportunities so please don’t&nbsp;hesitate to{' '}
+						I'm always open to new opportunities so please don't&nbsp;hesitate to{' '}
 						<a href='mailto:hello@example.com'>say&nbsp;hi&nbsp;anytime!</a>
 					</p>
 				</div>

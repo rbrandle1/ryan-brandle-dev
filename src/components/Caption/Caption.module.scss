@@ -18,7 +18,7 @@
 		top: -23px;
 		color: var(--icon-accent);
 		filter: var(--shadow-svg);
-		transition: color var(--duration-xl) ease-out var(--duration-sm);
+		transition: color var(--duration-xl) var(--ease-out) var(--duration-sm);
 	}
 
 	&.left {

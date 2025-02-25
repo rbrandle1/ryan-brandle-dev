@@ -1,3 +1,4 @@
+import cn from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 import IconLinkedIn from '@/components/Icons/IconLinkedIn';
@@ -5,6 +6,8 @@ import MetaTags from '@/components/MetaTags/MetaTags';
 import styles from './ProjectCard.module.scss';
 
 interface ProjectCardProps {
+	id?: string;
+	className?: string;
 	imgSrc: string;
 	imgAlt: string;
 	hasCropIcon?: boolean;
@@ -17,6 +20,8 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({
+	id,
+	className,
 	imgSrc,
 	imgAlt,
 	hasCropIcon,
@@ -28,7 +33,7 @@ const ProjectCard = ({
 	href,
 }: ProjectCardProps) => {
 	return (
-		<article className={styles.component}>
+		<article id={id} className={cn(styles.component, className)}>
 			{hasCropIcon ? (
 				<div className={styles.cropIconContainer}>
 					<IconLinkedIn />
