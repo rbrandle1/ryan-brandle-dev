@@ -1,0 +1,68 @@
+@use '@/styles/utils/typography';
+@use '@/styles/utils/viewport';
+@use '@/styles/utils/layout';
+@use '@/styles/utils/element';
+
+.notFound {
+	// PAGE VARIABLES
+	--flow-space-base: 1lh;
+	--hero-spacing: 1lh;
+	--section-spacing: 4lh;
+
+	@include viewport.breakpoint(xs) {
+		--hero-spacing: 2lh;
+	}
+
+	@include viewport.breakpoint(md) {
+		--hero-spacing: 4lh;
+	}
+
+	// TYPOGRAPHY
+	p {
+		@include typography.p;
+		max-width: var(--optimal-line-length-base);
+	}
+
+	.h1 {
+		@include typography.headline(3xl);
+		max-width: var(--optimal-line-length-2xs);
+
+		@include viewport.breakpoint(2xl) {
+			font-size: clamp(var(--text-3xl), 7dvw, var(--text-4xl));
+		}
+	}
+}
+
+// LAYOUT
+.containerGrid {
+	@include layout.grid;
+
+	> * + * {
+		margin-block-start: var(--flow-space, var(--flow-space-base));
+	}
+}
+
+.soloSection {
+	--hero-offset: calc(var(--hero-spacing) * 2);
+
+	background-color: var(--surface-primary);
+	padding-block-start: var(--hero-spacing);
+	padding-block-end: var(--hero-offset);
+	min-height: 100%;
+
+	@include viewport.breakpoint(sm, max) {
+		padding-block: var(--section-spacing);
+	}
+
+	@include viewport.breakpoint(md) {
+		padding-block-end: calc(var(--hero-offset) + 1lh); //offset for metabox
+	}
+}
+
+.accentEdgeGrad {
+	@include element.accent-edge(gradient);
+}
+
+.button {
+	max-width: fit-content;
+}

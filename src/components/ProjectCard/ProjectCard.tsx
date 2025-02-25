@@ -1,3 +1,4 @@
+import cn from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 import IconLinkedIn from '@/components/Icons/IconLinkedIn';
@@ -5,6 +6,8 @@ import MetaTags from '@/components/MetaTags/MetaTags';
 import styles from './ProjectCard.module.scss';
 
 interface ProjectCardProps {
+	id?: string;
+	className?: string;
 	imgSrc: string;
 	imgAlt: string;
 	hasCropIcon?: boolean;
@@ -17,6 +20,8 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({
+	id,
+	className,
 	imgSrc,
 	imgAlt,
 	hasCropIcon,
@@ -28,7 +33,7 @@ const ProjectCard = ({
 	href,
 }: ProjectCardProps) => {
 	return (
-		<article className={styles.component}>
+		<article id={id} className={cn(styles.component, className)}>
 			{hasCropIcon ? (
 				<div className={styles.cropIconContainer}>
 					<IconLinkedIn />
@@ -38,18 +43,20 @@ const ProjectCard = ({
 				<Link href={href} aria-label={`Read more about ${title}`} tabIndex={-1}>
 					<div className={styles.image}>
 						{logo ? <div className={styles.logoContainer}>{logo}</div> : null}
-						<Image src={imgSrc} alt={imgAlt} fill sizes='(max-width: 768px) 90vw, (max-width: 1220px) 40vw, 546px' />
+						<Image src={imgSrc} alt={imgAlt} fill sizes='(max-width: 768px) 95vw, (max-width: 1096px) 46vw, 494px' />
 					</div>
 				</Link>
 			</figure>
 			<div className={styles.textContainer}>
 				<header>
-					<h3 className={styles.title}>{title}</h3>
+					<Link href={href} tabIndex={-1}>
+						<h3 className={styles.title}>{title}</h3>
+					</Link>
 					{metaTags ? <MetaTags items={metaTags} iconAccent /> : null}
 				</header>
 				<p className={styles.description}>{description}</p>
 				<Link className={styles.button} href={href} aria-label={`Read more about ${title}`}>
-					{buttonText}
+					{buttonText}&nbsp;&rarr;
 				</Link>
 			</div>
 		</article>

@@ -8,16 +8,27 @@
 	padding-block-start: var(--space-2xl);
 	padding-block-end: var(--space-base);
 
-	@include element.accent-edge;
 	@include viewport.breakpoint(sm) {
 		padding-block-start: var(--space-4xl);
 	}
+
+	@include layout.grid;
+}
+
+.accentEdge {
+	@include element.accent-edge;
+}
+
+.accentEdgeAlt {
+	@include element.accent-edge(alt);
 }
 
 .container {
-	@include layout.max-width(xl);
+	margin-inline: auto;
+	padding-inline: var(--gutter);
+	width: min(1490px, 100%);
 	display: grid;
-	gap: clamp(var(--space-base), 4dvw, var(--space-2xl));
+	gap: var(--gutter);
 	place-items: center;
 
 	@include viewport.breakpoint(xs) {
@@ -63,6 +74,7 @@
 
 	@include viewport.breakpoint(xs) {
 		grid-area: copyright;
+		margin-block-start: 12px; // optical alignment to logos
 	}
 
 	@include viewport.breakpoint(xs, max) {
@@ -74,6 +86,7 @@
 .socialContainer {
 	display: grid;
 	grid-auto-flow: column;
+	justify-self: center;
 
 	@include viewport.breakpoint(xs) {
 		grid-area: social;
@@ -81,10 +94,6 @@
 }
 
 .logoContainer {
-	position: relative;
-	width: 160px;
-	height: 160px;
-
 	@include viewport.breakpoint(xs) {
 		grid-area: logo;
 	}
@@ -94,10 +103,36 @@
 	}
 }
 
+.logoLink {
+	position: relative;
+	display: grid;
+	grid-template: 'logoContainer';
+	place-items: center;
+
+	> * {
+		grid-area: logoContainer;
+	}
+
+	@include viewport.has-hover(':hover', ':focus-visible') {
+		.logoIcon {
+			transition: transform var(--duration-md) var(--ease-out);
+			transform: var(--button-raise);
+
+			&:active {
+				transition: transform 0s;
+				transform: var(--button-raise-press);
+			}
+		}
+	}
+
+	&:focus-visible {
+		outline: 2px solid -webkit-focus-ring-color;
+		outline-offset: 8px;
+		border-radius: 1px;
+	}
+}
+
 .logoCircle {
-	position: absolute;
-	top: 0;
-	left: 0;
 	width: 100%;
 	height: 100%;
 	fill: var(--text-tertiary);
@@ -109,26 +144,26 @@
 	--logo-size: 68px;
 
 	position: absolute;
-	top: calc(50% - 1px);
-	left: calc(50% + 3px);
 	width: var(--logo-size);
 	height: var(--logo-size);
-	transform: translate(-50%, -50%);
-	transition: transform var(--duration-sm) ease-out;
-
-	@include viewport.has-hover {
-		transform: translate(-50%, -54%);
-	}
+	margin-inline-start: 4px;
+	margin-block-end: 4px;
+	transition: transform var(--duration-md) var(--ease-out);
 }
 
 .icon {
 	padding: var(--space-sm);
 	fill: var(--text-tertiary);
-	transition: fill var(--duration-sm) ease-out, transform var(--duration-sm) ease-out;
+	transition: fill var(--duration-md) var(--ease-out), transform var(--duration-md) var(--ease-out);
 
 	@include viewport.has-hover(':hover', ':focus-visible') {
 		fill: var(--text-primary);
-		transform: translateY(-2px);
+		transform: var(--button-raise);
+
+		&:active {
+			transition: transform 0s;
+			transform: var(--button-raise-press);
+		}
 	}
 
 	svg {

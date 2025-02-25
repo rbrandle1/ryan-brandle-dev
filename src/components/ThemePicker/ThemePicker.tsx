@@ -1,13 +1,19 @@
 'use client';
+import cn from 'classnames';
 import { useTheme } from '@/components/ThemeProvider/ThemeProvider';
-import IconDroplet from '@/components/Icons/IconDroplet';
+// import IconDroplet from '@/components/Icons/IconDroplet';
+import IconBucket from '@/components/Icons/IconBucket';
 import styles from './ThemePicker.module.scss';
 
-const ThemePicker = () => {
+interface ThemePickerProps {
+	className?: string;
+}
+
+const ThemePicker = ({ className }: ThemePickerProps) => {
 	const { theme, handleThemeChange } = useTheme();
 
 	return (
-		<fieldset className={styles.themePicker}>
+		<fieldset className={cn(styles.themePicker, className)}>
 			<legend>Choose a theme:</legend>
 			<div className={styles.options} role='radiogroup' aria-label='Select a theme'>
 				<label htmlFor='magenta-theme'>
@@ -18,7 +24,7 @@ const ThemePicker = () => {
 						id='magenta-theme'
 						name='theme'
 						value='m'
-						checked={theme === 'm'}
+						checked={theme === 'm' || !theme}
 						onChange={() => handleThemeChange('m')}
 					/>
 				</label>
@@ -60,7 +66,8 @@ const ThemePicker = () => {
 				</label>
 			</div>
 			<div className={styles.icon}>
-				<IconDroplet aria-hidden />
+				{/* <IconDroplet aria-hidden /> */}
+				<IconBucket aria-hidden />
 			</div>
 		</fieldset>
 	);

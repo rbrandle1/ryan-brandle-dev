@@ -20,6 +20,8 @@ html {
 }
 
 body {
+	display: grid;
+	grid-template-rows: auto 1fr auto;
 	color: var(--text-primary, black);
 	background: var(--surface-primary, white);
 	font-family: var(--font-body);
@@ -37,4 +39,14 @@ body {
 a {
 	color: inherit;
 	text-decoration: none;
+}
+
+// needed to remove focus outline on main element when navigating with keyboard
+#main:focus {
+	outline: none;
+}
+
+#main {
+	min-height: 100%;
+	display: grid;
 }

@@ -6,9 +6,11 @@ import Link from 'next/link';
 import IconLinkedIn from '@/components/Icons/IconLinkedIn';
 import MetaTags from '@/components/MetaTags/MetaTags';
 import Caption from '@/components/Caption/Caption';
+import Button from '@/components/Button/Button';
 import styles from './FeaturedProject.module.scss';
 
 interface FeaturedProjectProps {
+	id?: string;
 	className?: string;
 	caption?: string;
 	imgRight?: boolean;
@@ -24,6 +26,7 @@ interface FeaturedProjectProps {
 }
 
 const FeaturedProject = ({
+	id,
 	className,
 	caption,
 	imgRight,
@@ -44,6 +47,7 @@ const FeaturedProject = ({
 
 	return (
 		<article
+			id={id}
 			ref={ref}
 			className={cn(styles.component, imgRight && styles.imgRight, inView && styles.fadeInUp, className)}
 		>
@@ -56,7 +60,12 @@ const FeaturedProject = ({
 				<Link href={href} aria-label={`Read more about ${title}`} tabIndex={-1}>
 					<div className={styles.image}>
 						{logo ? <div className={styles.logoContainer}>{logo}</div> : null}
-						<Image src={imgSrc} alt={imgAlt} fill sizes='(max-width: 768px) 100vw, (max-width: 1230px) 50vw, 530px' />
+						<Image
+							src={imgSrc}
+							alt={imgAlt}
+							fill
+							sizes='(max-width: 768px) 95vw, (max-width: 1100px) 45vw, (max-width: 1200px) 494px, (max-width: 1400px) 476px,  566px'
+						/>
 					</div>
 				</Link>
 				{caption ? (
@@ -67,13 +76,15 @@ const FeaturedProject = ({
 			</figure>
 			<div className={styles.textContainer}>
 				<header>
-					<h3 className={styles.title}>{title}</h3>
+					<Link href={href} tabIndex={-1}>
+						<h3 className={styles.title}>{title}</h3>
+					</Link>
 					{metaTags ? <MetaTags items={metaTags} iconAccent /> : null}
 				</header>
 				<p className={styles.description}>{description}</p>
-				<Link className={styles.button} href={href} aria-label={`Read more about ${title}`}>
+				<Button className={styles.button} href={href} ariaLabel={`Read more about ${title}`}>
 					{buttonText}
-				</Link>
+				</Button>
 			</div>
 		</article>
 	);

@@ -5,24 +5,24 @@
 @use 'sass:math';
 
 .component {
-	--transition-duration-base: var(--duration-2xl);
+	--transition-duration-base: var(--duration-3xl);
 	--transition-duration: calc(var(--transition-duration-base) - var(--transition-delay));
 	--transition-distance: var(--space-md);
 	--transition-delay: var(--duration-sm);
-	--transition-ease: ease-in-out;
+	--transition-ease: var(--ease-in-out);
 
 	position: relative;
 	display: grid;
 	grid-template-columns: 1fr;
-	gap: var(--space-base);
+	gap: 1lh;
 
 	@include viewport.breakpoint(sm) {
 		grid-template-columns: 1fr 1fr;
-		gap: var(--space-lg);
+		gap: var(--gutter);
 	}
 
 	@include viewport.breakpoint(lg) {
-		gap: var(--space-2xl);
+		gap: 2lh;
 	}
 }
 
@@ -46,7 +46,7 @@
 	position: relative;
 
 	@include viewport.breakpoint(sm) {
-		margin-block-start: var(--space-2xl);
+		margin-block-start: 2lh;
 		transition-delay: var(--transition-delay);
 
 		.imgRight & {
@@ -56,7 +56,8 @@
 }
 
 .textContainer {
-	--flow-space: var(--space-lg);
+	--flow-space: 1lh;
+
 	--transition-distance: var(--space-lg);
 	--transition-duration: var(--transition-duration-base);
 
@@ -102,7 +103,7 @@
 		object-fit: cover;
 
 		@media not (prefers-reduced-motion: reduce) {
-			transition: transform var(--duration-xl) ease-out;
+			transition: transform var(--duration-3xl) var(--ease-out);
 
 			@include viewport.has-hover {
 				transform: scale(1.02);
@@ -126,9 +127,11 @@
 .title {
 	@include typography.headline;
 	max-width: var(--optimal-line-length-xs);
-	margin-block-end: var(--space-sm);
+	margin-block-end: 0.125lh;
 
 	@include viewport.breakpoint(sm) {
+		--optimal-line-length-2xs: 11ch;
+
 		max-width: var(--optimal-line-length-2xs);
 	}
 }
@@ -138,5 +141,7 @@
 }
 
 .button {
-	display: inline-block;
+	@include viewport.breakpoint(xs) {
+		max-width: 288px;
+	}
 }

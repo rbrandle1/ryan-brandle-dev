@@ -15,9 +15,7 @@
     * Surface
     * Link
     * Border
-    * Divider
     * Icon
-    * Item
     * COMPONENTS:
       * Buttons
       * Cards
@@ -57,12 +55,25 @@
 	--radius-default: var(--p-radius-1);
 
 	/* TIMING */
-	--duration-xs: var(--p-duration-1);
-	--duration-sm: var(--p-duration-2);
-	--duration-md: var(--p-duration-3);
-	--duration-lg: var(--p-duration-4);
-	--duration-xl: var(--p-duration-5);
-	--duration-2xl: var(--p-duration-6);
+	--duration-2xs: var(--p-duration-1);
+	--duration-xs: var(--p-duration-2);
+	--duration-sm: var(--p-duration-3);
+	--duration-md: var(--p-duration-4);
+	--duration-lg: var(--p-duration-5);
+	--duration-xl: var(--p-duration-6);
+	--duration-2xl: var(--p-duration-7);
+	--duration-3xl: var(--p-duration-8);
+
+	/* EASING */
+	--ease-out: var(--p-ease-out);
+	--ease-in: var(--p-ease-in);
+	--ease-in-out: var(--p-ease-in-out);
+	--ease: var(--p-ease);
+
+	/* DISTANCE */
+	--distance-xs: var(--p-distance-1);
+	--distance-sm: var(--p-distance-2);
+	--distance-md: var(--p-distance-3);
 
 	/* TYPOGRAPHY */
 	--font-header: var(--p-font-display);
@@ -110,14 +121,21 @@
 	--color-tertiary-active: var(--color-tertiary);
 
 	--color-accent: var(--p-color-magenta-500);
+	--color-accent-alt: var(--p-color-magenta-700);
 	--color-accent-a: var(--p-color-magenta-a);
-	--color-accent-hover: var(--color-accent);
-	--color-accent-active: var(--color-accent);
+	--color-accent-gradient: var(--p-color-magenta-gradient);
+	--color-accent-gradient-reversed: var(--p-color-magenta-gradient-reversed);
+
+	--color-background-gradient: var(--p-color-neutral-gradient-horizontal);
+	--color-background-gradient-diagonal-2xs: var(--p-color-neutral-gradient-diagonal-2xs);
+	--color-background-gradient-diagonal-xs: var(--p-color-neutral-gradient-diagonal-xs);
+	--color-background-gradient-diagonal-sm: var(--p-color-neutral-gradient-diagonal-sm);
 
 	/* SHADOWS */
-	--shadow-box: 0px 4px 8px var(--p-color-black-a20);
-	--shadow-text-vert: 2px -4px 6px var(--p-color-black-a15);
-	--shadow-svg: drop-shadow(0 1px 2px var(--p-color-black-a10));
+	--shadow-box: 0 2px 4px var(--p-color-black-a15), 0 2px 6px var(--p-color-black-a15);
+	--shadow-box-lg: 0 4px 6px var(--p-color-black-a15), 0 4px 8px var(--p-color-black-a15);
+	--shadow-text-vert: 2px -4px 6px var(--p-color-black-a15), 2px -4px 8px var(--p-color-black-a15);
+	--shadow-svg: drop-shadow(0 2px 4px var(--p-color-black-a15));
 
 	/* TEXT */
 	--text-primary: var(--color-primary);
@@ -149,10 +167,6 @@
 	--border-color-c: var(--p-color-cyan-500);
 	--border-color-y: var(--p-color-yellow-500);
 	--border-color-p: var(--p-color-purple-500);
-	/* DIVIDER */
-	/* Use for divider color values */
-	// --divider-primary: var(--color-neutral-400);
-	// --divider-secondary: var(--color-neutral-300);
 
 	/* ICON */
 	/* Use for icon color values */
@@ -160,63 +174,26 @@
 	--icon-secondary: var(--color-secondary);
 	--icon-accent: var(--color-accent);
 	--icon-over-image: var(--p-color-white);
-	// --icon-default: var(--color-neutral-400);
-	// --icon-default-hover: var(--color-neutral-500);
-	// --icon-over-image-hover: var(--color-white-a93);
 
 	/* COMPONENTS */
 	/* Currently adding common component tokens in the semantic tier. Can possibly split this out if need be in the future */
 
 	/* BUTTONS */
 	/* Primary */
-	--button-label: var(--p-font-sans);
-	--button-background: var(--color-primary);
+	--button-label: var(--font-body);
+	--button-background: var(--surface-primary);
 	--button-background-hover: var(--color-accent);
-	--button-background-pressed: var(--button-background-hover);
-	--button-foreground: var(--color-secondary);
+	--button-foreground: var(--text-primary);
+	--button-foreground-hover: var(--text-primary);
 	--button-border: var(--color-accent);
+	--button-spacing: 0.35lh 1lh;
+	--button-distance: var(--distance-sm);
+	--button-distance-subtle: var(--distance-xs);
+	--button-raise: translateY(calc(var(--button-distance) / -1));
+	--button-press: translateY(var(--button-distance-subtle));
+	--button-raise-press: translateY(calc(var(--button-distance) / -1 + var(--button-distance-subtle)));
 
-	// /* Accent */
-	// --button-background-accent: var(--color-accent);
-	// --button-background-accent-hover: var(--color-accent-hover);
-	// --button-background-accent-pressed: var(--color-accent-active);
-	// --button-foreground-accent: var(--color-primary);
-
-	// /* Invert */
-	// --button-background-invert: var(--color-neutral-white);
-	// --button-background-invert-hover: var(--color-white-a93);
-	// --button-background-invert-pressed: var(--button-background-invert);
-	// --button-foreground-invert: var(--color-primary);
-
-	// /* Button Link */
-	// --button-background-link: transparent;
-	// --button-foreground-link: var(--link-primary);
-	// --button-foreground-link-hover: var(--link-primary-hover);
-	// --button-foreground-link-pressed: var(--link-primary-active);
-
-	// /* Button Link Neutral */
-	// --button-foreground-link-neutral: var(--link-neutral);
-	// --button-foreground-link-neutral-hover: var(--link-neutral-hover);
-	// --button-foreground-link-neutral-pressed: var(--link-neutral-active);
-
-	// /* Disabled */
-	// --button-background-disabled: var(--color-neutral-300);
-	// --button-foreground-disabled: var(--color-neutral-white);
-	// --button-foreground-link-disabled: var(--link-disabled);
-
-	// /* CARDS */
-	// /* Use for card specific values */
-	// --card-border: var(--color-neutral-100);
-
-	// /* INPUTS */
-	// /* Use for input values */
-	// --input-label: var(--text-primary);
-	// --input-border: var(--border-default);
-	// --input-border-active: var(--border-active);
-	// --input-text: var(--text-secondary);
-	// --input-placeholder: var(--text-tertiary);
-	// --input-background: var(--surface-minimal);
-
+	/* THEME OVERRIDES */
 	[data-section='dark'] {
 		--color-primary: var(--p-color-white);
 		--color-secondary: var(--p-color-black);
@@ -230,26 +207,45 @@
 		--link-primary-hover: var(--link-primary);
 		--link-primary-active: var(--link-primary);
 		--link-primary-visited: var(--link-primary);
+
+		--button-background: var(--surface-primary);
+		--button-foreground: var(--text-primary);
+		--button-foreground-hover: var(--text-secondary);
 	}
 
 	[data-theme='c'] {
 		--color-accent: var(--p-color-cyan-500);
+		--color-accent-alt: var(--p-color-cyan-700);
 		--color-accent-a: var(--p-color-cyan-a);
+		--color-accent-gradient: var(--p-color-cyan-gradient);
+		--color-accent-gradient-reversed: var(--p-color-cyan-gradient-reversed);
 		--text-accent: var(--color-accent);
 		--icon-accent: var(--color-accent);
+		--button-background-hover: var(--color-accent);
+		--button-border: var(--color-accent);
 	}
 
 	[data-theme='y'] {
 		--color-accent: var(--p-color-yellow-500);
+		--color-accent-alt: var(--p-color-yellow-700);
 		--color-accent-a: var(--p-color-yellow-a);
+		--color-accent-gradient: var(--p-color-yellow-gradient);
+		--color-accent-gradient-reversed: var(--p-color-yellow-gradient-reversed);
 		--text-accent: var(--color-accent);
 		--icon-accent: var(--color-accent);
+		--button-background-hover: var(--color-accent);
+		--button-border: var(--color-accent);
 	}
 
 	[data-theme='p'] {
 		--color-accent: var(--p-color-purple-500);
+		--color-accent-alt: var(--p-color-purple-700);
 		--color-accent-a: var(--p-color-purple-a);
+		--color-accent-gradient: var(--p-color-purple-gradient);
+		--color-accent-gradient-reversed: var(--p-color-purple-gradient-reversed);
 		--text-accent: var(--color-accent);
 		--icon-accent: var(--color-accent);
+		--button-background-hover: var(--color-accent);
+		--button-border: var(--color-accent);
 	}
 }

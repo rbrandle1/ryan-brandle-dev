@@ -3,33 +3,53 @@
 @use '@/styles/utils/viewport';
 @use '@/styles/utils/element';
 
-// Todo: update as section calc(var(--space-4xl) * 3)
-// Todo: update calc(var(--space-8xl) * 2) as section padding
-
 .home {
-	--flow-space: var(--space-lg);
-	--section-spacing: var(--space-6xl);
+	// PAGE VARIABLES
+	--flow-space: 1lh;
+	--section-spacing: 2lh;
+
+	@include viewport.breakpoint(sm) {
+		--section-spacing: 4lh;
+	}
 
 	@include viewport.breakpoint(xl) {
-		--section-spacing: var(--space-8xl);
+		--section-spacing: 6lh;
 	}
 }
 
-.accentEdge {
-	@include element.accent-edge;
+// TYPOGRAPHY
+.altFont {
+	@include typography.alt-font;
+	text-transform: initial;
+	font-weight: var(--font-weight-bold);
+}
+
+// LAYOUT
+.containerGrid {
+	@include layout.grid;
+
+	> * + * {
+		margin-block-start: var(--flow-space);
+	}
+}
+
+.breakoutXl {
+	@include viewport.breakpoint(xl) {
+		grid-column: breakout;
+	}
 }
 
 .section {
 	color: var(--text-primary);
-	background-color: var(--surface-primary);
 	padding-block: var(--section-spacing);
-}
 
-.container {
-	@include layout.max-width;
+	[data-section='dark'] & {
+		background-color: var(--surface-primary);
+	}
 
-	> * + * {
-		margin-block-start: var(--flow-space);
+	.multiSection & {
+		position: relative;
+		background-color: transparent;
 	}
 }
 
@@ -37,77 +57,6 @@
 	background-color: var(--surface-primary);
 	position: relative;
 	overflow: hidden;
-
-	.section {
-		position: relative;
-		background-color: transparent;
-	}
-}
-
-.hasGradient {
-	&::before {
-		--gradient-width: 200dvw;
-		--gradient-height: var(--gradient-width);
-		--gradient-location: calc(0% - var(--gradient-height) / 1.5);
-		--gradient-blur: 70px;
-
-		content: '';
-		position: absolute;
-		top: var(--gradient-location);
-		left: 50%;
-		transform: translateX(-50%);
-		width: var(--gradient-width);
-		height: var(--gradient-height);
-		background-color: var(--p-color-gray-900);
-		border-radius: 50%;
-		will-change: filter;
-		filter: blur(var(--gradient-blur));
-
-		@include viewport.breakpoint(xs) {
-			--gradient-location: calc(0% - var(--gradient-height) / 1.3);
-		}
-
-		@include viewport.breakpoint(sm) {
-			--gradient-width: 130dvw;
-			--gradient-height: calc(var(--gradient-width) / 2);
-			--gradient-location: calc(0% - var(--gradient-height) / 2.5);
-		}
-
-		@include viewport.breakpoint(lg) {
-			--gradient-width: 1200px;
-		}
-
-		@include viewport.breakpoint(xl) {
-			--gradient-width: 2400px;
-			--gradient-location: calc(0% - var(--gradient-height) / 1.3);
-		}
-	}
-}
-
-.featuredSection {
-	--flow-space: var(--space-4xl);
-	--featured-section-spacing: calc(var(--section-spacing) * 2);
-
-	padding-block-end: var(--featured-section-spacing);
-
-	@include viewport.breakpoint(md) {
-		--flow-space: calc(var(--space-4xl) * 3);
-	}
-}
-
-.projectSection {
-	--flow-space: var(--space-2xl);
-	--project-section-spacing: calc(var(--section-spacing) * 2);
-
-	padding-block: var(--project-section-spacing);
-
-	@include viewport.breakpoint(md) {
-		--flow-space: var(--space-3xl);
-	}
-
-	@include viewport.breakpoint(xl) {
-		--flow-space: var(--space-4xl);
-	}
 }
 
 .heroSection {
@@ -120,12 +69,12 @@
 	}
 
 	@include viewport.breakpoint(sm) {
-		min-height: calc(100dvh - var(--header-height) - var(--space-4xl));
+		min-height: calc(100dvh - var(--header-height) - 3lh);
 	}
 }
 
 .heroContent {
-	--hero-flow-space: var(--space-xl);
+	--hero-flow-space: 2lh;
 
 	margin-block: var(--hero-flow-space);
 
@@ -133,8 +82,8 @@
 		margin-block-start: var(--hero-flow-space);
 	}
 
-	@include viewport.breakpoint(xs) {
-		--hero-flow-space: var(--space-4xl);
+	@include viewport.breakpoint(sm) {
+		--hero-flow-space: 4lh;
 	}
 }
 
@@ -149,12 +98,6 @@
 		display: block;
 		text-align: right;
 	}
-}
-
-.altFont {
-	font-family: var(--font-alt);
-	text-transform: initial;
-	line-height: var(--line-height-2xs);
 }
 
 .heroDetails {
@@ -181,7 +124,7 @@
 
 	@include viewport.breakpoint(md) {
 		column-count: 2;
-		column-gap: var(--space-lg);
+		column-gap: 1lh;
 		max-width: calc(var(--column-width) * 2);
 	}
 
@@ -190,37 +133,41 @@
 	}
 }
 
-.scrollContainer {
-	@include layout.max-width;
-	padding-block-end: clamp(var(--space-base), 4dvw, var(--space-lg));
-}
-
-.scroll {
-	position: relative;
-	padding: var(--space-base) 0;
-	text-align: center;
-	width: 100%;
-	user-select: none;
-}
-
-.float {
-	position: absolute;
-	left: 0;
-	right: 0;
-	font-size: var(--text-xl);
-	line-height: 0;
-	animation: float 2.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
-}
-
 .vertSection {
 	position: relative;
 	overflow: hidden;
-	padding-block-end: var(--space-xl);
+	z-index: 1;
 
 	&::before {
 		content: '';
 		display: block;
 		padding-block-end: clamp(187px, 29dvw, 414px);
+	}
+}
+
+.featuredSection {
+	--flow-space: calc(var(--section-spacing) * 2);
+
+	padding-block-end: var(--flow-space);
+}
+
+.projectSection {
+	--flow-space: 4lh;
+
+	padding-block: calc(var(--section-spacing) * 2);
+}
+
+.projectCardContainer {
+	--flow-space: 3lh;
+
+	margin-block-start: var(--section-spacing);
+
+	> * + * {
+		margin-block-start: var(--flow-space);
+	}
+
+	@include viewport.breakpoint(xl) {
+		--flow-space: 4lh;
 	}
 }
 
@@ -233,7 +180,7 @@
 
 .vertTextHero {
 	@include typography.display(lg);
-	top: -15%;
+	top: -17%;
 	left: 51.5%;
 	transform: translateX(-50%);
 	font-size: clamp(13.41rem, 21dvw, 29.23rem); // optical override for vertical text style alignment.
@@ -274,6 +221,10 @@
 }
 
 .multiSectionHeader {
+	> * + * {
+		margin-block-start: 1lh;
+	}
+
 	@include viewport.breakpoint(sm) {
 		text-align: center;
 
@@ -285,8 +236,6 @@
 
 .multiSectionTitle {
 	@include typography.headline;
-
-	margin-block-end: var(--space-lg);
 }
 
 .multiSectionCopy {
@@ -294,4 +243,77 @@
 	max-width: var(--optimal-line-length-base);
 
 	color: var(--text-tertiary);
+}
+
+// ELEMENTS
+.accentEdgeGrad {
+	@include element.accent-edge(gradient);
+}
+.accentEdgeGradRev {
+	@include element.accent-edge(reverse);
+}
+
+.gradientBg {
+	&::after {
+		@include element.shadow-inset-pseudo;
+	}
+
+	&::before {
+		--gradient-width: 200dvw;
+		--gradient-height: var(--gradient-width);
+		--gradient-location: calc(0% - var(--gradient-height) / 1.5);
+		--gradient-blur: 70px;
+
+		content: '';
+		position: absolute;
+		top: var(--gradient-location);
+		left: 50%;
+		transform: translateX(-50%);
+		width: var(--gradient-width);
+		height: var(--gradient-height);
+		background-color: var(--p-color-gray-900);
+		border-radius: 50%;
+		will-change: filter;
+		filter: blur(var(--gradient-blur));
+
+		@include viewport.breakpoint(xs) {
+			--gradient-location: calc(0% - var(--gradient-height) / 1.3);
+		}
+
+		@include viewport.breakpoint(sm) {
+			--gradient-width: 130dvw;
+			--gradient-height: calc(var(--gradient-width) / 2);
+			--gradient-location: calc(0% - var(--gradient-height) / 2.5);
+		}
+
+		@include viewport.breakpoint(lg) {
+			--gradient-width: 1200px;
+		}
+
+		@include viewport.breakpoint(xl) {
+			--gradient-width: 2400px;
+			--gradient-location: calc(0% - var(--gradient-height) / 1.3);
+		}
+	}
+}
+
+.scrollContainer {
+	padding-block-end: var(--flow-space);
+}
+
+.scroll {
+	position: relative;
+	padding-block: var(--space-base);
+	text-align: center;
+	width: 100%;
+	user-select: none;
+}
+
+.float {
+	position: absolute;
+	left: 0;
+	right: 0;
+	font-size: var(--text-xl);
+	line-height: 0;
+	animation: float 2.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
 }

@@ -206,7 +206,9 @@ $paragraphs: (
 }
 
 // LINKS
-@mixin link($underline: false) {
+@mixin link($underline: false, $reverse: false) {
+	--hover-offset: 0.2em;
+
 	position: relative;
 	display: inline-flex;
 	color: var(--link-primary);
@@ -214,11 +216,14 @@ $paragraphs: (
 	text-decoration: none;
 	overflow: hidden;
 	isolation: isolate; // forces new stacking context so pseudo-elements work with z-index
-	transition: color var(--duration-lg) ease-in-out;
+	transition: color var(--duration-lg) var(--ease-in-out);
+	padding-inline: var(--hover-offset);
+	margin-inline: calc(var(--hover-offset) / -1);
 
 	@if $underline {
 		text-decoration: underline;
 		text-decoration-color: var(--color-accent);
+		text-underline-offset: 0.1em;
 	}
 
 	&::before {
@@ -229,8 +234,13 @@ $paragraphs: (
 		width: 0;
 		height: 100%;
 		background-color: var(--color-accent);
-		transition: width var(--duration-md) ease-out;
+		transition: width var(--duration-md) var(--ease-out);
 		z-index: -1;
+
+		@if $reverse {
+			right: 0;
+			left: auto;
+		}
 	}
 
 	@include viewport.has-hover(':hover', ':focus-visible') {
@@ -263,12 +273,17 @@ $paragraphs: (
 @mixin link-neutral {
 	color: var(--link-neutral);
 	text-decoration: none;
-	transition: font-weight var(--duration-xs) ease-out, transform var(--duration-sm) ease-out;
+	transition: font-weight var(--duration-2xs) var(--ease-out), transform var(--duration-sm) var(--ease-out);
 
-	@include viewport.has-hover {
+	@include viewport.has-hover(':hover', ':focus-visible') {
 		color: var(--link-neutral-hover);
 		font-weight: var(--font-weight-semiBold);
-		transform: translateY(-2px);
+		transform: var(--button-raise);
+
+		&:active {
+			transition: transform 0s;
+			transform: var(--button-raise-press);
+		}
 	}
 
 	&:visited {
@@ -305,4 +320,10 @@ $paragraphs: (
 	font-size: var(--text-sm);
 	color: var(--text-tertiary);
 	line-height: var(--line-height-sm);
+}
+
+@mixin alt-font {
+	font-family: var(--font-alt);
+	font-weight: var(--font-weight-black);
+	line-height: var(--line-height-2xs);
 }

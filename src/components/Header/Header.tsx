@@ -16,29 +16,34 @@ const Header = () => {
 
 	return (
 		<header className={styles.header}>
-			<div className={styles.logoContainer}>
-				<div className={styles.logoIcon}>
-					<Link href='/' aria-label='Return to home page'>
-						<LogoSwitcher />
-					</Link>
+			<div className={cn(styles.container, styles.full)}>
+				<Link href='#main' className={styles.skipLink}>
+					Skip to main content
+				</Link>
+				<div className={styles.logoContainer}>
+					<div className={styles.logoIcon}>
+						<Link href='/' aria-label='Return to home page'>
+							<LogoSwitcher />
+						</Link>
+					</div>
+					<div className={styles.logoText}>
+						<div>Ryan Brandle</div>
+						<div>DES + DEV</div>
+					</div>
 				</div>
-				<div className={styles.logoText}>
-					<div>Ryan Brandle</div>
-					<div>DES + DEV</div>
-				</div>
+				<nav className={styles.navContainer}>
+					<ul role='list' className={styles.nav}>
+						{PAGES.map(({ path, label }, i) => (
+							<li key={i}>
+								<Link href={path} className={cn(styles.link, pathName === path && styles.isActive)} data-text={label}>
+									{label}
+								</Link>
+							</li>
+						))}
+					</ul>
+					<ThemePicker className={styles.picker} />
+				</nav>
 			</div>
-			<nav className={styles.navContainer}>
-				<ul className={styles.nav}>
-					{PAGES.map(({ path, label }, i) => (
-						<li key={i}>
-							<Link href={path} className={cn(styles.link, pathName === path && styles.isActive)} data-text={label}>
-								{label}
-							</Link>
-						</li>
-					))}
-				</ul>
-				<ThemePicker />
-			</nav>
 		</header>
 	);
 };
