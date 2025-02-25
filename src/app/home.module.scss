@@ -171,6 +171,19 @@
 	}
 }
 
+.firstCallout {
+	padding-block: calc(var(--section-spacing) * 2);
+}
+
+.lastCallout {
+	padding-block-start: 0;
+	padding-block-end: calc(var(--section-spacing) * 3);
+
+	@include viewport.breakpoint(xl) {
+		padding-block-end: calc(var(--section-spacing) * 2);
+	}
+}
+
 .bgVertText {
 	position: absolute;
 	writing-mode: vertical-lr;

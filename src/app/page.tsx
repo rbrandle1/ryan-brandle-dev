@@ -14,12 +14,13 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 });
 
 /* Todo:
+* fix height of last callout on home page.
 * FIX localstorage issue as it is causing a build error.
 * safari footer issue when resized... has to do with making body grid.
-* fix height of last callout on home page.
 * how to better optimize the home radial gradient blur... will-change is not really true but it definitely helps.
 * update crop icon/s to replace LinkedIn icon
 * Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
+* https://medium.com/@jun55tsuno/optimize-your-nextjs-app-e4fe9718fc8a
 * PERFORMANCE AUDIT. Use Chrome LightHouse. Double check cpu and performance/paint issues. If gradient is still causing performance issues, try the png. Maybe will-change is causing issues. jpgs for images, pngs for snapshots. heros under 200kb, thumbnails under 30kb. NEXT JS SHOULD OPTIMIZE ALREADY.
 * Check reduced motion settings.
 * Check screen reader settings.
@@ -132,7 +133,7 @@ export default function Home() {
 						<div>UX</div>
 					</div>
 				</div>
-				<section className={styles.section}>
+				<section className={cn(styles.section, styles.firstCallout)}>
 					<div className={styles.containerGrid}>
 						<Callout title='I make flexible, modular systems that are easy to use.' size='lg' iconAccent>
 							<IconCodePen />
@@ -245,7 +246,7 @@ export default function Home() {
 						</div>
 					</div>
 				</section>
-				<section className={styles.section}>
+				<section className={cn(styles.section, styles.lastCallout)}>
 					<div className={styles.containerGrid}>
 						<Callout
 							title='For product teams that love the extra polish!'
