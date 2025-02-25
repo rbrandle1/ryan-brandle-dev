@@ -17,9 +17,10 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 
 /* Todo:
 * safari footer issue
+* how to better optimize the home radial gradient blur... will-change is not really true but it definitely helps.
 * update crop icon/s to replace LinkedIn icon
 * Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
-* PERFORMANCE AUDIT. Double check cpu and performance/paint issues. If gradient is still causing performance issues, try the png. Maybe will-change is causing issues. jpgs for images, pngs for snapshots. heros under 200kb, thumbnails under 30kb. NEXT JS SHOULD OPTIMIZE ALREADY.
+* PERFORMANCE AUDIT. Use Chrome LightHouse. Double check cpu and performance/paint issues. If gradient is still causing performance issues, try the png. Maybe will-change is causing issues. jpgs for images, pngs for snapshots. heros under 200kb, thumbnails under 30kb. NEXT JS SHOULD OPTIMIZE ALREADY.
 * Check reduced motion settings.
 * Check screen reader settings.
 * Consider only animating the text side of FeaturedProject?
