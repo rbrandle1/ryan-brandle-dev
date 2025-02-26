@@ -2,6 +2,7 @@
 
 import cn from 'classnames';
 import { useSearchParams } from 'next/navigation';
+import { images } from './data';
 import Link from 'next/link';
 import Callout from '@/components/Callout/Callout';
 import LargeImage from '@/components/Article/LargeImage/LargeImage';
@@ -31,6 +32,18 @@ export const InspContent = () => {
 					<div className={styles.containerGrid}>
 						<LargeImage
 							className={cn(styles.imageContainer, styles.flowOffset, styles.heroImage)}
+							src={images.hero.src}
+							alt={images.hero.alt}
+							caption={images.hero.caption}
+							logo={<IconLogoInsp />}
+							logoOffset='-5%'
+							logoMaxWidth='380px'
+							metaTags={['Branding', 'UX/UI', 'HTML', 'CSS', 'JS', 'React', 'Storybook']}
+							isHero
+							priority
+						/>
+						{/* <LargeImage
+							className={cn(styles.imageContainer, styles.flowOffset, styles.heroImage)}
 							src='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
 							alt='Boats anchored off a white sandy beach in turquoise blue water'
 							caption='Example of discovery process, wire-framing, journey mapping.'
@@ -40,7 +53,7 @@ export const InspContent = () => {
 							metaTags={['Branding', 'UX/UI', 'HTML', 'CSS', 'JS', 'React', 'Storybook']}
 							isHero
 							priority
-						/>
+						/> */}
 						<h2 className={styles.h2}>
 							The
 							<br />

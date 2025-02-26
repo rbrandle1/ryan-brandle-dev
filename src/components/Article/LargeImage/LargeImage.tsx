@@ -1,5 +1,6 @@
 import cn from 'classnames';
 import Image from 'next/image';
+import { StaticImageData } from 'next/image';
 import MetaTags from '@/components/MetaTags/MetaTags';
 import Caption from '@/components/Caption/Caption';
 import styles from './LargeImage.module.scss';
@@ -7,7 +8,7 @@ import setInlineStyles from '@/helpers/functions';
 
 interface LargeImageProps {
 	className?: string;
-	src: string;
+	src: string | StaticImageData;
 	alt: string;
 	caption?: string;
 	captionLeft?: boolean;
@@ -54,7 +55,14 @@ const LargeImage = ({
 							{logo}
 						</div>
 					) : null}
-					<Image src={src} alt={alt} fill sizes='(max-width: 1300px) 100vw, 1205px' priority={priority} />
+					<Image
+						src={src}
+						alt={alt}
+						fill
+						sizes='(max-width: 1300px) 100vw, 1205px'
+						priority={priority}
+						// placeholder='blur'
+					/>
 				</div>
 				{caption ? (
 					<Caption className={styles.caption} captionLeft={captionLeft} hasIcon={hasCaptionIcon}>
