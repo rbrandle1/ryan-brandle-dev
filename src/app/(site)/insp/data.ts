@@ -1,5 +1,6 @@
 // explicit path import is necessary to import a static imagefor blurDataURL to work
-import heroImg from '../../../../public/images/insp/hero.jpg';
+// import heroImg from '../../../../public/images/insp/hero.jpg';
+import heroImg from '@/assets/images/insp/hero.jpg';
 
 export const images = {
 	hero: {

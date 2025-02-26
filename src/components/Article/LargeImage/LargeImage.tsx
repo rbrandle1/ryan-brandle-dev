@@ -5,42 +5,37 @@ import MetaTags from '@/components/MetaTags/MetaTags';
 import Caption from '@/components/Caption/Caption';
 import styles from './LargeImage.module.scss';
 import setInlineStyles from '@/helpers/functions';
-// import heroImg from '/images/insp/hero.jpg';
-// import heroImg from '/public/images/insp/hero.jpg';
-import heroImg from '../../../../public/images/insp/hero.jpg';
-// import heroImg from '/images/insp/hero.jpg';
 
 interface LargeImageProps {
 	className?: string;
-	// src: string | StaticImageData;
 	src: string | StaticImageData;
-	blurDataURL?: string;
 	alt: string;
 	caption?: string;
 	captionLeft?: boolean;
 	hasCaptionIcon?: boolean;
+	isHero?: boolean;
 	logo?: React.ReactNode;
 	logoMaxWidth?: string;
 	logoOffset?: string;
 	metaTags?: string[];
-	isHero?: boolean;
+	placeholder?: 'blur' | 'empty';
 	priority?: boolean;
 }
 
 const LargeImage = ({
 	className,
 	src,
-	blurDataURL,
 	alt,
 	caption,
 	captionLeft,
 	hasCaptionIcon,
+	isHero,
 	logo,
 	logoMaxWidth,
 	logoOffset,
 	metaTags,
-	isHero,
 	priority = false,
+	placeholder = 'empty',
 }: LargeImageProps) => {
 	return (
 		<div className={cn(styles.largeImage, isHero && styles.hero, className)}>
@@ -63,15 +58,12 @@ const LargeImage = ({
 						</div>
 					) : null}
 					<Image
-						// src='/images/insp/hero.jpg'
-						// src={heroImg}
 						src={src}
 						alt={alt}
 						fill
 						sizes='(max-width: 1300px) 100vw, 1205px'
 						priority={priority}
-						placeholder='blur' // Add this line
-						// blurDataURL={blurDataURL} // Add this line
+						placeholder={placeholder}
 					/>
 				</div>
 				{caption ? (

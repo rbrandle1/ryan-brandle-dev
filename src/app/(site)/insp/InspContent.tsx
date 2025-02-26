@@ -11,8 +11,6 @@ import SideImage from '@/components/Article/SideImage/SideImage';
 import MultiImage from '@/components/Article/MultiImage/MultiImage';
 import styles from '../projects.module.scss';
 
-// import heroImg from '../../../../public/images/insp/hero.jpg';
-
 export const InspContent = () => {
 	const searchParams = useSearchParams();
 	const fromSection = searchParams.get('from');
@@ -35,8 +33,6 @@ export const InspContent = () => {
 						<LargeImage
 							className={cn(styles.imageContainer, styles.flowOffset, styles.heroImage)}
 							src={images.hero.src}
-							// src={heroImg}
-							// blurDataURL={images.hero.placeholder}
 							alt={images.hero.alt}
 							caption={images.hero.caption}
 							logo={<IconLogoInsp />}
@@ -44,20 +40,9 @@ export const InspContent = () => {
 							logoMaxWidth='380px'
 							metaTags={['Branding', 'UX/UI', 'HTML', 'CSS', 'JS', 'React', 'Storybook']}
 							isHero
+							placeholder='blur'
 							priority
 						/>
-						{/* <LargeImage
-							className={cn(styles.imageContainer, styles.flowOffset, styles.heroImage)}
-							src='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
-							alt='Boats anchored off a white sandy beach in turquoise blue water'
-							caption='Example of discovery process, wire-framing, journey mapping.'
-							logo={<IconLogoInsp />}
-							logoOffset='-5%'
-							logoMaxWidth='380px'
-							metaTags={['Branding', 'UX/UI', 'HTML', 'CSS', 'JS', 'React', 'Storybook']}
-							isHero
-							priority
-						/> */}
 						<h2 className={styles.h2}>
 							The
 							<br />
