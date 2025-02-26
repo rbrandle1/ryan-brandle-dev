@@ -11,6 +11,8 @@ import SideImage from '@/components/Article/SideImage/SideImage';
 import MultiImage from '@/components/Article/MultiImage/MultiImage';
 import styles from '../projects.module.scss';
 
+// import heroImg from '../../../../public/images/insp/hero.jpg';
+
 export const InspContent = () => {
 	const searchParams = useSearchParams();
 	const fromSection = searchParams.get('from');
@@ -33,6 +35,8 @@ export const InspContent = () => {
 						<LargeImage
 							className={cn(styles.imageContainer, styles.flowOffset, styles.heroImage)}
 							src={images.hero.src}
+							// src={heroImg}
+							// blurDataURL={images.hero.placeholder}
 							alt={images.hero.alt}
 							caption={images.hero.caption}
 							logo={<IconLogoInsp />}
@@ -70,13 +74,13 @@ export const InspContent = () => {
 							different platforms. This led to a disjointed user experience, negatively impacting customer engagement
 							and ultimately, conversion rates.
 						</p>
-						<LargeImage
+						{/* <LargeImage
 							className={cn(styles.imageContainer, styles.flowOffset, styles.breakout)}
 							src='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
 							alt='Boats anchored off a white sandy beach in turquoise blue water'
 							caption='Example of discovery process, wire-framing, journey mapping.'
 							captionLeft
-						/>
+						/> */}
 						<p>
 							Our solution involved developing a comprehensive brand style guide, encompassing a refreshed color
 							palette, typography, and imagery strategy. This ensured a unified visual language across the website,
@@ -127,12 +131,12 @@ export const InspContent = () => {
 							comprehensive brand strategy, ensuring that the new web branding was both visually appealing and
 							functionally effective.
 						</p>
-						<LargeImage
+						{/* <LargeImage
 							className={cn(styles.imageContainer, styles.flowOffset, styles.breakout)}
 							src='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
 							alt='Boats anchored off a white sandy beach in turquoise blue water'
 							caption='Example of discovery process, wire-framing, journey mapping.'
-						/>
+						/> */}
 						<p>
 							Consolidation of the brand identity was crucial in establishing a cohesive visual language across all
 							digital touchpoints. This included the creation of a brand style guide, outlining the use of typography,
