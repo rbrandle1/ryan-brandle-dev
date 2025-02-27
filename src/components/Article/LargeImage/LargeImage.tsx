@@ -1,6 +1,5 @@
 import cn from 'classnames';
-import Image from 'next/image';
-import { StaticImageData } from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import MetaTags from '@/components/MetaTags/MetaTags';
 import Caption from '@/components/Caption/Caption';
 import styles from './LargeImage.module.scss';

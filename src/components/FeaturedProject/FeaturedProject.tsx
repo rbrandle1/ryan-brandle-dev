@@ -1,7 +1,7 @@
 'use client';
 import { useInView } from 'react-intersection-observer';
 import cn from 'classnames';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 import IconLinkedIn from '@/components/Icons/IconLinkedIn';
 import MetaTags from '@/components/MetaTags/MetaTags';
@@ -14,7 +14,7 @@ interface FeaturedProjectProps {
 	className?: string;
 	caption?: string;
 	imgRight?: boolean;
-	imgSrc: string;
+	imgSrc: string | StaticImageData;
 	imgAlt: string;
 	hasCropIcon?: boolean;
 	logo?: React.ReactNode;

@@ -3,6 +3,7 @@ import dynamic from 'next/dynamic';
 import Callout from '@/components/Callout/Callout';
 import IconCodePen from '@/components/Icons/IconCodePen';
 import IconLogoInsp from '@/components/Icons/IconLogoInsp';
+import { inspImages, cfImages } from '@/data/images';
 import styles from './home.module.scss';
 
 const FeaturedProject = dynamic(() => import('@/components/FeaturedProject/FeaturedProject'), {
@@ -14,6 +15,7 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 });
 
 /* Todo:
+* update other image components with new image data structure.
 * figure out the placeholder blur issue.
 * update crop icon/s to replace LinkedIn icon
 * FIX localstorage issue as it is causing a build error.
@@ -145,9 +147,10 @@ export default function Home() {
 						<FeaturedProject
 							id='insp'
 							className={styles.breakoutXl}
-							caption='Credit: Inspirato, Unsplash/@seefromthesky'
-							imgSrc='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
-							imgAlt='Boats anchored off a white sandy beach in turquoise blue water'
+							// caption='Credit: Inspirato, Unsplash/@seefromthesky'
+							imgSrc={inspImages.hero.src}
+							imgAlt={inspImages.hero.alt}
+							caption={inspImages.hero.caption}
 							hasCropIcon
 							logo={<IconLogoInsp />}
 							title='The Inspirato Design System'
@@ -159,9 +162,12 @@ export default function Home() {
 						<FeaturedProject
 							id='cf'
 							className={styles.breakoutXl}
-							caption='Credit: Innovative Business Solutions'
-							imgSrc='https://images.unsplash.com/photo-1560461396-ec0ef7bb29dd'
-							imgAlt='Brand and token system'
+							// caption='Credit: Innovative Business Solutions'
+							// imgSrc='https://images.unsplash.com/photo-1560461396-ec0ef7bb29dd'
+							// imgAlt='Brand and token system'
+							imgSrc={cfImages.hero.src}
+							imgAlt={cfImages.hero.alt}
+							caption={cfImages.hero.caption}
 							hasCropIcon
 							imgRight
 							title={

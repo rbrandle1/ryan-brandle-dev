@@ -2,7 +2,7 @@
 
 import cn from 'classnames';
 import { useSearchParams } from 'next/navigation';
-import { images } from './data';
+import { inspImages } from '@/data/images';
 import Link from 'next/link';
 import Callout from '@/components/Callout/Callout';
 import LargeImage from '@/components/Article/LargeImage/LargeImage';
@@ -32,9 +32,9 @@ export const InspContent = () => {
 					<div className={styles.containerGrid}>
 						<LargeImage
 							className={cn(styles.imageContainer, styles.flowOffset, styles.heroImage)}
-							src={images.hero.src}
-							alt={images.hero.alt}
-							caption={images.hero.caption}
+							src={inspImages.hero.src}
+							alt={inspImages.hero.alt}
+							caption={inspImages.hero.caption}
 							logo={<IconLogoInsp />}
 							logoOffset='-5%'
 							logoMaxWidth='380px'
@@ -59,13 +59,13 @@ export const InspContent = () => {
 							different platforms. This led to a disjointed user experience, negatively impacting customer engagement
 							and ultimately, conversion rates.
 						</p>
-						{/* <LargeImage
+						<LargeImage
 							className={cn(styles.imageContainer, styles.flowOffset, styles.breakout)}
-							src='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
-							alt='Boats anchored off a white sandy beach in turquoise blue water'
-							caption='Example of discovery process, wire-framing, journey mapping.'
+							src={inspImages.hero.src}
+							alt={inspImages.hero.alt}
+							caption={inspImages.hero.caption}
 							captionLeft
-						/> */}
+						/>
 						<p>
 							Our solution involved developing a comprehensive brand style guide, encompassing a refreshed color
 							palette, typography, and imagery strategy. This ensured a unified visual language across the website,
@@ -116,12 +116,12 @@ export const InspContent = () => {
 							comprehensive brand strategy, ensuring that the new web branding was both visually appealing and
 							functionally effective.
 						</p>
-						{/* <LargeImage
+						<LargeImage
 							className={cn(styles.imageContainer, styles.flowOffset, styles.breakout)}
-							src='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
-							alt='Boats anchored off a white sandy beach in turquoise blue water'
-							caption='Example of discovery process, wire-framing, journey mapping.'
-						/> */}
+							src={inspImages.hero.src}
+							alt={inspImages.hero.alt}
+							caption={inspImages.hero.caption}
+						/>
 						<p>
 							Consolidation of the brand identity was crucial in establishing a cohesive visual language across all
 							digital touchpoints. This included the creation of a brand style guide, outlining the use of typography,
