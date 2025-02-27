@@ -1,10 +1,10 @@
-import heroImg from '@/assets/images/insp/hero.jpg';
+import heroImg from '@/assets/images/sr/hero.jpg';
 
 export const images = {
 	hero: {
 		src: heroImg,
-		alt: 'Boats anchored off a white sandy beach in turquoise blue water',
-		caption: 'Credit: Inspirato, Unsplash/@seefromthesky',
+		alt: 'SchoolRunner student',
+		caption: 'Credit: SchoolRunner, Unsplash/@benmullins',
 	},
 	// feature1: {
 	// 	src: '/images/insp/feature1.jpg',
@@ -12,3 +12,5 @@ export const images = {
 	// 	caption: 'Creation & Growth of the Inspirato Design System',
 	// },
 };
+
+// imgSrc='https://images.unsplash.com/photo-1534643960519-11ad79bc19df'

@@ -1,10 +1,9 @@
-import heroImg from '@/assets/images/insp/hero.jpg';
+import heroImg from '@/assets/images/comparison/hero.png';
 
 export const images = {
 	hero: {
 		src: heroImg,
-		alt: 'Boats anchored off a white sandy beach in turquoise blue water',
-		caption: 'Credit: Inspirato, Unsplash/@seefromthesky',
+		alt: 'A grid of vibrant colors',
 	},
 	// feature1: {
 	// 	src: '/images/insp/feature1.jpg',

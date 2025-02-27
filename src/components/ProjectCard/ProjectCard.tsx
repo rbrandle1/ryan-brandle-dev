@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 import IconLinkedIn from '@/components/Icons/IconLinkedIn';
 import MetaTags from '@/components/MetaTags/MetaTags';
@@ -8,7 +8,7 @@ import styles from './ProjectCard.module.scss';
 interface ProjectCardProps {
 	id?: string;
 	className?: string;
-	imgSrc: string;
+	imgSrc: string | StaticImageData;
 	imgAlt: string;
 	hasCropIcon?: boolean;
 	logo?: React.ReactNode;

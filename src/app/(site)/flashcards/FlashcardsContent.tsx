@@ -2,7 +2,7 @@
 
 import cn from 'classnames';
 import { useSearchParams } from 'next/navigation';
-import { cfImages } from '@/data/images';
+import { flashcardsImages } from '@/data/images';
 import Link from 'next/link';
 import Callout from '@/components/Callout/Callout';
 import LargeImage from '@/components/Article/LargeImage/LargeImage';
@@ -11,7 +11,7 @@ import SideImage from '@/components/Article/SideImage/SideImage';
 import MultiImage from '@/components/Article/MultiImage/MultiImage';
 import styles from '../projects.module.scss';
 
-export const CfContent = () => {
+export const FlashcardsContent = () => {
 	const searchParams = useSearchParams();
 	const fromSection = searchParams.get('from');
 
@@ -20,7 +20,7 @@ export const CfContent = () => {
 			<header className={cn(styles.heroSection, styles.accentEdgeGrad)}>
 				<div className={styles.containerGrid}>
 					<h1 className={styles.h1}>
-						CableFinder Rebrand <span className={styles.altFont}>&amp;</span> Token System
+						Accessible Flashcards <span className={styles.altFont}>for</span> Kids
 					</h1>
 					<div className={styles.subhead}>Example subhead</div>
 				</div>
@@ -30,10 +30,9 @@ export const CfContent = () => {
 					<div className={styles.containerGrid}>
 						<LargeImage
 							className={cn(styles.imageContainer, styles.flowOffset, styles.heroImage)}
-							src={cfImages.hero.src}
-							alt={cfImages.hero.alt}
-							caption={cfImages.hero.caption}
-							metaTags={['Branding', 'UX/UI', 'Figma', 'HTML', 'CSS']}
+							src={flashcardsImages.hero.src}
+							alt={flashcardsImages.hero.alt}
+							metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'React']}
 							isHero
 							placeholder='blur'
 							priority
@@ -69,4 +68,4 @@ export const CfContent = () => {
 	);
 };
 
-export default CfContent;
+export default FlashcardsContent;

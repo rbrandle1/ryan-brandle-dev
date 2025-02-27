@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic';
 import Callout from '@/components/Callout/Callout';
 import IconCodePen from '@/components/Icons/IconCodePen';
 import IconLogoInsp from '@/components/Icons/IconLogoInsp';
-import { inspImages, cfImages } from '@/data/images';
+import { inspImages, cfImages, srImages, flashcardsImages, codepenImages, comparisonImages } from '@/data/images';
 import styles from './home.module.scss';
 
 const FeaturedProject = dynamic(() => import('@/components/FeaturedProject/FeaturedProject'), {
@@ -16,6 +16,7 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 
 /* Todo:
 * update other image components with new image data structure.
+* Occasional black flicker when scroll down page... like browser paint issue?
 * update crop icon/s to replace LinkedIn icon
 * FIX localstorage issue as it is causing a build error.
 * https://developer.chrome.com/blog/new-in-devtools-133/?utm_source=devtools#perf-image-delivery
@@ -100,7 +101,7 @@ export default function Home() {
 					<h1 className={cn(styles.heroTitle, styles.breakoutXl)}>
 						I make
 						<br />
-						<span className={styles.altFont}>Dope, 🔥, Rizz</span>
+						<span className={styles.altHeader}>Dope, 🔥, Rizz</span>
 						<br />
 						<span className={styles.right}>products</span>
 					</h1>
@@ -146,13 +147,17 @@ export default function Home() {
 						<FeaturedProject
 							id='insp'
 							className={styles.breakoutXl}
-							// caption='Credit: Inspirato, Unsplash/@seefromthesky'
 							imgSrc={inspImages.hero.src}
 							imgAlt={inspImages.hero.alt}
 							caption={inspImages.hero.caption}
 							hasCropIcon
 							logo={<IconLogoInsp />}
-							title='The Inspirato Design System'
+							title={
+								<>
+									<span className={styles.altFont}>The</span> Inspirato Design System
+								</>
+							}
+							// title='The Inspirato Design System'
 							metaTags={['Branding', 'UX/UI', 'HTML', 'CSS', 'JS', 'React', 'Storybook']}
 							description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
 							buttonText='Explore'
@@ -161,9 +166,6 @@ export default function Home() {
 						<FeaturedProject
 							id='cf'
 							className={styles.breakoutXl}
-							// caption='Credit: Innovative Business Solutions'
-							// imgSrc='https://images.unsplash.com/photo-1560461396-ec0ef7bb29dd'
-							// imgAlt='Brand and token system'
 							imgSrc={cfImages.hero.src}
 							imgAlt={cfImages.hero.alt}
 							caption={cfImages.hero.caption}
@@ -182,9 +184,9 @@ export default function Home() {
 						<FeaturedProject
 							id='sr'
 							className={styles.breakoutXl}
-							caption='Credit: SchoolRunner, Unsplash/@benmullins'
-							imgSrc='https://images.unsplash.com/photo-1534643960519-11ad79bc19df'
-							imgAlt='SchoolRunner student'
+							caption={srImages.hero.caption}
+							imgSrc={srImages.hero.src}
+							imgAlt={srImages.hero.alt}
 							hasCropIcon
 							title={
 								<>
@@ -210,19 +212,27 @@ export default function Home() {
 				<section className={styles.projectSection}>
 					<div className={styles.containerGrid}>
 						<div className={styles.multiSectionHeader}>
-							<h2 className={styles.multiSectionTitle}>Dabblings on the side</h2>
+							<h2 className={styles.dabbleTitle}>
+								<span className={styles.altFont}>Dabblings</span>
+								<br />
+								on the side
+							</h2>
 							<p className={styles.multiSectionCopy}>
-								I love to dabble! As an essential part of continued education and staying fresh on the latest
-								techniques, I tinker and explore with personal projects in my spare time.
+								To stay fresh on the latest techniques, I tinker, dabble and explore with personal projects in my spare
+								time.
 							</p>
 						</div>
 						<div className={styles.projectCardContainer}>
 							<ProjectCard
 								id='flashcards'
-								imgSrc='/images/flashcards.png'
-								imgAlt='Image of accessible flashcards for kids'
+								imgSrc={flashcardsImages.hero.src}
+								imgAlt={flashcardsImages.hero.alt}
 								hasCropIcon
-								title='Accessible Flashcards for Kids'
+								title={
+									<>
+										Accessible Flashcards <span className={styles.altFont}>for</span>&nbsp;Kids
+									</>
+								}
 								metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'React']}
 								description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
 								buttonText='Read more'
@@ -230,8 +240,8 @@ export default function Home() {
 							/>
 							<ProjectCard
 								id='codepen'
-								imgSrc='/images/codepen-focus.png'
-								imgAlt='Image of a CodePen project'
+								imgSrc={codepenImages.hero.src}
+								imgAlt={codepenImages.hero.alt}
 								title='CodePen Explorations'
 								metaTags={['UX/UI', 'HTML', 'CSS', 'JS']}
 								description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
@@ -240,13 +250,17 @@ export default function Home() {
 							/>
 							<ProjectCard
 								id='comparison-cards'
-								imgSrc='/images/comparison-card.png'
-								imgAlt='A grid of vibrant colors'
-								title='Comparison Cards with CSS Grid'
+								imgSrc={comparisonImages.hero.src}
+								imgAlt={comparisonImages.hero.alt}
+								title={
+									<>
+										Comparison Cards <span className={styles.altFont}>with</span> CSS Grid
+									</>
+								}
 								metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'React']}
 								description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
 								buttonText='Read more'
-								href='/comparison-cards?from=comparison-cards'
+								href='/comparison?from=comparison'
 							/>
 						</div>
 					</div>

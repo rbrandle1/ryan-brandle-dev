@@ -2,8 +2,8 @@
 
 import cn from 'classnames';
 import { useSearchParams } from 'next/navigation';
-import { cfImages } from '@/data/images';
 import Link from 'next/link';
+import { codepenImages } from '@/data/images';
 import Callout from '@/components/Callout/Callout';
 import LargeImage from '@/components/Article/LargeImage/LargeImage';
 import IconLogoInsp from '@/components/Icons/IconLogoInsp';
@@ -11,7 +11,7 @@ import SideImage from '@/components/Article/SideImage/SideImage';
 import MultiImage from '@/components/Article/MultiImage/MultiImage';
 import styles from '../projects.module.scss';
 
-export const CfContent = () => {
+export const CodepenContent = () => {
 	const searchParams = useSearchParams();
 	const fromSection = searchParams.get('from');
 
@@ -19,9 +19,7 @@ export const CfContent = () => {
 		<article className={styles.page}>
 			<header className={cn(styles.heroSection, styles.accentEdgeGrad)}>
 				<div className={styles.containerGrid}>
-					<h1 className={styles.h1}>
-						CableFinder Rebrand <span className={styles.altFont}>&amp;</span> Token System
-					</h1>
+					<h1 className={styles.h1}>Codepen Explorations</h1>
 					<div className={styles.subhead}>Example subhead</div>
 				</div>
 			</header>
@@ -30,10 +28,9 @@ export const CfContent = () => {
 					<div className={styles.containerGrid}>
 						<LargeImage
 							className={cn(styles.imageContainer, styles.flowOffset, styles.heroImage)}
-							src={cfImages.hero.src}
-							alt={cfImages.hero.alt}
-							caption={cfImages.hero.caption}
-							metaTags={['Branding', 'UX/UI', 'Figma', 'HTML', 'CSS']}
+							src={codepenImages.hero.src}
+							alt={codepenImages.hero.alt}
+							metaTags={['UX/UI', 'HTML', 'CSS', 'JS']}
 							isHero
 							placeholder='blur'
 							priority
@@ -69,4 +66,4 @@ export const CfContent = () => {
 	);
 };
 
-export default CfContent;
+export default CodepenContent;

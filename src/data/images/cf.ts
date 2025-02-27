@@ -1,10 +1,10 @@
-import heroImg from '@/assets/images/insp/hero.jpg';
+import heroImg from '@/assets/images/cf/hero.jpg';
 
 export const images = {
 	hero: {
 		src: heroImg,
-		alt: 'Boats anchored off a white sandy beach in turquoise blue water',
-		caption: 'Example of discovery process, wire-framing, journey mapping.',
+		alt: 'Brand and token system',
+		caption: 'Credit: Innovative Business Solutions',
 	},
 	// feature1: {
 	// 	src: '/images/insp/feature1.jpg',

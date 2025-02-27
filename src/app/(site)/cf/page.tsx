@@ -2,10 +2,10 @@ import { Metadata } from 'next';
 import { CfContent } from './CfContent';
 
 export const metadata: Metadata = {
-	title: 'SchoolRunner Rebrand',
-	description: 'SchoolRunner Rebrand',
+	title: 'CableFinder Rebrand & Token System',
+	description: 'CableFinder Rebrand & Token System',
 };
 
-export default function InspPage() {
+export default function CfPage() {
 	return <CfContent />;
 }

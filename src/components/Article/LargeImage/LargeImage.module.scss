@@ -22,6 +22,7 @@
 	box-shadow: var(--shadow-box);
 
 	@include viewport.breakpoint(sm) {
+		top: calc(var(--space-base) / -1);
 		left: auto;
 		right: var(--gutter, var(--space-sm));
 	}

@@ -1,7 +1,7 @@
 'use client';
 import cn from 'classnames';
 import { useEffect, useState } from 'react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import Caption from '@/components/Caption/Caption';
 import styles from './MultiImage.module.scss';
 
@@ -10,13 +10,13 @@ interface MultiImageProps {
 	children?: React.ReactNode;
 	caption?: string;
 	hasCaptionIcon?: boolean;
-	imgSrc1: string;
+	imgSrc1: string | StaticImageData;
 	imgAlt1: string;
-	imgSrc2: string;
+	imgSrc2: string | StaticImageData;
 	imgAlt2: string;
-	imgSrc3: string;
+	imgSrc3: string | StaticImageData;
 	imgAlt3: string;
-	imgSrc4?: string;
+	imgSrc4?: string | StaticImageData;
 	imgAlt4?: string;
 	textRight?: boolean;
 }
