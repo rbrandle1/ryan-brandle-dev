@@ -16,7 +16,6 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 
 /* Todo:
 * update other image components with new image data structure.
-* figure out the placeholder blur issue.
 * update crop icon/s to replace LinkedIn icon
 * FIX localstorage issue as it is causing a build error.
 * https://developer.chrome.com/blog/new-in-devtools-133/?utm_source=devtools#perf-image-delivery
