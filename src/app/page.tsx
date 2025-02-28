@@ -17,6 +17,13 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 /* Todo:
 * if yellow theme, and not dark section, then make icon for meta and callout black.
 * update crop icon/s to replace LinkedIn icon
+* * CONTENT CREATION:
+* Make all pages with images and text content.
+* Finalize all home text and hero text.
+* 
+* 
+* 
+* 
 * MUST FIX localstorage issue as it is causing a build error before performance audits can be done. Before a build can be made.
 * https://developer.chrome.com/blog/new-in-devtools-133/?utm_source=devtools#perf-image-delivery
 * Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
@@ -24,12 +31,6 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 * PERFORMANCE AUDIT. Use Chrome LightHouse. Double check cpu and performance/paint issues. If gradient is still causing performance issues, try the png. Maybe will-change is causing issues. jpgs for images, pngs for snapshots. heros under 200kb, thumbnails under 30kb. NEXT JS SHOULD OPTIMIZE ALREADY.
 * Check reduced motion settings.
 * Check screen reader settings.
-* Consider only animating the text side of FeaturedProject?
-
-* CONTENT CREATION:
-* Make all pages with images and text content.
-* Finalize all home text and hero text.
-* Find icons for callouts... modular, polish (sparkle), etc. Do after content? Booop these? Or should these remain static as they are not interactive?
 
 
 
@@ -57,6 +58,7 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 
 
 * FUTURE CLEANUP AND EXPLORATION:
+* Find icons for callouts... modular, polish (sparkle), etc. Do after content? Booop these? Or should these remain static as they are not interactive?
 * Make a paint roller instead of droplet? Maybe use boop to scroll it down with a path, then back up as if painting?
 * Add Boops to hover states! Also make the boop apply to the entire logo like previously tried. Can also do it to an svg arrow on the link arrows. https://www.joshwcomeau.com/react/boop/
 * Animate the paint droplet to drop down and fade out, rinse and repeat.
