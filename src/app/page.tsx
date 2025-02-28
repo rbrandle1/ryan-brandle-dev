@@ -15,13 +15,10 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 });
 
 /* Todo:
-
 * update crop icon/s to replace LinkedIn icon
 * * CONTENT CREATION:
 * Make all pages with images and text content.
 * Finalize all home text and hero text.
-* 
-* 
 * 
 * 
 * MUST FIX localstorage issue as it is causing a build error before performance audits can be done. Before a build can be made.
@@ -35,14 +32,13 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 
 
 * FINAL RUN-THROUGH:
+* Prep robots to prevent indexing of company names.
 * Search all todos and fix them.
 * Remove all unused comments.
 * ensure all pages have correct metadata and optimize to AVOID SEO FOR COMPANY NAMES.
 * Remove any unused remotePatterns in next.config.ts if not needed from unsplash.
-* Get peer review
 * set up a new contact email
 * UPDATE ALL PROFILE IMAGES to up-to-date image.
-* Make sure safari is loading correct favicon.
 
 
 

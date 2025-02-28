@@ -3,7 +3,7 @@ import { useInView } from 'react-intersection-observer';
 import cn from 'classnames';
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
-import IconLinkedIn from '@/components/Icons/IconLinkedIn';
+import IconCrop from '@/components/Icons/IconCrop';
 import MetaTags from '@/components/MetaTags/MetaTags';
 import Caption from '@/components/Caption/Caption';
 import Button from '@/components/Button/Button';
@@ -53,7 +53,7 @@ const FeaturedProject = ({
 		>
 			{hasCropIcon ? (
 				<div className={styles.cropIconContainer}>
-					<IconLinkedIn />
+					<IconCrop />
 				</div>
 			) : null}
 			<figure className={styles.imageContainer}>

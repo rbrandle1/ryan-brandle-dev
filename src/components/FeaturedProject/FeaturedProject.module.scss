@@ -69,6 +69,7 @@
 .cropIconContainer {
 	position: absolute;
 	width: var(--text-lg);
+	top: var(--space-lg);
 
 	&:not(.imgRight &) {
 		left: calc(var(--space-lg) / -1);
@@ -76,11 +77,12 @@
 
 	.imgRight & {
 		right: calc(var(--space-lg) / -1);
+		transform: scaleX(-1);
 	}
 
 	svg {
 		fill: currentColor;
-		opacity: 0.1;
+		opacity: 0.18;
 	}
 }
 
