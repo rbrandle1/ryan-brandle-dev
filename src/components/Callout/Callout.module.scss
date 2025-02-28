@@ -39,6 +39,14 @@
 
 	svg {
 		fill: var(--icon-color, currentColor);
+
+		[data-theme='y'] & {
+			fill: currentColor;
+		}
+
+		[data-theme='y'] [data-section='dark'] & {
+			fill: var(--icon-accent);
+		}
 	}
 }
 
