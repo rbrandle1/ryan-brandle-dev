@@ -32,7 +32,7 @@ export const ComparisonContent = () => {
 							className={cn(styles.imageContainer, styles.flowOffset, styles.heroImage)}
 							src={comparisonImages.hero.src}
 							alt={comparisonImages.hero.alt}
-							metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'React']}
+							metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'React', 'Storybook']}
 							isHero
 							placeholder='blur'
 							priority

@@ -33,7 +33,7 @@ export const SrContent = () => {
 							src={srImages.hero.src}
 							alt={srImages.hero.alt}
 							caption={srImages.hero.caption}
-							metaTags={['Branding', 'UX/UI', 'HTML', 'CSS']}
+							metaTags={['Branding', 'UX/UI', 'HTML', 'CSS', 'CMS']}
 							isHero
 							placeholder='blur'
 							priority

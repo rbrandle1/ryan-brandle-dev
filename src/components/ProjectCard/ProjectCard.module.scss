@@ -85,6 +85,7 @@
 	@include typography.headline(xl);
 	margin-block-end: var(--space-xs);
 	max-width: var(--optimal-line-length-xs);
+	text-wrap: initial;
 
 	@include viewport.breakpoint(sm) {
 		max-width: var(--optimal-line-length-2xs);

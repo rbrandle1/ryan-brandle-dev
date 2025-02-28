@@ -30,7 +30,7 @@ export const CodepenContent = () => {
 							className={cn(styles.imageContainer, styles.flowOffset, styles.heroImage)}
 							src={codepenImages.hero.src}
 							alt={codepenImages.hero.alt}
-							metaTags={['UX/UI', 'HTML', 'CSS', 'JS']}
+							metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'Animation']}
 							isHero
 							placeholder='blur'
 							priority

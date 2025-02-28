@@ -15,10 +15,9 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 });
 
 /* Todo:
-* update other image components with new image data structure.
-* Occasional black flicker when scroll down page... like browser paint issue?
+* if yellow theme, and not dark section, then make icon for meta and callout black.
 * update crop icon/s to replace LinkedIn icon
-* FIX localstorage issue as it is causing a build error.
+* MUST FIX localstorage issue as it is causing a build error before performance audits can be done. Before a build can be made.
 * https://developer.chrome.com/blog/new-in-devtools-133/?utm_source=devtools#perf-image-delivery
 * Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
 * https://medium.com/@jun55tsuno/optimize-your-nextjs-app-e4fe9718fc8a
@@ -47,9 +46,9 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 
 
 * BUGS:
+* NBSP; not working correctly since centered text was added.
+* Occasional black flicker when scroll down page... like browser paint issue?
 * Theme picker on load error.
-* why does article hero image expand wider immediately on page load? How to lessen the FOUC.
-* fade in ups are not fast enough. If someone is scrolling too quickly, the fade in lags and needs to catch up. Looks like a blank page at first.
 * THEME PICKER LOCAL STORAGE ISSUES:
 * Continue setting up theme provider and theme picker. TRY creating a nested layout to manage the theme state. So the body, header, footer etc are not reloaded on every page load, therefore not causing a FOUC.
 * Solve server 500 error on page load. Try using the window object to check if it's loaded in the ThemePicker useEffect and maybe use an empty string as the default theme? This would likely create a FOUC though. Try refactoring with a ThemeProvider component to manage the theme state.
@@ -60,10 +59,9 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 * FUTURE CLEANUP AND EXPLORATION:
 * Make a paint roller instead of droplet? Maybe use boop to scroll it down with a path, then back up as if painting?
 * Add Boops to hover states! Also make the boop apply to the entire logo like previously tried. Can also do it to an svg arrow on the link arrows. https://www.joshwcomeau.com/react/boop/
-* ??? Make Mosaic component HOLD. Might not need this.
-* Try to get all altfont ampersands to be centered, not baseline.
-* Add backup words for each FeaturedProject or article page footers.
 * Animate the paint droplet to drop down and fade out, rinse and repeat.
+* ??? Make Mosaic component HOLD. Might not need this.
+* Add backup words for each FeaturedProject or article page footers.
 * Consider ditching yellow. It doesn't work well with light colors. if want to keep, maybe put the icon in a yellow circle or something and make the svg black.
 	
 
@@ -193,7 +191,7 @@ export default function Home() {
 									School Runner Rebrand <span className={styles.altFont}>&amp;</span>&nbsp;Website
 								</>
 							}
-							metaTags={['Branding', 'UX/UI', 'HTML', 'CSS']}
+							metaTags={['Branding', 'UX/UI', 'HTML', 'CSS', 'CMS']}
 							description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
 							buttonText='Explore'
 							href='/sr?from=sr'
@@ -230,7 +228,7 @@ export default function Home() {
 								hasCropIcon
 								title={
 									<>
-										Accessible Flashcards <span className={styles.altFont}>for</span>&nbsp;Kids
+										Accessible Flashcards <span className={styles.altFont}>for</span> Kids
 									</>
 								}
 								metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'React']}
@@ -243,7 +241,7 @@ export default function Home() {
 								imgSrc={codepenImages.hero.src}
 								imgAlt={codepenImages.hero.alt}
 								title='CodePen Explorations'
-								metaTags={['UX/UI', 'HTML', 'CSS', 'JS']}
+								metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'Animation']}
 								description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
 								buttonText='Read more'
 								href='/codepen?from=codepen'
@@ -257,7 +255,7 @@ export default function Home() {
 										Comparison Cards <span className={styles.altFont}>with</span> CSS Grid
 									</>
 								}
-								metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'React']}
+								metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'React', 'Storybook']}
 								description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
 								buttonText='Read more'
 								href='/comparison?from=comparison'

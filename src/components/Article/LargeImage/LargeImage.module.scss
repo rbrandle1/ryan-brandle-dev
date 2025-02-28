@@ -11,7 +11,7 @@
 	padding-inline: 0.5lh 0.75lh;
 	background-color: var(--color-accent);
 	border-radius: var(--radius-default);
-	max-width: 28ch;
+	max-width: 26ch;
 	position: absolute;
 	z-index: 2;
 	left: var(--gutter, var(--space-lg));
@@ -22,7 +22,6 @@
 	box-shadow: var(--shadow-box);
 
 	@include viewport.breakpoint(sm) {
-		top: calc(var(--space-base) / -1);
 		left: auto;
 		right: var(--gutter, var(--space-sm));
 	}
