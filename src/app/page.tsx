@@ -15,7 +15,7 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 });
 
 /* Todo:
-* if yellow theme, and not dark section, then make icon for meta and callout black.
+
 * update crop icon/s to replace LinkedIn icon
 * * CONTENT CREATION:
 * Make all pages with images and text content.
