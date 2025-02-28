@@ -15,7 +15,6 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 });
 
 /* Todo:
-* update crop icon/s to replace LinkedIn icon
 * * CONTENT CREATION:
 * Make all pages with images and text content.
 * Finalize all home text and hero text.
