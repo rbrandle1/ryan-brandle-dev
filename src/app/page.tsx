@@ -15,6 +15,7 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 });
 
 /* Todo:
+* * adjust crop icons on smaller screens.
 * * CONTENT CREATION:
 * Make all pages with images and text content.
 * Finalize all home text and hero text.
@@ -24,7 +25,7 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 * https://developer.chrome.com/blog/new-in-devtools-133/?utm_source=devtools#perf-image-delivery
 * Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
 * https://medium.com/@jun55tsuno/optimize-your-nextjs-app-e4fe9718fc8a
-* PERFORMANCE AUDIT. Use Chrome LightHouse. Double check cpu and performance/paint issues. If gradient is still causing performance issues, try the png. Maybe will-change is causing issues. jpgs for images, pngs for snapshots. heros under 200kb, thumbnails under 30kb. NEXT JS SHOULD OPTIMIZE ALREADY.
+* PERFORMANCE AUDIT. Use Chrome LightHouse. Double check cpu and performance/paint issues. If gradient is still causing performance issues, try the png. Maybe will-change is causing issues. jpg for images, png for snapshots. hero under 200kb, thumbnails under 30kb. NEXT JS SHOULD OPTIMIZE ALREADY.
 * Check reduced motion settings.
 * Check screen reader settings.
 
@@ -42,7 +43,6 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 
 
 * BUGS:
-* NBSP; not working correctly since centered text was added.
 * Occasional black flicker when scroll down page... like browser paint issue?
 * Theme picker on load error.
 * THEME PICKER LOCAL STORAGE ISSUES:
@@ -53,9 +53,9 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 
 
 * FUTURE CLEANUP AND EXPLORATION:
-* Find icons for callouts... modular, polish (sparkle), etc. Do after content? Booop these? Or should these remain static as they are not interactive?
+* Find icons for callouts... modular, polish (sparkle), etc. Do after content? Boop these? Or should these remain static as they are not interactive?
 * Make a paint roller instead of droplet? Maybe use boop to scroll it down with a path, then back up as if painting?
-* Add Boops to hover states! Also make the boop apply to the entire logo like previously tried. Can also do it to an svg arrow on the link arrows. https://www.joshwcomeau.com/react/boop/
+* Add Boop to hover states! Also make the boop apply to the entire logo like previously tried. Can also do it to an svg arrow on the link arrows. https://www.joshwcomeau.com/react/boop/
 * Animate the paint droplet to drop down and fade out, rinse and repeat.
 * ??? Make Mosaic component HOLD. Might not need this.
 * Add backup words for each FeaturedProject or article page footers.
@@ -108,8 +108,8 @@ export default function Home() {
 						<p className={styles.heroCopy}>
 							I’m a bing bang with over 15 years of experience in design, development and making top notch products.
 							There are a lot of titles that seem to morph through the years but what it comes down to is I bing bang
-							boom. yadda yadda yadda with bing bang boom experience. Industry's standard There are a lot of titles that
-							seem to morph. <a href='mailto:hello@example.com'>Say hi anytime!</a>
+							boom. With bing bang boom experience. Industry's standard There are a lot of titles that seem to morph.{' '}
+							<a href='mailto:hello@example.com'>Say hi anytime!</a>
 						</p>
 					</div>
 				</div>
@@ -168,7 +168,11 @@ export default function Home() {
 							imgRight
 							title={
 								<>
-									CableFinder Rebrand <span className={styles.altFont}>&amp;</span>&nbsp;Token System
+									CableFinder Rebrand{' '}
+									<span className={styles.noWrap}>
+										<span className={styles.altFont}>&amp;</span>&nbsp;Token
+									</span>{' '}
+									System
 								</>
 							}
 							metaTags={['Branding', 'UX/UI', 'Figma', 'HTML', 'CSS']}
@@ -185,7 +189,11 @@ export default function Home() {
 							hasCropIcon
 							title={
 								<>
-									School Runner Rebrand <span className={styles.altFont}>&amp;</span>&nbsp;Website
+									School Runner Rebrand{' '}
+									<span className={styles.noWrap}>
+										{' '}
+										<span className={styles.altFont}>&amp;</span>&nbsp;Website
+									</span>
 								</>
 							}
 							metaTags={['Branding', 'UX/UI', 'HTML', 'CSS', 'CMS']}
@@ -225,7 +233,10 @@ export default function Home() {
 								hasCropIcon
 								title={
 									<>
-										Accessible Flashcards <span className={styles.altFont}>for</span> Kids
+										Accessible Flashcards{' '}
+										<span className={styles.noWrap}>
+											<span className={styles.altFont}>for</span>&nbsp;Kids
+										</span>
 									</>
 								}
 								metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'React']}
