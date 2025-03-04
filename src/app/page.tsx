@@ -15,7 +15,6 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 });
 
 /* Todo:
-* * adjust crop icons on smaller screens.
 * * CONTENT CREATION:
 * Make all pages with images and text content.
 * Finalize all home text and hero text.
@@ -230,7 +229,6 @@ export default function Home() {
 								id='flashcards'
 								imgSrc={flashcardsImages.hero.src}
 								imgAlt={flashcardsImages.hero.alt}
-								hasCropIcon
 								title={
 									<>
 										Accessible Flashcards{' '}

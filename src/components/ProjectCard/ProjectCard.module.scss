@@ -23,6 +23,14 @@
 	width: var(--text-lg);
 	transform: scaleX(-1);
 
+	@include viewport.breakpoint(sm, max) {
+		display: none;
+	}
+
+	@include viewport.between(sm, 1138px) {
+		right: -21px;
+	}
+
 	svg {
 		fill: currentColor;
 		opacity: 0.1;
