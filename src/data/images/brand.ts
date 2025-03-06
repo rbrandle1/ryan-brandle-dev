@@ -1,10 +1,10 @@
-import heroImg from '@/assets/images/sr/hero.jpg';
+import heroImg from '@/assets/images/brand/hero.jpg';
 
 export const images = {
 	hero: {
 		src: heroImg,
-		alt: 'SchoolRunner student',
-		caption: 'Credit: SchoolRunner, Unsplash/@benmullins',
+		alt: 'Rebrand of Ryan Brandle',
+		caption: 'So Fresh and So Clean Clean',
 	},
 	// feature1: {
 	// 	src: '/images/insp/feature1.jpg',

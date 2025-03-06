@@ -4,7 +4,7 @@ export const images = {
 	hero: {
 		src: heroImg,
 		alt: 'Boats anchored off a white sandy beach in turquoise blue water',
-		caption: 'Credit: Inspirato, Unsplash/@seefromthesky',
+		caption: 'Credit: Unsplash/@seefromthesky, Inspirato',
 	},
 	// feature1: {
 	// 	src: '/images/insp/feature1.jpg',

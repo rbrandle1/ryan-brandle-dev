@@ -2,7 +2,7 @@
 
 import cn from 'classnames';
 import { useSearchParams } from 'next/navigation';
-import { srImages } from '@/data/images';
+import { brandImages } from '@/data/images';
 import Link from 'next/link';
 import Callout from '@/components/Callout/Callout';
 import LargeImage from '@/components/Article/LargeImage/LargeImage';
@@ -11,7 +11,7 @@ import SideImage from '@/components/Article/SideImage/SideImage';
 import MultiImage from '@/components/Article/MultiImage/MultiImage';
 import styles from '../projects.module.scss';
 
-export const SrContent = () => {
+export const BrandContent = () => {
 	const searchParams = useSearchParams();
 	const fromSection = searchParams.get('from');
 
@@ -20,7 +20,12 @@ export const SrContent = () => {
 			<header className={cn(styles.heroSection, styles.accentEdgeGrad)}>
 				<div className={styles.containerGrid}>
 					<h1 className={styles.h1}>
-						School Runner Rebrand <span className={styles.altFont}>&amp;</span> Website
+						<span className={styles.altFont}>New Site,</span>
+						<br />
+						So Fresh{' '}
+						<span className={styles.noWrap}>
+							<span className={styles.altFont}>&amp;</span>&nbsp;So&nbsp;Clean
+						</span>
 					</h1>
 					<div className={styles.subhead}>Example subhead</div>
 				</div>
@@ -30,10 +35,10 @@ export const SrContent = () => {
 					<div className={styles.containerGrid}>
 						<LargeImage
 							className={cn(styles.imageContainer, styles.flowOffset, styles.heroImage)}
-							src={srImages.hero.src}
-							alt={srImages.hero.alt}
-							caption={srImages.hero.caption}
-							metaTags={['Branding', 'UX/UI', 'HTML', 'CSS', 'CMS']}
+							src={brandImages.hero.src}
+							alt={brandImages.hero.alt}
+							caption={brandImages.hero.caption}
+							metaTags={['Branding', 'UX/UI', 'HTML', 'CSS', 'JS', 'TS', 'React', 'NextJS']}
 							isHero
 							placeholder='blur'
 							priority
@@ -69,4 +74,4 @@ export const SrContent = () => {
 	);
 };
 
-export default SrContent;
+export default BrandContent;

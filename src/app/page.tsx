@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic';
 import Callout from '@/components/Callout/Callout';
 import IconCodePen from '@/components/Icons/IconCodePen';
 import IconLogoInsp from '@/components/Icons/IconLogoInsp';
-import { inspImages, cfImages, srImages, flashcardsImages, codepenImages, comparisonImages } from '@/data/images';
+import { inspImages, cfImages, brandImages, flashcardsImages, codepenImages, comparisonImages } from '@/data/images';
 import styles from './home.module.scss';
 
 const FeaturedProject = dynamic(() => import('@/components/FeaturedProject/FeaturedProject'), {
@@ -16,6 +16,7 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 
 /* Todo:
 * * CONTENT CREATION:
+* For my rebrand, create a cool background image, a gradient with my logo svg. Perhaps it's possible to link it into the theme change!
 * Make all pages with images and text content.
 * Finalize all home text and hero text.
 * 
@@ -150,9 +151,8 @@ export default function Home() {
 									<span className={styles.altFont}>The</span> Inspirato Design System
 								</>
 							}
-							// title='The Inspirato Design System'
-							metaTags={['Branding', 'UX/UI', 'HTML', 'CSS', 'JS', 'React', 'Storybook']}
-							description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+							metaTags={['Branding', 'UX/UI', 'HTML', 'CSS', 'JS', 'TS', 'React', 'Storybook']}
+							description='A large-scale initiative to unify brand, UX, and UI strategy across departments and codebases. Built for flexibility, consistency, and scalability, it empowered teams to deliver the high-quality experience expected from a luxury travel company.'
 							buttonText='Explore'
 							href='/insp?from=insp'
 						/>
@@ -174,30 +174,31 @@ export default function Home() {
 								</>
 							}
 							metaTags={['Branding', 'UX/UI', 'Figma', 'HTML', 'CSS']}
-							description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+							description='An adaptable system with a multi-mode token approach, unifying UI for design, development, and&nbsp;marketing content teams.'
 							buttonText='Explore'
 							href='/cf?from=cf'
 						/>
 						<FeaturedProject
-							id='sr'
+							id='brand'
 							className={styles.breakoutXl}
-							caption={srImages.hero.caption}
-							imgSrc={srImages.hero.src}
-							imgAlt={srImages.hero.alt}
+							caption={brandImages.hero.caption}
+							imgSrc={brandImages.hero.src}
+							imgAlt={brandImages.hero.alt}
 							hasCropIcon
 							title={
 								<>
-									School Runner Rebrand{' '}
+									<span className={styles.altFont}>New Site,</span>
+									<br />
+									So Fresh{' '}
 									<span className={styles.noWrap}>
-										{' '}
-										<span className={styles.altFont}>&amp;</span>&nbsp;Website
+										<span className={styles.altFont}>&amp;</span>&nbsp;So&nbsp;Clean
 									</span>
 								</>
 							}
-							metaTags={['Branding', 'UX/UI', 'HTML', 'CSS', 'CMS']}
-							description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+							metaTags={['Branding', 'UX/UI', 'HTML', 'CSS', 'JS', 'TS', 'React', 'NextJS']}
+							description='A portfolio rebrand returning to the roots of quality design, color and typography theory, accessibility best practices, and clean modular code. Built by me from the ground up, exploring the latest & greatest techniques and loving every minute of it!'
 							buttonText='Explore'
-							href='/sr?from=sr'
+							href='/brand?from=brand'
 						/>
 					</div>
 				</section>
