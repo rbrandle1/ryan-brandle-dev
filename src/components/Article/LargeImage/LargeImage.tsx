@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import MetaTags from '@/components/MetaTags/MetaTags';
 import Caption from '@/components/Caption/Caption';
 import styles from './LargeImage.module.scss';
@@ -7,16 +7,18 @@ import setInlineStyles from '@/helpers/functions';
 
 interface LargeImageProps {
 	className?: string;
-	src: string;
+	src: string | StaticImageData;
 	alt: string;
 	caption?: string;
 	captionLeft?: boolean;
 	hasCaptionIcon?: boolean;
+	isHero?: boolean;
 	logo?: React.ReactNode;
 	logoMaxWidth?: string;
 	logoOffset?: string;
 	metaTags?: string[];
-	isHero?: boolean;
+	placeholder?: 'blur' | 'empty';
+	priority?: boolean;
 }
 
 const LargeImage = ({
@@ -26,11 +28,13 @@ const LargeImage = ({
 	caption,
 	captionLeft,
 	hasCaptionIcon,
+	isHero,
 	logo,
 	logoMaxWidth,
 	logoOffset,
 	metaTags,
-	isHero,
+	priority = false,
+	placeholder = 'empty',
 }: LargeImageProps) => {
 	return (
 		<div className={cn(styles.largeImage, isHero && styles.hero, className)}>
@@ -52,7 +56,14 @@ const LargeImage = ({
 							{logo}
 						</div>
 					) : null}
-					<Image src={src} alt={alt} fill sizes='(max-width: 1300px) 100vw, 1205px' />
+					<Image
+						src={src}
+						alt={alt}
+						fill
+						sizes='(max-width: 1300px) 100vw, 1205px'
+						priority={priority}
+						placeholder={placeholder}
+					/>
 				</div>
 				{caption ? (
 					<Caption className={styles.caption} captionLeft={captionLeft} hasIcon={hasCaptionIcon}>

@@ -16,7 +16,7 @@ const Footer = () => {
 	const [isAccentAlt, setIsAccentAlt] = useState(false);
 
 	useEffect(() => {
-		let dataNotFound = document.querySelector('[data-not-found]');
+		const dataNotFound = document.querySelector('[data-not-found]');
 
 		const useAccentAlt = pathname === '/about' || !!dataNotFound;
 		setIsAccentAlt(useAccentAlt);
@@ -48,10 +48,22 @@ const Footer = () => {
 					<p>100% designed &amp;&nbsp;developed by Ryan&nbsp;Brandle &copy;&nbsp;2025</p>
 				</div>
 				<div className={styles.socialContainer}>
-					<a className={styles.icon} href='https://github.com/rbrandle1' target='_blank' rel='noopener noreferrer'>
+					<a
+						className={styles.icon}
+						href='https://github.com/rbrandle1'
+						target='_blank'
+						rel='noopener noreferrer'
+						aria-label='Visit Ryan Brandle on GitHub'
+					>
 						<IconGithub />
 					</a>
-					<a className={styles.icon} href='https://codepen.io/brandledesign' target='_blank' rel='noopener noreferrer'>
+					<a
+						className={styles.icon}
+						href='https://codepen.io/brandledesign'
+						target='_blank'
+						rel='noopener noreferrer'
+						aria-label='Visit Ryan Brandle on CodePen'
+					>
 						<IconCodePen />
 					</a>
 					<a
@@ -59,6 +71,7 @@ const Footer = () => {
 						href='https://www.linkedin.com/in/rbrandle'
 						target='_blank'
 						rel='noopener noreferrer'
+						aria-label='Visit Ryan Brandle on LinkedIn'
 					>
 						<IconLinkedIn />
 					</a>

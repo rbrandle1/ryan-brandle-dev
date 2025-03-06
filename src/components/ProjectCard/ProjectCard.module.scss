@@ -21,6 +21,15 @@
 	top: calc(var(--space-lg) / -1);
 	right: calc(var(--space-lg) / -1);
 	width: var(--text-lg);
+	transform: scaleX(-1);
+
+	@include viewport.breakpoint(sm, max) {
+		display: none;
+	}
+
+	@include viewport.between(sm, 1138px) {
+		right: -21px;
+	}
 
 	svg {
 		fill: currentColor;
@@ -85,6 +94,7 @@
 	@include typography.headline(xl);
 	margin-block-end: var(--space-xs);
 	max-width: var(--optimal-line-length-xs);
+	text-wrap: initial;
 
 	@include viewport.breakpoint(sm) {
 		max-width: var(--optimal-line-length-2xs);

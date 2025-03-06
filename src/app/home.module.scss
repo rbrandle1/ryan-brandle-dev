@@ -19,9 +19,11 @@
 
 // TYPOGRAPHY
 .altFont {
+	@include typography.alt-font(inline);
+}
+
+.altHeader {
 	@include typography.alt-font;
-	text-transform: initial;
-	font-weight: var(--font-weight-bold);
 }
 
 // LAYOUT
@@ -155,6 +157,10 @@
 	--flow-space: 4lh;
 
 	padding-block: calc(var(--section-spacing) * 2);
+
+	@include viewport.breakpoint(sm) {
+		padding-block-start: calc(var(--section-spacing) * 1.5);
+	}
 }
 
 .projectCardContainer {
@@ -168,6 +174,23 @@
 
 	@include viewport.breakpoint(xl) {
 		--flow-space: 4lh;
+	}
+}
+
+.firstCallout {
+	padding-block: calc(var(--section-spacing) * 2);
+
+	@include viewport.between(sm, lg) {
+		padding-block: calc(var(--section-spacing) * 1.5);
+	}
+}
+
+.lastCallout {
+	padding-block-start: 0;
+	padding-block-end: calc(var(--section-spacing) * 3);
+
+	@include viewport.breakpoint(xl) {
+		padding-block-end: calc(var(--section-spacing) * 2);
 	}
 }
 
@@ -195,7 +218,7 @@
 	@include typography.display;
 	top: -39px;
 	left: -16px;
-	opacity: 0.025;
+	opacity: 0.03;
 
 	@include viewport.breakpoint(md, max) {
 		font-size: var(--text-3xl);
@@ -208,7 +231,7 @@
 	transform: rotate(180deg);
 	right: -16px;
 	bottom: -39px;
-	opacity: 0.025;
+	opacity: 0.03;
 
 	@include viewport.breakpoint(md, max) {
 		font-size: var(--text-3xl);
@@ -234,8 +257,12 @@
 	}
 }
 
-.multiSectionTitle {
+.dabbleTitle {
 	@include typography.headline;
+
+	.altFont {
+		transform: initial;
+	}
 }
 
 .multiSectionCopy {
@@ -268,12 +295,14 @@
 		position: absolute;
 		top: var(--gradient-location);
 		left: 50%;
-		transform: translateX(-50%);
+		transform: translateX(-50%) translateZ(0);
+		backface-visibility: hidden;
+		transform-style: preserve-3d;
 		width: var(--gradient-width);
 		height: var(--gradient-height);
 		background-color: var(--p-color-gray-900);
 		border-radius: 50%;
-		will-change: filter;
+		// will-change: filter;
 		filter: blur(var(--gradient-blur));
 
 		@include viewport.breakpoint(xs) {

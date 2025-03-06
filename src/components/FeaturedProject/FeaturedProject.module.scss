@@ -26,22 +26,6 @@
 	}
 }
 
-@media not (prefers-reduced-motion: reduce) {
-	.imageContainer,
-	.textContainer {
-		transform: translateY(var(--transition-distance));
-		opacity: 0;
-		will-change: opacity, transform;
-		transition: opacity var(--transition-duration) var(--transition-ease),
-			transform var(--transition-duration) var(--transition-ease);
-
-		.fadeInUp & {
-			opacity: 1;
-			transform: translateY(0);
-		}
-	}
-}
-
 .imageContainer {
 	position: relative;
 
@@ -69,18 +53,36 @@
 .cropIconContainer {
 	position: absolute;
 	width: var(--text-lg);
+	top: var(--space-lg);
+
+	@include viewport.breakpoint(sm, max) {
+		display: none;
+	}
+
+	@include viewport.between(sm, 1138px) {
+		top: 38px;
+	}
 
 	&:not(.imgRight &) {
 		left: calc(var(--space-lg) / -1);
+
+		@include viewport.between(sm, 1138px) {
+			left: -21px;
+		}
 	}
 
 	.imgRight & {
 		right: calc(var(--space-lg) / -1);
+		transform: scaleX(-1);
+
+		@include viewport.between(sm, 1138px) {
+			right: -21px;
+		}
 	}
 
 	svg {
 		fill: currentColor;
-		opacity: 0.1;
+		opacity: 0.18;
 	}
 }
 
@@ -90,7 +92,6 @@
 	place-items: center;
 	padding-inline: var(--space-xl);
 	border-radius: var(--radius-default);
-	background-color: var(--surface-neutral);
 	aspect-ratio: 3 / 2;
 	overflow: hidden;
 	user-select: none;
@@ -143,5 +144,32 @@
 .button {
 	@include viewport.breakpoint(xs) {
 		max-width: 288px;
+	}
+}
+
+@media not (prefers-reduced-motion: reduce) {
+	.imageContainer,
+	.textContainer,
+	.cropIconContainer {
+		opacity: 0;
+		transform: translateY(var(--transition-distance));
+		will-change: opacity, transform;
+		transition: opacity var(--transition-duration) var(--transition-ease),
+			transform var(--transition-duration) var(--transition-ease);
+
+		.fadeInUp & {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.cropIconContainer {
+		.imgRight & {
+			transform: translateY(var(--transition-distance)) scaleX(-1);
+		}
+
+		.imgRight.fadeInUp & {
+			transform: translateY(0) scaleX(-1);
+		}
 	}
 }

@@ -2,6 +2,7 @@
 
 import cn from 'classnames';
 import { useSearchParams } from 'next/navigation';
+import { inspImages } from '@/data/images';
 import Link from 'next/link';
 import Callout from '@/components/Callout/Callout';
 import LargeImage from '@/components/Article/LargeImage/LargeImage';
@@ -19,7 +20,7 @@ export const InspContent = () => {
 			<header className={cn(styles.heroSection, styles.accentEdgeGrad)}>
 				<div className={styles.containerGrid}>
 					<h1 className={styles.h1}>
-						Creation <span className={styles.altFont}>&amp;</span>&nbsp;Growth of the Inspirato Design System
+						Creation <span className={styles.altFont}>&amp;</span> Growth of the Inspirato Design System
 					</h1>
 					<div className={styles.subhead}>
 						Preparing a scalable design system for the future of Inspirato's Luxury Travel products.
@@ -31,14 +32,16 @@ export const InspContent = () => {
 					<div className={styles.containerGrid}>
 						<LargeImage
 							className={cn(styles.imageContainer, styles.flowOffset, styles.heroImage)}
-							src='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
-							alt='Boats anchored off a white sandy beach in turquoise blue water'
-							caption='Example of discovery process, wire-framing, journey mapping.'
+							src={inspImages.hero.src}
+							alt={inspImages.hero.alt}
+							caption={inspImages.hero.caption}
 							logo={<IconLogoInsp />}
 							logoOffset='-5%'
 							logoMaxWidth='380px'
 							metaTags={['Branding', 'UX/UI', 'HTML', 'CSS', 'JS', 'React', 'Storybook']}
 							isHero
+							placeholder='blur'
+							priority
 						/>
 						<h2 className={styles.h2}>
 							The
@@ -58,9 +61,9 @@ export const InspContent = () => {
 						</p>
 						<LargeImage
 							className={cn(styles.imageContainer, styles.flowOffset, styles.breakout)}
-							src='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
-							alt='Boats anchored off a white sandy beach in turquoise blue water'
-							caption='Example of discovery process, wire-framing, journey mapping.'
+							src={inspImages.hero.src}
+							alt={inspImages.hero.alt}
+							caption={inspImages.hero.caption}
 							captionLeft
 						/>
 						<p>
@@ -115,9 +118,9 @@ export const InspContent = () => {
 						</p>
 						<LargeImage
 							className={cn(styles.imageContainer, styles.flowOffset, styles.breakout)}
-							src='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
-							alt='Boats anchored off a white sandy beach in turquoise blue water'
-							caption='Example of discovery process, wire-framing, journey mapping.'
+							src={inspImages.hero.src}
+							alt={inspImages.hero.alt}
+							caption={inspImages.hero.caption}
 						/>
 						<p>
 							Consolidation of the brand identity was crucial in establishing a cohesive visual language across all
@@ -131,10 +134,10 @@ export const InspContent = () => {
 						</p>
 						<div className={cn(styles.sideImagesContainer, styles.flowOffset)}>
 							<SideImage
-								imgSrc='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
-								imgAlt='Boats anchored off a white sandy beach in turquoise blue water'
-								imgRight
+								imgSrc={inspImages.hero.src}
+								imgAlt={inspImages.hero.alt}
 								caption='Example of discovery process, wire-framing, journey mapping.'
+								imgRight
 							>
 								<h3 className={styles.h3}>Research and Identify</h3>
 								<p>
@@ -148,10 +151,7 @@ export const InspContent = () => {
 									solution that not only met but exceeded the client's expectations.
 								</p>
 							</SideImage>
-							<SideImage
-								imgSrc='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
-								imgAlt='Boats anchored off a white sandy beach in turquoise blue water'
-							>
+							<SideImage imgSrc={inspImages.hero.src} imgAlt={inspImages.hero.alt}>
 								<h3 className={styles.h3}>Consolidate</h3>
 								<p>
 									TESTING SIDEIMAGE LEFT The outcome of this project was a testament to the power of effective branding
@@ -165,10 +165,10 @@ export const InspContent = () => {
 								</p>
 							</SideImage>
 							<SideImage
-								imgSrc='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
-								imgAlt='Boats anchored off a white sandy beach in turquoise blue water'
+								imgSrc={inspImages.hero.src}
+								imgAlt={inspImages.hero.alt}
+								caption={inspImages.hero.caption}
 								imgRight
-								caption='Example of discovery process, wire-framing, journey mapping.'
 							>
 								<h3 className={styles.h3}>Implement</h3>
 								<p>
@@ -196,14 +196,14 @@ export const InspContent = () => {
 						</p>
 						<div className={cn(styles.multiImagesContainer, styles.flowOffset, styles.breakout)}>
 							<MultiImage
-								imgSrc1='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
-								imgAlt1='Boats anchored off a white sandy beach in turquoise blue water'
-								imgSrc2='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
-								imgAlt2='Boats anchored off a white sandy beach in turquoise blue water'
-								imgSrc3='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
-								imgAlt3='Boats anchored off a white sandy beach in turquoise blue water'
-								imgSrc4='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
-								imgAlt4='Boats anchored off a white sandy beach in turquoise blue water'
+								imgSrc1={inspImages.hero.src}
+								imgAlt1={inspImages.hero.alt}
+								imgSrc2={inspImages.hero.src}
+								imgAlt2={inspImages.hero.alt}
+								imgSrc3={inspImages.hero.src}
+								imgAlt3={inspImages.hero.alt}
+								imgSrc4={inspImages.hero.src}
+								imgAlt4={inspImages.hero.alt}
 								textRight
 								caption='Example of discovery process, wire-framing, journey mapping.'
 							>
@@ -222,14 +222,14 @@ export const InspContent = () => {
 								</p>
 							</MultiImage>
 							<MultiImage
-								imgSrc1='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
-								imgAlt1='Boats anchored off a white sandy beach in turquoise blue water'
-								imgSrc2='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
-								imgAlt2='Boats anchored off a white sandy beach in turquoise blue water'
-								imgSrc3='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
-								imgAlt3='Boats anchored off a white sandy beach in turquoise blue water'
-								imgSrc4='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
-								imgAlt4='Boats anchored off a white sandy beach in turquoise blue water'
+								imgSrc1={inspImages.hero.src}
+								imgAlt1={inspImages.hero.alt}
+								imgSrc2={inspImages.hero.src}
+								imgAlt2={inspImages.hero.alt}
+								imgSrc3={inspImages.hero.src}
+								imgAlt3={inspImages.hero.alt}
+								imgSrc4={inspImages.hero.src}
+								imgAlt4={inspImages.hero.alt}
 								caption='Example of discovery process, wire-framing, journey mapping.'
 							>
 								<h3 className={styles.h3}>
@@ -247,12 +247,12 @@ export const InspContent = () => {
 								</p>
 							</MultiImage>
 							<MultiImage
-								imgSrc1='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
-								imgAlt1='Boats anchored off a white sandy beach in turquoise blue water'
-								imgSrc2='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
-								imgAlt2='Boats anchored off a white sandy beach in turquoise blue water'
-								imgSrc3='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
-								imgAlt3='Boats anchored off a white sandy beach in turquoise blue water'
+								imgSrc1={inspImages.hero.src}
+								imgAlt1={inspImages.hero.alt}
+								imgSrc2={inspImages.hero.src}
+								imgAlt2={inspImages.hero.alt}
+								imgSrc3={inspImages.hero.src}
+								imgAlt3={inspImages.hero.alt}
 								caption='Example of discovery process, wire-framing, journey mapping.'
 							>
 								<h3 className={styles.h3}>

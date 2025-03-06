@@ -52,10 +52,10 @@
 		height: var(--input-size);
 		border-radius: 3;
 		border: var(--input-border-width) solid var(--border-color);
-		transition: background-color var(--duration-md) var(--ease-out), border-width var(--duration-md) var(--ease-out),
-			border-color var(--duration-md) var(--ease-out), transform var(--duration-md) var(--ease-out);
 		background-color: var(--radio-color, black);
 		will-change: background-color, border-width, border-color, transform;
+		transition: background-color var(--duration-md) var(--ease-out), border-width var(--duration-md) var(--ease-out),
+			border-color var(--duration-md) var(--ease-out), transform var(--duration-md) var(--ease-out);
 
 		@include viewport.breakpoint(sm) {
 			--input-border-width: 0.2em;

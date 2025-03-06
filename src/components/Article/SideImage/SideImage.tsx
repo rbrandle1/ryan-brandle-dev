@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import Caption from '@/components/Caption/Caption';
 import styles from './SideImage.module.scss';
 
@@ -8,7 +8,7 @@ interface SideImageProps {
 	children?: React.ReactNode;
 	caption?: string;
 	hasCaptionIcon?: boolean;
-	imgSrc: string;
+	imgSrc: string | StaticImageData;
 	imgAlt: string;
 	imgRight?: boolean;
 }
