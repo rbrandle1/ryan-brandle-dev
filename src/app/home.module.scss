@@ -212,6 +212,13 @@
 	@include viewport.breakpoint(xs) {
 		left: 51%;
 	}
+
+	@include viewport.breakpoint(xs, max) {
+		div:first-child,
+		div:last-child {
+			visibility: hidden;
+		}
+	}
 }
 
 .vertTextTopLeft {

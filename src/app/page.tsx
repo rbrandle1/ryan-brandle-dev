@@ -120,8 +120,7 @@ export default function Home() {
 			</header>
 			<div className={cn(styles.multiSection, styles.gradientBg)} data-section='dark'>
 				<div className={styles.vertSection}>
-					{/* ACCESSIBILITY: THIS CAN BE IGNORED, STRICTLY DECORATIVE */}
-					<div className={cn(styles.bgVertText, styles.vertTextHero)}>
+					<div className={cn(styles.bgVertText, styles.vertTextHero)} aria-hidden>
 						<div>UX</div>
 						<div>DEV</div>
 						<div>UI</div>
@@ -281,7 +280,7 @@ export default function Home() {
 						</Callout>
 					</div>
 				</section>
-				<div className={cn(styles.bgVertText, styles.vertTextBottomRight)}>
+				<div className={cn(styles.bgVertText, styles.vertTextBottomRight)} aria-hidden>
 					<div>SYSTEM</div>
 					<div>DES</div>
 					<div>UX</div>
