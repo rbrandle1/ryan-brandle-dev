@@ -322,8 +322,21 @@ $paragraphs: (
 	line-height: var(--line-height-sm);
 }
 
-@mixin alt-font {
+@mixin alt-font($inline: false) {
 	font-family: var(--font-alt);
-	font-weight: var(--font-weight-black);
 	line-height: var(--line-height-2xs);
+	text-transform: initial;
+
+	@if $inline {
+		letter-spacing: -1.6px;
+		font-style: italic;
+		font-size: 0.85em;
+		display: inline-block;
+		vertical-align: middle;
+		transform: translateY(-0.14em);
+	}
+}
+
+.noWrap {
+	white-space: nowrap;
 }

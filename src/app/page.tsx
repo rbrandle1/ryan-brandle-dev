@@ -1,39 +1,49 @@
 import cn from 'classnames';
+import dynamic from 'next/dynamic';
 import Callout from '@/components/Callout/Callout';
 import IconCodePen from '@/components/Icons/IconCodePen';
-import FeaturedProject from '@/components/FeaturedProject/FeaturedProject';
-import ProjectCard from '@/components/ProjectCard/ProjectCard';
 import IconLogoInsp from '@/components/Icons/IconLogoInsp';
+import { inspImages, cfImages, srImages, flashcardsImages, codepenImages, comparisonImages } from '@/data/images';
 import styles from './home.module.scss';
 
-/* Todo:
-* update crop icon/s to replace LinkedIn icon
-* Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
-* PERFORMANCE AUDIT. Double check cpu and performance/paint issues. If gradient is still causing performance issues, try the png. Maybe will-change is causing issues. jpgs for images, pngs for snapshots. heros under 200kb, thumbnails under 30kb. NEXT JS SHOULD OPTIMIZE ALREADY.
+const FeaturedProject = dynamic(() => import('@/components/FeaturedProject/FeaturedProject'), {
+	ssr: true,
+});
 
-* CONTENT CREATION:
+const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard'), {
+	ssr: true,
+});
+
+/* Todo:
+* * CONTENT CREATION:
 * Make all pages with images and text content.
 * Finalize all home text and hero text.
-* Find icons for callouts... modular, polish (sparkle), etc. Do after content? Booop these? Or should these remain static as they are not interactive?
+* 
+* 
+* MUST FIX localstorage issue as it is causing a build error before performance audits can be done. Before a build can be made.
+* https://developer.chrome.com/blog/new-in-devtools-133/?utm_source=devtools#perf-image-delivery
+* Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
+* https://medium.com/@jun55tsuno/optimize-your-nextjs-app-e4fe9718fc8a
+* PERFORMANCE AUDIT. Use Chrome LightHouse. Double check cpu and performance/paint issues. If gradient is still causing performance issues, try the png. Maybe will-change is causing issues. jpg for images, png for snapshots. hero under 200kb, thumbnails under 30kb. NEXT JS SHOULD OPTIMIZE ALREADY.
+* Check reduced motion settings.
+* Check screen reader settings.
 
 
 
 * FINAL RUN-THROUGH:
+* Prep robots to prevent indexing of company names.
 * Search all todos and fix them.
 * Remove all unused comments.
 * ensure all pages have correct metadata and optimize to AVOID SEO FOR COMPANY NAMES.
 * Remove any unused remotePatterns in next.config.ts if not needed from unsplash.
-* Get peer review
 * set up a new contact email
 * UPDATE ALL PROFILE IMAGES to up-to-date image.
-* Make sure safari is loading correct favicon.
 
 
 
 * BUGS:
+* Occasional black flicker when scroll down page... like browser paint issue?
 * Theme picker on load error.
-* why does article hero image expand wider immediately on page load? How to lessen the FOUC.
-* fade in ups are not fast enough. If someone is scrolling too quickly, the fade in lags and needs to catch up. Looks like a blank page at first.
 * THEME PICKER LOCAL STORAGE ISSUES:
 * Continue setting up theme provider and theme picker. TRY creating a nested layout to manage the theme state. So the body, header, footer etc are not reloaded on every page load, therefore not causing a FOUC.
 * Solve server 500 error on page load. Try using the window object to check if it's loaded in the ThemePicker useEffect and maybe use an empty string as the default theme? This would likely create a FOUC though. Try refactoring with a ThemeProvider component to manage the theme state.
@@ -42,12 +52,12 @@ import styles from './home.module.scss';
 
 
 * FUTURE CLEANUP AND EXPLORATION:
+* Find icons for callouts... modular, polish (sparkle), etc. Do after content? Boop these? Or should these remain static as they are not interactive?
 * Make a paint roller instead of droplet? Maybe use boop to scroll it down with a path, then back up as if painting?
-* Add Boops to hover states! Also make the boop apply to the entire logo like previously tried. Can also do it to an svg arrow on the link arrows. https://www.joshwcomeau.com/react/boop/
-* ??? Make Mosaic component HOLD. Might not need this.
-* Try to get all altfont ampersands to be centered, not baseline.
-* Add backup words for each FeaturedProject or article page footers.
+* Add Boop to hover states! Also make the boop apply to the entire logo like previously tried. Can also do it to an svg arrow on the link arrows. https://www.joshwcomeau.com/react/boop/
 * Animate the paint droplet to drop down and fade out, rinse and repeat.
+* ??? Make Mosaic component HOLD. Might not need this.
+* Add backup words for each FeaturedProject or article page footers.
 * Consider ditching yellow. It doesn't work well with light colors. if want to keep, maybe put the icon in a yellow circle or something and make the svg black.
 	
 
@@ -74,6 +84,7 @@ import styles from './home.module.scss';
 	* 
 	* Getting components like MultiImage to match the breakout portion of the grid. Very challenging. Got it close but not perfect. It was also challenging to get the caption to work in the most semantic and accessible way possible. Ideally I'd have a single figure with multiple images inside it and a single caption for the entire figure. Since I'm using a different grid layout on desktop, I had to make a choice to use aria-labelledby on each figure to reference a single caption being used on one of the images. Would like to come back to this.
 	* accentEdge gradient compromised the animation transition color.
+	* Performance optimization: Using the next/image component with blurDataURL and placeholder. I had to use static image imports for the blurDataURL to work, which takes away the benefit of using the relative path for the src by default. However, the blurDataURL will automatically generate the blurDataURL for the image which is helpful especially for hero images. I ultimately decided to move my images into an assets folder to make it easier to manage the blurDataURL and import my images from there.
 */
 
 export default function Home() {
@@ -84,7 +95,7 @@ export default function Home() {
 					<h1 className={cn(styles.heroTitle, styles.breakoutXl)}>
 						I make
 						<br />
-						<span className={styles.altFont}>Dope, 🔥, Rizz</span>
+						<span className={styles.altHeader}>Dope, 🔥, Rizz</span>
 						<br />
 						<span className={styles.right}>products</span>
 					</h1>
@@ -96,8 +107,8 @@ export default function Home() {
 						<p className={styles.heroCopy}>
 							I’m a bing bang with over 15 years of experience in design, development and making top notch products.
 							There are a lot of titles that seem to morph through the years but what it comes down to is I bing bang
-							boom. yadda yadda yadda with bing bang boom experience. Industry's standard There are a lot of titles that
-							seem to morph. <a href='mailto:hello@example.com'>Say hi anytime!</a>
+							boom. With bing bang boom experience. Industry's standard There are a lot of titles that seem to morph.{' '}
+							<a href='mailto:hello@example.com'>Say hi anytime!</a>
 						</p>
 					</div>
 				</div>
@@ -118,7 +129,7 @@ export default function Home() {
 						<div>UX</div>
 					</div>
 				</div>
-				<section className={styles.section}>
+				<section className={cn(styles.section, styles.firstCallout)}>
 					<div className={styles.containerGrid}>
 						<Callout title='I make flexible, modular systems that are easy to use.' size='lg' iconAccent>
 							<IconCodePen />
@@ -130,12 +141,17 @@ export default function Home() {
 						<FeaturedProject
 							id='insp'
 							className={styles.breakoutXl}
-							caption='Credit: Inspirato, Unsplash/@seefromthesky'
-							imgSrc='/images/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg'
-							imgAlt='Boats anchored off a white sandy beach in turquoise blue water'
+							imgSrc={inspImages.hero.src}
+							imgAlt={inspImages.hero.alt}
+							caption={inspImages.hero.caption}
 							hasCropIcon
 							logo={<IconLogoInsp />}
-							title='The Inspirato Design System'
+							title={
+								<>
+									<span className={styles.altFont}>The</span> Inspirato Design System
+								</>
+							}
+							// title='The Inspirato Design System'
 							metaTags={['Branding', 'UX/UI', 'HTML', 'CSS', 'JS', 'React', 'Storybook']}
 							description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
 							buttonText='Explore'
@@ -144,14 +160,18 @@ export default function Home() {
 						<FeaturedProject
 							id='cf'
 							className={styles.breakoutXl}
-							caption='Credit: Innovative Business Solutions'
-							imgSrc='https://images.unsplash.com/photo-1560461396-ec0ef7bb29dd'
-							imgAlt='Brand and token system'
+							imgSrc={cfImages.hero.src}
+							imgAlt={cfImages.hero.alt}
+							caption={cfImages.hero.caption}
 							hasCropIcon
 							imgRight
 							title={
 								<>
-									CableFinder Rebrand <span className={styles.altFont}>&amp;</span>&nbsp;Token System
+									CableFinder Rebrand{' '}
+									<span className={styles.noWrap}>
+										<span className={styles.altFont}>&amp;</span>&nbsp;Token
+									</span>{' '}
+									System
 								</>
 							}
 							metaTags={['Branding', 'UX/UI', 'Figma', 'HTML', 'CSS']}
@@ -162,16 +182,20 @@ export default function Home() {
 						<FeaturedProject
 							id='sr'
 							className={styles.breakoutXl}
-							caption='Credit: SchoolRunner, Unsplash/@benmullins'
-							imgSrc='https://images.unsplash.com/photo-1534643960519-11ad79bc19df'
-							imgAlt='SchoolRunner student'
+							caption={srImages.hero.caption}
+							imgSrc={srImages.hero.src}
+							imgAlt={srImages.hero.alt}
 							hasCropIcon
 							title={
 								<>
-									School Runner Rebrand <span className={styles.altFont}>&amp;</span>&nbsp;Website
+									School Runner Rebrand{' '}
+									<span className={styles.noWrap}>
+										{' '}
+										<span className={styles.altFont}>&amp;</span>&nbsp;Website
+									</span>
 								</>
 							}
-							metaTags={['Branding', 'UX/UI', 'HTML', 'CSS']}
+							metaTags={['Branding', 'UX/UI', 'HTML', 'CSS', 'CMS']}
 							description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
 							buttonText='Explore'
 							href='/sr?from=sr'
@@ -190,19 +214,29 @@ export default function Home() {
 				<section className={styles.projectSection}>
 					<div className={styles.containerGrid}>
 						<div className={styles.multiSectionHeader}>
-							<h2 className={styles.multiSectionTitle}>Dabblings on the side</h2>
+							<h2 className={styles.dabbleTitle}>
+								<span className={styles.altFont}>Dabblings</span>
+								<br />
+								on the side
+							</h2>
 							<p className={styles.multiSectionCopy}>
-								I love to dabble! As an essential part of continued education and staying fresh on the latest
-								techniques, I tinker and explore with personal projects in my spare time.
+								To stay fresh on the latest techniques, I tinker, dabble and explore with personal projects in my spare
+								time.
 							</p>
 						</div>
 						<div className={styles.projectCardContainer}>
 							<ProjectCard
 								id='flashcards'
-								imgSrc='/images/flashcards.png'
-								imgAlt='Image of accessible flashcards for kids'
-								hasCropIcon
-								title='Accessible Flashcards for Kids'
+								imgSrc={flashcardsImages.hero.src}
+								imgAlt={flashcardsImages.hero.alt}
+								title={
+									<>
+										Accessible Flashcards{' '}
+										<span className={styles.noWrap}>
+											<span className={styles.altFont}>for</span>&nbsp;Kids
+										</span>
+									</>
+								}
 								metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'React']}
 								description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
 								buttonText='Read more'
@@ -210,28 +244,32 @@ export default function Home() {
 							/>
 							<ProjectCard
 								id='codepen'
-								imgSrc='/images/codepen-focus.png'
-								imgAlt='Image of a CodePen project'
+								imgSrc={codepenImages.hero.src}
+								imgAlt={codepenImages.hero.alt}
 								title='CodePen Explorations'
-								metaTags={['UX/UI', 'HTML', 'CSS', 'JS']}
+								metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'Animation']}
 								description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
 								buttonText='Read more'
 								href='/codepen?from=codepen'
 							/>
 							<ProjectCard
 								id='comparison-cards'
-								imgSrc='/images/comparison-card.png'
-								imgAlt='A grid of vibrant colors'
-								title='Comparison Cards with CSS Grid'
-								metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'React']}
+								imgSrc={comparisonImages.hero.src}
+								imgAlt={comparisonImages.hero.alt}
+								title={
+									<>
+										Comparison Cards <span className={styles.altFont}>with</span> CSS Grid
+									</>
+								}
+								metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'React', 'Storybook']}
 								description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
 								buttonText='Read more'
-								href='/comparison-cards?from=comparison-cards'
+								href='/comparison?from=comparison'
 							/>
 						</div>
 					</div>
 				</section>
-				<section className={styles.section}>
+				<section className={cn(styles.section, styles.lastCallout)}>
 					<div className={styles.containerGrid}>
 						<Callout
 							title='For product teams that love the extra polish!'

@@ -19,6 +19,14 @@
 
 	&.iconAccent {
 		color: var(--icon-accent);
+
+		[data-theme='y'] & {
+			color: currentColor;
+		}
+
+		[data-theme='y'] [data-section='dark'] & {
+			color: var(--icon-accent);
+		}
 	}
 }
 

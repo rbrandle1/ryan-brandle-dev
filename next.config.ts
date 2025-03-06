@@ -12,10 +12,7 @@ const nextConfig: NextConfig = {
 		],
 	},
 	sassOptions: {
-		includePaths: [
-			path.join(__dirname, 'src/components'), // For .src/components and deeper levels
-			path.join(__dirname, 'src/app'), // For .src/app and its subdirectories
-		],
+		includePaths: [path.join(__dirname, 'src/components'), path.join(__dirname, 'src/app')],
 		prependData: `@use "@/styles/utils/animation.scss" as *;`,
 	},
 };

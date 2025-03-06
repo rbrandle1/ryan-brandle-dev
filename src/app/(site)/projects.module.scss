@@ -34,6 +34,10 @@
 		@include viewport.breakpoint(2xl) {
 			font-size: clamp(var(--text-3xl), 7dvw, var(--text-4xl));
 		}
+
+		// .altFont {
+		// 	font-weight: var(--font-weight-black);
+		// }
 	}
 
 	.h2 {
@@ -53,7 +57,7 @@
 	}
 
 	.altFont {
-		@include typography.alt-font;
+		@include typography.alt-font(inline);
 	}
 
 	[data-section='dark'] {

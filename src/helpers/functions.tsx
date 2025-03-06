@@ -5,7 +5,7 @@ const setInlineStyles = (styles: Record<string, StyleValue>) => {
 
 	const filteredStyles = Object.fromEntries(
 		Object.entries(styles).filter(
-			([_, value]) => value !== null && value !== undefined && value !== false && value !== '',
+			([_key, value]) => value !== null && value !== undefined && value !== false && value !== '',
 		),
 	);
 
