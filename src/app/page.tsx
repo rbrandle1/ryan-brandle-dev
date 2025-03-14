@@ -46,13 +46,11 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 * * CONTENT CREATION:
 * Feedback: Incorp "building component libraries" into the mix?
 * Feedback: Don't forget about building for the user... baking in good ux with everything I do... read my linkedin or rez for ideas on how to sprinkle this in descriptions. Also, look at the info in purple above... some usable content in there.
-* Feedback: Take "Dabblings" out... kind of cheesy. Something more edgy or leave out.
-* Feedback: About page, put design last, focus on engineering first.
 * Feedback: Think about what is the power of design and ux and how to work that into about.
-* Feedback: Tone down the rabid wolverine... but still do something to suggest crazy fun boys.
 * Feedback: Polish that shit... Is that really the #1 selling point? Maybe focus more on engineering modular systems that are easy to use.
 * Do not come across as too arrogant. Polish, So fresh, So clean, Too 🔥 To Brandle*, etc. Might need to tone it down.
 * Add a picture to about? Me and the boys in nica?
+* Use real apostrophes, not just the straight quote in my text. It makes a difference.
 * Find or make a way to suggest polish... a can of polish? a rag? Put this on the right side of the hero section.
 * For my rebrand, create a cool background image, a gradient with my logo svg. Perhaps it's possible to link it into the theme change! Or... make a prop that can be used for transparent imagery... and that could utilize the accent colors as a background color or background-image (gradient, etc)... Think of a hand holding a phone with a gradient background...
 * How to implement codepen pens... hero?
@@ -74,6 +72,7 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 * FINAL RUN-THROUGH:
 * Prep robots to prevent indexing of company names.
 * Search all todos and fix them.
+* Search all [EDIT]s and fix them.
 * Remove all unused comments.
 * ensure all pages have correct metadata and optimize to AVOID SEO FOR COMPANY NAMES.
 * Remove any unused remotePatterns in next.config.ts if not needed from unsplash.
@@ -247,7 +246,7 @@ export default function Home() {
 							</strong>{' '}
 							be sexy, and to make your search for the right fit a little easier. With over a decade of experience
 							uniting design and code, I create accessible, intuitive, and scalable interfaces. I love advancing design
-							to life and pushing the boundaries of front-end craftsmanship. 🚀&nbsp;Let’s build something epic
+							to life[EDIT] and pushing the boundaries of front-end craftsmanship. 🚀&nbsp;Let’s build something epic
 							together. <a href='mailto:hello@example.com'>Say hi anytime!</a>
 						</p>
 						{/* <p className={styles.heroCopy}>

@@ -15,6 +15,14 @@ import IconGithub from '@/components/Icons/IconGithub';
 import IconLinkedIn from '@/components/Icons/IconLinkedIn';
 import Button from '@/components/Button/Button';
 
+// I've been building for the web for 17 years, specializing in UX/UI engineering, front-end development, and product design. Throughout my career, I’ve collaborated with tech, product, and marketing teams to craft experiences people trust, love, and enjoy using. My goal is simple: to build high-quality products that are intuitive, accessible, and beautifully executed.
+
+// I bring the design eye every dev team needs, crafting flexible, modular design systems that turn good products into great ones. I ensure design, accessibility, and user experience aren’t afterthoughts but woven into the fabric of the product. By coding fluid, scalable, and elegant UI components, I help teams build with consistency and ease.
+
+// I thrive in fun, supportive teams that value craftsmanship and thoughtful execution. I love sharing knowledge, giving meaningful feedback, and refining the small details that make a big impact. And nothing beats the thrill of building something, perfecting it, and releasing it into the world.
+
+// Beyond the web, I’m a proud dad raising two wild boys with my amazing wife. We love camping, cycling, and getting lost on off-the-path adventures—enjoying the journey and everything it brings.
+
 export const AboutContent = () => {
 	const searchParams = useSearchParams();
 	const fromSection = searchParams.get('from');
@@ -26,33 +34,66 @@ export const AboutContent = () => {
 					<h1 className={styles.h1}>
 						Too 🔥 To Brandle<sup>*</sup>
 					</h1>
-					{/* <cite className={styles.citation}>
+					<cite className={styles.citation}>
 						<sup>*</sup> Apologies for the headline... I only get to bust this out at happy hour game nights but it fits
 						so damn well.
-					</cite> */}
-					<p>
+					</cite>
+					{/* <p>
 						I've been building for the web for {new Date().getFullYear() - 2008} years, specializing in UX/UI
-						engineering, front-end development, and product design, collaborating with a wide variety of tech, product
-						and marketing teams.
+						engineering, front-end development, and product design. Throughout my career, I've collaborated with tech,
+						product and marketing teams to build experiences people trust, love and enjoy using.
 					</p>
 					<p>
-						{/* edit this whole section out? */}
-						My past roles have included a mix of labels like UX/UI Engineer, UX Designer and Developer, Product
-						Designer, etc., that more or less do the same thing, but no matter the label, what I do best this:
-					</p>
-					{/* <Callout title='I am bing/bang/boom and I loooove to blam krappow.' /> */}
-					<p>
-						<strong>I am bing/bang/boom and I loooove to blam krappow.</strong>
-					</p>
-					{/* <p>collaborating with a variety of tech, product and marketing teams.</p> */}
-					<p>
-						I'm looking for x,y,z and bing bang who understands and cares about the bing bang of design and how it
-						impacts the people using their products.
+						My past roles have carried a mix of titles that include labels like{' '}
+						<em>UX, UI, Developer, Engineer, Designer,</em> etc. But at the core, my mission has always been the same:
 					</p>
 					<p>
-						I'm a proud family man, raising two rabid wolverines/human boys with my lovely wife, enjoying the occasional
-						vagabonding/jaunt/traveling, camping and cycling the beautiful/magestic/johndenverreference Rocky Mountain
-						High.
+						<strong>To build high quality products that are easy and enjoyable to use.</strong>
+					</p>
+					<p>
+						I bring that design eye every dev team needs and develop flexible, modular design systems that elevate good
+						products to great ones. I ensure design, accessibility and user experience isn't an afterthought but is a
+						part of the fabric of the product.
+					</p>
+					<p>
+						I’m passionate about coding design to life, as fluid, accessible, and scalable experiences. I create simple,
+						elegant design systems and modular components that empower teams to build with consistency and ease.
+					</p>
+					<p>
+						I thrive in fun, supportive teams that care about craftsmanship, design quality, and thoughtful execution. I
+						love sharing knowledge, giving meaningful feedback, and collaborating with designers and developers to
+						refine the small details that make a big impact. And nothing beats the thrill of building something,
+						perfecting it, and releasing it into the world.
+					</p>
+					<p>
+						I'm a proud dad raising two wild boys with my lovely wife. We love to camp, cycle, and get lost in
+						off-the-path adventures—enjoying the journey and all it brings.
+					</p> */}
+					<p>
+						I've been building for the web for 17 years, specializing in UX/UI engineering, front-end development, and
+						product design. Throughout my career, I’ve worked with tech, product, and marketing teams to create
+						experiences people love, trust, and enjoy using.
+					</p>
+					<p>
+						My goal has always been simple:
+						<br />
+						<strong>to build high-quality products that are intuitive, accessible, and beautifully executed.</strong>
+					</p>
+					<p>
+						I bring that <em>"design eye"</em> every dev team loves, coding design systems that make products more
+						consistent, scalable, and easy to use—[EDIT] Ensuring design quality and accessibility aren’t afterthoughts
+						but are a core part of the product experience. [EDIT]By coding fluid, thoughtful interfaces, I help teams
+						bring their ideas to life with precision and polish.
+					</p>
+					<p>
+						[EDIT]I thrive in fun, supportive teams that value clean code, [EDIT] user experience, and embrace design. I
+						love sharing knowledge, exchanging meaningful feedback, and refining the small details that make a big
+						impact. [EDIT]And nothing beats the thrill of building something beautiful and releasing it into the world!
+					</p>
+					<p>
+						Beyond the web, I’m a proud dad raising two wild boys with my lovely wife. We love camping, cycling, and
+						getting lost in off-the-path adventures—enjoying the journey with love and open arms[EDIT]... too many
+						"loves?".
 					</p>
 					<Button className={styles.button} href={'mailto:hello@example.com'}>
 						Get in touch
@@ -92,12 +133,12 @@ export const AboutContent = () => {
 							</li>
 						</ul>
 					</div>
-					<cite className={styles.citation}>
+					{/* <cite className={styles.citation}>
 						<span className={styles.bold}>
 							<sup>*</sup> Apologies for the headline...
 						</span>{' '}
 						I only get to bust this out at happy hour game nights. It just fits so damn well.
-					</cite>
+					</cite> */}
 					{/* <p>
 						I bring 15+ years of experience crafting front-end experiences that are as polished as they are functional.
 						I live in that sweet spot between design and code, ensuring products don’t just work—but feel amazing to
