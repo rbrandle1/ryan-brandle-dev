@@ -35,8 +35,8 @@ export const AboutContent = () => {
 						Too 🔥 To Brandle<sup>*</sup>
 					</h1>
 					<cite className={styles.citation}>
-						<sup>*</sup> Apologies for the headline... I only get to bust this out at happy hour game nights but it fits
-						so damn well.
+						<sup>*</sup> Apologies for the headline... I only get to bust this out at happy hour game nights. It just
+						fits so damn well.
 					</cite>
 					{/* <p>
 						I've been building for the web for {new Date().getFullYear() - 2008} years, specializing in UX/UI
