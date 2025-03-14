@@ -14,7 +14,7 @@ interface ProjectCardProps {
 	logo?: React.ReactNode;
 	title: string | React.ReactNode;
 	metaTags?: string[];
-	description: string;
+	description: string | React.ReactNode;
 	buttonText: string;
 	href: string;
 }

@@ -25,11 +25,25 @@
 
 	.h1 {
 		@include typography.headline(3xl);
+		position: relative;
 		max-width: var(--optimal-line-length-2xs);
 
 		@include viewport.breakpoint(2xl) {
 			font-size: clamp(var(--text-3xl), 7dvw, var(--text-4xl));
 		}
+
+		sup {
+			vertical-align: top;
+			padding-inline-start: var(--space-2xs);
+		}
+
+		// &::after {
+		// 	content: '*';
+		// 	// position: absolute;
+		// 	// right: 0;
+		// 	// top: 0;
+		// 	font-size: var(--text-lg);
+		// }
 	}
 }
 
@@ -49,14 +63,6 @@
 	padding-block-start: var(--hero-spacing);
 	padding-block-end: var(--hero-offset);
 	min-height: 100%;
-
-	@include viewport.breakpoint(sm, max) {
-		padding-block: var(--section-spacing);
-	}
-
-	@include viewport.breakpoint(md) {
-		padding-block-end: calc(var(--hero-offset) + 1lh);
-	}
 }
 
 .accentEdgeGrad {
@@ -65,4 +71,49 @@
 
 .button {
 	max-width: fit-content;
+}
+
+.socialContainer {
+	--flow-space: 2lh;
+}
+
+.socialList {
+	--flow-space: 0.5lh;
+	margin-block-start: var(--flow-space);
+
+	@include viewport.breakpoint(xs) {
+		--flow-space: 0;
+		column-gap: 1lh;
+		column-width: 116px;
+		max-width: var(--optimal-line-length-base);
+	}
+
+	a {
+		gap: var(--space-xs);
+		@include typography.link(underline);
+
+		svg {
+			width: var(--text-base);
+		}
+	}
+}
+
+.citation {
+	@include typography.p(sm);
+	max-width: var(--optimal-line-length-base);
+	text-wrap: balance;
+	line-height: 1.3;
+	border-left: solid 4px;
+	padding-inline-start: 0.8lh;
+	margin-block-start: 1lh;
+
+	.bold {
+		font-weight: var(--font-weight-bold);
+	}
+
+	sup {
+		vertical-align: top;
+		font-size: initial;
+		margin-left: -8px;
+	}
 }

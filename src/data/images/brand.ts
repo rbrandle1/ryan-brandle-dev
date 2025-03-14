@@ -4,7 +4,7 @@ export const images = {
 	hero: {
 		src: heroImg,
 		alt: 'Rebrand of Ryan Brandle',
-		caption: 'So Fresh and So Clean Clean',
+		caption: '(So fresh and so clean, clean) - Outkast',
 	},
 	// feature1: {
 	// 	src: '/images/insp/feature1.jpg',

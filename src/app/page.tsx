@@ -14,9 +14,48 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 	ssr: true,
 });
 
+// Help me understand what the best job title is for the following characteristics:
+
+// • A maker of web interfaces
+// • A developer with design skills and background
+// • A developer with UX background
+// • Creates design systems and tools for other developers to use creating consistency and quality product execution
+// • Skills include HTML, CSS, React, Design, Typography, Figma, Storybook, Modular Code, React components
+
+// Areas where this person differs from typical front-end developers is that this person has a strong sense of visual product and ux design. This person does not have experience with back-end code and remains in the front of the front-end pairing well with design system teams and product design teams.
+// ChatGPT said:
+// The best job title for this role would be:
+
+// "Design Engineer"
+// This title accurately reflects the blend of front-end development, design, UX, and design systems work. It’s a common title used for engineers who bridge the gap between design and development, focusing on UI implementation, component libraries, and design system scalability.
+
+// Alternative Titles (depending on company culture and emphasis):
+// UX Engineer – If the role leans more toward user experience and interaction design.
+// UI Engineer – If the focus is on implementing user interface components with high visual fidelity.
+// Front-End Design Engineer – If you want to emphasize the engineering + design blend.
+// Design Systems Engineer – If the primary responsibility is creating and maintaining design systems.
+// Creative Developer – More common in agencies or startups with a strong design focus.
+// Why "Design Engineer"?
+// You’re not just a front-end developer; you have a strong UX and visual design sense.
+// You create tools, components, and systems for other developers and designers.
+// You work closely with designers and design system teams rather than backend teams.
+// You think in components (React, Storybook, modular design).
+// If you're looking to define your career path, Design Engineer is an emerging and respected title that aligns perfectly with your skill set. 🚀
+
 /* Todo:
 * * CONTENT CREATION:
-* For my rebrand, create a cool background image, a gradient with my logo svg. Perhaps it's possible to link it into the theme change!
+* Feedback: Incorp "building component libraries" into the mix?
+* Feedback: Don't forget about building for the user... baking in good ux with everything I do... read my linkedin or rez for ideas on how to sprinkle this in descriptions. Also, look at the info in purple above... some usable content in there.
+* Feedback: Take "Dabblings" out... kind of cheesy. Something more edgy or leave out.
+* Feedback: About page, put design last, focus on engineering first.
+* Feedback: Think about what is the power of design and ux and how to work that into about.
+* Feedback: Tone down the rabid wolverine... but still do something to suggest crazy fun boys.
+* Feedback: Polish that shit... Is that really the #1 selling point? Maybe focus more on engineering modular systems that are easy to use.
+* Do not come across as too arrogant. Polish, So fresh, So clean, Too 🔥 To Brandle*, etc. Might need to tone it down.
+* Add a picture to about? Me and the boys in nica?
+* Find or make a way to suggest polish... a can of polish? a rag? Put this on the right side of the hero section.
+* For my rebrand, create a cool background image, a gradient with my logo svg. Perhaps it's possible to link it into the theme change! Or... make a prop that can be used for transparent imagery... and that could utilize the accent colors as a background color or background-image (gradient, etc)... Think of a hand holding a phone with a gradient background...
+* How to implement codepen pens... hero?
 * Make all pages with images and text content.
 * Finalize all home text and hero text.
 * 
@@ -28,6 +67,7 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 * PERFORMANCE AUDIT. Use Chrome LightHouse. Double check cpu and performance/paint issues. If gradient is still causing performance issues, try the png. Maybe will-change is causing issues. jpg for images, png for snapshots. hero under 200kb, thumbnails under 30kb. NEXT JS SHOULD OPTIMIZE ALREADY.
 * Check reduced motion settings.
 * Check screen reader settings.
+* Would help meta tags are correct... might help to put in data.
 
 
 
@@ -94,23 +134,144 @@ export default function Home() {
 			<header className={cn(styles.section, styles.heroSection, styles.accentEdgeGrad)}>
 				<div className={cn(styles.containerGrid, styles.heroContent)}>
 					<h1 className={cn(styles.heroTitle, styles.breakoutXl)}>
+						Polish
+						<br />
+						<span className={styles.right}>
+							<span className={styles.altHeader}>that </span>Sh*t!
+						</span>
+					</h1>
+					{/* <h1 className={cn(styles.heroTitle, styles.breakoutXl)}>
+						For Teams
+						<br />
+						<span className={styles.altHeader}>that ❤️ the</span>
+						<br />
+						<span className={styles.right}>Extra Polish</span>
+					</h1> */}
+					{/* <h1 className={cn(styles.heroTitle, styles.breakoutXl)}>
 						I make
 						<br />
 						<span className={styles.altHeader}>Dope, 🔥, Rizz</span>
 						<br />
 						<span className={styles.right}>products</span>
-					</h1>
+					</h1> */}
 					<div className={styles.heroDetails}>
+						{/* breathes life */}
+						{/* brings digital concepts to life with flair */}
+						{/* brings design systems to life with flair */}
+						{/* infuses life into interactive realities*/}
+						{/* with creativity and precision */}
+						{/* creates vibrant digital experiences */}
+						{/* bring your design system to life */}
+
+						{/* provides ease, consistency, efficiency */}
+
+						{/* <p className={styles.heroSubtitle}>
+							Hey there! I'm Ryan Brandle, a Design Engineer that helps teams build exceptional experiences. Welcome to
+							my 100% custom crafted portfolio site for you to explore.
+						</p> */}
+						{/* <p className={styles.heroSubtitle}>
+							Hey there! I'm Ryan Brandle, a Design Engineer that helps teams build exceptional experiences. This site
+							was 100% custom designed & developed for you to explore.
+						</p>
 						<p className={styles.heroSubtitle}>
-							This is the 100% custom crafted portfolio site of Ryan&nbsp;Brandle, a Design Engineer and maker of the
-							web.
+							Hey there! I'm Ryan Brandle, a Design Engineer that helps teams build exceptional experiences. This site
+							was 100% custom designed & developed for you to explore - so dive in!
+						</p>
+						<p className={styles.heroSubtitle}>
+							Hey there! I'm Ryan Brandle, a Design Engineer who helps teams build exceptional experiences. I 100%
+							designed & developed this site for you to explore — so dive in!
+						</p> */}
+
+						{/* <p className={styles.heroSubtitle}>
+							Welcome to the custom crafted portfolio site of me, Ryan Brandle, a Design Engineer who empowers teams to
+							build exceptional experiences.
+						</p> */}
+
+						{/* <p className={styles.heroSubtitle}>
+							This is the 100% custom crafted portfolio site of Ryan&nbsp;Brandle, a Design Engineer who transforms
+							ideas into engaging experiences. (typical, boring)
+						</p> */}
+						{/* <p className={styles.heroSubtitle}>
+							This is the 100% custom crafted portfolio site of Ryan&nbsp;Brandle, a Design Engineer who blends
+							creativity with technology to create vibrant digital experiences.
+						</p> */}
+						{/* <p className={styles.heroSubtitle}>
+							Welcome to the custom crafted portfolio site of me, Ryan&nbsp;Brandle, a Design Engineer who brings design
+							systems to life.
+						</p> */}
+						{/* <p className={styles.heroSubtitle}>
+							This is the 100% custom crafted portfolio site of Ryan&nbsp;Brandle, a Design Engineer who empowers
+							product and development teams with dynamic design systems. (wordy, but good)
+						</p> */}
+						{/* <p className={styles.heroSubtitle}>
+							Welcome to Ryan&nbsp;Brandle's custom portfolio—where design systems come alive and teams build awesome
+							stuff. Enjoy the ride!
+						</p> */}
+						{/* <p className={styles.heroSubtitle}>
+							This is the 100% custom crafted portfolio site of Ryan&nbsp;Brandle, a Design Engineer who crafts systems
+							that empower users to build exceptional interfaces. (empowering users... not bad, very long)
+						</p> */}
+						{/* <p className={styles.heroSubtitle}>
+							who transforms design systems into tools for creative empowerment. (not bad, confusing?)
+						</p>
+						<p className={styles.heroSubtitle}>
+							who makes tools for creative empowerment. (eh? or quality design execution)
+						</p>
+						<p className={styles.heroSubtitle}>who makes tools for quality design execution.</p>
+						<p className={styles.heroSubtitle}>...empower users to craft quality experiences. (not bad)</p>
+						<p className={styles.heroSubtitle}>
+							...empower product and development teams to craft quality experiences. (not bad)
+						</p>
+						<p className={styles.heroSubtitle}>who brings design systems to life.</p> */}
+						{/* <p className={styles.heroSubtitle}>
+							who brings design systems to life, empowering creators everywhere... empowering product teams to build
+							exceptional interfaces... (like the concept, long and confusing)
+						</p> */}
+						{/* <p className={styles.heroSubtitle}>
+							who empowers product/development teams to build exceptional interfaces... (like the concept, how to make
+							it shorter?)
+						</p>
+						<p className={styles.heroSubtitle}>
+							who creates design systems for crafting quality digital experiences. (too wordy)
+						</p> */}
+						{/* <p className={styles.heroSubtitle}>
+							Hey there. I'm Ryan Brandle, a Design Engineer who makes&nbsp;tools to build exceptional experiences.
+						</p> */}
+						<p className={styles.heroSubtitle}>
+							Hey there. I'm Ryan Brandle, a Design Engineer who empowers teams to build exceptional experiences.
 						</p>
 						<p className={styles.heroCopy}>
-							I’m a bing bang with over 15 years of experience in design, development and making top notch products.
-							There are a lot of titles that seem to morph through the years but what it comes down to is I bing bang
-							boom. With bing bang boom experience. Industry's standard There are a lot of titles that seem to morph.{' '}
-							<a href='mailto:hello@example.com'>Say hi anytime!</a>
+							This site was designed and built by me — to show that design systems{' '}
+							<strong>
+								<em>can</em>
+							</strong>{' '}
+							be sexy, and to make your search for the right fit a little easier. With over a decade of experience
+							uniting design and code, I create accessible, intuitive, and scalable interfaces. I love advancing design
+							to life and pushing the boundaries of front-end craftsmanship. 🚀&nbsp;Let’s build something epic
+							together. <a href='mailto:hello@example.com'>Say hi anytime!</a>
 						</p>
+						{/* <p className={styles.heroCopy}>
+							This site was designed and built by me — to show that design systems{' '}
+							<strong>
+								<em>can</em>
+							</strong>{' '}
+							be sexy, and to make your search for the right fit a little easier. With over a decade of experience
+							uniting design and code, I create accessible, intuitive, and scalable interfaces. Specializing in design,
+							UX/UI engineering, and front-end development, I love advancing design to life and pushing the boundaries
+							of front-end craftsmanship. 🚀&nbsp;Let’s build something epic together.{' '}
+							<a href='mailto:hello@example.com'>Say hi anytime!</a>
+						</p> */}
+						{/* <p className={styles.heroCopy}>
+							This site was designed and built by me — to show that design systems{' '}
+							<strong>
+								<em>can</em>
+							</strong>{' '}
+							be sexy, and to make your search for the right fit a little easier. I bring over 15 years of experience
+							simplifying the relationship between design and code to create accessible, scalable, and easy-to-use
+							interfaces. Specializing in design, UX/UI engineering, and front-end development, I love bringing design
+							to life and pushing the boundaries of front-end craftsmanship. 🚀&nbsp;Let’s build something great
+							together. <a href='mailto:hello@example.com'>Say hi anytime!</a>
+						</p> */}
 					</div>
 				</div>
 				<div className={cn(styles.containerGrid, styles.scrollContainer)}>
@@ -139,46 +300,6 @@ export default function Home() {
 				<section className={cn(styles.section, styles.featuredSection)}>
 					<div className={styles.containerGrid}>
 						<FeaturedProject
-							id='insp'
-							className={styles.breakoutXl}
-							imgSrc={inspImages.hero.src}
-							imgAlt={inspImages.hero.alt}
-							caption={inspImages.hero.caption}
-							hasCropIcon
-							logo={<IconLogoInsp />}
-							title={
-								<>
-									<span className={styles.altFont}>The</span> Inspirato Design System
-								</>
-							}
-							metaTags={['Branding', 'UX/UI', 'HTML', 'CSS', 'JS', 'TS', 'React', 'Storybook']}
-							description='A large-scale initiative to unify brand, UX, and UI strategy across departments and codebases. Built for flexibility, consistency, and scalability, it empowered teams to deliver the high-quality experience expected from a luxury travel company.'
-							buttonText='Explore'
-							href='/insp?from=insp'
-						/>
-						<FeaturedProject
-							id='cf'
-							className={styles.breakoutXl}
-							imgSrc={cfImages.hero.src}
-							imgAlt={cfImages.hero.alt}
-							caption={cfImages.hero.caption}
-							hasCropIcon
-							imgRight
-							title={
-								<>
-									CableFinder Rebrand{' '}
-									<span className={styles.noWrap}>
-										<span className={styles.altFont}>&amp;</span>&nbsp;Token
-									</span>{' '}
-									System
-								</>
-							}
-							metaTags={['Branding', 'UX/UI', 'Figma', 'HTML', 'CSS']}
-							description='An adaptable system with a multi-mode token approach, unifying UI for design, development, and&nbsp;marketing content teams.'
-							buttonText='Explore'
-							href='/cf?from=cf'
-						/>
-						<FeaturedProject
 							id='brand'
 							className={styles.breakoutXl}
 							caption={brandImages.hero.caption}
@@ -195,10 +316,52 @@ export default function Home() {
 									</span>
 								</>
 							}
-							metaTags={['Branding', 'UX/UI', 'HTML', 'CSS', 'JS', 'TS', 'React', 'NextJS']}
-							description='A portfolio rebrand returning to the roots of quality design, color and typography theory, accessibility best practices, and clean modular code. Built by me from the ground up, exploring the latest & greatest techniques and loving every minute of it!'
+							metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'TS', 'React', 'NextJS', 'Figma']}
+							description='My own component-based design system built from the ground up, rooted in semantic, accessible code and a total self rebrand to boot — exploring the latest techniques and loving every minute!'
 							buttonText='Explore'
 							href='/brand?from=brand'
+						/>
+						<FeaturedProject
+							id='insp'
+							className={styles.breakoutXl}
+							imgSrc={inspImages.hero.src}
+							imgAlt={inspImages.hero.alt}
+							caption={inspImages.hero.caption}
+							hasCropIcon
+							imgRight
+							logo={<IconLogoInsp />}
+							title='The Inspirato Design System'
+							metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'TS', 'React', 'NextJS', 'Storybook']}
+							description={
+								<>
+									A large-scale initiative to unify brand, UX, and UI strategy across departments and codebases. Built
+									for consistency, usability, flexibility, and scalability, <em>IDS</em> empowered teams to deliver the
+									high-quality experience expected of a luxury travel brand.
+								</>
+							}
+							buttonText='Explore'
+							href='/insp?from=insp'
+						/>
+						<FeaturedProject
+							id='cf'
+							className={styles.breakoutXl}
+							imgSrc={cfImages.hero.src}
+							imgAlt={cfImages.hero.alt}
+							caption={cfImages.hero.caption}
+							hasCropIcon
+							title={
+								<>
+									CableFinder Rebrand{' '}
+									<span className={styles.noWrap}>
+										<span className={styles.altFont}>&amp;</span>&nbsp;Token
+									</span>{' '}
+									System
+								</>
+							}
+							metaTags={['UX/UI', 'Branding', 'HTML', 'CSS', 'Figma']}
+							description='An adaptable system with a multi-mode token approach, unifying UI for design, development, and&nbsp;marketing content teams.'
+							buttonText='Explore'
+							href='/cf?from=cf'
 						/>
 					</div>
 				</section>
@@ -214,14 +377,23 @@ export default function Home() {
 				<section className={styles.projectSection}>
 					<div className={styles.containerGrid}>
 						<div className={styles.multiSectionHeader}>
-							<h2 className={styles.dabbleTitle}>
+							{/* <h2 className={styles.dabbleTitle}>
 								<span className={styles.altFont}>Dabblings</span>
+								<br />
+								on the side
+							</h2> */}
+							{/* <h2 className={styles.dabbleTitle}>
+								<span className={styles.altFont}>Creative Ventures</span>
+								<br />
+								on the side
+							</h2> */}
+							<h2 className={styles.dabbleTitle}>
+								<span className={styles.altFont}>Dabbling</span>
 								<br />
 								on the side
 							</h2>
 							<p className={styles.multiSectionCopy}>
-								To stay fresh on the latest techniques, I tinker, dabble and explore with personal projects in my spare
-								time.
+								Staying sharp tinkering, exploring, and sparking new ideas.&nbsp;⚡️
 							</p>
 						</div>
 						<div className={styles.projectCardContainer}>
@@ -238,7 +410,7 @@ export default function Home() {
 									</>
 								}
 								metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'React']}
-								description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+								description='Inspired by the challenges faced by a loved one with dyslexia, this app was designed to support children (and parents) facing similar struggles. Kids can personalize their experience to match how they learn best, making math both engaging and fun.'
 								buttonText='Read more'
 								href='/flashcards?from=flashcards'
 							/>
@@ -248,7 +420,7 @@ export default function Home() {
 								imgAlt={codepenImages.hero.alt}
 								title='CodePen Explorations'
 								metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'Animation']}
-								description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+								description='A mix of my own CodePen experiments — exploring new techniques, animations, and general code tinkering.'
 								buttonText='Read more'
 								href='/codepen?from=codepen'
 							/>
@@ -262,7 +434,12 @@ export default function Home() {
 									</>
 								}
 								metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'React', 'Storybook']}
-								description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+								description={
+									<>
+										Dive deep into a unique CSS Grid solution that helped prospective people compare products and choose
+										the right option for them. Originally published on the <em>Inspirato Technology Blog</em>.
+									</>
+								}
 								buttonText='Read more'
 								href='/comparison?from=comparison'
 							/>
@@ -271,14 +448,33 @@ export default function Home() {
 				</section>
 				<section className={cn(styles.section, styles.lastCallout)}>
 					<div className={styles.containerGrid}>
-						<Callout
+						{/* <Callout
+							title='For product teams that love the extra polish!'
+							body="Don't overlook the value of a good design system. It's the foundation of a successful product."
+							iconAccent
+							size='lg'
+						>
+							<IconCodePen />
+						</Callout> */}
+						<Callout title='For product teams that love the extra polish!' iconAccent size='lg'>
+							<IconCodePen />
+						</Callout>
+						{/* <Callout
+							title='For product teams that love the extra polish!'
+							body='Discover the difference that quality design can make with a reliable system.'
+							iconAccent
+							size='lg'
+						>
+							<IconCodePen />
+						</Callout> */}
+						{/* <Callout
 							title='For product teams that love the extra polish!'
 							body='I make flexible, modular systems that are easy to use. I make flexible, modular systems that are easy to use. I make flexible, modular systems that are easy to use.'
 							iconAccent
 							size='lg'
 						>
 							<IconCodePen />
-						</Callout>
+						</Callout> */}
 					</div>
 				</section>
 				<div className={cn(styles.bgVertText, styles.vertTextBottomRight)} aria-hidden>
