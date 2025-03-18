@@ -14,43 +14,11 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 	ssr: true,
 });
 
-// Help me understand what the best job title is for the following characteristics:
-
-// • A maker of web interfaces
-// • A developer with design skills and background
-// • A developer with UX background
-// • Creates design systems and tools for other developers to use creating consistency and quality product execution
-// • Skills include HTML, CSS, React, Design, Typography, Figma, Storybook, Modular Code, React components
-
-// Areas where this person differs from typical front-end developers is that this person has a strong sense of visual product and ux design. This person does not have experience with back-end code and remains in the front of the front-end pairing well with design system teams and product design teams.
-// ChatGPT said:
-// The best job title for this role would be:
-
-// "Design Engineer"
-// This title accurately reflects the blend of front-end development, design, UX, and design systems work. It’s a common title used for engineers who bridge the gap between design and development, focusing on UI implementation, component libraries, and design system scalability.
-
-// Alternative Titles (depending on company culture and emphasis):
-// UX Engineer – If the role leans more toward user experience and interaction design.
-// UI Engineer – If the focus is on implementing user interface components with high visual fidelity.
-// Front-End Design Engineer – If you want to emphasize the engineering + design blend.
-// Design Systems Engineer – If the primary responsibility is creating and maintaining design systems.
-// Creative Developer – More common in agencies or startups with a strong design focus.
-// Why "Design Engineer"?
-// You’re not just a front-end developer; you have a strong UX and visual design sense.
-// You create tools, components, and systems for other developers and designers.
-// You work closely with designers and design system teams rather than backend teams.
-// You think in components (React, Storybook, modular design).
-// If you're looking to define your career path, Design Engineer is an emerging and respected title that aligns perfectly with your skill set. 🚀
-
 /* Todo:
 * * CONTENT CREATION:
-* Feedback: Incorp "building component libraries" into the mix?
-* Feedback: Don't forget about building for the user... baking in good ux with everything I do... read my linkedin or rez for ideas on how to sprinkle this in descriptions. Also, look at the info in purple above... some usable content in there.
-* Feedback: Think about what is the power of design and ux and how to work that into about.
 * Feedback: Polish that shit... Is that really the #1 selling point? Maybe focus more on engineering modular systems that are easy to use.
 * Do not come across as too arrogant. Polish, So fresh, So clean, Too 🔥 To Brandle*, etc. Might need to tone it down.
-* Add a picture to about? Me and the boys in nica?
-* Use real apostrophes, not just the straight quote in my text. It makes a difference.
+* Angle the cite on about page...
 * Find or make a way to suggest polish... a can of polish? a rag? Put this on the right side of the hero section.
 * For my rebrand, create a cool background image, a gradient with my logo svg. Perhaps it's possible to link it into the theme change! Or... make a prop that can be used for transparent imagery... and that could utilize the accent colors as a background color or background-image (gradient, etc)... Think of a hand holding a phone with a gradient background...
 * How to implement codepen pens... hero?
@@ -132,110 +100,21 @@ export default function Home() {
 		<div className={styles.home}>
 			<header className={cn(styles.section, styles.heroSection, styles.accentEdgeGrad)}>
 				<div className={cn(styles.containerGrid, styles.heroContent)}>
-					<h1 className={cn(styles.heroTitle, styles.breakoutXl)}>
+					{/* <h1 className={cn(styles.heroTitle, styles.breakoutXl)}>
 						Polish
 						<br />
 						<span className={styles.right}>
 							<span className={styles.altHeader}>that </span>Sh*t!
 						</span>
-					</h1>
-					{/* <h1 className={cn(styles.heroTitle, styles.breakoutXl)}>
-						For Teams
-						<br />
-						<span className={styles.altHeader}>that ❤️ the</span>
-						<br />
-						<span className={styles.right}>Extra Polish</span>
 					</h1> */}
-					{/* <h1 className={cn(styles.heroTitle, styles.breakoutXl)}>
+					<h1 className={cn(styles.heroTitle, styles.breakoutXl)}>
 						I make
 						<br />
 						<span className={styles.altHeader}>Dope, 🔥, Rizz</span>
 						<br />
 						<span className={styles.right}>products</span>
-					</h1> */}
+					</h1>
 					<div className={styles.heroDetails}>
-						{/* breathes life */}
-						{/* brings digital concepts to life with flair */}
-						{/* brings design systems to life with flair */}
-						{/* infuses life into interactive realities*/}
-						{/* with creativity and precision */}
-						{/* creates vibrant digital experiences */}
-						{/* bring your design system to life */}
-
-						{/* provides ease, consistency, efficiency */}
-
-						{/* <p className={styles.heroSubtitle}>
-							Hey there! I'm Ryan Brandle, a Design Engineer that helps teams build exceptional experiences. Welcome to
-							my 100% custom crafted portfolio site for you to explore.
-						</p> */}
-						{/* <p className={styles.heroSubtitle}>
-							Hey there! I'm Ryan Brandle, a Design Engineer that helps teams build exceptional experiences. This site
-							was 100% custom designed & developed for you to explore.
-						</p>
-						<p className={styles.heroSubtitle}>
-							Hey there! I'm Ryan Brandle, a Design Engineer that helps teams build exceptional experiences. This site
-							was 100% custom designed & developed for you to explore - so dive in!
-						</p>
-						<p className={styles.heroSubtitle}>
-							Hey there! I'm Ryan Brandle, a Design Engineer who helps teams build exceptional experiences. I 100%
-							designed & developed this site for you to explore — so dive in!
-						</p> */}
-
-						{/* <p className={styles.heroSubtitle}>
-							Welcome to the custom crafted portfolio site of me, Ryan Brandle, a Design Engineer who empowers teams to
-							build exceptional experiences.
-						</p> */}
-
-						{/* <p className={styles.heroSubtitle}>
-							This is the 100% custom crafted portfolio site of Ryan&nbsp;Brandle, a Design Engineer who transforms
-							ideas into engaging experiences. (typical, boring)
-						</p> */}
-						{/* <p className={styles.heroSubtitle}>
-							This is the 100% custom crafted portfolio site of Ryan&nbsp;Brandle, a Design Engineer who blends
-							creativity with technology to create vibrant digital experiences.
-						</p> */}
-						{/* <p className={styles.heroSubtitle}>
-							Welcome to the custom crafted portfolio site of me, Ryan&nbsp;Brandle, a Design Engineer who brings design
-							systems to life.
-						</p> */}
-						{/* <p className={styles.heroSubtitle}>
-							This is the 100% custom crafted portfolio site of Ryan&nbsp;Brandle, a Design Engineer who empowers
-							product and development teams with dynamic design systems. (wordy, but good)
-						</p> */}
-						{/* <p className={styles.heroSubtitle}>
-							Welcome to Ryan&nbsp;Brandle's custom portfolio—where design systems come alive and teams build awesome
-							stuff. Enjoy the ride!
-						</p> */}
-						{/* <p className={styles.heroSubtitle}>
-							This is the 100% custom crafted portfolio site of Ryan&nbsp;Brandle, a Design Engineer who crafts systems
-							that empower users to build exceptional interfaces. (empowering users... not bad, very long)
-						</p> */}
-						{/* <p className={styles.heroSubtitle}>
-							who transforms design systems into tools for creative empowerment. (not bad, confusing?)
-						</p>
-						<p className={styles.heroSubtitle}>
-							who makes tools for creative empowerment. (eh? or quality design execution)
-						</p>
-						<p className={styles.heroSubtitle}>who makes tools for quality design execution.</p>
-						<p className={styles.heroSubtitle}>...empower users to craft quality experiences. (not bad)</p>
-						<p className={styles.heroSubtitle}>
-							...empower product and development teams to craft quality experiences. (not bad)
-						</p>
-						<p className={styles.heroSubtitle}>who brings design systems to life.</p> */}
-						{/* <p className={styles.heroSubtitle}>
-							who brings design systems to life, empowering creators everywhere... empowering product teams to build
-							exceptional interfaces... (like the concept, long and confusing)
-						</p> */}
-						{/* <p className={styles.heroSubtitle}>
-							who empowers product/development teams to build exceptional interfaces... (like the concept, how to make
-							it shorter?)
-						</p>
-						<p className={styles.heroSubtitle}>
-							who creates design systems for crafting quality digital experiences. (too wordy)
-						</p> */}
-						{/* <p className={styles.heroSubtitle}>
-							Hey there. I'm Ryan Brandle, a Design Engineer who makes&nbsp;tools to build exceptional experiences.
-						</p> */}
 						<p className={styles.heroSubtitle}>
 							Hey there. I'm Ryan Brandle, a Design Engineer who empowers teams to build exceptional experiences.
 						</p>
@@ -245,32 +124,10 @@ export default function Home() {
 								<em>can</em>
 							</strong>{' '}
 							be sexy, and to make your search for the right fit a little easier. With over a decade of experience
-							uniting design and code, I create accessible, intuitive, and scalable interfaces. I love advancing design
-							to life[EDIT] and pushing the boundaries of front-end craftsmanship. 🚀&nbsp;Let’s build something epic
-							together. <a href='mailto:hello@example.com'>Say hi anytime!</a>
+							uniting design and code, I create accessible, intuitive, and scalable interfaces. I enjoy advancing design
+							to life and pushing the boundaries of front-end craftsmanship. 🚀&nbsp;
+							<a href='mailto:hello@example.com'>Let's build</a> something epic together!
 						</p>
-						{/* <p className={styles.heroCopy}>
-							This site was designed and built by me — to show that design systems{' '}
-							<strong>
-								<em>can</em>
-							</strong>{' '}
-							be sexy, and to make your search for the right fit a little easier. With over a decade of experience
-							uniting design and code, I create accessible, intuitive, and scalable interfaces. Specializing in design,
-							UX/UI engineering, and front-end development, I love advancing design to life and pushing the boundaries
-							of front-end craftsmanship. 🚀&nbsp;Let’s build something epic together.{' '}
-							<a href='mailto:hello@example.com'>Say hi anytime!</a>
-						</p> */}
-						{/* <p className={styles.heroCopy}>
-							This site was designed and built by me — to show that design systems{' '}
-							<strong>
-								<em>can</em>
-							</strong>{' '}
-							be sexy, and to make your search for the right fit a little easier. I bring over 15 years of experience
-							simplifying the relationship between design and code to create accessible, scalable, and easy-to-use
-							interfaces. Specializing in design, UX/UI engineering, and front-end development, I love bringing design
-							to life and pushing the boundaries of front-end craftsmanship. 🚀&nbsp;Let’s build something great
-							together. <a href='mailto:hello@example.com'>Say hi anytime!</a>
-						</p> */}
 					</div>
 				</div>
 				<div className={cn(styles.containerGrid, styles.scrollContainer)}>
@@ -376,16 +233,6 @@ export default function Home() {
 				<section className={styles.projectSection}>
 					<div className={styles.containerGrid}>
 						<div className={styles.multiSectionHeader}>
-							{/* <h2 className={styles.dabbleTitle}>
-								<span className={styles.altFont}>Dabblings</span>
-								<br />
-								on the side
-							</h2> */}
-							{/* <h2 className={styles.dabbleTitle}>
-								<span className={styles.altFont}>Creative Ventures</span>
-								<br />
-								on the side
-							</h2> */}
 							<h2 className={styles.dabbleTitle}>
 								<span className={styles.altFont}>Dabbling</span>
 								<br />
@@ -461,14 +308,6 @@ export default function Home() {
 						{/* <Callout
 							title='For product teams that love the extra polish!'
 							body='Discover the difference that quality design can make with a reliable system.'
-							iconAccent
-							size='lg'
-						>
-							<IconCodePen />
-						</Callout> */}
-						{/* <Callout
-							title='For product teams that love the extra polish!'
-							body='I make flexible, modular systems that are easy to use. I make flexible, modular systems that are easy to use. I make flexible, modular systems that are easy to use.'
 							iconAccent
 							size='lg'
 						>
