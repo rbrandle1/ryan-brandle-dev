@@ -19,3 +19,14 @@
 		transform: rotateZ(360deg);
 	}
 }
+
+@keyframes marquee {
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		// transform: translateX(calc(-100% - var(--gap)));
+		transform: translateX(calc(-100% - 0.25lh));
+	}
+}

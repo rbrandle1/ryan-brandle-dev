@@ -23,10 +23,10 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 * For my rebrand, create a cool background image, a gradient with my logo svg. Perhaps it's possible to link it into the theme change! Or... make a prop that can be used for transparent imagery... and that could utilize the accent colors as a background color or background-image (gradient, etc)... Think of a hand holding a phone with a gradient background...
 * How to implement codepen pens... hero?
 * Make all pages with images and text content.
-* Finalize all home text and hero text.
 * 
 * 
 * MUST FIX localstorage issue as it is causing a build error before performance audits can be done. Before a build can be made.
+* Nullify or disregard the bug?
 * https://developer.chrome.com/blog/new-in-devtools-133/?utm_source=devtools#perf-image-delivery
 * Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
 * https://medium.com/@jun55tsuno/optimize-your-nextjs-app-e4fe9718fc8a
@@ -96,23 +96,33 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 */
 
 export default function Home() {
+	const marqueeText = 'Rad, Dope, 🔥, Rizzed-Up, Lit, Fresh, Steezy, Sick, Juiced, Crispy, Boss,';
+
 	return (
 		<div className={styles.home}>
 			<header className={cn(styles.section, styles.heroSection, styles.accentEdgeGrad)}>
 				<div className={cn(styles.containerGrid, styles.heroContent)}>
 					{/* <h1 className={cn(styles.heroTitle, styles.breakoutXl)}>
-						Polish
-						<br />
-						<span className={styles.right}>
-							<span className={styles.altHeader}>that </span>Sh*t!
-						</span>
-					</h1> */}
-					<h1 className={cn(styles.heroTitle, styles.breakoutXl)}>
 						I make
-						<br />
-						<span className={styles.altHeader}>Dope, 🔥, Rizz</span>
-						<br />
+						<div className={styles.marquee}>
+							<span className={cn(styles.altHeader, styles.marqueeText)}>{marqueeText}</span>
+							<span className={cn(styles.altHeader, styles.marqueeText)} aria-hidden>
+								{marqueeText}
+							</span>
+						</div>
 						<span className={styles.right}>products</span>
+					</h1> */}
+
+					{/* TODO, MAKE THIS WORK AS BREAKOUT FULL */}
+					<h1 className={cn(styles.heroTitle)}>
+						<span className={styles.breakoutXl}>I make</span>
+						<span className={cn(styles.marquee, styles.breakoutFull)}>
+							<span className={cn(styles.altHeader, styles.marqueeText)}>{marqueeText}</span>
+							<span className={cn(styles.altHeader, styles.marqueeText)} aria-hidden>
+								{marqueeText}
+							</span>
+						</span>
+						<span className={cn(styles.right, styles.breakoutXl)}>products</span>
 					</h1>
 					<div className={styles.heroDetails}>
 						<p className={styles.heroSubtitle}>
