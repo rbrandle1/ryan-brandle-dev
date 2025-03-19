@@ -252,21 +252,27 @@
 
 .vertTextTopLeft {
 	@include typography.display;
-	top: -39px;
+	top: -36px;
 	left: -16px;
+	line-height: 0.95;
 	opacity: 0.03;
 
 	@include viewport.breakpoint(md, max) {
 		font-size: var(--text-3xl);
 		top: -21px;
 	}
+
+	div {
+		transform: rotate(14deg);
+	}
 }
 
 .vertTextBottomRight {
 	@include typography.display;
 	transform: rotate(180deg);
-	right: -16px;
-	bottom: -39px;
+	bottom: -36px;
+	right: -47px;
+	line-height: 0.95;
 	opacity: 0.03;
 
 	@include viewport.breakpoint(md, max) {
@@ -276,6 +282,10 @@
 
 	@include viewport.breakpoint(sm, max) {
 		display: none;
+	}
+
+	div {
+		transform: rotate(14deg);
 	}
 }
 

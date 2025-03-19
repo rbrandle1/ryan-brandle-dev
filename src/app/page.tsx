@@ -115,14 +115,14 @@ export default function Home() {
 
 					{/* TODO, MAKE THIS WORK AS BREAKOUT FULL */}
 					<h1 className={cn(styles.heroTitle)}>
-						<span className={styles.breakoutXl}>I make</span>
+						<span className={styles.breakoutXl}>I Code</span>
 						<span className={cn(styles.marquee, styles.breakoutFull)}>
 							<span className={cn(styles.altHeader, styles.marqueeText)}>{marqueeText}</span>
 							<span className={cn(styles.altHeader, styles.marqueeText)} aria-hidden>
 								{marqueeText}
 							</span>
 						</span>
-						<span className={cn(styles.right, styles.breakoutXl)}>products</span>
+						<span className={cn(styles.right, styles.breakoutXl)}>Design Systems</span>
 					</h1>
 					<div className={styles.heroDetails}>
 						<p className={styles.heroSubtitle}>
@@ -134,8 +134,8 @@ export default function Home() {
 								<em>can</em>
 							</strong>{' '}
 							be sexy, and to make your search for the right fit a little easier. With over a decade of experience
-							uniting design and code, I create accessible, intuitive, and scalable interfaces. I enjoy advancing design
-							to life and pushing the boundaries of front-end craftsmanship. 🚀&nbsp;
+							uniting design and code, I create accessible, intuitive, and scalable interfaces. I enjoy coding design to
+							life and pushing the boundaries of front-end craftsmanship. 🚀&nbsp;
 							<a href='mailto:hello@example.com'>Let's build</a> something epic together!
 						</p>
 					</div>
