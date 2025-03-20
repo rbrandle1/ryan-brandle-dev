@@ -94,12 +94,22 @@
 	--flow-space: 2lh;
 
 	@include typography.p(sm);
-	padding-inline-start: 0.8lh;
+	padding-inline-start: 24px; //optical alignment
 	margin-block-start: var(--flow-space);
 	line-height: var(--line-height-xs);
-	border-left: solid 4px;
 	max-width: var(--optimal-line-length-base);
 	text-wrap: balance;
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		border-left: solid 4px;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		transform: skewX(-11deg);
+	}
 
 	.bold {
 		font-weight: var(--font-weight-bold);

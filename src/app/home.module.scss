@@ -27,8 +27,6 @@
 }
 
 .marquee {
-	// --duration: 240s;
-	// --gap: 1lh;
 	display: flex;
 	gap: 0.25lh;
 	transform: skewY(-1deg);
@@ -36,9 +34,6 @@
 
 .marqueeText {
 	flex-shrink: 0;
-	// display: flex;
-	// align-items: center;
-	// justify-content: space-around;
 	min-width: 100%;
 	animation: marquee 240s linear infinite;
 
