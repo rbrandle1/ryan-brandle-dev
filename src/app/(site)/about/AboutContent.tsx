@@ -24,13 +24,13 @@ export const AboutContent = () => (
 					<strong>to craft high-quality experiences that people love, trust, and enjoy using!</strong>
 				</p>
 				<p>
-					I bring that <em>design eye</em> every dev team loves, coding interfaces that aren't just functional—they're
-					polished, intuitive, and scalable. With a strong focus on accessibility, design quality, and UX, I blend
-					attention to detail with clean, thoughtful execution.
+					I bring that <em>design eye</em> dev teams love, coding interfaces that aren't just functional—they're
+					polished, intuitive, and scalable. With a strong focus on UX, accessibility, and design quality, I blend
+					attention to detail with thoughtful execution.
 				</p>
 				<p>
-					Outside of work, I'm a proud dad raising two wild boys with my amazing wife. We love camping, cycling, and
-					getting lost on off-the-path adventures.
+					I'm a proud dad. When I'm not at my desk, I spend my time raising my two wild boys with my amazing wife. We
+					love camping, cycling, and getting lost on off-the-path adventures.
 				</p>
 				<p>Interested in partnering? I'd love to hear from you!</p>
 				<Button className={styles.button} href={'mailto:hello@example.com'}>

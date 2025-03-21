@@ -17,7 +17,8 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 /* Todo:
 * * CONTENT CREATION:
 * Make all pages with images and text content.
-* For my rebrand, create a cool background image, a gradient with my logo svg. Perhaps it's possible to link it into the theme change! Or... make a prop that can be used for transparent imagery... and that could utilize the accent colors as a background color or background-image (gradient, etc)... Think of a hand holding a phone with a gradient background...
+* Should I make the hero image for my brand page swap images out based on the theme? Or use 1 transparent image and use the accent colors as a background color or background-image (gradient, etc)?... background is probably more performant.
+* For my rebrand, Need something clean and intriguing. Can't be collage of elements because it blends in too will with the real site around it. Create a BlackWhite visual image... like my inspiration of Printworks... Large words as typgraphical visuals... repeating words like roller, large swath/strip of color... perhaps a transparent png with the background being the accent color... create a cool background image, a gradient with my logo svg. Perhaps it's possible to link it into the theme change! Or... make a prop that can be used for transparent imagery... and that could utilize the accent colors as a background color or background-image (gradient, etc)... Think of a hand holding a phone with a gradient background...
 * How to implement codepen pens... hero?
 * 
 * Do not come across as too arrogant. Polish, So fresh, So clean, Too 🔥 To Brandle*, etc. Might need to tone it down.
@@ -58,12 +59,12 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 
 * FUTURE CLEANUP AND EXPLORATION:
 * Find icons for callouts... modular, polish (sparkle), etc. Do after content? Boop these? Or should these remain static as they are not interactive?
-* Make a paint roller instead of droplet? Maybe use boop to scroll it down with a path, then back up as if painting?
+* Make Boop to scroll it down with a path, then back up as if painting?
 * Add Boop to hover states! Also make the boop apply to the entire logo like previously tried. Can also do it to an svg arrow on the link arrows. https://www.joshwcomeau.com/react/boop/
 * Animate the paint droplet to drop down and fade out, rinse and repeat.
-* ??? Make Mosaic component HOLD. Might not need this.
+* Make Mosaic component HOLD. Might not need this.
+* Maybe make the multi image component a simple off the page carousel... just an overflow, nothing crazy.
 * Add backup words for each FeaturedProject or article page footers.
-* Consider ditching yellow. It doesn't work well with light colors. if want to keep, maybe put the icon in a yellow circle or something and make the svg black.
 	
 
 
@@ -90,10 +91,13 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 	* Getting components like MultiImage to match the breakout portion of the grid. Very challenging. Got it close but not perfect. It was also challenging to get the caption to work in the most semantic and accessible way possible. Ideally I'd have a single figure with multiple images inside it and a single caption for the entire figure. Since I'm using a different grid layout on desktop, I had to make a choice to use aria-labelledby on each figure to reference a single caption being used on one of the images. Would like to come back to this.
 	* accentEdge gradient compromised the animation transition color.
 	* Performance optimization: Using the next/image component with blurDataURL and placeholder. I had to use static image imports for the blurDataURL to work, which takes away the benefit of using the relative path for the src by default. However, the blurDataURL will automatically generate the blurDataURL for the image which is helpful especially for hero images. I ultimately decided to move my images into an assets folder to make it easier to manage the blurDataURL and import my images from there.
+	* When creating my branded site images, I had to make a decision to make it theme specific where the unique logo is used, vs a black/white agnostic version of the logo and lean into theme color variables instead.
 */
 
 export default function Home() {
-	const marqueeText = 'Steezy, Dope, 🔥, Boss, Crispy, Rad, Sick,';
+	const marqueeText = 'Crispy, Rad, 🔥, Boss, Steezy, Dope, Sick,';
+	// const marqueeText = 'Crispy, Dope, 🔥, Boss, Steezy, Rad, Sick,';
+	// const marqueeText = 'Steezy, Dope, 🔥, Boss, Crispy, Rad, Sick,';
 
 	return (
 		<div className={styles.home}>
