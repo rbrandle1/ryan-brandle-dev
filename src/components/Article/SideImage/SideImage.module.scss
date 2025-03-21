@@ -53,12 +53,12 @@
 	position: relative;
 	border-radius: var(--radius-default);
 	background-color: var(--surface-neutral);
-	aspect-ratio: 3 / 2;
+	aspect-ratio: var(--ratio-landscape);
 	overflow: hidden;
 	user-select: none;
 
 	@include viewport.breakpoint(sm) {
-		aspect-ratio: 2 / 3;
+		aspect-ratio: var(--ratio-portrait);
 	}
 
 	img {

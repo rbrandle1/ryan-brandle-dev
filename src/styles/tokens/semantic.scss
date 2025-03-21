@@ -5,6 +5,7 @@
 /* 
   * These tokens assign and give meaning to the primitive tokens and should be used often. This is the theme layer to our token system. This file includes the following:
     * Viewport
+    * Ratios
     * Spacing
     * Radius
     * Timing
@@ -31,6 +32,11 @@
 	--viewport-lg: var(--p-viewport-5);
 	--viewport-xl: var(--p-viewport-6);
 	--viewport-2xl: var(--p-viewport-7);
+
+	/* RATIOS */
+	--ratio-landscape: var(--p-ratio-1);
+	--ratio-portrait: var(--p-ratio-2);
+	--ratio-square: var(--p-ratio-3);
 
 	/* SPACING */
 	--space-3xs: var(--p-space-0125);

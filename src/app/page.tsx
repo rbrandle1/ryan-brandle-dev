@@ -20,6 +20,7 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 * Should I make the hero image for my brand page swap images out based on the theme? Or use 1 transparent image and use the accent colors as a background color or background-image (gradient, etc)?... background is probably more performant.
 * For my rebrand, Need something clean and intriguing. Can't be collage of elements because it blends in too will with the real site around it. Create a BlackWhite visual image... like my inspiration of Printworks... Large words as typgraphical visuals... repeating words like roller, large swath/strip of color... perhaps a transparent png with the background being the accent color... create a cool background image, a gradient with my logo svg. Perhaps it's possible to link it into the theme change! Or... make a prop that can be used for transparent imagery... and that could utilize the accent colors as a background color or background-image (gradient, etc)... Think of a hand holding a phone with a gradient background...
 * How to implement codepen pens... hero?
+* reduce gap space when caption is present in featured project component, .5lh?.
 * 
 * Do not come across as too arrogant. Polish, So fresh, So clean, Too 🔥 To Brandle*, etc. Might need to tone it down.
 * 

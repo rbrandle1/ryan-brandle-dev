@@ -50,7 +50,7 @@
 	place-items: center;
 	padding-inline: var(--space-xl);
 	// background-color: var(--surface-neutral);
-	aspect-ratio: 3 / 2;
+	aspect-ratio: var(--ratio-landscape);
 	overflow: hidden;
 	user-select: none;
 

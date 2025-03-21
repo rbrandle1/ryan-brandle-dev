@@ -5,6 +5,7 @@
 /* 
   * These are the most basic, raw token values to be used in Semantic Tokens. These should be used rarely, if at all when writing custom component CSS. Tier 2 should primarily be used. This file includes the following:
     * Viewport
+    * Ratios
     * Font
     * Text Size
     * Line Height
@@ -24,6 +25,11 @@
 	--p-viewport-5: 1200px;
 	--p-viewport-6: 1440px;
 	--p-viewport-7: 1600px;
+
+	/* RATIOS */
+	--p-ratio-1: 4 / 3;
+	--p-ratio-2: 3 / 4;
+	--p-ratio-3: 1 / 1;
 
 	/* FONT */
 	--p-font-display: 'Oswald', sans-serif;
