@@ -11,6 +11,20 @@ import SideImage from '@/components/Article/SideImage/SideImage';
 import MultiImage from '@/components/Article/MultiImage/MultiImage';
 import styles from '../projects.module.scss';
 
+// 1. overview
+// 							2. rebrand goals/concept statement, to suggest, etc.
+// 							3. research and discovery, inspiration, etc... old rock posters, big, bold, loud, simple, clean, a return and focus to my roots of graphic design, simple but powerful typography, use of space and foundational colors.
+// 							4. design foundations, typography, color, icons. Theme system, explorations... decision over light/dark or not due to high contrast nature of the brand. Accessibility considerations for typography, color, animations.
+// 							5. design token creation
+// 							6. component creation and mockups, logo, elements, etc.
+// 							7. code architecture and strategy... what tools to use, react app or static site and why (try something new, opportunity to learn more and dabble with the latest tech), state management, data structures and modularization of types, imagery, styles, etc. what do I want to accomplish, showcase, highlight... showcase token and theme modes, showcase work in detail, but also with performance in mind...
+// 							8. code tokens and create coded system, layout typography and other foundations to explore and adjust if necessary from the design tokens.
+// 							9. started building out the app, components, pages, etc. Ensuring responsive and accessible code.
+// 							10. optimization and performance audits and enhancements (animation rendering issues, image loading, etc), accessibility, and best practices.
+// 							11. Content generation, fleshing out remaining pages.
+// 							12. debugging, cleanup.... flickering and choppy animations, theme local storage errors, turbopack issues, etc. Oddities like how I had to import the hero image as a static image to get the blurDataURL to work. Animations were not rendering the way I wanted them to, so I had to force load my animations partial up front to get them to be rendered.
+// 							12. end results, lessons learned, fun explorations I used... lh upped my typography game, multiimage grid tactics, accent edge gradients, future exploration, shout outs, resources, etc.
+
 export const BrandContent = () => {
 	const searchParams = useSearchParams();
 	const fromSection = searchParams.get('from');
@@ -48,11 +62,7 @@ export const BrandContent = () => {
 							<br />
 							Problem
 						</h2>
-						<p>
-							As the web evolves, so do the expectations of users. Our client, a leading e-commerce platform, recognized
-							the need to revamp their online presence to better resonate with their target audience. This project aimed
-							to redefine their web branding, ensuring a cohesive visual identity across all digital touchpoints.
-						</p>
+						<p>content</p>
 					</div>
 				</section>
 			</div>
