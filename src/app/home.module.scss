@@ -179,7 +179,7 @@
 	padding-block: calc(var(--section-spacing) * 2);
 
 	@include viewport.breakpoint(sm) {
-		padding-block-start: calc(var(--section-spacing) * 1.5);
+		padding-block: calc(var(--section-spacing) * 1.5);
 	}
 }
 

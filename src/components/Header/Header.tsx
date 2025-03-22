@@ -28,7 +28,7 @@ const Header = () => {
 					</div>
 					<div className={styles.logoText}>
 						<div>Ryan Brandle</div>
-						<div>DEV + DES</div>
+						<div>DESIGN + ENGINEER</div>
 					</div>
 				</div>
 				<nav className={styles.navContainer}>
