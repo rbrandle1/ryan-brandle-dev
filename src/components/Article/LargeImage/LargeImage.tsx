@@ -9,6 +9,7 @@ interface LargeImageProps {
 	className?: string;
 	src: string | StaticImageData;
 	alt: string;
+	accentBg?: boolean;
 	caption?: string;
 	captionLeft?: boolean;
 	hasCaptionIcon?: boolean;
@@ -25,6 +26,7 @@ const LargeImage = ({
 	className,
 	src,
 	alt,
+	accentBg,
 	caption,
 	captionLeft,
 	hasCaptionIcon,
@@ -57,6 +59,7 @@ const LargeImage = ({
 						</div>
 					) : null}
 					<Image
+						className={accentBg ? styles.accentBg : undefined}
 						src={src}
 						alt={alt}
 						fill

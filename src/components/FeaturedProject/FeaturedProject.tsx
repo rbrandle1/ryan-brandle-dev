@@ -16,11 +16,12 @@ interface FeaturedProjectProps {
 	imgRight?: boolean;
 	imgSrc: string | StaticImageData;
 	imgAlt: string;
+	accentBg?: boolean;
 	hasCropIcon?: boolean;
 	logo?: React.ReactNode;
 	title: string | React.ReactNode;
 	metaTags?: string[];
-	description: string;
+	description: string | React.ReactNode;
 	buttonText: string;
 	href: string;
 }
@@ -32,6 +33,7 @@ const FeaturedProject = ({
 	imgRight,
 	imgSrc,
 	imgAlt,
+	accentBg,
 	hasCropIcon,
 	logo,
 	title,
@@ -61,6 +63,7 @@ const FeaturedProject = ({
 					<div className={styles.image}>
 						{logo ? <div className={styles.logoContainer}>{logo}</div> : null}
 						<Image
+							className={accentBg ? styles.accentBg : undefined}
 							src={imgSrc}
 							alt={imgAlt}
 							fill

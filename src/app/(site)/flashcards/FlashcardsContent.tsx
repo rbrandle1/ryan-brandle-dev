@@ -2,7 +2,7 @@
 
 import cn from 'classnames';
 import { useSearchParams } from 'next/navigation';
-import { flashcardsImages } from '@/data/images';
+import { flashcards as data } from '@/data';
 import Link from 'next/link';
 import Callout from '@/components/Callout/Callout';
 import LargeImage from '@/components/Article/LargeImage/LargeImage';
@@ -30,9 +30,9 @@ export const FlashcardsContent = () => {
 					<div className={styles.containerGrid}>
 						<LargeImage
 							className={cn(styles.imageContainer, styles.flowOffset, styles.heroImage)}
-							src={flashcardsImages.hero.src}
-							alt={flashcardsImages.hero.alt}
-							metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'React']}
+							src={data.images.hero.src}
+							alt={data.images.hero.alt}
+							metaTags={data.tags}
 							isHero
 							placeholder='blur'
 							priority

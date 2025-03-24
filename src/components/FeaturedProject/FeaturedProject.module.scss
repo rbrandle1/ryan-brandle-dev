@@ -106,6 +106,10 @@
 				transform: scale(1.02);
 			}
 		}
+
+		&.accentBg {
+			background-color: var(--color-accent);
+		}
 	}
 }
 

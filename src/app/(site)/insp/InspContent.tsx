@@ -2,7 +2,7 @@
 
 import cn from 'classnames';
 import { useSearchParams } from 'next/navigation';
-import { inspImages } from '@/data/images';
+import { insp as data } from '@/data';
 import Link from 'next/link';
 import Callout from '@/components/Callout/Callout';
 import LargeImage from '@/components/Article/LargeImage/LargeImage';
@@ -32,13 +32,13 @@ export const InspContent = () => {
 					<div className={styles.containerGrid}>
 						<LargeImage
 							className={cn(styles.imageContainer, styles.flowOffset, styles.heroImage)}
-							src={inspImages.hero.src}
-							alt={inspImages.hero.alt}
-							caption={inspImages.hero.caption}
+							src={data.images.hero.src}
+							alt={data.images.hero.alt}
+							caption={data.images.hero.caption}
 							logo={<IconLogoInsp />}
 							logoOffset='-5%'
 							logoMaxWidth='380px'
-							metaTags={['Branding', 'UX/UI', 'HTML', 'CSS', 'JS', 'React', 'Storybook']}
+							metaTags={data.tags}
 							isHero
 							placeholder='blur'
 							priority
@@ -61,9 +61,9 @@ export const InspContent = () => {
 						</p>
 						<LargeImage
 							className={cn(styles.imageContainer, styles.flowOffset, styles.breakout)}
-							src={inspImages.hero.src}
-							alt={inspImages.hero.alt}
-							caption={inspImages.hero.caption}
+							src={data.images.hero.src}
+							alt={data.images.hero.alt}
+							caption={data.images.hero.caption}
 							captionLeft
 						/>
 						<p>
@@ -118,9 +118,9 @@ export const InspContent = () => {
 						</p>
 						<LargeImage
 							className={cn(styles.imageContainer, styles.flowOffset, styles.breakout)}
-							src={inspImages.hero.src}
-							alt={inspImages.hero.alt}
-							caption={inspImages.hero.caption}
+							src={data.images.hero.src}
+							alt={data.images.hero.alt}
+							caption={data.images.hero.caption}
 						/>
 						<p>
 							Consolidation of the brand identity was crucial in establishing a cohesive visual language across all
@@ -134,8 +134,8 @@ export const InspContent = () => {
 						</p>
 						<div className={cn(styles.sideImagesContainer, styles.flowOffset)}>
 							<SideImage
-								imgSrc={inspImages.hero.src}
-								imgAlt={inspImages.hero.alt}
+								imgSrc={data.images.hero.src}
+								imgAlt={data.images.hero.alt}
 								caption='Example of discovery process, wire-framing, journey mapping.'
 								imgRight
 							>
@@ -151,7 +151,7 @@ export const InspContent = () => {
 									solution that not only met but exceeded the client's expectations.
 								</p>
 							</SideImage>
-							<SideImage imgSrc={inspImages.hero.src} imgAlt={inspImages.hero.alt}>
+							<SideImage imgSrc={data.images.hero.src} imgAlt={data.images.hero.alt}>
 								<h3 className={styles.h3}>Consolidate</h3>
 								<p>
 									TESTING SIDEIMAGE LEFT The outcome of this project was a testament to the power of effective branding
@@ -165,9 +165,9 @@ export const InspContent = () => {
 								</p>
 							</SideImage>
 							<SideImage
-								imgSrc={inspImages.hero.src}
-								imgAlt={inspImages.hero.alt}
-								caption={inspImages.hero.caption}
+								imgSrc={data.images.hero.src}
+								imgAlt={data.images.hero.alt}
+								caption={data.images.hero.caption}
 								imgRight
 							>
 								<h3 className={styles.h3}>Implement</h3>
@@ -196,14 +196,14 @@ export const InspContent = () => {
 						</p>
 						<div className={cn(styles.multiImagesContainer, styles.flowOffset, styles.breakout)}>
 							<MultiImage
-								imgSrc1={inspImages.hero.src}
-								imgAlt1={inspImages.hero.alt}
-								imgSrc2={inspImages.hero.src}
-								imgAlt2={inspImages.hero.alt}
-								imgSrc3={inspImages.hero.src}
-								imgAlt3={inspImages.hero.alt}
-								imgSrc4={inspImages.hero.src}
-								imgAlt4={inspImages.hero.alt}
+								imgSrc1={data.images.hero.src}
+								imgAlt1={data.images.hero.alt}
+								imgSrc2={data.images.hero.src}
+								imgAlt2={data.images.hero.alt}
+								imgSrc3={data.images.hero.src}
+								imgAlt3={data.images.hero.alt}
+								imgSrc4={data.images.hero.src}
+								imgAlt4={data.images.hero.alt}
 								textRight
 								caption='Example of discovery process, wire-framing, journey mapping.'
 							>
@@ -222,14 +222,14 @@ export const InspContent = () => {
 								</p>
 							</MultiImage>
 							<MultiImage
-								imgSrc1={inspImages.hero.src}
-								imgAlt1={inspImages.hero.alt}
-								imgSrc2={inspImages.hero.src}
-								imgAlt2={inspImages.hero.alt}
-								imgSrc3={inspImages.hero.src}
-								imgAlt3={inspImages.hero.alt}
-								imgSrc4={inspImages.hero.src}
-								imgAlt4={inspImages.hero.alt}
+								imgSrc1={data.images.hero.src}
+								imgAlt1={data.images.hero.alt}
+								imgSrc2={data.images.hero.src}
+								imgAlt2={data.images.hero.alt}
+								imgSrc3={data.images.hero.src}
+								imgAlt3={data.images.hero.alt}
+								imgSrc4={data.images.hero.src}
+								imgAlt4={data.images.hero.alt}
 								caption='Example of discovery process, wire-framing, journey mapping.'
 							>
 								<h3 className={styles.h3}>
@@ -247,12 +247,12 @@ export const InspContent = () => {
 								</p>
 							</MultiImage>
 							<MultiImage
-								imgSrc1={inspImages.hero.src}
-								imgAlt1={inspImages.hero.alt}
-								imgSrc2={inspImages.hero.src}
-								imgAlt2={inspImages.hero.alt}
-								imgSrc3={inspImages.hero.src}
-								imgAlt3={inspImages.hero.alt}
+								imgSrc1={data.images.hero.src}
+								imgAlt1={data.images.hero.alt}
+								imgSrc2={data.images.hero.src}
+								imgAlt2={data.images.hero.alt}
+								imgSrc3={data.images.hero.src}
+								imgAlt3={data.images.hero.alt}
 								caption='Example of discovery process, wire-framing, journey mapping.'
 							>
 								<h3 className={styles.h3}>

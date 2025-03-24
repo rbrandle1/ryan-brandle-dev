@@ -2,7 +2,7 @@
 
 import cn from 'classnames';
 import { useSearchParams } from 'next/navigation';
-import { brandImages } from '@/data/images';
+import { brand as data } from '@/data';
 import Link from 'next/link';
 import Callout from '@/components/Callout/Callout';
 import LargeImage from '@/components/Article/LargeImage/LargeImage';
@@ -49,10 +49,11 @@ export const BrandContent = () => {
 					<div className={styles.containerGrid}>
 						<LargeImage
 							className={cn(styles.imageContainer, styles.flowOffset, styles.heroImage)}
-							src={brandImages.hero.src}
-							alt={brandImages.hero.alt}
-							caption={brandImages.hero.caption}
-							metaTags={['Branding', 'UX/UI', 'HTML', 'CSS', 'JS', 'TS', 'React', 'NextJS']}
+							accentBg
+							src={data.images.hero.src}
+							alt={data.images.hero.alt}
+							caption={data.images.hero.caption}
+							metaTags={data.tags}
 							isHero
 							placeholder='blur'
 							priority

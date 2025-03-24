@@ -2,7 +2,7 @@
 
 import cn from 'classnames';
 import { useSearchParams } from 'next/navigation';
-import { comparisonImages } from '@/data/images';
+import { comparison as data } from '@/data';
 import Link from 'next/link';
 import Callout from '@/components/Callout/Callout';
 import LargeImage from '@/components/Article/LargeImage/LargeImage';
@@ -30,9 +30,9 @@ export const ComparisonContent = () => {
 					<div className={styles.containerGrid}>
 						<LargeImage
 							className={cn(styles.imageContainer, styles.flowOffset, styles.heroImage)}
-							src={comparisonImages.hero.src}
-							alt={comparisonImages.hero.alt}
-							metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'React', 'Storybook']}
+							src={data.images.hero.src}
+							alt={data.images.hero.alt}
+							metaTags={data.tags}
 							isHero
 							placeholder='blur'
 							priority

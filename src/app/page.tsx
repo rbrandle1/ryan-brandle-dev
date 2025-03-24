@@ -1,9 +1,9 @@
 import cn from 'classnames';
 import dynamic from 'next/dynamic';
+import { insp, cf, brand, flashcards, codepen, comparison } from '@/data';
 import Callout from '@/components/Callout/Callout';
 import IconCodePen from '@/components/Icons/IconCodePen';
 import IconLogoInsp from '@/components/Icons/IconLogoInsp';
-import { inspImages, cfImages, brandImages, flashcardsImages, codepenImages, comparisonImages } from '@/data/images';
 import styles from './home.module.scss';
 
 const FeaturedProject = dynamic(() => import('@/components/FeaturedProject/FeaturedProject'), {
@@ -16,13 +16,12 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 
 /* Todo:
 * * CONTENT CREATION:
+* How to set up data so it is modular... 
 * Make all pages with images and text content.
-* Should I make the hero image for my brand page swap images out based on the theme? Or use 1 transparent image and use the accent colors as a background color or background-image (gradient, etc)?... background is probably more performant.
-* For my rebrand, Need something clean and intriguing. Can't be collage of elements because it blends in too will with the real site around it. Create a BlackWhite visual image... like my inspiration of Printworks... Large words as typgraphical visuals... repeating words like roller, large swath/strip of color... perhaps a transparent png with the background being the accent color... create a cool background image, a gradient with my logo svg. Perhaps it's possible to link it into the theme change! Or... make a prop that can be used for transparent imagery... and that could utilize the accent colors as a background color or background-image (gradient, etc)... Think of a hand holding a phone with a gradient background...
 * How to implement codepen pens... hero?
 * reduce gap space when caption is present in featured project component, .5lh?.
 * 
-* Do not come across as too arrogant. Polish, So fresh, So clean, Too 🔥 To Brandle*, etc. Might need to tone it down.
+* Do not come across as too arrogant. Polish, So fresh, So clean, Too 🔥 To Brandle*, etc. Might need to tone it down. EXAMPLE: Update hero text to use more descriptive text like flexible, modular, accessible, etc... maybe mix in a few "fun" words.
 * 
 * MUST FIX localstorage issue as it is causing a build error before performance audits can be done. Before a build can be made.
 * Nullify or disregard the bug?
@@ -32,7 +31,6 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 * PERFORMANCE AUDIT. Use Chrome LightHouse. Double check cpu and performance/paint issues. If gradient is still causing performance issues, try the png. Maybe will-change is causing issues. jpg for images, png for snapshots. hero under 200kb, thumbnails under 30kb. NEXT JS SHOULD OPTIMIZE ALREADY.
 * Check reduced motion settings.
 * Check screen reader settings.
-* Would help meta tags are correct... might help to put in data.
 
 
 
@@ -97,6 +95,7 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 
 export default function Home() {
 	const marqueeText = 'Crispy, Rad, 🔥, Boss, Steezy, Dope, Sick,';
+	// const marqueeText = 'Crispy, Rad, 🔥, Intuitive, Scalable, Fun,';
 	// const marqueeText = 'Crispy, Dope, 🔥, Boss, Steezy, Rad, Sick,';
 	// const marqueeText = 'Steezy, Dope, 🔥, Boss, Crispy, Rad, Sick,';
 
@@ -162,10 +161,11 @@ export default function Home() {
 						<FeaturedProject
 							id='brand'
 							className={styles.breakoutXl}
-							caption={brandImages.hero.caption}
-							imgSrc={brandImages.hero.src}
-							imgAlt={brandImages.hero.alt}
+							caption={brand.images.hero.caption}
+							imgSrc={brand.images.hero.src}
+							imgAlt={brand.images.hero.alt}
 							hasCropIcon
+							accentBg
 							title={
 								<>
 									<span className={styles.altFont}>New Site,</span>
@@ -176,7 +176,7 @@ export default function Home() {
 									</span>
 								</>
 							}
-							metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'TS', 'React', 'NextJS', 'Figma']}
+							metaTags={brand.tags}
 							description='My own component-based design system built from the ground up, rooted in semantic, accessible code and a total self rebrand to boot — exploring the latest techniques and loving every minute!'
 							buttonText='Explore'
 							href='/brand?from=brand'
@@ -184,14 +184,14 @@ export default function Home() {
 						<FeaturedProject
 							id='insp'
 							className={styles.breakoutXl}
-							imgSrc={inspImages.hero.src}
-							imgAlt={inspImages.hero.alt}
-							caption={inspImages.hero.caption}
+							imgSrc={insp.images.hero.src}
+							imgAlt={insp.images.hero.alt}
+							caption={insp.images.hero.caption}
 							hasCropIcon
 							imgRight
 							logo={<IconLogoInsp />}
 							title='The Inspirato Design System'
-							metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'TS', 'React', 'NextJS', 'Storybook']}
+							metaTags={insp.tags}
 							description={
 								<>
 									A large-scale initiative to unify brand, UX, and UI strategy across departments and codebases. Built
@@ -205,9 +205,9 @@ export default function Home() {
 						<FeaturedProject
 							id='cf'
 							className={styles.breakoutXl}
-							imgSrc={cfImages.hero.src}
-							imgAlt={cfImages.hero.alt}
-							caption={cfImages.hero.caption}
+							imgSrc={cf.images.hero.src}
+							imgAlt={cf.images.hero.alt}
+							caption={cf.images.hero.caption}
 							hasCropIcon
 							title={
 								<>
@@ -218,7 +218,7 @@ export default function Home() {
 									System
 								</>
 							}
-							metaTags={['UX/UI', 'Branding', 'HTML', 'CSS', 'Figma']}
+							metaTags={cf.tags}
 							description='An adaptable system with a multi-mode token approach, unifying UI for design, development, and&nbsp;marketing content teams.'
 							buttonText='Explore'
 							href='/cf?from=cf'
@@ -249,8 +249,8 @@ export default function Home() {
 						<div className={styles.projectCardContainer}>
 							<ProjectCard
 								id='flashcards'
-								imgSrc={flashcardsImages.hero.src}
-								imgAlt={flashcardsImages.hero.alt}
+								imgSrc={flashcards.images.hero.src}
+								imgAlt={flashcards.images.hero.alt}
 								title={
 									<>
 										Accessible Flashcards{' '}
@@ -259,31 +259,31 @@ export default function Home() {
 										</span>
 									</>
 								}
-								metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'React']}
+								metaTags={flashcards.tags}
 								description='Inspired by the challenges faced by a loved one with dyslexia, this app was designed to support children (and parents) facing similar struggles. Kids can personalize their experience to match how they learn best, making math both engaging and fun.'
 								buttonText='Read more'
 								href='/flashcards?from=flashcards'
 							/>
 							<ProjectCard
 								id='codepen'
-								imgSrc={codepenImages.hero.src}
-								imgAlt={codepenImages.hero.alt}
+								imgSrc={codepen.images.hero.src}
+								imgAlt={codepen.images.hero.alt}
 								title='CodePen Explorations'
-								metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'Animation']}
+								metaTags={codepen.tags}
 								description='A mix of my own CodePen experiments — exploring new techniques, animations, and general code tinkering.'
 								buttonText='Read more'
 								href='/codepen?from=codepen'
 							/>
 							<ProjectCard
 								id='comparison-cards'
-								imgSrc={comparisonImages.hero.src}
-								imgAlt={comparisonImages.hero.alt}
+								imgSrc={comparison.images.hero.src}
+								imgAlt={comparison.images.hero.alt}
 								title={
 									<>
 										Comparison Cards <span className={styles.altFont}>with</span> CSS Grid
 									</>
 								}
-								metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'React', 'Storybook']}
+								metaTags={comparison.tags}
 								description={
 									<>
 										Dive deep into a unique CSS Grid solution that helped prospective people compare products and choose

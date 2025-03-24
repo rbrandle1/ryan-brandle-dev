@@ -3,7 +3,7 @@
 import cn from 'classnames';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
-import { codepenImages } from '@/data/images';
+import { codepen as data } from '@/data';
 import Callout from '@/components/Callout/Callout';
 import LargeImage from '@/components/Article/LargeImage/LargeImage';
 import IconLogoInsp from '@/components/Icons/IconLogoInsp';
@@ -28,9 +28,9 @@ export const CodepenContent = () => {
 					<div className={styles.containerGrid}>
 						<LargeImage
 							className={cn(styles.imageContainer, styles.flowOffset, styles.heroImage)}
-							src={codepenImages.hero.src}
-							alt={codepenImages.hero.alt}
-							metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'Animation']}
+							src={data.images.hero.src}
+							alt={data.images.hero.alt}
+							metaTags={data.tags}
 							isHero
 							placeholder='blur'
 							priority
