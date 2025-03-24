@@ -22,7 +22,7 @@ export const FlashcardsContent = () => {
 					<h1 className={styles.h1}>
 						Accessible Flashcards <span className={styles.altFont}>for</span> Kids
 					</h1>
-					<div className={styles.subhead}>Example subhead</div>
+					<div className={styles.subhead}>{data.text.descriptionShort}</div>
 				</div>
 			</header>
 			<div data-section='dark'>

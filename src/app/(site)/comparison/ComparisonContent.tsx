@@ -22,7 +22,7 @@ export const ComparisonContent = () => {
 					<h1 className={styles.h1}>
 						Comparison Cards <span className={styles.altFont}>with</span> CSS Grid
 					</h1>
-					<div className={styles.subhead}>example subhead</div>
+					<div className={styles.subhead}>{data.text.descriptionShort}</div>
 				</div>
 			</header>
 			<div data-section='dark'>

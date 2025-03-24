@@ -19,8 +19,8 @@ export const CodepenContent = () => {
 		<article className={styles.page}>
 			<header className={cn(styles.heroSection, styles.accentEdgeGrad)}>
 				<div className={styles.containerGrid}>
-					<h1 className={styles.h1}>Codepen Explorations</h1>
-					<div className={styles.subhead}>Example subhead</div>
+					<h1 className={styles.h1}>{data.text.title}</h1>
+					<div className={styles.subhead}>{data.text.description}</div>
 				</div>
 			</header>
 			<div data-section='dark'>

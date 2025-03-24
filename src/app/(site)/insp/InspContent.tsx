@@ -22,9 +22,7 @@ export const InspContent = () => {
 					<h1 className={styles.h1}>
 						Creation <span className={styles.altFont}>&amp;</span> Growth of the Inspirato Design System
 					</h1>
-					<div className={styles.subhead}>
-						Preparing a scalable design system for the future of Inspirato's Luxury Travel products.
-					</div>
+					<div className={styles.subhead}>{data.text.descriptionShort}</div>
 				</div>
 			</header>
 			<div data-section='dark'>

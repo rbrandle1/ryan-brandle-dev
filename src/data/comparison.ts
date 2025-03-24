@@ -1,7 +1,14 @@
 import heroImg from '@/images/comparison/hero.png';
 
 export const data = {
-	tags: ['UX/UI', 'HTML', 'CSS', 'JS', 'React', 'Storybook'],
+	text: {
+		title: 'Comparison Cards with CSS Grid',
+		description: {
+			__html:
+				'Dive deep into a unique CSS Grid solution that helped people compare and choose the right product. Originally published on the <em>Inspirato Technology Blog</em>.',
+		},
+		descriptionShort: 'A unique CSS Grid solution that helped people compare and choose the right product.',
+	},
 	images: {
 		hero: {
 			src: heroImg,
@@ -13,4 +20,5 @@ export const data = {
 		// 	caption: 'Creation & Growth of the Inspirato Design System',
 		// }
 	},
+	tags: ['UX/UI', 'HTML', 'CSS', 'JS', 'React', 'Storybook'],
 };

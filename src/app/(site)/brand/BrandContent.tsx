@@ -41,7 +41,7 @@ export const BrandContent = () => {
 							<span className={styles.altFont}>&amp;</span>&nbsp;So&nbsp;Clean
 						</span>
 					</h1>
-					<div className={styles.subhead}>Example subhead</div>
+					<div className={styles.subhead}>{data.text.descriptionShort}</div>
 				</div>
 			</header>
 			<div data-section='dark'>

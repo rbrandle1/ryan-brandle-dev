@@ -22,7 +22,7 @@ export const CfContent = () => {
 					<h1 className={styles.h1}>
 						CableFinder Rebrand <span className={styles.altFont}>&amp;</span> Token System
 					</h1>
-					<div className={styles.subhead}>Example subhead</div>
+					<div className={styles.subhead}>{data.text.descriptionShort}</div>
 				</div>
 			</header>
 			<div data-section='dark'>

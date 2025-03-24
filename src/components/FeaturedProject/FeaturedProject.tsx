@@ -21,7 +21,7 @@ interface FeaturedProjectProps {
 	logo?: React.ReactNode;
 	title: string | React.ReactNode;
 	metaTags?: string[];
-	description: string | React.ReactNode;
+	description: string | { __html: string };
 	buttonText: string;
 	href: string;
 }
@@ -84,7 +84,12 @@ const FeaturedProject = ({
 					</Link>
 					{metaTags ? <MetaTags items={metaTags} iconAccent /> : null}
 				</header>
-				<p className={styles.description}>{description}</p>
+				<p
+					className={styles.description}
+					{...(typeof description === 'object' && '__html' in description
+						? { dangerouslySetInnerHTML: description }
+						: { children: description })}
+				/>
 				<Button className={styles.button} href={href} ariaLabel={`Read more about ${title}`}>
 					{buttonText}
 				</Button>

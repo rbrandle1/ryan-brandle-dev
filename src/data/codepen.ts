@@ -1,7 +1,11 @@
 import heroImg from '@/images/codepen/hero.png';
 
 export const data = {
-	tags: ['UX/UI', 'HTML', 'CSS', 'JS', 'Animation'],
+	text: {
+		title: 'Codepen Explorations',
+		description:
+			'A mix of my own CodePen experiments — exploring new techniques, animations, and general code tinkering.',
+	},
 	images: {
 		hero: {
 			src: heroImg,
@@ -13,4 +17,5 @@ export const data = {
 		// 	caption: 'Creation & Growth of the Inspirato Design System',
 		// }
 	},
+	tags: ['UX/UI', 'HTML', 'CSS', 'JS', 'Animation'],
 };

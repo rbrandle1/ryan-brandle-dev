@@ -14,7 +14,7 @@ interface ProjectCardProps {
 	logo?: React.ReactNode;
 	title: string | React.ReactNode;
 	metaTags?: string[];
-	description: string | React.ReactNode;
+	description: string | { __html: string };
 	buttonText: string;
 	href: string;
 }
@@ -54,7 +54,12 @@ const ProjectCard = ({
 					</Link>
 					{metaTags ? <MetaTags items={metaTags} iconAccent /> : null}
 				</header>
-				<p className={styles.description}>{description}</p>
+				<p
+					className={styles.description}
+					{...(typeof description === 'object' && '__html' in description
+						? { dangerouslySetInnerHTML: description }
+						: { children: description })}
+				/>
 				<Link className={styles.button} href={href} aria-label={`Read more about ${title}`}>
 					{buttonText}&nbsp;&rarr;
 				</Link>

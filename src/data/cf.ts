@@ -1,7 +1,15 @@
 import heroImg from '@/images/cf/hero.jpg';
 
 export const data = {
-	tags: ['UX/UI', 'Branding', 'HTML', 'CSS', 'Figma'],
+	text: {
+		title: 'CableFinder Rebrand & Token System',
+		description: {
+			__html:
+				'An adaptable system with a multi-mode token approach, unifying UI for design, development, and&nbsp;marketing content teams.',
+		},
+		descriptionShort:
+			'An adaptable system with a multi-mode token approach, unifying UI for design, development, and marketing content teams.',
+	},
 	images: {
 		hero: {
 			src: heroImg,
@@ -14,4 +22,5 @@ export const data = {
 		// 	caption: 'Creation & Growth of the Inspirato Design System',
 		// }
 	},
+	tags: ['UX/UI', 'Branding', 'HTML', 'CSS', 'Figma'],
 };

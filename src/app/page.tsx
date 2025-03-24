@@ -16,7 +16,7 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 
 /* Todo:
 * * CONTENT CREATION:
-* How to set up data so it is modular... 
+* Make headline and subheadline as data? 
 * Make all pages with images and text content.
 * How to implement codepen pens... hero?
 * reduce gap space when caption is present in featured project component, .5lh?.
@@ -161,11 +161,6 @@ export default function Home() {
 						<FeaturedProject
 							id='brand'
 							className={styles.breakoutXl}
-							caption={brand.images.hero.caption}
-							imgSrc={brand.images.hero.src}
-							imgAlt={brand.images.hero.alt}
-							hasCropIcon
-							accentBg
 							title={
 								<>
 									<span className={styles.altFont}>New Site,</span>
@@ -176,39 +171,34 @@ export default function Home() {
 									</span>
 								</>
 							}
+							description={brand.text.description}
 							metaTags={brand.tags}
-							description='My own component-based design system built from the ground up, rooted in semantic, accessible code and a total self rebrand to boot — exploring the latest techniques and loving every minute!'
+							imgSrc={brand.images.hero.src}
+							imgAlt={brand.images.hero.alt}
+							caption={brand.images.hero.caption}
 							buttonText='Explore'
 							href='/brand?from=brand'
+							hasCropIcon
+							accentBg
 						/>
 						<FeaturedProject
 							id='insp'
 							className={styles.breakoutXl}
+							title={insp.text.title}
+							description={insp.text.description}
+							metaTags={insp.tags}
 							imgSrc={insp.images.hero.src}
 							imgAlt={insp.images.hero.alt}
-							caption={insp.images.hero.caption}
-							hasCropIcon
-							imgRight
 							logo={<IconLogoInsp />}
-							title='The Inspirato Design System'
-							metaTags={insp.tags}
-							description={
-								<>
-									A large-scale initiative to unify brand, UX, and UI strategy across departments and codebases. Built
-									for consistency, usability, flexibility, and scalability, <em>IDS</em> empowered teams to deliver the
-									high-quality experience expected of a luxury travel brand.
-								</>
-							}
+							caption={insp.images.hero.caption}
 							buttonText='Explore'
 							href='/insp?from=insp'
+							hasCropIcon
+							imgRight
 						/>
 						<FeaturedProject
 							id='cf'
 							className={styles.breakoutXl}
-							imgSrc={cf.images.hero.src}
-							imgAlt={cf.images.hero.alt}
-							caption={cf.images.hero.caption}
-							hasCropIcon
 							title={
 								<>
 									CableFinder Rebrand{' '}
@@ -218,10 +208,14 @@ export default function Home() {
 									System
 								</>
 							}
+							description={cf.text.description}
 							metaTags={cf.tags}
-							description='An adaptable system with a multi-mode token approach, unifying UI for design, development, and&nbsp;marketing content teams.'
+							imgSrc={cf.images.hero.src}
+							imgAlt={cf.images.hero.alt}
+							caption={cf.images.hero.caption}
 							buttonText='Explore'
 							href='/cf?from=cf'
+							hasCropIcon
 						/>
 					</div>
 				</section>
@@ -249,8 +243,6 @@ export default function Home() {
 						<div className={styles.projectCardContainer}>
 							<ProjectCard
 								id='flashcards'
-								imgSrc={flashcards.images.hero.src}
-								imgAlt={flashcards.images.hero.alt}
 								title={
 									<>
 										Accessible Flashcards{' '}
@@ -259,37 +251,34 @@ export default function Home() {
 										</span>
 									</>
 								}
+								description={flashcards.text.description}
 								metaTags={flashcards.tags}
-								description='Inspired by the challenges faced by a loved one with dyslexia, this app was designed to support children (and parents) facing similar struggles. Kids can personalize their experience to match how they learn best, making math both engaging and fun.'
+								imgSrc={flashcards.images.hero.src}
+								imgAlt={flashcards.images.hero.alt}
 								buttonText='Read more'
 								href='/flashcards?from=flashcards'
 							/>
 							<ProjectCard
 								id='codepen'
+								title={codepen.text.title}
+								description={codepen.text.description}
+								metaTags={codepen.tags}
 								imgSrc={codepen.images.hero.src}
 								imgAlt={codepen.images.hero.alt}
-								title='CodePen Explorations'
-								metaTags={codepen.tags}
-								description='A mix of my own CodePen experiments — exploring new techniques, animations, and general code tinkering.'
 								buttonText='Read more'
 								href='/codepen?from=codepen'
 							/>
 							<ProjectCard
 								id='comparison-cards'
-								imgSrc={comparison.images.hero.src}
-								imgAlt={comparison.images.hero.alt}
 								title={
 									<>
 										Comparison Cards <span className={styles.altFont}>with</span> CSS Grid
 									</>
 								}
+								description={comparison.text.description}
 								metaTags={comparison.tags}
-								description={
-									<>
-										Dive deep into a unique CSS Grid solution that helped prospective people compare products and choose
-										the right option for them. Originally published on the <em>Inspirato Technology Blog</em>.
-									</>
-								}
+								imgSrc={comparison.images.hero.src}
+								imgAlt={comparison.images.hero.alt}
 								buttonText='Read more'
 								href='/comparison?from=comparison'
 							/>
