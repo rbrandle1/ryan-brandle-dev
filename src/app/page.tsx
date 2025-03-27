@@ -16,7 +16,6 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 
 /* Todo:
 * * CONTENT CREATION:
-* Make headline and subheadline as data? 
 * Make all pages with images and text content.
 * How to implement codepen pens... hero?
 * reduce gap space when caption is present in featured project component, .5lh?.
@@ -88,14 +87,18 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 	* Utilizing lh values for a typographical based spacing system when appropriate.
 	* 
 	* Getting components like MultiImage to match the breakout portion of the grid. Very challenging. Got it close but not perfect. It was also challenging to get the caption to work in the most semantic and accessible way possible. Ideally I'd have a single figure with multiple images inside it and a single caption for the entire figure. Since I'm using a different grid layout on desktop, I had to make a choice to use aria-labelledby on each figure to reference a single caption being used on one of the images. Would like to come back to this.
+	* 
 	* accentEdge gradient compromised the animation transition color.
+	* 
 	* Performance optimization: Using the next/image component with blurDataURL and placeholder. I had to use static image imports for the blurDataURL to work, which takes away the benefit of using the relative path for the src by default. However, the blurDataURL will automatically generate the blurDataURL for the image which is helpful especially for hero images. I ultimately decided to move my images into an assets folder to make it easier to manage the blurDataURL and import my images from there.
+	* 
 	* When creating my branded site images, I had to make a decision to make it theme specific where the unique logo is used, vs a black/white agnostic version of the logo and lean into theme color variables instead.
 */
 
 export default function Home() {
 	const marqueeText = 'Crispy, Rad, 🔥, Boss, Steezy, Dope, Sick,';
 	// const marqueeText = 'Crispy, Rad, 🔥, Intuitive, Scalable, Fun,';
+	// const marqueeText = 'Crispy, Simple, 🔥, Intuitive, Scalable, Fun,';
 	// const marqueeText = 'Crispy, Dope, 🔥, Boss, Steezy, Rad, Sick,';
 	// const marqueeText = 'Steezy, Dope, 🔥, Boss, Crispy, Rad, Sick,';
 

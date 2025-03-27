@@ -1,0 +1,7 @@
+/* SASS/SCSS Module */
+.button {
+	color: blue;
+	&:hover {
+		color: darkblue;
+	}
+}
