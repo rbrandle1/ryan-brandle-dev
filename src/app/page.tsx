@@ -16,9 +16,9 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 
 /* Todo:
 * * CONTENT CREATION:
-* Add a third inspiration image... a sketch?.
 * Make all pages with images and text content.
 * How to implement codepen pens... hero?
+* Remove all odd formatted spacing, apostrophes, etc. from all text content in article pages. 
 * reduce gap space when caption is present in featured project component, .5lh?.
 * 
 * Update header line heights... especially large headlines. Knock down to a 1. Make h2's, etc a 1.1? Prob need to adjust altFont to 0.8 or something like that.

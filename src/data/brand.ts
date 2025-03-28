@@ -1,4 +1,5 @@
 import heroImg from '@/images/brand/hero.png';
+import articleImgObj from '@/images/brand/brand-article-objectives.jpg';
 import articleImgAd1 from '@/images/brand/brand-article-ad.jpg';
 import articleImgAd2 from '@/images/brand/brand-article-ad-2.jpg';
 import articleImgPw from '@/images/brand/brand-article-prntwrks.jpg';
@@ -21,6 +22,11 @@ export const data = {
 			src: heroImg,
 			alt: 'Visual Identity System for ryanbrandle.dev',
 			caption: 'Rebranded Visual Identity System',
+		},
+		objectives: {
+			src: articleImgObj,
+			alt: 'Concept and objective ideation',
+			caption: 'Concept and objective ideation.',
 		},
 		ad1: {
 			src: articleImgAd1,

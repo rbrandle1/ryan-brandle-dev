@@ -74,38 +74,47 @@ export const BrandContent = () => {
 							With a fresh perspective, I set out to build an experience that unites my design roots with my engineering
 							expertise. To create a system that reflects who I am—both as a person and a developer.
 						</p>
-						<h3 className={styles.h3}>
-							Goals{' '}
-							<span className={styles.noWrap}>
-								<span className={styles.altFont}>&amp;</span>&nbsp;Objectives
-							</span>
-						</h3>
-						<p>To keep the project focused, I established a set of goals, parameters, and objectives.</p>
-						<p>
-							<strong>Primary Goal</strong>
-							<br />
-							To build a modular design system of <em>simple, reusable ingredients</em> that create a harmonious and
-							consistent user experience. One that's themeable, accessible, and aligned with modern web standards.
-						</p>
-						<p>
-							<strong>Objectives</strong>
-							<br />
-							My system aims to suggest:
-						</p>
-						<ul className={styles.ul}>
-							<li>A reflection of my roots in design and visual communication</li>
-							<li>The fundamental principles of traditional design theory</li>
-							<li>A strong sense of space, contrast, rhythm and harmony</li>
-							<li>A simple yet impactful use of color</li>
-							<li>Beautiful bold typography</li>
-						</ul>
-						<p>
-							And of course, I wanted to infuse it with personality—my humor, attention to detail, love of music and
-							inspiring design.
-						</p>
+						<div className={styles.sideImagesContainer}>
+							<SideImage
+								imgSrc={data.images.objectives.src}
+								imgAlt={data.images.objectives.alt}
+								caption={data.images.objectives.caption}
+								imgRight
+							>
+								<h3 className={styles.h3}>
+									Goals{' '}
+									<span className={styles.noWrap}>
+										<span className={styles.altFont}>&amp;</span>&nbsp;Objectives
+									</span>
+								</h3>
+								<p>To keep the project focused, I established a set of goals, parameters, and objectives.</p>
+								<p>
+									<strong>Primary Goal</strong>
+									<br />
+									To build a modular design system of <em>simple, reusable ingredients</em> that create a harmonious and
+									consistent user experience. One that's themeable, accessible, and aligned with modern web standards.
+								</p>
+								<p>
+									<strong>Objectives</strong>
+									<br />
+									My system aims to suggest:
+								</p>
+								<ul className={styles.ul}>
+									<li>A reflection of my roots in design and visual communication</li>
+									<li>The fundamental principles of traditional design theory</li>
+									<li>A strong sense of space, contrast, rhythm and harmony</li>
+									<li>A simple yet impactful use of color</li>
+									<li>Beautiful bold typography</li>
+								</ul>
+								<p>
+									And of course, I wanted to infuse it with personality—my humor, attention to detail, love of music and
+									inspiring design.
+								</p>
+							</SideImage>
+						</div>
 						<Callout
 							className={cn(styles.callout, styles.flowOffset)}
-							title='A focus on the core ingredients that make a system functional and intuitive.'
+							title='Simple ingredients, endless possibilities.'
 							titleAccent
 						/>
 						<h3 className={styles.h3}>
@@ -115,22 +124,18 @@ export const BrandContent = () => {
 							</span>
 						</h3>
 						<p>
-							I started gathering inspiration and exploring ideas that fit these parameters to the <em>smallest</em>{' '}
-							ingredient.
+							Drawing inspiration from past experiences and some of my favorite brands, I began exploring ideas that
+							embodied these parameters to the <em>smallest</em> detail.
 						</p>
 						<p>
-							This included font and color explorations, accessibility validation, theme and mode strategies, visual
-							rhythm and tone experimentation, animation concepts, creation of icons, logos, discovery boards, and more!
+							This included everything from typography, color, rhythm and spacing to logos, theme concepts, and
+							accessibility validation. I wanted to challenge myself by creating a system rooted in black and
+							white—where limited colors push creativity.
 						</p>
 						<p>
-							I started gathering inspiration from my past, my favorite brands, designers, and artists. I challenged
-							myself to create a system rooted in black and white. Working with limited colors pushes creativity in
-							unexpected ways.
-						</p>
-						<p>
-							For one concept, I drew inspiration from childhood memories flipping through film ads in the newspaper. I
-							loved how exciting each design had to be to deliver the essence of the movie while competing for attention
-							in an over-crowded information nightmare. All in a one color print.
+							One concept sparked from childhood memories of flipping through newspaper cinema ads. Each design had to
+							fight for attention in a sea of black and white newsprint, yet somehow capture the movie's essence in a
+							single color. Pure chaos, but beautiful in its own way.
 						</p>
 						<div className={cn(styles.multiImagesContainer, styles.breakout)}>
 							<MultiImage
@@ -143,9 +148,9 @@ export const BrandContent = () => {
 								caption='Newspaper ads, Printworks London / Only'
 							>
 								<p>
-									The newspaper concept reminded me of the <em>Printworks</em> brand, an old favorite of mine. This
-									dance venue's identity honored the building's heritage as an old printing factory—bold and striking
-									with a clear respect for traditional design principles.
+									The topic of newspapers reminded me of the <em>Printworks London</em> brand, an old favorite of mine.
+									This dance venue's identity honored the building's heritage as an old printing factory—bold and
+									striking with a clear respect for traditional design principles.
 								</p>
 								<p>
 									Their work resonated with my own history, my love for design and dance music making it a perfect
@@ -153,12 +158,6 @@ export const BrandContent = () => {
 								</p>
 							</MultiImage>
 						</div>
-						{/* <Callout
-								className={styles.callout}
-								title='Engineer seeking fun team of developers who love ux and design.'
-								size='sm'
-								titleAccent
-							/> */}
 						<div className={styles.sideImagesContainer}>
 							<SideImage
 								imgSrc={data.images.color.src}
@@ -174,27 +173,23 @@ export const BrandContent = () => {
 									Exploration
 								</h4>
 								<p>
-									I studied design when print was a primary force in the industry—a time when the CMYK color system
-									ruled modern printing presses. Together, cyan, magenta, yellow, and key (black) are the core ink
-									ingredients that create a wide spectrum of colors visible to the human eye.
+									I studied design when print was the primary force in the industry and the CMYK color system ruled
+									modern printing presses. Together, cyan, magenta, yellow, and key (black) formed the core ink
+									ingredients that create a wide spectrum of colors visible to the human eye.
 								</p>
 								<p>
-									This concept fit perfectly with my objectives to make use of simple, impactful, foundational colors.
-									They are the building blocks that, when combined, create a massive variety of options—
-									<em>just like the design system itself</em>.
+									This concept aligned perfectly with my goal of simple, modular ingredients—fundamental colors serving
+									as building blocks for endless possibilities, <em>just like the design system itself</em>.
 								</p>
 								<p>
-									Not to mention these 'neon' colors were used heavily in the 80's and early 90's to make some of the{' '}
-									<strong>raddest ski gear ever created</strong>.
+									Not to mention these 'neon' colors were used heavily in the early 90's to make{' '}
+									<strong>the most radical ski gear ever</strong>. Purple was added to provide more opportunity for
+									theme exploration.
 								</p>
 								<p>
-									I added a third color, purple, because provided more opportunity to explore accent themes—and because
-									I can't get away from purple. I <em>love</em> purple.
-								</p>
-								<p>
-									In certain typographical situations, these colors do not pass WCAG accessibility validation, at least
-									to the degree I wanted for my site. However, when carefully applied as subtle accents to the bold
-									nature of a black and white system, they passed... with flying colors, heyoooo!&nbsp;🙌
+									In certain typographical situations, these colors did not pass WCAG accessibility validation. However,
+									when carefully applied as accents to the black and white system, they passed... with flying colors,
+									heyoooo!&nbsp;🙌
 								</p>
 							</SideImage>
 						</div>
@@ -213,56 +208,23 @@ export const BrandContent = () => {
 							>
 								<h4 className={styles.h4}>Finding the right font</h4>
 								<p>
-									The search for the perfect fonts began. The goal was to discover combinations with right boldness,
-									balance and rhythm. The usual questions filtered through...{' '}
-									<em>Serif or sans serif? What would work best to meet my project goals?</em>
+									The purpose of this experiment was to discover font combinations with the right boldness, balance and
+									rhythm.
 								</p>
 								<p>
-									Sans serifs are easy to read and considered more modern, while serifs bring a traditional elegance
-									that most sans serifs simply lack. Finding the right balance between the two was crucial. Too much
-									serif would strike a tone that Beethoven would enjoy.
+									The usual questions filtered through...{' '}
+									<em>Serif or sans serif? What would work best to meet my project goals?</em> Sans serif fonts are easy
+									to read and more modern, while serifs can bring a traditional elegance. Finding the right balance
+									between the two was critical.
 								</p>
 								<p>
-									After chopping through various fonts and combinations— carefully avoiding anything resembling a 90's
-									shampoo product—the solution emerged.
+									I explored various combinations, carefully avoiding anything resembling a 90's hair spray product.
 								</p>
 								<p>
-									The final approach anchored the primary font in a bold sans serif, with a serif for subtle accented
-									text, similar to my color strategy. Just enough to add visual excitement and emphasis.
+									The final approach was a bold sans serif to lead, with a subtle serif for accents—mirroring my color
+									strategy. Just enough to add visual excitement.
 								</p>
 							</MultiImage>
-							{/* <MultiImage
-								imgSrc1={data.images.article4.src}
-								imgAlt1={data.images.article4.alt}
-								imgSrc2={data.images.article5.src}
-								imgAlt2={data.images.article5.alt}
-								imgSrc3={data.images.article6.src}
-								imgAlt3={data.images.article6.alt}
-								imgSrc4={data.images.article7.src}
-								imgAlt4={data.images.article7.alt}
-								textRight
-								caption='Exploring combinations of fonts and color.'
-							>
-								<h4 className={styles.h4}>Finding the right font</h4>
-								<p>
-									The search for the perfect fonts began. The goal was boldness and spatial elegance to strike the right
-									tone and balance. The usual questions filtered through...{' '}
-									<em>Serif or sans serif? What would work best to meet my project goals?</em>
-								</p>
-								<p>
-									Sans serifs are easy to read and considered more modern, while serifs bring a traditional elegance
-									that most sans serifs simply lack. Finding the right balance between the two was crucial. Too much
-									serif would strike a tone that Beethoven would enjoy.
-								</p>
-								<p>
-									After chopping through various fonts and combinations— carefully avoiding anything resembling a 90's
-									shampoo product—the solution emerged.
-								</p>
-								<p>
-									The final approach anchored the primary font in a bold sans serif, with a serif for subtle accented
-									text, similar to my color strategy. Just enough to add visual excitement and emphasis.
-								</p>
-							</MultiImage> */}
 							<MultiImage
 								imgSrc1={data.images.hero.src}
 								imgAlt1={data.images.hero.alt}
@@ -303,10 +265,6 @@ export const BrandContent = () => {
 								</p>
 							</MultiImage>
 						</div>
-						{/* <p>
-							This included font and color explorations, accessibility validation, theme and mode strategies, visual
-							rhythm and tone experimentation, animation concepts, creation of icons, logos, discovery boards, and more!
-						</p> */}
 					</div>
 				</section>
 			</div>
