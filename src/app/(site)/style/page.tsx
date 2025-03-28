@@ -46,7 +46,7 @@ const TypographyExamples = () => {
 			<p className={styles.p}>
 				In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the profound
 				interconnectedness of all things.{' '}
-				<a href='http://www.b.com' className={styles.link}>
+				<a href='http://www.b.com' className={styles.link} target='_blank'>
 					Lorem ipsum dolor
 				</a>{' '}
 				sit amet, consectetur adipiscing elit, where quasars beam their enigmatic light across spacetime, and galaxies

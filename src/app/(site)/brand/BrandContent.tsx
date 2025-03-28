@@ -105,7 +105,7 @@ export const BrandContent = () => {
 						</p>
 						<Callout
 							className={cn(styles.callout, styles.flowOffset)}
-							title='I decided to focus on the core ingredients that make a system functional and easy to use.'
+							title='A focus on the core ingredients that make a system functional and intuitive.'
 							titleAccent
 						/>
 						<h3 className={styles.h3}>
@@ -115,95 +115,154 @@ export const BrandContent = () => {
 							</span>
 						</h3>
 						<p>
-							I began gathering inspiration and exploring ideas that fit my parameters down to the <em>smallest</em>{' '}
+							I started gathering inspiration and exploring ideas that fit these parameters to the <em>smallest</em>{' '}
 							ingredient.
 						</p>
 						<p>
 							This included font and color explorations, accessibility validation, theme and mode strategies, visual
 							rhythm and tone experimentation, animation concepts, creation of icons, logos, discovery boards, and more!
 						</p>
-						<div className={cn(styles.sideImagesContainer, styles.flowOffset)}>
+						<p>
+							I started gathering inspiration from my past, my favorite brands, designers, and artists. I challenged
+							myself to create a system rooted in black and white. Working with limited colors pushes creativity in
+							unexpected ways.
+						</p>
+						<p>
+							For one concept, I drew inspiration from childhood memories flipping through film ads in the newspaper. I
+							loved how exciting each design had to be to deliver the essence of the movie while competing for attention
+							in an over-crowded information nightmare. All in a one color print.
+						</p>
+						<div className={cn(styles.multiImagesContainer, styles.breakout)}>
+							<MultiImage
+								imgSrc1={data.images.ad1.src}
+								imgAlt1={data.images.ad1.alt}
+								imgSrc2={data.images.prntwrks2.src}
+								imgAlt2={data.images.prntwrks2.alt}
+								imgSrc3={data.images.prntwrks.src}
+								imgAlt3={data.images.prntwrks.alt}
+								caption='Newspaper ads, Printworks London / Only'
+							>
+								<p>
+									The newspaper concept reminded me of the <em>Printworks</em> brand, an old favorite of mine. This
+									dance venue's identity honored the building's heritage as an old printing factory—bold and striking
+									with a clear respect for traditional design principles.
+								</p>
+								<p>
+									Their work resonated with my own history, my love for design and dance music making it a perfect
+									springboard for exploration.
+								</p>
+							</MultiImage>
+						</div>
+						{/* <Callout
+								className={styles.callout}
+								title='Engineer seeking fun team of developers who love ux and design.'
+								size='sm'
+								titleAccent
+							/> */}
+						<div className={styles.sideImagesContainer}>
 							<SideImage
-								imgSrc={data.images.hero.src}
-								imgAlt={data.images.hero.alt}
-								caption='Example of discovery process, wire-framing, journey mapping.'
+								imgSrc={data.images.color.src}
+								imgAlt={data.images.color.alt}
+								caption={data.images.color.caption}
 								imgRight
 							>
-								<h4 className={styles.h3}>Getting Inspired</h4>
-								<p>
-									about Printworks, big, bold, in your face rock posters, but done with taste… Black and White is hard
-									for a reason. I originally started back in the days when print design was dominant, so this touches on
-									that aspect of my life.
-								</p>
-								<p>[printworks, cmyk, printing press, etc…]</p>
-							</SideImage>
-						</div>
-						<h4 className={styles.h3}>
-							Font{' '}
-							<span className={styles.noWrap}>
-								<span className={styles.altFont}>&amp;</span>&nbsp;Color
-							</span>{' '}
-							Exploration
-						</h4>
-						<p>
-							For font… striking the right spacial system with rhythm and tone.mention accessibility considerations and
-							WCAG compliance, color and theme strategies… why black and white and how it was challenging. Include
-							decision over light/dark modes due to contrast already
-						</p>
-						<div className={cn(styles.multiImagesContainer, styles.flowOffset, styles.breakout)}>
-							{/* <MultiImage
-								imgSrc1={data.images.hero.src}
-								imgAlt1={data.images.hero.alt}
-								imgSrc2={data.images.hero.src}
-								imgAlt2={data.images.hero.alt}
-								imgSrc3={data.images.hero.src}
-								imgAlt3={data.images.hero.alt}
-								caption='Example of discovery process, wire-framing, journey mapping.'
-							>
-								<h4 className={styles.h3}>Get Inspired</h4>
-								<p>
-									About Printworks, big, bold, in your face rock posters, but done with taste… Black and White is hard
-									for a reason. I originally started back in the days when print design was dominant, so this touches on
-									that aspect of my life.
-								</p>
-								<p>[printworks, cmyk, printing press, etc…]</p>
-							</MultiImage> */}
-							<MultiImage
-								imgSrc1={data.images.hero.src}
-								imgAlt1={data.images.hero.alt}
-								imgSrc2={data.images.hero.src}
-								imgAlt2={data.images.hero.alt}
-								imgSrc3={data.images.hero.src}
-								imgAlt3={data.images.hero.alt}
-								imgSrc4={data.images.hero.src}
-								imgAlt4={data.images.hero.alt}
-								textRight
-								caption='Example of discovery process, wire-framing, journey mapping.'
-							>
-								{/* <h4 className={styles.h3}>
-									Font{' '}
+								<h4 className={styles.h3}>
+									Color{' '}
 									<span className={styles.noWrap}>
-										<span className={styles.altFont}>&amp;</span>&nbsp;Color
+										<span className={styles.altFont}>&amp;</span>&nbsp;Font
 									</span>{' '}
 									Exploration
-								</h4> */}
+								</h4>
 								<p>
-									about Printworks, big, bold, in your face rock posters, but done with taste… Black and White is hard
-									for a reason. I originally started back in the days when print design was dominant, so this touches on
-									that aspect of my life.
+									I studied design when print was a primary force in the industry—a time when the CMYK color system
+									ruled modern printing presses. Together, cyan, magenta, yellow, and key (black) are the core ink
+									ingredients that create a wide spectrum of colors visible to the human eye.
 								</p>
 								<p>
-									For font… striking the right spacial system with rhythm and tone.mention accessibility considerations
-									and WCAG compliance, color and theme strategies… why black and white and how it was challenging.
-									Include decision over light/dark modes due to contrast already
+									This concept fit perfectly with my objectives to make use of simple, impactful, foundational colors.
+									They are the building blocks that, when combined, create a massive variety of options—
+									<em>just like the design system itself</em>.
 								</p>
 								<p>
-									For font… striking the right spacial system with rhythm and tone.mention accessibility considerations
-									and WCAG compliance, color and theme strategies… why black and white and how it was challenging.
-									Include decision over light/dark modes due to contrast already
+									Not to mention these 'neon' colors were used heavily in the 80's and early 90's to make some of the{' '}
+									<strong>raddest ski gear ever created</strong>.
 								</p>
-								<p>[some text here with images to the right… or the 3 or 4 up if enough]</p>
+								<p>
+									I added a third color, purple, because provided more opportunity to explore accent themes—and because
+									I can't get away from purple. I <em>love</em> purple.
+								</p>
+								<p>
+									In certain typographical situations, these colors do not pass WCAG accessibility validation, at least
+									to the degree I wanted for my site. However, when carefully applied as subtle accents to the bold
+									nature of a black and white system, they passed... with flying colors, heyoooo!&nbsp;🙌
+								</p>
+							</SideImage>
+						</div>
+						<div className={cn(styles.multiImagesContainer, styles.flowOffset, styles.breakout)}>
+							<MultiImage
+								imgSrc1={data.images.font1.src}
+								imgAlt1={data.images.font1.alt}
+								imgSrc2={data.images.font2.src}
+								imgAlt2={data.images.font2.alt}
+								imgSrc3={data.images.font3.src}
+								imgAlt3={data.images.font3.alt}
+								imgSrc4={data.images.font4.src}
+								imgAlt4={data.images.font4.alt}
+								textRight
+								caption='Exploring combinations of fonts and color.'
+							>
+								<h4 className={styles.h4}>Finding the right font</h4>
+								<p>
+									The search for the perfect fonts began. The goal was to discover combinations with right boldness,
+									balance and rhythm. The usual questions filtered through...{' '}
+									<em>Serif or sans serif? What would work best to meet my project goals?</em>
+								</p>
+								<p>
+									Sans serifs are easy to read and considered more modern, while serifs bring a traditional elegance
+									that most sans serifs simply lack. Finding the right balance between the two was crucial. Too much
+									serif would strike a tone that Beethoven would enjoy.
+								</p>
+								<p>
+									After chopping through various fonts and combinations— carefully avoiding anything resembling a 90's
+									shampoo product—the solution emerged.
+								</p>
+								<p>
+									The final approach anchored the primary font in a bold sans serif, with a serif for subtle accented
+									text, similar to my color strategy. Just enough to add visual excitement and emphasis.
+								</p>
 							</MultiImage>
+							{/* <MultiImage
+								imgSrc1={data.images.article4.src}
+								imgAlt1={data.images.article4.alt}
+								imgSrc2={data.images.article5.src}
+								imgAlt2={data.images.article5.alt}
+								imgSrc3={data.images.article6.src}
+								imgAlt3={data.images.article6.alt}
+								imgSrc4={data.images.article7.src}
+								imgAlt4={data.images.article7.alt}
+								textRight
+								caption='Exploring combinations of fonts and color.'
+							>
+								<h4 className={styles.h4}>Finding the right font</h4>
+								<p>
+									The search for the perfect fonts began. The goal was boldness and spatial elegance to strike the right
+									tone and balance. The usual questions filtered through...{' '}
+									<em>Serif or sans serif? What would work best to meet my project goals?</em>
+								</p>
+								<p>
+									Sans serifs are easy to read and considered more modern, while serifs bring a traditional elegance
+									that most sans serifs simply lack. Finding the right balance between the two was crucial. Too much
+									serif would strike a tone that Beethoven would enjoy.
+								</p>
+								<p>
+									After chopping through various fonts and combinations— carefully avoiding anything resembling a 90's
+									shampoo product—the solution emerged.
+								</p>
+								<p>
+									The final approach anchored the primary font in a bold sans serif, with a serif for subtle accented
+									text, similar to my color strategy. Just enough to add visual excitement and emphasis.
+								</p>
+							</MultiImage> */}
 							<MultiImage
 								imgSrc1={data.images.hero.src}
 								imgAlt1={data.images.hero.alt}
@@ -216,7 +275,10 @@ export const BrandContent = () => {
 								caption='Example of discovery process, wire-framing, journey mapping.'
 							>
 								<h4 className={styles.h3}>Logo Exploration</h4>
-								<p>text here [ideation, concepts, good/bad/final, favicon]</p>
+								<p>
+									text here [ideation, concepts, mark, modularity and flexibility... color but also option for 1 color,
+									good/bad/final, favicon]
+								</p>
 							</MultiImage>
 							<MultiImage
 								imgSrc1={data.images.hero.src}
