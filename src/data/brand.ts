@@ -1,14 +1,18 @@
 import heroImg from '@/images/brand/hero.png';
-import articleImgObj from '@/images/brand/brand-article-objectives.jpg';
+import articleImgObj from '@/images/brand/brand-article-objectives-2.jpg';
 import articleImgAd1 from '@/images/brand/brand-article-ad.jpg';
 import articleImgAd2 from '@/images/brand/brand-article-ad-2.jpg';
 import articleImgPw from '@/images/brand/brand-article-prntwrks.jpg';
 import articleImgPw2 from '@/images/brand/brand-article-prntwrks-2.png';
-import articleImgColor from '@/images/brand/brand-article-color.png';
+import articleImgColor from '@/images/brand/brand-article-color-3.jpg';
 import articleImgFont1 from '@/images/brand/brand-article-font-1.png';
 import articleImgFont2 from '@/images/brand/brand-article-font-2.png';
 import articleImgFont3 from '@/images/brand/brand-article-font-3.png';
 import articleImgFont4 from '@/images/brand/brand-article-font-4.png';
+import articleImgLogo1 from '@/images/brand/brand-article-logo.jpg';
+import articleImgLogo2 from '@/images/brand/brand-article-logo-2.png';
+import articleImgLogo3 from '@/images/brand/brand-article-logo-3.png';
+import articleImgLogo4 from '@/images/brand/brand-article-logo-4.png';
 
 export const data = {
 	text: {
@@ -47,7 +51,7 @@ export const data = {
 		color: {
 			src: articleImgColor,
 			alt: 'Color palette for ryanbrandle.dev',
-			caption: 'CMYK + P color palette',
+			caption: "My 90's headband, CMYK + P color palette",
 		},
 		font1: {
 			src: articleImgFont1,
@@ -64,6 +68,22 @@ export const data = {
 		font4: {
 			src: articleImgFont4,
 			alt: 'Font exploration 4',
+		},
+		logo1: {
+			src: articleImgLogo1,
+			alt: 'Logo sketch ideation',
+		},
+		logo2: {
+			src: articleImgLogo2,
+			alt: 'Logo mock ideation',
+		},
+		logo3: {
+			src: articleImgLogo3,
+			alt: 'Final logo mockup',
+		},
+		logo4: {
+			src: articleImgLogo4,
+			alt: 'Favicon and single color logo mockup',
 		},
 	},
 	tags: ['UX/UI', 'HTML', 'CSS', 'JS', 'TS', 'React', 'NextJS', 'Figma'],

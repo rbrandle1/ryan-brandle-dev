@@ -19,8 +19,15 @@
 
 	// TYPOGRAPHY
 	.h1,
-	.h2 {
+	.h2,
+	.h3 {
 		max-width: var(--optimal-line-length-2xs);
+	}
+
+	.h4,
+	.h5,
+	.h6 {
+		max-width: var(--optimal-line-length-xs);
 	}
 
 	.h1 {
@@ -37,22 +44,18 @@
 
 	.h3 {
 		@include typography.headline(xl);
-		max-width: var(--optimal-line-length-xs);
 	}
 
 	.h4 {
 		@include typography.headline(lg);
-		max-width: var(--optimal-line-length-xs);
 	}
 
 	.h5 {
 		@include typography.headline(md);
-		max-width: var(--optimal-line-length-xs);
 	}
 
 	.h6 {
 		@include typography.headline(sm);
-		max-width: var(--optimal-line-length-xs);
 	}
 
 	p {

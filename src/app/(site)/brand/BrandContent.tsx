@@ -71,8 +71,8 @@ export const BrandContent = () => {
 							Solution
 						</h2>
 						<p>
-							With a fresh perspective, I set out to build an experience that unites my design roots with my engineering
-							expertise. To create a system that reflects who I am—both as a person and a developer.
+							With a fresh perspective, I set out to build an experience that unites my design roots with my engineering
+							expertise. To create a system that reflects who I am—both as a person and a developer.
 						</p>
 						<div className={styles.sideImagesContainer}>
 							<SideImage
@@ -87,12 +87,12 @@ export const BrandContent = () => {
 										<span className={styles.altFont}>&amp;</span>&nbsp;Objectives
 									</span>
 								</h3>
-								<p>To keep the project focused, I established a set of goals, parameters, and objectives.</p>
+								<p>To keep the project focused, I established a set of goals, parameters, and objectives.</p>
 								<p>
 									<strong>Primary Goal</strong>
 									<br />
-									To build a modular design system of <em>simple, reusable ingredients</em> that create a harmonious and
-									consistent user experience. One that's themeable, accessible, and aligned with modern web standards.
+									To build a modular design system of <em>simple, reusable ingredients</em> that create a harmonious and
+									consistent user experience. One that's themeable, accessible, and aligned with modern web standards.
 								</p>
 								<p>
 									<strong>Objectives</strong>
@@ -100,14 +100,14 @@ export const BrandContent = () => {
 									My system aims to suggest:
 								</p>
 								<ul className={styles.ul}>
-									<li>A reflection of my roots in design and visual communication</li>
-									<li>The fundamental principles of traditional design theory</li>
-									<li>A strong sense of space, contrast, rhythm and harmony</li>
-									<li>A simple yet impactful use of color</li>
+									<li>A reflection of my roots in design and visual communication</li>
+									<li>The fundamental principles of traditional design theory</li>
+									<li>A strong sense of space, contrast, rhythm and harmony</li>
+									<li>A simple yet impactful use of color</li>
 									<li>Beautiful bold typography</li>
 								</ul>
 								<p>
-									And of course, I wanted to infuse it with personality—my humor, attention to detail, love of music and
+									And of course, I wanted to infuse it with personality—my humor, attention to detail, love of music and
 									inspiring design.
 								</p>
 							</SideImage>
@@ -158,33 +158,26 @@ export const BrandContent = () => {
 								</p>
 							</MultiImage>
 						</div>
-						<div className={styles.sideImagesContainer}>
+						<div className={cn(styles.sideImagesContainer, styles.flowOffset)}>
 							<SideImage
 								imgSrc={data.images.color.src}
 								imgAlt={data.images.color.alt}
 								caption={data.images.color.caption}
 								imgRight
 							>
-								<h4 className={styles.h3}>
-									Color{' '}
-									<span className={styles.noWrap}>
-										<span className={styles.altFont}>&amp;</span>&nbsp;Font
-									</span>{' '}
-									Exploration
-								</h4>
+								<h4 className={styles.h3}>Retro Color Revival</h4>
 								<p>
-									I studied design when print was the primary force in the industry and the CMYK color system ruled
-									modern printing presses. Together, cyan, magenta, yellow, and key (black) formed the core ink
-									ingredients that create a wide spectrum of colors visible to the human eye.
+									I studied design when print dominated the industry and the CMYK color system was the standard.
+									Together, cyan, magenta, yellow, and key (black) formed the ingredients to create a wide spectrum of
+									colors visible to the human eye.
 								</p>
 								<p>
 									This concept aligned perfectly with my goal of simple, modular ingredients—fundamental colors serving
 									as building blocks for endless possibilities, <em>just like the design system itself</em>.
 								</p>
 								<p>
-									Not to mention these 'neon' colors were used heavily in the early 90's to make{' '}
-									<strong>the most radical ski gear ever</strong>. Purple was added to provide more opportunity for
-									theme exploration.
+									Purple was added to provide more opportunity for theme exploration. As an added bonus, these 'neon'
+									colors were used heavily in the early 90's to make <strong>the raddest ski gear ever</strong>.
 								</p>
 								<p>
 									In certain typographical situations, these colors did not pass WCAG accessibility validation. However,
@@ -199,14 +192,18 @@ export const BrandContent = () => {
 								imgAlt1={data.images.font1.alt}
 								imgSrc2={data.images.font2.src}
 								imgAlt2={data.images.font2.alt}
-								imgSrc3={data.images.font3.src}
-								imgAlt3={data.images.font3.alt}
-								imgSrc4={data.images.font4.src}
-								imgAlt4={data.images.font4.alt}
-								textRight
+								imgSrc3={data.images.font4.src}
+								imgAlt3={data.images.font4.alt}
+								imgSrc4={data.images.font3.src}
+								imgAlt4={data.images.font3.alt}
+								// textRight
 								caption='Exploring combinations of fonts and color.'
 							>
-								<h4 className={styles.h4}>Finding the right font</h4>
+								<h4 className={styles.h3}>
+									The
+									<br />
+									Type Hunt
+								</h4>
 								<p>
 									The purpose of this experiment was to discover font combinations with the right boldness, balance and
 									rhythm.
@@ -225,18 +222,25 @@ export const BrandContent = () => {
 									strategy. Just enough to add visual excitement.
 								</p>
 							</MultiImage>
+						</div>
+						<div className={cn(styles.multiImagesContainer, styles.flowOffset, styles.breakout)}>
 							<MultiImage
-								imgSrc1={data.images.hero.src}
-								imgAlt1={data.images.hero.alt}
-								imgSrc2={data.images.hero.src}
-								imgAlt2={data.images.hero.alt}
-								imgSrc3={data.images.hero.src}
-								imgAlt3={data.images.hero.alt}
-								imgSrc4={data.images.hero.src}
-								imgAlt4={data.images.hero.alt}
-								caption='Example of discovery process, wire-framing, journey mapping.'
+								imgSrc1={data.images.logo2.src}
+								imgAlt1={data.images.logo2.alt}
+								imgSrc2={data.images.logo1.src}
+								imgAlt2={data.images.logo1.alt}
+								imgSrc3={data.images.logo3.src}
+								imgAlt3={data.images.logo3.alt}
+								imgSrc4={data.images.logo4.src}
+								imgAlt4={data.images.logo4.alt}
+								caption='Logo ideation, final logos and favicons'
+								textRight
 							>
-								<h4 className={styles.h3}>Logo Exploration</h4>
+								<h4 className={styles.h3}>
+									Logo
+									<br />
+									Ideation
+								</h4>
 								<p>
 									text here [ideation, concepts, mark, modularity and flexibility... color but also option for 1 color,
 									good/bad/final, favicon]
