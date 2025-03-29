@@ -4,7 +4,7 @@ import articleImgAd1 from '@/images/brand/brand-article-ad.jpg';
 import articleImgAd2 from '@/images/brand/brand-article-ad-2.jpg';
 import articleImgPw from '@/images/brand/brand-article-prntwrks.jpg';
 import articleImgPw2 from '@/images/brand/brand-article-prntwrks-2.png';
-import articleImgColor from '@/images/brand/brand-article-color-3.jpg';
+import articleImgColor from '@/images/brand/brand-article-color-5.jpg';
 import articleImgFont1 from '@/images/brand/brand-article-font-1.png';
 import articleImgFont2 from '@/images/brand/brand-article-font-2.png';
 import articleImgFont3 from '@/images/brand/brand-article-font-3.png';
