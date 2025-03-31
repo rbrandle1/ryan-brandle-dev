@@ -196,7 +196,7 @@ export const BrandContent = () => {
 								imgAlt3={data.images.font4.alt}
 								imgSrc4={data.images.font3.src}
 								imgAlt4={data.images.font3.alt}
-								// textRight
+								textRight
 								caption='Exploring combinations of fonts and color.'
 							>
 								<h4 className={styles.h3}>
@@ -234,7 +234,6 @@ export const BrandContent = () => {
 								imgSrc4={data.images.logo4.src}
 								imgAlt4={data.images.logo4.alt}
 								caption='Logo ideation, final logos and favicons'
-								textRight
 							>
 								<h4 className={styles.h3}>
 									Logo
@@ -242,33 +241,60 @@ export const BrandContent = () => {
 									Ideation
 								</h4>
 								<p>
-									text here [ideation, concepts, mark, modularity and flexibility... color but also option for 1 color,
-									good/bad/final, favicon]
+									My logo concept reflected a component library's dynamic relationships. Each element—mark, name, and
+									title—could be stacked, scaled, and styled independently while maintaining harmony. I explored ideas
+									like typographic ligatures, mountain shapes, retro styling, pinewood derby cars, and pattern overlays.
 								</p>
-							</MultiImage>
-							<MultiImage
-								imgSrc1={data.images.hero.src}
-								imgAlt1={data.images.hero.alt}
-								imgSrc2={data.images.hero.src}
-								imgAlt2={data.images.hero.alt}
-								imgSrc3={data.images.hero.src}
-								imgAlt3={data.images.hero.alt}
-								caption='Example of discovery process, wire-framing, journey mapping.'
-							>
-								<h3 className={styles.h3}>Discovery Boards</h3>
 								<p>
-									Bringing the pieces together. After fleshing out a few rounds of discovery, I decided on a direction
-									that I felt accomplished the project goals. This process helped iron out many potential issues such as
-									size restraints, font size and color combinations and limitations, to avoid running into larger issues
-									down the road as I start coding the system.
+									The mark, formed by two overlapping elements creating a 'B,' represented how simple components
+									interact to form something greater. For smaller applications like favicons, a single-color version
+									with thicker lines preserved legibility across all color themes.
 								</p>
-								<p>[sketching, mocking]</p>
 								<p>
-									After I established all the basics, I started constructing a more concrete set of pillars to build
-									from.
+									The final SVG-based logo ensured crisp rendering, leveraged CSS and JS enabling precise style control
+									across applications.
 								</p>
 							</MultiImage>
 						</div>
+						<h4 className={styles.h3}>
+							All
+							<br />
+							Together Now
+						</h4>
+						{/* <h4 className={styles.h3}>Bringing it all Together</h4> */}
+						<p>
+							With the core ingredients in place—typography, color, and logo—I started fine-tuning how they worked
+							together. Solving scaling issues and combination limitations early on helps avoid much bigger problems
+							down the road.
+						</p>
+						<p>
+							I created a two-tiered token system (primitives and semantic) in Figma with clear and purposeful naming
+							conventions—making it easy to update and seamlessly translate into their coded counterparts.
+						</p>
+						<div className={cn(styles.multiImagesContainer, styles.breakout)}>
+							<MultiImage
+								imgSrc1={data.images.tokens.src}
+								imgAlt1={data.images.tokens.alt}
+								imgSrc2={data.images.sketchMock.src}
+								imgAlt2={data.images.sketchMock.alt}
+								imgSrc3={data.images.mock.src}
+								imgAlt3={data.images.mock.alt}
+								caption='Figma token system, wireframing sketches, and homepage mockup.'
+							>
+								<p>
+									Wireframing and multiple mockup iterations came next, using the token system to shape a few basic
+									components and a responsive design. Since I'm flying solo on this project—
+									<em>and let's be honest, I'd rather be coding</em>—I skipped the usual Figma component library step
+									and went straight into development.
+								</p>
+							</MultiImage>
+						</div>
+						<h2 className={styles.h2}>Defining the Stack</h2>
+						<h3 className={styles.h3}>Defining the Stack</h3>
+						<p>
+							Before jumping into to any code, I needed to plan out my development strategy. There are so many avenues
+							to contemplate that will ultimately affect how the site operates, performs, functions, etc.
+						</p>
 					</div>
 				</section>
 			</div>

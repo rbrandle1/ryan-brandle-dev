@@ -13,6 +13,9 @@ import articleImgLogo1 from '@/images/brand/brand-article-logo.jpg';
 import articleImgLogo2 from '@/images/brand/brand-article-logo-2.png';
 import articleImgLogo3 from '@/images/brand/brand-article-logo-3.png';
 import articleImgLogo4 from '@/images/brand/brand-article-logo-4.png';
+import articleImgTokens from '@/images/brand/brand-article-tokens.png';
+import articleImgSketchMock from '@/images/brand/brand-article-sketchmock.jpg';
+import articleImgMock from '@/images/brand/brand-article-mock.png';
 
 export const data = {
 	text: {
@@ -84,6 +87,18 @@ export const data = {
 		logo4: {
 			src: articleImgLogo4,
 			alt: 'Favicon and single color logo mockup',
+		},
+		tokens: {
+			src: articleImgTokens,
+			alt: 'Figma Token System',
+		},
+		sketchMock: {
+			src: articleImgSketchMock,
+			alt: 'Sketching mockups',
+		},
+		mock: {
+			src: articleImgMock,
+			alt: 'Site Mockups',
 		},
 	},
 	tags: ['UX/UI', 'HTML', 'CSS', 'JS', 'TS', 'React', 'NextJS', 'Figma'],
