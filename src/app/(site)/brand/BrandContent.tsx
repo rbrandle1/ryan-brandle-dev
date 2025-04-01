@@ -271,7 +271,7 @@ export const BrandContent = () => {
 							I created a two-tiered token system (primitives and semantic) in Figma with clear and purposeful naming
 							conventions—making it easy to update and seamlessly translate into their coded counterparts.
 						</p>
-						<div className={cn(styles.multiImagesContainer, styles.breakout)}>
+						<div className={cn(styles.multiImagesContainer, styles.breakout, styles.flowOffset)}>
 							<MultiImage
 								imgSrc1={data.images.tokens.src}
 								imgAlt1={data.images.tokens.alt}
@@ -290,10 +290,34 @@ export const BrandContent = () => {
 							</MultiImage>
 						</div>
 						<h2 className={styles.h2}>Defining the Stack</h2>
-						<h3 className={styles.h3}>Defining the Stack</h3>
 						<p>
-							Before jumping into to any code, I needed to plan out my development strategy. There are so many avenues
-							to contemplate that will ultimately affect how the site operates, performs, functions, etc.
+							Defining my tech stack began with a focus on showcasing a design system approach. Instead of a simple
+							static site, I chose to explore the latest versions of React (v19) and Next.js (v15) with TypeScript and
+							CSS Modules for the front-end, deploying with Vercel.
+						</p>
+						<p>
+							Next.js offered a straightforward setup with robust performance capabilities and the flexibility to add
+							specific dependencies from the start. In the spirit of exploring new technologies, Turbopack was chosen
+							over Webpack for bundling.
+						</p>
+						<Callout
+							className={cn(styles.callout, styles.flowOffset)}
+							title='Building beyond the ordinary to reveal the details of a cohesive system.'
+							titleAccent
+						/>
+						<p>
+							Is this overkill for a portfolio site? On the surface, possibly. But the goal is to highlight not just the
+							end result, but all the intricacies and details involved in crafting a cohesive, functional, and flexible
+							design system.
+						</p>
+						<p>
+							State management was another key consideration. Initially, basic prop drilling seemed sufficient due to
+							the app's simplicity. However, the need for multiple components to access shared state, like theme state,
+							led to the use of React Context.
+						</p>
+						<p>
+							A rough data structure was also planned, organizing and modularizing types, imagery, and styles before
+							finalizing the tech stack and beginning app development.
 						</p>
 					</div>
 				</section>
