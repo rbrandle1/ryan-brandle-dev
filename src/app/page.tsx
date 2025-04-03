@@ -43,7 +43,7 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 * Remove all unused comments.
 * ensure all pages have correct metadata and optimize to AVOID SEO FOR COMPANY NAMES.
 * Remove any unused remotePatterns in next.config.ts if not needed from unsplash.
-* set up a new contact email
+* set up a new contact email and update all mailto links!!!
 * UPDATE ALL PROFILE IMAGES to up-to-date image.
 
 

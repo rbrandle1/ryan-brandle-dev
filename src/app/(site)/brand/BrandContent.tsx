@@ -307,7 +307,7 @@ export const BrandContent = () => {
 							<a href='https://nextjs.org/' className={styles.link} target='_blank' rel='noopener noreferrer'>
 								Next.js
 							</a>{' '}
-							(v15) with TypeScript and CSS Modules for the front-end, deploying with{' '}
+							(v15) with TypeScript, SASS, and CSS Modules for the front-end, deploying with{' '}
 							<a href='https://vercel.com/' className={styles.link} target='_blank' rel='noopener noreferrer'>
 								Vercel
 							</a>
@@ -451,6 +451,39 @@ export const BrandContent = () => {
 									, catching UI issues early and maintaining a seamless user experience.
 								</p>
 							</SideImage>
+							<SideImage
+								imgSrc={data.images.optimization.src}
+								imgAlt={data.images.optimization.alt}
+								caption={data.images.optimization.caption}
+								imgRight
+							>
+								<h3 className={styles.h3}>Squashin' Bugs</h3>
+								<p>
+									Every ambitious project comes with its share of challenges. While bugfixing and smoothing animations,
+									I encountered some interesting hurdles with Turbopack. For starters, it{' '}
+									<a
+										href='https://nextjs.org/docs/app/api-reference/turbopack#unsupported-and-unplanned-features'
+										className={styles.link}
+										target='_blank'
+										rel='noopener noreferrer'
+									>
+										did not support
+									</a>{' '}
+									ICSS ':export' pseudo-selectors, which I typically used to share viewport values between SCSS and JS
+									files. Without a clean solution, I had to duplicate some values—not my favorite workaround!
+								</p>
+								<p>
+									The animation quirks were another fun surprise. Turbopack wasn't playing nice with keyframe rules,
+									whether at the component level or in global CSS partials. <em>The fix?</em> Loading animations as a
+									separate stylesheet on page load. Not elegant, but it did the trick.
+								</p>
+								<p>
+									Finally, there was the stubborn theme state bug that stuck around. The challenge was preventing a
+									FOUC, <em>Flash of Unstyled Content</em>, during initial page load when setting theme values from
+									localStorage. At the time of launch, there was a 500 error on initial load, though the app functioned
+									normally. It remains a puzzle I looked forward to solving properly in the future.
+								</p>
+							</SideImage>
 						</div>
 					</div>
 				</section>
@@ -459,10 +492,70 @@ export const BrandContent = () => {
 				<div className={styles.containerGrid}>
 					<h2 className={styles.h2}>The Final Result</h2>
 					<p>
-						Ship it! Has been the industry's standard dummy text ever since the 1500s, example when an unknown printer
-						took a galley of type and scrambled it to make a type specimen book.Work sans Lorem Ipsum has been the
-						industry's standard dummy text ever since the 1500s, example when an unknown printer took a galley of type
-						and scrambled it to make a type specimen book.
+						This project has an awesome ride - a perfect blend of past experience and fresh exploration. While I've
+						spent years bringing design to life through code, it's especially challenging to build a reflection of
+						yourself, your wins, your stumbles, and everything in between.
+					</p>
+					<p>
+						Along the way, I expanded my toolkit with some updated CSS grid layouts, discovered the magic of 'lh' values
+						for cleaner typography, and dove into some sweet Next.js and React enhancements. Though the project is
+						technically 'done,' it's really just the beginning. Even after years in the field, there's always something
+						new to try out and explore.
+					</p>
+					<p>
+						<strong>Resources &amp; Inspiration:</strong>
+						<br />
+						Much ❤️ and respect to the people who've helped inspire this project and some helpful tools used along the
+						way:
+					</p>
+					<ul className={styles.ul}>
+						<li>
+							<a href='https://ryanmulligan.dev/' className={styles.link} target='_blank' rel='noopener noreferrer'>
+								Ryan Mulligan
+							</a>{' '}
+							- Past mentor and code beast
+						</li>
+						<li>
+							<a href='https://www.joshwcomeau.com/' className={styles.link} target='_blank' rel='noopener noreferrer'>
+								Josh Comeau
+							</a>{' '}
+							- Front-End Guru
+						</li>
+						<li>
+							<a href='https://thinkdobecreate.com/' className={styles.link} target='_blank' rel='noopener noreferrer'>
+								Stephanie Eckles
+							</a>{' '}
+							- Front-End Engineer
+						</li>
+						<li>
+							<a
+								href='https://www.fluid-type-scale.com/'
+								className={styles.link}
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								Fluid Type Scale
+							</a>{' '}
+							- Super helpful fluid type generator
+						</li>
+						<li>
+							<a
+								href='https://www.joshwcomeau.com/gradient-generator/'
+								className={styles.link}
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								Gradient Generator
+							</a>{' '}
+							- For those smooth CSS gradients
+						</li>
+					</ul>
+					<p>
+						Feel free to poke around and explore! Your{' '}
+						<a href='mailto:hello@example.com' className={styles.link}>
+							thoughts and feedback
+						</a>{' '}
+						are always welcome.
 					</p>
 					<Link className={styles.buttonLink} href={fromSection ? `/#${fromSection}` : '/'}>
 						&larr;&nbsp;Back to Work

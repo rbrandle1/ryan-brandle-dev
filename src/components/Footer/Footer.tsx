@@ -45,7 +45,7 @@ const Footer = () => {
 					</p>
 				</div>
 				<div className={styles.copyContainer}>
-					<p>100% designed &amp;&nbsp;developed by Ryan&nbsp;Brandle &copy;&nbsp;2025</p>
+					<p>Designed &amp;&nbsp;developed by Ryan&nbsp;Brandle &copy;&nbsp;2025</p>
 				</div>
 				<div className={styles.socialContainer}>
 					<a
