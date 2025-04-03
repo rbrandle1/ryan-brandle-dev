@@ -16,7 +16,7 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 
 /* Todo:
 * * CONTENT CREATION:
-* Try making color image a part of the typography lockup. Remove the sideImage.
+* Double check links or add links in articles.
 * Make all pages with images and text content.
 * How to implement codepen pens... hero?
 * Remove all odd formatted spacing, apostrophes, etc. from all text content in article pages. 

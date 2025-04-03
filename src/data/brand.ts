@@ -16,6 +16,12 @@ import articleImgLogo4 from '@/images/brand/brand-article-logo-4.png';
 import articleImgTokens from '@/images/brand/brand-article-tokens.png';
 import articleImgSketchMock from '@/images/brand/brand-article-sketchmock.jpg';
 import articleImgMock from '@/images/brand/brand-article-mock.png';
+import articleImgTokenCode from '@/images/brand/brand-article-token-code-2.png';
+import articleImgComponentCode from '@/images/brand/brand-article-component-code.png';
+import articleImgComponent2 from '@/images/brand/brand-article-component-2.jpg';
+import articleImgComponent3 from '@/images/brand/brand-article-component-3.png';
+import articleImgComponent4 from '@/images/brand/brand-article-component-4.png';
+import articleImgOptimization from '@/images/brand/brand-article-optimization.jpg';
 
 export const data = {
 	text: {
@@ -99,6 +105,32 @@ export const data = {
 		mock: {
 			src: articleImgMock,
 			alt: 'Site Mockups',
+		},
+		tokenCode: {
+			src: articleImgTokenCode,
+			alt: 'Token code',
+			caption: 'Primitive and semantic token system',
+		},
+		componentCode: {
+			src: articleImgComponentCode,
+			alt: 'FeatureProject Component Code',
+		},
+		component2: {
+			src: articleImgComponent2,
+			alt: 'FeatureProject Component',
+		},
+		component3: {
+			src: articleImgComponent3,
+			alt: 'Header Component',
+		},
+		component4: {
+			src: articleImgComponent4,
+			alt: 'Footer Component',
+		},
+		optimization: {
+			src: articleImgOptimization,
+			alt: 'Image of Next.js blurDataURL feature',
+			caption: 'Next.js blurDataURL feature',
 		},
 	},
 	tags: ['UX/UI', 'HTML', 'CSS', 'JS', 'TS', 'React', 'NextJS', 'Figma'],

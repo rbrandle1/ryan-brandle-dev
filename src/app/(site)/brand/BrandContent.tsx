@@ -148,9 +148,17 @@ export const BrandContent = () => {
 								caption='Newspaper ads, Printworks London / Only'
 							>
 								<p>
-									The topic of newspapers reminded me of the <em>Printworks London</em> brand, an old favorite of mine.
-									This dance venue's identity honored the building's heritage as an old printing factory—bold and
-									striking with a clear respect for traditional design principles.
+									The topic of newspapers reminded me of the{' '}
+									<a
+										href='https://printworkslondon.co.uk/'
+										className={styles.link}
+										target='_blank'
+										rel='noopener noreferrer'
+									>
+										Printworks London
+									</a>{' '}
+									brand, an old favorite of mine. This dance venue's identity honored the building's heritage as an old
+									printing factory—bold and striking with a clear respect for traditional design principles.
 								</p>
 								<p>
 									Their work resonated with my own history, my love for design and dance music making it a perfect
@@ -261,7 +269,6 @@ export const BrandContent = () => {
 							<br />
 							Together Now
 						</h4>
-						{/* <h4 className={styles.h3}>Bringing it all Together</h4> */}
 						<p>
 							With the core ingredients in place—typography, color, and logo—I started fine-tuning how they worked
 							together. Solving scaling issues and combination limitations early on helps avoid much bigger problems
@@ -291,9 +298,20 @@ export const BrandContent = () => {
 						</div>
 						<h2 className={styles.h2}>Defining the Stack</h2>
 						<p>
-							Defining my tech stack began with a focus on showcasing a design system approach. Instead of a simple
-							static site, I chose to explore the latest versions of React (v19) and Next.js (v15) with TypeScript and
-							CSS Modules for the front-end, deploying with Vercel.
+							My tech stack focused on showcasing a design system approach. Instead of making a simple static site, I
+							chose to explore the latest versions of{' '}
+							<a href='https://react.dev/' className={styles.link} target='_blank' rel='noopener noreferrer'>
+								React
+							</a>{' '}
+							(v19) and{' '}
+							<a href='https://nextjs.org/' className={styles.link} target='_blank' rel='noopener noreferrer'>
+								Next.js
+							</a>{' '}
+							(v15) with TypeScript and CSS Modules for the front-end, deploying with{' '}
+							<a href='https://vercel.com/' className={styles.link} target='_blank' rel='noopener noreferrer'>
+								Vercel
+							</a>
+							.
 						</p>
 						<p>
 							Next.js offered a straightforward setup with robust performance capabilities and the flexibility to add
@@ -302,14 +320,9 @@ export const BrandContent = () => {
 						</p>
 						<Callout
 							className={cn(styles.callout, styles.flowOffset)}
-							title='Building beyond the ordinary to reveal the details of a cohesive system.'
+							title='Building beyond the ordinary to reveal the intricacies of a cohesive system.'
 							titleAccent
 						/>
-						<p>
-							Is this overkill for a portfolio site? On the surface, possibly. But the goal is to highlight not just the
-							end result, but all the intricacies and details involved in crafting a cohesive, functional, and flexible
-							design system.
-						</p>
 						<p>
 							State management was another key consideration. Initially, basic prop drilling seemed sufficient due to
 							the app's simplicity. However, the need for multiple components to access shared state, like theme state,
@@ -319,6 +332,126 @@ export const BrandContent = () => {
 							A rough data structure was also planned, organizing and modularizing types, imagery, and styles before
 							finalizing the tech stack and beginning app development.
 						</p>
+						<p>
+							<em>Is this overkill for a portfolio site?</em> On the surface, possibly. But the goal is to highlight not
+							just the end result, but all the intricacies and details involved in crafting a cohesive, functional, and
+							flexible design system.
+						</p>
+						<h3 className={styles.h3}>
+							Into
+							<br />
+							the Code
+						</h3>
+						<p>
+							I converted my tiered token system into code, using CSS Modules and custom properties as the primary
+							variable structure.
+						</p>
+						<p>
+							'Primitives' were referenced as semantic tokens, and used in top-level 'utility' partials with global
+							mixins. These partials, organized into SCSS files like <em>_elements.scss</em>, <em>_layout.scss</em>, and
+							<em>_typography.scss</em>, were imported into component-level modules as needed.
+						</p>
+						<LargeImage
+							className={cn(styles.imageContainer, styles.flowOffset, styles.breakout)}
+							src={data.images.tokenCode.src}
+							alt={data.images.tokenCode.alt}
+							caption={data.images.tokenCode.caption}
+						/>
+						<p>
+							Placing global theme variables in the semantic token file enabled top-level theme changes to cascade
+							through components, and while maintaining the option for component-level theme declarations if needed.
+						</p>
+						<p>
+							I created a basic{' '}
+							<Link className={styles.link} href={'/style'} target='_blank'>
+								living style guide
+							</Link>{' '}
+							to reference and ensure system elements functioned properly, allowing stress-testing of the style system,
+							theme changes, and animations before component construction. For a full team, tools like Storybook or
+							ZeroHeight would be ideal for documentation.
+						</p>
+						<p>
+							<strong>Regarding CSS Modules:</strong> A CSS Module-based style system with custom properties is my
+							preferred approach. It maintains a separation of concerns while{' '}
+							<em>maximizing flexibility and control</em>
+							over styles. Pairing this with native CSS features like custom properties helps future-proof your code,
+							avoiding massive refactoring and tech-debt issues. It also allows developers to fully leverage the power
+							of CSS, keeping it clean, modular, and easy to build component systems.
+						</p>
+						<h3 className={styles.h3}>Component Creation</h3>
+						<p>
+							With ingredients prepped and ready to rock, it was time to start cooking! I began with atomic components
+							like buttons, gradually working up to more complex ones like headers, footers, and project cards.
+						</p>
+						<div className={cn(styles.multiImagesContainer, styles.breakout)}>
+							<MultiImage
+								imgSrc1={data.images.component2.src}
+								imgAlt1={data.images.component2.alt}
+								imgSrc2={data.images.component3.src}
+								imgAlt2={data.images.component3.alt}
+								imgSrc3={data.images.componentCode.src}
+								imgAlt3={data.images.componentCode.alt}
+								imgSrc4={data.images.component4.src}
+								imgAlt4={data.images.component4.alt}
+								caption='Header, Featured Project, Button,  and Footer components'
+							>
+								<p>
+									These components were built using responsive and fluid design techniques that ensured a seamless
+									experience across all devices. Each component was controlled by props that toggled features or
+									achieved specific layouts. They were customizable where needed, giving developers (just me in this
+									case) freedom while maintaining design integrity.
+								</p>
+								<p>
+									For components requiring theme state, React Context enabled dynamic features like animated logos
+									during theme changes and subtle style updates based on user preferences.
+								</p>
+							</MultiImage>
+						</div>
+						<div className={cn(styles.sideImagesContainer, styles.flowOffset)}>
+							<SideImage
+								imgSrc={data.images.optimization.src}
+								imgAlt={data.images.optimization.alt}
+								caption={data.images.optimization.caption}
+							>
+								<h3 className={styles.h3}>
+									Fast, Fluid{' '}
+									<span className={styles.noWrap}>
+										<span className={styles.altFont}>&amp;</span>&nbsp;Accessible
+									</span>
+								</h3>
+								<p>
+									To keep the site speedy and responsive, I leveraged the Next.js{' '}
+									<a
+										href='https://nextjs.org/docs/pages/api-reference/components/image'
+										className={styles.link}
+										target='_blank'
+										rel='noopener noreferrer'
+									>
+										Image component
+									</a>{' '}
+									for optimized image loading and sizing, using blur effects and data URLs where appropriate. Adding to
+									this performance boost, I implemented a combination of server and client-side rendering, along with
+									dynamic loading for below-fold components, which helped minimize initial paint times.
+								</p>
+								<p>
+									Accessibility was baked in from the start, with semantic HTML and appropriate ARIA attributes
+									providing an optimal experience for keyboard navigation and screen readers.
+								</p>
+								<p>
+									To ensure everything worked smoothly, I regularly ran performance and accessibility checks using
+									Chrome Lighthouse and{' '}
+									<a
+										href='https://accessibilityinsights.io/docs/web/overview/'
+										className={styles.link}
+										target='_blank'
+										rel='noopener noreferrer'
+									>
+										Accessibility Insights
+									</a>
+									, catching UI issues early and maintaining a seamless user experience.
+								</p>
+							</SideImage>
+						</div>
 					</div>
 				</section>
 			</div>

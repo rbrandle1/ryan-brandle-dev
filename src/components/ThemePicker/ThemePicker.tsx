@@ -1,7 +1,6 @@
 'use client';
 import cn from 'classnames';
 import { useTheme } from '@/components/ThemeProvider/ThemeProvider';
-// import IconDroplet from '@/components/Icons/IconDroplet';
 import IconBucket from '@/components/Icons/IconBucket';
 import styles from './ThemePicker.module.scss';
 
