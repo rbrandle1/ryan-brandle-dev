@@ -544,7 +544,7 @@ export const BrandContent = () => {
 							>
 								Gradient Generator
 							</a>{' '}
-							- For those smooth CSS gradients
+							- For those <em>oh-so-smooth</em> CSS gradients
 						</li>
 					</ul>
 					<p>

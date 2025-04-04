@@ -19,8 +19,25 @@ export const InspContent = () => {
 		<article className={styles.page}>
 			<header className={cn(styles.heroSection, styles.accentEdgeGrad)}>
 				<div className={styles.containerGrid}>
+					{/* <h1 className={styles.h1}>
+						Evolution <span className={styles.altFont}>of&nbsp;the</span> Inspirato Design System
+					</h1> */}
+					{/* <h1 className={styles.h1}>
+						Building{' '}
+						<span className={styles.noWrap}>
+							<span className={styles.altFont}>&amp;</span>&nbsp;Evolving
+						</span>{' '}
+						the Inspirato Design System
+					</h1> */}
+					{/* <h1 className={styles.h1}>
+						Evolving{' '}
+						<span className={styles.noWrap}>
+							<span className={styles.altFont}>the</span>&nbsp;Inspirato
+						</span>{' '}
+						Design System
+					</h1> */}
 					<h1 className={styles.h1}>
-						Creation <span className={styles.altFont}>&amp;</span> Growth of the Inspirato Design System
+						<span className={styles.altFont}>Crafting</span> Inspirato's Design System
 					</h1>
 					<div className={styles.subhead}>{data.text.descriptionShort}</div>
 				</div>

@@ -191,7 +191,13 @@ export default function Home() {
 						<FeaturedProject
 							id='insp'
 							className={styles.breakoutXl}
-							title={insp.text.title}
+							title={
+								<>
+									<span className={styles.altFont}>Crafting</span>
+									<br />
+									Inspirato's Design System
+								</>
+							}
 							description={insp.text.description}
 							metaTags={insp.tags}
 							imgSrc={insp.images.hero.src}

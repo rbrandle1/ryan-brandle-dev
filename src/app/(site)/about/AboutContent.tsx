@@ -29,8 +29,8 @@ export const AboutContent = () => (
 					attention to detail with thoughtful execution.
 				</p>
 				<p>
-					I'm a proud dad. When I'm not at my desk, I spend my time raising my two wild boys with my amazing wife. We
-					love camping, cycling, and getting lost on off-the-path adventures.
+					I'm a proud dad. When I'm not at my desk, I spend my time raising two wild boys with my amazing wife. We love
+					camping, cycling, and getting lost on off-the-path adventures.
 				</p>
 				<p>Interested in partnering? I'd love to hear from you!</p>
 				<Button className={styles.button} href={'mailto:hello@example.com'}>
