@@ -6,7 +6,6 @@ import { brand as data } from '@/data';
 import Link from 'next/link';
 import Callout from '@/components/Callout/Callout';
 import LargeImage from '@/components/Article/LargeImage/LargeImage';
-import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import SideImage from '@/components/Article/SideImage/SideImage';
 import MultiImage from '@/components/Article/MultiImage/MultiImage';
 import styles from '../projects.module.scss';
@@ -132,11 +131,6 @@ export const BrandContent = () => {
 							accessibility validation. I wanted to challenge myself by creating a system rooted in black and
 							white—where limited colors push creativity.
 						</p>
-						<p>
-							One concept sparked from childhood memories of flipping through newspaper cinema ads. Each design had to
-							fight for attention in a sea of black and white newsprint, yet somehow capture the movie's essence in a
-							single color. Pure chaos, but beautiful in its own way.
-						</p>
 						<div className={cn(styles.multiImagesContainer, styles.breakout)}>
 							<MultiImage
 								imgSrc1={data.images.ad1.src}
@@ -147,6 +141,11 @@ export const BrandContent = () => {
 								imgAlt3={data.images.prntwrks.alt}
 								caption='Newspaper ads, Printworks London / Only'
 							>
+								<p>
+									One concept sparked from childhood memories of flipping through newspaper cinema ads. Each design had
+									to fight for attention in a sea of black and white newsprint, yet somehow capture the movie's essence
+									in a single color. Pure chaos, but beautiful in its own way.
+								</p>
 								<p>
 									The topic of newspapers reminded me of the{' '}
 									<a
@@ -194,6 +193,15 @@ export const BrandContent = () => {
 								</p>
 							</SideImage>
 						</div>
+						<h4 className={styles.h3}>
+							The
+							<br />
+							Type Hunt
+						</h4>
+						<p>
+							The purpose of this experiment was to discover font combinations with the right boldness, balance and
+							rhythm.
+						</p>
 						<div className={cn(styles.multiImagesContainer, styles.flowOffset, styles.breakout)}>
 							<MultiImage
 								imgSrc1={data.images.font1.src}
@@ -207,15 +215,6 @@ export const BrandContent = () => {
 								textRight
 								caption='Exploring combinations of fonts and color.'
 							>
-								<h4 className={styles.h3}>
-									The
-									<br />
-									Type Hunt
-								</h4>
-								<p>
-									The purpose of this experiment was to discover font combinations with the right boldness, balance and
-									rhythm.
-								</p>
 								<p>
 									The usual questions filtered through...{' '}
 									<em>Serif or sans serif? What would work best to meet my project goals?</em> Sans serif fonts are easy
@@ -274,10 +273,6 @@ export const BrandContent = () => {
 							together. Solving scaling issues and combination limitations early on helps avoid much bigger problems
 							down the road.
 						</p>
-						<p>
-							I created a two-tiered token system (primitives and semantic) in Figma with clear and purposeful naming
-							conventions—making it easy to update and seamlessly translate into their coded counterparts.
-						</p>
 						<div className={cn(styles.multiImagesContainer, styles.breakout, styles.flowOffset)}>
 							<MultiImage
 								imgSrc1={data.images.tokens.src}
@@ -289,6 +284,10 @@ export const BrandContent = () => {
 								caption='Figma token system, wireframing sketches, and homepage mockup.'
 							>
 								<p>
+									I created a two-tiered token system (primitives and semantic) in Figma with clear and purposeful
+									naming conventions—making it easy to update and seamlessly translate into their coded counterparts.
+								</p>
+								<p>
 									Wireframing and multiple mockup iterations came next, using the token system to shape a few basic
 									components and a responsive design. Since I'm flying solo on this project—
 									<em>and let's be honest, I'd rather be coding</em>—I skipped the usual Figma component library step
@@ -296,7 +295,7 @@ export const BrandContent = () => {
 								</p>
 							</MultiImage>
 						</div>
-						<h2 className={styles.h2}>Defining the Stack</h2>
+						<h3 className={styles.h3}>Defining the Stack</h3>
 						<p>
 							My tech stack focused on showcasing a design system approach. Instead of making a simple static site, I
 							chose to explore the latest versions of{' '}
@@ -318,26 +317,26 @@ export const BrandContent = () => {
 							specific dependencies from the start. In the spirit of exploring new technologies, Turbopack was chosen
 							over Webpack for bundling.
 						</p>
+						<p>
+							State management was another key consideration. Initially, basic prop drilling seemed sufficient due to
+							the app's simplicity. However, the need for multiple components to access shared state, like theme state,
+							led to the use of React Context.
+						</p>
 						<Callout
 							className={cn(styles.callout, styles.flowOffset)}
 							title='Building beyond the ordinary to reveal the intricacies of a cohesive system.'
 							titleAccent
 						/>
 						<p>
-							State management was another key consideration. Initially, basic prop drilling seemed sufficient due to
-							the app's simplicity. However, the need for multiple components to access shared state, like theme state,
-							led to the use of React Context.
-						</p>
-						<p>
 							A rough data structure was also planned, organizing and modularizing types, imagery, and styles before
 							finalizing the tech stack and beginning app development.
 						</p>
 						<p>
-							<em>Is this overkill for a portfolio site?</em> On the surface, possibly. But the goal is to highlight not
-							just the end result, but all the intricacies and details involved in crafting a cohesive, functional, and
-							flexible design system.
+							<em>Is this overkill for a portfolio site?</em> On the surface, possibly. However, the goal was to
+							highlight not just the end result, but all the intricacies and details involved in crafting a cohesive,
+							functional, and flexible design system.
 						</p>
-						<h3 className={styles.h3}>
+						<h3 className={cn(styles.h3, styles.soloHeader)}>
 							Into
 							<br />
 							the Code
@@ -378,7 +377,7 @@ export const BrandContent = () => {
 							avoiding massive refactoring and tech-debt issues. It also allows developers to fully leverage the power
 							of CSS, keeping it clean, modular, and easy to build component systems.
 						</p>
-						<h3 className={styles.h3}>Component Creation</h3>
+						<h3 className={cn(styles.h3, styles.soloHeader)}>Component Creation</h3>
 						<p>
 							With ingredients prepped and ready to rock, it was time to start cooking! I began with atomic components
 							like buttons, gradually working up to more complex ones like headers, footers, and project cards.
@@ -394,6 +393,7 @@ export const BrandContent = () => {
 								imgSrc4={data.images.component4.src}
 								imgAlt4={data.images.component4.alt}
 								caption='Header, Featured Project, Button,  and Footer components'
+								textRight
 							>
 								<p>
 									These components were built using responsive and fluid design techniques that ensured a seamless
@@ -412,6 +412,7 @@ export const BrandContent = () => {
 								imgSrc={data.images.optimization.src}
 								imgAlt={data.images.optimization.alt}
 								caption={data.images.optimization.caption}
+								imgRight
 							>
 								<h3 className={styles.h3}>
 									Fast, Fluid{' '}
@@ -451,40 +452,33 @@ export const BrandContent = () => {
 									, catching UI issues early and maintaining a seamless user experience.
 								</p>
 							</SideImage>
-							<SideImage
-								imgSrc={data.images.optimization.src}
-								imgAlt={data.images.optimization.alt}
-								caption={data.images.optimization.caption}
-								imgRight
-							>
-								<h3 className={styles.h3}>Squashin' Bugs</h3>
-								<p>
-									Every ambitious project comes with its share of challenges. While bugfixing and smoothing animations,
-									I encountered some interesting hurdles with Turbopack. For starters, it{' '}
-									<a
-										href='https://nextjs.org/docs/app/api-reference/turbopack#unsupported-and-unplanned-features'
-										className={styles.link}
-										target='_blank'
-										rel='noopener noreferrer'
-									>
-										did not support
-									</a>{' '}
-									ICSS ':export' pseudo-selectors, which I typically used to share viewport values between SCSS and JS
-									files. Without a clean solution, I had to duplicate some values—not my favorite workaround!
-								</p>
-								<p>
-									The animation quirks were another fun surprise. Turbopack wasn't playing nice with keyframe rules,
-									whether at the component level or in global CSS partials. <em>The fix?</em> Loading animations as a
-									separate stylesheet on page load. Not elegant, but it did the trick.
-								</p>
-								<p>
-									Finally, there was the stubborn theme state bug that stuck around. The challenge was preventing a
-									FOUC, <em>Flash of Unstyled Content</em>, during initial page load when setting theme values from
-									localStorage. At the time of launch, there was a 500 error on initial load, though the app functioned
-									normally. It remains a puzzle I looked forward to solving properly in the future.
-								</p>
-							</SideImage>
 						</div>
+						<h3 className={styles.h3}>Squashin' Bugs</h3>
+						<p>
+							Every ambitious project comes with its share of challenges. While bugfixing and smoothing animations, I
+							encountered some interesting hurdles with Turbopack. For starters, it{' '}
+							<a
+								href='https://nextjs.org/docs/app/api-reference/turbopack#unsupported-and-unplanned-features'
+								className={styles.link}
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								did not support
+							</a>{' '}
+							ICSS ':export' pseudo-selectors, which I typically used to share viewport values between SCSS and JS
+							files. Without a clean solution, I had to duplicate some values—not my favorite workaround!
+						</p>
+						<p>
+							The animation quirks were another fun surprise. Turbopack wasn't playing nice with keyframe rules, whether
+							at the component level or in global CSS partials. <em>The fix?</em> Loading animations as a separate
+							stylesheet on page load. Not elegant, but it did the trick.
+						</p>
+						<p>
+							Finally, there was the stubborn theme state bug that stuck around. The challenge was preventing a FOUC,{' '}
+							<em>Flash of Unstyled Content</em>, during initial page load when setting theme values from localStorage.
+							At the time of launch, there was a 500 error on initial load, though the app functioned normally. It
+							remains a puzzle I looked forward to solving properly in the future.
+						</p>
 					</div>
 				</section>
 			</div>
@@ -492,19 +486,22 @@ export const BrandContent = () => {
 				<div className={styles.containerGrid}>
 					<h2 className={styles.h2}>The Final Result</h2>
 					<p>
-						This project has an awesome ride - a perfect blend of past experience and fresh exploration. While I've
+						This project has been an awesome ride - a perfect blend of past experience and fresh exploration. While I've
 						spent years bringing design to life through code, it's especially challenging to build a reflection of
 						yourself, your wins, your stumbles, and everything in between.
 					</p>
+					<LargeImage
+						className={cn(styles.imageContainer, styles.flowOffset, styles.breakout)}
+						src={data.images.final.src}
+						alt={data.images.final.alt}
+					/>
 					<p>
 						Along the way, I expanded my toolkit with some updated CSS grid layouts, discovered the magic of 'lh' values
-						for cleaner typography, and dove into some sweet Next.js and React enhancements. Though the project is
-						technically 'done,' it's really just the beginning. Even after years in the field, there's always something
-						new to try out and explore.
+						for better typographical rhythm, and dove into some sweet Next.js and React enhancements. Though the project
+						is technically 'done,' it's really just the beginning. Even after years in the field, there's always
+						something new to try out and explore.
 					</p>
 					<p>
-						<strong>Resources &amp; Inspiration:</strong>
-						<br />
 						Much ❤️ and respect to the people who've helped inspire this project and some helpful tools used along the
 						way:
 					</p>
@@ -551,7 +548,7 @@ export const BrandContent = () => {
 						</li>
 					</ul>
 					<p>
-						Feel free to poke around and explore! Your{' '}
+						Feel free to poke around the site! Your{' '}
 						<a href='mailto:hello@example.com' className={styles.link}>
 							thoughts and feedback
 						</a>{' '}

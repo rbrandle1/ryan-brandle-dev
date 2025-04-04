@@ -222,6 +222,10 @@
 	}
 }
 
+.soloHeader {
+	--flow-space: 2lh;
+}
+
 // ELEMENTS
 .link {
 	@include typography.link(underline);
@@ -246,6 +250,8 @@
 }
 
 .buttonLink {
+	--flow-space: 2lh;
+
 	display: inline-block;
 	max-width: fit-content;
 	@include typography.link(false, reverse);

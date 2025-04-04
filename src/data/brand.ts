@@ -22,6 +22,7 @@ import articleImgComponent2 from '@/images/brand/brand-article-component-2.jpg';
 import articleImgComponent3 from '@/images/brand/brand-article-component-3.png';
 import articleImgComponent4 from '@/images/brand/brand-article-component-4.png';
 import articleImgOptimization from '@/images/brand/brand-article-optimization.jpg';
+import articleImgFinal from '@/images/brand/brand-article-final-2.jpg';
 
 export const data = {
 	text: {
@@ -131,6 +132,11 @@ export const data = {
 			src: articleImgOptimization,
 			alt: 'Image of Next.js blurDataURL feature',
 			caption: 'Next.js blurDataURL feature',
+		},
+		final: {
+			src: articleImgFinal,
+			alt: 'Final site mockup',
+			caption: 'Final design system and web app.',
 		},
 	},
 	tags: ['UX/UI', 'HTML', 'CSS', 'JS', 'TS', 'React', 'NextJS', 'Figma'],

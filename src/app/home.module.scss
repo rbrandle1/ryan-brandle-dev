@@ -123,7 +123,7 @@
 }
 
 .heroDetails {
-	@include viewport.breakpoint(md, max) {
+	@include viewport.breakpoint(sm, max) {
 		max-width: var(--optimal-line-length-base);
 	}
 
@@ -144,7 +144,7 @@
 	@include typography.p;
 	max-width: var(--column-width);
 
-	@include viewport.breakpoint(md) {
+	@include viewport.breakpoint(sm) {
 		column-count: 2;
 		column-gap: 1lh;
 		max-width: calc(var(--column-width) * 2);
