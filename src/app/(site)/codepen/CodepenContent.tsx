@@ -38,7 +38,7 @@ export const CodepenContent = () => {
 						<h2 className={styles.h2}>
 							The
 							<br />
-							Problem
+							Challenge
 						</h2>
 						<p>
 							As the web evolves, so do the expectations of users. Our client, a leading e-commerce platform, recognized

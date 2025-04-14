@@ -46,7 +46,7 @@ export const BrandContent = () => {
 						<h2 className={styles.h2}>
 							The
 							<br />
-							Problem
+							Challenge
 						</h2>
 						<p>
 							For years, I've been juggling code, career, and dad life—which meant a portfolio rebrand had taken a back

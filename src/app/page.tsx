@@ -4,6 +4,7 @@ import { insp, cf, brand, flashcards, codepen, comparison } from '@/data';
 import Callout from '@/components/Callout/Callout';
 import IconCodePen from '@/components/Icons/IconCodePen';
 import IconLogoInsp from '@/components/Icons/IconLogoInsp';
+import IconModular from '@/components/Icons/IconModular';
 import styles from './home.module.scss';
 
 const FeaturedProject = dynamic(() => import('@/components/FeaturedProject/FeaturedProject'), {
@@ -159,7 +160,7 @@ export default function Home() {
 				<section className={cn(styles.section, styles.firstCallout)}>
 					<div className={styles.containerGrid}>
 						<Callout title='I make flexible, modular systems that are easy to use.' size='lg' iconAccent>
-							<IconCodePen />
+							<IconModular />
 						</Callout>
 					</div>
 				</section>
