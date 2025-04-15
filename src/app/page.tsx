@@ -35,7 +35,7 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 * PERFORMANCE AUDIT. Use Chrome LightHouse. Double check cpu and performance/paint issues. If gradient is still causing performance issues, try the png. Maybe will-change is causing issues. jpg for images, png for snapshots. hero under 200kb, thumbnails under 30kb. NEXT JS SHOULD OPTIMIZE ALREADY.
 * Check reduced motion settings.
 * Check screen reader settings.
-* Check mailto links work.
+
 
 
 
@@ -48,6 +48,7 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 * Remove any unused remotePatterns in next.config.ts if not needed from unsplash.
 * set up a new contact email and update all mailto links!!!
 * UPDATE ALL PROFILE IMAGES to up-to-date image.
+* Check mailto links work. I don't have a default email client on my computer so it doesn't appear to work. Need to check on another device, possibly after a build and deployment.
 
 
 
