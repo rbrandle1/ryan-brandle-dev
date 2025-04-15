@@ -68,6 +68,7 @@
 		color: var(--text-primary);
 		padding-inline-start: 1lh;
 		margin-block-start: 0.35lh;
+		max-width: var(--optimal-line-length-base);
 
 		li + li {
 			margin-top: 0.35lh;
