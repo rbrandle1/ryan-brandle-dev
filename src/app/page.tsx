@@ -139,7 +139,7 @@ export default function Home() {
 							be sexy, and to make your search for the right fit a little easier. With over a decade of experience
 							uniting design and code, I create accessible, intuitive, and scalable interfaces. I enjoy coding design to
 							life and pushing the boundaries of front-end craftsmanship. 🚀&nbsp;
-							<a href='mailto:hello@example.com'>Let's build</a> something epic together!
+							<a href='mailto:hello@example.com'>Let's build</a> a product that leaves a lasting impression!
 						</p>
 					</div>
 				</div>
