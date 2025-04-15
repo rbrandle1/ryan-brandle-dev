@@ -33,7 +33,7 @@ export const AboutContent = () => (
 					camping, cycling, and getting lost on off-the-path adventures.
 				</p>
 				<p>Interested in partnering? I'd love to hear from you!</p>
-				<Button className={styles.button} href={'mailto:hello@example.com'}>
+				<Button className={styles.button} href={'mailto:hello@example.com?subject=Hello!'}>
 					Get in touch
 				</Button>
 				<div className={styles.socialContainer}>

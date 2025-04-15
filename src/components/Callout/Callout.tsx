@@ -3,6 +3,7 @@ import cn from 'classnames';
 import { useInView } from 'react-intersection-observer';
 import styles from './Callout.module.scss';
 import setInlineStyles from '@/helpers/functions';
+import Button from '@/components/Button/Button';
 
 interface CalloutProps {
 	className?: string;
@@ -12,9 +13,21 @@ interface CalloutProps {
 	titleAccent?: boolean;
 	size?: 'sm' | 'md' | 'lg';
 	body?: string;
+	buttonText?: string;
+	href?: string;
 }
 
-const Callout = ({ className, children, title, size = 'md', body, iconAccent, titleAccent }: CalloutProps) => {
+const Callout = ({
+	className,
+	children,
+	title,
+	size = 'md',
+	body,
+	iconAccent,
+	titleAccent,
+	buttonText,
+	href,
+}: CalloutProps) => {
 	const { ref, inView } = useInView({
 		threshold: 0.4,
 		triggerOnce: true,
@@ -32,6 +45,11 @@ const Callout = ({ className, children, title, size = 'md', body, iconAccent, ti
 			{children ? <div className={styles.icon}>{children}</div> : null}
 			<h2 className={cn(styles.title, styles[size])}>{title}</h2>
 			{body ? <div className={styles.body}>{body}</div> : null}
+			{buttonText && href ? (
+				<Button className={styles.button} href={href} ariaLabel={`Send an email to Ryan`}>
+					{buttonText}
+				</Button>
+			) : null}
 		</aside>
 	);
 };

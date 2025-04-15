@@ -5,6 +5,7 @@ import Callout from '@/components/Callout/Callout';
 import IconCodePen from '@/components/Icons/IconCodePen';
 import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import IconModular from '@/components/Icons/IconModular';
+import IconPolish from '@/components/Icons/IconPolish';
 import styles from './home.module.scss';
 
 const FeaturedProject = dynamic(() => import('@/components/FeaturedProject/FeaturedProject'), {
@@ -24,7 +25,6 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 * reduce gap space when caption is present in featured project component, .5lh?.
 * 
 * Update header line heights... especially large headlines. Knock down to a 1. Make h2's, etc a 1.1? Prob need to adjust altFont to 0.8 or something like that.
-* Finish svg icons
 * Do not come across as too arrogant. Polish, So fresh, So clean, Too 🔥 To Brandle*, etc. Might need to tone it down. EXAMPLE: Update hero text to use more descriptive text like flexible, modular, accessible, etc... maybe mix in a few "fun" words.
 * 
 * MUST FIX localstorage issue as it is causing a build error before performance audits can be done. Before a build can be made.
@@ -35,6 +35,7 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 * PERFORMANCE AUDIT. Use Chrome LightHouse. Double check cpu and performance/paint issues. If gradient is still causing performance issues, try the png. Maybe will-change is causing issues. jpg for images, png for snapshots. hero under 200kb, thumbnails under 30kb. NEXT JS SHOULD OPTIMIZE ALREADY.
 * Check reduced motion settings.
 * Check screen reader settings.
+* Check mailto links work.
 
 
 
@@ -301,25 +302,16 @@ export default function Home() {
 				</section>
 				<section className={cn(styles.section, styles.lastCallout)}>
 					<div className={styles.containerGrid}>
-						{/* <Callout
-							title='For product teams that love the extra polish!'
-							body="Don't overlook the value of a good design system. It's the foundation of a successful product."
+						<Callout
+							title='For tech teams that love the extra polish!'
 							iconAccent
 							size='lg'
+							body="Let's build a product that leaves a lasting impression."
+							buttonText='Say hello'
+							href='mailto:hello@example.com?subject=Hello!'
 						>
-							<IconCodePen />
-						</Callout> */}
-						<Callout title='For product teams that love the extra polish!' iconAccent size='lg'>
-							<IconCodePen />
+							<IconPolish />
 						</Callout>
-						{/* <Callout
-							title='For product teams that love the extra polish!'
-							body='Discover the difference that quality design can make with a reliable system.'
-							iconAccent
-							size='lg'
-						>
-							<IconCodePen />
-						</Callout> */}
 					</div>
 				</section>
 				<div className={cn(styles.bgVertText, styles.vertTextBottomRight)} aria-hidden>
