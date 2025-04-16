@@ -41,6 +41,7 @@ export const InspContent = () => {
 							placeholder='blur'
 							priority
 						/>
+						<p>[GO THROUGH AND SEE WHERE CALLOUTS CAN GO]</p>
 						<p>
 							During my seven-year tenure at{' '}
 							<a href='https://www.inspirato.com' className={styles.link} target='_blank' rel='noopener noreferrer'>
@@ -101,6 +102,13 @@ export const InspContent = () => {
 							points. This initial research highlighted the complexity of our current systems—so I mapped out a phased
 							approach to tackle these issues step by step.
 						</p>
+						<p>[FULL, IMAGE OF CURRENT STATE PHASE GRAPH]</p>
+						<LargeImage
+							className={cn(styles.imageContainer, styles.flowOffset, styles.breakout)}
+							src={data.images.hero.src}
+							alt={data.images.hero.alt}
+							caption={data.images.hero.caption}
+						/>
 						<h4 className={styles.h4}>
 							<span className={styles.altFont}>Phase&nbsp;1:</span>
 							<br />
@@ -109,17 +117,12 @@ export const InspContent = () => {
 								<span className={styles.altFont}>&amp;</span>&nbsp;Identify
 							</span>
 						</h4>
-						<LargeImage
-							className={cn(styles.imageContainer, styles.flowOffset, styles.breakout)}
-							src={data.images.hero.src}
-							alt={data.images.hero.alt}
-							caption={data.images.hero.caption}
-						/>
 						<p>
 							I took all the data from my research and cataloged every element on the site—like fonts, colors, icons,
 							and spacing—using old design files, browser tools, and my own observations to spot inconsistencies. This
 							gave us a clear view of our current UI, which was crucial for planning next steps.
 						</p>
+						<p>[3-4-UP, GATHER ICONS, CAN BE MESSY, LEGACY VERSIONS SNAPSHOTS]</p>
 						<p>
 							This process led to our first design style guide, which teams used to keep things consistent while I
 							explored ways to streamline and document everything into a cohesive system.
@@ -133,6 +136,7 @@ export const InspContent = () => {
 							With a clear understanding of the current state, I created a cleaner, more consistent style guide focused
 							on consolidating typography, color, and iconography.
 						</p>
+						<p>[4-UP, CONSOLIDATED NOTES LEGACY ICONS, TYPOGRAPHY, COLORS... NICE GUIDE WITH CONSOLIDATED NOTES]</p>
 						<p>
 							I prioritized consolidation over aesthetics - first reduce, then refine. This consolidation was not just
 							about visual consistency;{' '}
@@ -154,6 +158,10 @@ export const InspContent = () => {
 							reference.
 						</p>
 						<p>
+							[FULL, IMAGE OF SIDE BY SIDE LEGACY AND INTEGRATED] OR A 3-4 UP WITH MOCKS OF HOW SITE LOOKS WITH NEW
+							STYLES
+						</p>
+						<p>
 							This enabled our design team to create mocks for an interface that had yet to be released and
 							simultaneously provided a guide for QA efforts once code changes were implemented.
 						</p>
@@ -169,6 +177,14 @@ export const InspContent = () => {
 							hood.
 						</p>
 						<p>
+							[SOME KIND OF SIDE IMAGE TO INDICATE REPLACING CODE INSTANCES WITH A SINGLE TOKEN, AND TYPOGRAPHY MIXINS
+							EXAMPLES... DUMMY DATA...UTILIZE AI TO SET UP BASIC CODE STRUCTURE TO GET SCREENCAP]
+						</p>
+						<p>
+							[OR PERHAPS THE UI LAYER THAT HOVERS OVER THE VARIOUS SILOS, INDICATING WHERE DESIGN SYSTEM LIVES AND HOW
+							SILOS ARE INTEGRATED]
+						</p>
+						<p>
 							I began with updating colors, which provided a low-risk entry point and a testing ground for our approach.
 							Next, I tackled typography, carefully applying SASS mixins to unify font sizes, spacing, and styles.
 							Finally, I standardized iconography by replacing varied file types with a defined global SVG sprite for
@@ -178,6 +194,7 @@ export const InspContent = () => {
 							Design system styles and tokens were now implemented and could be fine-tuned to handle future
 							enhancements. Even legacy frameworks could integrate seamlessly without risky refactors.
 						</p>
+						<p>[ENHANCE... 4-UP, ALL NEW SLICK STUFF FROM SYSTEM, SCREENSHOTS OF CURRENT SITE, ETC]</p>
 						<h4 className={styles.h4}>
 							<span className={styles.altFont}>Phase&nbsp;4:</span>
 							<br />
@@ -195,6 +212,10 @@ export const InspContent = () => {
 							We updated brand styles in one place, and saw them ripple across the product. The design system, now
 							referred to as the <em>IDS 2.0</em>, became the North Star for all future designs and features, while
 							legacy UI was gradually deprecated.
+						</p>
+						<p>
+							[INTO THE FUTURE - ADD "STORYBOOK" TO TEXT BELOW AND USE SB IMAGES HERE?] OR AS 4 UP ABOVE THIS SECTION
+							HEADER... SHOWCASE CODE CODE CODE
 						</p>
 						<h3 className={styles.h3}>Into the Future</h3>
 						<p>
@@ -367,6 +388,10 @@ export const InspContent = () => {
 					<p>
 						The culmination of these efforts was an integrated, custom component-driven front-end (Next.js, TypeScript,
 						CSS Modules) that streamlined our development process and unlocked even more potential.
+					</p>
+					<p>
+						[LARGE IMAGE OF SOLID WEBSITE PAGE WITH STYLES... PERHAPS ONE OF MY BRANDLE TEST PAGES... ON LAPTOP MOBILE,
+						ETC.]
 					</p>
 					<p>
 						Myself and a dedicated front-end team could now build semantic, accessible, reusable, tested and responsive
