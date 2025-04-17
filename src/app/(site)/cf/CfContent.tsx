@@ -38,7 +38,9 @@ export const CfContent = () => {
 							placeholder='blur'
 							priority
 						/>
-						<p>[SEE WHERE CALLOUTS CAN GO. SEE WHERE LINKS AND EMPHASIZED TEXT CAN GO.]</p>
+						<p style={{ border: '1px solid red' }}>
+							[SEE WHERE CALLOUTS CAN GO. SEE WHERE LINKS AND EMPHASIZED TEXT CAN GO.]
+						</p>
 						<p>
 							In this role, I led the creation of a unified design and token system to support rapid product growth and
 							lay the groundwork for a more scalable front-end.
@@ -94,7 +96,7 @@ export const CfContent = () => {
 							Starting with initial brand guidelines from the marketing team, I extended these into a comprehensive UI
 							kit to integrate into the product experience.
 						</p>
-						<p>
+						<p style={{ border: '1px solid red' }}>
 							[Research... 3-4UP, FULL AUDIT, APP SCREENSHOTS, OLD MARKETING SITE SCREENSHOTS, CATALOGUE OF TYPOGRAPHY,
 							COLOR USAGE, ICONS, ETC.]
 						</p>
@@ -111,7 +113,9 @@ export const CfContent = () => {
 						</p>
 						<p>From this, we had a clear map of inconsistencies and a starting point for simplification.</p>
 						<h4 className={styles.h4}>Creating a Strategy</h4>
-						<p>[SIDE IMAGE, NOTES/SKETCHES/RESEARCH, POSSIBLY AROUND MODES, SPLITTING BRANDS, ETC.]</p>
+						<p style={{ border: '1px solid red' }}>
+							[SIDE IMAGE, NOTES/SKETCHES/RESEARCH, POSSIBLY AROUND MODES, SPLITTING BRANDS, ETC.]
+						</p>
 						<p>
 							With a full picture of the product and marketing ecosystems, I drafted a system strategy focused on
 							scalability, flexibility, and developer alignment.
@@ -137,14 +141,18 @@ export const CfContent = () => {
 							color, typography, and accessibility. This documentation would enable developers to easily replace raw
 							data with system tokens during code implementation.
 						</p>
-						<p>[3-4UP, NICE AND CLEAN ORGANIZED TYPOGRAPHY HEIRARCHY, COLOR, TEST VALIDATION, ETC.]</p>
+						<p style={{ border: '1px solid red' }}>
+							[3-4UP, NICE AND CLEAN ORGANIZED TYPOGRAPHY HEIRARCHY, COLOR, TEST VALIDATION, ETC.]
+						</p>
 						<p>
 							I streamlined the palette by consolidating various grays into a series of neutral and brand-specific
 							colors. I also established a clear type hierarchy with an updated font-scale based on harmonious
 							mathematical ratios. To ensure the system met WCAG accessibility standards, multiple validation tests were
 							performed and a chart of font and color combinations was created to guide usage in the system.
 						</p>
-						<p>[FULL SHOT, OF CODEPEN EXPLORATION W/CODE VISIBLE, IN A COMPUTER MOCKUP? LINK TEXT BELOW]</p>
+						<p style={{ border: '1px solid red' }}>
+							[FULL SHOT, OF CODEPEN EXPLORATION W/CODE VISIBLE, IN A COMPUTER MOCKUP? LINK TEXT BELOW]
+						</p>
 						<p>
 							To showcase early ideas, I coded a quick{' '}
 							<a
@@ -169,7 +177,7 @@ export const CfContent = () => {
 							With foundational decisions and strategies in place, I created a token structure with two theme modes
 							using Figma variables, mapping them across a set of modular libraries—color, typography, icons, and logos.
 						</p>
-						<p>
+						<p style={{ border: '1px solid red' }}>
 							[3-4UP, token library structure, example of tokens with visible modes, naming conventions, coded version?]
 						</p>
 						<p>
@@ -180,7 +188,9 @@ export const CfContent = () => {
 							Each token was designed to translate cleanly to front-end code using CSS variables and consistent,
 							developer-friendly naming conventions.
 						</p>
-						<p>[Component Creation - Full shot of a component creation page... form inputs, buttons, etc.]</p>
+						<p style={{ border: '1px solid red' }}>
+							[Component Creation - Full shot of a component creation page... form inputs, buttons, etc.]
+						</p>
 						<h3 className={styles.h3}>Component Creation</h3>
 						<p>
 							Recognizing that future product design and development would rely on clear, reusable components, I began
@@ -200,7 +210,7 @@ export const CfContent = () => {
 						The final outcome was a <em>dual-mode</em> Figma design system with multi-tiered semantic coded
 						tokens—modular, scalable, and ready for future development.
 					</p>
-					<p>
+					<p style={{ border: '1px solid red' }}>
 						[Perhaps a shot of the new marketing site + the mobile experience for ucass? To show the product light theme
 						side of things?]
 					</p>

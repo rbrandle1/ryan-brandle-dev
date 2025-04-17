@@ -41,7 +41,7 @@ export const InspContent = () => {
 							placeholder='blur'
 							priority
 						/>
-						<p>[GO THROUGH AND SEE WHERE CALLOUTS CAN GO]</p>
+						<p style={{ border: '1px solid red' }}>[GO THROUGH AND SEE WHERE CALLOUTS CAN GO]</p>
 						<p>
 							During my seven-year tenure at{' '}
 							<a href='https://www.inspirato.com' className={styles.link} target='_blank' rel='noopener noreferrer'>
@@ -91,80 +91,123 @@ export const InspContent = () => {
 							As a small UX team, we defined and grounded ourselves in a set of shared principles that would guide us
 							through foundational decisions and help us build the tools we needed to execute fast and smart.
 						</p>
+						<p style={{ border: '1px solid red' }}>
+							[Make this a callout and remove the title?, then update h4s below]
+						</p>
 						<h3 className={styles.h3}>Building a New System</h3>
 						<p>
 							We began advocating for a shared vision of a design system—communicating its value, building
 							cross-functional buy-in, and forming a collaborative network to help shape its direction while keeping the
 							end-users in focus.
 						</p>
+						<LargeImage
+							className={cn(styles.imageContainer, styles.flowOffset, styles.breakout)}
+							src={data.images.phase.src}
+							alt={data.images.phase.alt}
+							caption={data.images.phase.caption}
+						/>
 						<p>
 							I teamed up with folks from tech, product, design, and marketing to understand their needs and pain
 							points. This initial research highlighted the complexity of our current systems—so I mapped out a phased
 							approach to tackle these issues step by step.
 						</p>
-						<p>[FULL, IMAGE OF CURRENT STATE PHASE GRAPH]</p>
+						<div className={cn(styles.multiImagesContainer, styles.flowOffset, styles.breakout)}>
+							<MultiImage
+								imgSrc1={data.images.gather.src}
+								imgAlt1={data.images.gather.alt}
+								imgSrc2={data.images.gather2.src}
+								imgAlt2={data.images.gather2.alt}
+								imgSrc3={data.images.gather3.src}
+								imgAlt3={data.images.gather3.alt}
+								// imgSrc4={data.images.gather4.src}
+								// imgAlt4={data.images.gather4.alt}
+								caption='Gathering and documenting all product styles and UI elements.'
+							>
+								<h4 className={styles.h4}>
+									<span className={styles.altFont}>Phase&nbsp;1:</span>
+									<br />
+									Gather
+									<span className={styles.noWrap}>
+										<span className={styles.altFont}>&amp;</span>&nbsp;Identify
+									</span>
+								</h4>
+								<p>
+									I took all the data from my research and cataloged every element on the site—like fonts, colors,
+									icons, and spacing—using old design files, browser tools, and my own observations to spot
+									inconsistencies. This gave us a clear view of our current UI, which was crucial for planning next
+									steps.
+								</p>
+								<p>
+									This process led to our first design style guide, which teams used to keep things consistent while I
+									explored ways to streamline and document everything into a cohesive system.
+								</p>
+							</MultiImage>
+							<MultiImage
+								imgSrc1={data.images.consolidate2.src}
+								imgAlt1={data.images.consolidate2.alt}
+								imgSrc2={data.images.consolidate.src}
+								imgAlt2={data.images.consolidate.alt}
+								imgSrc3={data.images.consolidate3.src}
+								imgAlt3={data.images.consolidate3.alt}
+								imgSrc4={data.images.consolidate4.src}
+								imgAlt4={data.images.consolidate4.alt}
+								caption='Organized guide for consolidating foundational styles and components.'
+								textRight
+							>
+								<h4 className={styles.h4}>
+									<span className={styles.altFont}>Phase&nbsp;2:</span>
+									<br />
+									Consolidate
+								</h4>
+								<p>
+									With a clear understanding of the current state, I created a cleaner, more consistent style guide
+									focused on consolidating typography, color, and iconography.
+								</p>
+								<p>
+									I prioritized consolidation over aesthetics - first reduce, then refine. This consolidation was not
+									just about visual consistency;{' '}
+									<strong>it established design tokens that could be used by both designers and developers</strong>,
+									ensuring that every element was represented in one uniform language.
+								</p>
+								<p>
+									It also provided a roadmap for locating and replacing various instances throughout the site, greatly
+									simplifying the implementation process.
+								</p>
+							</MultiImage>
+							<MultiImage
+								imgSrc1={data.images.integrate2.src}
+								imgAlt1={data.images.integrate2.alt}
+								imgSrc2={data.images.integrate4.src}
+								imgAlt2={data.images.integrate4.alt}
+								imgSrc3={data.images.integrate3.src}
+								imgAlt3={data.images.integrate3.alt}
+								imgSrc4={data.images.integrate5.src}
+								imgAlt4={data.images.integrate5.alt}
+								caption='Integrated styles and components into a new style guide.'
+							>
+								<h4 className={styles.h4}>
+									<span className={styles.altFont}>Phase&nbsp;3:</span>
+									<br />
+									Integrate
+								</h4>
+								<p>
+									The design version of the system was updated with a side by side comparison of what the{' '}
+									<em>integrated</em> styles and components would look like while maintaining legacy counterparts as a
+									reference.
+								</p>
+								<p>
+									This enabled our design team to create mocks for an interface that had yet to be released and
+									simultaneously provided a guide for QA efforts once code changes were implemented.
+								</p>
+							</MultiImage>
+						</div>
 						<LargeImage
 							className={cn(styles.imageContainer, styles.flowOffset, styles.breakout)}
-							src={data.images.hero.src}
-							alt={data.images.hero.alt}
-							caption={data.images.hero.caption}
+							src={data.images.integrateLg.src}
+							alt={data.images.integrateLg.alt}
+							caption={data.images.integrateLg.caption}
 						/>
-						<h4 className={styles.h4}>
-							<span className={styles.altFont}>Phase&nbsp;1:</span>
-							<br />
-							Gather
-							<span className={styles.noWrap}>
-								<span className={styles.altFont}>&amp;</span>&nbsp;Identify
-							</span>
-						</h4>
-						<p>
-							I took all the data from my research and cataloged every element on the site—like fonts, colors, icons,
-							and spacing—using old design files, browser tools, and my own observations to spot inconsistencies. This
-							gave us a clear view of our current UI, which was crucial for planning next steps.
-						</p>
-						<p>[3-4-UP, GATHER ICONS, CAN BE MESSY, LEGACY VERSIONS SNAPSHOTS]</p>
-						<p>
-							This process led to our first design style guide, which teams used to keep things consistent while I
-							explored ways to streamline and document everything into a cohesive system.
-						</p>
-						<h4 className={styles.h4}>
-							<span className={styles.altFont}>Phase&nbsp;2:</span>
-							<br />
-							Consolidate
-						</h4>
-						<p>
-							With a clear understanding of the current state, I created a cleaner, more consistent style guide focused
-							on consolidating typography, color, and iconography.
-						</p>
-						<p>[4-UP, CONSOLIDATED NOTES LEGACY ICONS, TYPOGRAPHY, COLORS... NICE GUIDE WITH CONSOLIDATED NOTES]</p>
-						<p>
-							I prioritized consolidation over aesthetics - first reduce, then refine. This consolidation was not just
-							about visual consistency;{' '}
-							<strong>it established design tokens that could be used by both designers and developers</strong>,
-							ensuring that every element was represented in one uniform language.
-						</p>
-						<p>
-							It also provided a roadmap for locating and replacing various instances throughout the site, greatly
-							simplifying the implementation process.
-						</p>
-						<h4 className={styles.h4}>
-							<span className={styles.altFont}>Phase&nbsp;3:</span>
-							<br />
-							Integrate
-						</h4>
-						<p>
-							The design version of the system was updated with a side by side comparison of what the{' '}
-							<em>integrated</em> styles and components would look like while maintaining legacy counterparts as a
-							reference.
-						</p>
-						<p>
-							[FULL, IMAGE OF SIDE BY SIDE LEGACY AND INTEGRATED] OR A 3-4 UP WITH MOCKS OF HOW SITE LOOKS WITH NEW
-							STYLES
-						</p>
-						<p>
-							This enabled our design team to create mocks for an interface that had yet to be released and
-							simultaneously provided a guide for QA efforts once code changes were implemented.
-						</p>
+
 						<h3 className={styles.h3}>Jumping into the Code</h3>
 						<p>
 							Code implementation was planned and executed through a series of controlled deployments, ensuring minimal
@@ -176,11 +219,11 @@ export const InspContent = () => {
 							<em>The work was meticulous</em>, but it enabled me to cover a lot of ground to unify the UI under the
 							hood.
 						</p>
-						<p>
+						<p style={{ border: '1px solid red' }}>
 							[SOME KIND OF SIDE IMAGE TO INDICATE REPLACING CODE INSTANCES WITH A SINGLE TOKEN, AND TYPOGRAPHY MIXINS
 							EXAMPLES... DUMMY DATA...UTILIZE AI TO SET UP BASIC CODE STRUCTURE TO GET SCREENCAP]
 						</p>
-						<p>
+						<p style={{ border: '1px solid red' }}>
 							[OR PERHAPS THE UI LAYER THAT HOVERS OVER THE VARIOUS SILOS, INDICATING WHERE DESIGN SYSTEM LIVES AND HOW
 							SILOS ARE INTEGRATED]
 						</p>
@@ -194,7 +237,9 @@ export const InspContent = () => {
 							Design system styles and tokens were now implemented and could be fine-tuned to handle future
 							enhancements. Even legacy frameworks could integrate seamlessly without risky refactors.
 						</p>
-						<p>[ENHANCE... 4-UP, ALL NEW SLICK STUFF FROM SYSTEM, SCREENSHOTS OF CURRENT SITE, ETC]</p>
+						<p style={{ border: '1px solid red' }}>
+							[ENHANCE... 4-UP, ALL NEW SLICK STUFF FROM SYSTEM, SCREENSHOTS OF CURRENT SITE, ETC]
+						</p>
 						<h4 className={styles.h4}>
 							<span className={styles.altFont}>Phase&nbsp;4:</span>
 							<br />
@@ -213,7 +258,7 @@ export const InspContent = () => {
 							referred to as the <em>IDS 2.0</em>, became the North Star for all future designs and features, while
 							legacy UI was gradually deprecated.
 						</p>
-						<p>
+						<p style={{ border: '1px solid red' }}>
 							[INTO THE FUTURE - ADD "STORYBOOK" TO TEXT BELOW AND USE SB IMAGES HERE?] OR AS 4 UP ABOVE THIS SECTION
 							HEADER... SHOWCASE CODE CODE CODE
 						</p>
@@ -389,7 +434,7 @@ export const InspContent = () => {
 						The culmination of these efforts was an integrated, custom component-driven front-end (Next.js, TypeScript,
 						CSS Modules) that streamlined our development process and unlocked even more potential.
 					</p>
-					<p>
+					<p style={{ border: '1px solid red' }}>
 						[LARGE IMAGE OF SOLID WEBSITE PAGE WITH STYLES... PERHAPS ONE OF MY BRANDLE TEST PAGES... ON LAPTOP MOBILE,
 						ETC.]
 					</p>
