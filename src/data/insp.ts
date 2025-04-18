@@ -14,6 +14,15 @@ import articleImgIntegrate3 from '@/images/insp/insp-article-integrate-3.png';
 import articleImgIntegrate4 from '@/images/insp/insp-article-integrate-4.png';
 import articleImgIntegrate5 from '@/images/insp/insp-article-integrate-5.png';
 import articleImgIntegrateLg from '@/images/insp/insp-article-integrate-lg.png';
+import articleImgToken from '@/images/insp/insp-article-token.png';
+import articleImgUi from '@/images/insp/insp-article-ui.png';
+import articleImgEnhance from '@/images/insp/insp-article-enhance.png';
+import articleImgEnhance2 from '@/images/insp/insp-article-enhance-2.png';
+import articleImgEnhance3 from '@/images/insp/insp-article-enhance-3.png';
+import articleImgEnhanceFull from '@/images/insp/insp-article-enhance-full.png';
+import articleImgSb from '@/images/insp/insp-article-sb-side.png';
+import articleImgFinal from '@/images/insp/insp-article-final.jpg';
+
 export const data = {
 	text: {
 		title: 'The Inspirato Design System',
@@ -90,6 +99,42 @@ export const data = {
 			src: articleImgIntegrateLg,
 			alt: 'Integrated filter components',
 			caption: 'Integrated home page.',
+		},
+		token: {
+			src: articleImgToken,
+			alt: 'Raw variable replacement with Tokens chart',
+			caption: 'Replacing raw variables with tokens and mixins.',
+		},
+		ui: {
+			src: articleImgUi,
+			alt: 'Independent design system layer chart',
+			caption: 'UI layer is independent of repositories but accessible to all.',
+		},
+		enhance: {
+			src: articleImgEnhance,
+			alt: 'Rebranded navigation',
+		},
+		enhance2: {
+			src: articleImgEnhance2,
+			alt: 'Rebranded system buttons',
+		},
+		enhance3: {
+			src: articleImgEnhance3,
+			alt: 'Rebranded system cards',
+		},
+		enhanceFull: {
+			src: articleImgEnhanceFull,
+			alt: 'Rebranded home page',
+			caption: 'Rebranded home page using enhanced design system.',
+		},
+		sb: {
+			src: articleImgSb,
+			alt: 'Storybook component library',
+			caption: 'Storybook component library.',
+		},
+		final: {
+			src: articleImgFinal,
+			alt: 'Website on multiple devices',
 		},
 	},
 	tags: ['UX/UI', 'HTML', 'CSS', 'JS', 'TS', 'React', 'NextJS', 'Storybook'],

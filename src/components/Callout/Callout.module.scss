@@ -54,6 +54,7 @@
 .title {
 	color: var(--title-color, var(--text-primary));
 	max-width: var(--optimal-line-length-sm);
+	padding-inline: var(--space-sm);
 }
 
 .lg {

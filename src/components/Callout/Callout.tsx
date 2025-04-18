@@ -9,7 +9,7 @@ interface CalloutProps {
 	className?: string;
 	children?: React.ReactNode;
 	iconAccent?: boolean;
-	title: string;
+	title: string | React.ReactNode;
 	titleAccent?: boolean;
 	size?: 'sm' | 'md' | 'lg';
 	body?: string;
