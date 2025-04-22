@@ -96,10 +96,6 @@ export const CfContent = () => {
 							Starting with initial brand guidelines from the marketing team, I extended these into a comprehensive UI
 							kit to integrate into the product experience.
 						</p>
-						{/* <p style={{ border: '1px solid red' }}>
-							[Research... 3-4UP, FULL AUDIT, APP SCREENSHOTS, OLD MARKETING SITE SCREENSHOTS, CATALOGUE OF TYPOGRAPHY,
-							COLOR USAGE, ICONS, ETC.]
-						</p> */}
 						<div className={cn(styles.multiImagesContainer, styles.breakout, styles.flowOffset)}>
 							<MultiImage
 								imgSrc1={data.images.oldSite.src}
@@ -127,19 +123,6 @@ export const CfContent = () => {
 								<p>From this, we had a clear map of inconsistencies and a starting point for simplification.</p>
 							</MultiImage>
 						</div>
-						{/* <h3 className={styles.h3}>
-							Research
-							<span className={styles.noWrap}>
-								<span className={styles.altFont}>&amp;</span>&nbsp;Discovery
-							</span>
-						</h3>
-						<p>
-							To understand the scope and needs of both marketing and product, I conducted a full audit of existing UI
-							patterns using browser extensions, Figma plugin tools, and manual documentation. This included cataloging
-							typography, color usage, spacing, icons, and more.
-						</p>
-						<p>From this, we had a clear map of inconsistencies and a starting point for simplification.</p> */}
-
 						<div className={cn(styles.sideImagesContainer, styles.flowOffset)}>
 							<SideImage
 								imgSrc={data.images.strategy.src}
@@ -186,7 +169,6 @@ export const CfContent = () => {
 								imgSrc3={data.images.build3.src}
 								imgAlt3={data.images.build3.alt}
 								caption='WCAG-validation, typography, link, and button styles'
-								textRight
 							>
 								<p>
 									I streamlined the palette by consolidating various grays into a series of neutral and brand-specific
@@ -197,60 +179,21 @@ export const CfContent = () => {
 							</MultiImage>
 						</div>
 						<p>
-							To showcase early ideas, I coded a quick{' '}
+							To showcase early ideas, I coded a quick CodePen{' '}
 							<a
 								href='https://codepen.io/brandledesign/pen/BaeadRV'
 								className={styles.link}
 								target='_blank'
 								rel='noopener noreferrer'
 							>
-								CodePen prototype
+								prototype
 							</a>{' '}
 							using CSS custom properties. This allowed the team and stakeholders to see the system in action and
 							provide feedback for quick iteration.
 						</p>
 						<div className={cn(styles.codePenContainer, styles.breakout, styles.flowOffset)}>
-							<CodePen penId='BaeadRV' height='900' />
+							<CodePen penId='BaeadRV' />
 						</div>
-						{/* <div className={cn(styles.sideImagesContainer, styles.flowOffset)}>
-							<SideImage
-								imgSrc={data.images.build.src}
-								imgAlt={data.images.build.alt}
-							>
-								<p>
-									I streamlined the palette by consolidating various grays into a series of neutral and brand-specific
-									colors. I also established a clear type hierarchy with an updated font-scale based on harmonious
-									mathematical ratios. To ensure the system met WCAG accessibility standards, multiple validation tests
-									were performed and a chart of font and color combinations was created to guide usage in the system.
-								</p>
-							</SideImage>
-							<SideImage
-								imgSrc={data.images.build.src}
-								imgAlt={data.images.build.alt}
-								caption={data.images.build.caption}
-								imgRight
-							>
-								<p>put codepen in here???</p>
-								<p>
-									To showcase early ideas, I coded a quick{' '}
-									<a
-										href='https://codepen.io/brandledesign/pen/BaeadRV'
-										className={styles.link}
-										target='_blank'
-										rel='noopener noreferrer'
-									>
-										CodePen prototype
-									</a>{' '}
-									using CSS custom properties. This allowed the team and stakeholders to see the system in action and
-									provide feedback for quick iteration.
-								</p>
-							</SideImage>
-						</div> */}
-						{/* <p style={{ border: '1px solid red' }}>
-							[FULL SHOT, OF CODEPEN EXPLORATION W/CODE VISIBLE, IN A COMPUTER MOCKUP? LINK TEXT BELOW] [SideImage -
-							Codepen Exploration]
-						</p> */}
-
 						<h3 className={styles.h3}>
 							Library
 							<span className={styles.noWrap}>
@@ -262,25 +205,37 @@ export const CfContent = () => {
 							With foundational decisions and strategies in place, I created a token structure with two theme modes
 							using Figma variables, mapping them across a set of modular libraries—color, typography, icons, and logos.
 						</p>
-						<p style={{ border: '1px solid red' }}>
-							[3-4UP, token library structure, example of tokens with visible modes, naming conventions, coded version?]
-						</p>
-						<p>
-							Organizing tokens into both global and project-specific libraries made the system easier to manage and
-							flexible enough to support sub-branded implementations in the future.
-						</p>
-						<p>
-							Each token was designed to translate cleanly to front-end code using CSS variables and consistent,
-							developer-friendly naming conventions.
-						</p>
-						<p style={{ border: '1px solid red' }}>
-							[Component Creation - Full shot of a component creation page... form inputs, buttons, etc.]
-						</p>
+						<div className={cn(styles.multiImagesContainer, styles.breakout, styles.flowOffset)}>
+							<MultiImage
+								imgSrc1={data.images.tokens.src}
+								imgAlt1={data.images.tokens.alt}
+								imgSrc2={data.images.tokens2.src}
+								imgAlt2={data.images.tokens2.alt}
+								imgSrc3={data.images.tokens3.src}
+								imgAlt3={data.images.tokens3.alt}
+								caption='Token naming conventions, Figma tokens, and coded tokens.'
+							>
+								<p>
+									Organizing tokens into both global and project-specific libraries made the system easier to manage and
+									flexible enough to support sub-branded implementations in the future.
+								</p>
+								<p>
+									Each token was designed to translate cleanly to front-end code using CSS variables and consistent,
+									developer-friendly naming conventions.
+								</p>
+							</MultiImage>
+						</div>
 						<h3 className={styles.h3}>Component Creation</h3>
 						<p>
 							Recognizing that future product design and development would rely on clear, reusable components, I began
 							building commonly used responsive patterns using Figma's auto-layout features.
 						</p>
+						<LargeImage
+							className={cn(styles.imageContainer, styles.flowOffset, styles.breakout)}
+							src={data.images.components.src}
+							alt={data.images.components.alt}
+							caption={data.images.components.caption}
+						/>
 						<p>
 							Designing the new marketing site in parallel provided a practical way to introduce components as needed
 							and test the system holistically in a real-world context.

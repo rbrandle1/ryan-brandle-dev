@@ -7,6 +7,10 @@ import articleImgStrategy from '@/images/cf/cf-article-strategy.png';
 import articleImgBuild from '@/images/cf/cf-article-build.png';
 import articleImgBuild2 from '@/images/cf/cf-article-build-2.png';
 import articleImgBuild3 from '@/images/cf/cf-article-build-3.png';
+import articleImgTokens from '@/images/cf/cf-article-tokens.png';
+import articleImgTokens2 from '@/images/cf/cf-article-tokens-2.png';
+import articleImgTokens3 from '@/images/cf/cf-article-tokens-3.png';
+import articleImgComponents from '@/images/cf/cf-article-components.png';
 
 export const data = {
 	text: {
@@ -56,6 +60,23 @@ export const data = {
 		build3: {
 			src: articleImgBuild3,
 			alt: 'Link and button style chart',
+		},
+		tokens: {
+			src: articleImgTokens,
+			alt: 'Token naming conventions',
+		},
+		tokens2: {
+			src: articleImgTokens2,
+			alt: 'Figma tokens',
+		},
+		tokens3: {
+			src: articleImgTokens3,
+			alt: 'Coded tokens',
+		},
+		components: {
+			src: articleImgComponents,
+			alt: 'Light and dark mode component examples',
+			caption: 'Light and dark mode component examples.',
 		},
 	},
 	tags: ['UX/UI', 'Branding', 'HTML', 'CSS', 'Figma'],

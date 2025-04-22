@@ -2,7 +2,6 @@ import cn from 'classnames';
 import dynamic from 'next/dynamic';
 import { insp, cf, brand, flashcards, codepen, comparison } from '@/data';
 import Callout from '@/components/Callout/Callout';
-import IconCodePen from '@/components/Icons/IconCodePen';
 import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import IconModular from '@/components/Icons/IconModular';
 import IconPolish from '@/components/Icons/IconPolish';

@@ -1,23 +1,36 @@
 import styles from './CodePen.module.scss';
-import setInlineStyles from '@/helpers/functions';
 
 interface CodePenProps {
 	penId: string;
-	height?: string;
+	defaultTab?: string;
 }
 
-const CodePen = ({ penId, height }: CodePenProps) => {
+const CodePen = ({ penId, defaultTab = 'result' }: CodePenProps) => {
 	return (
-		<iframe
-			src={`https://codepen.io/brandledesign/embed/${penId}`}
-			className={styles.codePen}
-			style={setInlineStyles({
-				'--height': height ? `${height}px` : null,
-			})}
-			title='CodePen Embed'
-			loading='lazy'
-			allowFullScreen={true}
-		></iframe>
+		<div className={styles.wrapper}>
+			<p
+				className='codepen'
+				data-border='none'
+				data-height='100%'
+				data-default-tab={defaultTab}
+				data-slug-hash={penId}
+				data-pen-title='CodePen by Ryan Brandle'
+				data-user='brandledesign'
+				style={{
+					boxSizing: 'border-box',
+					display: 'flex',
+					alignItems: 'center',
+					justifyContent: 'center',
+					margin: '1em 0',
+					padding: '1em',
+				}}
+			>
+				<span>
+					<a href={`https://codepen.io/brandledesign/pen/${penId}`}>This Pen</a> is owned by (
+					<a href='https://codepen.io/brandledesign'>Ryan Brandle</a>) on <a href='https://codepen.io'>CodePen</a>.
+				</span>
+			</p>
+		</div>
 	);
 };
 

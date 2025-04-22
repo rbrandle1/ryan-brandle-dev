@@ -1,10 +1,13 @@
 @use '@/styles/utils/typography';
 @use '@/styles/utils/viewport';
 
-.codePen {
+.wrapper > div {
+	aspect-ratio: var(--ratio-portrait);
 	width: 100%;
-	height: var(--height, 300px);
-	border: none;
-	border-radius: var(--border-radius);
+	border-radius: var(--radius-default);
 	overflow: hidden;
+
+	@include viewport.breakpoint(sm) {
+		aspect-ratio: var(--ratio-landscape);
+	}
 }

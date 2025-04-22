@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import dynamic from 'next/dynamic';
 import { Oswald, Source_Sans_3, Source_Serif_4 } from 'next/font/google';
 import '@/styles/reset.scss';
@@ -65,6 +66,7 @@ export default function RootLayout({
 					</main>
 					<Footer />
 				</ThemeProvider>
+				<Script src='https://cpwebassets.codepen.io/assets/embed/ei.js' strategy='afterInteractive' />
 			</body>
 		</html>
 	);
