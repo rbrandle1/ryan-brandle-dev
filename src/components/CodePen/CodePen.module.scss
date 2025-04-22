@@ -1,0 +1,10 @@
+@use '@/styles/utils/typography';
+@use '@/styles/utils/viewport';
+
+.codePen {
+	width: 100%;
+	height: var(--height, 300px);
+	border: none;
+	border-radius: var(--border-radius);
+	overflow: hidden;
+}

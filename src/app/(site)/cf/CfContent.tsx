@@ -6,9 +6,9 @@ import { cf as data } from '@/data';
 import Link from 'next/link';
 import Callout from '@/components/Callout/Callout';
 import LargeImage from '@/components/Article/LargeImage/LargeImage';
-import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import SideImage from '@/components/Article/SideImage/SideImage';
 import MultiImage from '@/components/Article/MultiImage/MultiImage';
+import CodePen from '@/components/CodePen/CodePen';
 import styles from '../projects.module.scss';
 
 export const CfContent = () => {
@@ -96,11 +96,38 @@ export const CfContent = () => {
 							Starting with initial brand guidelines from the marketing team, I extended these into a comprehensive UI
 							kit to integrate into the product experience.
 						</p>
-						<p style={{ border: '1px solid red' }}>
+						{/* <p style={{ border: '1px solid red' }}>
 							[Research... 3-4UP, FULL AUDIT, APP SCREENSHOTS, OLD MARKETING SITE SCREENSHOTS, CATALOGUE OF TYPOGRAPHY,
 							COLOR USAGE, ICONS, ETC.]
-						</p>
-						<h3 className={styles.h3}>
+						</p> */}
+						<div className={cn(styles.multiImagesContainer, styles.breakout, styles.flowOffset)}>
+							<MultiImage
+								imgSrc1={data.images.oldSite.src}
+								imgAlt1={data.images.oldSite.alt}
+								imgSrc2={data.images.typeGather.src}
+								imgAlt2={data.images.typeGather.alt}
+								imgSrc3={data.images.colorGather.src}
+								imgAlt3={data.images.colorGather.alt}
+								imgSrc4={data.images.typeScale.src}
+								imgAlt4={data.images.typeScale.alt}
+								textRight
+								caption='Discovery experiments for legacy typography, color, and iconography.'
+							>
+								<h3 className={styles.h3}>
+									Research
+									<span className={styles.noWrap}>
+										<span className={styles.altFont}>&amp;</span>&nbsp;Discovery
+									</span>
+								</h3>
+								<p>
+									To understand the scope and needs of both marketing and product, I conducted a full audit of existing
+									UI patterns using browser extensions, Figma plugin tools, and manual documentation. This included
+									cataloging typography, color usage, spacing, icons, and more.
+								</p>
+								<p>From this, we had a clear map of inconsistencies and a starting point for simplification.</p>
+							</MultiImage>
+						</div>
+						{/* <h3 className={styles.h3}>
 							Research
 							<span className={styles.noWrap}>
 								<span className={styles.altFont}>&amp;</span>&nbsp;Discovery
@@ -111,48 +138,64 @@ export const CfContent = () => {
 							patterns using browser extensions, Figma plugin tools, and manual documentation. This included cataloging
 							typography, color usage, spacing, icons, and more.
 						</p>
-						<p>From this, we had a clear map of inconsistencies and a starting point for simplification.</p>
-						<h4 className={styles.h4}>Creating a Strategy</h4>
-						<p style={{ border: '1px solid red' }}>
-							[SIDE IMAGE, NOTES/SKETCHES/RESEARCH, POSSIBLY AROUND MODES, SPLITTING BRANDS, ETC.]
-						</p>
-						<p>
-							With a full picture of the product and marketing ecosystems, I drafted a system strategy focused on
-							scalability, flexibility, and developer alignment.
-						</p>
-						<p>Key questions shaped the direction:</p>
-						<ul className={styles.ul}>
-							<li>Can a shared system support both marketing and product environments?</li>
-							<li>How many visual modes (themes) do we need?</li>
-							<li>Should we manage one central system, or split by brand/sub-brand?</li>
-							<li>How can we future-proof the system for rapid growth?</li>
-						</ul>
-						<p>
-							I presented these insights to the various teams involved and we decided on a design system to support both
-							the marketing CMS and the product UI.
-						</p>
-						<p>
-							The plan featured two theme modes—a light variant for product use and a dark variant for marketing—while
-							keeping the system flexible for future expansion.
-						</p>
+						<p>From this, we had a clear map of inconsistencies and a starting point for simplification.</p> */}
+
+						<div className={cn(styles.sideImagesContainer, styles.flowOffset)}>
+							<SideImage
+								imgSrc={data.images.strategy.src}
+								imgAlt={data.images.strategy.alt}
+								caption={data.images.strategy.caption}
+								imgRight
+							>
+								<h4 className={styles.h4}>Creating a Strategy</h4>
+								<p>
+									With a full picture of the product and marketing ecosystems, I drafted a system strategy focused on
+									scalability, flexibility, and developer alignment.
+								</p>
+								<p>
+									<strong>Key questions shaped the direction:</strong>
+								</p>
+								<ul className={styles.ul}>
+									<li>Can a shared system support both marketing and product environments?</li>
+									<li>How many visual modes (themes) do we need?</li>
+									<li>Should we manage one central system, or split by brand/sub-brand?</li>
+									<li>How can we future-proof the system for rapid growth?</li>
+								</ul>
+								<p>
+									I presented these insights to the various teams involved and we decided on a design system to support
+									both the marketing CMS and the product UI.
+								</p>
+								<p>
+									The plan featured <em>two theme modes</em>—a light variant for product use and a dark variant for
+									marketing—while keeping the system flexible for future expansion.
+								</p>
+							</SideImage>
+						</div>
 						<h3 className={styles.h3}>Building the System</h3>
 						<p>
 							With clear goals in place, I consolidated and documented elements into an atomic foundation, focusing on
 							color, typography, and accessibility. This documentation would enable developers to easily replace raw
 							data with system tokens during code implementation.
 						</p>
-						<p style={{ border: '1px solid red' }}>
-							[3-4UP, NICE AND CLEAN ORGANIZED TYPOGRAPHY HEIRARCHY, COLOR, TEST VALIDATION, ETC.]
-						</p>
-						<p>
-							I streamlined the palette by consolidating various grays into a series of neutral and brand-specific
-							colors. I also established a clear type hierarchy with an updated font-scale based on harmonious
-							mathematical ratios. To ensure the system met WCAG accessibility standards, multiple validation tests were
-							performed and a chart of font and color combinations was created to guide usage in the system.
-						</p>
-						<p style={{ border: '1px solid red' }}>
-							[FULL SHOT, OF CODEPEN EXPLORATION W/CODE VISIBLE, IN A COMPUTER MOCKUP? LINK TEXT BELOW]
-						</p>
+						<div className={cn(styles.multiImagesContainer, styles.breakout)}>
+							<MultiImage
+								imgSrc1={data.images.build.src}
+								imgAlt1={data.images.build.alt}
+								imgSrc2={data.images.build2.src}
+								imgAlt2={data.images.build2.alt}
+								imgSrc3={data.images.build3.src}
+								imgAlt3={data.images.build3.alt}
+								caption='WCAG-validation, typography, link, and button styles'
+								textRight
+							>
+								<p>
+									I streamlined the palette by consolidating various grays into a series of neutral and brand-specific
+									colors. I also established a clear type hierarchy with an updated font-scale based on harmonious
+									mathematical ratios. To ensure the system met WCAG accessibility standards, multiple validation tests
+									were performed and a chart of font and color combinations was created to guide usage in the system.
+								</p>
+							</MultiImage>
+						</div>
 						<p>
 							To showcase early ideas, I coded a quick{' '}
 							<a
@@ -166,6 +209,48 @@ export const CfContent = () => {
 							using CSS custom properties. This allowed the team and stakeholders to see the system in action and
 							provide feedback for quick iteration.
 						</p>
+						<div className={cn(styles.codePenContainer, styles.breakout, styles.flowOffset)}>
+							<CodePen penId='BaeadRV' height='900' />
+						</div>
+						{/* <div className={cn(styles.sideImagesContainer, styles.flowOffset)}>
+							<SideImage
+								imgSrc={data.images.build.src}
+								imgAlt={data.images.build.alt}
+							>
+								<p>
+									I streamlined the palette by consolidating various grays into a series of neutral and brand-specific
+									colors. I also established a clear type hierarchy with an updated font-scale based on harmonious
+									mathematical ratios. To ensure the system met WCAG accessibility standards, multiple validation tests
+									were performed and a chart of font and color combinations was created to guide usage in the system.
+								</p>
+							</SideImage>
+							<SideImage
+								imgSrc={data.images.build.src}
+								imgAlt={data.images.build.alt}
+								caption={data.images.build.caption}
+								imgRight
+							>
+								<p>put codepen in here???</p>
+								<p>
+									To showcase early ideas, I coded a quick{' '}
+									<a
+										href='https://codepen.io/brandledesign/pen/BaeadRV'
+										className={styles.link}
+										target='_blank'
+										rel='noopener noreferrer'
+									>
+										CodePen prototype
+									</a>{' '}
+									using CSS custom properties. This allowed the team and stakeholders to see the system in action and
+									provide feedback for quick iteration.
+								</p>
+							</SideImage>
+						</div> */}
+						{/* <p style={{ border: '1px solid red' }}>
+							[FULL SHOT, OF CODEPEN EXPLORATION W/CODE VISIBLE, IN A COMPUTER MOCKUP? LINK TEXT BELOW] [SideImage -
+							Codepen Exploration]
+						</p> */}
+
 						<h3 className={styles.h3}>
 							Library
 							<span className={styles.noWrap}>

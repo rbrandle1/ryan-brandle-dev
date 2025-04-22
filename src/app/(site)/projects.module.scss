@@ -205,7 +205,8 @@
 }
 
 .sideImagesContainer,
-.multiImagesContainer {
+.multiImagesContainer,
+.codePenContainer {
 	--flow-space: 3lh;
 
 	@include viewport.breakpoint(sm) {
