@@ -11,6 +11,7 @@ import articleImgTokens from '@/images/cf/cf-article-tokens.png';
 import articleImgTokens2 from '@/images/cf/cf-article-tokens-2.png';
 import articleImgTokens3 from '@/images/cf/cf-article-tokens-3.png';
 import articleImgComponents from '@/images/cf/cf-article-components.png';
+import articleImgFinal from '@/images/cf/cf-article-final.png';
 
 export const data = {
 	text: {
@@ -77,6 +78,10 @@ export const data = {
 			src: articleImgComponents,
 			alt: 'Light and dark mode component examples',
 			caption: 'Light and dark mode component examples.',
+		},
+		final: {
+			src: articleImgFinal,
+			alt: 'Final result on desktop, ipad and iphone.',
 		},
 	},
 	tags: ['UX/UI', 'Branding', 'HTML', 'CSS', 'Figma'],

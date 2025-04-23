@@ -38,9 +38,6 @@ export const CfContent = () => {
 							placeholder='blur'
 							priority
 						/>
-						<p style={{ border: '1px solid red' }}>
-							[SEE WHERE CALLOUTS CAN GO. SEE WHERE LINKS AND EMPHASIZED TEXT CAN GO.]
-						</p>
 						<p>
 							In this role, I led the creation of a unified design and token system to support rapid product growth and
 							lay the groundwork for a more scalable front-end.
@@ -77,6 +74,11 @@ export const CfContent = () => {
 						</p>
 					</div>
 				</section>
+				<Callout
+					className={cn(styles.callout, styles.flowOffset)}
+					title='A single source behind two different platforms.'
+					titleAccent
+				/>
 				<section className={styles.section}>
 					<div className={styles.containerGrid}>
 						<h2 className={styles.h2}>
@@ -110,7 +112,7 @@ export const CfContent = () => {
 								caption='Discovery experiments for legacy typography, color, and iconography.'
 							>
 								<h3 className={styles.h3}>
-									Research
+									Research{' '}
 									<span className={styles.noWrap}>
 										<span className={styles.altFont}>&amp;</span>&nbsp;Discovery
 									</span>
@@ -195,7 +197,7 @@ export const CfContent = () => {
 							<CodePen penId='BaeadRV' />
 						</div>
 						<h3 className={styles.h3}>
-							Library
+							Library{' '}
 							<span className={styles.noWrap}>
 								<span className={styles.altFont}>&amp;</span>&nbsp;Token
 							</span>{' '}
@@ -250,11 +252,14 @@ export const CfContent = () => {
 						The final outcome was a <em>dual-mode</em> Figma design system with multi-tiered semantic coded
 						tokens—modular, scalable, and ready for future development.
 					</p>
-					<p style={{ border: '1px solid red' }}>
-						[Perhaps a shot of the new marketing site + the mobile experience for ucass? To show the product light theme
-						side of things?]
+					<LargeImage
+						className={cn(styles.imageContainer, styles.flowOffset, styles.breakout)}
+						src={data.images.final.src}
+						alt={data.images.final.alt}
+					/>
+					<p>
+						<strong>Key deliverables included:</strong>
 					</p>
-					<p>Key deliverables included:</p>
 					<ul className={styles.ul}>
 						<li>
 							A comprehensive Figma and multi-tiered CSS token system with clear, developer-friendly naming conventions.
@@ -268,7 +273,7 @@ export const CfContent = () => {
 						ready for development implementation—positioned to evolve with the product and support a growing team.
 					</p>
 					<h3 className={styles.h3}>
-						Learnings
+						Learnings{' '}
 						<span className={styles.noWrap}>
 							<span className={styles.altFont}>&amp;</span>&nbsp;AI Tools
 						</span>

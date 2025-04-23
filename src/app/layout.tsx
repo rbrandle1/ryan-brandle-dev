@@ -7,7 +7,6 @@ import '@/styles/tokens/primitive.scss';
 import '@/styles/tokens/semantic.scss';
 import '@/styles/base.scss';
 import Header from '@/components/Header/Header';
-// import Footer from '@/components/Footer/Footer';
 
 // Using a dynamic import for performance reasons.
 const ThemeProvider = dynamic(() => import('@/components/ThemeProvider/ThemeProvider'), {
@@ -39,7 +38,7 @@ const sourceSerif = Source_Serif_4({
 	display: 'swap',
 });
 
-// This function ensures the fonts are referenced for typescript requirements.
+// Ensuring fonts are referenced for typescript requirements.
 const useFonts = () => {
 	return { oswald, sourceSans, sourceSerif };
 };
@@ -66,7 +65,7 @@ export default function RootLayout({
 					</main>
 					<Footer />
 				</ThemeProvider>
-				<Script src='https://cpwebassets.codepen.io/assets/embed/ei.js' strategy='afterInteractive' />
+				<Script src='https://cpwebassets.codepen.io/assets/embed/ei.js' strategy='lazyOnload' />
 			</body>
 		</html>
 	);

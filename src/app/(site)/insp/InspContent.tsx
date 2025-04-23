@@ -123,7 +123,7 @@ export const InspContent = () => {
 								<h3 className={styles.h3}>
 									<span className={styles.altFont}>Phase&nbsp;1:</span>
 									<br />
-									Gather
+									Gather{' '}
 									<span className={styles.noWrap}>
 										<span className={styles.altFont}>&amp;</span>&nbsp;Identify
 									</span>
@@ -361,8 +361,7 @@ export const InspContent = () => {
 					</p>
 					<h3 className={styles.h3}>
 						<span className={styles.noWrap}>
-							Learnings
-							<br />
+							Learnings <br />
 							<span className={styles.altFont}>&amp;</span>&nbsp;Challenges
 						</span>
 					</h3>

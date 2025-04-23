@@ -72,8 +72,8 @@ export const AboutContent = () => (
 					</ul>
 				</div>
 				<cite className={styles.citation}>
-					<sup>*</sup> Apologies for the headline... I only get to bust this out at happy hour game nights. It just fits
-					so damn well.
+					<sup>*</sup> Apologies for the headline... I only get to bust this out at happy hour game nights. It was
+					either that or "Ry of the Tiger" 🤘.
 				</cite>
 			</div>
 		</section>

@@ -18,12 +18,14 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 /* Todo:
 * * CONTENT CREATION:
 * Double check links or add links in articles.
-* 
-* How to implement codepen pens... hero?
-* Remove all odd formatted spacing, apostrophes, etc. from all text content in article pages. 
+* Pluck out any pieces of code to write snippets in articles.
 * reduce gap space when caption is present in featured project component, .5lh?.
 * Why are LINKS ON HOME PAGE, not-found and footer not tabbable? Likely because they are missing those styles that might be present in the project.scss file.
 * Update header line heights... especially large headlines. Knock down to a 1. Make h2's, etc a 1.1? Prob need to adjust altFont to 0.8 or something like that.
+* 
+* How to implement codepen pens... hero?
+* Can codepens be loaded faster and not when appears on page?
+* Double check remove all odd formatted spacing, apostrophes, etc. from all text content in article pages. 
 * Do not come across as too arrogant. Polish, So fresh, So clean, Too 🔥 To Brandle*, etc. Might need to tone it down. EXAMPLE: Update hero text to use more descriptive text like flexible, modular, accessible, etc... maybe mix in a few "fun" words.
 * 
 * MUST FIX localstorage issue as it is causing a build error before performance audits can be done. Before a build can be made.
