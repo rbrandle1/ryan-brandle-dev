@@ -163,6 +163,7 @@
 
 	/* RADIUS */
 	--p-radius-1: 3px;
+	--p-radius-2: 5px;
 
 	/* TIMING */
 	--p-duration-1: 20ms;
@@ -270,6 +271,7 @@
 	--p-color-cyan-500: hsl(var(--p-color-cyan-hue), var(--p-color-cyan-sat), 50%);
 	--p-color-cyan-700: hsl(188, var(--p-color-cyan-sat), 50%);
 	--p-color-cyan-a: hsla(var(--p-color-cyan-hue), var(--p-color-cyan-sat), 50%, 0.5);
+	--p-color-cyan-a-light: hsla(var(--p-color-cyan-hue), var(--p-color-cyan-sat), 50%, 0.15);
 	--p-color-cyan-stops: var(--p-color-cyan-700) 0%, hsl(187deg 100% 50%) 20%, hsl(186deg 100% 50%) 29%,
 		hsl(186deg 100% 50%) 36%, hsl(185deg 100% 50%) 43%, hsl(184deg 100% 50%) 50%, hsl(183deg 100% 50%) 57%,
 		hsl(182deg 100% 50%) 64%, hsl(182deg 100% 50%) 71%, hsl(181deg 100% 50%) 80%, var(--p-color-cyan-500) 100%;
@@ -283,6 +285,7 @@
 	--p-color-magenta-500: hsl(var(--p-color-magenta-hue), var(--p-color-magenta-sat), 50%);
 	--p-color-magenta-700: hsl(288, var(--p-color-magenta-sat), 50%);
 	--p-color-magenta-a: hsla(var(--p-color-magenta-hue), var(--p-color-magenta-sat), 50%, 0.5);
+	--p-color-magenta-a-light: hsla(var(--p-color-magenta-hue), var(--p-color-magenta-sat), 50%, 0.15);
 	--p-color-magenta-stops: var(--p-color-magenta-700) 0%, hsl(289deg 100% 50%) 20%, hsl(290deg 100% 50%) 29%,
 		hsl(292deg 100% 50%) 36%, hsl(293deg 100% 50%) 43%, hsl(294deg 100% 50%) 50%, hsl(295deg 100% 50%) 57%,
 		hsl(296deg 100% 50%) 64%, hsl(298deg 100% 50%) 71%, hsl(299deg 100% 50%) 80%, var(--p-color-magenta-500) 100%;
@@ -296,6 +299,7 @@
 	--p-color-purple-500: hsl(var(--p-color-purple-hue), var(--p-color-purple-sat), 50%);
 	--p-color-purple-700: hsl(279, var(--p-color-purple-sat), 50%);
 	--p-color-purple-a: hsla(var(--p-color-purple-hue), var(--p-color-purple-sat), 50%, 0.5);
+	--p-color-purple-a-light: hsla(var(--p-color-purple-hue), var(--p-color-purple-sat), 50%, 0.2);
 	--p-color-purple-stops: var(--p-color-purple-700) 0%, hsl(280deg 100% 50%) 20%, hsl(281deg 100% 50%) 29%,
 		hsl(282deg 100% 50%) 36%, hsl(283deg 100% 50%) 43%, hsl(284deg 100% 50%) 50%, hsl(284deg 100% 50%) 57%,
 		hsl(285deg 100% 50%) 64%, hsl(286deg 100% 50%) 71%, hsl(287deg 100% 50%) 80%, var(--p-color-purple-500) 100%;
@@ -309,6 +313,7 @@
 	--p-color-yellow-500: hsl(var(--p-color-yellow-hue), var(--p-color-yellow-sat), 50%);
 	--p-color-yellow-700: hsl(56, var(--p-color-yellow-sat), 50%);
 	--p-color-yellow-a: hsla(var(--p-color-yellow-hue), var(--p-color-yellow-sat), 50%, 0.5);
+	--p-color-yellow-a-light: hsla(var(--p-color-yellow-hue), var(--p-color-yellow-sat), 50%, 0.15);
 	--p-color-yellow-stops: var(--p-color-yellow-700) 0%, hsl(56deg 100% 50%) 20%, hsl(57deg 100% 50%) 29%,
 		hsl(57deg 100% 50%) 36%, hsl(58deg 100% 50%) 43%, hsl(58deg 100% 50%) 50%, hsl(58deg 100% 50%) 57%,
 		hsl(59deg 100% 50%) 64%, hsl(59deg 100% 50%) 71%, hsl(60deg 100% 50%) 80%, var(--p-color-yellow-500) 100%;

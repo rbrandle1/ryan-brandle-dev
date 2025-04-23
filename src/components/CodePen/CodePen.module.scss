@@ -5,6 +5,7 @@
 	aspect-ratio: var(--ratio-portrait);
 	width: 100%;
 	border-radius: var(--radius-default);
+	border: 1px solid var(--p-color-gray-900);
 	overflow: hidden;
 
 	@include viewport.breakpoint(sm) {

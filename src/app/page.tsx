@@ -17,15 +17,13 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 
 /* Todo:
 * * CONTENT CREATION:
-* Double check links or add links in articles.
-* Pluck out any pieces of code to write snippets in articles.
-* reduce gap space when caption is present in featured project component, .5lh?.
+* Are codepens confusing on smaller desktop screens? Too large? Should I cap the width at a certain breakpoint?
 * Why are LINKS ON HOME PAGE, not-found and footer not tabbable? Likely because they are missing those styles that might be present in the project.scss file.
 * Update header line heights... especially large headlines. Knock down to a 1. Make h2's, etc a 1.1? Prob need to adjust altFont to 0.8 or something like that.
-* 
-* How to implement codepen pens... hero?
+* Pluck out any pieces of code to write snippets in articles.
+* reduce gap space when caption is present in featured project component, .5lh?.
 * Can codepens be loaded faster and not when appears on page?
-* Double check remove all odd formatted spacing, apostrophes, etc. from all text content in article pages. 
+
 * Do not come across as too arrogant. Polish, So fresh, So clean, Too 🔥 To Brandle*, etc. Might need to tone it down. EXAMPLE: Update hero text to use more descriptive text like flexible, modular, accessible, etc... maybe mix in a few "fun" words.
 * 
 * MUST FIX localstorage issue as it is causing a build error before performance audits can be done. Before a build can be made.
@@ -42,6 +40,8 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 
 * FINAL RUN-THROUGH:
 * Prep robots to prevent indexing of company names.
+* Double check remove all odd formatted spacing, apostrophes, etc. from all text content in article pages. 
+* Double check the FOCUS animation works smoothly on ipads. If not, change the font size back to 1024 mq from 768
 * Search all todos and fix them.
 * Search all [EDIT]s and fix them.
 * Remove all unused comments.

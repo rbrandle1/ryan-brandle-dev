@@ -49,3 +49,15 @@ a {
 		outline: none;
 	}
 }
+
+pre,
+code {
+	background-color: var(--color-accent-a-light);
+	border-radius: var(--radius-lg);
+	line-height: var(--line-height-sm);
+}
+
+:where(:not(pre) > code) {
+	font-size: 0.83em;
+	padding: 0.2lh 0.15lh;
+}

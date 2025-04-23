@@ -1,4 +1,4 @@
-import heroImg from '@/images/codepen/hero.png';
+import heroImg from '@/images/codepen/codepen-hero-2.png';
 
 export const data = {
 	text: {
@@ -10,12 +10,8 @@ export const data = {
 		hero: {
 			src: heroImg,
 			alt: 'Image of a CodePen project',
+			caption: 'Focus Text-Effect on CodePen',
 		},
-		// article1: {
-		// 	src: '/images/brand/article1.jpg',
-		// 	alt: 'Rebrand of Ryan Brandle',
-		// 	caption: 'Creation & Growth of the Inspirato Design System',
-		// }
 	},
 	tags: ['UX/UI', 'HTML', 'CSS', 'JS', 'Animation'],
 };
