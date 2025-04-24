@@ -188,6 +188,50 @@ export const CodepenContent = () => {
 							So what's the <em>secret ingredient</em>? Using <code>mix-blend-mode: plus-lighter</code> on the text as a{' '}
 							<code>::before</code> pseudo-element creating a vibrant glowing illusion as the shadows intersect.
 						</p>
+						<pre className={styles.syntax}>
+							<code>
+								<span className={styles.class}>.typography</span> <span className={styles.punctuation}>{'{'}</span>
+								{'\n  '}
+								<span className={styles.comment}>// ...existing styles</span>
+								{'\n\n  '}
+								<span className={styles.punctuation}>&</span>
+								<span className={styles.punctuation}>::before</span> <span className={styles.punctuation}>{'{'}</span>
+								{'\n    '}
+								<span className={styles.property}>mix-blend-mode</span>
+								<span className={styles.punctuation}>:</span> <span className={styles.string}>plus-lighter</span>
+								<span className={styles.punctuation}>;</span>
+								{'\n    '}
+								<span className={styles.property}>content</span>
+								<span className={styles.punctuation}>:</span> <span className={styles.function}>attr</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.variable}>data-heading</span>
+								<span className={styles.punctuation}>)</span>
+								<span className={styles.punctuation}>;</span>
+								{'\n    '}
+								<span className={styles.property}>position</span>
+								<span className={styles.punctuation}>:</span> <span className={styles.string}>absolute</span>
+								<span className={styles.punctuation}>;</span>
+								{'\n    '}
+								<span className={styles.property}>text-shadow</span>
+								<span className={styles.punctuation}>:</span> <span className={styles.string}>0</span>{' '}
+								<span className={styles.string}>0</span> <span className={styles.function}>var</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.variable}>--shadow-blur</span>
+								<span className={styles.punctuation}>)</span> <span className={styles.function}>var</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.variable}>--color-w</span>
+								<span className={styles.punctuation}>)</span>
+								<span className={styles.punctuation}>;</span>
+								{'\n    '}
+								<span className={styles.property}>z-index</span>
+								<span className={styles.punctuation}>:</span> <span className={styles.string}>1</span>
+								<span className={styles.punctuation}>;</span>
+								{'\n  '}
+								<span className={styles.punctuation}>{'}'}</span>
+								{'\n'}
+								<span className={styles.punctuation}>{'}'}</span>
+							</code>
+						</pre>
 						<h3 className={styles.h5}>Challenges</h3>
 						<p>
 							Making the effect run smoothly across devices took some tinkering. Larger text caused choppy animations or
@@ -324,21 +368,28 @@ export const CodepenContent = () => {
 							for the level of precision pixel art demands.
 						</p>
 						<h2 className={styles.h2}>CSS Compass Loader</h2>
-						<p>text</p>
+						<p>
+							While working at a luxury travel company, I dabbled with a few fun loading animations. This one was
+							inspired by a compass rose—with animated needles that subtly nodded to luxury travel, exploration and
+							navigating the globe.
+						</p>
 						<div className={cn(styles.codePenContainer, styles.flowOffset)}>
 							<CodePen penId='JjBZaZd' />
 						</div>
-						<p>text</p>
-						<h3 className={styles.h5}>Challenges</h3>
-						<p>text</p>
-						<h2 className={styles.h2}>Einstein Blink Animation</h2>
-						<p>text</p>
+						<p>
+							It was nicknamed <em>“The Gloader”</em> (short for Global Loader), since it was meant to appear across the
+							site during search loading states. In the end, it never made it into production—but it was still a fun
+							concept to build and a great excuse to play with motion and smooth animations.
+						</p>
+						<h2 className={styles.h2}>The Blinky Einstien</h2>
+						<p>
+							An old favorite of mine. I've always loved that classic photo of Einstein sticking his tongue out, so I
+							recreated him in Illustrator, turned it into an SVG, and gave him some blinky eyes—plus a few surprises on
+							hover.
+						</p>
 						<div className={cn(styles.codePenContainer, styles.flowOffset)}>
 							<CodePen penId='mdVbaL' />
 						</div>
-						<p>text</p>
-						<h3 className={styles.h5}>Challenges</h3>
-						<p>text</p>
 					</div>
 				</section>
 			</div>
