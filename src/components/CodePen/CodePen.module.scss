@@ -11,4 +11,7 @@
 	@include viewport.breakpoint(sm) {
 		aspect-ratio: var(--ratio-landscape);
 	}
+	@include viewport.between(md, xl) {
+		max-width: 82%;
+	}
 }

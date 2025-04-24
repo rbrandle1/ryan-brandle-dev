@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
 import dynamic from 'next/dynamic';
-import { Oswald, Source_Sans_3, Source_Serif_4 } from 'next/font/google';
+import { Oswald, Source_Sans_3, Source_Serif_4, Fira_Code } from 'next/font/google';
 import '@/styles/reset.scss';
 import '@/styles/tokens/primitive.scss';
 import '@/styles/tokens/semantic.scss';
@@ -37,10 +37,16 @@ const sourceSerif = Source_Serif_4({
 	subsets: ['latin'],
 	display: 'swap',
 });
+const firaCode = Fira_Code({
+	weight: ['600'],
+	style: ['normal'],
+	subsets: ['latin'],
+	display: 'swap',
+});
 
 // Ensuring fonts are referenced for typescript requirements.
 const useFonts = () => {
-	return { oswald, sourceSans, sourceSerif };
+	return { oswald, sourceSans, sourceSerif, firaCode };
 };
 
 export const metadata: Metadata = {

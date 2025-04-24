@@ -5,7 +5,7 @@
 */
 
 ::selection {
-	background-color: var(--color-accent-a);
+	background-color: var(--color-accent-highlight);
 }
 
 html,
@@ -50,14 +50,21 @@ a {
 	}
 }
 
-pre,
-code {
-	background-color: var(--color-accent-a-light);
-	border-radius: var(--radius-lg);
-	line-height: var(--line-height-sm);
+pre {
+	background-color: var(--color-accent-bg-code-block);
 }
 
-:where(:not(pre) > code) {
-	font-size: 0.83em;
-	padding: 0.2lh 0.15lh;
+pre,
+code {
+	font-size: 0.9em;
+	font-family: var(--font-mono);
+	border-radius: var(--radius-lg);
+	line-height: var(--line-height-sm);
+	max-width: var(--optimal-line-length-base);
+
+	&:where(:not(pre) > code) {
+		background-color: var(--color-accent-bg-code-inline);
+		font-size: 0.83em;
+		padding: 0.2lh 0.15lh;
+	}
 }

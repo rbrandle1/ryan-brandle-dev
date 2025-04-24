@@ -86,6 +86,7 @@
 	--font-header: var(--p-font-display);
 	--font-body: var(--p-font-sans);
 	--font-alt: var(--p-font-serif);
+	--font-mono: var(--p-font-mono);
 	--font-weight-reg: var(--p-font-weight-1);
 	--font-weight-semiBold: var(--p-font-weight-2);
 	--font-weight-bold: var(--p-font-weight-3);
@@ -129,8 +130,9 @@
 
 	--color-accent: var(--p-color-magenta-500);
 	--color-accent-alt: var(--p-color-magenta-700);
-	--color-accent-a: var(--p-color-magenta-a);
-	--color-accent-a-light: var(--p-color-magenta-a-light);
+	--color-accent-highlight: var(--p-color-magenta-a50);
+	--color-accent-bg-code-inline: var(--p-color-magenta-a15);
+	--color-accent-bg-code-block: var(--p-color-magenta-a10);
 	--color-accent-gradient: var(--p-color-magenta-gradient);
 	--color-accent-gradient-reversed: var(--p-color-magenta-gradient-reversed);
 
@@ -224,8 +226,9 @@
 	[data-theme='c'] {
 		--color-accent: var(--p-color-cyan-500);
 		--color-accent-alt: var(--p-color-cyan-700);
-		--color-accent-a: var(--p-color-cyan-a);
-		--color-accent-a-light: var(--p-color-cyan-a-light);
+		--color-accent-highlight: var(--p-color-cyan-a50);
+		--color-accent-bg-code-inline: var(--p-color-cyan-a15);
+		--color-accent-bg-code-block: var(--p-color-cyan-a08);
 		--color-accent-gradient: var(--p-color-cyan-gradient);
 		--color-accent-gradient-reversed: var(--p-color-cyan-gradient-reversed);
 		--text-accent: var(--color-accent);
@@ -237,8 +240,9 @@
 	[data-theme='y'] {
 		--color-accent: var(--p-color-yellow-500);
 		--color-accent-alt: var(--p-color-yellow-700);
-		--color-accent-a: var(--p-color-yellow-a);
-		--color-accent-a-light: var(--p-color-yellow-a-light);
+		--color-accent-highlight: var(--p-color-yellow-a50);
+		--color-accent-bg-code-inline: var(--p-color-yellow-a15);
+		--color-accent-bg-code-block: var(--p-color-yellow-a06);
 		--color-accent-gradient: var(--p-color-yellow-gradient);
 		--color-accent-gradient-reversed: var(--p-color-yellow-gradient-reversed);
 		--text-accent: var(--color-accent);
@@ -250,8 +254,9 @@
 	[data-theme='p'] {
 		--color-accent: var(--p-color-purple-500);
 		--color-accent-alt: var(--p-color-purple-700);
-		--color-accent-a: var(--p-color-purple-a);
-		--color-accent-a-light: var(--p-color-purple-a-light);
+		--color-accent-highlight: var(--p-color-purple-a50);
+		--color-accent-bg-code-inline: var(--p-color-purple-a20);
+		--color-accent-bg-code-block: var(--p-color-purple-a12);
 		--color-accent-gradient: var(--p-color-purple-gradient);
 		--color-accent-gradient-reversed: var(--p-color-purple-gradient-reversed);
 		--text-accent: var(--color-accent);

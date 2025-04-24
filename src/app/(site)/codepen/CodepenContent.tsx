@@ -7,6 +7,7 @@ import { codepen as data } from '@/data';
 import Callout from '@/components/Callout/Callout';
 import LargeImage from '@/components/Article/LargeImage/LargeImage';
 import styles from '../projects.module.scss';
+import componentStyles from './CodepenContent.module.scss';
 import CodePen from '@/components/CodePen/CodePen';
 
 export const CodepenContent = () => {
@@ -34,6 +35,27 @@ export const CodepenContent = () => {
 							placeholder='blur'
 							priority
 						/>
+						<p>
+							The following projects are <em>creative</em> front-end experiments—designed as a way to explore new
+							techniques, test ideas, and rolling around in what CSS and JavaScript can do.
+						</p>
+						<p>
+							While some examples lean more playful than practical, the approaches behind them are grounded in real,
+							applicable methods.
+						</p>
+						<p>
+							I use{' '}
+							<a
+								href='https://codepen.io/brandledesign'
+								className={styles.link}
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								CodePen
+							</a>{' '}
+							as a space to prototype, practice, and refine my front-end thinking—combining visual exploration with
+							technical execution.
+						</p>
 						<h2 className={styles.h2}>Focus Text-Effect</h2>
 						<p>
 							I'd been wanting to build something just for the fun of it and landed on the idea of simulating depth of
@@ -55,7 +77,7 @@ export const CodepenContent = () => {
 							So what's the <em>secret ingredient</em>? Using <code>mix-blend-mode: plus-lighter</code> on the text as a{' '}
 							<code>::before</code> pseudo-element creating a vibrant glowing illusion as the shadows intersect.
 						</p>
-						<h3 className={styles.h4}>Challenges</h3>
+						<h3 className={styles.h5}>Challenges</h3>
 						<p>
 							Making the effect run smoothly across devices took some tinkering. Larger text caused choppy animations or
 							broke the blur effect, so I kept animated elements at a reasonable size to ease the rendering load.
@@ -69,20 +91,134 @@ export const CodepenContent = () => {
 							<code>parseInt()</code> helped convert values and toggle between positives and negatives cleanly.
 						</p>
 						<h2 className={styles.h2}>Pixel Art Animation</h2>
-						<p>text</p>
+						<p>
+							To fuel my curiosity around Sass maps, I dove into a pixel art experiment. I thought it'd be fun to build
+							a themed project paying tribute to one of my all-time favorite childhood games: <em>Final Fantasy VII</em>
+							. I found an awesome pixel-style illustration by{' '}
+							<a
+								href='https://www.redbubble.com/i/art-board-print/FINAL-FANTASY-Cloud-Pixel-by-WubbaDubb/28177052.JUXJO'
+								className={styles.link}
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								@WubbaDubb
+							</a>{' '}
+							and used it as a visual reference.
+						</p>
+						<p>
+							I explored a few different methods—like using utility classes or even stacking drop shadows—but those
+							approaches quickly became bloated and hard to manage. Lots of repeated HTML, duplicated CSS, and overall
+							just… hard to maintain.
+						</p>
+						<p>
+							I wanted something more structured, lean, and maintainable. So I took a hybrid approach using{' '}
+							<strong>Sass maps</strong> and <strong>a little JavaScript</strong> to generate repetitive code more
+							efficiently and keep everything clean.
+						</p>
 						<div className={cn(styles.codePenContainer, styles.flowOffset)}>
 							<CodePen penId='RwEbGpP' />
 						</div>
-						<p>text</p>
-						<h3 className={styles.h4}>Challenges</h3>
-						<p>text</p>
+						<p>
+							I used JavaScript to generate the grid, assigning each cell a unique class (e.g. <code>.px12</code>) and
+							wire up click events to update data and guide the user's experience.
+						</p>
+						<p>
+							I defined each color as a CSS custom property, then created a Sass map that listed which cell numbers got
+							which color. It was a time-consuming, pixel-by-pixel process—but it kept the logic centralized and the
+							codebase tidy. Plus, it got me into a solid flow-state.
+						</p>
+						<p>The real magic happened in the Sass:</p>
+						<pre className={componentStyles.codeBlock}>
+							<code className={cn(componentStyles.codeContent, componentStyles.scss)}>
+								<span className={componentStyles.variable}>$colors</span>
+								<span className={componentStyles.punctuation}>: (</span>
+								{'\n  '}
+								<span className={componentStyles.string}>&apos;primary&apos;</span>
+								<span className={componentStyles.punctuation}>: (</span>
+								<span className={componentStyles.string}>&apos;100&apos;</span>
+								<span className={componentStyles.punctuation}>,</span>{' '}
+								<span className={componentStyles.string}>&apos;200&apos;</span>
+								<span className={componentStyles.punctuation}>,</span>{' '}
+								<span className={componentStyles.string}>&apos;300&apos;</span>
+								<span className={componentStyles.punctuation}>),</span>
+								{'\n  '}
+								<span className={componentStyles.string}>&apos;secondary&apos;</span>
+								<span className={componentStyles.punctuation}>: (</span>
+								<span className={componentStyles.string}>&apos;100&apos;</span>
+								<span className={componentStyles.punctuation}>,</span>{' '}
+								<span className={componentStyles.string}>&apos;200&apos;</span>
+								<span className={componentStyles.punctuation}>)</span>
+								{'\n'}
+								<span className={componentStyles.punctuation}>);</span>
+								{'\n\n'}
+								<span className={componentStyles.keyword}>@each</span>{' '}
+								<span className={componentStyles.variable}>$cssVar</span>
+								<span className={componentStyles.punctuation}>,</span>{' '}
+								<span className={componentStyles.variable}>$pxList</span>{' '}
+								<span className={componentStyles.keyword}>in</span>{' '}
+								<span className={componentStyles.variable}>$colors</span>{' '}
+								<span className={componentStyles.punctuation}>{'{'}</span>
+								{'\n  '}
+								<span className={componentStyles.keyword}>@each</span>{' '}
+								<span className={componentStyles.variable}>$px</span>{' '}
+								<span className={componentStyles.keyword}>in</span>{' '}
+								<span className={componentStyles.variable}>$pxList</span>{' '}
+								<span className={componentStyles.punctuation}>{'{'}</span>
+								{'\n    '}
+								<span className={componentStyles.property}>.px{'{'}</span>
+								<span className={componentStyles.variable}>$px</span>
+								<span className={componentStyles.property}>{'}'}</span>{' '}
+								<span className={componentStyles.punctuation}>{'{'}</span>
+								{'\n      '}
+								<span className={componentStyles.property}>background-color</span>
+								<span className={componentStyles.punctuation}>:</span>{' '}
+								<span className={componentStyles.variable}>$cssVar</span>
+								<span className={componentStyles.punctuation}>;</span>
+								{'\n    '}
+								<span className={componentStyles.punctuation}>{'}'}</span>
+								{'\n  '}
+								<span className={componentStyles.punctuation}>{'}'}</span>
+								{'\n'}
+								<span className={componentStyles.punctuation}>{'}'}</span>
+							</code>
+						</pre>
+						<p>This loop:</p>
+						<ol>
+							<li>Reads each item in the map.</li>
+							<li>
+								Creates a class like <code>.px34</code> for each cell.
+							</li>
+							<li>Applies the corresponding background-color via a CSS custom property.</li>
+						</ol>
+						<p>
+							The rest is just basic CSS styling and a few animation touches. Shoutout to{' '}
+							<a
+								href='https://codepen.io/therealace_1/pen/yJvKJW'
+								className={styles.link}
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								@therealace_1
+							</a>{' '}
+							for the fun rainbow animation inspiration!
+						</p>
+						<h3 className={styles.h5}>Challenges</h3>
+						<p>
+							Figuring out the right approach took some trial and error. I'll admit, there may be more efficient ways to
+							reduce the number of rendered CSS lines. In this version, each grid cell has its own class—even if
+							multiple cells share the same color.
+						</p>
+						<p>
+							For me, the tradeoff was worth it: the Sass map structure is easy to read, easy to update, and well-suited
+							for the level of precision pixel art demands.
+						</p>
 						<h2 className={styles.h2}>CSS Compass Loader</h2>
 						<p>text</p>
 						<div className={cn(styles.codePenContainer, styles.flowOffset)}>
 							<CodePen penId='JjBZaZd' />
 						</div>
 						<p>text</p>
-						<h3 className={styles.h4}>Challenges</h3>
+						<h3 className={styles.h5}>Challenges</h3>
 						<p>text</p>
 						<h2 className={styles.h2}>Einstein Blink Animation</h2>
 						<p>text</p>
@@ -90,7 +226,7 @@ export const CodepenContent = () => {
 							<CodePen penId='mdVbaL' />
 						</div>
 						<p>text</p>
-						<h3 className={styles.h4}>Challenges</h3>
+						<h3 className={styles.h5}>Challenges</h3>
 						<p>text</p>
 					</div>
 				</section>

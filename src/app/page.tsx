@@ -42,6 +42,7 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 * Prep robots to prevent indexing of company names.
 * Double check remove all odd formatted spacing, apostrophes, etc. from all text content in article pages. 
 * Double check the FOCUS animation works smoothly on ipads. If not, change the font size back to 1024 mq from 768
+* Double check codepens on touch devices... might not be able to interact?
 * Search all todos and fix them.
 * Search all [EDIT]s and fix them.
 * Remove all unused comments.
