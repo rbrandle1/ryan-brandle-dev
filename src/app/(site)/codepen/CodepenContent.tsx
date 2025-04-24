@@ -4,10 +4,8 @@ import cn from 'classnames';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { codepen as data } from '@/data';
-import Callout from '@/components/Callout/Callout';
 import LargeImage from '@/components/Article/LargeImage/LargeImage';
 import styles from '../projects.module.scss';
-import componentStyles from './CodepenContent.module.scss';
 import CodePen from '@/components/CodePen/CodePen';
 
 export const CodepenContent = () => {
@@ -128,58 +126,48 @@ export const CodepenContent = () => {
 							codebase tidy. Plus, it got me into a solid flow-state.
 						</p>
 						<p>The real magic happened in the Sass:</p>
-						<pre className={componentStyles.codeBlock}>
-							<code className={cn(componentStyles.codeContent, componentStyles.scss)}>
-								<span className={componentStyles.variable}>$colors</span>
-								<span className={componentStyles.punctuation}>: (</span>
+						<pre>
+							<code className={styles.syntax}>
+								<span className={styles.variable}>$colors</span>
+								<span className={styles.punctuation}>: (</span>
 								{'\n  '}
-								<span className={componentStyles.string}>&apos;primary&apos;</span>
-								<span className={componentStyles.punctuation}>: (</span>
-								<span className={componentStyles.string}>&apos;100&apos;</span>
-								<span className={componentStyles.punctuation}>,</span>{' '}
-								<span className={componentStyles.string}>&apos;200&apos;</span>
-								<span className={componentStyles.punctuation}>,</span>{' '}
-								<span className={componentStyles.string}>&apos;300&apos;</span>
-								<span className={componentStyles.punctuation}>),</span>
+								<span className={styles.string}>&apos;primary&apos;</span>
+								<span className={styles.punctuation}>: (</span>
+								<span className={styles.string}>&apos;100&apos;</span>
+								<span className={styles.punctuation}>,</span> <span className={styles.string}>&apos;200&apos;</span>
+								<span className={styles.punctuation}>,</span> <span className={styles.string}>&apos;300&apos;</span>
+								<span className={styles.punctuation}>),</span>
 								{'\n  '}
-								<span className={componentStyles.string}>&apos;secondary&apos;</span>
-								<span className={componentStyles.punctuation}>: (</span>
-								<span className={componentStyles.string}>&apos;100&apos;</span>
-								<span className={componentStyles.punctuation}>,</span>{' '}
-								<span className={componentStyles.string}>&apos;200&apos;</span>
-								<span className={componentStyles.punctuation}>)</span>
+								<span className={styles.string}>&apos;secondary&apos;</span>
+								<span className={styles.punctuation}>: (</span>
+								<span className={styles.string}>&apos;100&apos;</span>
+								<span className={styles.punctuation}>,</span> <span className={styles.string}>&apos;200&apos;</span>
+								<span className={styles.punctuation}>)</span>
 								{'\n'}
-								<span className={componentStyles.punctuation}>);</span>
+								<span className={styles.punctuation}>);</span>
 								{'\n\n'}
-								<span className={componentStyles.keyword}>@each</span>{' '}
-								<span className={componentStyles.variable}>$cssVar</span>
-								<span className={componentStyles.punctuation}>,</span>{' '}
-								<span className={componentStyles.variable}>$pxList</span>{' '}
-								<span className={componentStyles.keyword}>in</span>{' '}
-								<span className={componentStyles.variable}>$colors</span>{' '}
-								<span className={componentStyles.punctuation}>{'{'}</span>
+								<span className={styles.keyword}>@each</span> <span className={styles.variable}>$cssVar</span>
+								<span className={styles.punctuation}>,</span> <span className={styles.variable}>$pxList</span>{' '}
+								<span className={styles.keyword}>in</span> <span className={styles.variable}>$colors</span>{' '}
+								<span className={styles.punctuation}>{'{'}</span>
 								{'\n  '}
-								<span className={componentStyles.keyword}>@each</span>{' '}
-								<span className={componentStyles.variable}>$px</span>{' '}
-								<span className={componentStyles.keyword}>in</span>{' '}
-								<span className={componentStyles.variable}>$pxList</span>{' '}
-								<span className={componentStyles.punctuation}>{'{'}</span>
+								<span className={styles.keyword}>@each</span> <span className={styles.variable}>$px</span>{' '}
+								<span className={styles.keyword}>in</span> <span className={styles.variable}>$pxList</span>{' '}
+								<span className={styles.punctuation}>{'{'}</span>
 								{'\n    '}
-								<span className={componentStyles.property}>.px{'{'}</span>
-								<span className={componentStyles.variable}>$px</span>
-								<span className={componentStyles.property}>{'}'}</span>{' '}
-								<span className={componentStyles.punctuation}>{'{'}</span>
+								<span className={styles.property}>.px{'{'}</span>
+								<span className={styles.variable}>$px</span>
+								<span className={styles.property}>{'}'}</span> <span className={styles.punctuation}>{'{'}</span>
 								{'\n      '}
-								<span className={componentStyles.property}>background-color</span>
-								<span className={componentStyles.punctuation}>:</span>{' '}
-								<span className={componentStyles.variable}>$cssVar</span>
-								<span className={componentStyles.punctuation}>;</span>
+								<span className={styles.property}>background-color</span>
+								<span className={styles.punctuation}>:</span> <span className={styles.variable}>$cssVar</span>
+								<span className={styles.punctuation}>;</span>
 								{'\n    '}
-								<span className={componentStyles.punctuation}>{'}'}</span>
+								<span className={styles.punctuation}>{'}'}</span>
 								{'\n  '}
-								<span className={componentStyles.punctuation}>{'}'}</span>
+								<span className={styles.punctuation}>{'}'}</span>
 								{'\n'}
-								<span className={componentStyles.punctuation}>{'}'}</span>
+								<span className={styles.punctuation}>{'}'}</span>
 							</code>
 						</pre>
 						<p>This loop:</p>

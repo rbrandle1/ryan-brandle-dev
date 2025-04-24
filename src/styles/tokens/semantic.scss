@@ -141,6 +141,14 @@
 	--color-background-gradient-diagonal-xs: var(--p-color-neutral-gradient-diagonal-xs);
 	--color-background-gradient-diagonal-sm: var(--p-color-neutral-gradient-diagonal-sm);
 
+	--color-syntax-base: var(--p-color-syntax-1);
+	--color-syntax-variable: var(--p-color-syntax-2);
+	--color-syntax-punctuation: var(--p-color-syntax-1);
+	--color-syntax-keyword: var(--p-color-syntax-3);
+	--color-syntax-function: var(--p-color-syntax-4);
+	--color-syntax-property: var(--p-color-syntax-2);
+	--color-syntax-string: var(--p-color-syntax-5);
+
 	/* SHADOWS */
 	--shadow-box: 0 2px 4px var(--p-color-black-a15), 0 2px 6px var(--p-color-black-a15);
 	--shadow-box-lg: 0 4px 6px var(--p-color-black-a15), 0 4px 8px var(--p-color-black-a15);

@@ -324,4 +324,11 @@
 		hsl(59deg 100% 50%) 64%, hsl(59deg 100% 50%) 71%, hsl(60deg 100% 50%) 80%, var(--p-color-yellow-500) 100%;
 	--p-color-yellow-gradient: linear-gradient(340deg, var(--p-color-yellow-stops));
 	--p-color-yellow-gradient-reversed: linear-gradient(160deg, var(--p-color-yellow-stops));
+
+	/* Syntax Tokens */
+	--p-color-syntax-1: #d4d4d4;
+	--p-color-syntax-2: #9cdcfe;
+	--p-color-syntax-3: #c586c0;
+	--p-color-syntax-4: #dcdcaa;
+	--p-color-syntax-5: #ce9178;
 }
