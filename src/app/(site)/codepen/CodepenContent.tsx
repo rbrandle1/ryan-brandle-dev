@@ -397,10 +397,13 @@ export const CodepenContent = () => {
 				<div className={styles.containerGrid}>
 					<h2 className={styles.h2}>The Final Result</h2>
 					<p>
-						Ship it! Has been the industry's standard dummy text ever since the 1500s, example when an unknown printer
-						took a galley of type and scrambled it to make a type specimen book.Work sans Lorem Ipsum has been the
-						industry's standard dummy text ever since the 1500s, example when an unknown printer took a galley of type
-						and scrambled it to make a type specimen book.
+						Well—that's just it. There isn't one! CodePen is where I explore, play, and chase whatever quirky idea
+						sparks my curiosity. These little experiments <em>are for fun</em>, and I'll keep adding more as long as
+						there's something to tinker with.
+					</p>
+					<p>
+						I hope they brought you a bit of surprise, delight, or even just a smile—because that's what makes it all
+						worth it.
 					</p>
 					<Link className={styles.buttonLink} href={fromSection ? `/#${fromSection}` : '/'}>
 						&larr;&nbsp;Back to Work
