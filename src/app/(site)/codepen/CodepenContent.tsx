@@ -131,18 +131,25 @@ export const CodepenContent = () => {
 								<span className={styles.variable}>$colors</span>
 								<span className={styles.punctuation}>: (</span>
 								{'\n  '}
-								<span className={styles.string}>&apos;primary&apos;</span>
-								<span className={styles.punctuation}>: (</span>
-								<span className={styles.string}>&apos;100&apos;</span>
-								<span className={styles.punctuation}>,</span> <span className={styles.string}>&apos;200&apos;</span>
-								<span className={styles.punctuation}>,</span> <span className={styles.string}>&apos;300&apos;</span>
-								<span className={styles.punctuation}>),</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.function}>var</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.variable}>--color-hair</span>
+								<span className={styles.punctuation}>), (</span>
+								<span className={styles.string}>2</span>
+								<span className={styles.punctuation}>,</span> <span className={styles.string}>3</span>
+								<span className={styles.punctuation}>,</span> <span className={styles.string}>4</span>
+								<span className={styles.punctuation}>)),</span>
 								{'\n  '}
-								<span className={styles.string}>&apos;secondary&apos;</span>
-								<span className={styles.punctuation}>: (</span>
-								<span className={styles.string}>&apos;100&apos;</span>
-								<span className={styles.punctuation}>,</span> <span className={styles.string}>&apos;200&apos;</span>
-								<span className={styles.punctuation}>)</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.function}>var</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.variable}>--color-jacket</span>
+								<span className={styles.punctuation}>), (</span>
+								<span className={styles.string}>127</span>
+								<span className={styles.punctuation}>,</span> <span className={styles.string}>142</span>
+								<span className={styles.punctuation}>,</span> <span className={styles.string}>208</span>
+								<span className={styles.punctuation}>)),</span>
 								{'\n'}
 								<span className={styles.punctuation}>);</span>
 								{'\n\n'}
@@ -155,9 +162,10 @@ export const CodepenContent = () => {
 								<span className={styles.keyword}>in</span> <span className={styles.variable}>$pxList</span>{' '}
 								<span className={styles.punctuation}>{'{'}</span>
 								{'\n    '}
-								<span className={styles.property}>.px{'{'}</span>
+								<span className={styles.class}>.px</span>
+								<span className={styles.punctuation}>{'#{'}</span>
 								<span className={styles.variable}>$px</span>
-								<span className={styles.property}>{'}'}</span> <span className={styles.punctuation}>{'{'}</span>
+								<span className={styles.punctuation}>{'} {'}</span>
 								{'\n      '}
 								<span className={styles.property}>background-color</span>
 								<span className={styles.punctuation}>:</span> <span className={styles.variable}>$cssVar</span>
