@@ -67,6 +67,119 @@ export const CodepenContent = () => {
 							using custom properties. I leaned into the <code>text-shadow</code> property to layer four colored shadows
 							that expanded and contracted as the slider moved.
 						</p>
+						<pre className={styles.syntax}>
+							<code>
+								<span className={styles.class}>.typography</span> <span className={styles.punctuation}>{'{'}</span>
+								{'\n  '}
+								<span className={styles.variable}>--shadow-blur</span>
+								<span className={styles.punctuation}>:</span> <span className={styles.function}>calc</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.function}>var</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.variable}>--blur</span>
+								<span className={styles.punctuation}>,</span> <span className={styles.string}>0</span>
+								<span className={styles.punctuation}>)</span> <span className={styles.punctuation}>*</span>{' '}
+								<span className={styles.string}>0.7</span>
+								<span className={styles.punctuation}>;</span>
+								{'\n  '}
+								<span className={styles.variable}>--lg-distance</span>
+								<span className={styles.punctuation}>:</span> <span className={styles.function}>calc</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.function}>var</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.variable}>--distance</span>
+								<span className={styles.punctuation}>)</span> <span className={styles.punctuation}>*</span>{' '}
+								<span className={styles.string}>.4</span>
+								<span className={styles.punctuation}>;</span>
+								{'\n  '}
+								<span className={styles.variable}>--sm-distance</span>
+								<span className={styles.punctuation}>:</span> <span className={styles.function}>calc</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.function}>var</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.variable}>--distance</span>
+								<span className={styles.punctuation}>)</span> <span className={styles.punctuation}>*</span>{' '}
+								<span className={styles.string}>.15</span>
+								<span className={styles.punctuation}>;</span>
+								{'\n\n  '}
+								<span className={styles.property}>text-shadow</span>
+								<span className={styles.punctuation}>:</span>
+								{'\n    '}
+								<span className={styles.function}>var</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.variable}>--lg-distance</span>
+								<span className={styles.punctuation}>)</span> <span className={styles.function}>calc</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.function}>var</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.variable}>--distance</span>
+								<span className={styles.punctuation}>)</span> <span className={styles.punctuation}>*</span>{' '}
+								<span className={styles.string}>-1</span>
+								<span className={styles.punctuation}>)</span> <span className={styles.function}>var</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.variable}>--shadow-blur</span>
+								<span className={styles.punctuation}>)</span> <span className={styles.function}>var</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.variable}>--color-c</span>
+								<span className={styles.punctuation}>),</span>
+								{'\n    '}
+								<span className={styles.function}>calc</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.function}>var</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.variable}>--distance</span>
+								<span className={styles.punctuation}>)</span> <span className={styles.punctuation}>*</span>{' '}
+								<span className={styles.string}>-1</span>
+								<span className={styles.punctuation}>)</span> <span className={styles.function}>var</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.variable}>--sm-distance</span>
+								<span className={styles.punctuation}>)</span> <span className={styles.function}>var</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.variable}>--shadow-blur</span>
+								<span className={styles.punctuation}>)</span> <span className={styles.function}>var</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.variable}>--color-m</span>
+								<span className={styles.punctuation}>),</span>
+								{'\n    '}
+								<span className={styles.function}>calc</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.function}>var</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.variable}>--lg-distance</span>
+								<span className={styles.punctuation}>)</span> <span className={styles.punctuation}>*</span>{' '}
+								<span className={styles.string}>-1</span>
+								<span className={styles.punctuation}>)</span> <span className={styles.function}>var</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.variable}>--distance</span>
+								<span className={styles.punctuation}>)</span> <span className={styles.function}>var</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.variable}>--shadow-blur</span>
+								<span className={styles.punctuation}>)</span> <span className={styles.function}>var</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.variable}>--color-y</span>
+								<span className={styles.punctuation}>),</span>
+								{'\n    '}
+								<span className={styles.function}>var</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.variable}>--distance</span>
+								<span className={styles.punctuation}>)</span> <span className={styles.function}>calc</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.function}>var</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.variable}>--sm-distance</span>
+								<span className={styles.punctuation}>)</span> <span className={styles.punctuation}>*</span>{' '}
+								<span className={styles.string}>-1</span>
+								<span className={styles.punctuation}>)</span> <span className={styles.function}>var</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.variable}>--shadow-blur</span>
+								<span className={styles.punctuation}>)</span> <span className={styles.function}>var</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.variable}>--color-g</span>
+								<span className={styles.punctuation}>);</span>
+								{'\n'}
+								<span className={styles.punctuation}>{'}'}</span>
+							</code>
+						</pre>
 						<p>
 							JavaScript handled the dynamic updates—setting the custom property values as inline styles to control{' '}
 							<code>opacity</code>, <code>translate</code>, and <code>text-shadow</code> instantly.
@@ -125,7 +238,7 @@ export const CodepenContent = () => {
 							which color. It was a time-consuming, pixel-by-pixel process—but it kept the logic centralized and the
 							codebase tidy. Plus, it got me into a solid flow-state.
 						</p>
-						<p>The real magic happened in the Sass:</p>
+						<p>The real magic happened in Sass:</p>
 						<pre>
 							<code className={styles.syntax}>
 								<span className={styles.variable}>$colors</span>
@@ -178,8 +291,10 @@ export const CodepenContent = () => {
 								<span className={styles.punctuation}>{'}'}</span>
 							</code>
 						</pre>
-						<p>This loop:</p>
-						<ol>
+						<p>
+							<strong>This loop:</strong>
+						</p>
+						<ol className={styles.ol}>
 							<li>Reads each item in the map.</li>
 							<li>
 								Creates a class like <code>.px34</code> for each cell.

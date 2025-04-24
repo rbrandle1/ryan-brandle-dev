@@ -65,6 +65,14 @@
 
 	.ul {
 		list-style-type: disc;
+	}
+
+	.ol {
+		list-style-type: decimal;
+	}
+
+	.ul,
+	.ol {
 		color: var(--text-primary);
 		padding-inline-start: 1lh;
 		margin-block-start: 0.35lh;
@@ -109,6 +117,10 @@
 	}
 
 	.syntax {
+		@include viewport.between(md, xl) {
+			max-width: 82%;
+		}
+
 		.variable {
 			color: var(--color-syntax-variable);
 		}

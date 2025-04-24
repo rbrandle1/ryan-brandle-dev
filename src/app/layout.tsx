@@ -37,8 +37,9 @@ const sourceSerif = Source_Serif_4({
 	subsets: ['latin'],
 	display: 'swap',
 });
+
 const firaCode = Fira_Code({
-	weight: ['600'],
+	weight: ['500'],
 	style: ['normal'],
 	subsets: ['latin'],
 	display: 'swap',

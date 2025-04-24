@@ -53,7 +53,7 @@ a {
 pre {
 	color: #d4d4d4;
 	background-color: var(--color-accent-bg-code-block);
-	padding: 0.75lh;
+	padding: 1lh;
 	overflow-x: auto;
 }
 
@@ -62,8 +62,7 @@ code {
 	font-size: 0.9em;
 	font-family: var(--font-mono);
 	border-radius: var(--radius-lg);
-	line-height: var(--line-height-sm);
-	max-width: var(--optimal-line-length-base);
+	line-height: 1.4;
 
 	&:where(:not(pre) > code) {
 		background-color: var(--color-accent-bg-code-inline);
