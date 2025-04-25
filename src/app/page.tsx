@@ -16,12 +16,11 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 });
 
 /* Todo:
-* * CONTENT CREATION:
-* Are codepens confusing on smaller desktop screens? Too large? Should I cap the width at a certain breakpoint?
+* Review major articles and see if code can be added to the article pages.
+* Can you get the code to render ligatures like my code????
 * Why are LINKS ON HOME PAGE, not-found and footer not tabbable? Likely because they are missing those styles that might be present in the project.scss file.
 * Fix the CSP read report only errors from codepen. https://blog.codepen.io/documentation/embedded-pens/
 * Update header line heights... especially large headlines. Knock down to a 1. Make h2's, etc a 1.1? Prob need to adjust altFont to 0.8 or something like that.
-* Pluck out any pieces of code to write snippets in articles.
 * reduce gap space when caption is present in featured project component, .5lh?.
 * Can codepens be loaded faster and not when appears on page?
 

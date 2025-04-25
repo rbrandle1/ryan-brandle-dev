@@ -68,7 +68,23 @@
 	}
 
 	.ol {
-		list-style-type: decimal;
+		counter-reset: list-counter;
+
+		li {
+			position: relative;
+			padding-inline-start: 0.85lh;
+
+			&::before {
+				position: absolute;
+				top: 1px;
+				left: 0;
+				content: counter(list-counter) '.';
+				counter-increment: list-counter;
+				font-family: var(--font-alt);
+				font-weight: var(--font-weight-bold);
+				font-size: 0.9em;
+			}
+		}
 	}
 
 	.ul,
@@ -120,37 +136,53 @@
 		@include viewport.between(md, xl) {
 			max-width: 82%;
 		}
-
 		.variable {
 			color: var(--color-syntax-variable);
 		}
-
 		.comment {
 			color: var(--color-syntax-comment);
 		}
-
 		.punctuation {
 			color: var(--color-syntax-punctuation);
 		}
-
 		.keyword {
 			color: var(--color-syntax-keyword);
 		}
-
 		.class {
 			color: var(--color-syntax-class);
 		}
-
 		.function {
 			color: var(--color-syntax-function);
 		}
-
 		.property {
 			color: var(--color-syntax-property);
 		}
-
 		.string {
 			color: var(--color-syntax-string);
+		}
+		.parameter {
+			color: var(--color-syntax-parameter);
+		}
+		.interface {
+			color: var(--color-syntax-interface);
+		}
+		.type {
+			color: var(--color-syntax-type);
+		}
+		.operator {
+			color: var(--color-syntax-operator);
+		}
+		.number {
+			color: var(--color-syntax-number);
+		}
+		.element {
+			color: var(--color-syntax-element);
+		}
+		.attribute {
+			color: var(--color-syntax-attribute);
+		}
+		.component {
+			color: var(--color-syntax-component);
 		}
 	}
 }
@@ -303,4 +335,36 @@
 	display: inline-block;
 	max-width: fit-content;
 	@include typography.link(false, reverse);
+}
+
+.citation {
+	--flow-space: 2lh;
+
+	@include typography.p(sm);
+	padding-inline-start: 24px; //optical alignment
+	margin-block-start: var(--flow-space);
+	line-height: var(--line-height-xs);
+	max-width: var(--optimal-line-length-base);
+	text-wrap: balance;
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		border-left: solid 4px;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		transform: skewX(-11deg);
+	}
+
+	.bold {
+		font-weight: var(--font-weight-bold);
+	}
+
+	sup {
+		vertical-align: top;
+		font-size: initial;
+		margin-left: -8px;
+	}
 }

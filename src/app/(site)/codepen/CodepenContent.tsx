@@ -54,6 +54,10 @@ export const CodepenContent = () => {
 							as a space to prototype, practice, and refine my front-end thinking—combining visual exploration with
 							technical execution.
 						</p>
+						{/* </div>
+				</section>
+				<section className={styles.section}>
+					<div className={styles.containerGrid}> */}
 						<h2 className={styles.h2}>Focus Text-Effect</h2>
 						<p>
 							I'd been wanting to build something just for the fun of it and landed on the idea of simulating depth of
@@ -192,7 +196,7 @@ export const CodepenContent = () => {
 							<code>
 								<span className={styles.class}>.typography</span> <span className={styles.punctuation}>{'{'}</span>
 								{'\n  '}
-								<span className={styles.comment}>// ...existing styles</span>
+								<span className={styles.comment}>// existing styles...</span>
 								{'\n\n  '}
 								<span className={styles.punctuation}>&</span>
 								<span className={styles.punctuation}>::before</span> <span className={styles.punctuation}>{'{'}</span>
@@ -245,6 +249,10 @@ export const CodepenContent = () => {
 							I also had to fine-tune the math behind the slider. Using <code>Math.abs()</code> and{' '}
 							<code>parseInt()</code> helped convert values and toggle between positives and negatives cleanly.
 						</p>
+					</div>
+				</section>
+				<section className={styles.section}>
+					<div className={styles.containerGrid}>
 						<h2 className={styles.h2}>Pixel Art Animation</h2>
 						<p>
 							To fuel my curiosity around Sass maps, I dove into a pixel art experiment. I thought it'd be fun to build
@@ -367,6 +375,10 @@ export const CodepenContent = () => {
 							For me, the tradeoff was worth it: the Sass map structure is easy to read, easy to update, and well-suited
 							for the level of precision pixel art demands.
 						</p>
+					</div>
+				</section>
+				<section className={styles.section}>
+					<div className={styles.containerGrid}>
 						<h2 className={styles.h2}>CSS Compass Loader</h2>
 						<p>
 							While working at a luxury travel company, I dabbled with a few fun loading animations. This one was
@@ -381,6 +393,10 @@ export const CodepenContent = () => {
 							site during search loading states. In the end, it never made it into production—but it was still a fun
 							concept to build and a great excuse to play with motion and smooth animations.
 						</p>
+					</div>
+				</section>
+				<section className={styles.section}>
+					<div className={styles.containerGrid}>
 						<h2 className={styles.h2}>The Blinky Einstien</h2>
 						<p>
 							An old favorite of mine. I've always loved that classic photo of Einstein sticking his tongue out, so I

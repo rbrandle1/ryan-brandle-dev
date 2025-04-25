@@ -141,14 +141,22 @@
 	--color-background-gradient-diagonal-xs: var(--p-color-neutral-gradient-diagonal-xs);
 	--color-background-gradient-diagonal-sm: var(--p-color-neutral-gradient-diagonal-sm);
 
-	--color-syntax-base: var(--p-color-syntax-1);
 	--color-syntax-comment: var(--p-color-syntax-0);
-	--color-syntax-variable: var(--p-color-syntax-2);
+	--color-syntax-base: var(--p-color-syntax-1);
+	--color-syntax-type: var(--p-color-syntax-1);
+	--color-syntax-number: var(--p-color-syntax-1);
+	--color-syntax-element: var(--p-color-syntax-1);
 	--color-syntax-punctuation: var(--p-color-syntax-1);
+	--color-syntax-component: var(--p-color-syntax-2);
+	--color-syntax-interface: var(--p-color-syntax-2);
+	--color-syntax-variable: var(--p-color-syntax-2);
+	--color-syntax-parameter: var(--p-color-syntax-2);
+	--color-syntax-property: var(--p-color-syntax-3);
+	--color-syntax-attribute: var(--p-color-syntax-4);
 	--color-syntax-keyword: var(--p-color-syntax-4);
 	--color-syntax-class: var(--p-color-syntax-4);
 	--color-syntax-function: var(--p-color-syntax-4);
-	--color-syntax-property: var(--p-color-syntax-3);
+	--color-syntax-operator: var(--p-color-syntax-5);
 	--color-syntax-string: var(--p-color-syntax-5);
 
 	/* SHADOWS */
