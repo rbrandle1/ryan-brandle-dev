@@ -41,7 +41,7 @@ export const FlashcardsContent = () => {
 							placeholder='blur'
 							priority
 						/>
-						<p style={{ border: 'solid 1px red' }}>[Add callouts]</p>
+						<p style={{ border: 'solid 1px red' }}>[ADD CALLOUTS ADD CALLOUTS!!!]</p>
 						<p>
 							This is a project that is close to my heart and was the perfect opportunity to make something meaningful
 							for a loved one with dyslexia.

@@ -16,6 +16,7 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 });
 
 /* Todo:
+* ADD CALLOUTS TO FLASHCARDS.
 * Codepens don't seem to be loading right... not getting hover states, etc. look at CF.
 * Test screen reader of flashcards app.
 * Review major articles and see if code can be added to the article pages.
