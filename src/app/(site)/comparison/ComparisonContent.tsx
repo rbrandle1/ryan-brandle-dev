@@ -6,9 +6,7 @@ import { comparison as data } from '@/data';
 import Link from 'next/link';
 import Callout from '@/components/Callout/Callout';
 import LargeImage from '@/components/Article/LargeImage/LargeImage';
-import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import SideImage from '@/components/Article/SideImage/SideImage';
-import MultiImage from '@/components/Article/MultiImage/MultiImage';
 import styles from '../projects.module.scss';
 
 export const ComparisonContent = () => {
@@ -32,6 +30,7 @@ export const ComparisonContent = () => {
 							className={cn(styles.imageContainer, styles.flowOffset, styles.heroImage)}
 							src={data.images.hero.src}
 							alt={data.images.hero.alt}
+							caption={data.images.hero.caption}
 							metaTags={data.tags}
 							isHero
 							placeholder='blur'
@@ -41,6 +40,8 @@ export const ComparisonContent = () => {
 							Originally published on the Inspirato Technology Blog,
 							<br />
 							February 1, 2023 | Ryan Brandle
+							<br />
+							UI/UX Developer @ Inspirato
 						</cite>
 						<p>
 							CSS Grid is one of those native web tools that's incredibly powerful, but still surprisingly underused.
@@ -52,9 +53,21 @@ export const ComparisonContent = () => {
 							This project was a perfect fit: a comparison card react component for multiple products on Inspirato's
 							site that needed to be flexible, responsive, and visually clean. Let's dig in.
 						</p>
+						<p>
+							As a side note, you can see a simplified example of this component on my CodePen,{' '}
+							<a
+								href='https://codepen.io/therealace_1/pen/RwyxvOL'
+								className={styles.link}
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								Card Layout with CSS Grid
+							</a>
+							.
+						</p>
 						<Callout
 							className={cn(styles.callout, styles.flowOffset)}
-							title='CSS Grid can be used instead of flexbox in most cases—especially when creating flexible grid layouts.'
+							title='"CSS Grid can be used instead of flexbox in most cases—especially when creating flexible grid layouts."'
 							titleAccent
 						/>
 						<h2 className={styles.h2}>
@@ -85,13 +98,17 @@ export const ComparisonContent = () => {
 							like individual, side-by-side cards. This let us keep all the comparison logic across rows while breaking
 							free from the stiffness of a table layout.
 						</p>
-						<p>[IMAGE 1, 3 TALL CARDS] Caption: Mock content for demonstration purposes only.</p>
+						<LargeImage
+							className={cn(styles.imageContainer, styles.flowOffset, styles.breakout)}
+							src={data.images.full.src}
+							alt={data.images.full.alt}
+							caption={data.images.full.caption}
+						/>
 						<Callout
 							className={cn(styles.callout, styles.flowOffset)}
-							title='CSS Grid breaks the traditional sense of a comparison “table” while still giving you consistent rows that line up across columns.'
+							title='"CSS Grid breaks the traditional sense of a comparison "table" while still giving you consistent rows that line up across columns."'
 							titleAccent
 						/>
-						<p>[IMAGE 2, 3 SMALL DETAILS] Caption: Rows will grow to the tallest content across the cards.</p>
 						<h3 className={styles.h3}>Laying Out the Grid</h3>
 						<p>
 							The first challenge: we needed the grid to be CMS-friendly. That meant the layout had to adapt to however
@@ -305,26 +322,88 @@ export const ComparisonContent = () => {
 								<span className={styles.punctuation}>;</span>
 							</code>
 						</pre>
-						<h3 className={styles.h3}>The Grid Items</h3>
-						<p>
-							<strong>(aka The Cards)</strong>
-							<br />
-							To pull off the "card" illusion, a few layout rules had to be followed:
-						</p>
-						<ol className={styles.ol}>
-							<li>Every column (card) needed the same number and type of cells.</li>
-							<li>Each card needed a header cell.</li>
-							<li>Each card needed a footer cell.</li>
-						</ol>
-						<p>
-							This consistency let us apply unique styles to different parts of the card—like a dark top border on the
-							header and aligned edge borders on the side cells—to visually stitch the whole thing together.
-						</p>
+						<div className={styles.sideImagesContainer}>
+							<SideImage
+								imgSrc={data.images.side.src}
+								imgAlt={data.images.side.alt}
+								caption={data.images.side.caption}
+								imgRight
+							>
+								<h3 className={styles.h3}>The Grid Items</h3>
+								<p>To pull off the "card" illusion, a few layout rules had to be followed:</p>
+								<ol className={styles.ol}>
+									<li>Every column (card) needed the same number and type of cells.</li>
+									<li>Each card needed a header cell.</li>
+									<li>Each card needed a footer cell.</li>
+								</ol>
+								<p>
+									This consistency let each grid cell expand to match the tallest content in the <em>"row"</em>, keeping
+									segments aligned across columns for easy side-by-side comparison.
+								</p>
+								<p>
+									It also enabled us to apply unique styles to different parts of the card—like a dark top border on the
+									header and aligned edge borders on the side cells—to visually stitch the whole thing together.
+								</p>
+							</SideImage>
+						</div>
 						<Callout
 							className={cn(styles.callout, styles.flowOffset)}
-							title='When cell types are stacked consistently, borders align and the grid feels like individual cards.'
+							title='"When cell types are stacked consistently, borders align and the grid feels like individual cards."'
 							titleAccent
 						/>
+						<p>The CMS data would include an array of objects to fill out the grid cells accordingly.</p>
+						<pre className={styles.syntax}>
+							<code>
+								<span className={styles.keyword}>const</span> <span className={styles.variable}>gridItems</span>{' '}
+								<span className={styles.punctuation}>=</span> <span className={styles.punctuation}>[</span>
+								{'\n    '}
+								<span className={styles.punctuation}>{'{'}</span>
+								<span className={styles.property}>headerCell</span>
+								<span className={styles.punctuation}>{'}'}</span>
+								<span className={styles.punctuation}>,</span>
+								{'\n    '}
+								<span className={styles.punctuation}>{'{'}</span>
+								<span className={styles.property}>headerCell</span>
+								<span className={styles.punctuation}>{'}'}</span>
+								<span className={styles.punctuation}>,</span>
+								{'\n    '}
+								<span className={styles.punctuation}>{'{'}</span>
+								<span className={styles.property}>headerCell</span>
+								<span className={styles.punctuation}>{'}'}</span>
+								<span className={styles.punctuation}>,</span>
+								{'\n    '}
+								<span className={styles.punctuation}>{'{'}</span>
+								<span className={styles.property}>cell</span>
+								<span className={styles.punctuation}>{'}'}</span>
+								<span className={styles.punctuation}>,</span>
+								{'\n    '}
+								<span className={styles.punctuation}>{'{'}</span>
+								<span className={styles.property}>cell</span>
+								<span className={styles.punctuation}>{'}'}</span>
+								<span className={styles.punctuation}>,</span>
+								{'\n    '}
+								<span className={styles.punctuation}>{'{'}</span>
+								<span className={styles.property}>cell</span>
+								<span className={styles.punctuation}>{'}'}</span>
+								<span className={styles.punctuation}>,</span>
+								{'\n    '}
+								<span className={styles.punctuation}>{'{'}</span>
+								<span className={styles.property}>footerCell</span>
+								<span className={styles.punctuation}>{'}'}</span>
+								<span className={styles.punctuation}>,</span>
+								{'\n    '}
+								<span className={styles.punctuation}>{'{'}</span>
+								<span className={styles.property}>footerCell</span>
+								<span className={styles.punctuation}>{'}'}</span>
+								<span className={styles.punctuation}>,</span>
+								{'\n    '}
+								<span className={styles.punctuation}>{'{'}</span>
+								<span className={styles.property}>footerCell</span>
+								<span className={styles.punctuation}>{'}'}</span>
+								{'\n'}
+								<span className={styles.punctuation}>]</span>
+							</code>
+						</pre>
 						<p>Here's a quick look at how the styles came together:</p>
 						<pre className={styles.syntax}>
 							<code>
@@ -469,17 +548,6 @@ export const ComparisonContent = () => {
 			</div>
 			<footer className={cn(styles.section, styles.footer, styles.accentEdgeGradRev)}>
 				<div className={styles.containerGrid}>
-					{/* <h2 className={styles.h2}>The Final Result</h2>
-					<p>
-						To give the component more life, we added dynamic pricing, an in-card toggle to swap various tiered content
-						inside each card, and a sticky header options for extra usability. All of this was layered on top of the
-						grid foundation without breaking the illusion.
-					</p>
-					<p>
-						Of course, when the screen gets too narrow, a grid-based layout doesn't make sense anymore. For smaller
-						screens, we restructured the layout into a swipeable carousel using the same dataset—keeping the experience
-						clean, readable, and touch-friendly.
-					</p> */}
 					<h2 className={styles.h2}>Final Thoughts</h2>
 					<p>
 						CSS Grid might not always be the first layout tool that comes to mind—but it should be up there. It's
@@ -496,6 +564,7 @@ export const ComparisonContent = () => {
 							<span className={styles.altFont}>&amp;</span>&nbsp;Resources
 						</span>
 					</h3>
+					<p>Here are a few examples and resources to help you get started on your own exploration.</p>
 					<ul className={styles.ul}>
 						<li>
 							<a

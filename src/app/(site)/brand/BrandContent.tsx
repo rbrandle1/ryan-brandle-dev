@@ -502,6 +502,22 @@ export const BrandContent = () => {
 						something new to try out and explore.
 					</p>
 					<p>
+						You can{' '}
+						<a
+							href='https://github.com/rbrandle1/ryan-brandle-dev'
+							className={styles.link}
+							target='_blank'
+							rel='noopener noreferrer'
+						>
+							view my site repo
+						</a>{' '}
+						in its entirety on Github. Feel free to poke around! Your{' '}
+						<a href='mailto:hello@example.com' className={styles.link}>
+							thoughts and feedback
+						</a>{' '}
+						are always welcome.
+					</p>
+					<p>
 						Much ❤️ and respect to the people who've helped inspire this project and some helpful tools used along the
 						way:
 					</p>
@@ -547,13 +563,6 @@ export const BrandContent = () => {
 							- For those <em>oh-so-smooth</em> CSS gradients
 						</li>
 					</ul>
-					<p>
-						Feel free to poke around the site! Your{' '}
-						<a href='mailto:hello@example.com' className={styles.link}>
-							thoughts and feedback
-						</a>{' '}
-						are always welcome.
-					</p>
 					<Link className={styles.buttonLink} href={fromSection ? `/#${fromSection}` : '/'}>
 						&larr;&nbsp;Back to Work
 					</Link>

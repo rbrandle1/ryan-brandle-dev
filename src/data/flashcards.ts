@@ -1,4 +1,4 @@
-import heroImg from '@/images/flashcards/hero.png';
+import heroImg from '@/images/flashcards/flashcards-article-hero.png';
 
 export const data = {
 	text: {
@@ -12,12 +12,8 @@ export const data = {
 		hero: {
 			src: heroImg,
 			alt: 'Image of accessible flashcards for kids',
+			caption: 'Accessible flashcards for kids, React App.',
 		},
-		// article1: {
-		// 	src: '/images/brand/article1.jpg',
-		// 	alt: 'Rebrand of Ryan Brandle',
-		// 	caption: 'Creation & Growth of the Inspirato Design System',
-		// }
 	},
 	tags: ['UX/UI', 'HTML', 'CSS', 'JS', 'React'],
 };
