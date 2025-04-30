@@ -89,9 +89,7 @@ export const FlashcardsContent = () => {
 				<Callout 
 				className={cn(styles.callout, styles.flowOffset)} 
 				title={
-					<>
-						Unlocking potential<br />for all minds to thrive.
-					</>
+					<>Unlocking potential<br />for all minds to thrive.</>
 				} 
 				titleAccent />
 				<section className={styles.section}>

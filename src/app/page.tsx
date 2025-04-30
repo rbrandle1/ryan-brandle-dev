@@ -17,10 +17,10 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 
 /* Todo:
 
-* LINKS ON HOME PAGE, not-found and footer not tabbable? Likely because they are missing those styles that might be present in the project.scss file.
 * Update header line heights... especially large headlines. Knock down to a 1. Make h2's, etc a 1.1? Prob need to adjust altFont to 0.8 or something like that.
+* Review major articles and ADD CODE to the article pages.
 * reduce gap space when caption is present in featured project component, .5lh?.
-* Review major articles and see if code can be added to the article pages.
+* weird footer bug when tab navigating from an article back to the home page. gap in accent strip.
 * CODEPEN ISSUES: Can codepens be loaded faster and not when appears on page? Don't seem to be loading right... not getting hover states, etc. look at CF.
 * Publish and point kids accessible flashcards site to ryanbrandle.dev/flashcards... or something like that.
 * Fix the CSP read report only errors from codepen. https://blog.codepen.io/documentation/embedded-pens/
