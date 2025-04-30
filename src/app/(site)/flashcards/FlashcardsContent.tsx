@@ -4,11 +4,8 @@ import cn from 'classnames';
 import { useSearchParams } from 'next/navigation';
 import { flashcards as data } from '@/data';
 import Link from 'next/link';
-import Callout from '@/components/Callout/Callout';
 import LargeImage from '@/components/Article/LargeImage/LargeImage';
-import IconLogoInsp from '@/components/Icons/IconLogoInsp';
 import SideImage from '@/components/Article/SideImage/SideImage';
-import MultiImage from '@/components/Article/MultiImage/MultiImage';
 import styles from '../projects.module.scss';
 
 export const FlashcardsContent = () => {
@@ -63,8 +60,7 @@ export const FlashcardsContent = () => {
 							</a>{' '}
 							yourself, or visit the{' '}
 							<a
-								href='https://github.com/rbrandle1/accessible-flashcards-for-kids
-						</p>'
+								href='https://github.com/rbrandle1/accessible-flashcards-for-kids'
 								className={styles.link}
 								target='_blank'
 								rel='noopener noreferrer'
@@ -195,6 +191,8 @@ export const FlashcardsContent = () => {
 									simplify navigation and reduce cognitive friction.
 								</p>
 							</SideImage>
+						</div>
+						<div className={cn(styles.sideImagesContainer, styles.flowOffset)}>
 							<SideImage
 								imgSrc={data.images.toggle.src}
 								imgAlt={data.images.toggle.alt}
@@ -219,111 +217,27 @@ export const FlashcardsContent = () => {
 							These were set and modified using React hooks and <code>useEffect()</code>:
 						</p>
 						<pre className={styles.syntax}>
-							<code>
-								<span className={styles.keyword}>const</span> <span className={styles.punctuation}>[</span>
-								<span className={styles.variable}>dataAccessibilityTheme</span>
-								<span className={styles.punctuation}>,</span>{' '}
-								<span className={styles.variable}>setDataAccessibilityTheme</span>
-								<span className={styles.punctuation}>]</span> <span className={styles.punctuation}>=</span>{' '}
-								<span className={styles.function}>useState</span>
-								<span className={styles.punctuation}>(</span>
-								<span className={styles.string}>""</span>
-								<span className={styles.punctuation}>)</span>
-								<span className={styles.punctuation}>;</span>
-								{'\n'}
-								<span className={styles.keyword}>const</span> <span className={styles.punctuation}>[</span>
-								<span className={styles.variable}>dataTheme</span>
-								<span className={styles.punctuation}>,</span> <span className={styles.variable}>setDataTheme</span>
-								<span className={styles.punctuation}>]</span> <span className={styles.punctuation}>=</span>{' '}
-								<span className={styles.function}>useState</span>
-								<span className={styles.punctuation}>(</span>
-								<span className={styles.string}>"🤖"</span>
-								<span className={styles.punctuation}>)</span>
-								<span className={styles.punctuation}>;</span>
-								{'\n\n'}
-								<span className={styles.function}>useEffect</span>
-								<span className={styles.punctuation}>(</span>
-								<span className={styles.punctuation}>(</span>
-								<span className={styles.punctuation}>)</span> <span className={styles.punctuation}>=&gt;</span>{' '}
-								<span className={styles.punctuation}>{'{'}</span>
-								{'\n  '}
-								<span className={styles.variable}>document</span>
-								<span className={styles.punctuation}>.</span>
-								<span className={styles.property}>body</span>
-								<span className={styles.punctuation}>.</span>
-								<span className={styles.function}>setAttribute</span>
-								<span className={styles.punctuation}>(</span>
-								<span className={styles.string}>"data-accessibility-theme"</span>
-								<span className={styles.punctuation}>,</span>{' '}
-								<span className={styles.variable}>dataAccessibilityTheme</span>
-								<span className={styles.punctuation}>)</span>
-								<span className={styles.punctuation}>;</span>
-								{'\n\n  '}
-								<span className={styles.keyword}>return</span> <span className={styles.punctuation}>(</span>
-								<span className={styles.punctuation}>)</span> <span className={styles.punctuation}>=&gt;</span>{' '}
-								<span className={styles.punctuation}>{'{'}</span>
-								{'\n    '}
-								<span className={styles.variable}>document</span>
-								<span className={styles.punctuation}>.</span>
-								<span className={styles.property}>body</span>
-								<span className={styles.punctuation}>.</span>
-								<span className={styles.function}>removeAttribute</span>
-								<span className={styles.punctuation}>(</span>
-								<span className={styles.string}>"data-accessibility-theme"</span>
-								<span className={styles.punctuation}>)</span>
-								<span className={styles.punctuation}>;</span>
-								{'\n  '}
-								<span className={styles.punctuation}>{'}'}</span>
-								<span className={styles.punctuation}>;</span>
-								{'\n'}
-								<span className={styles.punctuation}>{'}'}</span>
-								<span className={styles.punctuation}>,</span> <span className={styles.punctuation}>[</span>
-								<span className={styles.variable}>dataAccessibilityTheme</span>
-								<span className={styles.punctuation}>]</span>
-								<span className={styles.punctuation}>)</span>
-								<span className={styles.punctuation}>;</span>
-								{'\n\n'}
-								<span className={styles.function}>useEffect</span>
-								<span className={styles.punctuation}>(</span>
-								<span className={styles.punctuation}>(</span>
-								<span className={styles.punctuation}>)</span> <span className={styles.punctuation}>=&gt;</span>{' '}
-								<span className={styles.punctuation}>{'{'}</span>
-								{'\n  '}
-								<span className={styles.variable}>document</span>
-								<span className={styles.punctuation}>.</span>
-								<span className={styles.property}>body</span>
-								<span className={styles.punctuation}>.</span>
-								<span className={styles.function}>setAttribute</span>
-								<span className={styles.punctuation}>(</span>
-								<span className={styles.string}>"data-theme"</span>
-								<span className={styles.punctuation}>,</span> <span className={styles.variable}>dataTheme</span>
-								<span className={styles.punctuation}>)</span>
-								<span className={styles.punctuation}>;</span>
-								{'\n\n  '}
-								<span className={styles.keyword}>return</span> <span className={styles.punctuation}>(</span>
-								<span className={styles.punctuation}>)</span> <span className={styles.punctuation}>=&gt;</span>{' '}
-								<span className={styles.punctuation}>{'{'}</span>
-								{'\n    '}
-								<span className={styles.variable}>document</span>
-								<span className={styles.punctuation}>.</span>
-								<span className={styles.property}>body</span>
-								<span className={styles.punctuation}>.</span>
-								<span className={styles.function}>removeAttribute</span>
-								<span className={styles.punctuation}>(</span>
-								<span className={styles.string}>"data-theme"</span>
-								<span className={styles.punctuation}>)</span>
-								<span className={styles.punctuation}>;</span>
-								{'\n  '}
-								<span className={styles.punctuation}>{'}'}</span>
-								<span className={styles.punctuation}>;</span>
-								{'\n'}
-								<span className={styles.punctuation}>{'}'}</span>
-								<span className={styles.punctuation}>,</span> <span className={styles.punctuation}>[</span>
-								<span className={styles.variable}>dataTheme</span>
-								<span className={styles.punctuation}>]</span>
-								<span className={styles.punctuation}>)</span>
-								<span className={styles.punctuation}>;</span>
-							</code>
+						<code>
+  <span className={styles.keyword}>const</span> <span className={styles.punctuation}>[</span><span className={styles.variable}>dataAccessibilityTheme</span><span className={styles.punctuation}>,</span> <span className={styles.variable}>setDataAccessibilityTheme</span><span className={styles.punctuation}>]</span> <span className={styles.operator}>=</span> <span className={styles.function}>useState</span><span className={styles.punctuation}>(</span><span className={styles.string}>''</span><span className={styles.punctuation}>)</span><span className={styles.punctuation}>;</span>
+  {'\n'}
+  <span className={styles.keyword}>const</span> <span className={styles.punctuation}>[</span><span className={styles.variable}>dataTheme</span><span className={styles.punctuation}>,</span> <span className={styles.variable}>setDataTheme</span><span className={styles.punctuation}>]</span> <span className={styles.operator}>=</span> <span className={styles.function}>useState</span><span className={styles.punctuation}>(</span><span className={styles.string}>'🤖'</span><span className={styles.punctuation}>)</span><span className={styles.punctuation}>;</span>
+  {'\n\n'}
+  <span className={styles.function}>useEffect</span><span className={styles.punctuation}>(() => {'{'}</span>
+  {'\n  '}
+  <span className={styles.variable}>document</span><span className={styles.punctuation}>.</span><span className={styles.variable}>body</span><span className={styles.punctuation}>.</span><span className={styles.function}>setAttribute</span><span className={styles.punctuation}>(</span><span className={styles.string}>'data-accessibility-theme'</span><span className={styles.punctuation}>,</span> <span className={styles.variable}>dataAccessibilityTheme</span><span className={styles.punctuation}>)</span><span className={styles.punctuation}>;</span>
+  {'\n  '}
+  <span className={styles.variable}>document</span><span className={styles.punctuation}>.</span><span className={styles.variable}>body</span><span className={styles.punctuation}>.</span><span className={styles.function}>setAttribute</span><span className={styles.punctuation}>(</span><span className={styles.string}>'data-theme'</span><span className={styles.punctuation}>,</span> <span className={styles.variable}>dataTheme</span><span className={styles.punctuation}>)</span><span className={styles.punctuation}>;</span>
+  {'\n\n  '}
+  <span className={styles.keyword}>return</span> <span className={styles.punctuation}>() => {'{'}</span>
+  {'\n    '}
+  <span className={styles.variable}>document</span><span className={styles.punctuation}>.</span><span className={styles.variable}>body</span><span className={styles.punctuation}>.</span><span className={styles.function}>removeAttribute</span><span className={styles.punctuation}>(</span><span className={styles.string}>'data-accessibility-theme'</span><span className={styles.punctuation}>)</span><span className={styles.punctuation}>;</span>
+  {'\n    '}
+  <span className={styles.variable}>document</span><span className={styles.punctuation}>.</span><span className={styles.variable}>body</span><span className={styles.punctuation}>.</span><span className={styles.function}>removeAttribute</span><span className={styles.punctuation}>(</span><span className={styles.string}>'data-theme'</span><span className={styles.punctuation}>)</span><span className={styles.punctuation}>;</span>
+  {'\n  '}
+  <span className={styles.punctuation}>{'}'}</span><span className={styles.punctuation}>;</span>
+  {'\n'}
+  <span className={styles.punctuation}>{'}'},</span> <span className={styles.punctuation}>[</span><span className={styles.variable}>dataAccessibilityTheme</span><span className={styles.punctuation}>,</span> <span className={styles.variable}>dataTheme</span><span className={styles.punctuation}>]</span><span className={styles.punctuation}>)</span><span className={styles.punctuation}>;</span>
+</code>
 						</pre>
 						<p>
 							On the style side, I experimented with variable naming conventions, aiming for balance between flexibility
@@ -691,8 +605,7 @@ export const FlashcardsContent = () => {
 						</a>{' '}
 						yourself, or visit my{' '}
 						<a
-							href='https://github.com/rbrandle1/accessible-flashcards-for-kids
-						</p>'
+							href='https://github.com/rbrandle1/accessible-flashcards-for-kids'
 							className={styles.link}
 							target='_blank'
 							rel='noopener noreferrer'

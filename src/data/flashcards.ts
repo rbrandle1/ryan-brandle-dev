@@ -20,7 +20,7 @@ export const data = {
 		fonts: {
 			src: articleImgFont,
 			alt: 'Image of Dyslexia font comparison',
-			caption: 'Dyslexia font comparison.',
+			caption: 'Dyslexia-friendly font comparison.',
 		},
 		toggle: {
 			src: articleImgToggle,
