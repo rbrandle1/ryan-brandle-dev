@@ -6,6 +6,7 @@ import { flashcards as data } from '@/data';
 import Link from 'next/link';
 import LargeImage from '@/components/Article/LargeImage/LargeImage';
 import SideImage from '@/components/Article/SideImage/SideImage';
+import Callout from '@/components/Callout/Callout';
 import styles from '../projects.module.scss';
 
 export const FlashcardsContent = () => {
@@ -38,7 +39,6 @@ export const FlashcardsContent = () => {
 							placeholder='blur'
 							priority
 						/>
-						<p style={{ border: 'solid 1px red' }}>[ADD CALLOUTS ADD CALLOUTS!!!]</p>
 						<p>
 							This is a project that is close to my heart and was the perfect opportunity to make something meaningful
 							for a loved one with dyslexia.
@@ -86,6 +86,14 @@ export const FlashcardsContent = () => {
 						</p>
 					</div>
 				</section>
+				<Callout 
+				className={cn(styles.callout, styles.flowOffset)} 
+				title={
+					<>
+						Unlocking potential<br />for all minds to thrive.
+					</>
+				} 
+				titleAccent />
 				<section className={styles.section}>
 					<div className={styles.containerGrid}>
 						<h2 className={styles.h2}>
