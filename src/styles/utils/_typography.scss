@@ -336,9 +336,10 @@ $paragraphs: (
 		letter-spacing: -1.6px;
 		font-style: italic;
 		font-size: 0.85em;
-		display: inline-block;
 		vertical-align: middle;
-		transform: translateY(-0.14em);
+		display: inline;
+		position: relative;
+		top: -0.14em;
 	}
 }
 

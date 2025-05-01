@@ -111,7 +111,7 @@
 		@include typography.alt-font(inline);
 
 		&.top {
-			transform: translateY(-0.07em);
+			top: -0.07em;
 		}
 	}
 
@@ -202,18 +202,29 @@
 }
 
 .heroSection {
-	--hero-offset: calc(var(--hero-spacing) * 2);
+	--hero-offset: calc(var(--hero-spacing) * 2.5);
 
 	background-color: var(--surface-primary);
 	padding-block-start: var(--hero-spacing);
 	padding-block-end: var(--hero-offset);
 
+	// height: fit-content;
+	// min-height: 1px;
+
+	// > .containerGrid {
+	// 	align-content: center;
+	// 	border: 1px solid blue;
+	// }
+
 	@include viewport.breakpoint(md) {
+		--hero-offset: calc(var(--hero-spacing) * 2);
+
 		padding-block-end: calc(var(--hero-offset) + 1lh); //offset for metabox
 	}
 }
 
 .section {
+	// min-height: 1px; // hack to fix grid layout issue
 	padding-block: var(--section-spacing);
 
 	[data-section='dark'] & {

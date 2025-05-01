@@ -20,7 +20,9 @@ export const InspContent = () => {
 			<header className={cn(styles.heroSection, styles.accentEdgeGrad)}>
 				<div className={styles.containerGrid}>
 					<h1 className={styles.h1}>
-						<span className={cn(styles.altFont, styles.top)}>Crafting</span> Inspirato's Design System
+						<span className={cn(styles.altFont, styles.top)}>Crafting</span>
+						<br />
+						Inspirato's Design System
 					</h1>
 					<div className={styles.subhead}>{data.text.descriptionShort}</div>
 				</div>

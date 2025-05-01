@@ -22,7 +22,7 @@
 	@include typography.alt-font(inline);
 
 	&.top {
-		transform: translateY(-0.07em);
+		top: -0.07em;
 	}
 }
 
@@ -302,7 +302,7 @@
 	@include typography.headline;
 
 	.altFont {
-		transform: initial;
+		top: 0;
 	}
 }
 
