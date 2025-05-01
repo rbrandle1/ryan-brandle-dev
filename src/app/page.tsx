@@ -17,10 +17,8 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 
 /* Todo:
 
-* Update line-heights... especially large headlines. Knock down to a 1. Make h2's, etc a 1.1? Prob need to adjust altFont to 0.8 or something like that.
-* increase mobile height from subhead to hero image in articles.
+* Update mobile sizes... is it too hard to read?
 * Make the multi image a full screen slider on mobile.
-* Update mobile body font size.
 * Review major articles and ADD CODE to the article pages.
 * reduce gap space when caption is present in featured project component, .5lh?.
 * weird footer bug when tab navigating from an article back to the home page. gap in accent strip.

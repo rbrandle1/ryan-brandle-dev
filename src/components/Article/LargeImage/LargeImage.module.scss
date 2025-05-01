@@ -8,10 +8,10 @@
 
 .metaBox {
 	padding-block: 0.25lh;
-	padding-inline: 0.5lh 0.75lh;
+	padding-inline: 0.3lh;
 	background-color: var(--color-accent);
 	border-radius: var(--radius-default);
-	max-width: 26ch;
+	max-width: 24ch;
 	position: absolute;
 	z-index: 2;
 	left: var(--gutter, var(--space-lg));
