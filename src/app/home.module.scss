@@ -305,7 +305,7 @@
 .multiSectionCopy {
 	@include typography.p(lg);
 	max-width: var(--optimal-line-length-base);
-
+	line-height: var(--line-height-subhead);
 	color: var(--text-tertiary);
 }
 

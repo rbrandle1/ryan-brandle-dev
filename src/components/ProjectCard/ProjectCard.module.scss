@@ -92,6 +92,7 @@
 
 .title {
 	@include typography.headline(xl);
+	line-height: var(--line-height-header);
 	margin-block-end: var(--space-xs);
 	max-width: var(--optimal-line-length-xs);
 	text-wrap: initial;

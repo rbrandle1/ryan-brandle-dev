@@ -104,10 +104,13 @@
 	--text-6xl: var(--p-text-size-9);
 	--text-7xl: var(--p-text-size-10);
 
+	--line-height-3xs: var(--p-line-height-6);
 	--line-height-2xs: var(--p-line-height-1);
 	--line-height-xs: var(--p-line-height-2);
 	--line-height-sm: var(--p-line-height-3);
 	--line-height-base: var(--p-line-height-4);
+	--line-height-header: var(--p-line-height-5);
+	--line-height-subhead: var(--p-line-height-7);
 
 	/* OPTIMAL LINE LENGTH */
 	--optimal-line-length-2xs: var(--p-optimal-line-length-1);

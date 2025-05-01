@@ -101,6 +101,7 @@
 
 	.subhead {
 		@include typography.p(lg);
+		line-height: var(--line-height-subhead);
 		max-width: var(--optimal-line-length-sm);
 		color: var(--text-tertiary);
 		text-wrap: balance;
