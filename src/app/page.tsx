@@ -17,25 +17,37 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 
 /* Todo:
 
-* Update mobile sizes... is it too hard to read?
-* Make the multi image a full screen slider on mobile.
+* reduce gap space when caption is present in featured project component, .65lh?. Might need way to custom adjust this per alt font... if alt font is on top, then .4ish, otherwise .65ish.
+* possibly increasE gap between feature cards on mobile as well.
 * Review major articles and ADD CODE to the article pages.
-* reduce gap space when caption is present in featured project component, .5lh?.
-* weird footer bug when tab navigating from an article back to the home page. gap in accent strip.
-* CODEPEN ISSUES: Can codepens be loaded faster and not when appears on page? Don't seem to be loading right... not getting hover states, etc. look at CF.
+* Make the multi image a full screen slider on mobile.
+* Update mobile sizes... is it too hard to read?
+
 * Publish and point kids accessible flashcards site to ryanbrandle.dev/flashcards... or something like that.
-* Fix the CSP read report only errors from codepen. https://blog.codepen.io/documentation/embedded-pens/
 
 * Do not come across as too arrogant. Polish, So fresh, So clean, Too 🔥 To Brandle*, etc. Might need to tone it down. EXAMPLE: Update hero text to use more descriptive text like flexible, modular, accessible, etc... maybe mix in a few "fun" words.
-* 
-* MUST FIX localstorage issue as it is causing a build error before performance audits can be done. Before a build can be made.
-* Nullify or disregard the bug?
-* https://developer.chrome.com/blog/new-in-devtools-133/?utm_source=devtools#perf-image-delivery
+ 
 * Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
 * https://medium.com/@jun55tsuno/optimize-your-nextjs-app-e4fe9718fc8a
 * PERFORMANCE AUDIT. Use Chrome LightHouse. Double check cpu and performance/paint issues. If gradient is still causing performance issues, try the png. Maybe will-change is causing issues. jpg for images, png for snapshots. hero under 200kb, thumbnails under 30kb. NEXT JS SHOULD OPTIMIZE ALREADY.
 * Check reduced motion settings.
 * Check screen reader settings.
+
+
+
+* BUGS TO SOLVE:
+* Fix the CSP read report only errors from codepen. https://blog.codepen.io/documentation/embedded-pens/
+* weird footer bug when tab navigating from an article back to the home page. gap in accent strip.
+* CODEPEN ISSUES: Can codepens be loaded faster and not when appears on page? Don't seem to be loading right... not getting hover states, etc. look at CF.
+* Occasional black flicker when scroll down page... like browser paint issue?
+* Theme picker on load error.
+* THEME PICKER LOCAL STORAGE ISSUES:
+* * MUST FIX localstorage issue as it is causing a build error before performance audits can be done. Before a build can be made.
+* Nullify or disregard the bug?
+* https://developer.chrome.com/blog/new-in-devtools-133/?utm_source=devtools#perf-image-delivery
+* Continue setting up theme provider and theme picker. TRY creating a nested layout to manage the theme state. So the body, header, footer etc are not reloaded on every page load, therefore not causing a FOUC.
+* Solve server 500 error on page load. Try using the window object to check if it's loaded in the ThemePicker useEffect and maybe use an empty string as the default theme? This would likely create a FOUC though. Try refactoring with a ThemeProvider component to manage the theme state.
+* Maybe put my header in a top level component so it doesn't reload disappear and come back on every pg load? nested layout?
 
 
 
@@ -54,15 +66,6 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 * UPDATE ALL PROFILE IMAGES to up-to-date image.
 * Check mailto links work. I don't have a default email client on my computer so it doesn't appear to work. Need to check on another device, possibly after a build and deployment.
 
-
-
-* BUGS:
-* Occasional black flicker when scroll down page... like browser paint issue?
-* Theme picker on load error.
-* THEME PICKER LOCAL STORAGE ISSUES:
-* Continue setting up theme provider and theme picker. TRY creating a nested layout to manage the theme state. So the body, header, footer etc are not reloaded on every page load, therefore not causing a FOUC.
-* Solve server 500 error on page load. Try using the window object to check if it's loaded in the ThemePicker useEffect and maybe use an empty string as the default theme? This would likely create a FOUC though. Try refactoring with a ThemeProvider component to manage the theme state.
-* Maybe put my header in a top level component so it doesn't reload disappear and come back on every pg load? nested layout?
 
 
 
