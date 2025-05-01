@@ -106,7 +106,12 @@ export const ComparisonContent = () => {
 						/>
 						<Callout
 							className={cn(styles.callout, styles.flowOffset)}
-							title='"CSS Grid breaks the traditional sense of a comparison "table" while still giving you consistent rows that line up across columns."'
+							title={
+								<>
+									"CSS Grid breaks the traditional sense of a comparison <code>&lt;table&gt;</code> while still giving
+									you consistent rows that line up across columns."
+								</>
+							}
 							titleAccent
 						/>
 						<h3 className={styles.h3}>Laying Out the Grid</h3>

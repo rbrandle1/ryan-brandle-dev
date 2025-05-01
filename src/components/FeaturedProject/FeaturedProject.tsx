@@ -82,8 +82,8 @@ const FeaturedProject = ({
 					<Link href={href} tabIndex={-1}>
 						<h3 className={styles.title}>{title}</h3>
 					</Link>
-					{metaTags ? <MetaTags items={metaTags} iconAccent /> : null}
 				</header>
+				{metaTags ? <MetaTags items={metaTags} iconAccent /> : null}
 				<p
 					className={styles.description}
 					{...(typeof description === 'object' && '__html' in description

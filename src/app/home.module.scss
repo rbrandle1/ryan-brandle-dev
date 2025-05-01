@@ -20,6 +20,10 @@
 // TYPOGRAPHY
 .altFont {
 	@include typography.alt-font(inline);
+
+	&.top {
+		transform: translateY(-0.07em);
+	}
 }
 
 .altHeader {

@@ -128,7 +128,6 @@
 .title {
 	@include typography.headline;
 	max-width: var(--optimal-line-length-xs);
-	margin-block-end: 0.125lh;
 
 	@include viewport.breakpoint(sm) {
 		--optimal-line-length-2xs: 11ch;

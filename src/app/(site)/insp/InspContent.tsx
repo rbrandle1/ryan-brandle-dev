@@ -20,7 +20,7 @@ export const InspContent = () => {
 			<header className={cn(styles.heroSection, styles.accentEdgeGrad)}>
 				<div className={styles.containerGrid}>
 					<h1 className={styles.h1}>
-						<span className={styles.altFont}>Crafting</span> Inspirato's Design System
+						<span className={cn(styles.altFont, styles.top)}>Crafting</span> Inspirato's Design System
 					</h1>
 					<div className={styles.subhead}>{data.text.descriptionShort}</div>
 				</div>
@@ -121,7 +121,7 @@ export const InspContent = () => {
 								caption='Gathering and documenting all product styles and UI elements.'
 							>
 								<h3 className={styles.h3}>
-									<span className={styles.altFont}>Phase&nbsp;1:</span>
+									<span className={cn(styles.altFont, styles.top)}>Phase&nbsp;1:</span>
 									<br />
 									Gather{' '}
 									<span className={styles.noWrap}>
@@ -154,7 +154,7 @@ export const InspContent = () => {
 								textRight
 							>
 								<h3 className={styles.h3}>
-									<span className={styles.altFont}>Phase&nbsp;2:</span>
+									<span className={cn(styles.altFont, styles.top)}>Phase&nbsp;2:</span>
 									<br />
 									Consolidate
 								</h3>
@@ -187,7 +187,7 @@ export const InspContent = () => {
 								caption='Integrated styles and components into a new style guide.'
 							>
 								<h3 className={styles.h3}>
-									<span className={styles.altFont}>Phase&nbsp;3:</span>
+									<span className={cn(styles.altFont, styles.top)}>Phase&nbsp;3:</span>
 									<br />
 									Integrate
 								</h3>
@@ -257,7 +257,7 @@ export const InspContent = () => {
 							</SideImage>
 						</div>
 						<h3 className={styles.h3}>
-							<span className={styles.altFont}>Phase&nbsp;4:</span>
+							<span className={cn(styles.altFont, styles.top)}>Phase&nbsp;4:</span>
 							<br />
 							Enhance
 						</h3>

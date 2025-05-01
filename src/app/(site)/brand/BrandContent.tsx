@@ -19,9 +19,9 @@ export const BrandContent = () => {
 			<header className={cn(styles.heroSection, styles.accentEdgeGrad)}>
 				<div className={styles.containerGrid}>
 					<h1 className={styles.h1}>
-						<span className={styles.altFont}>New Site,</span>
+						<span className={cn(styles.altFont, styles.top)}>New Site,</span>
 						<br />
-						So Fresh{' '}
+						So&nbsp;Fresh{' '}
 						<span className={styles.noWrap}>
 							<span className={styles.altFont}>&amp;</span>&nbsp;So&nbsp;Clean
 						</span>

@@ -197,14 +197,13 @@ export const CfContent = () => {
 							<CodePen penId='BaeadRV' />
 						</div>
 						<h3 className={styles.h3}>
-							Library{' '}
+							Libraries{' '}
 							<span className={styles.noWrap}>
-								<span className={styles.altFont}>&amp;</span>&nbsp;Token
-							</span>{' '}
-							Architecture
+								<span className={styles.altFont}>&amp;</span>&nbsp;Tokens
+							</span>
 						</h3>
 						<p>
-							With foundational decisions and strategies in place, I created a token structure with two theme modes
+							With foundational decisions and strategies in place, I created a token architecture with two theme modes
 							using Figma variables, mapping them across a set of modular libraries—color, typography, icons, and logos.
 						</p>
 						<div className={cn(styles.multiImagesContainer, styles.breakout, styles.flowOffset)}>
