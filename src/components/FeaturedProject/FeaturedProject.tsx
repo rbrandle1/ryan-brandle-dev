@@ -3,6 +3,7 @@ import { useInView } from 'react-intersection-observer';
 import cn from 'classnames';
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
+import setInlineStyles from '@/helpers/functions';
 import IconCrop from '@/components/Icons/IconCrop';
 import MetaTags from '@/components/MetaTags/MetaTags';
 import Caption from '@/components/Caption/Caption';
@@ -17,6 +18,7 @@ interface FeaturedProjectProps {
 	imgSrc: string | StaticImageData;
 	imgAlt: string;
 	accentBg?: boolean;
+	gapLg?: boolean;
 	hasCropIcon?: boolean;
 	logo?: React.ReactNode;
 	title: string | React.ReactNode;
@@ -34,6 +36,7 @@ const FeaturedProject = ({
 	imgSrc,
 	imgAlt,
 	accentBg,
+	gapLg,
 	hasCropIcon,
 	logo,
 	title,
@@ -52,6 +55,9 @@ const FeaturedProject = ({
 			id={id}
 			ref={ref}
 			className={cn(styles.component, imgRight && styles.imgRight, inView && styles.fadeInUp, className)}
+			style={setInlineStyles({
+				'--gap-lg': gapLg ? '.7lh' : undefined,
+			})}
 		>
 			{hasCropIcon ? (
 				<div className={styles.cropIconContainer}>

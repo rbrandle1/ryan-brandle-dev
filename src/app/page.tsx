@@ -17,8 +17,7 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 
 /* Todo:
 
-* reduce gap space when caption is present in featured project component, .65lh?. Might need way to custom adjust this per alt font... if alt font is on top, then .4ish, otherwise .65ish.
-* possibly increasE gap between feature cards on mobile as well.
+
 * Review major articles and ADD CODE to the article pages.
 * Make the multi image a full screen slider on mobile.
 * Update mobile sizes... is it too hard to read?
@@ -239,6 +238,7 @@ export default function Home() {
 							buttonText='Explore'
 							href='/cf?from=cf'
 							hasCropIcon
+							gapLg
 						/>
 					</div>
 				</section>

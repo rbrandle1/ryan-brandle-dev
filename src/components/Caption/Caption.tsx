@@ -12,7 +12,7 @@ interface CaptionProps {
 
 const Caption = ({ className, children, captionLeft, hasIcon = true, id }: CaptionProps) => {
 	return (
-		<figcaption id={id} className={cn(styles.caption, captionLeft ? styles.left : undefined, className)}>
+		<figcaption id={id} className={cn(styles.caption, captionLeft ? undefined : styles.right, className)}>
 			{hasIcon ? <IconCaption /> : null}
 			<div className={cn(styles.text, hasIcon && styles.hasIcon)}>{children}</div>
 		</figcaption>

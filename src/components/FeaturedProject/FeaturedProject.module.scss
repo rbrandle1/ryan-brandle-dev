@@ -14,7 +14,7 @@
 	position: relative;
 	display: grid;
 	grid-template-columns: 1fr;
-	gap: 1lh;
+	gap: var(--gap-lg, 0);
 
 	@include viewport.breakpoint(sm) {
 		grid-template-columns: 1fr 1fr;

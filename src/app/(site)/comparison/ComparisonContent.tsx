@@ -51,25 +51,20 @@ export const ComparisonContent = () => {
 						</p>
 						<p>
 							This project was a perfect fit: a comparison card react component for multiple products on Inspirato's
-							site that needed to be flexible, responsive, and visually clean. Let's dig in.
+							site that needed to be flexible, responsive, and visually clean.
 						</p>
 						<p>
-							As a side note, you can see a simplified example of this component on my CodePen,{' '}
+							To see a simplified example of this component, check out my{' '}
 							<a
 								href='https://codepen.io/therealace_1/pen/RwyxvOL'
 								className={styles.link}
 								target='_blank'
 								rel='noopener noreferrer'
 							>
-								Card Layout with CSS Grid
+								CodePen demo
 							</a>
-							.
+							. Let's dig in!
 						</p>
-						<Callout
-							className={cn(styles.callout, styles.flowOffset)}
-							title='"CSS Grid can be used instead of flexbox in most cases—especially when creating flexible grid layouts."'
-							titleAccent
-						/>
 						<h2 className={styles.h2}>
 							The
 							<br />
