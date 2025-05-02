@@ -43,8 +43,8 @@ export const CfContent = () => {
 							lay the groundwork for a more scalable front-end.
 						</p>
 						<p>
-							While design-led, the work was built to complement existing development workflows and provide a clear path
-							toward greater consistency and maintainability.
+							While design-led, the work was built to complement existing dev workflows and provide a clear path toward
+							greater consistency and maintainability.
 						</p>
 						<h2 className={styles.h2}>
 							The
@@ -52,12 +52,11 @@ export const CfContent = () => {
 							Challenge
 						</h2>
 						<p>
-							This widely-adopted platform in the cable services industry aimed to evolve their user experience and
-							visual identity.
+							This widely-adopted platform in the cable services industry aimed to evolve their UX and visual identity.
 						</p>
 						<p>
-							With a well-established product, multiple teams, and no formal UX processes or cohesive CSS strategy,
-							there was an opportunity to introduce a system that:
+							With a well-established product, multiple teams, and no formal UX processes or CSS strategy, there was an
+							opportunity to introduce a system that:
 						</p>
 						<ul className={styles.ul}>
 							<li>Streamlined the front-end code and improved integration between design and development.</li>
@@ -69,8 +68,9 @@ export const CfContent = () => {
 							needed a scalable UI foundation to match.
 						</p>
 						<p>
-							The path forward was clear: create a system that would serve both marketing and product needs while
-							enhancing the user experience.
+							The path forward was clear:{' '}
+							<strong>create a system that would serve both marketing and product needs</strong> while enhancing the
+							user experience.
 						</p>
 					</div>
 				</section>
@@ -122,7 +122,7 @@ export const CfContent = () => {
 									UI patterns using browser extensions, Figma plugin tools, and manual documentation. This included
 									cataloging typography, color usage, spacing, icons, and more.
 								</p>
-								<p>From this, we had a clear map of inconsistencies and a starting point for simplification.</p>
+								<p>I now had a clear map of inconsistencies and a starting point for simplification.</p>
 							</MultiImage>
 						</div>
 						<div className={cn(styles.sideImagesContainer, styles.flowOffset)}>
@@ -138,7 +138,7 @@ export const CfContent = () => {
 									scalability, flexibility, and developer alignment.
 								</p>
 								<p>
-									<strong>Key questions shaped the direction:</strong>
+									<strong>Key questions that shaped the direction:</strong>
 								</p>
 								<ul className={styles.ul}>
 									<li>Can a shared system support both marketing and product environments?</li>
@@ -159,8 +159,8 @@ export const CfContent = () => {
 						<h3 className={styles.h3}>Building the System</h3>
 						<p>
 							With clear goals in place, I consolidated and documented elements into an atomic foundation, focusing on
-							color, typography, and accessibility. This documentation would enable developers to easily replace raw
-							data with system tokens during code implementation.
+							color, typography, and accessibility. This documentation would enable developers to{' '}
+							<strong>easily replace raw data with system tokens</strong> during code implementation.
 						</p>
 						<div className={cn(styles.multiImagesContainer, styles.breakout)}>
 							<MultiImage
@@ -175,8 +175,20 @@ export const CfContent = () => {
 								<p>
 									I streamlined the palette by consolidating various grays into a series of neutral and brand-specific
 									colors. I also established a clear type hierarchy with an updated font-scale based on harmonious
-									mathematical ratios. To ensure the system met WCAG accessibility standards, multiple validation tests
-									were performed and a chart of font and color combinations was created to guide usage in the system.
+									mathematical ratios.
+								</p>
+								<p>
+									To ensure the system met{' '}
+									<a
+										href='https://www.w3.org/WAI/standards-guidelines/wcag/'
+										className={styles.link}
+										target='_blank'
+										rel='noopener noreferrer'
+									>
+										WCAG
+									</a>{' '}
+									accessibility standards, I ran multiple validation tests and created a chart of font and color
+									combinations to guide system usage.
 								</p>
 							</MultiImage>
 						</div>
@@ -196,36 +208,118 @@ export const CfContent = () => {
 						<div className={cn(styles.codePenContainer, styles.breakout, styles.flowOffset)}>
 							<CodePen penId='BaeadRV' />
 						</div>
-						<h3 className={styles.h3}>
-							Libraries{' '}
-							<span className={styles.noWrap}>
-								<span className={styles.altFont}>&amp;</span>&nbsp;Tokens
-							</span>
-						</h3>
-						<p>
-							With foundational decisions and strategies in place, I created a token architecture with two theme modes
-							using Figma variables, mapping them across a set of modular libraries—color, typography, icons, and logos.
-						</p>
-						<div className={cn(styles.multiImagesContainer, styles.breakout, styles.flowOffset)}>
-							<MultiImage
-								imgSrc1={data.images.tokens.src}
-								imgAlt1={data.images.tokens.alt}
-								imgSrc2={data.images.tokens2.src}
-								imgAlt2={data.images.tokens2.alt}
-								imgSrc3={data.images.tokens3.src}
-								imgAlt3={data.images.tokens3.alt}
-								caption='Token naming conventions, Figma tokens, and coded tokens.'
+						<div className={cn(styles.sideImagesContainer, styles.flowOffset)}>
+							<SideImage
+								imgSrc={data.images.tokens2.src}
+								imgAlt={data.images.tokens2.alt}
+								caption='Figma token libraries.'
 							>
+								<h3 className={styles.h3}>
+									Libraries{' '}
+									<span className={styles.noWrap}>
+										<span className={styles.altFont}>&amp;</span>&nbsp;Tokens
+									</span>
+								</h3>
 								<p>
-									Organizing tokens into both global and project-specific libraries made the system easier to manage and
-									flexible enough to support sub-branded implementations in the future.
+									With foundational decisions and strategies in place, I created a token architecture with{' '}
+									<strong>two theme modes</strong> using Figma variables, mapping them across a set of modular
+									libraries— color, typography, icons, and logos.
 								</p>
 								<p>
-									Each token was designed to translate cleanly to front-end code using CSS variables and consistent,
-									developer-friendly naming conventions.
+									Organizing tokens into local and global libraries made the system easier to manage and flexible enough
+									to support sub-branded implementations in the future.
 								</p>
-							</MultiImage>
+							</SideImage>
 						</div>
+						<p>
+							Each token was designed to translate cleanly to front-end code using CSS variables and consistent,
+							developer-friendly naming conventions.
+						</p>
+						<pre className={styles.syntax}>
+							<code>
+								<span className={styles.comment}>/* primitive.scss */</span>
+								{'\n'}
+								<span className={styles.class}>:root</span> <span className={styles.punctuation}>{'{'}</span>
+								{'\n  '}
+								<span className={styles.property}>--color-blue-hue</span>
+								<span className={styles.punctuation}>:</span> <span className={styles.number}>216</span>
+								<span className={styles.punctuation}>;</span>
+								{'\n  '}
+								<span className={styles.property}>--color-blue-sat</span>
+								<span className={styles.punctuation}>:</span> <span className={styles.number}>75</span>
+								<span className={styles.unit}>%</span>
+								<span className={styles.punctuation}>;</span>
+								{'\n  '}
+								<span className={styles.property}>--color-blue-650</span>
+								<span className={styles.punctuation}>:</span> <span className={styles.function}>hsl</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.function}>var</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.variable}>--color-blue-hue</span>
+								<span className={styles.punctuation}>),</span> <span className={styles.function}>var</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.variable}>--color-blue-sat</span>
+								<span className={styles.punctuation}>),</span> <span className={styles.number}>20</span>
+								<span className={styles.unit}>%</span>
+								<span className={styles.punctuation}>);</span>
+								{'\n  '}
+								<span className={styles.property}>--color-blue-700</span>
+								<span className={styles.punctuation}>:</span> <span className={styles.function}>hsl</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.function}>var</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.variable}>--color-blue-hue</span>
+								<span className={styles.punctuation}>),</span> <span className={styles.function}>var</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.variable}>--color-blue-sat</span>
+								<span className={styles.punctuation}>),</span> <span className={styles.number}>14</span>
+								<span className={styles.unit}>%</span>
+								<span className={styles.punctuation}>);</span>
+								{'\n  '}
+								<span className={styles.comment}>// etc...</span>
+								{'\n'}
+								<span className={styles.punctuation}>{'}'}</span>
+								{'\n\n'}
+								<span className={styles.comment}>/* semantic.scss */</span>
+								{'\n'}
+								<span className={styles.class}>:root</span> <span className={styles.punctuation}>{'{'}</span>
+								{'\n  '}
+								<span className={styles.property}>--color-primary</span>
+								<span className={styles.punctuation}>:</span> <span className={styles.function}>var</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.variable}>--color-blue-700</span>
+								<span className={styles.punctuation}>);</span>
+								{'\n  '}
+								<span className={styles.property}>--color-primary-hover</span>
+								<span className={styles.punctuation}>:</span> <span className={styles.function}>var</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.variable}>--color-blue-650</span>
+								<span className={styles.punctuation}>);</span>
+								{'\n  '}
+								<span className={styles.comment}>// etc...</span>
+								{'\n\n  '}
+								<span className={styles.comment}>// theme-specific overrides...</span>
+								{'\n  '}
+								<span className={styles.class}>[data-theme="dark"]</span>{' '}
+								<span className={styles.punctuation}>{'{'}</span>
+								{'\n    '}
+								<span className={styles.property}>--color-primary</span>
+								<span className={styles.punctuation}>:</span> <span className={styles.function}>var</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.variable}>--color-white</span>
+								<span className={styles.punctuation}>);</span>
+								{'\n    '}
+								<span className={styles.property}>--color-secondary</span>
+								<span className={styles.punctuation}>:</span> <span className={styles.function}>var</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.variable}>--color-blue-700</span>
+								<span className={styles.punctuation}>);</span>
+								{'\n  '}
+								<span className={styles.punctuation}>{'}'}</span>
+								{'\n'}
+								<span className={styles.punctuation}>{'}'}</span>
+							</code>
+						</pre>
 						<h3 className={styles.h3}>Component Creation</h3>
 						<p>
 							Recognizing that future product design and development would rely on clear, reusable components, I began
@@ -238,8 +332,8 @@ export const CfContent = () => {
 							caption={data.images.components.caption}
 						/>
 						<p>
-							Designing the new marketing site in parallel provided a practical way to introduce components as needed
-							and test the system holistically in a real-world context.
+							I utilized designing the new marketing site in parallel as a vehicle to introduce components on an as
+							needed basis and test the system holistically in a real-world context.
 						</p>
 					</div>
 				</section>
@@ -278,8 +372,8 @@ export const CfContent = () => {
 						</span>
 					</h3>
 					<p>
-						Throughout the project, I leveraged various emerging AI tools—for research, note-taking, wireframing, and
-						image manipulation—to accelerate the design process.
+						Throughout the project, I leveraged some emerging AI tools—for research, note-taking, wireframing, and image
+						manipulation—to accelerate the design process.
 					</p>
 					<p>
 						<a href='https://www.figma.com/ai/' className={styles.link} target='_blank' rel='noopener noreferrer'>
@@ -299,7 +393,7 @@ export const CfContent = () => {
 						often led to extra time spent reworking AI-generated assets.
 					</p>
 					<p>
-						The experience highlighted the potential and limitations of AI. Overall, these tools served as helpful
+						The experience highlighted the potential and limitations of AI. At the time, these tools served as helpful
 						collaborators—but not full replacements.
 					</p>
 					<Link className={styles.buttonLink} href={fromSection ? `/#${fromSection}` : '/'}>
