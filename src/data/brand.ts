@@ -13,7 +13,7 @@ import articleImgLogo1 from '@/images/brand/brand-article-logo.jpg';
 import articleImgLogo2 from '@/images/brand/brand-article-logo-2.png';
 import articleImgLogo3 from '@/images/brand/brand-article-logo-3.png';
 import articleImgLogo4 from '@/images/brand/brand-article-logo-4.png';
-import articleImgTokens from '@/images/brand/brand-article-tokens.png';
+import articleImgTokens from '@/images/brand/brand-article-tokens-2.png';
 import articleImgSketchMock from '@/images/brand/brand-article-sketchmock.jpg';
 import articleImgMock from '@/images/brand/brand-article-mock.png';
 import articleImgTokenCode from '@/images/brand/brand-article-token-code-2.png';
