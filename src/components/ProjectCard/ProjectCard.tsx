@@ -13,6 +13,7 @@ interface ProjectCardProps {
 	hasCropIcon?: boolean;
 	logo?: React.ReactNode;
 	title: string | React.ReactNode;
+	accessibleTitle: string;
 	metaTags?: string[];
 	description: string | { __html: string };
 	buttonText: string;
@@ -27,6 +28,7 @@ const ProjectCard = ({
 	hasCropIcon,
 	logo,
 	title,
+	accessibleTitle,
 	metaTags,
 	description,
 	buttonText,
@@ -40,7 +42,7 @@ const ProjectCard = ({
 				</div>
 			) : null}
 			<figure className={styles.imageContainer}>
-				<Link href={href} aria-label={`Read more about ${title}`} tabIndex={-1}>
+				<Link href={href} aria-label={`Read more about ${accessibleTitle}`} tabIndex={-1}>
 					<div className={styles.image}>
 						{logo ? <div className={styles.logoContainer}>{logo}</div> : null}
 						<Image src={imgSrc} alt={imgAlt} fill sizes='(max-width: 768px) 95vw, (max-width: 1096px) 46vw, 494px' />
@@ -60,7 +62,7 @@ const ProjectCard = ({
 						? { dangerouslySetInnerHTML: description }
 						: { children: description })}
 				/>
-				<Link className={styles.button} href={href} aria-label={`Read more about ${title}`}>
+				<Link className={styles.button} href={href} aria-label={`Read more about ${accessibleTitle}`}>
 					{buttonText}&nbsp;&rarr;
 				</Link>
 			</div>

@@ -16,22 +16,19 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 });
 
 /* Todo:
-
-
 * Review major articles and ADD CODE to the article pages.
+
 * Make the multi image a full screen slider on mobile.
+
 * Update mobile sizes... is it too hard to read?
 
-* Publish and point kids accessible flashcards site to ryanbrandle.dev/flashcards... or something like that.
-
-* Do not come across as too arrogant. Polish, So fresh, So clean, Too 🔥 To Brandle*, etc. Might need to tone it down. EXAMPLE: Update hero text to use more descriptive text like flexible, modular, accessible, etc... maybe mix in a few "fun" words.
- 
 * Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
 * https://medium.com/@jun55tsuno/optimize-your-nextjs-app-e4fe9718fc8a
 * PERFORMANCE AUDIT. Use Chrome LightHouse. Double check cpu and performance/paint issues. If gradient is still causing performance issues, try the png. Maybe will-change is causing issues. jpg for images, png for snapshots. hero under 200kb, thumbnails under 30kb. NEXT JS SHOULD OPTIMIZE ALREADY.
 * Check reduced motion settings.
 * Check screen reader settings.
 
+* Do not come across as too arrogant. Polish, So fresh, So clean, Too 🔥 To Brandle*, etc. Might need to tone it down. EXAMPLE: Update hero text to use more descriptive text like flexible, modular, accessible, etc... maybe mix in a few "fun" words.
 
 
 * BUGS TO SOLVE:
@@ -69,6 +66,7 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 
 
 * FUTURE CLEANUP AND EXPLORATION:
+* Publish and point kids accessible flashcards site to ryanbrandle.dev/flashcards... or something like that.
 * Find icons for callouts... modular, polish (sparkle), etc. Do after content? Boop these? Or should these remain static as they are not interactive?
 * Make Boop to scroll it down with a path, then back up as if painting?
 * Add Boop to hover states! Also make the boop apply to the entire logo like previously tried. Can also do it to an svg arrow on the link arrows. https://www.joshwcomeau.com/react/boop/
@@ -187,6 +185,7 @@ export default function Home() {
 									</span>
 								</>
 							}
+							accessibleTitle={brand.text.title}
 							description={brand.text.description}
 							metaTags={brand.tags}
 							imgSrc={brand.images.hero.src}
@@ -207,6 +206,7 @@ export default function Home() {
 									Inspirato's Design System
 								</>
 							}
+							accessibleTitle={insp.text.title}
 							description={insp.text.description}
 							metaTags={insp.tags}
 							imgSrc={insp.images.hero.src}
@@ -230,6 +230,7 @@ export default function Home() {
 									System
 								</>
 							}
+							accessibleTitle={cf.text.title}
 							description={cf.text.description}
 							metaTags={cf.tags}
 							imgSrc={cf.images.hero.src}
@@ -276,6 +277,7 @@ export default function Home() {
 										</span>
 									</>
 								}
+								accessibleTitle={flashcards.text.title}
 								description={flashcards.text.description}
 								metaTags={flashcards.tags}
 								imgSrc={flashcards.images.hero.src}
@@ -286,6 +288,7 @@ export default function Home() {
 							<ProjectCard
 								id='codepen'
 								title={codepen.text.title}
+								accessibleTitle={codepen.text.title}
 								description={codepen.text.description}
 								metaTags={codepen.tags}
 								imgSrc={codepen.images.hero.src}
@@ -300,6 +303,7 @@ export default function Home() {
 										Comparison Cards <span className={styles.altFont}>with</span> CSS Grid
 									</>
 								}
+								accessibleTitle={comparison.text.title}
 								description={comparison.text.description}
 								metaTags={comparison.tags}
 								imgSrc={comparison.images.feature.src}

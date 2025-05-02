@@ -174,11 +174,11 @@
 .featuredSection {
 	--flow-space: calc(var(--section-spacing) * 3);
 
+	padding-block-end: var(--flow-space);
+
 	@include viewport.breakpoint(sm) {
 		--flow-space: calc(var(--section-spacing) * 2);
 	}
-
-	padding-block-end: var(--flow-space);
 }
 
 .projectSection {

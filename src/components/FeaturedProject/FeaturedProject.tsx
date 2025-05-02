@@ -22,6 +22,7 @@ interface FeaturedProjectProps {
 	hasCropIcon?: boolean;
 	logo?: React.ReactNode;
 	title: string | React.ReactNode;
+	accessibleTitle: string;
 	metaTags?: string[];
 	description: string | { __html: string };
 	buttonText: string;
@@ -40,6 +41,7 @@ const FeaturedProject = ({
 	hasCropIcon,
 	logo,
 	title,
+	accessibleTitle,
 	metaTags,
 	description,
 	buttonText,
@@ -65,7 +67,7 @@ const FeaturedProject = ({
 				</div>
 			) : null}
 			<figure className={styles.imageContainer}>
-				<Link href={href} aria-label={`Read more about ${title}`} tabIndex={-1}>
+				<Link href={href} aria-label={`Read more about ${accessibleTitle}`} tabIndex={-1}>
 					<div className={styles.image}>
 						{logo ? <div className={styles.logoContainer}>{logo}</div> : null}
 						<Image
@@ -96,7 +98,7 @@ const FeaturedProject = ({
 						? { dangerouslySetInnerHTML: description }
 						: { children: description })}
 				/>
-				<Button className={styles.button} href={href} ariaLabel={`Read more about ${title}`}>
+				<Button className={styles.button} href={href} ariaLabel={`Read more about ${accessibleTitle}`}>
 					{buttonText}
 				</Button>
 			</div>

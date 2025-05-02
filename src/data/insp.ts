@@ -25,7 +25,7 @@ import articleImgFinal from '@/images/insp/insp-article-final.jpg';
 
 export const data = {
 	text: {
-		title: 'The Inspirato Design System',
+		title: "Crafting Inspirato's Design System",
 		description: {
 			__html:
 				'A large-scale initiative to unify brand, UX, and UI strategy across departments and codebases. Built for consistency, usability, flexibility, and scalability, <em>IDS</em> empowered teams to deliver the high-quality experience expected of a luxury travel brand.',
