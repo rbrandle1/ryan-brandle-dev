@@ -41,11 +41,13 @@ const Footer = () => {
 					<h3>Contact</h3>
 					<p>
 						I'm always open to new opportunities so please don't&nbsp;hesitate to{' '}
-						<a href='mailto:hello@example.com'>say&nbsp;hi&nbsp;anytime!</a>
+						<a href='mailto:hello@example.com' target='_blank'>
+							say&nbsp;hi&nbsp;anytime!
+						</a>
 					</p>
 				</div>
 				<div className={styles.copyContainer}>
-					<p>100% designed &amp;&nbsp;developed by Ryan&nbsp;Brandle &copy;&nbsp;2025</p>
+					<p>Designed &amp;&nbsp;developed by Ryan&nbsp;Brandle &copy;&nbsp;2025</p>
 				</div>
 				<div className={styles.socialContainer}>
 					<a

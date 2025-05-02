@@ -16,11 +16,12 @@ interface FeaturedProjectProps {
 	imgRight?: boolean;
 	imgSrc: string | StaticImageData;
 	imgAlt: string;
+	accentBg?: boolean;
 	hasCropIcon?: boolean;
 	logo?: React.ReactNode;
 	title: string | React.ReactNode;
 	metaTags?: string[];
-	description: string;
+	description: string | { __html: string };
 	buttonText: string;
 	href: string;
 }
@@ -32,6 +33,7 @@ const FeaturedProject = ({
 	imgRight,
 	imgSrc,
 	imgAlt,
+	accentBg,
 	hasCropIcon,
 	logo,
 	title,
@@ -61,6 +63,7 @@ const FeaturedProject = ({
 					<div className={styles.image}>
 						{logo ? <div className={styles.logoContainer}>{logo}</div> : null}
 						<Image
+							className={accentBg ? styles.accentBg : undefined}
 							src={imgSrc}
 							alt={imgAlt}
 							fill
@@ -79,9 +82,14 @@ const FeaturedProject = ({
 					<Link href={href} tabIndex={-1}>
 						<h3 className={styles.title}>{title}</h3>
 					</Link>
-					{metaTags ? <MetaTags items={metaTags} iconAccent /> : null}
 				</header>
-				<p className={styles.description}>{description}</p>
+				{metaTags ? <MetaTags items={metaTags} iconAccent /> : null}
+				<p
+					className={styles.description}
+					{...(typeof description === 'object' && '__html' in description
+						? { dangerouslySetInnerHTML: description }
+						: { children: description })}
+				/>
 				<Button className={styles.button} href={href} ariaLabel={`Read more about ${title}`}>
 					{buttonText}
 				</Button>

@@ -55,7 +55,7 @@
 	}
 
 	@include viewport.breakpoint(md) {
-		padding-block-end: calc(var(--hero-offset) + 1lh); //offset for metabox
+		padding-block-end: calc(var(--hero-offset) + 1lh);
 	}
 }
 

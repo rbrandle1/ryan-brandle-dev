@@ -10,12 +10,20 @@ interface ButtonProps {
 }
 
 const Button = ({ className, children, href, ariaLabel }: ButtonProps) => {
+	const isExternal = href.startsWith('http') || href.startsWith('mailto:');
+
 	return (
 		<div className={className}>
 			<div className={styles.buttonContainer}>
-				<Link className={styles.button} href={href} aria-label={ariaLabel}>
-					{children}
-				</Link>
+				{isExternal ? (
+					<a className={styles.button} target='_blank' rel='noopener noreferrer' href={href} aria-label={ariaLabel}>
+						{children}
+					</a>
+				) : (
+					<Link className={styles.button} href={href} aria-label={ariaLabel}>
+						{children}
+					</Link>
+				)}
 				<div className={cn(styles.buttonShadow, styles.bottomLeft)}></div>
 				<div className={cn(styles.buttonShadow, styles.topRight)}></div>
 			</div>

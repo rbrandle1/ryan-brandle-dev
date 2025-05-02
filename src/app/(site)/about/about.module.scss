@@ -1,0 +1,123 @@
+@use '@/styles/utils/typography';
+@use '@/styles/utils/viewport';
+@use '@/styles/utils/layout';
+@use '@/styles/utils/element';
+
+.about {
+	// PAGE VARIABLES
+	--flow-space-base: 1lh;
+	--hero-spacing: 1lh;
+	--section-spacing: 4lh;
+
+	@include viewport.breakpoint(xs) {
+		--hero-spacing: 2lh;
+	}
+
+	@include viewport.breakpoint(lg) {
+		--hero-spacing: 4lh;
+	}
+
+	// TYPOGRAPHY
+	p {
+		@include typography.p;
+		max-width: var(--optimal-line-length-base);
+	}
+
+	.h1 {
+		@include typography.headline(3xl);
+		position: relative;
+		max-width: var(--optimal-line-length-2xs);
+
+		@include viewport.breakpoint(2xl) {
+			font-size: clamp(var(--text-3xl), 7dvw, var(--text-4xl));
+		}
+
+		sup {
+			vertical-align: top;
+			padding-inline-start: var(--space-2xs);
+		}
+	}
+}
+
+// LAYOUT
+.containerGrid {
+	@include layout.grid;
+
+	> * + * {
+		margin-block-start: var(--flow-space, var(--flow-space-base));
+	}
+}
+
+.soloSection {
+	--hero-offset: calc(var(--hero-spacing) * 2);
+
+	background-color: var(--surface-primary);
+	padding-block-start: var(--hero-spacing);
+	padding-block-end: var(--hero-offset);
+	min-height: 100%;
+}
+
+.accentEdgeGrad {
+	@include element.accent-edge(gradient);
+}
+
+.button {
+	max-width: fit-content;
+}
+
+.socialContainer {
+	--flow-space: 2lh;
+}
+
+.socialList {
+	--flow-space: 0.5lh;
+	margin-block-start: var(--flow-space);
+
+	@include viewport.breakpoint(xs) {
+		--flow-space: 0;
+		column-gap: 1lh;
+		column-width: 116px;
+		max-width: var(--optimal-line-length-base);
+	}
+
+	a {
+		gap: var(--space-xs);
+		@include typography.link(underline);
+
+		svg {
+			width: var(--text-base);
+		}
+	}
+}
+
+.citation {
+	--flow-space: 2lh;
+
+	@include typography.p(sm);
+	padding-inline-start: 24px; //optical alignment
+	margin-block-start: var(--flow-space);
+	line-height: var(--line-height-xs);
+	max-width: var(--optimal-line-length-base);
+	text-wrap: balance;
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		border-left: solid 4px;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		transform: skewX(-11deg);
+	}
+
+	.bold {
+		font-weight: var(--font-weight-bold);
+	}
+
+	sup {
+		vertical-align: top;
+		font-size: initial;
+		margin-left: -8px;
+	}
+}

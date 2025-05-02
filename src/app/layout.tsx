@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import dynamic from 'next/dynamic';
-import { Oswald, Source_Sans_3, Source_Serif_4 } from 'next/font/google';
+import { Oswald, Source_Sans_3, Source_Serif_4, Fira_Code } from 'next/font/google';
 import '@/styles/reset.scss';
 import '@/styles/tokens/primitive.scss';
 import '@/styles/tokens/semantic.scss';
 import '@/styles/base.scss';
 import Header from '@/components/Header/Header';
-// import Footer from '@/components/Footer/Footer';
 
 // Using a dynamic import for performance reasons.
 const ThemeProvider = dynamic(() => import('@/components/ThemeProvider/ThemeProvider'), {
@@ -38,9 +38,16 @@ const sourceSerif = Source_Serif_4({
 	display: 'swap',
 });
 
-// This function ensures the fonts are referenced for typescript requirements.
+const firaCode = Fira_Code({
+	weight: ['500'],
+	style: ['normal'],
+	subsets: ['latin'],
+	display: 'swap',
+});
+
+// Ensuring fonts are referenced for typescript requirements.
 const useFonts = () => {
-	return { oswald, sourceSans, sourceSerif };
+	return { oswald, sourceSans, sourceSerif, firaCode };
 };
 
 export const metadata: Metadata = {
@@ -65,6 +72,7 @@ export default function RootLayout({
 					</main>
 					<Footer />
 				</ThemeProvider>
+				<Script src='https://cpwebassets.codepen.io/assets/embed/ei.js' strategy='lazyOnload' />
 			</body>
 		</html>
 	);

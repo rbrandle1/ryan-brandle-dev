@@ -1,9 +1,10 @@
 import cn from 'classnames';
 import dynamic from 'next/dynamic';
+import { insp, cf, brand, flashcards, codepen, comparison } from '@/data';
 import Callout from '@/components/Callout/Callout';
-import IconCodePen from '@/components/Icons/IconCodePen';
 import IconLogoInsp from '@/components/Icons/IconLogoInsp';
-import { inspImages, cfImages, srImages, flashcardsImages, codepenImages, comparisonImages } from '@/data/images';
+import IconModular from '@/components/Icons/IconModular';
+import IconPolish from '@/components/Icons/IconPolish';
 import styles from './home.module.scss';
 
 const FeaturedProject = dynamic(() => import('@/components/FeaturedProject/FeaturedProject'), {
@@ -15,13 +16,17 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 });
 
 /* Todo:
-* * CONTENT CREATION:
-* Make all pages with images and text content.
-* Finalize all home text and hero text.
-* 
-* 
-* MUST FIX localstorage issue as it is causing a build error before performance audits can be done. Before a build can be made.
-* https://developer.chrome.com/blog/new-in-devtools-133/?utm_source=devtools#perf-image-delivery
+
+* reduce gap space when caption is present in featured project component, .65lh?. Might need way to custom adjust this per alt font... if alt font is on top, then .4ish, otherwise .65ish.
+* possibly increasE gap between feature cards on mobile as well.
+* Review major articles and ADD CODE to the article pages.
+* Make the multi image a full screen slider on mobile.
+* Update mobile sizes... is it too hard to read?
+
+* Publish and point kids accessible flashcards site to ryanbrandle.dev/flashcards... or something like that.
+
+* Do not come across as too arrogant. Polish, So fresh, So clean, Too 🔥 To Brandle*, etc. Might need to tone it down. EXAMPLE: Update hero text to use more descriptive text like flexible, modular, accessible, etc... maybe mix in a few "fun" words.
+ 
 * Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
 * https://medium.com/@jun55tsuno/optimize-your-nextjs-app-e4fe9718fc8a
 * PERFORMANCE AUDIT. Use Chrome LightHouse. Double check cpu and performance/paint issues. If gradient is still causing performance issues, try the png. Maybe will-change is causing issues. jpg for images, png for snapshots. hero under 200kb, thumbnails under 30kb. NEXT JS SHOULD OPTIMIZE ALREADY.
@@ -30,35 +35,48 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 
 
 
-* FINAL RUN-THROUGH:
-* Prep robots to prevent indexing of company names.
-* Search all todos and fix them.
-* Remove all unused comments.
-* ensure all pages have correct metadata and optimize to AVOID SEO FOR COMPANY NAMES.
-* Remove any unused remotePatterns in next.config.ts if not needed from unsplash.
-* set up a new contact email
-* UPDATE ALL PROFILE IMAGES to up-to-date image.
-
-
-
-* BUGS:
+* BUGS TO SOLVE:
+* Fix the CSP read report only errors from codepen. https://blog.codepen.io/documentation/embedded-pens/
+* weird footer bug when tab navigating from an article back to the home page. gap in accent strip.
+* CODEPEN ISSUES: Can codepens be loaded faster and not when appears on page? Don't seem to be loading right... not getting hover states, etc. look at CF.
 * Occasional black flicker when scroll down page... like browser paint issue?
 * Theme picker on load error.
 * THEME PICKER LOCAL STORAGE ISSUES:
+* * MUST FIX localstorage issue as it is causing a build error before performance audits can be done. Before a build can be made.
+* Nullify or disregard the bug?
+* https://developer.chrome.com/blog/new-in-devtools-133/?utm_source=devtools#perf-image-delivery
 * Continue setting up theme provider and theme picker. TRY creating a nested layout to manage the theme state. So the body, header, footer etc are not reloaded on every page load, therefore not causing a FOUC.
 * Solve server 500 error on page load. Try using the window object to check if it's loaded in the ThemePicker useEffect and maybe use an empty string as the default theme? This would likely create a FOUC though. Try refactoring with a ThemeProvider component to manage the theme state.
 * Maybe put my header in a top level component so it doesn't reload disappear and come back on every pg load? nested layout?
 
 
 
+
+* FINAL RUN-THROUGH:
+* Prep robots to prevent indexing of company names.
+* Double check remove all odd formatted spacing, apostrophes, etc. from all text content in article pages. 
+* Double check the FOCUS animation works smoothly on ipads. If not, change the font size back to 1024 mq from 768
+* Double check codepens on touch devices... might not be able to interact?
+* Search all todos and fix them.
+* Search all [EDIT]s and fix them.
+* Remove all unused comments.
+* ensure all pages have correct metadata and optimize to AVOID SEO FOR COMPANY NAMES.
+* Remove any unused remotePatterns in next.config.ts if not needed from unsplash.
+* set up a new contact email and update all mailto links!!!
+* UPDATE ALL PROFILE IMAGES to up-to-date image.
+* Check mailto links work. I don't have a default email client on my computer so it doesn't appear to work. Need to check on another device, possibly after a build and deployment.
+
+
+
+
 * FUTURE CLEANUP AND EXPLORATION:
 * Find icons for callouts... modular, polish (sparkle), etc. Do after content? Boop these? Or should these remain static as they are not interactive?
-* Make a paint roller instead of droplet? Maybe use boop to scroll it down with a path, then back up as if painting?
+* Make Boop to scroll it down with a path, then back up as if painting?
 * Add Boop to hover states! Also make the boop apply to the entire logo like previously tried. Can also do it to an svg arrow on the link arrows. https://www.joshwcomeau.com/react/boop/
 * Animate the paint droplet to drop down and fade out, rinse and repeat.
-* ??? Make Mosaic component HOLD. Might not need this.
+* Make Mosaic component HOLD. Might not need this.
+* Maybe make the multi image component a simple off the page carousel... just an overflow, nothing crazy.
 * Add backup words for each FeaturedProject or article page footers.
-* Consider ditching yellow. It doesn't work well with light colors. if want to keep, maybe put the icon in a yellow circle or something and make the svg black.
 	
 
 
@@ -83,32 +101,52 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 	* Utilizing lh values for a typographical based spacing system when appropriate.
 	* 
 	* Getting components like MultiImage to match the breakout portion of the grid. Very challenging. Got it close but not perfect. It was also challenging to get the caption to work in the most semantic and accessible way possible. Ideally I'd have a single figure with multiple images inside it and a single caption for the entire figure. Since I'm using a different grid layout on desktop, I had to make a choice to use aria-labelledby on each figure to reference a single caption being used on one of the images. Would like to come back to this.
+	* 
 	* accentEdge gradient compromised the animation transition color.
+	* 
 	* Performance optimization: Using the next/image component with blurDataURL and placeholder. I had to use static image imports for the blurDataURL to work, which takes away the benefit of using the relative path for the src by default. However, the blurDataURL will automatically generate the blurDataURL for the image which is helpful especially for hero images. I ultimately decided to move my images into an assets folder to make it easier to manage the blurDataURL and import my images from there.
+	* 
+	* When creating my branded site images, I had to make a decision to make it theme specific where the unique logo is used, vs a black/white agnostic version of the logo and lean into theme color variables instead.
 */
 
 export default function Home() {
+	const marqueeText = 'Crispy, Rad, 🔥, Boss, Steezy, Dope, Sick,';
+	// const marqueeText = 'Crispy, Rad, 🔥, Intuitive, Scalable, Fun,';
+	// const marqueeText = 'Crispy, Simple, 🔥, Intuitive, Scalable, Fun,';
+	// const marqueeText = 'Crispy, Dope, 🔥, Boss, Steezy, Rad, Sick,';
+	// const marqueeText = 'Steezy, Dope, 🔥, Boss, Crispy, Rad, Sick,';
+
 	return (
 		<div className={styles.home}>
 			<header className={cn(styles.section, styles.heroSection, styles.accentEdgeGrad)}>
-				<div className={cn(styles.containerGrid, styles.heroContent)}>
-					<h1 className={cn(styles.heroTitle, styles.breakoutXl)}>
-						I make
-						<br />
-						<span className={styles.altHeader}>Dope, 🔥, Rizz</span>
-						<br />
-						<span className={styles.right}>products</span>
+				<div className={cn(styles.heroContent)}>
+					<h1 className={cn(styles.containerGrid, styles.heroTitle)}>
+						<span className={styles.breakoutXl}>I Code</span>
+						<span className={cn(styles.marquee, styles.breakoutFull)}>
+							<span className={cn(styles.altHeader, styles.marqueeText)}>{marqueeText}</span>
+							<span className={cn(styles.altHeader, styles.marqueeText)} aria-hidden>
+								{marqueeText}
+							</span>
+						</span>
+						<span className={cn(styles.right, styles.breakoutXl)}>
+							Design
+							<br />
+							Systems
+						</span>
 					</h1>
-					<div className={styles.heroDetails}>
+					<div className={cn(styles.heroDetails, styles.containerGrid)}>
 						<p className={styles.heroSubtitle}>
-							This is the 100% custom crafted portfolio site of Ryan&nbsp;Brandle, a Design Engineer and maker of the
-							web.
+							Hey there. I'm Ryan Brandle, a Design Engineer who empowers teams to build exceptional experiences.
 						</p>
 						<p className={styles.heroCopy}>
-							I’m a bing bang with over 15 years of experience in design, development and making top notch products.
-							There are a lot of titles that seem to morph through the years but what it comes down to is I bing bang
-							boom. With bing bang boom experience. Industry's standard There are a lot of titles that seem to morph.{' '}
-							<a href='mailto:hello@example.com'>Say hi anytime!</a>
+							This site was designed and coded by me — to show that design systems{' '}
+							<strong>
+								<em>can</em>
+							</strong>{' '}
+							be sexy, and to make your search for the right fit a little easier. With over a decade of experience
+							uniting design and code, I create accessible, intuitive, and scalable interfaces. I enjoy coding design to
+							life and pushing the boundaries of front-end craftsmanship. 🚀&nbsp;
+							<a href='mailto:hello@example.com'>Let's build</a> a product that leaves a lasting impression!
 						</p>
 					</div>
 				</div>
@@ -120,8 +158,7 @@ export default function Home() {
 			</header>
 			<div className={cn(styles.multiSection, styles.gradientBg)} data-section='dark'>
 				<div className={styles.vertSection}>
-					{/* ACCESSIBILITY: THIS CAN BE IGNORED, STRICTLY DECORATIVE */}
-					<div className={cn(styles.bgVertText, styles.vertTextHero)}>
+					<div className={cn(styles.bgVertText, styles.vertTextHero)} aria-hidden>
 						<div>UX</div>
 						<div>DEV</div>
 						<div>UI</div>
@@ -132,39 +169,59 @@ export default function Home() {
 				<section className={cn(styles.section, styles.firstCallout)}>
 					<div className={styles.containerGrid}>
 						<Callout title='I make flexible, modular systems that are easy to use.' size='lg' iconAccent>
-							<IconCodePen />
+							<IconModular />
 						</Callout>
 					</div>
 				</section>
 				<section className={cn(styles.section, styles.featuredSection)}>
 					<div className={styles.containerGrid}>
 						<FeaturedProject
-							id='insp'
+							id='brand'
 							className={styles.breakoutXl}
-							imgSrc={inspImages.hero.src}
-							imgAlt={inspImages.hero.alt}
-							caption={inspImages.hero.caption}
-							hasCropIcon
-							logo={<IconLogoInsp />}
 							title={
 								<>
-									<span className={styles.altFont}>The</span> Inspirato Design System
+									<span className={cn(styles.altFont, styles.top)}>New Site,</span>
+									<br />
+									So&nbsp;Fresh{' '}
+									<span className={styles.noWrap}>
+										<span className={styles.altFont}>&amp;</span>&nbsp;So&nbsp;Clean
+									</span>
 								</>
 							}
-							// title='The Inspirato Design System'
-							metaTags={['Branding', 'UX/UI', 'HTML', 'CSS', 'JS', 'React', 'Storybook']}
-							description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+							description={brand.text.description}
+							metaTags={brand.tags}
+							imgSrc={brand.images.hero.src}
+							imgAlt={brand.images.hero.alt}
+							caption={brand.images.hero.caption}
+							buttonText='Explore'
+							href='/brand?from=brand'
+							hasCropIcon
+							accentBg
+						/>
+						<FeaturedProject
+							id='insp'
+							className={styles.breakoutXl}
+							title={
+								<>
+									<span className={cn(styles.altFont, styles.top)}>Crafting</span>
+									<br />
+									Inspirato's Design System
+								</>
+							}
+							description={insp.text.description}
+							metaTags={insp.tags}
+							imgSrc={insp.images.hero.src}
+							imgAlt={insp.images.hero.alt}
+							logo={<IconLogoInsp />}
+							caption={insp.images.hero.caption}
 							buttonText='Explore'
 							href='/insp?from=insp'
+							hasCropIcon
+							imgRight
 						/>
 						<FeaturedProject
 							id='cf'
 							className={styles.breakoutXl}
-							imgSrc={cfImages.hero.src}
-							imgAlt={cfImages.hero.alt}
-							caption={cfImages.hero.caption}
-							hasCropIcon
-							imgRight
 							title={
 								<>
 									CableFinder Rebrand{' '}
@@ -174,31 +231,14 @@ export default function Home() {
 									System
 								</>
 							}
-							metaTags={['Branding', 'UX/UI', 'Figma', 'HTML', 'CSS']}
-							description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+							description={cf.text.description}
+							metaTags={cf.tags}
+							imgSrc={cf.images.hero.src}
+							imgAlt={cf.images.hero.alt}
+							caption={cf.images.hero.caption}
 							buttonText='Explore'
 							href='/cf?from=cf'
-						/>
-						<FeaturedProject
-							id='sr'
-							className={styles.breakoutXl}
-							caption={srImages.hero.caption}
-							imgSrc={srImages.hero.src}
-							imgAlt={srImages.hero.alt}
 							hasCropIcon
-							title={
-								<>
-									School Runner Rebrand{' '}
-									<span className={styles.noWrap}>
-										{' '}
-										<span className={styles.altFont}>&amp;</span>&nbsp;Website
-									</span>
-								</>
-							}
-							metaTags={['Branding', 'UX/UI', 'HTML', 'CSS', 'CMS']}
-							description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-							buttonText='Explore'
-							href='/sr?from=sr'
 						/>
 					</div>
 				</section>
@@ -215,20 +255,19 @@ export default function Home() {
 					<div className={styles.containerGrid}>
 						<div className={styles.multiSectionHeader}>
 							<h2 className={styles.dabbleTitle}>
-								<span className={styles.altFont}>Dabblings</span>
+								<span className={styles.altFont}>Dabbling</span>
 								<br />
 								on the side
 							</h2>
 							<p className={styles.multiSectionCopy}>
-								To stay fresh on the latest techniques, I tinker, dabble and explore with personal projects in my spare
-								time.
+								Staying sharp tinkering, exploring,
+								<br />
+								and sparking new ideas.&nbsp;⚡️
 							</p>
 						</div>
 						<div className={styles.projectCardContainer}>
 							<ProjectCard
 								id='flashcards'
-								imgSrc={flashcardsImages.hero.src}
-								imgAlt={flashcardsImages.hero.alt}
 								title={
 									<>
 										Accessible Flashcards{' '}
@@ -237,32 +276,34 @@ export default function Home() {
 										</span>
 									</>
 								}
-								metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'React']}
-								description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+								description={flashcards.text.description}
+								metaTags={flashcards.tags}
+								imgSrc={flashcards.images.hero.src}
+								imgAlt={flashcards.images.hero.alt}
 								buttonText='Read more'
 								href='/flashcards?from=flashcards'
 							/>
 							<ProjectCard
 								id='codepen'
-								imgSrc={codepenImages.hero.src}
-								imgAlt={codepenImages.hero.alt}
-								title='CodePen Explorations'
-								metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'Animation']}
-								description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+								title={codepen.text.title}
+								description={codepen.text.description}
+								metaTags={codepen.tags}
+								imgSrc={codepen.images.hero.src}
+								imgAlt={codepen.images.hero.alt}
 								buttonText='Read more'
 								href='/codepen?from=codepen'
 							/>
 							<ProjectCard
 								id='comparison-cards'
-								imgSrc={comparisonImages.hero.src}
-								imgAlt={comparisonImages.hero.alt}
 								title={
 									<>
 										Comparison Cards <span className={styles.altFont}>with</span> CSS Grid
 									</>
 								}
-								metaTags={['UX/UI', 'HTML', 'CSS', 'JS', 'React', 'Storybook']}
-								description="Work sans Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, link example when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+								description={comparison.text.description}
+								metaTags={comparison.tags}
+								imgSrc={comparison.images.feature.src}
+								imgAlt={comparison.images.feature.alt}
 								buttonText='Read more'
 								href='/comparison?from=comparison'
 							/>
@@ -272,16 +313,18 @@ export default function Home() {
 				<section className={cn(styles.section, styles.lastCallout)}>
 					<div className={styles.containerGrid}>
 						<Callout
-							title='For product teams that love the extra polish!'
-							body='I make flexible, modular systems that are easy to use. I make flexible, modular systems that are easy to use. I make flexible, modular systems that are easy to use.'
+							title='For tech teams that love the extra polish!'
 							iconAccent
 							size='lg'
+							body="Let's build a product that leaves a lasting impression."
+							buttonText='Say hello'
+							href='mailto:hello@example.com?subject=Hello!'
 						>
-							<IconCodePen />
+							<IconPolish />
 						</Callout>
 					</div>
 				</section>
-				<div className={cn(styles.bgVertText, styles.vertTextBottomRight)}>
+				<div className={cn(styles.bgVertText, styles.vertTextBottomRight)} aria-hidden>
 					<div>SYSTEM</div>
 					<div>DES</div>
 					<div>UX</div>

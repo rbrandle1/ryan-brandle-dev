@@ -5,6 +5,7 @@
 /* 
   * These tokens assign and give meaning to the primitive tokens and should be used often. This is the theme layer to our token system. This file includes the following:
     * Viewport
+    * Ratios
     * Spacing
     * Radius
     * Timing
@@ -32,6 +33,11 @@
 	--viewport-xl: var(--p-viewport-6);
 	--viewport-2xl: var(--p-viewport-7);
 
+	/* RATIOS */
+	--ratio-landscape: var(--p-ratio-1);
+	--ratio-portrait: var(--p-ratio-2);
+	--ratio-square: var(--p-ratio-3);
+
 	/* SPACING */
 	--space-3xs: var(--p-space-0125);
 	--space-2xs: var(--p-space-025);
@@ -49,10 +55,11 @@
 	--space-7xl: var(--p-space-10);
 	--space-8xl: var(--p-space-11);
 
-	--header-height: 117px; //needed to globally calculate layout heights
+	--header-height: 117px;
 
 	/* RADIUS */
 	--radius-default: var(--p-radius-1);
+	--radius-lg: var(--p-radius-2);
 
 	/* TIMING */
 	--duration-2xs: var(--p-duration-1);
@@ -79,6 +86,7 @@
 	--font-header: var(--p-font-display);
 	--font-body: var(--p-font-sans);
 	--font-alt: var(--p-font-serif);
+	--font-mono: var(--p-font-mono);
 	--font-weight-reg: var(--p-font-weight-1);
 	--font-weight-semiBold: var(--p-font-weight-2);
 	--font-weight-bold: var(--p-font-weight-3);
@@ -96,10 +104,13 @@
 	--text-6xl: var(--p-text-size-9);
 	--text-7xl: var(--p-text-size-10);
 
+	--line-height-3xs: var(--p-line-height-6);
 	--line-height-2xs: var(--p-line-height-1);
 	--line-height-xs: var(--p-line-height-2);
 	--line-height-sm: var(--p-line-height-3);
 	--line-height-base: var(--p-line-height-4);
+	--line-height-header: var(--p-line-height-5);
+	--line-height-subhead: var(--p-line-height-7);
 
 	/* OPTIMAL LINE LENGTH */
 	--optimal-line-length-2xs: var(--p-optimal-line-length-1);
@@ -122,7 +133,9 @@
 
 	--color-accent: var(--p-color-magenta-500);
 	--color-accent-alt: var(--p-color-magenta-700);
-	--color-accent-a: var(--p-color-magenta-a);
+	--color-accent-highlight: var(--p-color-magenta-a50);
+	--color-accent-bg-code-inline: var(--p-color-magenta-a15);
+	--color-accent-bg-code-block: var(--p-color-magenta-a10);
 	--color-accent-gradient: var(--p-color-magenta-gradient);
 	--color-accent-gradient-reversed: var(--p-color-magenta-gradient-reversed);
 
@@ -130,6 +143,24 @@
 	--color-background-gradient-diagonal-2xs: var(--p-color-neutral-gradient-diagonal-2xs);
 	--color-background-gradient-diagonal-xs: var(--p-color-neutral-gradient-diagonal-xs);
 	--color-background-gradient-diagonal-sm: var(--p-color-neutral-gradient-diagonal-sm);
+
+	--color-syntax-comment: var(--p-color-syntax-0);
+	--color-syntax-base: var(--p-color-syntax-1);
+	--color-syntax-type: var(--p-color-syntax-1);
+	--color-syntax-number: var(--p-color-syntax-1);
+	--color-syntax-element: var(--p-color-syntax-1);
+	--color-syntax-punctuation: var(--p-color-syntax-1);
+	--color-syntax-component: var(--p-color-syntax-2);
+	--color-syntax-interface: var(--p-color-syntax-2);
+	--color-syntax-variable: var(--p-color-syntax-2);
+	--color-syntax-parameter: var(--p-color-syntax-2);
+	--color-syntax-property: var(--p-color-syntax-3);
+	--color-syntax-attribute: var(--p-color-syntax-4);
+	--color-syntax-keyword: var(--p-color-syntax-4);
+	--color-syntax-class: var(--p-color-syntax-4);
+	--color-syntax-function: var(--p-color-syntax-4);
+	--color-syntax-operator: var(--p-color-syntax-5);
+	--color-syntax-string: var(--p-color-syntax-5);
 
 	/* SHADOWS */
 	--shadow-box: 0 2px 4px var(--p-color-black-a15), 0 2px 6px var(--p-color-black-a15);
@@ -216,7 +247,9 @@
 	[data-theme='c'] {
 		--color-accent: var(--p-color-cyan-500);
 		--color-accent-alt: var(--p-color-cyan-700);
-		--color-accent-a: var(--p-color-cyan-a);
+		--color-accent-highlight: var(--p-color-cyan-a50);
+		--color-accent-bg-code-inline: var(--p-color-cyan-a15);
+		--color-accent-bg-code-block: var(--p-color-cyan-a08);
 		--color-accent-gradient: var(--p-color-cyan-gradient);
 		--color-accent-gradient-reversed: var(--p-color-cyan-gradient-reversed);
 		--text-accent: var(--color-accent);
@@ -228,7 +261,9 @@
 	[data-theme='y'] {
 		--color-accent: var(--p-color-yellow-500);
 		--color-accent-alt: var(--p-color-yellow-700);
-		--color-accent-a: var(--p-color-yellow-a);
+		--color-accent-highlight: var(--p-color-yellow-a50);
+		--color-accent-bg-code-inline: var(--p-color-yellow-a15);
+		--color-accent-bg-code-block: var(--p-color-yellow-a06);
 		--color-accent-gradient: var(--p-color-yellow-gradient);
 		--color-accent-gradient-reversed: var(--p-color-yellow-gradient-reversed);
 		--text-accent: var(--color-accent);
@@ -240,7 +275,9 @@
 	[data-theme='p'] {
 		--color-accent: var(--p-color-purple-500);
 		--color-accent-alt: var(--p-color-purple-700);
-		--color-accent-a: var(--p-color-purple-a);
+		--color-accent-highlight: var(--p-color-purple-a50);
+		--color-accent-bg-code-inline: var(--p-color-purple-a20);
+		--color-accent-bg-code-block: var(--p-color-purple-a12);
 		--color-accent-gradient: var(--p-color-purple-gradient);
 		--color-accent-gradient-reversed: var(--p-color-purple-gradient-reversed);
 		--text-accent: var(--color-accent);

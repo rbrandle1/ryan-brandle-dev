@@ -18,14 +18,16 @@
 	}
 
 	// TYPOGRAPHY
-	p {
-		@include typography.p;
-		max-width: var(--optimal-line-length-base);
+	.h1,
+	.h2,
+	.h3 {
+		max-width: var(--optimal-line-length-2xs);
 	}
 
-	.h1,
-	.h2 {
-		max-width: var(--optimal-line-length-2xs);
+	.h4,
+	.h5,
+	.h6 {
+		max-width: var(--optimal-line-length-xs);
 	}
 
 	.h1 {
@@ -34,10 +36,6 @@
 		@include viewport.breakpoint(2xl) {
 			font-size: clamp(var(--text-3xl), 7dvw, var(--text-4xl));
 		}
-
-		// .altFont {
-		// 	font-weight: var(--font-weight-black);
-		// }
 	}
 
 	.h2 {
@@ -46,11 +44,64 @@
 
 	.h3 {
 		@include typography.headline(xl);
-		max-width: var(--optimal-line-length-xs);
+	}
+
+	.h4 {
+		@include typography.headline(lg);
+	}
+
+	.h5 {
+		@include typography.headline(md);
+	}
+
+	.h6 {
+		@include typography.headline(sm);
+	}
+
+	p {
+		@include typography.p;
+		max-width: var(--optimal-line-length-base);
+	}
+
+	.ul {
+		list-style-type: disc;
+	}
+
+	.ol {
+		counter-reset: list-counter;
+
+		li {
+			position: relative;
+			padding-inline-start: 0.85lh;
+
+			&::before {
+				position: absolute;
+				top: 1px;
+				left: 0;
+				content: counter(list-counter) '.';
+				counter-increment: list-counter;
+				font-family: var(--font-alt);
+				font-weight: var(--font-weight-bold);
+				font-size: 0.9em;
+			}
+		}
+	}
+
+	.ul,
+	.ol {
+		color: var(--text-primary);
+		padding-inline-start: 1lh;
+		margin-block-start: 0.35lh;
+		max-width: var(--optimal-line-length-base);
+
+		li + li {
+			margin-top: 0.35lh;
+		}
 	}
 
 	.subhead {
 		@include typography.p(lg);
+		line-height: var(--line-height-subhead);
 		max-width: var(--optimal-line-length-sm);
 		color: var(--text-tertiary);
 		text-wrap: balance;
@@ -58,6 +109,10 @@
 
 	.altFont {
 		@include typography.alt-font(inline);
+
+		&.top {
+			top: -0.07em;
+		}
 	}
 
 	[data-section='dark'] {
@@ -81,6 +136,60 @@
 			}
 		}
 	}
+
+	.syntax {
+		@include viewport.between(md, xl) {
+			max-width: 82%;
+		}
+		.variable {
+			color: var(--color-syntax-variable);
+		}
+		.comment {
+			color: var(--color-syntax-comment);
+		}
+		.punctuation {
+			color: var(--color-syntax-punctuation);
+		}
+		.keyword {
+			color: var(--color-syntax-keyword);
+		}
+		.class {
+			color: var(--color-syntax-class);
+		}
+		.function {
+			color: var(--color-syntax-function);
+		}
+		.property {
+			color: var(--color-syntax-property);
+		}
+		.string {
+			color: var(--color-syntax-string);
+		}
+		.parameter {
+			color: var(--color-syntax-parameter);
+		}
+		.interface {
+			color: var(--color-syntax-interface);
+		}
+		.type {
+			color: var(--color-syntax-type);
+		}
+		.operator {
+			color: var(--color-syntax-operator);
+		}
+		.number {
+			color: var(--color-syntax-number);
+		}
+		.element {
+			color: var(--color-syntax-element);
+		}
+		.attribute {
+			color: var(--color-syntax-attribute);
+		}
+		.component {
+			color: var(--color-syntax-component);
+		}
+	}
 }
 
 // LAYOUT
@@ -93,18 +202,29 @@
 }
 
 .heroSection {
-	--hero-offset: calc(var(--hero-spacing) * 2);
+	--hero-offset: calc(var(--hero-spacing) * 2.5);
 
 	background-color: var(--surface-primary);
 	padding-block-start: var(--hero-spacing);
 	padding-block-end: var(--hero-offset);
 
+	// height: fit-content;
+	// min-height: 1px;
+
+	// > .containerGrid {
+	// 	align-content: center;
+	// 	border: 1px solid blue;
+	// }
+
 	@include viewport.breakpoint(md) {
+		--hero-offset: calc(var(--hero-spacing) * 2);
+
 		padding-block-end: calc(var(--hero-offset) + 1lh); //offset for metabox
 	}
 }
 
 .section {
+	// min-height: 1px; // hack to fix grid layout issue
 	padding-block: var(--section-spacing);
 
 	[data-section='dark'] & {
@@ -179,7 +299,8 @@
 }
 
 .sideImagesContainer,
-.multiImagesContainer {
+.multiImagesContainer,
+.codePenContainer {
 	--flow-space: 3lh;
 
 	@include viewport.breakpoint(sm) {
@@ -195,6 +316,10 @@
 	@include viewport.breakpoint(sm, max) {
 		margin-block-start: calc(var(--flow-space, var(--flow-space-base)) - 1lh);
 	}
+}
+
+.soloHeader {
+	--flow-space: 2lh;
 }
 
 // ELEMENTS
@@ -221,7 +346,41 @@
 }
 
 .buttonLink {
+	--flow-space: 2lh;
+
 	display: inline-block;
 	max-width: fit-content;
 	@include typography.link(false, reverse);
+}
+
+.citation {
+	--flow-space: 2lh;
+
+	@include typography.p(sm);
+	padding-inline-start: 24px; //optical alignment
+	margin-block-start: var(--flow-space);
+	line-height: var(--line-height-xs);
+	max-width: var(--optimal-line-length-base);
+	text-wrap: balance;
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		border-left: solid 4px;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		transform: skewX(-11deg);
+	}
+
+	.bold {
+		font-weight: var(--font-weight-bold);
+	}
+
+	sup {
+		vertical-align: top;
+		font-size: initial;
+		margin-left: -8px;
+	}
 }

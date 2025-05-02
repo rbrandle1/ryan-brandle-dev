@@ -10,7 +10,7 @@
 
 .iconContainer {
 	margin-block-start: 0.18lh;
-	padding-inline-end: 0.25lh;
+	padding-inline-end: 0.15lh;
 	flex-shrink: 0;
 
 	@include viewport.breakpoint(sm) {

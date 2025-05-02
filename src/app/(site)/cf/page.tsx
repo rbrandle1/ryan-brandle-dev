@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { CfContent } from './CfContent';
+import CodePenLoader from '@/components/CodePen/CodePenLoader';
 
 export const metadata: Metadata = {
 	title: 'CableFinder Rebrand & Token System',
@@ -7,5 +8,10 @@ export const metadata: Metadata = {
 };
 
 export default function CfPage() {
-	return <CfContent />;
+	return (
+		<>
+			<CodePenLoader />
+			<CfContent />
+		</>
+	);
 }

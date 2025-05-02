@@ -8,7 +8,7 @@ import styles from './Header.module.scss';
 
 const PAGES = [
 	{ path: '/', label: 'Work' },
-	{ path: '/style', label: 'About' },
+	{ path: '/about', label: 'About' },
 ] as const;
 
 const Header = () => {
@@ -28,7 +28,7 @@ const Header = () => {
 					</div>
 					<div className={styles.logoText}>
 						<div>Ryan Brandle</div>
-						<div>DES + DEV</div>
+						<div>DESIGN + ENGINEER</div>
 					</div>
 				</div>
 				<nav className={styles.navContainer}>

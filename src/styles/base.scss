@@ -5,7 +5,7 @@
 */
 
 ::selection {
-	background-color: var(--color-accent-a);
+	background-color: var(--color-accent-highlight);
 }
 
 html,
@@ -47,5 +47,26 @@ a {
 
 	&:focus {
 		outline: none;
+	}
+}
+
+pre {
+	color: #d4d4d4;
+	background-color: var(--color-accent-bg-code-block);
+	padding: 1lh;
+	overflow-x: auto;
+}
+
+pre,
+code {
+	font-size: 0.9em;
+	font-family: var(--font-mono);
+	border-radius: var(--radius-lg);
+	line-height: 1.4;
+
+	&:where(:not(pre) > code) {
+		background-color: var(--color-accent-bg-code-inline);
+		font-size: 0.83em;
+		padding: 0.2lh 0.15lh;
 	}
 }

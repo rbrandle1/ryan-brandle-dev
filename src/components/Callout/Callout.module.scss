@@ -9,8 +9,9 @@
 
 	display: grid;
 	place-items: center;
-	gap: var(--space-lg);
+	gap: 1.5lh;
 	text-align: center;
+	text-wrap: balance;
 
 	@media not (prefers-reduced-motion: reduce) {
 		> * {
@@ -35,7 +36,7 @@
 }
 
 .icon {
-	width: var(--text-2xl);
+	width: var(--text-3xl);
 
 	svg {
 		fill: var(--icon-color, currentColor);
@@ -53,6 +54,7 @@
 .title {
 	color: var(--title-color, var(--text-primary));
 	max-width: var(--optimal-line-length-sm);
+	padding-inline: var(--space-sm);
 }
 
 .lg {

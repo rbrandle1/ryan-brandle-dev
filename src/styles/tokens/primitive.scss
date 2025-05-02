@@ -5,6 +5,7 @@
 /* 
   * These are the most basic, raw token values to be used in Semantic Tokens. These should be used rarely, if at all when writing custom component CSS. Tier 2 should primarily be used. This file includes the following:
     * Viewport
+    * Ratios
     * Font
     * Text Size
     * Line Height
@@ -25,10 +26,16 @@
 	--p-viewport-6: 1440px;
 	--p-viewport-7: 1600px;
 
+	/* RATIOS */
+	--p-ratio-1: 4 / 3;
+	--p-ratio-2: 3 / 4;
+	--p-ratio-3: 1 / 1;
+
 	/* FONT */
 	--p-font-display: 'Oswald', sans-serif;
 	--p-font-sans: 'Source Sans 3', sans-serif;
 	--p-font-serif: 'Source Serif 4', serif;
+	--p-font-mono: 'Fira Code', monospace;
 	--p-font-weight-1: 400;
 	--p-font-weight-2: 500;
 	--p-font-weight-3: 700;
@@ -53,6 +60,9 @@
 	--p-line-height-2: 1.2;
 	--p-line-height-3: 1.25;
 	--p-line-height-4: 1.5;
+	--p-line-height-5: 1.1;
+	--p-line-height-6: 0.9;
+	--p-line-height-7: 1.3;
 
 	/* OPTIMAL LINE LENGTH */
 	--p-optimal-line-length-1: 12ch;
@@ -157,6 +167,7 @@
 
 	/* RADIUS */
 	--p-radius-1: 3px;
+	--p-radius-2: 5px;
 
 	/* TIMING */
 	--p-duration-1: 20ms;
@@ -263,7 +274,9 @@
 	--p-color-cyan-sat: 100%;
 	--p-color-cyan-500: hsl(var(--p-color-cyan-hue), var(--p-color-cyan-sat), 50%);
 	--p-color-cyan-700: hsl(188, var(--p-color-cyan-sat), 50%);
-	--p-color-cyan-a: hsla(var(--p-color-cyan-hue), var(--p-color-cyan-sat), 50%, 0.5);
+	--p-color-cyan-a50: hsla(var(--p-color-cyan-hue), var(--p-color-cyan-sat), 50%, 0.5);
+	--p-color-cyan-a15: hsla(var(--p-color-cyan-hue), var(--p-color-cyan-sat), 50%, 0.15);
+	--p-color-cyan-a08: hsla(var(--p-color-cyan-hue), var(--p-color-cyan-sat), 50%, 0.08);
 	--p-color-cyan-stops: var(--p-color-cyan-700) 0%, hsl(187deg 100% 50%) 20%, hsl(186deg 100% 50%) 29%,
 		hsl(186deg 100% 50%) 36%, hsl(185deg 100% 50%) 43%, hsl(184deg 100% 50%) 50%, hsl(183deg 100% 50%) 57%,
 		hsl(182deg 100% 50%) 64%, hsl(182deg 100% 50%) 71%, hsl(181deg 100% 50%) 80%, var(--p-color-cyan-500) 100%;
@@ -276,7 +289,9 @@
 	--p-color-magenta-sat: 100%;
 	--p-color-magenta-500: hsl(var(--p-color-magenta-hue), var(--p-color-magenta-sat), 50%);
 	--p-color-magenta-700: hsl(288, var(--p-color-magenta-sat), 50%);
-	--p-color-magenta-a: hsla(var(--p-color-magenta-hue), var(--p-color-magenta-sat), 50%, 0.5);
+	--p-color-magenta-a50: hsla(var(--p-color-magenta-hue), var(--p-color-magenta-sat), 50%, 0.5);
+	--p-color-magenta-a15: hsla(var(--p-color-magenta-hue), var(--p-color-magenta-sat), 50%, 0.15);
+	--p-color-magenta-a10: hsla(var(--p-color-magenta-hue), var(--p-color-magenta-sat), 50%, 0.1);
 	--p-color-magenta-stops: var(--p-color-magenta-700) 0%, hsl(289deg 100% 50%) 20%, hsl(290deg 100% 50%) 29%,
 		hsl(292deg 100% 50%) 36%, hsl(293deg 100% 50%) 43%, hsl(294deg 100% 50%) 50%, hsl(295deg 100% 50%) 57%,
 		hsl(296deg 100% 50%) 64%, hsl(298deg 100% 50%) 71%, hsl(299deg 100% 50%) 80%, var(--p-color-magenta-500) 100%;
@@ -289,7 +304,9 @@
 	--p-color-purple-sat: 100%;
 	--p-color-purple-500: hsl(var(--p-color-purple-hue), var(--p-color-purple-sat), 50%);
 	--p-color-purple-700: hsl(279, var(--p-color-purple-sat), 50%);
-	--p-color-purple-a: hsla(var(--p-color-purple-hue), var(--p-color-purple-sat), 50%, 0.5);
+	--p-color-purple-a50: hsla(var(--p-color-purple-hue), var(--p-color-purple-sat), 50%, 0.5);
+	--p-color-purple-a20: hsla(var(--p-color-purple-hue), var(--p-color-purple-sat), 50%, 0.2);
+	--p-color-purple-a12: hsla(var(--p-color-purple-hue), var(--p-color-purple-sat), 50%, 0.12);
 	--p-color-purple-stops: var(--p-color-purple-700) 0%, hsl(280deg 100% 50%) 20%, hsl(281deg 100% 50%) 29%,
 		hsl(282deg 100% 50%) 36%, hsl(283deg 100% 50%) 43%, hsl(284deg 100% 50%) 50%, hsl(284deg 100% 50%) 57%,
 		hsl(285deg 100% 50%) 64%, hsl(286deg 100% 50%) 71%, hsl(287deg 100% 50%) 80%, var(--p-color-purple-500) 100%;
@@ -302,10 +319,20 @@
 	--p-color-yellow-sat: 100%;
 	--p-color-yellow-500: hsl(var(--p-color-yellow-hue), var(--p-color-yellow-sat), 50%);
 	--p-color-yellow-700: hsl(56, var(--p-color-yellow-sat), 50%);
-	--p-color-yellow-a: hsla(var(--p-color-yellow-hue), var(--p-color-yellow-sat), 50%, 0.5);
+	--p-color-yellow-a50: hsla(var(--p-color-yellow-hue), var(--p-color-yellow-sat), 50%, 0.5);
+	--p-color-yellow-a15: hsla(var(--p-color-yellow-hue), var(--p-color-yellow-sat), 50%, 0.15);
+	--p-color-yellow-a06: hsla(var(--p-color-yellow-hue), var(--p-color-yellow-sat), 50%, 0.06);
 	--p-color-yellow-stops: var(--p-color-yellow-700) 0%, hsl(56deg 100% 50%) 20%, hsl(57deg 100% 50%) 29%,
 		hsl(57deg 100% 50%) 36%, hsl(58deg 100% 50%) 43%, hsl(58deg 100% 50%) 50%, hsl(58deg 100% 50%) 57%,
 		hsl(59deg 100% 50%) 64%, hsl(59deg 100% 50%) 71%, hsl(60deg 100% 50%) 80%, var(--p-color-yellow-500) 100%;
 	--p-color-yellow-gradient: linear-gradient(340deg, var(--p-color-yellow-stops));
 	--p-color-yellow-gradient-reversed: linear-gradient(160deg, var(--p-color-yellow-stops));
+
+	/* Syntax Tokens */
+	--p-color-syntax-0: #717790;
+	--p-color-syntax-1: #d4d4d4;
+	--p-color-syntax-2: #92b4dd;
+	--p-color-syntax-3: #c586c0;
+	--p-color-syntax-4: #ddca7e;
+	--p-color-syntax-5: #d0782a;
 }

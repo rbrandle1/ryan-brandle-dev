@@ -8,10 +8,10 @@
 
 .metaBox {
 	padding-block: 0.25lh;
-	padding-inline: 0.5lh 0.75lh;
+	padding-inline: 0.3lh;
 	background-color: var(--color-accent);
 	border-radius: var(--radius-default);
-	max-width: 26ch;
+	max-width: 24ch;
 	position: absolute;
 	z-index: 2;
 	left: var(--gutter, var(--space-lg));
@@ -49,8 +49,7 @@
 	grid-template-rows: 1fr;
 	place-items: center;
 	padding-inline: var(--space-xl);
-	// background-color: var(--surface-neutral);
-	aspect-ratio: 3 / 2;
+	aspect-ratio: var(--ratio-landscape);
 	overflow: hidden;
 	user-select: none;
 
@@ -75,6 +74,12 @@
 
 	img {
 		object-fit: cover;
+		will-change: background-color;
+		transition: background-color var(--duration-2xl) var(--ease-out) var(--duration-xs);
+
+		&.accentBg {
+			background-color: var(--color-accent);
+		}
 	}
 }
 

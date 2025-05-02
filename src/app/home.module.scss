@@ -20,17 +20,37 @@
 // TYPOGRAPHY
 .altFont {
 	@include typography.alt-font(inline);
+
+	&.top {
+		top: -0.07em;
+	}
 }
 
 .altHeader {
 	@include typography.alt-font;
 }
 
+.marquee {
+	display: flex;
+	gap: 0.25lh;
+	transform: skewY(-1deg);
+}
+
+.marqueeText {
+	flex-shrink: 0;
+	min-width: 100%;
+	animation: marquee 240s linear infinite;
+
+	@media (prefers-reduced-motion: reduce) {
+		animation-play-state: paused;
+	}
+}
+
 // LAYOUT
 .containerGrid {
 	@include layout.grid;
 
-	> * + * {
+	&:not(.heroTitle) > * + * {
 		margin-block-start: var(--flow-space);
 	}
 }
@@ -39,6 +59,10 @@
 	@include viewport.breakpoint(xl) {
 		grid-column: breakout;
 	}
+}
+
+.breakoutFull {
+	grid-column: full;
 }
 
 .section {
@@ -103,7 +127,7 @@
 }
 
 .heroDetails {
-	@include viewport.breakpoint(md, max) {
+	@include viewport.breakpoint(sm, max) {
 		max-width: var(--optimal-line-length-base);
 	}
 
@@ -124,7 +148,7 @@
 	@include typography.p;
 	max-width: var(--column-width);
 
-	@include viewport.breakpoint(md) {
+	@include viewport.breakpoint(sm) {
 		column-count: 2;
 		column-gap: 1lh;
 		max-width: calc(var(--column-width) * 2);
@@ -159,7 +183,7 @@
 	padding-block: calc(var(--section-spacing) * 2);
 
 	@include viewport.breakpoint(sm) {
-		padding-block-start: calc(var(--section-spacing) * 1.5);
+		padding-block: calc(var(--section-spacing) * 1.5);
 	}
 }
 
@@ -212,25 +236,38 @@
 	@include viewport.breakpoint(xs) {
 		left: 51%;
 	}
+
+	@include viewport.breakpoint(xs, max) {
+		div:first-child,
+		div:last-child {
+			visibility: hidden;
+		}
+	}
 }
 
 .vertTextTopLeft {
 	@include typography.display;
-	top: -39px;
+	top: -36px;
 	left: -16px;
+	line-height: 0.95;
 	opacity: 0.03;
 
 	@include viewport.breakpoint(md, max) {
 		font-size: var(--text-3xl);
 		top: -21px;
 	}
+
+	div {
+		transform: rotate(14deg);
+	}
 }
 
 .vertTextBottomRight {
 	@include typography.display;
 	transform: rotate(180deg);
-	right: -16px;
-	bottom: -39px;
+	bottom: -36px;
+	right: -47px;
+	line-height: 0.95;
 	opacity: 0.03;
 
 	@include viewport.breakpoint(md, max) {
@@ -240,6 +277,10 @@
 
 	@include viewport.breakpoint(sm, max) {
 		display: none;
+	}
+
+	div {
+		transform: rotate(14deg);
 	}
 }
 
@@ -261,14 +302,14 @@
 	@include typography.headline;
 
 	.altFont {
-		transform: initial;
+		top: 0;
 	}
 }
 
 .multiSectionCopy {
 	@include typography.p(lg);
 	max-width: var(--optimal-line-length-base);
-
+	line-height: var(--line-height-subhead);
 	color: var(--text-tertiary);
 }
 
