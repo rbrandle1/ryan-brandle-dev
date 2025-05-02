@@ -19,6 +19,7 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 * Review major articles and ADD CODE to the article pages.
 
 * Make the multi image a full screen slider on mobile.
+* Issues with ability to see images. Either make much larger or remake images to be larger
 
 * Update mobile sizes... is it too hard to read?
 

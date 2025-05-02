@@ -73,11 +73,8 @@ export const InspContent = () => {
 						</p>
 						<p>
 							With multiple teams contributing to the product, each bringing their own brand interpretations, the value
-							of a single source of truth emerged—
-							<em>
-								we needed a design system capable of evolving alongside the company's rapid growth and changing
-								technical landscape.
-							</em>
+							of a single source of truth emerged—we needed a <em>design system</em> capable of evolving alongside the
+							company's rapid growth and changing technical landscape.
 						</p>
 					</div>
 				</section>
@@ -95,7 +92,7 @@ export const InspContent = () => {
 						</p>
 						<h3 className={styles.h3}>Building a New System</h3>
 						<p>
-							We began advocating for a shared vision of a design system—communicating its value, building
+							I began advocating for a shared vision of a design system—communicating its value, building
 							cross-functional buy-in, and forming a collaborative network to help shape its direction while keeping the
 							end-users in focus.
 						</p>
@@ -133,12 +130,12 @@ export const InspContent = () => {
 								<p>
 									I took all the data from my research and cataloged every element on the site—like fonts, colors,
 									icons, and spacing—using old design files, browser tools, and my own observations to spot
-									inconsistencies. This gave us a clear view of our current UI, which was crucial for planning next
-									steps.
+									inconsistencies.
 								</p>
+								<p>This gave us a clear view of our current UI, which was crucial for planning next steps.</p>
 								<p>
-									This process led to our first design style guide, which teams used to keep things consistent while I
-									explored ways to streamline and document everything into a cohesive system.
+									The process led to our first design style guide, which teams used to maintain consistency while I
+									explored ways to streamline and document our UI into a cohesive system.
 								</p>
 							</MultiImage>
 						</div>
@@ -194,13 +191,12 @@ export const InspContent = () => {
 									Integrate
 								</h3>
 								<p>
-									The design version of the system was updated with a side by side comparison of what the{' '}
-									<em>integrated</em> styles and components would look like while maintaining legacy counterparts as a
-									reference.
+									The system was enhanced further with a side by side comparison of what the <em>integrated</em> styles
+									and components would look like while maintaining legacy counterparts as a reference.
 								</p>
 								<p>
-									This enabled our design team to create mocks for an interface that had yet to be released and
-									simultaneously provided a guide for QA efforts once code changes were implemented.
+									This enabled our design team to create mocks for an interface that had yet to be released while
+									simultaneously providing a guide for QA efforts once code changes were implemented.
 								</p>
 							</MultiImage>
 						</div>
@@ -232,7 +228,7 @@ export const InspContent = () => {
 								<h3 className={styles.h3}>Jumping into the Code</h3>
 								<p>
 									Code implementation was planned and executed through a series of controlled deployments, ensuring
-									minimal disruption to the greater teams and a smooth transition across multiple repositories.
+									minimal disruption to the greater teams and a smooth transition across repositories.
 								</p>
 								<p>
 									For each wave of changes, I hunted down and replaced raw CSS values with design system tokens, tested
@@ -247,14 +243,19 @@ export const InspContent = () => {
 								caption={data.images.token.caption}
 							>
 								<p>
-									I began updating colors, which provided a low-risk entry point and a testing ground for our approach.
-									Next, I tackled typography, carefully applying SASS mixins to unify font sizes, spacing, and styles.
-									Finally, I standardized iconography by replacing varied file types with a defined global SVG sprite
-									for all icon instances site-wide.
+									I updated colors first, which provided a low-risk entry point and a testing ground for our approach.
 								</p>
 								<p>
-									Design system styles and tokens were now implemented and could be fine-tuned to handle future
-									enhancements. Even legacy frameworks could integrate seamlessly without risky refactors.
+									Next, I tackled typography, carefully applying SASS <code>@mixin</code> functions to unify font sizes,
+									spacing, and other styles.
+								</p>
+								<p>
+									Finally, I standardized iconography by replacing icons with a global SVG-sprite for all icon instances
+									site-wide.
+								</p>
+								<p>
+									Design system tokens were now implemented and could be fine-tuned to handle future enhancements. Even
+									legacy frameworks could integrate seamlessly without risky refactors.
 								</p>
 							</SideImage>
 						</div>
@@ -303,8 +304,8 @@ export const InspContent = () => {
 							>
 								<h3 className={styles.h3}>Into the Future</h3>
 								<p>
-									As the company continued to evolve, the design system adapted alongside new frameworks and code
-									architecture strategies. It utilized Lerna for versioning and evolved into a React monorepo powered by
+									As the company continued to evolve, the design system adapted to new frameworks and code architecture
+									strategies. It utilized Lerna for versioning and eventually evolved into a React monorepo powered by
 									Next.js and Nx, with Storybook as the team's{' '}
 									<a
 										href='https://yellow-pond-097ca5b10.2.azurestaticapps.net/?path=/docs/introduction--docs'
@@ -318,8 +319,8 @@ export const InspContent = () => {
 								</p>
 								<p>
 									Over the years, I founded a variety of collaborative “guilds”, cross-functional weekly meetups where
-									Design and Front-end teams came together weekly to align, iterate, plan and ensure the system remained
-									dynamic and aligned with the company's goals.
+									Design and Front-end teams synced to align, iterate, plan and ensure the system remained dynamic and
+									aligned with the company's goals.
 								</p>
 								<p>
 									This ongoing evolution enabled teams to innovate confidently, knowing they have a robust foundation to
@@ -343,8 +344,8 @@ export const InspContent = () => {
 						alt={data.images.final.alt}
 					/>
 					<p>
-						As part of a dedicated front-end team, I helped build semantic, accessible, reusable, tested and well
-						documented components in{' '}
+						Along with a dedicated front-end team, I built semantic, accessible, reusable, tested and well documented
+						components in{' '}
 						<a
 							href='https://yellow-pond-097ca5b10.2.azurestaticapps.net/?path=/docs/introduction--docs'
 							className={styles.link}
@@ -368,18 +369,18 @@ export const InspContent = () => {
 						</span>
 					</h3>
 					<p>
-						The project was not without its challenges. During periods of rapid change, maintaining temporary duplicates
-						of the design system was necessary to ensure seamless local development and gradual transitions.
+						This project was not without its challenges. During periods of rapid growth, maintaining temporary
+						duplicates of the design system was necessary to ensure seamless local development and gradual transitions.
 					</p>
 					<p>
-						Additionally, adapting to shifting architectural frameworks and changing priorities required a flexible
+						Additionally, adapting to the latest architectural frameworks and priority shifts required a flexible
 						mindset and resilience. Despite these hurdles, the long-term benefits of a unified design system—improved
 						collaboration, enhanced user experience, and accelerated development—made the investment worthwhile.
 					</p>
 					<p>
-						Overall, this experience demonstrated that with strategic planning, collaboration, and a commitment to UX,
-						even a fast-paced startup can successfully implement a scalable and adaptable design system in an
-						ever-changing landscape.
+						Overall, this journey demonstrated that with strategic planning, collaboration, and a commitment to UX, even
+						a fast-paced startup can successfully implement a scalable and adaptable design system in an ever-changing
+						landscape.
 					</p>
 					<Link className={styles.buttonLink} href={fromSection ? `/#${fromSection}` : '/'}>
 						&larr;&nbsp;Back to Work
