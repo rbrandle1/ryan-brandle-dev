@@ -343,7 +343,6 @@
 		height: var(--gradient-height);
 		background-color: var(--p-color-gray-900);
 		border-radius: 50%;
-		// will-change: filter;
 		filter: blur(var(--gradient-blur));
 
 		@include viewport.breakpoint(xs) {

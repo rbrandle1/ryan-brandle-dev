@@ -8,7 +8,6 @@ import '@/styles/tokens/semantic.scss';
 import '@/styles/base.scss';
 import Header from '@/components/Header/Header';
 
-// Using a dynamic import for performance reasons.
 const ThemeProvider = dynamic(() => import('@/components/ThemeProvider/ThemeProvider'), {
 	ssr: true,
 });
@@ -17,7 +16,6 @@ const Footer = dynamic(() => import('@/components/Footer/Footer'), {
 	ssr: true,
 });
 
-// Initialize fonts
 const oswald = Oswald({
 	weight: '700',
 	subsets: ['latin'],

@@ -211,14 +211,6 @@
 	padding-block-start: var(--hero-spacing);
 	padding-block-end: var(--hero-offset);
 
-	// height: fit-content;
-	// min-height: 1px;
-
-	// > .containerGrid {
-	// 	align-content: center;
-	// 	border: 1px solid blue;
-	// }
-
 	@include viewport.breakpoint(md) {
 		--hero-offset: calc(var(--hero-spacing) * 2);
 
@@ -227,7 +219,6 @@
 }
 
 .section {
-	// min-height: 1px; // hack to fix grid layout issue
 	padding-block: var(--section-spacing);
 
 	[data-section='dark'] & {

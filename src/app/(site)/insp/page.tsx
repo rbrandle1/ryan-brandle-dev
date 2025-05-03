@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import { InspContent } from './InspContent';
 
 export const metadata: Metadata = {
-	title: 'Creation and Growth of the Inspirato Design System',
-	description: "Preparing a scalable design system for the future of Inspirato's Luxury Travel products.",
+	title: 'Crafting the IDS',
+	description: 'A case study of the IDS Design System',
 };
 
 export default function InspPage() {

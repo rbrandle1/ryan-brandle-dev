@@ -16,103 +16,42 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 });
 
 /* Todo:
-* Review major articles and ADD CODE to the article pages.
-
 * Make the multi image a full screen slider on mobile.
-* Issues with ability to see images. Either make much larger or remake images to be larger
 
 * Update mobile sizes... is it too hard to read?
 
-* Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
-* https://medium.com/@jun55tsuno/optimize-your-nextjs-app-e4fe9718fc8a
-* PERFORMANCE AUDIT. Use Chrome LightHouse. Double check cpu and performance/paint issues. If gradient is still causing performance issues, try the png. Maybe will-change is causing issues. jpg for images, png for snapshots. hero under 200kb, thumbnails under 30kb. NEXT JS SHOULD OPTIMIZE ALREADY.
-* Check reduced motion settings.
-* Check screen reader settings.
+* Double check the FOCUS codepen animation works smoothly on ipads. If not, change the font size back to 1024 mq from 768
 
-* Do not come across as too arrogant. Polish, So fresh, So clean, Too 🔥 To Brandle*, etc. Might need to tone it down. EXAMPLE: Update hero text to use more descriptive text like flexible, modular, accessible, etc... maybe mix in a few "fun" words.
+* Double check codepens on touch devices... might not be able to interact?
+
+* Check screen reader and reduced motion settings.
+
+* Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
+
+* set up a new GMAIL account and update all mailto links!!!
+
+* FIX BUGS BELOW
+
+* Prep robots to prevent indexing of company names.
+
+* PERFORMANCE AUDIT. Use Chrome LightHouse. Double check cpu and performance/paint issues. If gradient is still causing performance issues, try the png. Maybe will-change is causing issues. jpg for images, png for snapshots. hero under 200kb, thumbnails under 30kb. NEXT JS SHOULD OPTIMIZE ALREADY. https://medium.com/@jun55tsuno/optimize-your-nextjs-app-e4fe9718fc8a
 
 
 * BUGS TO SOLVE:
+*** 1. CSP NOTES
 * Fix the CSP read report only errors from codepen. https://blog.codepen.io/documentation/embedded-pens/
-* weird footer bug when tab navigating from an article back to the home page. gap in accent strip.
 * CODEPEN ISSUES: Can codepens be loaded faster and not when appears on page? Don't seem to be loading right... not getting hover states, etc. look at CF.
-* Occasional black flicker when scroll down page... like browser paint issue?
-* Theme picker on load error.
-* THEME PICKER LOCAL STORAGE ISSUES:
-* * MUST FIX localstorage issue as it is causing a build error before performance audits can be done. Before a build can be made.
+
+*** 2. LOCAL STORAGE ISSUE NOTES:
+* MUST FIX localstorage issue as it is causing a build error before performance audits can be done. Before a build can be made.
 * Nullify or disregard the bug?
 * https://developer.chrome.com/blog/new-in-devtools-133/?utm_source=devtools#perf-image-delivery
-* Continue setting up theme provider and theme picker. TRY creating a nested layout to manage the theme state. So the body, header, footer etc are not reloaded on every page load, therefore not causing a FOUC.
-* Solve server 500 error on page load. Try using the window object to check if it's loaded in the ThemePicker useEffect and maybe use an empty string as the default theme? This would likely create a FOUC though. Try refactoring with a ThemeProvider component to manage the theme state.
+* Try using the window object to check if it's loaded in the ThemePicker useEffect and maybe use an empty string as the default theme? This would likely create a FOUC though. Try refactoring with a ThemeProvider component to manage the theme state.
 * Maybe put my header in a top level component so it doesn't reload disappear and come back on every pg load? nested layout?
-
-
-
-
-* FINAL RUN-THROUGH:
-* Prep robots to prevent indexing of company names.
-* Double check remove all odd formatted spacing, apostrophes, etc. from all text content in article pages. 
-* Double check the FOCUS animation works smoothly on ipads. If not, change the font size back to 1024 mq from 768
-* Double check codepens on touch devices... might not be able to interact?
-* Search all todos and fix them.
-* Search all [EDIT]s and fix them.
-* Remove all unused comments.
-* ensure all pages have correct metadata and optimize to AVOID SEO FOR COMPANY NAMES.
-* Remove any unused remotePatterns in next.config.ts if not needed from unsplash.
-* set up a new contact email and update all mailto links!!!
-* UPDATE ALL PROFILE IMAGES to up-to-date image.
-* Check mailto links work. I don't have a default email client on my computer so it doesn't appear to work. Need to check on another device, possibly after a build and deployment.
-
-
-
-
-* FUTURE CLEANUP AND EXPLORATION:
-* Publish and point kids accessible flashcards site to ryanbrandle.dev/flashcards... or something like that.
-* Find icons for callouts... modular, polish (sparkle), etc. Do after content? Boop these? Or should these remain static as they are not interactive?
-* Make Boop to scroll it down with a path, then back up as if painting?
-* Add Boop to hover states! Also make the boop apply to the entire logo like previously tried. Can also do it to an svg arrow on the link arrows. https://www.joshwcomeau.com/react/boop/
-* Animate the paint droplet to drop down and fade out, rinse and repeat.
-* Make Mosaic component HOLD. Might not need this.
-* Maybe make the multi image component a simple off the page carousel... just an overflow, nothing crazy.
-* Add backup words for each FeaturedProject or article page footers.
-	
-
-
-* TALKING POINTS, TROUBLESHOOTING, ETC, WITH THIS PROJECT:
-	* State management. I had to decide whether prop drilling or using react context was the best approach. I went with context because I came to understand how multiple components could be affected by the theme state, and the best way to manage it was to avoid prop drilling.
-	* 
-	* Animation keyframe rendering issues with Turbopack. I had to move the keyframes to the top of the file to get them to render, instead of utilizing them as css module partials like the other utilities. Also, general challenges getting animations to work smoothly in a responsive way to themes changing.
-	* 
-	* Turbopack issues with utilizing sass :export. I tried to utilize the sass :export to create breakpoint variables to use as JS min/max widths but ultimately couldn't get it to work.
-	* 
-	* Issues with local state to immediately update the theme state. Currently there is a 500 error on page load due to the initial localstorage value not being set. Would love to come back to this.
-	* 
-	* Design system. Utilizing design tokens to manage colors, spacing, and typography. Spacing and typography utilize fluid unit techniques.
-	* Multiple theme systems and variables. Light and dark themes exist in addition to the theme picker accent colors.
-	* 
-	* Accessibility. Ensuring that the site is accessible and compliant with WCAG 2.1. And is navigable and usable for all. Skip links are present.
-	* 
-	* Responsive vertical text was a challenge and there are likely better ways to do this. But I took a very granular and specific approach for this instance to this to make sure it works. Don't consider this a modular solution.
-	* 
-	* Utilizing inline css variables and ternary operators to manage various styles on component. Instead of using a class name to manage styles.
-	* 
-	* Utilizing lh values for a typographical based spacing system when appropriate.
-	* 
-	* Getting components like MultiImage to match the breakout portion of the grid. Very challenging. Got it close but not perfect. It was also challenging to get the caption to work in the most semantic and accessible way possible. Ideally I'd have a single figure with multiple images inside it and a single caption for the entire figure. Since I'm using a different grid layout on desktop, I had to make a choice to use aria-labelledby on each figure to reference a single caption being used on one of the images. Would like to come back to this.
-	* 
-	* accentEdge gradient compromised the animation transition color.
-	* 
-	* Performance optimization: Using the next/image component with blurDataURL and placeholder. I had to use static image imports for the blurDataURL to work, which takes away the benefit of using the relative path for the src by default. However, the blurDataURL will automatically generate the blurDataURL for the image which is helpful especially for hero images. I ultimately decided to move my images into an assets folder to make it easier to manage the blurDataURL and import my images from there.
-	* 
-	* When creating my branded site images, I had to make a decision to make it theme specific where the unique logo is used, vs a black/white agnostic version of the logo and lean into theme color variables instead.
 */
 
 export default function Home() {
 	const marqueeText = 'Crispy, Rad, 🔥, Boss, Steezy, Dope, Sick,';
-	// const marqueeText = 'Crispy, Rad, 🔥, Intuitive, Scalable, Fun,';
-	// const marqueeText = 'Crispy, Simple, 🔥, Intuitive, Scalable, Fun,';
-	// const marqueeText = 'Crispy, Dope, 🔥, Boss, Steezy, Rad, Sick,';
-	// const marqueeText = 'Steezy, Dope, 🔥, Boss, Crispy, Rad, Sick,';
 
 	return (
 		<div className={styles.home}>
