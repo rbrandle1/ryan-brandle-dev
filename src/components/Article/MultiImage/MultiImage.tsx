@@ -48,10 +48,14 @@ const MultiImage = ({
 		return () => window.removeEventListener('resize', handleResize);
 	}, []);
 
+	const imageSizes = '(max-width: 768px) 100vw,  (max-width: 1290px) 33vw, 391px';
+
+	const ariaLabel = 'multi-image-caption';
+
 	const renderCaption = () => {
 		if (caption) {
 			return (
-				<Caption id='multi-image-caption' className={styles.caption} captionLeft={textRight} hasIcon={hasCaptionIcon}>
+				<Caption id={ariaLabel} className={styles.caption} captionLeft={textRight} hasIcon={hasCaptionIcon}>
 					{caption}
 				</Caption>
 			);
@@ -62,31 +66,26 @@ const MultiImage = ({
 
 	const images = (
 		<>
-			<figure className={styles.figure} aria-labelledby='multi-image-caption'>
+			<figure className={styles.figure} aria-labelledby={ariaLabel}>
 				<div className={styles.image}>
-					<Image src={imgSrc1} alt={imgAlt1} fill sizes='(max-width: 768px) 50vw, (max-width: 1290px) 33vw, 391px' />
+					<Image src={imgSrc1} alt={imgAlt1} fill sizes={imageSizes} />
 				</div>
 			</figure>
-			<figure className={styles.figure} aria-labelledby='multi-image-caption'>
+			<figure className={styles.figure} aria-labelledby={ariaLabel}>
 				<div className={styles.image}>
-					<Image src={imgSrc2} alt={imgAlt2} fill sizes='(max-width: 768px) 50vw, (max-width: 1290px) 33vw, 391px' />
+					<Image src={imgSrc2} alt={imgAlt2} fill sizes={imageSizes} />
 				</div>
 			</figure>
-			<figure className={styles.figure} aria-labelledby='multi-image-caption'>
+			<figure className={styles.figure} aria-labelledby={ariaLabel}>
 				<div className={styles.image}>
-					<Image src={imgSrc3} alt={imgAlt3} fill sizes='(max-width: 768px) 50vw, (max-width: 1290px) 33vw, 391px' />
+					<Image src={imgSrc3} alt={imgAlt3} fill sizes={imageSizes} />
 				</div>
 				{!imgSrc4 || isMobile ? renderCaption() : null}
 			</figure>
 			{imgSrc4 ? (
-				<figure className={styles.figure} aria-labelledby='multi-image-caption'>
+				<figure className={styles.figure} aria-labelledby={ariaLabel}>
 					<div className={styles.image}>
-						<Image
-							src={imgSrc4}
-							alt={imgAlt4 || ''}
-							fill
-							sizes='(max-width: 768px) 50vw, (max-width: 1290px) 33vw, 391px'
-						/>
+						<Image src={imgSrc4} alt={imgAlt4 || ''} fill sizes={imageSizes} />
 					</div>
 					{!isMobile ? renderCaption() : null}
 				</figure>

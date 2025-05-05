@@ -49,6 +49,10 @@
 		flex: 0 0 auto;
 		min-width: calc(100% - var(--gap) * 2);
 		scroll-snap-align: center;
+
+		&:nth-child(4) .image {
+			border: none;
+		}
 	}
 
 	@include viewport.breakpoint(sm) {

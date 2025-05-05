@@ -16,9 +16,9 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 });
 
 /* Todo:
+
 * fix caption on multi image mobile
 * make the page background black and sections white so on mobile extra space above and below site isn't white... or should it be a bg on the html?
-* adjust image component load sizes for multi image mobile.
 * Adjust flow spacing between text and image in multi image.
 * Codepen heights larger on mobile.
 * Fix extra space between 1st header section and 2nd... Notice on pages with callout between 2 sections.

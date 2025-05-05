@@ -807,8 +807,8 @@ export const BrandContent = () => {
 						are always welcome.
 					</p>
 					<p>
-						Much ❤️ and respect to the people who've helped inspire this project and some helpful tools I used along the
-						way:
+						Much ❤️ and respect to the people who've helped inspire this project and these helpful tools I used along
+						the way:
 					</p>
 					<ul className={styles.ul}>
 						<li>
