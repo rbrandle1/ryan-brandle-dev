@@ -98,7 +98,7 @@ export const CfContent = () => {
 							Starting with initial brand guidelines from the marketing team, I extended these into a comprehensive UI
 							kit to integrate into the product experience.
 						</p>
-						<div className={cn(styles.multiImagesContainer, styles.breakout, styles.flowOffset)}>
+						<div className={cn(styles.multiImagesContainer, styles.flowOffset)}>
 							<MultiImage
 								imgSrc1={data.images.oldSite.src}
 								imgAlt1={data.images.oldSite.alt}
@@ -162,7 +162,7 @@ export const CfContent = () => {
 							color, typography, and accessibility. This documentation would enable developers to{' '}
 							<strong>easily replace raw data with system tokens</strong> during code implementation.
 						</p>
-						<div className={cn(styles.multiImagesContainer, styles.breakout)}>
+						<div className={styles.multiImagesContainer}>
 							<MultiImage
 								imgSrc1={data.images.build.src}
 								imgAlt1={data.images.build.alt}

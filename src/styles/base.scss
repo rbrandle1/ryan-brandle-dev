@@ -65,6 +65,7 @@ code {
 	line-height: 1.4;
 
 	&:where(:not(pre) > code) {
+		border-radius: var(--radius-default);
 		background-color: var(--color-accent-bg-code-inline);
 		font-size: 0.83em;
 		padding: 0.2lh 0.15lh;

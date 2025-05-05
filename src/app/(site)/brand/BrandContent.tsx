@@ -134,7 +134,7 @@ export const BrandContent = () => {
 							accessibility validation. I wanted to challenge myself with a system rooted in black and white—where
 							limited colors push creativity.
 						</p>
-						<div className={cn(styles.multiImagesContainer, styles.breakout)}>
+						<div className={styles.multiImagesContainer}>
 							<MultiImage
 								imgSrc1={data.images.ad1.src}
 								imgAlt1={data.images.ad1.alt}
@@ -177,17 +177,18 @@ export const BrandContent = () => {
 							>
 								<h4 className={styles.h3}>Retro Color Revival</h4>
 								<p>
-									I studied design when print dominated the industry and the CMYK color system was the standard.
-									Together, cyan, magenta, yellow, and key (black) formed the ingredients to create a wide spectrum of
-									colors visible to the human eye.
+									I've always loved the CMYK color system and thought it would make a great foundation for my themes.
+									Back when print ruled the universe, cyan, magenta, yellow, and key (black) formed the ingredients to
+									create a wide spectrum of colors visible to the human eye. I tossed purple in there as well to expand
+									the theme options.
 								</p>
 								<p>
 									This concept aligned perfectly with my goal of simple, modular ingredients—fundamental colors serving
 									as building blocks for endless possibilities, <em>just like the design system itself</em>.
 								</p>
 								<p>
-									Purple was added to provide more opportunity for theme exploration. As an added bonus, these 'neon'
-									colors were used heavily in the early 90's to make <strong>the raddest ski gear ever</strong>.
+									As an added bonus, these colors were also used heavily in the early 90's to make{' '}
+									<strong>the raddest ski gear ever</strong>.
 								</p>
 								<p>
 									They were carefully applied as accents to the black and white system, and passed WCAG validation...
@@ -203,7 +204,7 @@ export const BrandContent = () => {
 						<p>
 							To uncover the right boldness, balance and rhythm I was looking for, I explored a few font combinations.
 						</p>
-						<div className={cn(styles.multiImagesContainer, styles.flowOffset, styles.breakout)}>
+						<div className={cn(styles.multiImagesContainer, styles.flowOffset)}>
 							<MultiImage
 								imgSrc1={data.images.font1.src}
 								imgAlt1={data.images.font1.alt}
@@ -228,7 +229,7 @@ export const BrandContent = () => {
 								</p>
 							</MultiImage>
 						</div>
-						<div className={cn(styles.multiImagesContainer, styles.flowOffset, styles.breakout)}>
+						<div className={cn(styles.multiImagesContainer, styles.flowOffset)}>
 							<MultiImage
 								imgSrc1={data.images.logo2.src}
 								imgAlt1={data.images.logo2.alt}
@@ -274,7 +275,7 @@ export const BrandContent = () => {
 							together. I tackled some scaling and combination issues early on to avoid much bigger problems down the
 							road.
 						</p>
-						<div className={cn(styles.multiImagesContainer, styles.breakout)}>
+						<div className={styles.multiImagesContainer}>
 							<MultiImage
 								imgSrc1={data.images.tokens.src}
 								imgAlt1={data.images.tokens.alt}
@@ -502,7 +503,7 @@ export const BrandContent = () => {
 							With ingredients prepped and ready to rock, it was time to start cooking! I set up atomic components like
 							buttons first, then gradually worked up to more complex ones like headers, footers, and cards.
 						</p>
-						<div className={cn(styles.multiImagesContainer, styles.breakout)}>
+						<div className={styles.multiImagesContainer}>
 							<MultiImage
 								imgSrc1={data.images.component2.src}
 								imgAlt1={data.images.component2.alt}

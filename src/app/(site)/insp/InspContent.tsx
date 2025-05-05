@@ -107,7 +107,7 @@ export const InspContent = () => {
 							points. This initial research highlighted the complexity of our current systems—so I mapped out a phased
 							approach to tackle these issues step by step.
 						</p>
-						<div className={cn(styles.multiImagesContainer, styles.flowOffset, styles.breakout)}>
+						<div className={cn(styles.multiImagesContainer, styles.flowOffset)}>
 							<MultiImage
 								imgSrc1={data.images.gather.src}
 								imgAlt1={data.images.gather.alt}
@@ -139,7 +139,7 @@ export const InspContent = () => {
 								</p>
 							</MultiImage>
 						</div>
-						<div className={cn(styles.multiImagesContainer, styles.flowOffset, styles.breakout)}>
+						<div className={cn(styles.multiImagesContainer, styles.flowOffset)}>
 							<MultiImage
 								imgSrc1={data.images.consolidate2.src}
 								imgAlt1={data.images.consolidate2.alt}
@@ -173,7 +173,7 @@ export const InspContent = () => {
 								</p>
 							</MultiImage>
 						</div>
-						<div className={cn(styles.multiImagesContainer, styles.flowOffset, styles.breakout)}>
+						<div className={cn(styles.multiImagesContainer, styles.flowOffset)}>
 							<MultiImage
 								imgSrc1={data.images.integrate2.src}
 								imgAlt1={data.images.integrate2.alt}
@@ -284,7 +284,7 @@ export const InspContent = () => {
 							caption={data.images.enhanceFull.caption}
 							captionLeft
 						/>
-						<div className={cn(styles.multiImagesContainer, styles.breakout)}>
+						<div className={styles.multiImagesContainer}>
 							<MultiImage
 								imgSrc1={data.images.enhance.src}
 								imgAlt1={data.images.enhance.alt}

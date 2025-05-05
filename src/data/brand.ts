@@ -61,7 +61,7 @@ export const data = {
 		color: {
 			src: articleImgColor,
 			alt: 'Color palette for ryanbrandle.dev',
-			caption: "My 90's headband, CMYK + P color palette",
+			caption: 'My vintage ski headband, CMYK + P color palette',
 		},
 		font1: {
 			src: articleImgFont1,

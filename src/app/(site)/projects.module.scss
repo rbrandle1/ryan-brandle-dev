@@ -312,6 +312,17 @@
 	}
 }
 
+.multiImagesContainer {
+	& {
+		grid-template-columns: inherit;
+		grid-column: full;
+
+		@include viewport.breakpoint(sm) {
+			grid-column: breakout;
+		}
+	}
+}
+
 .soloHeader {
 	--flow-space: 2lh;
 }

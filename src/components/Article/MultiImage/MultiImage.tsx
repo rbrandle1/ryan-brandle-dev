@@ -60,8 +60,8 @@ const MultiImage = ({
 		return null;
 	};
 
-	return (
-		<div className={cn(styles.multiImage, textRight && styles.textRight, className)}>
+	const images = (
+		<>
 			<figure className={styles.figure} aria-labelledby='multi-image-caption'>
 				<div className={styles.image}>
 					<Image src={imgSrc1} alt={imgAlt1} fill sizes='(max-width: 768px) 50vw, (max-width: 1290px) 33vw, 391px' />
@@ -91,6 +91,18 @@ const MultiImage = ({
 					{!isMobile ? renderCaption() : null}
 				</figure>
 			) : null}
+		</>
+	);
+
+	return (
+		<div className={cn(styles.multiImage, textRight && styles.textRight, className)}>
+			{isMobile ? (
+				<div className={styles.mobileSlider}>
+					<div className={styles.slideWrapper}>{images}</div>
+				</div>
+			) : (
+				images
+			)}
 			<div className={styles.textContainer}>
 				<div>{children}</div>
 			</div>
