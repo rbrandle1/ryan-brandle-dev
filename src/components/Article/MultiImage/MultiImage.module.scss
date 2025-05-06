@@ -7,11 +7,12 @@
 
 	display: grid;
 	grid-template-columns: inherit;
+	position: relative;
 
 	@include viewport.breakpoint(sm) {
 		--gap: 0.25lh;
 
-		position: relative;
+		// position: relative;
 		gap: var(--gap);
 		grid-template-columns: repeat(3, 1fr);
 	}
@@ -127,6 +128,13 @@
 
 .caption {
 	@include viewport.breakpoint(sm, max) {
-		@include element.visually-hidden;
+		position: absolute;
+		right: calc(var(--gutter) / 1.6);
+		text-align: right;
+
+		svg {
+			left: auto;
+			right: calc(var(--gutter) / 2);
+		}
 	}
 }

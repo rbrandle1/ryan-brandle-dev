@@ -16,7 +16,7 @@ export const data = {
 		hero: {
 			src: heroImg,
 			alt: 'Screenshot of the Comparison Card components.',
-			caption: 'Credit: Inspirato | Mock content for component demo only.',
+			caption: 'Credit: Inspirato | Mock content for component demo.',
 		},
 		feature: {
 			src: heroImg2,
@@ -24,13 +24,12 @@ export const data = {
 		},
 		full: {
 			src: comparisonArticleFull,
-			alt: 'Side by side comparison of each product',
-			caption:
-				'Credit: Inspirato | Mock content for demonstration purposes only. Side by side comparison of each product.',
+			alt: 'Side by side comparison of each product.',
+			caption: 'Credit: Inspirato | Mock content for demo. Side by side comparison of products.',
 		},
 		side: {
 			src: comparisonArticleSide,
-			alt: 'Infographic showing how grid cells grow to fill the container',
+			alt: 'Infographic showing how grid cells grow to fill the container.',
 			caption: 'Rows will grow to the tallest content across the cards.',
 		},
 	},

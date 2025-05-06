@@ -111,8 +111,8 @@ export const ComparisonContent = () => {
 						/>
 						<h3 className={styles.h3}>Laying Out the Grid</h3>
 						<p>
-							The first challenge: we needed the grid to be CMS-friendly. That meant the layout had to adapt to however
-							many cards the content team wanted—two, three, four, you name it.
+							The first challenge: the solution needed to be CMS-friendly. That meant the layout had to adapt to the
+							number of cards the content team needed—two, three, four, you name it.
 						</p>
 						<p>We set up the CSS grid like this:</p>
 						<pre className={styles.syntax}>
@@ -356,47 +356,47 @@ export const ComparisonContent = () => {
 							<code>
 								<span className={styles.keyword}>const</span> <span className={styles.variable}>gridItems</span>{' '}
 								<span className={styles.punctuation}>=</span> <span className={styles.punctuation}>[</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.punctuation}>{'{'}</span>
 								<span className={styles.property}>headerCell</span>
 								<span className={styles.punctuation}>{'}'}</span>
 								<span className={styles.punctuation}>,</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.punctuation}>{'{'}</span>
 								<span className={styles.property}>headerCell</span>
 								<span className={styles.punctuation}>{'}'}</span>
 								<span className={styles.punctuation}>,</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.punctuation}>{'{'}</span>
 								<span className={styles.property}>headerCell</span>
 								<span className={styles.punctuation}>{'}'}</span>
 								<span className={styles.punctuation}>,</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.punctuation}>{'{'}</span>
 								<span className={styles.property}>cell</span>
 								<span className={styles.punctuation}>{'}'}</span>
 								<span className={styles.punctuation}>,</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.punctuation}>{'{'}</span>
 								<span className={styles.property}>cell</span>
 								<span className={styles.punctuation}>{'}'}</span>
 								<span className={styles.punctuation}>,</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.punctuation}>{'{'}</span>
 								<span className={styles.property}>cell</span>
 								<span className={styles.punctuation}>{'}'}</span>
 								<span className={styles.punctuation}>,</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.punctuation}>{'{'}</span>
 								<span className={styles.property}>footerCell</span>
 								<span className={styles.punctuation}>{'}'}</span>
 								<span className={styles.punctuation}>,</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.punctuation}>{'{'}</span>
 								<span className={styles.property}>footerCell</span>
 								<span className={styles.punctuation}>{'}'}</span>
 								<span className={styles.punctuation}>,</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.punctuation}>{'{'}</span>
 								<span className={styles.property}>footerCell</span>
 								<span className={styles.punctuation}>{'}'}</span>
@@ -408,14 +408,14 @@ export const ComparisonContent = () => {
 						<pre className={styles.syntax}>
 							<code>
 								<span className={styles.class}>.cell</span> <span className={styles.punctuation}>{'{'}</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.property}>--cell-spacing</span>
 								<span className={styles.punctuation}>:</span> <span className={styles.function}>var</span>
 								<span className={styles.punctuation}>(</span>
 								<span className={styles.variable}>--space-sm</span>
 								<span className={styles.punctuation}>)</span>
 								<span className={styles.punctuation}>;</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.property}>--outer-border</span>
 								<span className={styles.punctuation}>:</span> <span className={styles.value}>solid</span>{' '}
 								<span className={styles.value}>1px</span> <span className={styles.function}>var</span>
@@ -423,7 +423,7 @@ export const ComparisonContent = () => {
 								<span className={styles.variable}>--color-gray</span>
 								<span className={styles.punctuation}>)</span>
 								<span className={styles.punctuation}>;</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.property}>--inner-border</span>
 								<span className={styles.punctuation}>:</span> <span className={styles.value}>solid</span>{' '}
 								<span className={styles.value}>1px</span> <span className={styles.function}>var</span>
@@ -431,42 +431,42 @@ export const ComparisonContent = () => {
 								<span className={styles.variable}>--color-gray-light</span>
 								<span className={styles.punctuation}>)</span>
 								<span className={styles.punctuation}>;</span>
-								{'\n\n    '}
+								{'\n\n  '}
 								<span className={styles.property}>padding-top</span>
 								<span className={styles.punctuation}>:</span> <span className={styles.function}>var</span>
 								<span className={styles.punctuation}>(</span>
 								<span className={styles.variable}>--cell-spacing</span>
 								<span className={styles.punctuation}>)</span>
 								<span className={styles.punctuation}>;</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.property}>padding-bottom</span>
 								<span className={styles.punctuation}>:</span> <span className={styles.function}>var</span>
 								<span className={styles.punctuation}>(</span>
 								<span className={styles.variable}>--cell-spacing</span>
 								<span className={styles.punctuation}>)</span>
 								<span className={styles.punctuation}>;</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.property}>background-color</span>
 								<span className={styles.punctuation}>:</span> <span className={styles.function}>var</span>
 								<span className={styles.punctuation}>(</span>
 								<span className={styles.variable}>--color-white</span>
 								<span className={styles.punctuation}>)</span>
 								<span className={styles.punctuation}>;</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.property}>border-bottom</span>
 								<span className={styles.punctuation}>:</span> <span className={styles.function}>var</span>
 								<span className={styles.punctuation}>(</span>
 								<span className={styles.variable}>--inner-border</span>
 								<span className={styles.punctuation}>)</span>
 								<span className={styles.punctuation}>;</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.property}>border-left</span>
 								<span className={styles.punctuation}>:</span> <span className={styles.function}>var</span>
 								<span className={styles.punctuation}>(</span>
 								<span className={styles.variable}>--outer-border</span>
 								<span className={styles.punctuation}>)</span>
 								<span className={styles.punctuation}>;</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.property}>border-right</span>
 								<span className={styles.punctuation}>:</span> <span className={styles.function}>var</span>
 								<span className={styles.punctuation}>(</span>
@@ -477,21 +477,21 @@ export const ComparisonContent = () => {
 								<span className={styles.punctuation}>{'}'}</span>
 								{'\n\n'}
 								<span className={styles.class}>.headerCell</span> <span className={styles.punctuation}>{'{'}</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.property}>padding-left</span>
 								<span className={styles.punctuation}>:</span> <span className={styles.function}>var</span>
 								<span className={styles.punctuation}>(</span>
 								<span className={styles.variable}>--cell-spacing</span>
 								<span className={styles.punctuation}>)</span>
 								<span className={styles.punctuation}>;</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.property}>padding-right</span>
 								<span className={styles.punctuation}>:</span> <span className={styles.function}>var</span>
 								<span className={styles.punctuation}>(</span>
 								<span className={styles.variable}>--cell-spacing</span>
 								<span className={styles.punctuation}>)</span>
 								<span className={styles.punctuation}>;</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.property}>border</span>
 								<span className={styles.punctuation}>:</span> <span className={styles.function}>var</span>
 								<span className={styles.punctuation}>(</span>
@@ -502,21 +502,21 @@ export const ComparisonContent = () => {
 								<span className={styles.punctuation}>{'}'}</span>
 								{'\n\n'}
 								<span className={styles.class}>.footerCell</span> <span className={styles.punctuation}>{'{'}</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.property}>padding-left</span>
 								<span className={styles.punctuation}>:</span> <span className={styles.function}>var</span>
 								<span className={styles.punctuation}>(</span>
 								<span className={styles.variable}>--cell-spacing</span>
 								<span className={styles.punctuation}>)</span>
 								<span className={styles.punctuation}>;</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.property}>padding-right</span>
 								<span className={styles.punctuation}>:</span> <span className={styles.function}>var</span>
 								<span className={styles.punctuation}>(</span>
 								<span className={styles.variable}>--cell-spacing</span>
 								<span className={styles.punctuation}>)</span>
 								<span className={styles.punctuation}>;</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.property}>border-bottom</span>
 								<span className={styles.punctuation}>:</span> <span className={styles.function}>var</span>
 								<span className={styles.punctuation}>(</span>

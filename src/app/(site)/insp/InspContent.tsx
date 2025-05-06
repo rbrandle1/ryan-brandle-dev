@@ -117,7 +117,7 @@ export const InspContent = () => {
 								imgAlt3={data.images.gather3.alt}
 								imgSrc4={data.images.gather4.src}
 								imgAlt4={data.images.gather4.alt}
-								caption='Gathering and documenting all product styles and UI elements.'
+								caption='Gathering and documenting styles, UI elements.'
 							>
 								<h3 className={styles.h3}>
 									<span className={cn(styles.altFont, styles.top)}>Phase&nbsp;1:</span>
@@ -149,7 +149,7 @@ export const InspContent = () => {
 								imgAlt3={data.images.consolidate3.alt}
 								imgSrc4={data.images.consolidate4.src}
 								imgAlt4={data.images.consolidate4.alt}
-								caption='Organized guide for consolidating foundational styles and components.'
+								caption='Guidelines for consolidating styles and components.'
 								textRight
 							>
 								<h3 className={styles.h3}>
@@ -183,7 +183,7 @@ export const InspContent = () => {
 								imgAlt3={data.images.integrate3.alt}
 								imgSrc4={data.images.integrate5.src}
 								imgAlt4={data.images.integrate5.alt}
-								caption='Integrated styles and components into a new style guide.'
+								caption='Updated guide with integrated styles and components.'
 							>
 								<h3 className={styles.h3}>
 									<span className={cn(styles.altFont, styles.top)}>Phase&nbsp;3:</span>

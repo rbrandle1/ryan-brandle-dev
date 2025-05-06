@@ -109,7 +109,7 @@ export const CfContent = () => {
 								imgSrc4={data.images.typeScale.src}
 								imgAlt4={data.images.typeScale.alt}
 								textRight
-								caption='Discovery experiments for legacy typography, color, and iconography.'
+								caption='Discovery experiments for legacy type, color, and icons.'
 							>
 								<h3 className={styles.h3}>
 									Research{' '}
@@ -170,7 +170,7 @@ export const CfContent = () => {
 								imgAlt2={data.images.build2.alt}
 								imgSrc3={data.images.build3.src}
 								imgAlt3={data.images.build3.alt}
-								caption='WCAG-validation, typography, link, and button styles'
+								caption='WCAG-validation, typography, link, and button styles.'
 							>
 								<p>
 									I streamlined the palette by consolidating various grays into a series of neutral and brand-specific

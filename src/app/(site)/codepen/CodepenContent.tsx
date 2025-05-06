@@ -291,8 +291,8 @@ export const CodepenContent = () => {
 							codebase tidy. Plus, it got me into a solid flow-state.
 						</p>
 						<p>The real magic happened in Sass:</p>
-						<pre>
-							<code className={styles.syntax}>
+						<pre className={styles.syntax}>
+							<code>
 								<span className={styles.variable}>$colors</span>
 								<span className={styles.punctuation}>: (</span>
 								{'\n  '}

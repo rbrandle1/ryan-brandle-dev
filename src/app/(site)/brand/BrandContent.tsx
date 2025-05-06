@@ -283,7 +283,7 @@ export const BrandContent = () => {
 								imgAlt2={data.images.sketchMock.alt}
 								imgSrc3={data.images.mock.src}
 								imgAlt3={data.images.mock.alt}
-								caption='Figma token system, wireframing sketches, and homepage mockup.'
+								caption='Figma tokens, wireframes, and mockups.'
 							>
 								<p>
 									I created a <strong>two-tiered token system</strong> (primitives and semantic) in Figma with clear

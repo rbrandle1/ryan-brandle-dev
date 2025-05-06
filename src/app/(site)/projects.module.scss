@@ -139,7 +139,7 @@
 
 	.syntax {
 		@include viewport.between(md, xl) {
-			max-width: 82%;
+			max-width: var(--optimal-width-md-xl);
 		}
 		.variable {
 			color: var(--color-syntax-variable);
@@ -235,6 +235,7 @@
 }
 
 .footer {
+	background-color: var(--surface-primary);
 	padding-block-end: calc(var(--section-spacing) * 1.5);
 
 	@include viewport.breakpoint(xl) {

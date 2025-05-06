@@ -23,13 +23,12 @@ body {
 	display: grid;
 	grid-template-rows: auto 1fr auto;
 	color: var(--text-primary, black);
-	background: var(--surface-primary, white);
+	background-color: var(--color-primary, black);
 	font-family: var(--font-body);
-	width: 100%;
-	min-height: 100vh;
-	background-color: var(--surface-primary, black);
 	font-size: var(--text-base);
 	line-height: var(--line-height-base);
+	width: 100%;
+	min-height: 100vh;
 	text-wrap: pretty;
 	-webkit-text-size-adjust: 100%;
 	-webkit-font-smoothing: antialiased;
@@ -44,6 +43,7 @@ a {
 // needed to remove focus outline on main element when navigating with keyboard
 #main {
 	display: grid;
+	background-color: var(--surface-primary);
 
 	&:focus {
 		outline: none;

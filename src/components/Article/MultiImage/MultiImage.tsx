@@ -52,17 +52,27 @@ const MultiImage = ({
 
 	const ariaLabel = 'multi-image-caption';
 
-	const renderCaption = () => {
-		if (caption) {
-			return (
+	// const renderCaption = () => {
+	// 	if (caption) {
+	// 		return (
+	// 			<Caption id={ariaLabel} className={styles.caption} captionLeft={textRight} hasIcon={hasCaptionIcon}>
+	// 				{caption}
+	// 			</Caption>
+	// 		);
+	// 	}
+
+	// 	return null;
+	// };
+
+	const renderCaption = (
+		<>
+			{caption ? (
 				<Caption id={ariaLabel} className={styles.caption} captionLeft={textRight} hasIcon={hasCaptionIcon}>
 					{caption}
 				</Caption>
-			);
-		}
-
-		return null;
-	};
+			) : null}
+		</>
+	);
 
 	const images = (
 		<>
@@ -80,14 +90,14 @@ const MultiImage = ({
 				<div className={styles.image}>
 					<Image src={imgSrc3} alt={imgAlt3} fill sizes={imageSizes} />
 				</div>
-				{!imgSrc4 || isMobile ? renderCaption() : null}
+				{!imgSrc4 ? renderCaption : null}
 			</figure>
 			{imgSrc4 ? (
 				<figure className={styles.figure} aria-labelledby={ariaLabel}>
 					<div className={styles.image}>
 						<Image src={imgSrc4} alt={imgAlt4 || ''} fill sizes={imageSizes} />
 					</div>
-					{!isMobile ? renderCaption() : null}
+					{renderCaption}
 				</figure>
 			) : null}
 		</>

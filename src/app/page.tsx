@@ -16,22 +16,16 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 });
 
 /* Todo:
+* Codepen height issues on mobile... CSP? duckduck. why???
+* Add link to exact codepen in case not loading correctly.
 
-* fix caption on multi image mobile
-* make the page background black and sections white so on mobile extra space above and below site isn't white... or should it be a bg on the html?
 * Adjust flow spacing between text and image in multi image.
-* Codepen heights larger on mobile.
+
 * Fix extra space between 1st header section and 2nd... Notice on pages with callout between 2 sections.
 
-* Reference Mulligan on the grid layout. I referenced Ryan Mulligan's clever grid layout for the projects page as a way to maintain a consistent and simple way to pop elements out to various areas of the grid.
-
-* Update mobile sizes... is it too hard to read?
-
-* Double check the FOCUS codepen animation works smoothly on ipads. If not, change the font size back to 1024 mq from 768
-
-* Double check codepens on touch devices... might not be able to interact?
-
 * Check screen reader and reduced motion settings.
+
+* Prep robots to prevent indexing of company names.
 
 * Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
 
@@ -39,18 +33,19 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 
 * FIX BUGS BELOW
 
-* Prep robots to prevent indexing of company names.
 
 * PERFORMANCE AUDIT. Use Chrome LightHouse. Double check cpu and performance/paint issues. If gradient is still causing performance issues, try the png. Maybe will-change is causing issues. jpg for images, png for snapshots. hero under 200kb, thumbnails under 30kb. NEXT JS SHOULD OPTIMIZE ALREADY. https://medium.com/@jun55tsuno/optimize-your-nextjs-app-e4fe9718fc8a
 
 
 * BUGS TO SOLVE:
 *** 1. CSP NOTES
+* Codepen errors on mobile.
 * Fix the CSP read report only errors from codepen. https://blog.codepen.io/documentation/embedded-pens/
 * CODEPEN ISSUES: Can codepens be loaded faster and not when appears on page? Don't seem to be loading right... not getting hover states, etc. look at CF.
 
 *** 2. LOCAL STORAGE ISSUE NOTES:
 * MUST FIX localstorage issue as it is causing a build error before performance audits can be done. Before a build can be made.
+* is the local storage issue back? Look at brand page on mobile... initial load is pink...
 * Nullify or disregard the bug?
 * https://developer.chrome.com/blog/new-in-devtools-133/?utm_source=devtools#perf-image-delivery
 * Try using the window object to check if it's loaded in the ThemePicker useEffect and maybe use an empty string as the default theme? This would likely create a FOUC though. Try refactoring with a ThemeProvider component to manage the theme state.
@@ -244,7 +239,7 @@ export default function Home() {
 								href='/codepen?from=codepen'
 							/>
 							<ProjectCard
-								id='comparison-cards'
+								id='comparison'
 								title={
 									<>
 										Comparison Cards <span className={styles.altFont}>with</span> CSS Grid
