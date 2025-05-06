@@ -15,7 +15,7 @@ import articleImgFinal from '@/images/cf/cf-article-final.png';
 
 export const data = {
 	text: {
-		title: 'CableFinder Rebrand & Token System',
+		title: 'Multi-Mode Token System and Rebrand',
 		description: {
 			__html:
 				'An adaptable system with a multi-mode token approach, unifying UI for design, development, and&nbsp;marketing content teams.',
@@ -27,7 +27,7 @@ export const data = {
 		hero: {
 			src: heroImg,
 			alt: 'Brand and token system',
-			caption: 'Credit: Innovative Business Solutions',
+			caption: 'Credit: IBS',
 		},
 		oldSite: {
 			src: articleImgResearch1,

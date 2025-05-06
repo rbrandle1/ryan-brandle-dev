@@ -8,7 +8,7 @@ export const data = {
 		title: 'Comparison Cards with CSS Grid',
 		description: {
 			__html:
-				'Dive deep into a unique CSS Grid solution that helped people compare and choose the right product. Originally published on the <em>Inspirato Technology Blog</em>.',
+				'Dive deep into a unique CSS Grid solution that helped people compare and choose the right product. Originally published on the <em>Insp Technology Blog</em>.',
 		},
 		descriptionShort: 'A unique CSS Grid solution that helped people compare and choose the right product.',
 	},
@@ -16,7 +16,7 @@ export const data = {
 		hero: {
 			src: heroImg,
 			alt: 'Screenshot of the Comparison Card components.',
-			caption: 'Credit: Inspirato | Mock content for component demo.',
+			caption: 'Credit: INSP | Mock content for component demo.',
 		},
 		feature: {
 			src: heroImg2,
@@ -25,7 +25,7 @@ export const data = {
 		full: {
 			src: comparisonArticleFull,
 			alt: 'Side by side comparison of each product.',
-			caption: 'Credit: Inspirato | Mock content for demo. Side by side comparison of products.',
+			caption: 'Credit: INSP | Mock content for demo. Side by side comparison of products.',
 		},
 		side: {
 			src: comparisonArticleSide,

@@ -25,18 +25,18 @@ import articleImgFinal from '@/images/insp/insp-article-final.jpg';
 
 export const data = {
 	text: {
-		title: "Crafting Inspirato's Design System",
+		title: 'Crafting a Luxury Travel Design System',
 		description: {
 			__html:
-				'A large-scale initiative to unify brand, UX, and UI strategy across departments and codebases. Built for consistency, usability, flexibility, and scalability, <em>IDS</em> empowered teams to deliver the high-quality experience expected of a luxury travel brand.',
+				'A large-scale initiative to unify brand, UX, and UI strategies across departments and codebases. Built for consistency, usability, and scalability, <em>IDS</em> empowered teams to deliver the high-quality experience expected of this luxury travel brand.',
 		},
-		descriptionShort: "Preparing a scalable design system for the future of Inspirato's Luxury Travel products.",
+		descriptionShort: "Preparing a scalable design system for the future of this luxury travel brand's products.",
 	},
 	images: {
 		hero: {
 			src: heroImg,
-			alt: 'Boats anchored off a white sandy beach in turquoise blue water',
-			caption: 'Credit: Unsplash/@seefromthesky, Inspirato',
+			alt: 'Boats anchored off a white sandy beach in turquoise blue water.',
+			caption: 'Credit: Unsplash/@seefromthesky, INSP',
 		},
 		phase: {
 			src: articleImgPhase,

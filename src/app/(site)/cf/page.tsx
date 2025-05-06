@@ -3,8 +3,8 @@ import { CfContent } from './CfContent';
 import CodePenLoader from '@/components/CodePen/CodePenLoader';
 
 export const metadata: Metadata = {
-	title: 'Cable Finder Rebrand & Token System',
-	description: 'Case study of the Cable Finder rebrand and token system',
+	title: 'Multi-Mode Token System and Rebrand',
+	description: 'Case study of a multi-mode token system and rebrand',
 };
 
 export default function CfPage() {

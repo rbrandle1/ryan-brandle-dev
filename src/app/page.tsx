@@ -16,16 +16,20 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 });
 
 /* Todo:
-* Codepen height issues on mobile... CSP? duckduck. why???
+* UPDATE: Remove the words "Inspirato" and allow searching?  Prep robots to prevent indexing of company names.
+
 * Add link to exact codepen in case not loading correctly.
 
 * Adjust flow spacing between text and image in multi image.
+
+* Codepen height issues on mobile... CSP? duckduck. why???
 
 * Fix extra space between 1st header section and 2nd... Notice on pages with callout between 2 sections.
 
 * Check screen reader and reduced motion settings.
 
-* Prep robots to prevent indexing of company names.
+* Update readme with new info.
+
 
 * Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
 
@@ -144,8 +148,7 @@ export default function Home() {
 							title={
 								<>
 									<span className={cn(styles.altFont, styles.top)}>Crafting</span>
-									<br />
-									Inspirato's Design System
+									<br />A Luxury Travel Design System
 								</>
 							}
 							accessibleTitle={insp.text.title}
@@ -165,11 +168,12 @@ export default function Home() {
 							className={styles.breakoutXl}
 							title={
 								<>
-									CableFinder Rebrand{' '}
+									<span className={cn(styles.altFont, styles.top)}>Multi-Mode</span>
+									<br />
+									Token System{' '}
 									<span className={styles.noWrap}>
-										<span className={styles.altFont}>&amp;</span>&nbsp;Token
-									</span>{' '}
-									System
+										<span className={styles.altFont}>&amp;</span>&nbsp;Rebrand
+									</span>
 								</>
 							}
 							accessibleTitle={cf.text.title}

@@ -20,7 +20,12 @@ export const CfContent = () => {
 			<header className={cn(styles.heroSection, styles.accentEdgeGrad)}>
 				<div className={styles.containerGrid}>
 					<h1 className={styles.h1}>
-						CableFinder Rebrand <span className={styles.altFont}>&amp;</span> Token System
+						<span className={cn(styles.altFont, styles.top)}>Multi-Mode</span>
+						<br />
+						Token System{' '}
+						<span className={styles.noWrap}>
+							<span className={styles.altFont}>&amp;</span>&nbsp;Rebrand
+						</span>
 					</h1>
 					<div className={styles.subhead}>{data.text.descriptionShort}</div>
 				</div>
