@@ -37,21 +37,20 @@ export const ComparisonContent = () => {
 							priority
 						/>
 						<cite className={styles.citation}>
-							Originally published on the Inspirato Technology Blog,
+							Originally published on the Insp Technology Blog,
 							<br />
 							February 1, 2023 | Ryan Brandle
 							<br />
-							UI/UX Developer @ Inspirato
+							UI/UX Developer
 						</cite>
 						<p>
 							CSS Grid is one of those native web tools that's incredibly powerful, but still surprisingly underused.
 							I've been guilty of that myself. After all the work that went into its release over a decade ago (!), I
-							realized it was time to dust off my grid skills and put them to work. Now? Im a big advocate—especially
-							for layout-heavy components where grid just <em>makes sense</em>.
+							realized it was time to dust off my grid skills and put them to work.
 						</p>
 						<p>
-							This project was a perfect fit: a comparison card react component for multiple products on Inspirato's
-							site that needed to be flexible, responsive, and visually clean.
+							This project was a perfect fit: a comparison card react component that needed to be flexible, responsive,
+							and scannable.
 						</p>
 						<p>
 							To see a simplified example of this component, check out my{' '}
@@ -71,12 +70,12 @@ export const ComparisonContent = () => {
 							Challenge
 						</h2>
 						<p>
-							Inspirato offers multiple products, and users need to compare them quickly to figure out which one is
-							right for them. A traditional HTML table could technically do the job—but tables get clunky fast. They're
-							rigid, hard to style, and on small screens, they can overwhelm folks with too much info all at once.
+							When users need to compare multiple products to find the right fit, a traditional HTML table could
+							technically do the job—but tables get clunky fast. They're rigid, hard to style, and on small screens,
+							they can overwhelm folks with too much info all at once.
 						</p>
 						<p>
-							We wanted something that felt premium—something that matched the elegance of the brand while staying
+							We needed something that felt premium—something that matched the elegance of the brand while staying
 							digestible, flexible, and easy to scan.
 						</p>
 					</div>
@@ -89,9 +88,9 @@ export const ComparisonContent = () => {
 							Solution
 						</h2>
 						<p>
-							We used <strong>CSS Grid</strong> as the structural foundation, but styled everything to <em>feel</em>{' '}
-							like individual, side-by-side cards. This let us keep all the comparison logic across rows while breaking
-							free from the stiffness of a table layout.
+							I used <strong>CSS Grid</strong> as the structural foundation, but styled everything to <em>feel</em> like
+							individual, side-by-side cards. This let us keep all the comparison logic across rows while breaking free
+							from the stiffness of a table layout.
 						</p>
 						<LargeImage
 							className={cn(styles.imageContainer, styles.flowOffset, styles.breakout)}

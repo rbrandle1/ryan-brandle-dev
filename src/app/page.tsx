@@ -16,7 +16,7 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 });
 
 /* Todo:
-* UPDATE: Remove the words "Inspirato" and allow searching?  Prep robots to prevent indexing of company names.
+* Prep robots to prevent indexing of company names. Add /styles, /404 not-found. triple check meta info keywords.
 
 * Update brandcontent bugfix area with updated copy.
 * Update codepens to send to codepen.io link as a full demo, not with code revealed.
@@ -40,25 +40,8 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 
 * set up a new GMAIL account and update all mailto links!!!
 
-* FIX BUGS BELOW
-
 
 * PERFORMANCE AUDIT. Use Chrome LightHouse. Double check cpu and performance/paint issues. If gradient is still causing performance issues, try the png. Maybe will-change is causing issues. jpg for images, png for snapshots. hero under 200kb, thumbnails under 30kb. NEXT JS SHOULD OPTIMIZE ALREADY. https://medium.com/@jun55tsuno/optimize-your-nextjs-app-e4fe9718fc8a
-
-
-* BUGS TO SOLVE:
-*** 1. CSP NOTES
-* Codepen errors on mobile.
-* Fix the CSP read report only errors from codepen. https://blog.codepen.io/documentation/embedded-pens/
-* CODEPEN ISSUES: Can codepens be loaded faster and not when appears on page? Don't seem to be loading right... not getting hover states, etc. look at CF.
-
-*** 2. LOCAL STORAGE ISSUE NOTES:
-* MUST FIX localstorage issue as it is causing a build error before performance audits can be done. Before a build can be made.
-* is the local storage issue back? Look at brand page on mobile... initial load is pink...
-* Nullify or disregard the bug?
-* https://developer.chrome.com/blog/new-in-devtools-133/?utm_source=devtools#perf-image-delivery
-* Try using the window object to check if it's loaded in the ThemePicker useEffect and maybe use an empty string as the default theme? This would likely create a FOUC though. Try refactoring with a ThemeProvider component to manage the theme state.
-* Maybe put my header in a top level component so it doesn't reload disappear and come back on every pg load? nested layout?
 */
 
 export default function Home() {

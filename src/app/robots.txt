@@ -1,34 +1,14 @@
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: CCBot
+User-agent: anthropic-ai
+User-agent: Google-Extended
+User-agent: FacebookBot
+User-agent: Claude-Web
+User-agent: cohere-ai
+User-agent: PerplexityBot
+User-agent: Applebot-Extended
+Disallow: /
+
 User-agent: *
-Disallow: /articles/company-a-case-study
-Disallow: /articles/company-b-review
-
-# Allow everything else
-Allow: /
-
-
-
-//If you have a folder of articles to block:
-
-User-agent: *
-Disallow: /articles/company-a-case-study
-Disallow: /articles/company-b-review
-Disallow: /articles/company-c-interview
-# Add more as needed
-
-Allow: /
-
-
-
-//If you want to block all articles in a folder:
-User-agent: *
-Disallow: /articles/private/
-
-
-
-
-//Extra: Prevent Indexing (Meta Tag)
-For extra protection, add this meta tag to the <head> of those specific pages:
-
-<meta name="robots" content="noindex, nofollow">
-
-This tells search engines not to index or follow links on that page, even if they find it.
+Disallow:

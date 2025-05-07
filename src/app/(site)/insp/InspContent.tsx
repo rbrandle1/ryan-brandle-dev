@@ -43,12 +43,8 @@ export const InspContent = () => {
 							priority
 						/>
 						<p>
-							During my seven-year tenure at{' '}
-							<a href='https://www.inspirato.com' className={styles.link} target='_blank' rel='noopener noreferrer'>
-								Inspirato
-							</a>
-							, a fast-growing startup to IPO, I spearheaded the creation of a unified design system that transformed
-							our approach to UX and front-end development.
+							During my seven-year tenure at a fast-growing startup (eventually to IPO), I spearheaded the creation of a
+							unified design system that transformed our approach to UX and front-end development.
 						</p>
 						<p>
 							Initially starting as the lead Senior UX Designer then transitioned into a developer-centric UX Engineer
@@ -358,8 +354,8 @@ export const InspContent = () => {
 					</p>
 					<p>
 						Teams across departments were finally aligned under a unified brand and UI, with a robust design system to
-						support their work. The IDS has become a core asset of Inspirato's digital products and a flexible platform
-						to build for the future.
+						support their work. The IDS has become a core asset of the company's digital products and a flexible
+						platform to build for the future.
 					</p>
 					<h3 className={styles.h3}>
 						<span className={styles.noWrap}>
