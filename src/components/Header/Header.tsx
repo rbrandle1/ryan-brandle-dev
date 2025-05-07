@@ -31,7 +31,7 @@ const Header = () => {
 						<div>DESIGN + ENGINEER</div>
 					</div>
 				</div>
-				<nav className={styles.navContainer}>
+				<nav className={styles.navContainer} aria-label='Main navigation'>
 					<ul role='list' className={styles.nav}>
 						{PAGES.map(({ path, label }, i) => (
 							<li key={i}>

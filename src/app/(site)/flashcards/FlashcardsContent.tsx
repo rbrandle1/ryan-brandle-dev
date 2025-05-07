@@ -227,7 +227,7 @@ export const FlashcardsContent = () => {
 						<p>
 							These were set and modified using React hooks and <code>useEffect()</code>:
 						</p>
-						<pre className={styles.syntax}>
+						<pre className={styles.syntax} tabIndex={0} aria-label='Setting custom themes'>
 							<code>
 								<span className={styles.keyword}>const</span> <span className={styles.punctuation}>[</span>
 								<span className={styles.variable}>dataAccessibilityTheme</span>
@@ -327,7 +327,7 @@ export const FlashcardsContent = () => {
 							To prevent any confusion, I used theme specific color names, then mapped them into functional based
 							variables, like this:
 						</p>
-						<pre className={styles.syntax}>
+						<pre className={styles.syntax} tabIndex={0} aria-label='Custom theme colors'>
 							<code>
 								<span className={styles.comment}>// Defined theme specific colors...</span>
 								{'\n'}
@@ -463,7 +463,7 @@ export const FlashcardsContent = () => {
 							To make a reusable way to unlock my fluid typography, I created a utility mixin, <code>_utils.scss</code>,
 							and included it on a per-instance basis, like this:
 						</p>
-						<pre className={styles.syntax}>
+						<pre className={styles.syntax} tabIndex={0} aria-label='Fluid typography utility mixin'>
 							<code>
 								<span className={styles.comment}>// Utility mixin for fluid typography</span>
 								{'\n'}
@@ -562,7 +562,7 @@ export const FlashcardsContent = () => {
 							features—loading assets only when they came into view.
 						</p>
 						<p>You can see an abbreviated JSX code example how I accomplished this for the Card component:</p>
-						<pre className={styles.syntax}>
+						<pre className={styles.syntax} tabIndex={0} aria-label='Lazy loading example'>
 							<code>
 								<span className={styles.keyword}>import</span> <span className={styles.punctuation}>{'{'}</span>{' '}
 								<span className={styles.variable}>lazy</span>

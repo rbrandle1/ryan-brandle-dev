@@ -348,7 +348,7 @@ export const BrandContent = () => {
 						</h3>
 						<p>I converted my tokens into code, using CSS Modules and custom properties as the variable structure.</p>
 						<p>Functional 'primitive' tokens were given meaningful names in a 'semantic' token file.</p>
-						<pre className={styles.syntax}>
+						<pre className={styles.syntax} tabIndex={0} aria-label='Primitive and semantic tokens'>
 							<code>
 								<span className={styles.comment}>/* primitive.scss */</span>
 								{'\n'}
@@ -406,7 +406,7 @@ export const BrandContent = () => {
 							Placing global theme variables in the <code>semantic.scss</code> enabled top-level theme changes to
 							cascade through components, while maintaining the option for component-level theme declarations if needed.
 						</p>
-						<pre className={styles.syntax}>
+						<pre className={styles.syntax} tabIndex={0} aria-label='Theme override tokens'>
 							<code>
 								<span className={styles.comment}>/* semantic.scss */</span>
 								{'\n'}
@@ -500,7 +500,7 @@ export const BrandContent = () => {
 							props. They were customizable where needed, giving developers (<em>just me in this case</em>) freedom
 							while maintaining design integrity.
 						</p>
-						<pre className={styles.syntax}>
+						<pre className={styles.syntax} tabIndex={0} aria-label='Component usage example'>
 							<code>
 								<span className={styles.comment}>/* page.tsx */</span>
 								{'\n'}

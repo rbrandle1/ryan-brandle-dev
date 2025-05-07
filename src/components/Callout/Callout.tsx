@@ -41,6 +41,7 @@ const Callout = ({
 				'--icon-color': iconAccent ? 'var(--icon-accent)' : null,
 				'--title-color': titleAccent ? 'var(--text-accent)' : null,
 			})}
+			aria-label={`Callout: ${title}`}
 		>
 			{children ? <div className={styles.icon}>{children}</div> : null}
 			<h2 className={cn(styles.title, styles[size])}>{title}</h2>

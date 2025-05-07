@@ -78,7 +78,7 @@ export const CodepenContent = () => {
 							using custom properties. I leaned into the <code>text-shadow</code> property to layer four colored shadows
 							that expanded and contracted as the slider moved.
 						</p>
-						<pre className={styles.syntax}>
+						<pre className={styles.syntax} tabIndex={0} aria-label='Text-shadow technique'>
 							<code>
 								<span className={styles.class}>.typography</span> <span className={styles.punctuation}>{'{'}</span>
 								{'\n  '}
@@ -199,7 +199,7 @@ export const CodepenContent = () => {
 							So what's the <em>secret ingredient</em>? Using <code>mix-blend-mode: plus-lighter</code> on the text as a{' '}
 							<code>::before</code> pseudo-element creating a vibrant glowing illusion as the shadows intersect.
 						</p>
-						<pre className={styles.syntax}>
+						<pre className={styles.syntax} tabIndex={0} aria-label='Mix-blend-mode technique'>
 							<code>
 								<span className={styles.class}>.typography</span> <span className={styles.punctuation}>{'{'}</span>
 								{'\n  '}
@@ -309,7 +309,7 @@ export const CodepenContent = () => {
 							codebase tidy. Plus, it got me into a solid flow-state.
 						</p>
 						<p>The real magic happened in Sass:</p>
-						<pre className={styles.syntax}>
+						<pre className={styles.syntax} tabIndex={0} aria-label='SCSS mapping example'>
 							<code>
 								<span className={styles.variable}>$colors</span>
 								<span className={styles.punctuation}>: (</span>

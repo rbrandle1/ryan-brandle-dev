@@ -114,7 +114,7 @@ export const ComparisonContent = () => {
 							number of cards the content team needed—two, three, four, you name it.
 						</p>
 						<p>We set up the CSS grid like this:</p>
-						<pre className={styles.syntax}>
+						<pre className={styles.syntax} tabIndex={0} aria-label='CSS Grid example'>
 							<code>
 								<span className={styles.class}>.container</span> <span className={styles.punctuation}>{'{'}</span>
 								{'\n  '}
@@ -149,7 +149,7 @@ export const ComparisonContent = () => {
 							To make the column count dynamic, we passed the number of columns through a CSS variable (eg.{' '}
 							<code>var(--number-of-columns)</code>)—mapped directly from CMS data using an inline style override.
 						</p>
-						<pre className={styles.syntax}>
+						<pre className={styles.syntax} tabIndex={0} aria-label='Mapping CMS data'>
 							<code>
 								<span className={styles.keyword}>export</span> <span className={styles.keyword}>interface</span>{' '}
 								<span className={styles.interface}>ComparisonGridProps</span>{' '}
@@ -351,7 +351,7 @@ export const ComparisonContent = () => {
 							titleAccent
 						/>
 						<p>The CMS data would include an array of objects to fill out the grid cells accordingly.</p>
-						<pre className={styles.syntax}>
+						<pre className={styles.syntax} tabIndex={0} aria-label='Mapping the CMS data as an array'>
 							<code>
 								<span className={styles.keyword}>const</span> <span className={styles.variable}>gridItems</span>{' '}
 								<span className={styles.punctuation}>=</span> <span className={styles.punctuation}>[</span>
@@ -404,7 +404,7 @@ export const ComparisonContent = () => {
 							</code>
 						</pre>
 						<p>Here's a quick look at how the styles came together:</p>
-						<pre className={styles.syntax}>
+						<pre className={styles.syntax} tabIndex={0} aria-label='Component styling'>
 							<code>
 								<span className={styles.class}>.cell</span> <span className={styles.punctuation}>{'{'}</span>
 								{'\n  '}

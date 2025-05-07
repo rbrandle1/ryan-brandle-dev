@@ -240,7 +240,7 @@ export const CfContent = () => {
 							Each token was designed to translate cleanly to front-end code using CSS variables and consistent,
 							developer-friendly naming conventions.
 						</p>
-						<pre className={styles.syntax}>
+						<pre className={styles.syntax} tabIndex={0} aria-label='Primitive and semantic tokens'>
 							<code>
 								<span className={styles.comment}>/* primitive.scss */</span>
 								{'\n'}
