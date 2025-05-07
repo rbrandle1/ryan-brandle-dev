@@ -19,13 +19,7 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 
 * Maybe update home hero text to be smaller on desktop to avoid tim scenario.
 
-* Add link to exact codepen in case not loading correctly.
-
 * Adjust flow spacing between text and image in multi image.
-
-* Codepen height issues on mobile... CSP? duckduck. why??? add min-height?
-
-* Fix extra space between 1st header section and 2nd... Notice on pages with callout between 2 sections.
 
 * Check screen reader and reduced motion settings.
 
@@ -34,7 +28,6 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 * Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
 
 * set up a new GMAIL account and update all mailto links!!!
-
 
 * PERFORMANCE AUDIT. Use Chrome LightHouse. Double check cpu and performance/paint issues. If gradient is still causing performance issues, try the png. Maybe will-change is causing issues. jpg for images, png for snapshots. hero under 200kb, thumbnails under 30kb. NEXT JS SHOULD OPTIMIZE ALREADY. https://medium.com/@jun55tsuno/optimize-your-nextjs-app-e4fe9718fc8a
 */

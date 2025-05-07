@@ -66,7 +66,7 @@ export default function RootLayout({
 					</main>
 					<Footer />
 				</ThemeProvider>
-				<Script src='https://cpwebassets.codepen.io/assets/embed/ei.js' strategy='lazyOnload' />
+				<Script src='https://cpwebassets.codepen.io/assets/embed/ei.js' strategy='beforeInteractive' />
 			</body>
 		</html>
 	);
