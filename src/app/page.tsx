@@ -16,9 +16,6 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 });
 
 /* Todo:
-* Prep robots to prevent indexing of company names. Add /styles, /404 not-found. triple check meta info keywords.
-
-* Update brandcontent bugfix area with updated copy.
 * Update codepens to send to codepen.io link as a full demo, not with code revealed.
 * Simplify "Into the Code" section <code> to use 2 examples, not 4.
 * Slow down logo animation slightly on safari.

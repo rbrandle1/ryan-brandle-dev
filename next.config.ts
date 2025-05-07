@@ -31,6 +31,16 @@ const nextConfig: NextConfig = {
 				source: '/style',
 				headers: disallowHeaders,
 			},
+			{
+				source: '/:path*',
+				headers: [
+					{
+						key: 'Content-Security-Policy',
+						value:
+							"default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cpwebassets.codepen.io https://public.codepenassets.com; style-src 'self' 'unsafe-inline' https://cpwebassets.codepen.io; img-src 'self' data: https://cpwebassets.codepen.io; frame-src 'self' https://codepen.io; connect-src 'self' https://cpwebassets.codepen.io",
+					},
+				],
+			},
 		];
 	},
 };

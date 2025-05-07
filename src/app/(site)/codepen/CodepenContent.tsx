@@ -56,6 +56,17 @@ export const CodepenContent = () => {
 						</p>
 						<h2 className={styles.h2}>Focus Text-Effect</h2>
 						<p>
+							Demo:{' '}
+							<a
+								href='https://codepen.io/brandledesign/full/zYJPWBE'
+								className={styles.link}
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								Focus Text-Effect
+							</a>
+						</p>
+						<p>
 							I'd been wanting to build something just for the fun of it and landed on the idea of simulating depth of
 							field using CSS, like focusing a camera lens.
 						</p>
@@ -251,6 +262,17 @@ export const CodepenContent = () => {
 					<div className={styles.containerGrid}>
 						<h2 className={styles.h2}>Pixel Art Animation</h2>
 						<p>
+							Demo:{' '}
+							<a
+								href='https://codepen.io/brandledesign/full/RwEbGpP'
+								className={styles.link}
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								Pixel Art Animation
+							</a>
+						</p>
+						<p>
 							To fuel my curiosity around Sass maps, I dove into a pixel art experiment. I thought it'd be fun to try
 							some new tricks and pay tribute to one of my favorite childhood games: <em>Final Fantasy VII</em>. I found
 							an awesome pixel-style illustration by{' '}
@@ -377,6 +399,17 @@ export const CodepenContent = () => {
 					<div className={styles.containerGrid}>
 						<h2 className={styles.h2}>CSS Compass Loader</h2>
 						<p>
+							Demo:{' '}
+							<a
+								href='https://codepen.io/brandledesign/full/JjBZaZd'
+								className={styles.link}
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								CSS Compass Loader
+							</a>
+						</p>
+						<p>
 							While working at a luxury travel company, I dabbled with a few fun loading animations. This one was
 							inspired by a compass rose—with animated needles that subtly nodded to luxury travel, exploration and
 							navigating the globe.
@@ -394,6 +427,17 @@ export const CodepenContent = () => {
 				<section className={styles.section}>
 					<div className={styles.containerGrid}>
 						<h2 className={styles.h2}>The Blinky Einstien</h2>
+						<p>
+							Demo:{' '}
+							<a
+								href='https://codepen.io/brandledesign/full/mdVbaL'
+								className={styles.link}
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								Einstien Blink Animation
+							</a>
+						</p>
 						<p>
 							An old favorite of mine. I've always loved that classic photo of Einstein sticking his tongue out, so I
 							recreated him in Illustrator, turned it into an SVG, and gave him some blinky eyes—plus a few surprises on

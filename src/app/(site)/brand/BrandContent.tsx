@@ -760,10 +760,9 @@ export const BrandContent = () => {
 							separate stylesheet on page load. Not elegant, but it did the trick.
 						</p>
 						<p>
-							Finally, there was a stubborn theme state bug that stuck around. The challenge was preventing a FOUC,{' '}
-							<em>Flash of Unstyled Content</em>, during initial page load when setting theme values from{' '}
-							<code>localStorage</code>. At the time of launch, there was a 500 error on initial load, even though the
-							app functioned normally. I'm still puzzled by it but look forward to a proper solution in the future.
+							Finally, there was a stubborn react hydration error that stuck around when using <code>localStorage</code>
+							. The challenge was preventing a FOUC, <em>Flash of Unstyled Content</em>, during initial page load and
+							when updating theme values. The fix was to use <code>useEffect()</code> to set the theme state on mount.
 						</p>
 					</div>
 				</section>

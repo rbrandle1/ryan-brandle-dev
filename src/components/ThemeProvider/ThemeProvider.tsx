@@ -7,10 +7,6 @@ interface ThemeContextType {
 	handleThemeChange: (newTheme: Theme) => void;
 }
 
-// TODO:
-// - Try performance improvements.
-// - try empty state string.
-
 const ThemeContext = createContext<ThemeContextType>({
 	theme: 'm',
 	handleThemeChange: () => {},
@@ -44,17 +40,7 @@ const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
 		return null;
 	}
 
-	return (
-		<>
-			{/* <style jsx global>{`
-				... target the header, etc so it's not a jolt of black to white.
-				body {
-					transition: background-color 2s ease-in-out;
-				}
-			`}</style> */}
-			<ThemeContext.Provider value={{ theme, handleThemeChange }}>{children}</ThemeContext.Provider>
-		</>
-	);
+	return <ThemeContext.Provider value={{ theme, handleThemeChange }}>{children}</ThemeContext.Provider>;
 };
 
 export const useTheme = () => useContext(ThemeContext);
