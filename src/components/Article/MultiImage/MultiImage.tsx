@@ -52,18 +52,6 @@ const MultiImage = ({
 
 	const ariaLabel = 'multi-image-caption';
 
-	// const renderCaption = () => {
-	// 	if (caption) {
-	// 		return (
-	// 			<Caption id={ariaLabel} className={styles.caption} captionLeft={textRight} hasIcon={hasCaptionIcon}>
-	// 				{caption}
-	// 			</Caption>
-	// 		);
-	// 	}
-
-	// 	return null;
-	// };
-
 	const renderCaption = (
 		<>
 			{caption ? (

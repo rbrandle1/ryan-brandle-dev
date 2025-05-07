@@ -18,6 +18,7 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 /* Todo:
 
 * Check screen reader and reduced motion settings.
+* Check for any more commented out code to remove
 
 * Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
 
