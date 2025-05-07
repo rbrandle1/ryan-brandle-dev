@@ -16,9 +16,7 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 });
 
 /* Todo:
-* Update codepens to send to codepen.io link as a full demo, not with code revealed.
-* Simplify "Into the Code" section <code> to use 2 examples, not 4.
-* Slow down logo animation slightly on safari.
+
 * Maybe update home hero text to be smaller on desktop to avoid tim scenario.
 
 * Add link to exact codepen in case not loading correctly.

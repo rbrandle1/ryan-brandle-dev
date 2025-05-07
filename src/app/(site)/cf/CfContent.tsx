@@ -200,12 +200,12 @@ export const CfContent = () => {
 						<p>
 							To showcase early ideas, I coded a quick CodePen{' '}
 							<a
-								href='https://codepen.io/brandledesign/pen/BaeadRV'
+								href='https://codepen.io/brandledesign/full/BaeadRV'
 								className={styles.link}
 								target='_blank'
 								rel='noopener noreferrer'
 							>
-								prototype
+								demo prototype
 							</a>{' '}
 							using CSS custom properties. This allowed the team and stakeholders to see the system in action and
 							provide feedback for quick iteration.
@@ -245,15 +245,6 @@ export const CfContent = () => {
 								<span className={styles.comment}>/* primitive.scss */</span>
 								{'\n'}
 								<span className={styles.class}>:root</span> <span className={styles.punctuation}>{'{'}</span>
-								{'\n  '}
-								<span className={styles.property}>--color-blue-hue</span>
-								<span className={styles.punctuation}>:</span> <span className={styles.number}>216</span>
-								<span className={styles.punctuation}>;</span>
-								{'\n  '}
-								<span className={styles.property}>--color-blue-sat</span>
-								<span className={styles.punctuation}>:</span> <span className={styles.number}>75</span>
-								<span className={styles.unit}>%</span>
-								<span className={styles.punctuation}>;</span>
 								{'\n  '}
 								<span className={styles.property}>--color-blue-650</span>
 								<span className={styles.punctuation}>:</span> <span className={styles.function}>hsl</span>

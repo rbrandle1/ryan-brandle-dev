@@ -354,11 +354,6 @@ export const BrandContent = () => {
 								{'\n'}
 								<span className={styles.class}>:root</span> <span className={styles.punctuation}>{'{'}</span>
 								{'\n  '}
-								<span className={styles.property}>--p-font-display</span>
-								<span className={styles.punctuation}>:</span> <span className={styles.string}>'Oswald'</span>
-								<span className={styles.punctuation}>,</span> <span className={styles.string}>sans-serif</span>
-								<span className={styles.punctuation}>;</span>
-								{'\n  '}
 								<span className={styles.property}>--p-font-sans</span>
 								<span className={styles.punctuation}>:</span> <span className={styles.string}>'Source Sans 3'</span>
 								<span className={styles.punctuation}>,</span> <span className={styles.string}>sans-serif</span>
@@ -367,11 +362,6 @@ export const BrandContent = () => {
 								<span className={styles.property}>--p-font-serif</span>
 								<span className={styles.punctuation}>:</span> <span className={styles.string}>'Source Serif 4'</span>
 								<span className={styles.punctuation}>,</span> <span className={styles.string}>serif</span>
-								<span className={styles.punctuation}>;</span>
-								{'\n  '}
-								<span className={styles.property}>--p-font-mono</span>
-								<span className={styles.punctuation}>:</span> <span className={styles.string}>'Fira Code'</span>
-								<span className={styles.punctuation}>,</span> <span className={styles.string}>monospace</span>
 								<span className={styles.punctuation}>;</span>
 								{'\n  '}
 								<span className={styles.comment}>// continued with colors, spacing, etc...</span>
@@ -384,13 +374,6 @@ export const BrandContent = () => {
 								{'\n'}
 								<span className={styles.class}>:root</span> <span className={styles.punctuation}>{'{'}</span>
 								{'\n  '}
-								<span className={styles.property}>--font-header</span>
-								<span className={styles.punctuation}>:</span> <span className={styles.function}>var</span>
-								<span className={styles.punctuation}>(</span>
-								<span className={styles.variable}>--p-font-display</span>
-								<span className={styles.punctuation}>)</span>
-								<span className={styles.punctuation}>;</span>
-								{'\n  '}
 								<span className={styles.property}>--font-body</span>
 								<span className={styles.punctuation}>:</span> <span className={styles.function}>var</span>
 								<span className={styles.punctuation}>(</span>
@@ -402,13 +385,6 @@ export const BrandContent = () => {
 								<span className={styles.punctuation}>:</span> <span className={styles.function}>var</span>
 								<span className={styles.punctuation}>(</span>
 								<span className={styles.variable}>--p-font-serif</span>
-								<span className={styles.punctuation}>)</span>
-								<span className={styles.punctuation}>;</span>
-								{'\n  '}
-								<span className={styles.property}>--font-mono</span>
-								<span className={styles.punctuation}>:</span> <span className={styles.function}>var</span>
-								<span className={styles.punctuation}>(</span>
-								<span className={styles.variable}>--p-font-mono</span>
 								<span className={styles.punctuation}>)</span>
 								<span className={styles.punctuation}>;</span>
 								{'\n  '}
