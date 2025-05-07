@@ -54,10 +54,6 @@ export const CodepenContent = () => {
 							as a space to prototype, practice, and refine my front-end thinking—combining visual exploration with
 							technical execution.
 						</p>
-						{/* </div>
-				</section>
-				<section className={styles.section}>
-					<div className={styles.containerGrid}> */}
 						<h2 className={styles.h2}>Focus Text-Effect</h2>
 						<p>
 							I'd been wanting to build something just for the fun of it and landed on the idea of simulating depth of
@@ -255,9 +251,9 @@ export const CodepenContent = () => {
 					<div className={styles.containerGrid}>
 						<h2 className={styles.h2}>Pixel Art Animation</h2>
 						<p>
-							To fuel my curiosity around Sass maps, I dove into a pixel art experiment. I thought it'd be fun to build
-							a themed project paying tribute to one of my all-time favorite childhood games: <em>Final Fantasy VII</em>
-							. I found an awesome pixel-style illustration by{' '}
+							To fuel my curiosity around Sass maps, I dove into a pixel art experiment. I thought it'd be fun to try
+							some new tricks and pay tribute to one of my favorite childhood games: <em>Final Fantasy VII</em>. I found
+							an awesome pixel-style illustration by{' '}
 							<a
 								href='https://www.redbubble.com/i/art-board-print/FINAL-FANTASY-Cloud-Pixel-by-WubbaDubb/28177052.JUXJO'
 								className={styles.link}
