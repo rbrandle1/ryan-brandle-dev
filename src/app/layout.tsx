@@ -7,10 +7,7 @@ import '@/styles/tokens/primitive.scss';
 import '@/styles/tokens/semantic.scss';
 import '@/styles/base.scss';
 import Header from '@/components/Header/Header';
-
-const ThemeProvider = dynamic(() => import('@/components/ThemeProvider/ThemeProvider'), {
-	ssr: true,
-});
+import ThemeProvider from '@/components/ThemeProvider/ThemeProvider';
 
 const Footer = dynamic(() => import('@/components/Footer/Footer'), {
 	ssr: true,
@@ -43,14 +40,13 @@ const firaCode = Fira_Code({
 	display: 'swap',
 });
 
-// Ensuring fonts are referenced for typescript requirements.
 const useFonts = () => {
 	return { oswald, sourceSans, sourceSerif, firaCode };
 };
 
 export const metadata: Metadata = {
 	title: 'Ryan Brandle',
-	description: "Ryan Brandle's Portfolio",
+	description: 'Portfolio of Ryan Brandle | Design Engineer',
 };
 
 export default function RootLayout({

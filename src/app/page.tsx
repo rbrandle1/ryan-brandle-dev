@@ -18,18 +18,23 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 /* Todo:
 * UPDATE: Remove the words "Inspirato" and allow searching?  Prep robots to prevent indexing of company names.
 
+* Update brandcontent bugfix area with updated copy.
+* Update codepens to send to codepen.io link as a full demo, not with code revealed.
+* Simplify "Into the Code" section <code> to use 2 examples, not 4.
+* Slow down logo animation slightly on safari.
+* Maybe update home hero text to be smaller on desktop to avoid tim scenario.
+
 * Add link to exact codepen in case not loading correctly.
 
 * Adjust flow spacing between text and image in multi image.
 
-* Codepen height issues on mobile... CSP? duckduck. why???
+* Codepen height issues on mobile... CSP? duckduck. why??? add min-height?
 
 * Fix extra space between 1st header section and 2nd... Notice on pages with callout between 2 sections.
 
 * Check screen reader and reduced motion settings.
 
 * Update readme with new info.
-
 
 * Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
 
