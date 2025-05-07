@@ -16,18 +16,9 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 });
 
 /* Todo:
-
-* Check screen reader and reduced motion settings.
-* Check for any more commented out code to remove
-
-* Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
-
-* PERFORMANCE AUDIT. Use Chrome LightHouse and Accessibility Insights. Double check cpu and performance/paint issues. If gradient is still causing performance issues, try the png. Maybe will-change is causing issues. jpg for images, png for snapshots. hero under 200kb, thumbnails under 30kb. NEXT JS SHOULD OPTIMIZE ALREADY.
-
-* Maybe update home hero text to be smaller on desktop to avoid tim scenario.
-
-* Adjust flow spacing between text and image in multi image.
-*/
+ * Maybe update home hero text to be smaller on desktop to avoid tim scenario.
+ * Adjust flow spacing between text and image in multi image.
+ */
 
 export default function Home() {
 	const marqueeText = 'Crispy, Rad, 🔥, Boss, Steezy, Dope, Sick,';
