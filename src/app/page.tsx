@@ -18,11 +18,13 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 /* Todo:
 * UPDATE: Remove the words "Inspirato" and allow searching?  Prep robots to prevent indexing of company names.
 
+* Simplify "Into the Code" section <code> to use 2 examples, not 4.
+
 * Add link to exact codepen in case not loading correctly.
 
 * Adjust flow spacing between text and image in multi image.
 
-* Codepen height issues on mobile... CSP? duckduck. why???
+* Codepen height issues on mobile... CSP? duckduck. why??? add min-height?
 
 * Fix extra space between 1st header section and 2nd... Notice on pages with callout between 2 sections.
 
