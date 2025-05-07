@@ -8,23 +8,49 @@ interface ThemeContextType {
 }
 
 const ThemeContext = createContext<ThemeContextType>({
-	theme: '',
+	theme: 'm',
 	handleThemeChange: () => {},
 });
 
 const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
-	const [theme, setTheme] = useState<Theme>((localStorage.getItem('theme') as Theme) || 'm');
+	const [mounted, setMounted] = useState(false);
+	const [theme, setTheme] = useState<Theme>('m');
 
 	useEffect(() => {
+		const storedTheme = localStorage.getItem('theme') as Theme;
+		if (storedTheme) {
+			setTheme(storedTheme);
+			document.body.dataset.theme = storedTheme;
+		}
+		setMounted(true);
+	}, []);
+
+	useEffect(() => {
+		if (!mounted) return;
+
 		localStorage.setItem('theme', theme);
 		document.body.dataset.theme = theme;
-	}, [theme]);
+	}, [theme, mounted]);
 
 	const handleThemeChange = (newTheme: Theme) => {
 		setTheme(newTheme);
 	};
 
-	return <ThemeContext.Provider value={{ theme, handleThemeChange }}>{children}</ThemeContext.Provider>;
+	if (!mounted) {
+		return null;
+	}
+
+	return (
+		<>
+			{/* <style jsx global>{`
+				... target the header, etc so it's not a jolt of black to white.
+				body {
+					transition: background-color 2s ease-in-out;
+				}
+			`}</style> */}
+			<ThemeContext.Provider value={{ theme, handleThemeChange }}>{children}</ThemeContext.Provider>
+		</>
+	);
 };
 
 export const useTheme = () => useContext(ThemeContext);
