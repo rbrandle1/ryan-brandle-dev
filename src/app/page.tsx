@@ -18,6 +18,7 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 /* Todo:
 * UPDATE: Remove the words "Inspirato" and allow searching?  Prep robots to prevent indexing of company names.
 
+* Update brandcontent bugfix area with updated copy.
 * Update codepens to send to codepen.io link as a full demo, not with code revealed.
 * Simplify "Into the Code" section <code> to use 2 examples, not 4.
 * Slow down logo animation slightly on safari.
