@@ -17,19 +17,15 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 
 /* Todo:
 
-* Maybe update home hero text to be smaller on desktop to avoid tim scenario.
-
-* Adjust flow spacing between text and image in multi image.
-
 * Check screen reader and reduced motion settings.
-
-* Update readme with new info.
 
 * Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
 
-* set up a new GMAIL account and update all mailto links!!!
-
 * PERFORMANCE AUDIT. Use Chrome LightHouse. Double check cpu and performance/paint issues. If gradient is still causing performance issues, try the png. Maybe will-change is causing issues. jpg for images, png for snapshots. hero under 200kb, thumbnails under 30kb. NEXT JS SHOULD OPTIMIZE ALREADY. https://medium.com/@jun55tsuno/optimize-your-nextjs-app-e4fe9718fc8a
+
+* Maybe update home hero text to be smaller on desktop to avoid tim scenario.
+
+* Adjust flow spacing between text and image in multi image.
 */
 
 export default function Home() {
@@ -65,7 +61,8 @@ export default function Home() {
 							be sexy, and to make your search for the right fit a little easier. With over a decade of experience
 							uniting design and code, I create accessible, intuitive, and scalable interfaces. I enjoy coding design to
 							life and pushing the boundaries of front-end craftsmanship. 🚀&nbsp;
-							<a href='mailto:hello@example.com'>Let's build</a> a product that leaves a lasting impression!
+							<a href='mailto:ryanbrandle.dev@gmail.com?subject=Hello!'>Let's build</a> a product that leaves a lasting
+							impression!
 						</p>
 					</div>
 				</div>
@@ -244,7 +241,7 @@ export default function Home() {
 							size='lg'
 							body="Let's build a product that leaves a lasting impression."
 							buttonText='Say hello'
-							href='mailto:hello@example.com?subject=Hello!'
+							href='mailto:ryanbrandle.dev@gmail.com?subject=Hello!'
 						>
 							<IconPolish />
 						</Callout>

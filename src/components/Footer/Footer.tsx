@@ -41,7 +41,7 @@ const Footer = () => {
 					<h3>Contact</h3>
 					<p>
 						I'm always open to new opportunities so please don't&nbsp;hesitate to{' '}
-						<a href='mailto:hello@example.com' target='_blank'>
+						<a href='mailto:ryanbrandle.dev@gmail.com?subject=Hello!' target='_blank'>
 							say&nbsp;hi&nbsp;anytime!
 						</a>
 					</p>

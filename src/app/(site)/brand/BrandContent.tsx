@@ -776,7 +776,7 @@ export const BrandContent = () => {
 							view my site repo
 						</a>{' '}
 						in its entirety on Github. Feel free to poke around! Your{' '}
-						<a href='mailto:hello@example.com' className={styles.link}>
+						<a href='mailto:ryanbrandle.dev@gmail.com?subject=Hello!' className={styles.link}>
 							thoughts and feedback
 						</a>{' '}
 						are always welcome.
