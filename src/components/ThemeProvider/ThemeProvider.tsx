@@ -7,6 +7,10 @@ interface ThemeContextType {
 	handleThemeChange: (newTheme: Theme) => void;
 }
 
+// TODO:
+// - Try performance improvements.
+// - try empty state string.
+
 const ThemeContext = createContext<ThemeContextType>({
 	theme: 'm',
 	handleThemeChange: () => {},

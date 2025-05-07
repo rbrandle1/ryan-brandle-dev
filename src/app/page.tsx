@@ -30,7 +30,6 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 
 * Update readme with new info.
 
-
 * Accessibility audit. check svg icons and accessibility. do they need a role? alts, etc.
 
 * set up a new GMAIL account and update all mailto links!!!
