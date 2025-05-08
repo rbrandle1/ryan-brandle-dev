@@ -37,51 +37,45 @@ export const ComparisonContent = () => {
 							priority
 						/>
 						<cite className={styles.citation}>
-							Originally published on the Inspirato Technology Blog,
+							Originally published on the Insp Technology Blog,
 							<br />
 							February 1, 2023 | Ryan Brandle
 							<br />
-							UI/UX Developer @ Inspirato
+							UI/UX Developer
 						</cite>
 						<p>
 							CSS Grid is one of those native web tools that's incredibly powerful, but still surprisingly underused.
 							I've been guilty of that myself. After all the work that went into its release over a decade ago (!), I
-							realized it was time to dust off my grid skills and put them to work. Now? Im a big advocate—especially
-							for layout-heavy components where grid just <em>makes sense</em>.
+							realized it was time to dust off my grid skills and put them to work.
 						</p>
 						<p>
-							This project was a perfect fit: a comparison card react component for multiple products on Inspirato's
-							site that needed to be flexible, responsive, and visually clean. Let's dig in.
+							This project was a perfect fit: a comparison card react component that needed to be flexible, responsive,
+							and scannable.
 						</p>
 						<p>
-							As a side note, you can see a simplified example of this component on my CodePen,{' '}
+							To see a simplified example of this component, check out my{' '}
 							<a
 								href='https://codepen.io/therealace_1/pen/RwyxvOL'
 								className={styles.link}
 								target='_blank'
 								rel='noopener noreferrer'
 							>
-								Card Layout with CSS Grid
+								CodePen demo
 							</a>
-							.
+							. Let's dig in!
 						</p>
-						<Callout
-							className={cn(styles.callout, styles.flowOffset)}
-							title='"CSS Grid can be used instead of flexbox in most cases—especially when creating flexible grid layouts."'
-							titleAccent
-						/>
 						<h2 className={styles.h2}>
 							The
 							<br />
 							Challenge
 						</h2>
 						<p>
-							Inspirato offers multiple products, and users need to compare them quickly to figure out which one is
-							right for them. A traditional HTML table could technically do the job—but tables get clunky fast. They're
-							rigid, hard to style, and on small screens, they can overwhelm folks with too much info all at once.
+							When users need to compare multiple products to find the right fit, a traditional HTML table could
+							technically do the job—but tables get clunky fast. They're rigid, hard to style, and on small screens,
+							they can overwhelm folks with too much info all at once.
 						</p>
 						<p>
-							We wanted something that felt premium—something that matched the elegance of the brand while staying
+							We needed something that felt premium—something that matched the elegance of the brand while staying
 							digestible, flexible, and easy to scan.
 						</p>
 					</div>
@@ -94,9 +88,9 @@ export const ComparisonContent = () => {
 							Solution
 						</h2>
 						<p>
-							We used <strong>CSS Grid</strong> as the structural foundation, but styled everything to <em>feel</em>{' '}
-							like individual, side-by-side cards. This let us keep all the comparison logic across rows while breaking
-							free from the stiffness of a table layout.
+							I used <strong>CSS Grid</strong> as the structural foundation, but styled everything to <em>feel</em> like
+							individual, side-by-side cards. This let us keep all the comparison logic across rows while breaking free
+							from the stiffness of a table layout.
 						</p>
 						<LargeImage
 							className={cn(styles.imageContainer, styles.flowOffset, styles.breakout)}
@@ -116,11 +110,11 @@ export const ComparisonContent = () => {
 						/>
 						<h3 className={styles.h3}>Laying Out the Grid</h3>
 						<p>
-							The first challenge: we needed the grid to be CMS-friendly. That meant the layout had to adapt to however
-							many cards the content team wanted—two, three, four, you name it.
+							The first challenge: the solution needed to be CMS-friendly. That meant the layout had to adapt to the
+							number of cards the content team needed—two, three, four, you name it.
 						</p>
 						<p>We set up the CSS grid like this:</p>
-						<pre className={styles.syntax}>
+						<pre className={styles.syntax} tabIndex={0} aria-label='CSS Grid example'>
 							<code>
 								<span className={styles.class}>.container</span> <span className={styles.punctuation}>{'{'}</span>
 								{'\n  '}
@@ -155,7 +149,7 @@ export const ComparisonContent = () => {
 							To make the column count dynamic, we passed the number of columns through a CSS variable (eg.{' '}
 							<code>var(--number-of-columns)</code>)—mapped directly from CMS data using an inline style override.
 						</p>
-						<pre className={styles.syntax}>
+						<pre className={styles.syntax} tabIndex={0} aria-label='Mapping CMS data'>
 							<code>
 								<span className={styles.keyword}>export</span> <span className={styles.keyword}>interface</span>{' '}
 								<span className={styles.interface}>ComparisonGridProps</span>{' '}
@@ -357,51 +351,51 @@ export const ComparisonContent = () => {
 							titleAccent
 						/>
 						<p>The CMS data would include an array of objects to fill out the grid cells accordingly.</p>
-						<pre className={styles.syntax}>
+						<pre className={styles.syntax} tabIndex={0} aria-label='Mapping the CMS data as an array'>
 							<code>
 								<span className={styles.keyword}>const</span> <span className={styles.variable}>gridItems</span>{' '}
 								<span className={styles.punctuation}>=</span> <span className={styles.punctuation}>[</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.punctuation}>{'{'}</span>
 								<span className={styles.property}>headerCell</span>
 								<span className={styles.punctuation}>{'}'}</span>
 								<span className={styles.punctuation}>,</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.punctuation}>{'{'}</span>
 								<span className={styles.property}>headerCell</span>
 								<span className={styles.punctuation}>{'}'}</span>
 								<span className={styles.punctuation}>,</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.punctuation}>{'{'}</span>
 								<span className={styles.property}>headerCell</span>
 								<span className={styles.punctuation}>{'}'}</span>
 								<span className={styles.punctuation}>,</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.punctuation}>{'{'}</span>
 								<span className={styles.property}>cell</span>
 								<span className={styles.punctuation}>{'}'}</span>
 								<span className={styles.punctuation}>,</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.punctuation}>{'{'}</span>
 								<span className={styles.property}>cell</span>
 								<span className={styles.punctuation}>{'}'}</span>
 								<span className={styles.punctuation}>,</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.punctuation}>{'{'}</span>
 								<span className={styles.property}>cell</span>
 								<span className={styles.punctuation}>{'}'}</span>
 								<span className={styles.punctuation}>,</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.punctuation}>{'{'}</span>
 								<span className={styles.property}>footerCell</span>
 								<span className={styles.punctuation}>{'}'}</span>
 								<span className={styles.punctuation}>,</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.punctuation}>{'{'}</span>
 								<span className={styles.property}>footerCell</span>
 								<span className={styles.punctuation}>{'}'}</span>
 								<span className={styles.punctuation}>,</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.punctuation}>{'{'}</span>
 								<span className={styles.property}>footerCell</span>
 								<span className={styles.punctuation}>{'}'}</span>
@@ -410,17 +404,17 @@ export const ComparisonContent = () => {
 							</code>
 						</pre>
 						<p>Here's a quick look at how the styles came together:</p>
-						<pre className={styles.syntax}>
+						<pre className={styles.syntax} tabIndex={0} aria-label='Component styling'>
 							<code>
 								<span className={styles.class}>.cell</span> <span className={styles.punctuation}>{'{'}</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.property}>--cell-spacing</span>
 								<span className={styles.punctuation}>:</span> <span className={styles.function}>var</span>
 								<span className={styles.punctuation}>(</span>
 								<span className={styles.variable}>--space-sm</span>
 								<span className={styles.punctuation}>)</span>
 								<span className={styles.punctuation}>;</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.property}>--outer-border</span>
 								<span className={styles.punctuation}>:</span> <span className={styles.value}>solid</span>{' '}
 								<span className={styles.value}>1px</span> <span className={styles.function}>var</span>
@@ -428,7 +422,7 @@ export const ComparisonContent = () => {
 								<span className={styles.variable}>--color-gray</span>
 								<span className={styles.punctuation}>)</span>
 								<span className={styles.punctuation}>;</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.property}>--inner-border</span>
 								<span className={styles.punctuation}>:</span> <span className={styles.value}>solid</span>{' '}
 								<span className={styles.value}>1px</span> <span className={styles.function}>var</span>
@@ -436,42 +430,42 @@ export const ComparisonContent = () => {
 								<span className={styles.variable}>--color-gray-light</span>
 								<span className={styles.punctuation}>)</span>
 								<span className={styles.punctuation}>;</span>
-								{'\n\n    '}
+								{'\n\n  '}
 								<span className={styles.property}>padding-top</span>
 								<span className={styles.punctuation}>:</span> <span className={styles.function}>var</span>
 								<span className={styles.punctuation}>(</span>
 								<span className={styles.variable}>--cell-spacing</span>
 								<span className={styles.punctuation}>)</span>
 								<span className={styles.punctuation}>;</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.property}>padding-bottom</span>
 								<span className={styles.punctuation}>:</span> <span className={styles.function}>var</span>
 								<span className={styles.punctuation}>(</span>
 								<span className={styles.variable}>--cell-spacing</span>
 								<span className={styles.punctuation}>)</span>
 								<span className={styles.punctuation}>;</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.property}>background-color</span>
 								<span className={styles.punctuation}>:</span> <span className={styles.function}>var</span>
 								<span className={styles.punctuation}>(</span>
 								<span className={styles.variable}>--color-white</span>
 								<span className={styles.punctuation}>)</span>
 								<span className={styles.punctuation}>;</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.property}>border-bottom</span>
 								<span className={styles.punctuation}>:</span> <span className={styles.function}>var</span>
 								<span className={styles.punctuation}>(</span>
 								<span className={styles.variable}>--inner-border</span>
 								<span className={styles.punctuation}>)</span>
 								<span className={styles.punctuation}>;</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.property}>border-left</span>
 								<span className={styles.punctuation}>:</span> <span className={styles.function}>var</span>
 								<span className={styles.punctuation}>(</span>
 								<span className={styles.variable}>--outer-border</span>
 								<span className={styles.punctuation}>)</span>
 								<span className={styles.punctuation}>;</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.property}>border-right</span>
 								<span className={styles.punctuation}>:</span> <span className={styles.function}>var</span>
 								<span className={styles.punctuation}>(</span>
@@ -482,21 +476,21 @@ export const ComparisonContent = () => {
 								<span className={styles.punctuation}>{'}'}</span>
 								{'\n\n'}
 								<span className={styles.class}>.headerCell</span> <span className={styles.punctuation}>{'{'}</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.property}>padding-left</span>
 								<span className={styles.punctuation}>:</span> <span className={styles.function}>var</span>
 								<span className={styles.punctuation}>(</span>
 								<span className={styles.variable}>--cell-spacing</span>
 								<span className={styles.punctuation}>)</span>
 								<span className={styles.punctuation}>;</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.property}>padding-right</span>
 								<span className={styles.punctuation}>:</span> <span className={styles.function}>var</span>
 								<span className={styles.punctuation}>(</span>
 								<span className={styles.variable}>--cell-spacing</span>
 								<span className={styles.punctuation}>)</span>
 								<span className={styles.punctuation}>;</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.property}>border</span>
 								<span className={styles.punctuation}>:</span> <span className={styles.function}>var</span>
 								<span className={styles.punctuation}>(</span>
@@ -507,21 +501,21 @@ export const ComparisonContent = () => {
 								<span className={styles.punctuation}>{'}'}</span>
 								{'\n\n'}
 								<span className={styles.class}>.footerCell</span> <span className={styles.punctuation}>{'{'}</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.property}>padding-left</span>
 								<span className={styles.punctuation}>:</span> <span className={styles.function}>var</span>
 								<span className={styles.punctuation}>(</span>
 								<span className={styles.variable}>--cell-spacing</span>
 								<span className={styles.punctuation}>)</span>
 								<span className={styles.punctuation}>;</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.property}>padding-right</span>
 								<span className={styles.punctuation}>:</span> <span className={styles.function}>var</span>
 								<span className={styles.punctuation}>(</span>
 								<span className={styles.variable}>--cell-spacing</span>
 								<span className={styles.punctuation}>)</span>
 								<span className={styles.punctuation}>;</span>
-								{'\n    '}
+								{'\n  '}
 								<span className={styles.property}>border-bottom</span>
 								<span className={styles.punctuation}>:</span> <span className={styles.function}>var</span>
 								<span className={styles.punctuation}>(</span>

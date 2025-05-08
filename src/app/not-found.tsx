@@ -1,6 +1,12 @@
 import cn from 'classnames';
 import Button from '@/components/Button/Button';
 import styles from './not-found.module.scss';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+	title: 'Page Not Found',
+	description: "You've stumbled upon a page that doesn't exist.",
+};
 
 const NotFoundPage = () => {
 	return (

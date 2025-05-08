@@ -58,7 +58,7 @@
 		text-align: left;
 	}
 
-	h3 {
+	h2 {
 		@include typography.headline(sm);
 		margin-block-end: var(--space-base);
 	}

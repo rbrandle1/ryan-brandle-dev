@@ -37,6 +37,8 @@
 	--ratio-landscape: var(--p-ratio-1);
 	--ratio-portrait: var(--p-ratio-2);
 	--ratio-square: var(--p-ratio-3);
+	--ratio-codepen-portrait: var(--p-ratio-4);
+	--ratio-codepen-landscape: var(--p-ratio-5);
 
 	/* SPACING */
 	--space-3xs: var(--p-space-0125);
@@ -117,6 +119,7 @@
 	--optimal-line-length-xs: var(--p-optimal-line-length-2);
 	--optimal-line-length-sm: var(--p-optimal-line-length-3);
 	--optimal-line-length-base: var(--p-optimal-line-length-4);
+	--optimal-width-md-xl: 78%;
 
 	/* COLOR */
 	--color-primary: var(--p-color-black);
@@ -150,6 +153,7 @@
 	--color-syntax-number: var(--p-color-syntax-1);
 	--color-syntax-element: var(--p-color-syntax-1);
 	--color-syntax-punctuation: var(--p-color-syntax-1);
+	--color-syntax-tag: var(--p-color-syntax-1);
 	--color-syntax-component: var(--p-color-syntax-2);
 	--color-syntax-interface: var(--p-color-syntax-2);
 	--color-syntax-variable: var(--p-color-syntax-2);

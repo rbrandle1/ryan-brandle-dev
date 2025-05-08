@@ -24,9 +24,6 @@ $height: (
 	lg: 1000px,
 );
 
-// Breakpoint media query helper for min/max widths or heights
-// @include viewport.breakpoint(sm);
-// @include viewport.breakpoint(lg, max);
 @mixin breakpoint($value, $direction: min, $dimension: width) {
 	$directions: min, max;
 	$dimensions: width, height;
@@ -60,8 +57,6 @@ $height: (
 	}
 }
 
-// Media query that sets a ruleset when the viewport size is between two values.
-// @include viewport.between(sm, md);
 @mixin between($minValue, $maxValue, $dimension: width) {
 	$dimensions: width, height;
 	$min: $minValue;
@@ -89,11 +84,6 @@ $height: (
 	}
 }
 
-// This prevents hover states from being applied on touch screen devices.
-// Allows you to write multiple selectors
-// @include has-hover;
-// @include has-hover(':hover:not(.active)');
-// @include has-hover(':hover', ':focus-visible');
 @mixin has-hover($selector: ':hover', $extraSelectors...) {
 	@media (hover: hover) and (pointer: fine) {
 		&#{$selector} {

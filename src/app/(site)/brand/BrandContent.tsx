@@ -54,7 +54,7 @@ export const BrandContent = () => {
 						</p>
 						<p>
 							Then came the industry-wide tech layoffs, including my own. Life handed out some lemons, so I decided to
-							make some sweet, tasty, sticky-fingered lemonade.
+							make some tasty, sticky-fingered lemonade.
 						</p>
 						<p>
 							I used this opportunity to refocus my career priorities, learn some new tricks, and build a site that
@@ -105,15 +105,18 @@ export const BrandContent = () => {
 									<li>A simple yet impactful use of color</li>
 									<li>Beautiful bold typography</li>
 								</ul>
-								<p>
-									And of course, I wanted to infuse it with personality—my humor, attention to detail, love of music and
-									inspiring design.
-								</p>
+								<p>And of course, I wanted to infuse it with my humor, attention to detail, and love of music.</p>
 							</SideImage>
 						</div>
 						<Callout
 							className={cn(styles.callout, styles.flowOffset)}
-							title='Simple ingredients, endless possibilities.'
+							title={
+								<>
+									Simple ingredients,
+									<br />
+									endless possibilities.
+								</>
+							}
 							titleAccent
 						/>
 						<h3 className={styles.h3}>
@@ -128,10 +131,10 @@ export const BrandContent = () => {
 						</p>
 						<p>
 							This included everything from typography, color, rhythm and spacing to logos, theme concepts, and
-							accessibility validation. I wanted to challenge myself by creating a system rooted in black and
-							white—where limited colors push creativity.
+							accessibility validation. I wanted to challenge myself with a system rooted in black and white—where
+							limited colors push creativity.
 						</p>
-						<div className={cn(styles.multiImagesContainer, styles.breakout)}>
+						<div className={styles.multiImagesContainer}>
 							<MultiImage
 								imgSrc1={data.images.ad1.src}
 								imgAlt1={data.images.ad1.alt}
@@ -142,12 +145,12 @@ export const BrandContent = () => {
 								caption='Newspaper ads, Printworks London / Only'
 							>
 								<p>
-									One concept sparked from childhood memories of flipping through newspaper cinema ads. Each design had
-									to fight for attention in a sea of black and white newsprint, yet somehow capture the movie's essence
-									in a single color. Pure chaos, but beautiful in its own way.
+									I remember flipping through newspaper cinema ads as a kid. Each ad fought for attention in a sea of
+									black and white print, yet still captured the movie's brand with a single color. Pure chaos, and
+									beautiful in its own way.
 								</p>
 								<p>
-									The topic of newspapers reminded me of the{' '}
+									This topic of newspaper ads reminded me of the{' '}
 									<a
 										href='https://printworkslondon.co.uk/'
 										className={styles.link}
@@ -156,8 +159,8 @@ export const BrandContent = () => {
 									>
 										Printworks London
 									</a>{' '}
-									brand, an old favorite of mine. This dance venue's identity honored the building's heritage as an old
-									printing factory—bold and striking with a clear respect for traditional design principles.
+									brand, an old favorite of mine. It referenced the building's heritage as an old printing factory
+									turned dance venue—bold and striking with a clear respect for traditional design principles.
 								</p>
 								<p>
 									Their work resonated with my own history, my love for design and dance music making it a perfect
@@ -174,22 +177,22 @@ export const BrandContent = () => {
 							>
 								<h4 className={styles.h3}>Retro Color Revival</h4>
 								<p>
-									I studied design when print dominated the industry and the CMYK color system was the standard.
-									Together, cyan, magenta, yellow, and key (black) formed the ingredients to create a wide spectrum of
-									colors visible to the human eye.
+									I've always loved the CMYK color system and thought it would make a great foundation for my themes.
+									Back when print ruled the universe, cyan, magenta, yellow, and key (black) formed the ingredients to
+									create a wide spectrum of colors visible to the human eye. I tossed purple in there as well to expand
+									the theme options.
 								</p>
 								<p>
 									This concept aligned perfectly with my goal of simple, modular ingredients—fundamental colors serving
 									as building blocks for endless possibilities, <em>just like the design system itself</em>.
 								</p>
 								<p>
-									Purple was added to provide more opportunity for theme exploration. As an added bonus, these 'neon'
-									colors were used heavily in the early 90's to make <strong>the raddest ski gear ever</strong>.
+									As an added bonus, these colors were also used heavily in the early 90's to make{' '}
+									<strong>the raddest ski gear ever</strong>.
 								</p>
 								<p>
-									In certain typographical situations, these colors did not pass WCAG accessibility validation. However,
-									when carefully applied as accents to the black and white system, they passed... with flying colors,
-									heyoooo!&nbsp;🙌
+									They were carefully applied as accents to the black and white system, and passed WCAG validation...
+									with flying colors, heyoooo!&nbsp;🙌
 								</p>
 							</SideImage>
 						</div>
@@ -199,10 +202,9 @@ export const BrandContent = () => {
 							Type Hunt
 						</h4>
 						<p>
-							The purpose of this experiment was to discover font combinations with the right boldness, balance and
-							rhythm.
+							To uncover the right boldness, balance and rhythm I was looking for, I explored a few font combinations.
 						</p>
-						<div className={cn(styles.multiImagesContainer, styles.flowOffset, styles.breakout)}>
+						<div className={cn(styles.multiImagesContainer, styles.flowOffset)}>
 							<MultiImage
 								imgSrc1={data.images.font1.src}
 								imgAlt1={data.images.font1.alt}
@@ -219,10 +221,7 @@ export const BrandContent = () => {
 									The usual questions filtered through...{' '}
 									<em>Serif or sans serif? What would work best to meet my project goals?</em> Sans serif fonts are easy
 									to read and more modern, while serifs can bring a traditional elegance. Finding the right balance
-									between the two was critical.
-								</p>
-								<p>
-									I explored various combinations, carefully avoiding anything resembling a 90's hair spray product.
+									while avoiding anything resembling a 90's hair spray product was critical.
 								</p>
 								<p>
 									The final approach was a bold sans serif to lead, with a subtle serif for accents—mirroring my color
@@ -230,7 +229,7 @@ export const BrandContent = () => {
 								</p>
 							</MultiImage>
 						</div>
-						<div className={cn(styles.multiImagesContainer, styles.flowOffset, styles.breakout)}>
+						<div className={cn(styles.multiImagesContainer, styles.flowOffset)}>
 							<MultiImage
 								imgSrc1={data.images.logo2.src}
 								imgAlt1={data.images.logo2.alt}
@@ -249,17 +248,20 @@ export const BrandContent = () => {
 								</h4>
 								<p>
 									My logo concept reflected a component library's dynamic relationships. Each element—mark, name, and
-									title—could be stacked, scaled, and styled independently while maintaining harmony. I explored ideas
-									like typographic ligatures, mountain shapes, retro styling, pinewood derby cars, and pattern overlays.
+									title—could be stacked, scaled, and styled independently while maintaining harmony. I explored using
+									typographic ligatures, mountain shapes, pinewood derby cars, and more!
 								</p>
 								<p>
-									The mark, formed by two overlapping elements creating a 'B,' represented how simple components
-									interact to form something greater. For smaller applications like favicons, a single-color version
-									with thicker lines preserved legibility across all color themes.
+									The mark was formed by two overlapping elements creating a 'B,' representing how simple components
+									interact to form something greater.
 								</p>
 								<p>
-									The final SVG-based logo ensured crisp rendering, leveraged CSS and JS enabling precise style control
-									across applications.
+									For other use-cases like favicons, a thicker one-color version preserved legibility across color
+									themes.
+								</p>
+								<p>
+									The final SVG-based logo ensured crystal clear rendering, and leveraged CSS and JS for precise style
+									control across applications.
 								</p>
 							</MultiImage>
 						</div>
@@ -270,10 +272,10 @@ export const BrandContent = () => {
 						</h4>
 						<p>
 							With the core ingredients in place—typography, color, and logo—I started fine-tuning how they worked
-							together. Solving scaling issues and combination limitations early on helps avoid much bigger problems
-							down the road.
+							together. I tackled some scaling and combination issues early on to avoid much bigger problems down the
+							road.
 						</p>
-						<div className={cn(styles.multiImagesContainer, styles.breakout, styles.flowOffset)}>
+						<div className={styles.multiImagesContainer}>
 							<MultiImage
 								imgSrc1={data.images.tokens.src}
 								imgAlt1={data.images.tokens.alt}
@@ -281,24 +283,29 @@ export const BrandContent = () => {
 								imgAlt2={data.images.sketchMock.alt}
 								imgSrc3={data.images.mock.src}
 								imgAlt3={data.images.mock.alt}
-								caption='Figma token system, wireframing sketches, and homepage mockup.'
+								caption='Figma tokens, wireframes, and mockups.'
 							>
 								<p>
-									I created a two-tiered token system (primitives and semantic) in Figma with clear and purposeful
-									naming conventions—making it easy to update and seamlessly translate into their coded counterparts.
+									I created a <strong>two-tiered token system</strong> (primitives and semantic) in Figma with clear
+									naming conventions—making it easy to update and translate into their coded counterparts.
 								</p>
 								<p>
-									Wireframing and multiple mockup iterations came next, using the token system to shape a few basic
-									components and a responsive design. Since I'm flying solo on this project—
-									<em>and let's be honest, I'd rather be coding</em>—I skipped the usual Figma component library step
-									and went straight into development.
+									Wireframing and mockup iterations came next, using the token system to flesh-out some components and
+									responsive layouts. Since I'm flying solo on this project, I skipped making a Figma component library
+									and dove straight into development.
 								</p>
 							</MultiImage>
 						</div>
+						<Callout
+							className={cn(styles.callout, styles.flowOffset)}
+							title='Building beyond the ordinary to reveal the intricacies of a cohesive system.'
+							titleAccent
+						/>
 						<h3 className={styles.h3}>Defining the Stack</h3>
 						<p>
-							My tech stack focused on showcasing a design system approach. Instead of making a simple static site, I
-							chose to explore the latest versions of{' '}
+							Before jumping into code, I needed to establish the tools and strategies I'd use to make my site. My stack
+							focused on showcasing a design system approach. Instead of making a simple static site, I chose to explore
+							the latest versions of{' '}
 							<a href='https://react.dev/' className={styles.link} target='_blank' rel='noopener noreferrer'>
 								React
 							</a>{' '}
@@ -313,100 +320,355 @@ export const BrandContent = () => {
 							.
 						</p>
 						<p>
-							Next.js offered a straightforward setup with robust performance capabilities and the flexibility to add
-							specific dependencies from the start. In the spirit of exploring new technologies, Turbopack was chosen
-							over Webpack for bundling.
+							Next.js offered a bare-bones setup with awesome performance capabilities and the flexibility to add
+							dependencies from the get-go. In the spirit of exploring new technologies, I chose Turbopack for bundling
+							(<em>which caused a few headaches...</em> see "Squashin' Bugs" below).
 						</p>
 						<p>
-							State management was another key consideration. Initially, basic prop drilling seemed sufficient due to
-							the app's simplicity. However, the need for multiple components to access shared state, like theme state,
-							led to the use of React Context.
+							State management was another major consideration. Initially, prop drilling seemed sufficient due to the
+							app's simplicity. However, I used{' '}
+							<a
+								href='https://react.dev/learn/passing-data-deeply-with-context'
+								className={styles.link}
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								React Context
+							</a>{' '}
+							to allow multiple components to access shared state.
 						</p>
-						<Callout
-							className={cn(styles.callout, styles.flowOffset)}
-							title='Building beyond the ordinary to reveal the intricacies of a cohesive system.'
-							titleAccent
-						/>
 						<p>
-							A rough data structure was also planned, organizing and modularizing types, imagery, and styles before
-							finalizing the tech stack and beginning app development.
-						</p>
-						<p>
-							<em>Is this overkill for a portfolio site?</em> On the surface, possibly. However, the goal was to
-							highlight not just the end result, but all the intricacies and details involved in crafting a cohesive,
-							functional, and flexible design system.
+							Finally, I made a rough data structure to organize types, imagery, and styles before finalizing my stack
+							and beginning development.
 						</p>
 						<h3 className={cn(styles.h3, styles.soloHeader)}>
 							Into
 							<br />
 							the Code
 						</h3>
+						<p>I converted my tokens into code, using CSS Modules and custom properties as the variable structure.</p>
+						<p>Functional 'primitive' tokens were given meaningful names in a 'semantic' token file.</p>
+						<pre className={styles.syntax} tabIndex={0} aria-label='Primitive and semantic tokens'>
+							<code>
+								<span className={styles.comment}>/* primitive.scss */</span>
+								{'\n'}
+								<span className={styles.class}>:root</span> <span className={styles.punctuation}>{'{'}</span>
+								{'\n  '}
+								<span className={styles.property}>--p-font-sans</span>
+								<span className={styles.punctuation}>:</span> <span className={styles.string}>'Source Sans 3'</span>
+								<span className={styles.punctuation}>,</span> <span className={styles.string}>sans-serif</span>
+								<span className={styles.punctuation}>;</span>
+								{'\n  '}
+								<span className={styles.property}>--p-font-serif</span>
+								<span className={styles.punctuation}>:</span> <span className={styles.string}>'Source Serif 4'</span>
+								<span className={styles.punctuation}>,</span> <span className={styles.string}>serif</span>
+								<span className={styles.punctuation}>;</span>
+								{'\n  '}
+								<span className={styles.comment}>// continued with colors, spacing, etc...</span>
+								{'\n'}
+								<span className={styles.punctuation}>{'}'}</span>
+								{'\n\n'}
+								<span className={styles.comment}>/* semantic.scss */</span>
+								{'\n'}
+								<span className={styles.comment}>// Mapped "primitives" into semantic variables.</span>
+								{'\n'}
+								<span className={styles.class}>:root</span> <span className={styles.punctuation}>{'{'}</span>
+								{'\n  '}
+								<span className={styles.property}>--font-body</span>
+								<span className={styles.punctuation}>:</span> <span className={styles.function}>var</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.variable}>--p-font-sans</span>
+								<span className={styles.punctuation}>)</span>
+								<span className={styles.punctuation}>;</span>
+								{'\n  '}
+								<span className={styles.property}>--font-alt</span>
+								<span className={styles.punctuation}>:</span> <span className={styles.function}>var</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.variable}>--p-font-serif</span>
+								<span className={styles.punctuation}>)</span>
+								<span className={styles.punctuation}>;</span>
+								{'\n  '}
+								<span className={styles.comment}>// etc...</span>
+								{'\n'}
+								<span className={styles.punctuation}>{'}'}</span>
+							</code>
+						</pre>
 						<p>
-							I converted my tiered token system into code, using CSS Modules and custom properties as the primary
-							variable structure.
+							I imported <code>semantic.scss</code> into top-level 'utility' partials (<code>_elements.scss</code>,{' '}
+							<code>_layout.scss</code>, <code>_typography.scss</code>, etc.) and used them to create global mixins I'd
+							be using throughout the project.
 						</p>
 						<p>
-							'Primitives' were referenced as semantic tokens, and used in top-level 'utility' partials with global
-							mixins. These partials, organized into SCSS files like <em>_elements.scss</em>, <em>_layout.scss</em>, and
-							<em>_typography.scss</em>, were imported into component-level modules as needed.
+							My utilities could then be imported <code>@use '@/styles/utils/element';</code> into component-level
+							modules as needed.
 						</p>
-						<LargeImage
-							className={cn(styles.imageContainer, styles.flowOffset, styles.breakout)}
-							src={data.images.tokenCode.src}
-							alt={data.images.tokenCode.alt}
-							caption={data.images.tokenCode.caption}
-						/>
 						<p>
-							Placing global theme variables in the semantic token file enabled top-level theme changes to cascade
-							through components, and while maintaining the option for component-level theme declarations if needed.
+							Placing global theme variables in the <code>semantic.scss</code> enabled top-level theme changes to
+							cascade through components, while maintaining the option for component-level theme declarations if needed.
 						</p>
+						<pre className={styles.syntax} tabIndex={0} aria-label='Theme override tokens'>
+							<code>
+								<span className={styles.comment}>/* semantic.scss */</span>
+								{'\n'}
+								<span className={styles.class}>:root</span> <span className={styles.punctuation}>{'{'}</span>
+								{'\n  '}
+								<span className={styles.comment}>// ...semantic tokens above</span>
+								{'\n\n  '}
+								<span className={styles.selector}>[data-section='dark']</span>{' '}
+								<span className={styles.punctuation}>{'{'}</span>
+								{'\n    '}
+								<span className={styles.property}>--color-primary</span>
+								<span className={styles.punctuation}>:</span> <span className={styles.function}>var</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.variable}>--p-color-white</span>
+								<span className={styles.punctuation}>)</span>
+								<span className={styles.punctuation}>;</span>
+								{'\n    '}
+								<span className={styles.property}>--color-secondary</span>
+								<span className={styles.punctuation}>:</span> <span className={styles.function}>var</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.variable}>--p-color-black</span>
+								<span className={styles.punctuation}>)</span>
+								<span className={styles.punctuation}>;</span>
+								{'\n    '}
+								<span className={styles.comment}>// etc...</span>
+								{'\n  '}
+								<span className={styles.punctuation}>{'}'}</span>
+								{'\n\n  '}
+								<span className={styles.selector}>[data-theme='c']</span>{' '}
+								<span className={styles.punctuation}>{'{'}</span>
+								{'\n    '}
+								<span className={styles.property}>--color-accent</span>
+								<span className={styles.punctuation}>:</span> <span className={styles.function}>var</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.variable}>--p-color-cyan-500</span>
+								<span className={styles.punctuation}>)</span>
+								<span className={styles.punctuation}>;</span>
+								{'\n    '}
+								<span className={styles.property}>--button-background-hover</span>
+								<span className={styles.punctuation}>:</span> <span className={styles.function}>var</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.variable}>--color-accent</span>
+								<span className={styles.punctuation}>)</span>
+								<span className={styles.punctuation}>;</span>
+								{'\n    '}
+								<span className={styles.comment}>// etc...</span>
+								{'\n  '}
+								<span className={styles.punctuation}>{'}'}</span>
+								{'\n'}
+								<span className={styles.punctuation}>{'}'}</span>
+							</code>
+						</pre>
 						<p>
 							I created a basic{' '}
 							<Link className={styles.link} href={'/style'} target='_blank'>
-								living style guide
+								living style demo
 							</Link>{' '}
-							to reference and ensure system elements functioned properly, allowing stress-testing of the style system,
-							theme changes, and animations before component construction. For a full team, tools like Storybook or
-							ZeroHeight would be ideal for documentation.
+							to stress-test styles and ensure they functioned properly with theme changes, and animations before
+							building components. For a full team, I would typically use tools like Storybook for documentation.
 						</p>
 						<p>
 							<strong>Regarding CSS Modules:</strong> A CSS Module-based style system with custom properties is my
 							preferred approach. It maintains a separation of concerns while{' '}
-							<em>maximizing flexibility and control</em>
-							over styles. Pairing this with native CSS features like custom properties helps future-proof your code,
-							avoiding massive refactoring and tech-debt issues. It also allows developers to fully leverage the power
-							of CSS, keeping it clean, modular, and easy to build component systems.
+							<em>maximizing flexibility and control</em> over styles. Pairing this with native CSS features like custom
+							properties helps future-proof code, avoiding massive refactoring and tech-debt issues. It enables teams to
+							fully leverage the power of CSS, keeping it clean, adaptable, and easy to build component systems.
 						</p>
 						<h3 className={cn(styles.h3, styles.soloHeader)}>Component Creation</h3>
 						<p>
-							With ingredients prepped and ready to rock, it was time to start cooking! I began with atomic components
-							like buttons, gradually working up to more complex ones like headers, footers, and project cards.
+							With ingredients prepped and ready to rock, it was time to start cooking! I set up atomic components like
+							buttons first, then gradually worked up to more complex ones like headers, footers, and cards.
 						</p>
-						<div className={cn(styles.multiImagesContainer, styles.breakout)}>
+						<div className={styles.multiImagesContainer}>
 							<MultiImage
 								imgSrc1={data.images.component2.src}
 								imgAlt1={data.images.component2.alt}
 								imgSrc2={data.images.component3.src}
 								imgAlt2={data.images.component3.alt}
-								imgSrc3={data.images.componentCode.src}
-								imgAlt3={data.images.componentCode.alt}
-								imgSrc4={data.images.component4.src}
-								imgAlt4={data.images.component4.alt}
+								imgSrc3={data.images.component4.src}
+								imgAlt3={data.images.component4.alt}
 								caption='Header, Featured Project, Button,  and Footer components'
-								textRight
 							>
 								<p>
-									These components were built using responsive and fluid design techniques that ensured a seamless
-									experience across all devices. Each component was controlled by props that toggled features or
-									achieved specific layouts. They were customizable where needed, giving developers (just me in this
-									case) freedom while maintaining design integrity.
-								</p>
-								<p>
-									For components requiring theme state, React Context enabled dynamic features like animated logos
-									during theme changes and subtle style updates based on user preferences.
+									These components were built with responsive and fluid design techniques to ensure a seamless
+									experience across all devices.
 								</p>
 							</MultiImage>
 						</div>
+						<p>
+							To achieve specific layouts, component features could be toggled on and off or controlled with simple
+							props. They were customizable where needed, giving developers (<em>just me in this case</em>) freedom
+							while maintaining design integrity.
+						</p>
+						<pre className={styles.syntax} tabIndex={0} aria-label='Component usage example'>
+							<code>
+								<span className={styles.comment}>/* page.tsx */</span>
+								{'\n'}
+								<span className={styles.keyword}>import</span> <span className={styles.function}>dynamic</span>{' '}
+								<span className={styles.keyword}>from</span> <span className={styles.string}>"next/dynamic"</span>
+								<span className={styles.punctuation}>;</span>
+								{'\n'}
+								<span className={styles.keyword}>import</span> <span className={styles.punctuation}>{'{'}</span>{' '}
+								<span className={styles.variable}>brand</span> <span className={styles.punctuation}>{'}'}</span>{' '}
+								<span className={styles.keyword}>from</span> <span className={styles.string}>"@/data"</span>
+								<span className={styles.punctuation}>;</span>
+								{'\n'}
+								<span className={styles.keyword}>import</span> <span className={styles.variable}>styles</span>{' '}
+								<span className={styles.keyword}>from</span> <span className={styles.string}>"./home.module.scss"</span>
+								<span className={styles.punctuation}>;</span>
+								{'\n\n'}
+								<span className={styles.comment}>// dynamic import for performance boost</span>
+								{'\n'}
+								<span className={styles.keyword}>const</span> <span className={styles.variable}>FeaturedProject</span>{' '}
+								<span className={styles.operator}>=</span> <span className={styles.function}>dynamic</span>
+								<span className={styles.punctuation}>(()</span> <span className={styles.operator}>{'=>'}</span>{' '}
+								<span className={styles.function}>import</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.string}>"@/components/FeaturedProject/FeaturedProject"</span>
+								<span className={styles.punctuation}>),</span> <span className={styles.punctuation}>{'{'}</span>
+								{'\n  '}
+								<span className={styles.property}>ssr</span>
+								<span className={styles.punctuation}>:</span> <span className={styles.boolean}>true</span>
+								<span className={styles.punctuation}>,</span>
+								{'\n'}
+								<span className={styles.punctuation}>{'}'}</span>
+								<span className={styles.punctuation}>);</span>
+								{'\n\n'}
+								<span className={styles.keyword}>export default function</span>{' '}
+								<span className={styles.function}>Home</span>
+								<span className={styles.punctuation}>()</span> <span className={styles.punctuation}>{'{'}</span>
+								{'\n  '}
+								<span className={styles.comment}>// variables, hooks, etc...</span>
+								{'\n\n  '}
+								<span className={styles.keyword}>return</span> <span className={styles.punctuation}>(</span>
+								{'\n    '}
+								<span className={styles.tag}>&lt;section&gt;</span>
+								{'\n      '}
+								<span className={styles.tag}>&lt;div</span> <span className={styles.attribute}>className</span>
+								<span className={styles.operator}>=</span>
+								<span className={styles.punctuation}>{'{'}</span>
+								<span className={styles.variable}>styles</span>
+								<span className={styles.punctuation}>.</span>
+								<span className={styles.property}>containerGrid</span>
+								<span className={styles.punctuation}>{'}'}</span>
+								<span className={styles.tag}>&gt;</span>
+								{'\n        '}
+								<span className={styles.tag}>&lt;FeaturedProject</span>
+								{'\n          '}
+								<span className={styles.attribute}>id</span>
+								<span className={styles.operator}>=</span>
+								<span className={styles.string}>"brand"</span>
+								{'\n          '}
+								<span className={styles.attribute}>className</span>
+								<span className={styles.operator}>=</span>
+								<span className={styles.punctuation}>{'{'}</span>
+								<span className={styles.variable}>styles</span>
+								<span className={styles.punctuation}>.</span>
+								<span className={styles.property}>breakoutXl</span>
+								<span className={styles.punctuation}>{'}'}</span>
+								{'\n          '}
+								<span className={styles.attribute}>title</span>
+								<span className={styles.operator}>=</span>
+								<span className={styles.punctuation}>{'{'}</span>
+								<span className={styles.variable}>brand</span>
+								<span className={styles.punctuation}>.</span>
+								<span className={styles.property}>text</span>
+								<span className={styles.punctuation}>.</span>
+								<span className={styles.property}>title</span>
+								<span className={styles.punctuation}>{'}'}</span>
+								{'\n          '}
+								<span className={styles.attribute}>accessibleTitle</span>
+								<span className={styles.operator}>=</span>
+								<span className={styles.punctuation}>{'{'}</span>
+								<span className={styles.variable}>brand</span>
+								<span className={styles.punctuation}>.</span>
+								<span className={styles.property}>text</span>
+								<span className={styles.punctuation}>.</span>
+								<span className={styles.property}>title</span>
+								<span className={styles.punctuation}>{'}'}</span>
+								{'\n          '}
+								<span className={styles.attribute}>description</span>
+								<span className={styles.operator}>=</span>
+								<span className={styles.punctuation}>{'{'}</span>
+								<span className={styles.variable}>brand</span>
+								<span className={styles.punctuation}>.</span>
+								<span className={styles.property}>text</span>
+								<span className={styles.punctuation}>.</span>
+								<span className={styles.property}>description</span>
+								<span className={styles.punctuation}>{'}'}</span>
+								{'\n          '}
+								<span className={styles.attribute}>metaTags</span>
+								<span className={styles.operator}>=</span>
+								<span className={styles.punctuation}>{'{'}</span>
+								<span className={styles.variable}>brand</span>
+								<span className={styles.punctuation}>.</span>
+								<span className={styles.property}>tags</span>
+								<span className={styles.punctuation}>{'}'}</span>
+								{'\n          '}
+								<span className={styles.attribute}>imgSrc</span>
+								<span className={styles.operator}>=</span>
+								<span className={styles.punctuation}>{'{'}</span>
+								<span className={styles.variable}>brand</span>
+								<span className={styles.punctuation}>.</span>
+								<span className={styles.property}>images</span>
+								<span className={styles.punctuation}>.</span>
+								<span className={styles.property}>hero</span>
+								<span className={styles.punctuation}>.</span>
+								<span className={styles.property}>src</span>
+								<span className={styles.punctuation}>{'}'}</span>
+								{'\n          '}
+								<span className={styles.attribute}>imgAlt</span>
+								<span className={styles.operator}>=</span>
+								<span className={styles.punctuation}>{'{'}</span>
+								<span className={styles.variable}>brand</span>
+								<span className={styles.punctuation}>.</span>
+								<span className={styles.property}>images</span>
+								<span className={styles.punctuation}>.</span>
+								<span className={styles.property}>hero</span>
+								<span className={styles.punctuation}>.</span>
+								<span className={styles.property}>alt</span>
+								<span className={styles.punctuation}>{'}'}</span>
+								{'\n          '}
+								<span className={styles.attribute}>caption</span>
+								<span className={styles.operator}>=</span>
+								<span className={styles.punctuation}>{'{'}</span>
+								<span className={styles.variable}>brand</span>
+								<span className={styles.punctuation}>.</span>
+								<span className={styles.property}>images</span>
+								<span className={styles.punctuation}>.</span>
+								<span className={styles.property}>hero</span>
+								<span className={styles.punctuation}>.</span>
+								<span className={styles.property}>caption</span>
+								<span className={styles.punctuation}>{'}'}</span>
+								{'\n          '}
+								<span className={styles.attribute}>buttonText</span>
+								<span className={styles.operator}>=</span>
+								<span className={styles.string}>"Explore"</span>
+								{'\n          '}
+								<span className={styles.attribute}>href</span>
+								<span className={styles.operator}>=</span>
+								<span className={styles.string}>"/brand?from=brand"</span>
+								{'\n          '}
+								<span className={styles.attribute}>hasCropIcon</span>
+								{'\n          '}
+								<span className={styles.attribute}>accentBg</span>
+								{'\n        '}
+								<span className={styles.tag}>/&gt;</span>
+								{'\n      '}
+								<span className={styles.tag}>&lt;/div&gt;</span>
+								{'\n    '}
+								<span className={styles.tag}>&lt;/section&gt;</span>
+								{'\n  '}
+								<span className={styles.punctuation}>)</span>
+								<span className={styles.punctuation}>;</span>
+								{'\n'}
+								<span className={styles.punctuation}>{'}'}</span>
+							</code>
+						</pre>
+						<p>
+							For components requiring theme state, <code>useContext()</code> enabled dynamic features like animated
+							logos during theme changes and subtle style updates based on user preferences.
+						</p>
 						<div className={cn(styles.sideImagesContainer, styles.flowOffset)}>
 							<SideImage
 								imgSrc={data.images.optimization.src}
@@ -421,7 +683,7 @@ export const BrandContent = () => {
 									</span>
 								</h3>
 								<p>
-									To keep the site speedy and responsive, I leveraged the Next.js{' '}
+									To keep the site speedy and responsive, I leaned into the Next.js{' '}
 									<a
 										href='https://nextjs.org/docs/pages/api-reference/components/image'
 										className={styles.link}
@@ -430,17 +692,17 @@ export const BrandContent = () => {
 									>
 										Image component
 									</a>{' '}
-									for optimized image loading and sizing, using blur effects and data URLs where appropriate. Adding to
-									this performance boost, I implemented a combination of server and client-side rendering, along with
-									dynamic loading for below-fold components, which helped minimize initial paint times.
+									for optimized loading, sizing, blur effects and data URLs where appropriate. I also implemented a
+									combination of server and client-side rendering, along with dynamic loading for out-of-view
+									components, which helped minimize initial paint times.
 								</p>
 								<p>
-									Accessibility was baked in from the start, with semantic HTML and appropriate ARIA attributes
-									providing an optimal experience for keyboard navigation and screen readers.
+									Accessibility was baked in from the start, with semantic HTML and ARIA attributes providing an optimal
+									experience for keyboard navigation and screen readers.
 								</p>
 								<p>
-									To ensure everything worked smoothly, I regularly ran performance and accessibility checks using
-									Chrome Lighthouse and{' '}
+									To ensure everything worked smoothly, I ran performance and accessibility checks using Chrome
+									Lighthouse and{' '}
 									<a
 										href='https://accessibilityinsights.io/docs/web/overview/'
 										className={styles.link}
@@ -449,35 +711,34 @@ export const BrandContent = () => {
 									>
 										Accessibility Insights
 									</a>
-									, catching UI issues early and maintaining a seamless user experience.
+									, catching UI issues early and maintaining a pleasant user experience.
 								</p>
 							</SideImage>
 						</div>
 						<h3 className={styles.h3}>Squashin' Bugs</h3>
 						<p>
-							Every ambitious project comes with its share of challenges. While bugfixing and smoothing animations, I
-							encountered some interesting hurdles with Turbopack. For starters, it{' '}
+							Every project comes with its share of challenges. While bugfixing and smoothing animations, I ran into
+							some interesting hurdles with Turbopack. For starters, it{' '}
 							<a
 								href='https://nextjs.org/docs/app/api-reference/turbopack#unsupported-and-unplanned-features'
 								className={styles.link}
 								target='_blank'
 								rel='noopener noreferrer'
 							>
-								did not support
+								didn't support
 							</a>{' '}
-							ICSS ':export' pseudo-selectors, which I typically used to share viewport values between SCSS and JS
-							files. Without a clean solution, I had to duplicate some values—not my favorite workaround!
+							ICSS <code>:export</code> pseudo-selectors, which I typically used to share viewport values between SCSS
+							and JS files. Without a clean solution, I had to duplicate some values—not my favorite workaround!
 						</p>
 						<p>
-							The animation quirks were another fun surprise. Turbopack wasn't playing nice with keyframe rules, whether
-							at the component level or in global CSS partials. <em>The fix?</em> Loading animations as a separate
-							stylesheet on page load. Not elegant, but it did the trick.
+							The animation kinks were another fun surprise. Turbopack wasn't playing nice with <code>@keyframes</code>{' '}
+							rules, whether at the component level or in global CSS partials. <em>The fix?</em> Loading animations as a
+							separate stylesheet on page load. Not elegant, but it did the trick.
 						</p>
 						<p>
-							Finally, there was the stubborn theme state bug that stuck around. The challenge was preventing a FOUC,{' '}
-							<em>Flash of Unstyled Content</em>, during initial page load when setting theme values from localStorage.
-							At the time of launch, there was a 500 error on initial load, though the app functioned normally. It
-							remains a puzzle I looked forward to solving properly in the future.
+							Finally, there was a stubborn react hydration error that stuck around when using <code>localStorage</code>
+							. The challenge was preventing a FOUC, <em>Flash of Unstyled Content</em>, during initial page load and
+							when updating theme values. The fix was to use <code>useEffect()</code> to set the theme state on mount.
 						</p>
 					</div>
 				</section>
@@ -486,9 +747,9 @@ export const BrandContent = () => {
 				<div className={styles.containerGrid}>
 					<h2 className={styles.h2}>The Final Result</h2>
 					<p>
-						This project has been an awesome ride - a perfect blend of past experience and fresh exploration. While I've
-						spent years bringing design to life through code, it's especially challenging to build a reflection of
-						yourself, your wins, your stumbles, and everything in between.
+						This project has been an epic ride - the perfect blend of past experience with fresh exploration. While I've
+						spent years as a Design Engineer, it's especially challenging to build a reflection of yourself, your wins,
+						your stumbles, and everything in between.
 					</p>
 					<LargeImage
 						className={cn(styles.imageContainer, styles.flowOffset, styles.breakout)}
@@ -496,10 +757,13 @@ export const BrandContent = () => {
 						alt={data.images.final.alt}
 					/>
 					<p>
-						Along the way, I expanded my toolkit with some updated CSS grid layouts, discovered the magic of 'lh' values
-						for better typographical rhythm, and dove into some sweet Next.js and React enhancements. Though the project
-						is technically 'done,' it's really just the beginning. Even after years in the field, there's always
-						something new to try out and explore.
+						Throughout the journey, I expanded my toolkit with some new CSS grid layouts, discovered the magic of{' '}
+						<code>lh</code> values for better typographical rhythm, and dove into some sweet Next.js and React
+						enhancements.
+					</p>
+					<p>
+						Though the project is technically 'done,' it's really just the beginning. Even after years in the field,
+						there's always something new to try out and explore.
 					</p>
 					<p>
 						You can{' '}
@@ -512,21 +776,21 @@ export const BrandContent = () => {
 							view my site repo
 						</a>{' '}
 						in its entirety on Github. Feel free to poke around! Your{' '}
-						<a href='mailto:hello@example.com' className={styles.link}>
+						<a href='mailto:ryanbrandle.dev@gmail.com?subject=Hello!' className={styles.link}>
 							thoughts and feedback
 						</a>{' '}
 						are always welcome.
 					</p>
 					<p>
-						Much ❤️ and respect to the people who've helped inspire this project and some helpful tools used along the
-						way:
+						Much ❤️ and respect to the people who've helped inspire this project and these helpful tools I used along
+						the way:
 					</p>
 					<ul className={styles.ul}>
 						<li>
 							<a href='https://ryanmulligan.dev/' className={styles.link} target='_blank' rel='noopener noreferrer'>
 								Ryan Mulligan
 							</a>{' '}
-							- Past mentor and code beast
+							- Past Mentor & Code Maestro
 						</li>
 						<li>
 							<a href='https://www.joshwcomeau.com/' className={styles.link} target='_blank' rel='noopener noreferrer'>
@@ -549,7 +813,7 @@ export const BrandContent = () => {
 							>
 								Fluid Type Scale
 							</a>{' '}
-							- Super helpful fluid type generator
+							- Super helpful type generator
 						</li>
 						<li>
 							<a

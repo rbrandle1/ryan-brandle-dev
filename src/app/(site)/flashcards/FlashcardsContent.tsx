@@ -86,12 +86,17 @@ export const FlashcardsContent = () => {
 						</p>
 					</div>
 				</section>
-				<Callout 
-				className={cn(styles.callout, styles.flowOffset)} 
-				title={
-					<>Unlocking potential<br />for all minds to thrive.</>
-				} 
-				titleAccent />
+				<Callout
+					className={cn(styles.callout, styles.flowOffset)}
+					title={
+						<>
+							Unlocking potential
+							<br />
+							for all minds to thrive.
+						</>
+					}
+					titleAccent
+				/>
 				<section className={styles.section}>
 					<div className={styles.containerGrid}>
 						<h2 className={styles.h2}>
@@ -222,28 +227,92 @@ export const FlashcardsContent = () => {
 						<p>
 							These were set and modified using React hooks and <code>useEffect()</code>:
 						</p>
-						<pre className={styles.syntax}>
-						<code>
-  <span className={styles.keyword}>const</span> <span className={styles.punctuation}>[</span><span className={styles.variable}>dataAccessibilityTheme</span><span className={styles.punctuation}>,</span> <span className={styles.variable}>setDataAccessibilityTheme</span><span className={styles.punctuation}>]</span> <span className={styles.operator}>=</span> <span className={styles.function}>useState</span><span className={styles.punctuation}>(</span><span className={styles.string}>''</span><span className={styles.punctuation}>)</span><span className={styles.punctuation}>;</span>
-  {'\n'}
-  <span className={styles.keyword}>const</span> <span className={styles.punctuation}>[</span><span className={styles.variable}>dataTheme</span><span className={styles.punctuation}>,</span> <span className={styles.variable}>setDataTheme</span><span className={styles.punctuation}>]</span> <span className={styles.operator}>=</span> <span className={styles.function}>useState</span><span className={styles.punctuation}>(</span><span className={styles.string}>'🤖'</span><span className={styles.punctuation}>)</span><span className={styles.punctuation}>;</span>
-  {'\n\n'}
-  <span className={styles.function}>useEffect</span><span className={styles.punctuation}>(() => {'{'}</span>
-  {'\n  '}
-  <span className={styles.variable}>document</span><span className={styles.punctuation}>.</span><span className={styles.variable}>body</span><span className={styles.punctuation}>.</span><span className={styles.function}>setAttribute</span><span className={styles.punctuation}>(</span><span className={styles.string}>'data-accessibility-theme'</span><span className={styles.punctuation}>,</span> <span className={styles.variable}>dataAccessibilityTheme</span><span className={styles.punctuation}>)</span><span className={styles.punctuation}>;</span>
-  {'\n  '}
-  <span className={styles.variable}>document</span><span className={styles.punctuation}>.</span><span className={styles.variable}>body</span><span className={styles.punctuation}>.</span><span className={styles.function}>setAttribute</span><span className={styles.punctuation}>(</span><span className={styles.string}>'data-theme'</span><span className={styles.punctuation}>,</span> <span className={styles.variable}>dataTheme</span><span className={styles.punctuation}>)</span><span className={styles.punctuation}>;</span>
-  {'\n\n  '}
-  <span className={styles.keyword}>return</span> <span className={styles.punctuation}>() => {'{'}</span>
-  {'\n    '}
-  <span className={styles.variable}>document</span><span className={styles.punctuation}>.</span><span className={styles.variable}>body</span><span className={styles.punctuation}>.</span><span className={styles.function}>removeAttribute</span><span className={styles.punctuation}>(</span><span className={styles.string}>'data-accessibility-theme'</span><span className={styles.punctuation}>)</span><span className={styles.punctuation}>;</span>
-  {'\n    '}
-  <span className={styles.variable}>document</span><span className={styles.punctuation}>.</span><span className={styles.variable}>body</span><span className={styles.punctuation}>.</span><span className={styles.function}>removeAttribute</span><span className={styles.punctuation}>(</span><span className={styles.string}>'data-theme'</span><span className={styles.punctuation}>)</span><span className={styles.punctuation}>;</span>
-  {'\n  '}
-  <span className={styles.punctuation}>{'}'}</span><span className={styles.punctuation}>;</span>
-  {'\n'}
-  <span className={styles.punctuation}>{'}'},</span> <span className={styles.punctuation}>[</span><span className={styles.variable}>dataAccessibilityTheme</span><span className={styles.punctuation}>,</span> <span className={styles.variable}>dataTheme</span><span className={styles.punctuation}>]</span><span className={styles.punctuation}>)</span><span className={styles.punctuation}>;</span>
-</code>
+						<pre className={styles.syntax} tabIndex={0} aria-label='Setting custom themes'>
+							<code>
+								<span className={styles.keyword}>const</span> <span className={styles.punctuation}>[</span>
+								<span className={styles.variable}>dataAccessibilityTheme</span>
+								<span className={styles.punctuation}>,</span>{' '}
+								<span className={styles.variable}>setDataAccessibilityTheme</span>
+								<span className={styles.punctuation}>]</span> <span className={styles.operator}>=</span>{' '}
+								<span className={styles.function}>useState</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.string}>''</span>
+								<span className={styles.punctuation}>)</span>
+								<span className={styles.punctuation}>;</span>
+								{'\n'}
+								<span className={styles.keyword}>const</span> <span className={styles.punctuation}>[</span>
+								<span className={styles.variable}>dataTheme</span>
+								<span className={styles.punctuation}>,</span> <span className={styles.variable}>setDataTheme</span>
+								<span className={styles.punctuation}>]</span> <span className={styles.operator}>=</span>{' '}
+								<span className={styles.function}>useState</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.string}>'🤖'</span>
+								<span className={styles.punctuation}>)</span>
+								<span className={styles.punctuation}>;</span>
+								{'\n\n'}
+								<span className={styles.function}>useEffect</span>
+								<span className={styles.punctuation}>
+									(() {'=>'} {'{'}
+								</span>
+								{'\n  '}
+								<span className={styles.variable}>document</span>
+								<span className={styles.punctuation}>.</span>
+								<span className={styles.variable}>body</span>
+								<span className={styles.punctuation}>.</span>
+								<span className={styles.function}>setAttribute</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.string}>'data-accessibility-theme'</span>
+								<span className={styles.punctuation}>,</span>{' '}
+								<span className={styles.variable}>dataAccessibilityTheme</span>
+								<span className={styles.punctuation}>)</span>
+								<span className={styles.punctuation}>;</span>
+								{'\n  '}
+								<span className={styles.variable}>document</span>
+								<span className={styles.punctuation}>.</span>
+								<span className={styles.variable}>body</span>
+								<span className={styles.punctuation}>.</span>
+								<span className={styles.function}>setAttribute</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.string}>'data-theme'</span>
+								<span className={styles.punctuation}>,</span> <span className={styles.variable}>dataTheme</span>
+								<span className={styles.punctuation}>)</span>
+								<span className={styles.punctuation}>;</span>
+								{'\n\n  '}
+								<span className={styles.keyword}>return</span>{' '}
+								<span className={styles.punctuation}>
+									() {'=>'} {'{'}
+								</span>
+								{'\n    '}
+								<span className={styles.variable}>document</span>
+								<span className={styles.punctuation}>.</span>
+								<span className={styles.variable}>body</span>
+								<span className={styles.punctuation}>.</span>
+								<span className={styles.function}>removeAttribute</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.string}>'data-accessibility-theme'</span>
+								<span className={styles.punctuation}>)</span>
+								<span className={styles.punctuation}>;</span>
+								{'\n    '}
+								<span className={styles.variable}>document</span>
+								<span className={styles.punctuation}>.</span>
+								<span className={styles.variable}>body</span>
+								<span className={styles.punctuation}>.</span>
+								<span className={styles.function}>removeAttribute</span>
+								<span className={styles.punctuation}>(</span>
+								<span className={styles.string}>'data-theme'</span>
+								<span className={styles.punctuation}>)</span>
+								<span className={styles.punctuation}>;</span>
+								{'\n  '}
+								<span className={styles.punctuation}>{'}'}</span>
+								<span className={styles.punctuation}>;</span>
+								{'\n'}
+								<span className={styles.punctuation}>{'}'},</span> <span className={styles.punctuation}>[</span>
+								<span className={styles.variable}>dataAccessibilityTheme</span>
+								<span className={styles.punctuation}>,</span> <span className={styles.variable}>dataTheme</span>
+								<span className={styles.punctuation}>]</span>
+								<span className={styles.punctuation}>)</span>
+								<span className={styles.punctuation}>;</span>
+							</code>
 						</pre>
 						<p>
 							On the style side, I experimented with variable naming conventions, aiming for balance between flexibility
@@ -258,7 +327,7 @@ export const FlashcardsContent = () => {
 							To prevent any confusion, I used theme specific color names, then mapped them into functional based
 							variables, like this:
 						</p>
-						<pre className={styles.syntax}>
+						<pre className={styles.syntax} tabIndex={0} aria-label='Custom theme colors'>
 							<code>
 								<span className={styles.comment}>// Defined theme specific colors...</span>
 								{'\n'}
@@ -394,7 +463,7 @@ export const FlashcardsContent = () => {
 							To make a reusable way to unlock my fluid typography, I created a utility mixin, <code>_utils.scss</code>,
 							and included it on a per-instance basis, like this:
 						</p>
-						<pre className={styles.syntax}>
+						<pre className={styles.syntax} tabIndex={0} aria-label='Fluid typography utility mixin'>
 							<code>
 								<span className={styles.comment}>// Utility mixin for fluid typography</span>
 								{'\n'}
@@ -493,7 +562,7 @@ export const FlashcardsContent = () => {
 							features—loading assets only when they came into view.
 						</p>
 						<p>You can see an abbreviated JSX code example how I accomplished this for the Card component:</p>
-						<pre className={styles.syntax}>
+						<pre className={styles.syntax} tabIndex={0} aria-label='Lazy loading example'>
 							<code>
 								<span className={styles.keyword}>import</span> <span className={styles.punctuation}>{'{'}</span>{' '}
 								<span className={styles.variable}>lazy</span>

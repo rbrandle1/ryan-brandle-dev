@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ryan Brandle | Design Engineer Portfolio
 
-## Getting Started
+Hey there! 👋 I'm Ryan, a Design Engineer who loves bringing design systems and react component libraries to life. This portfolio was designed and coded by me to showcase my approach to front-end development and design system implementation. Built with Next.js 15, React 19, and Turbopack, I hope you enjoy exploring it as much as I enjoyed creating it!
 
-First, run the development server:
+## 🚀 Features
+
+- **Design System Implementation**
+
+  - Fluid typography and spacing using design tokens
+  - Multi-theme support
+  - Responsive, accessible components
+  - CSS Grid-based layouts
+
+- **Technical Highlights**
+  - State management via React Context
+  - Performance-optimized images with Next.js Image
+  - WCAG 2.1 compliant
+  - Responsive animations and transitions
+  - Skip links and semantic HTML
+
+## 🛠️ Development Challenges & Solutions
+
+### State Management
+
+Implemented React Context for theme management to avoid prop drilling and ensure consistent state across components.
+
+### Performance Optimization
+
+- Utilized Next.js Image component with blurDataURL for optimized loading
+- Implemented static image imports for better blur placeholder generation
+- Organized assets for efficient management
+
+### Accessibility
+
+- WCAG 2.1 compliance
+- Semantic HTML structure
+- Skip links for keyboard navigation
+- ARIA labels and roles
+- Reduced motion support
+
+### Design System
+
+- Design tokens for colors, spacing, and typography
+- Fluid unit techniques for responsive design
+- Multi-theme support with CSS variables
+- Typography-based spacing system
+
+## 🏗️ Getting Started
 
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚧 Known Issues
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Turbopack limitations with SASS :export for breakpoint variables
+- Animation keyframe rendering requires top-level placement
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Tech Stack
 
-## Learn More
+- Next.js 15
+- React 19
+- TypeScript
+- SASS
+- CSS Modules
+- Turbopack
 
-To learn more about Next.js, take a look at the following resources:
+## 📫 Contact
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Let's build something exceptional together! [Get in touch](mailto:ryanbrandle.dev@gmail.com?subject=Hello!)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+_"I create accessible, intuitive, and scalable interfaces. I enjoy coding design to life and pushing the boundaries of front-end craftsmanship."_

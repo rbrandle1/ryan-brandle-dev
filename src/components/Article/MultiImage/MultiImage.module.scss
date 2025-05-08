@@ -3,62 +3,76 @@
 @use '@/styles/utils/element' as element;
 
 .multiImage {
-	--gap: var(--space-xs);
+	--gap: calc(var(--gutter) / 2);
 
-	position: relative;
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: var(--gap);
+	grid-template-columns: inherit;
+	position: relative;
 
 	@include viewport.breakpoint(sm) {
-		--gap: 0.5lh;
+		--gap: 0.25lh;
 
+		// position: relative;
+		gap: var(--gap);
 		grid-template-columns: repeat(3, 1fr);
 	}
 }
 
+.mobileSlider {
+	grid-column: full;
+	display: grid;
+	grid-template-columns: inherit;
+	overflow-x: scroll;
+	overscroll-behavior-x: contain;
+	scroll-snap-type: x mandatory;
+	scrollbar-width: none;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+.slideWrapper {
+	display: flex;
+	gap: var(--gap);
+	grid-column: main;
+	padding-block: 2px; // hack to fix mobile border cut off
+
+	&::after {
+		content: '';
+		align-self: stretch;
+		padding-inline-end: var(--gap);
+	}
+}
+
 .figure {
-	@include viewport.breakpoint(sm) {
-		&:nth-child(4):not(.textRight &) {
-			order: 1;
+	@include viewport.breakpoint(sm, max) {
+		flex: 0 0 auto;
+		min-width: calc(100% - var(--gap) * 2);
+		scroll-snap-align: center;
+
+		&:nth-child(4) .image {
+			border: none;
 		}
 	}
 
-	@include viewport.breakpoint(sm, max) {
-		&:first-child {
-			grid-row: span 2;
-			align-self: center;
-		}
-
-		&:nth-child(2) {
-			.textRight & {
-				grid-column: 1;
-				grid-row: 1;
-			}
-
-			.image {
-				aspect-ratio: var(--ratio-square);
-			}
-		}
-
-		&:nth-child(3) {
-			.image {
-				aspect-ratio: var(--ratio-landscape);
-			}
-		}
-
-		&:nth-child(4) {
-			@include element.visually-hidden;
+	@include viewport.breakpoint(sm) {
+		&:nth-child(4):not(.textRight &) {
+			order: 1;
 		}
 	}
 }
 
 .image {
 	position: relative;
-	border-radius: var(--radius-default);
+	border-radius: var(--radius-lg);
 	aspect-ratio: var(--ratio-portrait);
 	overflow: hidden;
 	user-select: none;
+
+	@include viewport.breakpoint(sm, max) {
+		border: 1px solid var(--p-color-gray-900);
+	}
 
 	img {
 		object-fit: cover;
@@ -66,10 +80,11 @@
 }
 
 .textContainer {
-	grid-column: span 2;
+	grid-column: main;
 
 	@include viewport.breakpoint(sm) {
 		display: grid;
+		grid-column: span 2;
 		grid-template-columns: var(--breakout) min(668px, 100%) minmax(0, calc(var(--gap) * 2));
 		grid-template-areas: '. text .';
 	}
@@ -113,6 +128,13 @@
 
 .caption {
 	@include viewport.breakpoint(sm, max) {
-		@include element.visually-hidden;
+		position: absolute;
+		right: calc(var(--gutter) / 1.6);
+		text-align: right;
+
+		svg {
+			left: auto;
+			right: calc(var(--gutter) / 2);
+		}
 	}
 }

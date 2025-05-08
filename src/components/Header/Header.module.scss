@@ -4,6 +4,8 @@
 @use '@/styles/utils/viewport';
 
 .header {
+	background-color: var(--surface-primary);
+
 	@include layout.grid;
 	@include element.accent-edge;
 }
@@ -138,7 +140,6 @@
 		height: var(--space-md);
 		background-color: var(--color-primary);
 		transform: skewX(-15deg);
-		z-index: -1;
 
 		@include viewport.breakpoint(xs) {
 			left: 32px;

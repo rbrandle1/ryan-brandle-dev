@@ -1,5 +1,16 @@
 import cn from 'classnames';
+import { Metadata } from 'next';
 import styles from './style.module.scss';
+
+export const metadata: Metadata = {
+	robots: {
+		index: false,
+		follow: false,
+		nocache: true,
+	},
+	title: 'Style Guide',
+	description: 'Style guide for the website',
+};
 
 const TypographyExamples = () => {
 	return (

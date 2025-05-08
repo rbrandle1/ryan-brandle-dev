@@ -8,21 +8,37 @@ interface ThemeContextType {
 }
 
 const ThemeContext = createContext<ThemeContextType>({
-	theme: '',
+	theme: 'm',
 	handleThemeChange: () => {},
 });
 
 const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
-	const [theme, setTheme] = useState<Theme>((localStorage.getItem('theme') as Theme) || 'm');
+	const [mounted, setMounted] = useState(false);
+	const [theme, setTheme] = useState<Theme>('m');
 
 	useEffect(() => {
+		const storedTheme = localStorage.getItem('theme') as Theme;
+		if (storedTheme) {
+			setTheme(storedTheme);
+			document.body.dataset.theme = storedTheme;
+		}
+		setMounted(true);
+	}, []);
+
+	useEffect(() => {
+		if (!mounted) return;
+
 		localStorage.setItem('theme', theme);
 		document.body.dataset.theme = theme;
-	}, [theme]);
+	}, [theme, mounted]);
 
 	const handleThemeChange = (newTheme: Theme) => {
 		setTheme(newTheme);
 	};
+
+	if (!mounted) {
+		return null;
+	}
 
 	return <ThemeContext.Provider value={{ theme, handleThemeChange }}>{children}</ThemeContext.Provider>;
 };

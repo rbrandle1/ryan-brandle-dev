@@ -65,7 +65,6 @@ const ThemePicker = ({ className }: ThemePickerProps) => {
 				</label>
 			</div>
 			<div className={styles.icon}>
-				{/* <IconDroplet aria-hidden /> */}
 				<IconBucket aria-hidden />
 			</div>
 		</fieldset>

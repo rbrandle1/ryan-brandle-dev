@@ -7,17 +7,12 @@ import '@/styles/tokens/primitive.scss';
 import '@/styles/tokens/semantic.scss';
 import '@/styles/base.scss';
 import Header from '@/components/Header/Header';
-
-// Using a dynamic import for performance reasons.
-const ThemeProvider = dynamic(() => import('@/components/ThemeProvider/ThemeProvider'), {
-	ssr: true,
-});
+import ThemeProvider from '@/components/ThemeProvider/ThemeProvider';
 
 const Footer = dynamic(() => import('@/components/Footer/Footer'), {
 	ssr: true,
 });
 
-// Initialize fonts
 const oswald = Oswald({
 	weight: '700',
 	subsets: ['latin'],
@@ -45,14 +40,13 @@ const firaCode = Fira_Code({
 	display: 'swap',
 });
 
-// Ensuring fonts are referenced for typescript requirements.
 const useFonts = () => {
 	return { oswald, sourceSans, sourceSerif, firaCode };
 };
 
 export const metadata: Metadata = {
 	title: 'Ryan Brandle',
-	description: "Ryan Brandle's Portfolio",
+	description: 'Portfolio of Ryan Brandle | Design Engineer',
 };
 
 export default function RootLayout({
@@ -72,7 +66,7 @@ export default function RootLayout({
 					</main>
 					<Footer />
 				</ThemeProvider>
-				<Script src='https://cpwebassets.codepen.io/assets/embed/ei.js' strategy='lazyOnload' />
+				<Script src='https://cpwebassets.codepen.io/assets/embed/ei.js' strategy='beforeInteractive' />
 			</body>
 		</html>
 	);

@@ -172,9 +172,13 @@
 }
 
 .featuredSection {
-	--flow-space: calc(var(--section-spacing) * 2);
+	--flow-space: calc(var(--section-spacing) * 3);
 
 	padding-block-end: var(--flow-space);
+
+	@include viewport.breakpoint(sm) {
+		--flow-space: calc(var(--section-spacing) * 2);
+	}
 }
 
 .projectSection {
@@ -211,11 +215,7 @@
 
 .lastCallout {
 	padding-block-start: 0;
-	padding-block-end: calc(var(--section-spacing) * 3);
-
-	@include viewport.breakpoint(xl) {
-		padding-block-end: calc(var(--section-spacing) * 2);
-	}
+	padding-block-end: calc(var(--section-spacing) * 2);
 }
 
 .bgVertText {
@@ -343,7 +343,6 @@
 		height: var(--gradient-height);
 		background-color: var(--p-color-gray-900);
 		border-radius: 50%;
-		// will-change: filter;
 		filter: blur(var(--gradient-blur));
 
 		@include viewport.breakpoint(xs) {

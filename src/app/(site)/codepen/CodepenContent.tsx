@@ -54,11 +54,18 @@ export const CodepenContent = () => {
 							as a space to prototype, practice, and refine my front-end thinking—combining visual exploration with
 							technical execution.
 						</p>
-						{/* </div>
-				</section>
-				<section className={styles.section}>
-					<div className={styles.containerGrid}> */}
 						<h2 className={styles.h2}>Focus Text-Effect</h2>
+						<p>
+							Demo:{' '}
+							<a
+								href='https://codepen.io/brandledesign/full/zYJPWBE'
+								className={styles.link}
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								Focus Text-Effect
+							</a>
+						</p>
 						<p>
 							I'd been wanting to build something just for the fun of it and landed on the idea of simulating depth of
 							field using CSS, like focusing a camera lens.
@@ -71,7 +78,7 @@ export const CodepenContent = () => {
 							using custom properties. I leaned into the <code>text-shadow</code> property to layer four colored shadows
 							that expanded and contracted as the slider moved.
 						</p>
-						<pre className={styles.syntax}>
+						<pre className={styles.syntax} tabIndex={0} aria-label='Text-shadow technique'>
 							<code>
 								<span className={styles.class}>.typography</span> <span className={styles.punctuation}>{'{'}</span>
 								{'\n  '}
@@ -192,7 +199,7 @@ export const CodepenContent = () => {
 							So what's the <em>secret ingredient</em>? Using <code>mix-blend-mode: plus-lighter</code> on the text as a{' '}
 							<code>::before</code> pseudo-element creating a vibrant glowing illusion as the shadows intersect.
 						</p>
-						<pre className={styles.syntax}>
+						<pre className={styles.syntax} tabIndex={0} aria-label='Mix-blend-mode technique'>
 							<code>
 								<span className={styles.class}>.typography</span> <span className={styles.punctuation}>{'{'}</span>
 								{'\n  '}
@@ -255,9 +262,20 @@ export const CodepenContent = () => {
 					<div className={styles.containerGrid}>
 						<h2 className={styles.h2}>Pixel Art Animation</h2>
 						<p>
-							To fuel my curiosity around Sass maps, I dove into a pixel art experiment. I thought it'd be fun to build
-							a themed project paying tribute to one of my all-time favorite childhood games: <em>Final Fantasy VII</em>
-							. I found an awesome pixel-style illustration by{' '}
+							Demo:{' '}
+							<a
+								href='https://codepen.io/brandledesign/full/RwEbGpP'
+								className={styles.link}
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								Pixel Art Animation
+							</a>
+						</p>
+						<p>
+							To fuel my curiosity around Sass maps, I dove into a pixel art experiment. I thought it'd be fun to try
+							some new tricks and pay tribute to one of my favorite childhood games: <em>Final Fantasy VII</em>. I found
+							an awesome pixel-style illustration by{' '}
 							<a
 								href='https://www.redbubble.com/i/art-board-print/FINAL-FANTASY-Cloud-Pixel-by-WubbaDubb/28177052.JUXJO'
 								className={styles.link}
@@ -291,8 +309,8 @@ export const CodepenContent = () => {
 							codebase tidy. Plus, it got me into a solid flow-state.
 						</p>
 						<p>The real magic happened in Sass:</p>
-						<pre>
-							<code className={styles.syntax}>
+						<pre className={styles.syntax} tabIndex={0} aria-label='SCSS mapping example'>
+							<code>
 								<span className={styles.variable}>$colors</span>
 								<span className={styles.punctuation}>: (</span>
 								{'\n  '}
@@ -381,6 +399,17 @@ export const CodepenContent = () => {
 					<div className={styles.containerGrid}>
 						<h2 className={styles.h2}>CSS Compass Loader</h2>
 						<p>
+							Demo:{' '}
+							<a
+								href='https://codepen.io/brandledesign/full/JjBZaZd'
+								className={styles.link}
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								CSS Compass Loader
+							</a>
+						</p>
+						<p>
 							While working at a luxury travel company, I dabbled with a few fun loading animations. This one was
 							inspired by a compass rose—with animated needles that subtly nodded to luxury travel, exploration and
 							navigating the globe.
@@ -398,6 +427,17 @@ export const CodepenContent = () => {
 				<section className={styles.section}>
 					<div className={styles.containerGrid}>
 						<h2 className={styles.h2}>The Blinky Einstien</h2>
+						<p>
+							Demo:{' '}
+							<a
+								href='https://codepen.io/brandledesign/full/mdVbaL'
+								className={styles.link}
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								Einstien Blink Animation
+							</a>
+						</p>
 						<p>
 							An old favorite of mine. I've always loved that classic photo of Einstein sticking his tongue out, so I
 							recreated him in Illustrator, turned it into an SVG, and gave him some blinky eyes—plus a few surprises on

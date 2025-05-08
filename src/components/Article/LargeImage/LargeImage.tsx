@@ -41,7 +41,7 @@ const LargeImage = ({
 	return (
 		<div className={cn(styles.largeImage, isHero && styles.hero, className)}>
 			{metaTags ? (
-				<aside className={styles.metaBox}>
+				<aside className={styles.metaBox} aria-label='Meta information'>
 					<MetaTags items={metaTags} />
 				</aside>
 			) : null}
