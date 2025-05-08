@@ -104,6 +104,10 @@
 
 	margin-block: var(--hero-flow-space);
 
+	@include viewport.breakpoint(md, max, height) {
+		margin-block-start: 1lh;
+	}
+
 	> * + * {
 		margin-block-start: var(--hero-flow-space);
 	}

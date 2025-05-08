@@ -15,6 +15,10 @@
 
 	@include viewport.breakpoint(md) {
 		--hero-spacing: 4lh;
+
+		@include viewport.breakpoint(md, max, height) {
+			--hero-spacing: 2lh;
+		}
 	}
 
 	// TYPOGRAPHY
