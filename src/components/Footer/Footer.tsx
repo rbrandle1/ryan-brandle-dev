@@ -47,6 +47,11 @@ const Footer = () => {
 					</p>
 				</div>
 				<div className={styles.copyContainer}>
+					<p>
+						<a href='mailto:ryanbrandle.dev@gmail.com' target='_blank'>
+							ryanbrandle.dev@gmail.com
+						</a>
+					</p>
 					<p>Designed &amp;&nbsp;developed by Ryan&nbsp;Brandle &copy;&nbsp;2025</p>
 				</div>
 				<div className={styles.socialContainer}>

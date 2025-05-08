@@ -81,6 +81,15 @@
 		order: 2;
 		text-align: center;
 	}
+
+	a {
+		@include typography.link();
+
+		& {
+			font-weight: initial;
+			color: var(--text-tertiary);
+		}
+	}
 }
 
 .socialContainer {
