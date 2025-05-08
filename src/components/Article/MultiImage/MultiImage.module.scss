@@ -92,15 +92,11 @@
 	.textRight & {
 		@include viewport.breakpoint(sm) {
 			grid-template-areas: '. text';
-			grid-template-columns: 1lh 1fr;
-		}
-
-		@include viewport.breakpoint(md) {
-			grid-template-columns: 2lh 1fr;
+			grid-template-columns: calc(var(--flow-space) / 2) 1fr;
 		}
 
 		@include viewport.breakpoint(lg) {
-			grid-template-columns: var(--space-3xl) 1fr;
+			grid-template-columns: var(--flow-space) 1fr;
 		}
 	}
 

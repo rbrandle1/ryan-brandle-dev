@@ -312,7 +312,7 @@
 .codePenContainer {
 	--flow-space: 3lh;
 
-	@include viewport.breakpoint(sm) {
+	@include viewport.breakpoint(lg) {
 		--flow-space: 4lh;
 	}
 
