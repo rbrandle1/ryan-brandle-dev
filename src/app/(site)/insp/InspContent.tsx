@@ -73,9 +73,13 @@ export const InspContent = () => {
 						</p>
 					</div>
 				</section>
-				<Callout className={cn(styles.callout, styles.flowOffset)} title='One truth. One system.' titleAccent />
 				<section className={styles.section}>
 					<div className={styles.containerGrid}>
+						<Callout
+							className={cn(styles.callout, styles.sectionStart, styles.flowOffset)}
+							title='One truth. One system.'
+							titleAccent
+						/>
 						<h2 className={styles.h2}>
 							The
 							<br />

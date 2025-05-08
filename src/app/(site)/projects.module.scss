@@ -267,6 +267,7 @@
 
 .heroOffset {
 	@include viewport.breakpoint(md) {
+		padding-block-end: 0;
 		transform: translateY(calc(var(--hero-spacing) * -1));
 	}
 
@@ -304,6 +305,10 @@
 
 	@include viewport.breakpoint(sm) {
 		--flow-space: 6lh;
+
+		&.sectionStart {
+			margin-block-start: calc(var(--flow-space) - var(--hero-spacing) + var(--flow-space-base));
+		}
 	}
 }
 
