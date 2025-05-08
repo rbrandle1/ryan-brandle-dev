@@ -49,16 +49,16 @@ Implemented React Context for theme management to avoid prop drilling and ensure
 
 ```bash
 # Install dependencies
-npm install
+pnpm install
 
 # Run development server
-npm run dev
+pnpm run dev
 
 # Build for production
-npm run build
+pnpm run build
 
 # Start production server
-npm start
+pnpm start
 ```
 
 ## 🚧 Known Issues
