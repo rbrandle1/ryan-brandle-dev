@@ -1,5 +1,6 @@
 'use client';
 import cn from 'classnames';
+import { useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import ThemePicker from '@/components/ThemePicker/ThemePicker';
@@ -13,6 +14,24 @@ const PAGES = [
 
 const Header = () => {
 	const pathName = usePathname();
+
+	const hasLoggedRef = useRef(false);
+
+	useEffect(() => {
+		if (!hasLoggedRef.current) {
+			console.log(
+				'\n\n%cOh hey! 👋%c\n\nThanks for dropping by—your curiosity is %cmuch appreciated%c.\n\nNow go ahead... %csnoop around ;)%c\n\n',
+				'color: #000000; font-weight: bold; background: #00ffff; padding: 2px 4px; border-radius: 4px;',
+				'',
+				'font-weight: bold;',
+				'',
+				'font-style: italic;',
+				'',
+			);
+
+			hasLoggedRef.current = true;
+		}
+	}, []);
 
 	return (
 		<header className={styles.header}>
