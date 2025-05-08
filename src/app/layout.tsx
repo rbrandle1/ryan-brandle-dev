@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Analytics } from '@vercel/analytics/react';
 import Script from 'next/script';
 import dynamic from 'next/dynamic';
 import { Oswald, Source_Sans_3, Source_Serif_4, Fira_Code } from 'next/font/google';
@@ -56,6 +57,16 @@ export default function RootLayout({
 }>) {
 	useFonts();
 
+	console.log(
+		'\n\n%cOh hey! 👋%c\n\nThanks for dropping by—your curiosity is %cmuch appreciated%c.\n\nNow go ahead... %csnoop around ;)%c\n\n',
+		'color: #000000; font-weight: bold; background: #00ffff; padding: 2px 4px; border-radius: 4px;',
+		'',
+		'font-weight: bold;',
+		'',
+		'font-style: italic;',
+		'',
+	);
+
 	return (
 		<html lang='en'>
 			<body>
@@ -67,6 +78,7 @@ export default function RootLayout({
 					<Footer />
 				</ThemeProvider>
 				<Script src='https://cpwebassets.codepen.io/assets/embed/ei.js' strategy='beforeInteractive' />
+				<Analytics />
 			</body>
 		</html>
 	);

@@ -100,9 +100,11 @@ const MultiImage = ({
 			) : (
 				images
 			)}
-			<div className={styles.textContainer}>
-				<div>{children}</div>
-			</div>
+			{children ? (
+				<div className={styles.textContainer}>
+					<div>{children}</div>
+				</div>
+			) : null}
 		</div>
 	);
 };

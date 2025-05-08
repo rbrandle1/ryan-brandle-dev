@@ -9,12 +9,8 @@
 	--hero-spacing: 1lh;
 	--section-spacing: 4lh;
 
-	@include viewport.breakpoint(xs) {
-		--hero-spacing: 2lh;
-	}
-
 	@include viewport.breakpoint(md) {
-		--hero-spacing: 4lh;
+		--hero-spacing: 2lh;
 	}
 
 	// TYPOGRAPHY
@@ -228,7 +224,14 @@
 	@include viewport.breakpoint(md) {
 		--hero-offset: calc(var(--hero-spacing) * 2);
 
-		padding-block-end: calc(var(--hero-offset) + 1lh); //offset for metabox
+		padding-block-end: calc(var(--hero-offset) + 2lh); //offset for metabox
+
+		@include viewport.breakpoint(md, max, height) {
+			--hero-spacing: 2.5lh;
+
+			padding-block-start: 1lh;
+			padding-block-end: calc(var(--hero-offset));
+		}
 	}
 }
 
@@ -267,6 +270,7 @@
 
 .heroOffset {
 	@include viewport.breakpoint(md) {
+		padding-block-end: 0;
 		transform: translateY(calc(var(--hero-spacing) * -1));
 	}
 
@@ -304,6 +308,10 @@
 
 	@include viewport.breakpoint(sm) {
 		--flow-space: 6lh;
+
+		&.sectionStart {
+			margin-block-start: calc(var(--flow-space) - var(--hero-spacing) + var(--flow-space-base));
+		}
 	}
 }
 
@@ -312,7 +320,7 @@
 .codePenContainer {
 	--flow-space: 3lh;
 
-	@include viewport.breakpoint(sm) {
+	@include viewport.breakpoint(lg) {
 		--flow-space: 4lh;
 	}
 

@@ -55,7 +55,7 @@ export const ComparisonContent = () => {
 						<p>
 							To see a simplified example of this component, check out my{' '}
 							<a
-								href='https://codepen.io/therealace_1/pen/RwyxvOL'
+								href='https://codepen.io/therealace_1/full/RwyxvOL'
 								className={styles.link}
 								target='_blank'
 								rel='noopener noreferrer'
@@ -567,7 +567,7 @@ export const ComparisonContent = () => {
 					<ul className={styles.ul}>
 						<li>
 							<a
-								href='https://codepen.io/therealace_1/pen/RwyxvOL'
+								href='https://codepen.io/therealace_1/full/RwyxvOL'
 								className={styles.link}
 								target='_blank'
 								rel='noopener noreferrer'

@@ -79,13 +79,13 @@ export const CfContent = () => {
 						</p>
 					</div>
 				</section>
-				<Callout
-					className={cn(styles.callout, styles.flowOffset)}
-					title='A single source behind two different platforms.'
-					titleAccent
-				/>
 				<section className={styles.section}>
 					<div className={styles.containerGrid}>
+						<Callout
+							className={cn(styles.callout, styles.sectionStart, styles.flowOffset)}
+							title='A single source behind two different platforms.'
+							titleAccent
+						/>
 						<h2 className={styles.h2}>
 							The
 							<br />

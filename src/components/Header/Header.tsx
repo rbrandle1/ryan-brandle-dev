@@ -1,6 +1,6 @@
 'use client';
-import { usePathname } from 'next/navigation';
 import cn from 'classnames';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import ThemePicker from '@/components/ThemePicker/ThemePicker';
 import LogoSwitcher from '@/components/LogoSwitcher/LogoSwitcher';
