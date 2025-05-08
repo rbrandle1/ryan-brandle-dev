@@ -374,7 +374,7 @@ export const CodepenContent = () => {
 						<p>
 							The rest is just basic CSS styling and a few animation touches. Shoutout to{' '}
 							<a
-								href='https://codepen.io/therealace_1/pen/yJvKJW'
+								href='https://codepen.io/therealace_1/full/yJvKJW'
 								className={styles.link}
 								target='_blank'
 								rel='noopener noreferrer'
