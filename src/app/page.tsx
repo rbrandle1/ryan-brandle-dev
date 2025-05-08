@@ -15,11 +15,6 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 	ssr: true,
 });
 
-/* Todo:
- * Maybe update home hero text to be smaller on desktop to avoid tim scenario.
- * Adjust flow spacing between text and image in multi image.
- */
-
 export default function Home() {
 	const marqueeText = 'Crispy, Rad, 🔥, Boss, Steezy, Dope, Sick,';
 
