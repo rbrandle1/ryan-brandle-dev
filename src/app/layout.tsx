@@ -57,6 +57,16 @@ export default function RootLayout({
 }>) {
 	useFonts();
 
+	console.log(
+		'\n\n%cOh hey! 👋%c\n\nThanks for dropping by—your curiosity is %cmuch appreciated%c.\n\nNow go ahead... %csnoop around ;)%c\n\n',
+		'color: #000000; font-weight: bold; background: #00ffff; padding: 2px 4px; border-radius: 4px;',
+		'',
+		'font-weight: bold;',
+		'',
+		'font-style: italic;',
+		'',
+	);
+
 	return (
 		<html lang='en'>
 			<body>
