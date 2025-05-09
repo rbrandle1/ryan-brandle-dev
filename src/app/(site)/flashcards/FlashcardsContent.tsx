@@ -56,8 +56,11 @@ export const FlashcardsContent = () => {
 								target='_blank'
 								rel='noopener noreferrer'
 							>
-								Check out the app
+								Check out the app original
 							</a>{' '}
+							<Link className={styles.link} href={'/flashcards-app'} target='_blank'>
+								Rewrite link
+							</Link>{' '}
 							yourself, or visit the{' '}
 							<a
 								href='https://github.com/rbrandle1/accessible-flashcards-for-kids'
