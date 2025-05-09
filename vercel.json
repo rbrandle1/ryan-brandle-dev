@@ -1,0 +1,8 @@
+{
+	"rewrites": [
+		{
+			"source": "/flashcards-app/:match*",
+			"destination": "https://accessible-flashcards-for-kids.vercel.app/:match*"
+		}
+	]
+}
