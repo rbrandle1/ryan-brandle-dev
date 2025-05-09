@@ -1,6 +1,7 @@
 import cn from 'classnames';
 import { Metadata } from 'next';
 import styles from './style.module.scss';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
 	robots: {
@@ -110,6 +111,41 @@ const StylePage = () => {
 		<div className={styles.home}>
 			<section className={cn(styles.section, styles.accentEdge)}>
 				<div className={styles.container}>
+					<p>
+						Please{' '}
+						<a
+							href='https://accessible-flashcards-for-kids.vercel.app/'
+							className={styles.link}
+							target='_blank'
+							rel='noopener noreferrer'
+						>
+							Check out the app original
+						</a>{' '}
+						<a href='/flashcards-app' className={styles.link} target='_blank' rel='noopener noreferrer'>
+							rewrite app href
+						</a>{' '}
+						<a
+							href='https://www.ryanbrandle.dev/flashcards-app'
+							className={styles.link}
+							target='_blank'
+							rel='noopener noreferrer'
+						>
+							rewrite app href full url
+						</a>{' '}
+						<Link className={styles.link} href={'/flashcards-app'} target='_blank'>
+							Rewrite link
+						</Link>{' '}
+						yourself, or visit the{' '}
+						<a
+							href='https://github.com/rbrandle1/accessible-flashcards-for-kids'
+							className={styles.link}
+							target='_blank'
+							rel='noopener noreferrer'
+						>
+							Github repo
+						</a>{' '}
+						to see under the hood.
+					</p>
 					<TypographyExamples />
 				</div>
 			</section>
