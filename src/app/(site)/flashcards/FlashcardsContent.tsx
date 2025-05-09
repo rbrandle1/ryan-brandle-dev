@@ -58,6 +58,17 @@ export const FlashcardsContent = () => {
 							>
 								Check out the app original
 							</a>{' '}
+							<a href='/flashcards-app' className={styles.link} target='_blank' rel='noopener noreferrer'>
+								rewrite app href
+							</a>{' '}
+							<a
+								href='https://www.ryanbrandle.dev/flashcards-app'
+								className={styles.link}
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								rewrite app href full url
+							</a>{' '}
 							<Link className={styles.link} href={'/flashcards-app'} target='_blank'>
 								Rewrite link
 							</Link>{' '}
