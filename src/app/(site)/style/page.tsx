@@ -121,18 +121,18 @@ const StylePage = () => {
 						>
 							Check out the app original
 						</a>{' '}
-						<a href='/flashcards-app' className={styles.link} target='_blank' rel='noopener noreferrer'>
+						<a href='/flashcard-app' className={styles.link} target='_blank' rel='noopener noreferrer'>
 							rewrite app href
 						</a>{' '}
 						<a
-							href='https://www.ryanbrandle.dev/flashcards-app'
+							href='https://www.ryanbrandle.dev/flashcard-app'
 							className={styles.link}
 							target='_blank'
 							rel='noopener noreferrer'
 						>
 							rewrite app href full url
 						</a>{' '}
-						<Link className={styles.link} href={'/flashcards-app'} target='_blank'>
+						<Link className={styles.link} href={'/flashcard-app'} target='_blank'>
 							Rewrite link
 						</Link>{' '}
 						yourself, or visit the{' '}
