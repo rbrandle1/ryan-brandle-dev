@@ -51,7 +51,9 @@ $height: (
 			@content;
 		}
 	} @else if $direction == max {
-		@media (max-#{$dimension}: $size - 1) {
+		$max-size: $size - 1;
+
+		@media (max-#{$dimension}: $max-size) {
 			@content;
 		}
 	}
@@ -79,7 +81,9 @@ $height: (
 		$max: map.get($map, $max);
 	}
 
-	@media (min-#{$dimension}: $min) and (max-#{$dimension}: $max - 1) {
+	$max-size: $max - 1;
+
+	@media (min-#{$dimension}: $min) and (max-#{$dimension}: $max-size) {
 		@content;
 	}
 }

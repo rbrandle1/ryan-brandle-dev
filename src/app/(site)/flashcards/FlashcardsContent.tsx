@@ -49,26 +49,25 @@ export const FlashcardsContent = () => {
 							<em>helping kids with dyslexia engage with math in a way that feels supportive and approachable.</em>
 						</p>
 						<p>
-							Please{' '}
-							<a
-								href='https://accessible-flashcards-for-kids.vercel.app/'
-								className={styles.link}
-								target='_blank'
-								rel='noopener noreferrer'
-							>
-								Check out the app
-							</a>{' '}
-							yourself, or visit the{' '}
-							<a
-								href='https://github.com/rbrandle1/accessible-flashcards-for-kids'
-								className={styles.link}
-								target='_blank'
-								rel='noopener noreferrer'
-							>
-								Github repo
-							</a>{' '}
-							to see under the hood.
+							<strong>Experience the app yourself:</strong>
 						</p>
+						<ul className={styles.ul}>
+							<li>
+								<a href='/flashcard-app' className={styles.link} target='_blank' rel='noopener noreferrer'>
+									Live App
+								</a>
+							</li>
+							<li>
+								<a
+									href='https://github.com/rbrandle1/accessible-flashcards-for-kids'
+									className={styles.link}
+									target='_blank'
+									rel='noopener noreferrer'
+								>
+									Github
+								</a>
+							</li>
+						</ul>
 						<h2 className={styles.h2}>
 							The
 							<br />
@@ -670,22 +669,17 @@ export const FlashcardsContent = () => {
 					</p>
 					<p>
 						Be sure to check out{' '}
-						<a
-							href='https://accessible-flashcards-for-kids.vercel.app/'
-							className={styles.link}
-							target='_blank'
-							rel='noopener noreferrer'
-						>
+						<a href='/flashcard-app' className={styles.link} target='_blank' rel='noopener noreferrer'>
 							the app
 						</a>{' '}
-						yourself, or visit my{' '}
+						yourself, or visit{' '}
 						<a
 							href='https://github.com/rbrandle1/accessible-flashcards-for-kids'
 							className={styles.link}
 							target='_blank'
 							rel='noopener noreferrer'
 						>
-							Github repo
+							Github
 						</a>{' '}
 						for a deeper look into the code.
 					</p>

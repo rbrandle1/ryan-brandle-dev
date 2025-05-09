@@ -52,7 +52,7 @@ const TypographyExamples = () => {
 				weave tapestries of stardust. Nullam sapien sem, tincidunt eget quam nec, ultricies fringilla eros. Integer sit
 				amet nunc vel lacus fermentum malesuada. Suspendisse potenti, for the universe is not obligated to make sense to
 				us, yet we persist in decoding its mysteries. Sed nec massa nec eros varius dictum et ut arcu, an echo of
-				humanity’s unyielding curiosity.
+				humanity's unyielding curiosity.
 			</p>
 			<p className={styles.p}>
 				In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the profound
@@ -64,7 +64,7 @@ const TypographyExamples = () => {
 				weave tapestries of stardust. Nullam sapien sem, tincidunt eget quam nec, ultricies fringilla eros. Integer sit
 				amet nunc vel lacus fermentum malesuada. Suspendisse potenti, for the universe is not obligated to make sense to
 				us, yet we persist in decoding its mysteries. Sed nec massa nec eros varius dictum et ut arcu, an echo of
-				humanity’s unyielding curiosity.
+				humanity's unyielding curiosity.
 			</p>
 			<p className={styles.pSm}>
 				In the vast cosmic ocean, where celestial bodies dance to the rhythm of gravity, one might ponder the profound
@@ -76,7 +76,7 @@ const TypographyExamples = () => {
 				weave tapestries of stardust. Nullam sapien sem, tincidunt eget quam nec, ultricies fringilla eros. Integer sit
 				amet nunc vel lacus fermentum malesuada. Suspendisse potenti, for the universe is not obligated to make sense to
 				us, yet we persist in decoding its mysteries. Sed nec massa nec eros varius dictum et ut arcu, an echo of
-				humanity’s unyielding curiosity.
+				humanity's unyielding curiosity.
 			</p>
 			<div className={styles.caption}>How vexingly quick daft zebras jump</div>
 		</>
