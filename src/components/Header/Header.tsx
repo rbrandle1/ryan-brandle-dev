@@ -20,7 +20,7 @@ const Header = () => {
 	useEffect(() => {
 		if (!hasLoggedRef.current) {
 			console.log(
-				'\n\n%cOh hey! 👋%c\n\nThanks for dropping by—your curiosity is %cmuch appreciated%c.\n\nNow go ahead... %csnoop around ;)%c\n\n',
+				'\n\n%cOh hey! 👋%c\n\nThanks for dropping by—your curiosity is %cmuch appreciated%c.\n\nNow go ahead... %csnoop around ;)%c\n\n\n',
 				'color: #000000; font-weight: bold; background: #00ffff; padding: 2px 4px; border-radius: 4px;',
 				'',
 				'font-weight: bold;',
