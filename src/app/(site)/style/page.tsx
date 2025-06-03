@@ -1,5 +1,6 @@
 import cn from 'classnames';
 import { Metadata } from 'next';
+import Cardio from '@/components/Cardio/Cardio';
 import styles from './style.module.scss';
 
 export const metadata: Metadata = {
