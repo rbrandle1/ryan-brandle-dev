@@ -10,24 +10,27 @@
 
 'use client';
 import { useEffect, useState } from 'react';
+import CardioCard from './CardioCard';
 
 const MY_DATA = 'https://potterapi-fedeperin.vercel.app/en/books';
 
-interface Books {
+export interface Book {
 	title: string;
-	description: string;
+	pages: number;
 }
 
-type Data = Books[];
+export type Books = Book[];
 
 const Cardio = () => {
-	const [data, setData] = useState<Data | null>(null);
+	const [data, setData] = useState<Books | null>(null);
+	const [isOpen, setIsOpen] = useState<boolean>(false);
 
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
 				const res = await fetch(MY_DATA);
 				const data = await res.json();
+				console.log(data);
 				setData(data);
 			} catch (error) {
 				console.log('There is an error', error);
@@ -36,11 +39,16 @@ const Cardio = () => {
 		fetchData();
 	}, []);
 
+	const handleToggle = () => setIsOpen(!isOpen);
+
 	return data ? (
 		<>
 			<div>We have data with {data.length} arrays</div>
+			{isOpen ? <div>It's open!</div> : null}
 			{data.map((d, i) => (
-				<div key={i}>{d.title}</div>
+				<div key={i}>
+					<CardioCard data={d} onToggle={handleToggle} isOpen={isOpen} />
+				</div>
 			))}
 		</>
 	) : null;
