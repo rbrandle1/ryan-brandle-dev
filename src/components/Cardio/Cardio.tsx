@@ -15,39 +15,6 @@ import CardioCard from './CardioCard';
 
 const MY_DATA = 'https://potterapi-fedeperin.vercel.app/en/books';
 
-// Thought process: I wanted to show the end user with their local timezone. I researched ways to do this and found that the Intl.DateTimeFormat was a good way to make consistent.
-// I learned this from @webDevSimplified https://www.youtube.com/shorts/jZUHZDXmQ_A
-// I also pieced together the isNaN check through researching edge cases and how to prevent them when it comes to date formats:
-// https://www.geeksforgeeks.org/how-to-check-a-date-is-valid-or-not-using-javascript/
-
-const dateFormatter = (input?: string | Date) => {
-	let date: Date; // just in case a Date object is passed in like dateFormatter(new Date("2024-03-14"))
-
-	// Handles various input types safely
-	if (input instanceof Date) {
-		date = input;
-	} else if (typeof input === 'string') {
-		date = new Date(input);
-	} else {
-		date = new Date(); // fallback to current time if nothing provided
-	}
-	// const date = input ? new Date(input) : new Date(); //added this in case needed to use the current date
-
-	if (isNaN(date.getTime())) return 'Invalid date';
-
-	const formatDate = new Intl.DateTimeFormat('en-US', {
-		year: 'numeric',
-		month: 'short',
-		day: 'numeric',
-		hour: 'numeric',
-		minute: '2-digit',
-		timeZoneName: 'short', // shows 'PST', 'EDT', etc.
-	});
-	const formattedDate = formatDate.format(date);
-
-	return formattedDate;
-};
-
 export interface CardioProps {
 	title: string;
 	pages: number;
@@ -77,98 +44,6 @@ const Cardio = () => {
 	const handleToggle = (releaseDate: number, buttonText: string) => {
 		setIsOpen(!isOpen);
 		console.log({ releaseDate, buttonText });
-
-		// const getDate = new Date();
-		// const simpleDate = getDate.toLocaleDateString();
-		// const dateWithTime = getDate.toLocaleString();
-		// const simpleTime = getDate.toLocaleTimeString();
-
-		// console.log(getDate.getFullYear());
-
-		// const customDate = new Intl.DateTimeFormat('en-us', {
-		// 	dateStyle: 'full',
-		// 	timeStyle: 'short',
-		// });
-		// const formattedDate = customDate.format(getDate);
-
-		// console.log({ simpleDate, dateWithTime, formattedDate, simpleTime });
-		const time = new Date();
-		// const month = time.setMonth(2);
-		// console.log(month);
-		// console.log(time);
-
-		const dateString = '2024-03-14';
-		// const date = new Date(dateString);
-		// console.log(date);
-		// Wed Mar 13 2024 18:00:00 GMT-0600 (Mountain Daylight Time)
-		// OFF BY 1 DAY
-
-		// 2. Using Date.parse()
-		// const timestamp = Date.parse(dateString);
-		// const dateFromTimestamp = new Date(timestamp);
-		// console.log(dateFromTimestamp);
-		// Wed Mar 13 2024 18:00:00 GMT-0600 (Mountain Daylight Time)
-		// OFF BY 1 DAY
-
-		// const formatDate = (input: string): string => {
-		// 	const date = new Date(input);
-		// 	return date.toLocaleDateString('en-US', {
-		// 		year: 'numeric',
-		// 		month: 'short',
-		// 		day: 'numeric',
-		// 	});
-		// };
-
-		// console.log(formatDate('2024-03-14'));
-		// console.log(formatDate('03-14-2024'));
-		// console.log(formatDate('03/14/2024'));
-		// console.log(formatDate('March 14, 2024'));
-
-		// const formatDate = (input: string): string => {
-		// 	const date = new Date(input);
-		// 	const localDate = new Date(date.getTime() - date.getTimezoneOffset() * 60000);
-
-		// 	return localDate.toLocaleDateString('en-US', {
-		// 		year: 'numeric',
-		// 		month: 'short',
-		// 		day: 'numeric',
-		// 	});
-		// };
-
-		// console.log(formatDate('2024-03-14'));
-		// console.log(formatDate('03-14-2024'));
-		// console.log(formatDate('03/14/2024'));
-		// console.log(formatDate('March 14, 2024'));
-
-		// const formatDate = (input: string): string => {
-		// 	const date = new Date(input);
-
-		// 	// Check for invalid date
-		// 	if (isNaN(date.getTime())) {
-		// 		alert('Invalid date format. Please use a valid date.');
-		// 		return 'Invalid date';
-		// 	}
-
-		// 	// Display in user's local time, consistent across DST and browsers
-		// 	return date.toLocaleDateString('en-US', {
-		// 		year: 'numeric',
-		// 		month: 'short',
-		// 		day: 'numeric',
-		// 	});
-		// };
-		// console.log(formatDate('2024-03-14'));
-		// console.log(formatDate('2024-03-14ddw'));
-		// console.log(formatDate('03-14-2024'));
-		// console.log(formatDate('03/14/2024'));
-		// console.log(formatDate('March 14, 2024'));
-
-		console.log(dateFormatter());
-		console.log(dateFormatter('2024-03-14T21:41:00Z')); // a Date object as a string
-		console.log(dateFormatter('2024-03-14'));
-		console.log(dateFormatter('2024-03-14ddw'));
-		console.log(dateFormatter('03-14-2024'));
-		console.log(dateFormatter('03/14/2024'));
-		console.log(dateFormatter('March 14, 2024'));
 	};
 
 	return data ? (

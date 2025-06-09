@@ -1,0 +1,39 @@
+.componentGrid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	place-content: center;
+	gap: 1lh;
+	margin: 2lh;
+}
+
+.component {
+	place-items: center;
+	border: solid 1px;
+	padding: 1lh;
+
+	button {
+		padding: 0.25lh;
+
+		&:not(:first-of-type) {
+			margin-inline: 0.25lh;
+		}
+	}
+}
+
+.bag {
+	border-color: red;
+}
+
+.fridge {
+	border-color: blue;
+}
+
+.bowl {
+	border-color: green;
+	grid-column: -1 / 1;
+}
+
+.dog {
+	border-color: pink;
+	grid-column: -1 / 1;
+}
