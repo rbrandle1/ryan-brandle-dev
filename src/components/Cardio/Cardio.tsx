@@ -26,7 +26,8 @@ type Books = CardioProps[];
 
 const Cardio = () => {
 	const [data, setData] = useState<Books | null>(null);
-	const [isOpen, setIsOpen] = useState(false);
+	// const [isOpen, setIsOpen] = useState(false);
+	const [activeCard, setActiveCard] = useState<number | null>(null);
 
 	useEffect(() => {
 		const fetchData = async () => {
@@ -41,16 +42,14 @@ const Cardio = () => {
 		fetchData();
 	}, []);
 
-	const handleToggle = (releaseDate: number, buttonText: string) => {
-		setIsOpen(!isOpen);
-		console.log({ releaseDate, buttonText });
+	const handleToggle = (i: number) => {
+		setActiveCard(activeCard === i ? null : i);
 	};
 
 	return data ? (
 		<>
-			<div>I have data! {isOpen ? 'OPEN' : 'CLOSED'}</div>
 			{data.map((d, i) => (
-				<CardioCard key={i} data={d} isOpen={isOpen} onToggle={handleToggle} />
+				<CardioCard key={i} data={d} isOpen={activeCard === i} onToggle={() => handleToggle(i)} />
 			))}
 		</>
 	) : null;

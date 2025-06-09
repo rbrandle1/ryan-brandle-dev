@@ -4,7 +4,7 @@ import { CardioProps } from './Cardio';
 interface CardioCardProps {
 	data: CardioProps;
 	isOpen: boolean;
-	onToggle: (releaseDate: number, buttonText: string) => void;
+	onToggle: () => void;
 }
 
 const CardioCard = ({ data, isOpen, onToggle }: CardioCardProps) => {
@@ -12,7 +12,7 @@ const CardioCard = ({ data, isOpen, onToggle }: CardioCardProps) => {
 		<div className={styles.card}>
 			<h2>{data.title}</h2>
 			<p>{data.pages}</p>
-			<button onClick={(e) => onToggle(data.releaseDate, e.currentTarget.innerText)}>toggle</button>
+			<button onClick={onToggle}>toggle</button>
 			{isOpen ? <p>{data.description}</p> : null}
 		</div>
 	);
