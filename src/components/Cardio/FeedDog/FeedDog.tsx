@@ -6,8 +6,6 @@ import Bowl from './Bowl';
 import Dog from './Dog';
 import styles from './FeedDog.module.scss';
 
-// figure out how to reset everything when dog is happy.
-
 const FeedDog = () => {
 	const [kibbleAmt, setKibbleAmt] = useState(0);
 	const [wetAmt, setWetAmt] = useState(0);
@@ -27,14 +25,16 @@ const FeedDog = () => {
 	};
 
 	const handleReset = () => {
+		setKibbleAmt(0);
+		setWetAmt(0);
 		setDogState('hungry');
 	};
 
 	return (
 		<div className={styles.componentGrid}>
-			<Bag getFood={handleKibble} />
-			<Fridge getFood={handleWetFood} />
-			<Bowl kibbleAmt={kibbleAmt} wetAmt={wetAmt} onFeed={handleFeed} />
+			<Bag getFood={handleKibble} qty={kibbleAmt} />
+			<Fridge getFood={handleWetFood} qty={wetAmt} />
+			<Bowl reset={handleReset} kibbleAmt={kibbleAmt} wetAmt={wetAmt} onFeed={handleFeed} />
 			<Dog reset={handleReset} dogState={dogState} />
 		</div>
 	);

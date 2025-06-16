@@ -10,7 +10,7 @@ const Dog = ({ dogState, reset }: DogProps) => {
 		dogState === 'dead' ? (
 			<>
 				<p>Dog died...</p>
-				<button onClick={reset}>Resurrect</button>
+				<button onClick={reset}>Try Again</button>
 			</>
 		) : dogState === 'alive' ? (
 			<>
