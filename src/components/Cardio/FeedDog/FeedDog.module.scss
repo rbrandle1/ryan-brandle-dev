@@ -2,13 +2,16 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	place-content: center;
-	gap: 1lh;
-	margin: 2lh;
+	gap: 0.5lh;
+	margin: 1lh auto;
+	max-width: 600px;
+	background-color: #f7f7f7;
+	padding: 0.5lh;
+	border-radius: 12px;
 }
 
 .component {
 	place-items: center;
-	border: solid 1px;
 	padding: 1lh;
 
 	button {
@@ -17,23 +20,18 @@
 		&:not(:first-of-type) {
 			margin-inline: 0.25lh;
 		}
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				cursor: pointer;
+			}
+			&:active {
+				transform: translateY(2px);
+			}
+		}
 	}
 }
 
-.bag {
-	border-color: red;
-}
-
-.fridge {
-	border-color: blue;
-}
-
-.bowl {
-	border-color: green;
+.full {
 	grid-column: -1 / 1;
-}
-
-.dog {
-	border-color: pink;
-	grid-column: -1 / 1;
+	border-top: 1px solid purple;
 }

@@ -1,15 +1,16 @@
 'use client';
 import { useState } from 'react';
-import Bag from './Bag';
-import Fridge from './Fridge';
 import Bowl from './Bowl';
 import Dog from './Dog';
 import styles from './FeedDog.module.scss';
+import FoodContainer from './FoodContainer';
+
+type DogState = 'hungry' | 'alive' | 'dead';
 
 const FeedDog = () => {
 	const [kibbleAmt, setKibbleAmt] = useState(0);
 	const [wetAmt, setWetAmt] = useState(0);
-	const [dogState, setDogState] = useState('hungry');
+	const [dogState, setDogState] = useState<DogState>('hungry');
 
 	const handleKibble = (amount: number) => {
 		setKibbleAmt(amount);
@@ -32,8 +33,8 @@ const FeedDog = () => {
 
 	return (
 		<div className={styles.componentGrid}>
-			<Bag getFood={handleKibble} qty={kibbleAmt} />
-			<Fridge getFood={handleWetFood} qty={wetAmt} />
+			<FoodContainer getFood={handleKibble} qty={kibbleAmt} increment={0.5} label='cup' type='bag' />
+			<FoodContainer getFood={handleWetFood} qty={wetAmt} increment={1} label='bag' type='fridge' />
 			<Bowl reset={handleReset} kibbleAmt={kibbleAmt} wetAmt={wetAmt} onFeed={handleFeed} />
 			<Dog reset={handleReset} dogState={dogState} />
 		</div>
