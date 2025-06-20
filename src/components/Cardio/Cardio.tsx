@@ -5,9 +5,10 @@
 // 1. Create a parent container that holds state
 // 2. fetch the data from the /books endpoint and set the array of books to state
 // 3. if data then map to child components, else return null
-// 4. pass data to child, try passing multiple props in the function
-// 5. display data on child.
+// 4. pass data to child, try passing multiple props in the function... literally pass data={} into the child.
+// 5. display data in/on the child.
 // 6. bring the data from the child back up and console.log it... or do something with it to update another piece of state.
+// 7. set an active state to an individual item in the map
 
 'use client';
 import { useState, useEffect } from 'react';
@@ -25,37 +26,79 @@ export interface CardioProps {
 type Books = CardioProps[];
 
 const Cardio = () => {
-	const [data, setData] = useState<Books | null>(null);
+	const [data, setData] = useState<Books>([]);
 	// const [isOpen, setIsOpen] = useState(false);
-	const [activeCard, setActiveCard] = useState<number | null>(null);
+	// const [isActive, setIsActive] = useState<Number | null>(null);
 
 	useEffect(() => {
-		const fetchData = async () => {
+		const getData = async () => {
 			try {
 				const res = await fetch(MY_DATA);
 				const data = await res.json();
 				setData(data);
 			} catch (error) {
-				console.log(error);
+				window.alert('An error has occurred');
 			}
 		};
-		fetchData();
+		getData();
 	}, []);
 
-	const handleToggle = (i: number) => {
-		setActiveCard(activeCard === i ? null : i);
-	};
+	// const handleToggle = (i: number) => {
+	// 	setIsActive(isActive === i ? null : i);
+	// };
 
-	return data ? (
+	return data.length > 0 ? (
 		<>
-			{data.map((d, i) => (
-				<CardioCard key={i} data={d} isOpen={activeCard === i} onToggle={() => handleToggle(i)} />
+			<h1>Harry Potter Books</h1>
+			{data.map((el, i) => (
+				<CardioCard
+					key={i}
+					title={el.title}
+					pages={el.pages}
+					description={el.description}
+					releaseDate={el.releaseDate}
+				/>
 			))}
 		</>
 	) : null;
 };
 
 export default Cardio;
+
+// type Books = CardioProps[];
+
+// const Cardio = () => {
+// 	const [data, setData] = useState<Books | null>(null);
+// 	// const [isOpen, setIsOpen] = useState(false);
+// 	const [activeCard, setActiveCard] = useState<number | null>(null);
+
+// 	useEffect(() => {
+// 		const fetchData = async () => {
+// 			try {
+// 				const res = await fetch(MY_DATA);
+// 				const data = await res.json();
+// 				setData(data);
+// 			} catch (error) {
+// 				console.log(error);
+// 			}
+// 		};
+// 		fetchData();
+// 	}, []);
+
+// 	const handleToggle = (i: number) => {
+// 		setActiveCard(activeCard === i ? null : i);
+// 	};
+
+// 	return data ? (
+// 		<>
+// 			{data.map((d, i) => (
+// 				<CardioCard key={i} data={d} isOpen={activeCard === i} onToggle={() => handleToggle(i)} />
+// 			))}
+// 		</>
+// 	) : null;
+// };
+
+// export default Cardio;
 
 // 'use client';
 // import { useState, useEffect } from 'react';
