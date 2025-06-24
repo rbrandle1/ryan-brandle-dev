@@ -23,47 +23,70 @@ export interface CardioProps {
 	releaseDate: number;
 }
 
-type Books = CardioProps[];
-
 const Cardio = () => {
-	const [data, setData] = useState<Books>([]);
-	// const [isOpen, setIsOpen] = useState(false);
-	// const [isActive, setIsActive] = useState<Number | null>(null);
+	const [data, setData] = useState<CardioProps[]>([]);
 
 	useEffect(() => {
 		const getData = async () => {
 			try {
 				const res = await fetch(MY_DATA);
 				const data = await res.json();
+				console.log(data);
 				setData(data);
 			} catch (error) {
-				window.alert('An error has occurred');
+				console.log('there is an error', error);
 			}
 		};
 		getData();
 	}, []);
 
-	// const handleToggle = (i: number) => {
-	// 	setIsActive(isActive === i ? null : i);
-	// };
-
 	return data.length > 0 ? (
 		<>
 			<h1>Harry Potter Books</h1>
-			{data.map((el, i) => (
-				<CardioCard
-					key={i}
-					title={el.title}
-					pages={el.pages}
-					description={el.description}
-					releaseDate={el.releaseDate}
-				/>
+			{data.map((d, i) => (
+				<CardioCard key={i} data={d} />
 			))}
 		</>
-	) : null;
+	) : (
+		'There was an error loading data'
+	);
 };
 
 export default Cardio;
+
+// const Cardio = () => {
+// 	const [data, setData] = useState<Books>([]);
+
+// 	useEffect(() => {
+// 		const getData = async () => {
+// 			try {
+// 				const res = await fetch(MY_DATA);
+// 				const data = await res.json();
+// 				setData(data);
+// 			} catch (error) {
+// 				window.alert('An error has occurred');
+// 			}
+// 		};
+// 		getData();
+// 	}, []);
+
+// 	return data.length > 0 ? (
+// 		<>
+// 			<h1>Harry Potter Books</h1>
+// 			{data.map((el, i) => (
+// 				<CardioCard
+// 					key={i}
+// 					title={el.title}
+// 					pages={el.pages}
+// 					description={el.description}
+// 					releaseDate={el.releaseDate}
+// 				/>
+// 			))}
+// 		</>
+// 	) : null;
+// };
+
+// export default Cardio;
 
 // type Books = CardioProps[];
 

@@ -1,26 +1,24 @@
 'use client';
+import { useState } from 'react';
 import styles from './Cardio.module.scss';
 import { CardioProps } from './Cardio';
-import { useState } from 'react';
 
-const CardioCard = ({ title, pages, description, releaseDate }: CardioProps) => {
+interface CardioCardProps {
+	data: CardioProps;
+}
+
+const CardioCard = ({ data }: CardioCardProps) => {
+	const { title, pages, description, releaseDate } = data;
 	const [isOpen, setIsOpen] = useState(false);
-
-	const handleToggle = () => {
-		setIsOpen((is) => !is);
-	};
 
 	return (
 		<div className={styles.card}>
 			<h2>{title}</h2>
-			<button onClick={handleToggle}>Learn more</button>
-			{isOpen && (
-				<>
-					<p>{description}</p>
-					<span>{pages}pgs </span>
-					<span>Released: {releaseDate}</span>
-				</>
-			)}
+			<p>
+				{pages} pgs | {releaseDate}
+			</p>
+			<button onClick={() => setIsOpen((is) => !is)}>{isOpen ? 'Close' : 'View details'}</button>
+			{isOpen && <p>{description}</p>}
 		</div>
 	);
 };
