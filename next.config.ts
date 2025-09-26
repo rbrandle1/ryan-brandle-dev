@@ -37,7 +37,7 @@ const nextConfig: NextConfig = {
 					{
 						key: 'Content-Security-Policy',
 						value:
-							"default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cpwebassets.codepen.io https://public.codepenassets.com https://va.vercel-scripts.com https://vercel.live; style-src 'self' 'unsafe-inline' https://cpwebassets.codepen.io https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://cpwebassets.codepen.io; frame-src 'self' https://codepen.io https://vercel.live; connect-src 'self' https://cpwebassets.codepen.io",
+							"default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cpwebassets.codepen.io https://public.codepenassets.com https://va.vercel-scripts.com https://vercel.live; style-src 'self' 'unsafe-inline' https://cpwebassets.codepen.io https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://cpwebassets.codepen.io; frame-src 'self' https://codepen.io https://vercel.live; connect-src 'self' https://cpwebassets.codepen.io wss://ws-us3.pusher.com",
 					},
 				],
 			},
