@@ -82,7 +82,6 @@
 .multiSection {
 	background-color: var(--surface-primary);
 	position: relative;
-	overflow: hidden;
 }
 
 .heroSection {
@@ -326,6 +325,8 @@
 }
 
 .gradientBg {
+	overflow: hidden;
+
 	&::after {
 		@include element.shadow-inset-pseudo;
 	}

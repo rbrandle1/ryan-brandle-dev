@@ -28,7 +28,7 @@ export const data = {
 	text: {
 		title: 'New Site, So Fresh & So Clean',
 		description:
-			'My own component-based design system built from the ground up, rooted in semantic, accessible code and a total self rebrand to boot — exploring the latest techniques and loving every minute!',
+			'My own component-based design system built from the ground up, rooted in semantic, accessible code and a full self rebrand.',
 		descriptionShort: 'My own component-based design system built from the ground up.',
 	},
 	images: {

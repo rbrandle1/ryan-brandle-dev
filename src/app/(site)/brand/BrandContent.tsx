@@ -53,12 +53,9 @@ export const BrandContent = () => {
 							seat, buried among cheerios, lost socks, and sticky fingerprints. A&nbsp;refresh was long overdue.
 						</p>
 						<p>
-							Then came the industry-wide tech layoffs, including my own. Life handed out some lemons, so I decided to
-							make some tasty, sticky-fingered lemonade.
-						</p>
-						<p>
-							I used this opportunity to refocus my career priorities, learn some new tricks, and build a site that
-							truly represents who I am and what I do best.
+							Then came the industry-wide tech layoffs, including my own. Life handed out some lemons, so I used this
+							opportunity to refocus my career priorities, learn some new tricks, and make some tasty, sticky-fingered
+							lemonade.
 						</p>
 					</div>
 				</section>
@@ -188,11 +185,8 @@ export const BrandContent = () => {
 								</p>
 								<p>
 									As an added bonus, these colors were also used heavily in the early 90's to make{' '}
-									<strong>the raddest ski gear ever</strong>.
-								</p>
-								<p>
-									They were carefully applied as accents to the black and white system, and passed WCAG validation...
-									with flying colors, heyoooo!&nbsp;🙌
+									<strong>the raddest ski gear ever</strong>. They were carefully applied as accents to the black and
+									white system, tested and passed WCAG validation.
 								</p>
 							</SideImage>
 						</div>
@@ -218,10 +212,9 @@ export const BrandContent = () => {
 								caption='Exploring combinations of fonts and color.'
 							>
 								<p>
-									The usual questions filtered through...{' '}
-									<em>Serif or sans serif? What would work best to meet my project goals?</em> Sans serif fonts are easy
-									to read and more modern, while serifs can bring a traditional elegance. Finding the right balance
-									while avoiding anything resembling a 90's hair spray product was critical.
+									I experimented with a few sans serif fonts, as they are easy to read and more modern, with serifs that
+									bring a traditional elegance. My initial explorations started to resemble a 90's hair spray product,
+									but I eventually discovered the right balance and vibe I was looking for.
 								</p>
 								<p>
 									The final approach was a bold sans serif to lead, with a subtle serif for accents—mirroring my color
@@ -248,11 +241,12 @@ export const BrandContent = () => {
 								</h4>
 								<p>
 									My logo concept reflected a component library's dynamic relationships. Each element—mark, name, and
-									title—could be stacked, scaled, and styled independently while maintaining harmony. I explored using
-									typographic ligatures, mountain shapes, pinewood derby cars, and more!
+									title—could be stacked, scaled, and styled independently while maintaining harmony. I explored
+									integrating some personal nostalgic concepts like typographic ligatures, mountain shapes, and pinewood
+									derby cars.
 								</p>
 								<p>
-									The mark was formed by two overlapping elements creating a 'B,' representing how simple components
+									The mark evolved into two overlapping elements creating a 'B,' representing how simple components
 									interact to form something greater.
 								</p>
 								<p>
@@ -290,7 +284,7 @@ export const BrandContent = () => {
 									naming conventions—making it easy to update and translate into their coded counterparts.
 								</p>
 								<p>
-									Wireframing and mockup iterations came next, using the token system to flesh-out some components and
+									Wireframing and mockup iterations followed, using the token system to flesh-out some components and
 									responsive layouts. Since I'm flying solo on this project, I skipped making a Figma component library
 									and dove straight into development.
 								</p>
@@ -476,8 +470,8 @@ export const BrandContent = () => {
 						</p>
 						<h3 className={cn(styles.h3, styles.soloHeader)}>Component Creation</h3>
 						<p>
-							With ingredients prepped and ready to rock, it was time to start cooking! I set up atomic components like
-							buttons first, then gradually worked up to more complex ones like headers, footers, and cards.
+							The ingredients were prepped and ready to rock. It was time to start creating some foundational atomic
+							components like buttons, gradually working up to more complex ones like headers, footers, and cards.
 						</p>
 						<div className={styles.multiImagesContainer}>
 							<MultiImage
@@ -747,9 +741,9 @@ export const BrandContent = () => {
 				<div className={styles.containerGrid}>
 					<h2 className={styles.h2}>The Final Result</h2>
 					<p>
-						This project has been an epic ride - the perfect blend of past experience with fresh exploration. While I've
-						spent years as a Design Engineer, it's especially challenging to build a reflection of yourself, your wins,
-						your stumbles, and everything in between.
+						This project was so much fun, exploring my past while coming up with something refreshing and new. While
+						I've spent years as a Design Engineer, it's always challenging to build a true reflection of yourself, your
+						wins, your stumbles, and everything in between.
 					</p>
 					<LargeImage
 						className={cn(styles.imageContainer, styles.flowOffset, styles.breakout)}
@@ -757,13 +751,9 @@ export const BrandContent = () => {
 						alt={data.images.final.alt}
 					/>
 					<p>
-						Throughout the journey, I expanded my toolkit with some new CSS grid layouts, discovered the magic of{' '}
-						<code>lh</code> values for better typographical rhythm, and dove into some sweet Next.js and React
+						Throughout the process, I expanded my toolkit with some new CSS grid layouts, discovered the effectiveness
+						of <code>lh</code> values for fluid typographical rhythm, and dove into some useful Next.js and React
 						enhancements.
-					</p>
-					<p>
-						Though the project is technically 'done,' it's really just the beginning. Even after years in the field,
-						there's always something new to try out and explore.
 					</p>
 					<p>
 						You can{' '}
@@ -790,7 +780,7 @@ export const BrandContent = () => {
 							<a href='https://ryanmulligan.dev/' className={styles.link} target='_blank' rel='noopener noreferrer'>
 								Ryan Mulligan
 							</a>{' '}
-							- Past Mentor & Code Maestro
+							- Code Maestro
 						</li>
 						<li>
 							<a href='https://www.joshwcomeau.com/' className={styles.link} target='_blank' rel='noopener noreferrer'>
@@ -824,7 +814,7 @@ export const BrandContent = () => {
 							>
 								Gradient Generator
 							</a>{' '}
-							- For those <em>oh-so-smooth</em> CSS gradients
+							- For those <em>smooth</em> CSS gradients
 						</li>
 					</ul>
 					<Link className={styles.buttonLink} href={fromSection ? `/#${fromSection}` : '/'}>
