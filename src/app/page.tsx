@@ -16,7 +16,7 @@ const ProjectCard = dynamic(() => import('@/components/ProjectCard/ProjectCard')
 });
 
 export default function Home() {
-	const marqueeText = 'Crispy, Rad, 🔥, Boss, Steezy, Dope, Sick,';
+	const marqueeText = 'Fun, Sleek, 🔥, Intuitive, Scalable,';
 
 	return (
 		<div className={styles.home}>
@@ -41,15 +41,15 @@ export default function Home() {
 							Hey there. I'm Ryan Brandle, a Design Engineer who empowers teams to build exceptional experiences.
 						</p>
 						<p className={styles.heroCopy}>
-							This site was designed and coded by me — to show that design systems{' '}
+							This site was designed and coded by me — to show that design systems are{' '}
 							<strong>
-								<em>can</em>
+								<em>transformative</em>
 							</strong>{' '}
-							be sexy, and to make your search for the right fit a little easier. With over a decade of experience
-							uniting design and code, I create accessible, intuitive, and scalable interfaces. I enjoy coding design to
+							tools, and to make your search for the right fit a little easier. With over a decade of experience uniting
+							design and code, I&nbsp;create accessible, intuitive, and scalable interfaces. I enjoy coding design to
 							life and pushing the boundaries of front-end craftsmanship. 🚀&nbsp;
-							<a href='mailto:ryanbrandle.dev@gmail.com?subject=Hello!'>Let's build</a> a product that leaves a lasting
-							impression!
+							<a href='mailto:ryanbrandle.dev@gmail.com?subject=Hello!'>Let's build</a> a product people love and leave
+							a lasting impression!
 						</p>
 					</div>
 				</div>
@@ -167,9 +167,9 @@ export default function Home() {
 								on the side
 							</h2>
 							<p className={styles.multiSectionCopy}>
-								Staying sharp tinkering, exploring,
+								Tinkering, exploring,
 								<br />
-								and sparking new ideas.&nbsp;⚡️
+								and ⚡️sparking new ideas.
 							</p>
 						</div>
 						<div className={styles.projectCardContainer}>
@@ -226,7 +226,7 @@ export default function Home() {
 							title='For tech teams that love the extra polish!'
 							iconAccent
 							size='lg'
-							body="Let's build a product that leaves a lasting impression."
+							body="Let's build a product people trust, love and enjoy using."
 							buttonText='Say hello'
 							href='mailto:ryanbrandle.dev@gmail.com?subject=Hello!'
 						>

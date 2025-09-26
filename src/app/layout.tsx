@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import Script from 'next/script';
 import dynamic from 'next/dynamic';
 import { Oswald, Source_Sans_3, Source_Serif_4, Fira_Code } from 'next/font/google';
@@ -69,6 +70,7 @@ export default function RootLayout({
 				</ThemeProvider>
 				<Script src='https://cpwebassets.codepen.io/assets/embed/ei.js' strategy='beforeInteractive' />
 				<Analytics />
+				<SpeedInsights />
 			</body>
 		</html>
 	);

@@ -15,8 +15,8 @@ export const AboutContent = () => (
 					Too 🔥 To Brandle<sup>*</sup>
 				</h1>
 				<p>
-					I've been building for the web for 17 years, specializing in UX/UI engineering, front-end development, and
-					product design.
+					I've been building for the web for over a decade, specializing in UX/UI engineering, front-end development,
+					and product design.
 				</p>
 				<p>
 					Throughout my career, I've worked with startups and industry leaders to create flexible, visual systems that
@@ -72,8 +72,7 @@ export const AboutContent = () => (
 					</ul>
 				</div>
 				<cite className={styles.citation}>
-					<sup>*</sup> Apologies for the headline... I only get to bust this out at happy hour game nights. It was
-					either that or "Ry of the Tiger" 🤘.
+					<sup>*</sup> Apologies for the headline... I only get to bust this out at happy hour game nights.
 				</cite>
 			</div>
 		</section>
