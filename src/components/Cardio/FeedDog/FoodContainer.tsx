@@ -13,7 +13,7 @@ interface FoodContainerProps {
 
 const FoodContainer = ({ getFood, qty, type, label, increment = 0.5 }: FoodContainerProps) => {
 	const handleClick = () => {
-		let newQty = qty + increment;
+		const newQty = qty + increment;
 		getFood(newQty);
 	};
 

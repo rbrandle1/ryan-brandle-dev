@@ -22,7 +22,7 @@ const FeedDog = () => {
 
 	const handleFeed = () => {
 		const totalFood = kibbleAmt + wetAmt;
-		totalFood === 0 ? setDogState('dead') : setDogState('alive');
+		setDogState(totalFood === 0 ? 'dead' : 'alive');
 	};
 
 	const handleReset = () => {
