@@ -45,11 +45,14 @@ export default function Home() {
 							<strong>
 								<em>transformative</em>
 							</strong>{' '}
-							tools, and to make your search for the right fit a little easier. With over a decade of experience uniting
-							design and code, I&nbsp;create accessible, intuitive, and scalable interfaces. I enjoy coding design to
-							life and pushing the boundaries of front-end craftsmanship. 🚀&nbsp;
-							<a href='mailto:ryanbrandle.dev@gmail.com?subject=Hello!'>Let's build</a> a product people love and leave
-							a lasting impression!
+							tools, and to make your search for the right fit a&nbsp;little easier. With over a decade of experience
+							uniting design and code, I&nbsp;create accessible, intuitive, and scalable interfaces. I&nbsp;enjoy coding
+							design to life and pushing the boundaries of front-end craftsmanship.{' '}
+							<span className={styles.noWrap}>
+								🚀&nbsp;
+								<a href='mailto:ryanbrandle.dev@gmail.com?subject=Hello!'>Let's build</a>
+							</span>{' '}
+							a product people love and leave a&nbsp;lasting impression!
 						</p>
 					</div>
 				</div>
