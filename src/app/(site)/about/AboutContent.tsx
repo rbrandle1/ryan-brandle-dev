@@ -15,8 +15,8 @@ export const AboutContent = () => (
 					Too 🔥 To Brandle<sup>*</sup>
 				</h1>
 				<p>
-					I've been building for the web for well over a decade, specializing in UX/UI engineering, front-end
-					development, and product design.
+					I've been building for the web for over a decade, specializing in UX/UI engineering, front-end development,
+					and product design.
 				</p>
 				<p>
 					Throughout my career, I've worked with startups and industry leaders to create flexible, visual systems that
