@@ -57,10 +57,6 @@ export const BrandContent = () => {
 							opportunity to refocus my career priorities, learn some new tricks, and make some tasty, sticky-fingered
 							lemonade.
 						</p>
-						{/* <p>
-							I used this opportunity to refocus my career priorities, learn some new tricks, and build a site that
-							truly represents who I am and what I do best.
-						</p> */}
 					</div>
 				</section>
 				<section className={styles.section}>
