@@ -167,9 +167,9 @@ export default function Home() {
 								on the side
 							</h2>
 							<p className={styles.multiSectionCopy}>
-								Staying sharp tinkering, exploring,
+								Tinkering, exploring,
 								<br />
-								and sparking new ideas.&nbsp;⚡️
+								and ⚡️sparking new ideas.
 							</p>
 						</div>
 						<div className={styles.projectCardContainer}>
