@@ -65,6 +65,7 @@ export default function RootLayout({
 					<Header />
 					<main id='main' tabIndex={-1}>
 						{children}
+						testing
 					</main>
 					<Footer />
 				</ThemeProvider>
